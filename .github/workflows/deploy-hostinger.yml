@@ -23,18 +23,17 @@ jobs:
       github.event.workflow_run.event == 'push' &&
       github.event.workflow_run.head_branch == 'main')
     runs-on: ubuntu-24.04
-    timeout-minutes: 30
+    timeout-minutes: 45
     environment:
       name: production
       url: https://cncpioneer.com/
 
     env:
       HOSTINGER_HOST: ${{ secrets.HOSTINGER_HOST }}
-      HOSTINGER_PORT: ${{ secrets.HOSTINGER_PORT }}
       HOSTINGER_USERNAME: ${{ secrets.HOSTINGER_USERNAME }}
       HOSTINGER_REMOTE_PATH: ${{ secrets.HOSTINGER_REMOTE_PATH }}
-      SSHPASS: ${{ secrets.HOSTINGER_PASSWORD }}
-      EXPECTED_ED25519_FINGERPRINT: SHA256:JyT4SMqGlGP48izAjFsrA1C8avNci9eGolzo5zE3bPI
+      HOSTINGER_PASSWORD: ${{ secrets.HOSTINGER_PASSWORD }}
+      HOSTINGER_FTP_PORT: "21"
 
     steps:
       - name: Check out the verified revision
@@ -58,17 +57,12 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          for name in HOSTINGER_HOST HOSTINGER_PORT HOSTINGER_USERNAME HOSTINGER_REMOTE_PATH SSHPASS; do
+          for name in HOSTINGER_HOST HOSTINGER_USERNAME HOSTINGER_REMOTE_PATH HOSTINGER_PASSWORD; do
             if [ -z "${!name:-}" ]; then
               echo "::error title=Missing deployment secret::$name is empty or has not been configured."
               exit 1
             fi
           done
-
-          if ! [[ "$HOSTINGER_PORT" =~ ^[0-9]+$ ]]; then
-            echo "::error title=Invalid Hostinger port::HOSTINGER_PORT must contain only digits."
-            exit 1
-          fi
 
           if ! [[ "$HOSTINGER_REMOTE_PATH" =~ ^[A-Za-z0-9._/-]+$ ]] ||
              [[ "$HOSTINGER_REMOTE_PATH" == /* ]] ||
@@ -78,80 +72,65 @@ jobs:
             exit 1
           fi
 
-      - name: Install secure transfer tools
+      - name: Install FTP transfer tools
         run: |
           sudo apt-get update
-          sudo apt-get install --yes sshpass rsync
+          sudo apt-get install --yes lftp
 
-      - name: Verify Hostinger server identity
+      - name: Check FTP connection and deployment folder
         shell: bash
         run: |
           set -euo pipefail
-          install -d -m 700 "$HOME/.ssh"
-          ssh-keyscan -p "$HOSTINGER_PORT" -t ed25519 "$HOSTINGER_HOST" > "$HOME/.ssh/known_hosts"
-          chmod 600 "$HOME/.ssh/known_hosts"
-
-          actual_fingerprint=$(ssh-keygen -lf "$HOME/.ssh/known_hosts" -E sha256 | awk 'NR == 1 { print $2 }')
-          if [ "$actual_fingerprint" != "$EXPECTED_ED25519_FINGERPRINT" ]; then
-            echo "::error title=Hostinger identity mismatch::Expected $EXPECTED_ED25519_FINGERPRINT but received $actual_fingerprint."
-            exit 1
-          fi
-
-      - name: Check remote deployment folder
-        shell: bash
-        run: |
-          set -euo pipefail
-          remote_path=$(printf '%q' "$HOSTINGER_REMOTE_PATH")
-          sshpass -e ssh \
-            -o PreferredAuthentications=keyboard-interactive,password \
-            -o PubkeyAuthentication=no \
-            -o StrictHostKeyChecking=yes \
-            -p "$HOSTINGER_PORT" \
-            "$HOSTINGER_USERNAME@$HOSTINGER_HOST" \
-            "command -v rsync >/dev/null && test -d $remote_path && test -w $remote_path"
+          lftp \
+            -u "$HOSTINGER_USERNAME","$HOSTINGER_PASSWORD" \
+            -p "$HOSTINGER_FTP_PORT" \
+            "$HOSTINGER_HOST" \
+            -e "set cmd:fail-exit true; set ftp:ssl-allow no; set net:max-retries 2; set net:timeout 20; cls -ld \"$HOSTINGER_REMOTE_PATH\"; bye"
 
       - name: Back up the current production site
         shell: bash
         run: |
           set -euo pipefail
-          remote_path=$(printf '%q' "$HOSTINGER_REMOTE_PATH")
           stamp=$(date -u +'%Y%m%dT%H%M%SZ')
           short_sha=${GITHUB_SHA:0:7}
-          sshpass -e ssh \
-            -o PreferredAuthentications=keyboard-interactive,password \
-            -o PubkeyAuthentication=no \
-            -o StrictHostKeyChecking=yes \
-            -p "$HOSTINGER_PORT" \
-            "$HOSTINGER_USERNAME@$HOSTINGER_HOST" \
-            "mkdir -p deployment-backups && tar -czf deployment-backups/cncpioneer-before-$stamp-$short_sha.tar.gz -C $remote_path ."
+          backup_name="cncpioneer-wordpress-before-$stamp-$short_sha.tar.gz"
+          backup_dir="$RUNNER_TEMP/cncpioneer-wordpress-backup"
+          backup_file="$RUNNER_TEMP/$backup_name"
+          mkdir -p "$backup_dir"
+
+          lftp \
+            -u "$HOSTINGER_USERNAME","$HOSTINGER_PASSWORD" \
+            -p "$HOSTINGER_FTP_PORT" \
+            "$HOSTINGER_HOST" \
+            -e "set cmd:fail-exit true; set ftp:ssl-allow no; set net:max-retries 2; set net:timeout 30; mirror --parallel=4 \"$HOSTINGER_REMOTE_PATH\" \"$backup_dir\"; bye"
+
+          tar -czf "$backup_file" -C "$backup_dir" .
+
+          lftp \
+            -u "$HOSTINGER_USERNAME","$HOSTINGER_PASSWORD" \
+            -p "$HOSTINGER_FTP_PORT" \
+            "$HOSTINGER_HOST" \
+            -e "set cmd:fail-exit true; set ftp:ssl-allow no; set net:max-retries 2; set net:timeout 30; mkdir -p deployment-backups; put \"$backup_file\" -o \"deployment-backups/$backup_name\"; bye"
 
       - name: Upload the verified site
         shell: bash
         run: |
           set -euo pipefail
-          sshpass -e rsync \
-            --archive \
-            --compress \
-            --delete-delay \
-            --itemize-changes \
-            --exclude='.well-known/***' \
-            --exclude='.cncpioneer-mail.php' \
-            -e "ssh -o PreferredAuthentications=keyboard-interactive,password -o PubkeyAuthentication=no -o StrictHostKeyChecking=yes -p $HOSTINGER_PORT" \
-            dist/ \
-            "$HOSTINGER_USERNAME@$HOSTINGER_HOST:$HOSTINGER_REMOTE_PATH/"
+          lftp \
+            -u "$HOSTINGER_USERNAME","$HOSTINGER_PASSWORD" \
+            -p "$HOSTINGER_FTP_PORT" \
+            "$HOSTINGER_HOST" \
+            -e "set cmd:fail-exit true; set ftp:ssl-allow no; set net:max-retries 2; set net:timeout 30; mirror --reverse --delete --parallel=4 --exclude-glob .well-known/** --exclude-glob .cncpioneer-mail.php dist/ \"$HOSTINGER_REMOTE_PATH\"; bye"
 
       - name: Verify the deployed site
         shell: bash
         run: |
           set -euo pipefail
-          remote_index=$(printf '%q' "$HOSTINGER_REMOTE_PATH/index.html")
-          sshpass -e ssh \
-            -o PreferredAuthentications=keyboard-interactive,password \
-            -o PubkeyAuthentication=no \
-            -o StrictHostKeyChecking=yes \
-            -p "$HOSTINGER_PORT" \
-            "$HOSTINGER_USERNAME@$HOSTINGER_HOST" \
-            "test -s $remote_index"
+          lftp \
+            -u "$HOSTINGER_USERNAME","$HOSTINGER_PASSWORD" \
+            -p "$HOSTINGER_FTP_PORT" \
+            "$HOSTINGER_HOST" \
+            -e "set cmd:fail-exit true; set ftp:ssl-allow no; set net:max-retries 2; set net:timeout 20; cls -l \"$HOSTINGER_REMOTE_PATH/index.html\"; bye"
 
           curl \
             --fail \
