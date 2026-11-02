@@ -103,7 +103,7 @@ jobs:
           set -euo pipefail
           remote_path=$(printf '%q' "$HOSTINGER_REMOTE_PATH")
           sshpass -e ssh \
-            -o PreferredAuthentications=password \
+            -o PreferredAuthentications=keyboard-interactive,password \
             -o PubkeyAuthentication=no \
             -o StrictHostKeyChecking=yes \
             -p "$HOSTINGER_PORT" \
@@ -118,7 +118,7 @@ jobs:
           stamp=$(date -u +'%Y%m%dT%H%M%SZ')
           short_sha=${GITHUB_SHA:0:7}
           sshpass -e ssh \
-            -o PreferredAuthentications=password \
+            -o PreferredAuthentications=keyboard-interactive,password \
             -o PubkeyAuthentication=no \
             -o StrictHostKeyChecking=yes \
             -p "$HOSTINGER_PORT" \
@@ -136,7 +136,7 @@ jobs:
             --itemize-changes \
             --exclude='.well-known/***' \
             --exclude='.cncpioneer-mail.php' \
-            -e "ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no -o StrictHostKeyChecking=yes -p $HOSTINGER_PORT" \
+            -e "ssh -o PreferredAuthentications=keyboard-interactive,password -o PubkeyAuthentication=no -o StrictHostKeyChecking=yes -p $HOSTINGER_PORT" \
             dist/ \
             "$HOSTINGER_USERNAME@$HOSTINGER_HOST:$HOSTINGER_REMOTE_PATH/"
 
@@ -146,7 +146,7 @@ jobs:
           set -euo pipefail
           remote_index=$(printf '%q' "$HOSTINGER_REMOTE_PATH/index.html")
           sshpass -e ssh \
-            -o PreferredAuthentications=password \
+            -o PreferredAuthentications=keyboard-interactive,password \
             -o PubkeyAuthentication=no \
             -o StrictHostKeyChecking=yes \
             -p "$HOSTINGER_PORT" \
