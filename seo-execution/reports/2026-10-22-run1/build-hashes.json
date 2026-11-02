@@ -1,0 +1,1711 @@
+{
+  "generatedAt": "2026-10-22T10:32:56.599Z",
+  "scope": "HTML, sitemap, robots and platform redirect artifact, not a claim of deployment",
+  "files": [
+    {
+      "file": "dist/_redirects",
+      "sha256": "a001ad6da1fdb5fdb88c943a04bfb47fb722b81195762b101d75b78fca09778a"
+    },
+    {
+      "file": "dist/about-us/index.html",
+      "sha256": "396ebdf0fadddc3c4c70d1c1c6c8c30066d43cf286a551566e41ed11339f486d"
+    },
+    {
+      "file": "dist/author/david-li/index.html",
+      "sha256": "68100fd97fedb5e0ff2094f837459475b1463278af74fda9b4632565610211cc"
+    },
+    {
+      "file": "dist/author/david-li/page/2/index.html",
+      "sha256": "d1ccf6ac39b6d04835f40581cb90490e8d679371069944e7cdfe5fef3f972a08"
+    },
+    {
+      "file": "dist/author/david-li/page/3/index.html",
+      "sha256": "8cf696ac23c5ea24f042112255fd098e3602f5fb2129b745d831a0e01d5e8889"
+    },
+    {
+      "file": "dist/author/david-li/page/4/index.html",
+      "sha256": "61c282ce53792d3617d1f16ec5e8b621b6e17466d00b82508f8330ae8e1880ef"
+    },
+    {
+      "file": "dist/author/ryan-wang/index.html",
+      "sha256": "271a8a98aeaf488e68e32985c9761cf3a0508480ff0db631cdb149a2695c1805"
+    },
+    {
+      "file": "dist/author/ryan-wang/page/10/index.html",
+      "sha256": "396d3c554c79624ca43a2fdbb900a67198d6add5211291f51ee33bcb3d163af0"
+    },
+    {
+      "file": "dist/author/ryan-wang/page/11/index.html",
+      "sha256": "fd9b34a3c11d14e985c0abf5095187ed5055cbdcf4addd45431828df919f7114"
+    },
+    {
+      "file": "dist/author/ryan-wang/page/12/index.html",
+      "sha256": "37712676d7407151afe8863738aed00071c04cf02cbbb225435f0cce7bb8c26a"
+    },
+    {
+      "file": "dist/author/ryan-wang/page/13/index.html",
+      "sha256": "3a5d49a23a335504079d9bed0b3a9b34820c3010c5221e6eba4db16470362c1d"
+    },
+    {
+      "file": "dist/author/ryan-wang/page/14/index.html",
+      "sha256": "7ed237981ab72f9f108c88602c26e36a3c968e574bf56211df900c370d10a2d4"
+    },
+    {
+      "file": "dist/author/ryan-wang/page/15/index.html",
+      "sha256": "442eb680bc06ce57cdd72331a6efc413066e131cef33d197b58824b0ba0e13bc"
+    },
+    {
+      "file": "dist/author/ryan-wang/page/16/index.html",
+      "sha256": "98d2ef9f093c31b4818980de6050f07c7bf3a7017ef1ac24d4d3f6de6ef69053"
+    },
+    {
+      "file": "dist/author/ryan-wang/page/17/index.html",
+      "sha256": "c7dea45133d321947b446247da30da7c50ccf79ffb414d1960519271edc5212f"
+    },
+    {
+      "file": "dist/author/ryan-wang/page/2/index.html",
+      "sha256": "e45dea2719d856d2a5dc52c60e41877406fcafe2e6ca970d87e7264d0fdae685"
+    },
+    {
+      "file": "dist/author/ryan-wang/page/3/index.html",
+      "sha256": "b7a9c92402ec9dbf9cda19a32246e9e9868b1ccbc5900be2542c83290c7405bf"
+    },
+    {
+      "file": "dist/author/ryan-wang/page/4/index.html",
+      "sha256": "b2b04880f81cbba288f312ae90021a9ad41ae206885c0d272b555ab304f72a0e"
+    },
+    {
+      "file": "dist/author/ryan-wang/page/5/index.html",
+      "sha256": "6f545fddd40d76878582d80903d5d0c60e03c18851592473aafb6913907e5088"
+    },
+    {
+      "file": "dist/author/ryan-wang/page/6/index.html",
+      "sha256": "5662754bca429aee8c3156843f9cf62bce262cb6b9a2dcf449d4a2968bbbc594"
+    },
+    {
+      "file": "dist/author/ryan-wang/page/7/index.html",
+      "sha256": "0a86af90ef51de79cc27e5b6a2750caab7142f01c7fd9ec302e8471ad057701d"
+    },
+    {
+      "file": "dist/author/ryan-wang/page/8/index.html",
+      "sha256": "993bed2a5ef6d5263cfe6ec96f04e1a465b0f88715335bd7f5d41e2658c926de"
+    },
+    {
+      "file": "dist/author/ryan-wang/page/9/index.html",
+      "sha256": "149ba9cec7f49f924aabb8b21ff78290d4b4ddbc87192c299829c0eead9b9b24"
+    },
+    {
+      "file": "dist/blog/3d-printing-vs-cnc-machining/index.html",
+      "sha256": "907976eb93455e7c71d9e3ab2e5bf838732a2e296e369a60d15544a6c889be16"
+    },
+    {
+      "file": "dist/blog/5-axis-cnc-machining-manufacturers-in-china/index.html",
+      "sha256": "b010cfffca648ed99ab46728db63b668c0caa2a4eaceef9b11bf62cb8dfc9bef"
+    },
+    {
+      "file": "dist/blog/abrasion-resistant-vs-carbon-steel-cnc-machining/index.html",
+      "sha256": "7e09d5ef9b7de2888c76114b140af5a6a379f556858074a6387d9021aa5ac4f9"
+    },
+    {
+      "file": "dist/blog/acrylic-cnc-machining/index.html",
+      "sha256": "7679f9a5a765654ea224747b60475a232699a17cb2bcd7efcec996ccdf33ecba"
+    },
+    {
+      "file": "dist/blog/aerospace-cnc-machining/index.html",
+      "sha256": "29834b6e6d8e018af8bb91a96d71645f6abc477d61daa7251a9cdc4aca5e6606"
+    },
+    {
+      "file": "dist/blog/ai-cnc-machining/index.html",
+      "sha256": "4a5719b1ae5ca287a15d58351ed400a8824399607d33b892f8ba2e050e3d1a02"
+    },
+    {
+      "file": "dist/blog/ai-cnc-programming/index.html",
+      "sha256": "f84cd1ab8700e309d97d81611903bc0a8152639b3b349499673ad177342cb79b"
+    },
+    {
+      "file": "dist/blog/aluminium-melting-point/index.html",
+      "sha256": "0a09fbd2dc7607ccfaac5014e7775413e67f96c1af644293912f586dbbb1e42e"
+    },
+    {
+      "file": "dist/blog/aluminum-cnc-machining/index.html",
+      "sha256": "8a5cf62bfdd053f420b2e26cd4841b36edb967d81392ad6ab1bf1856d78fe864"
+    },
+    {
+      "file": "dist/blog/aluminum-surface-finishes/index.html",
+      "sha256": "688f947c72846b130a53ff0e0b785e77621f782f6f1179799fa817d053cbaa11"
+    },
+    {
+      "file": "dist/blog/aluminum-vs-stainless-steel/index.html",
+      "sha256": "e98684296222ae1548f34ed70efef0362c721549c296d4836e070d41e90dadd2"
+    },
+    {
+      "file": "dist/blog/anodized-aluminum-vs-stainless-steel/index.html",
+      "sha256": "5473be04bd4bad1d8f1506b4b67aa790c80d0554b51ddc803e117467a17bed69"
+    },
+    {
+      "file": "dist/blog/automotive-machining/index.html",
+      "sha256": "fe20bfb498484f6bd366621f091fe1327d99aa0e2f52e8df34e712155efa3d5a"
+    },
+    {
+      "file": "dist/blog/avoid-haz-laser-cutting-sheet-metal/index.html",
+      "sha256": "bdd46864e13cefc5a0fe55a8751d47affd0e3351180e846dc6e5b466deb436ab"
+    },
+    {
+      "file": "dist/blog/bakelite-cnc-machining/index.html",
+      "sha256": "6bf2e0b6baed1edab2273df59c3207bedf6c8ab61165cff5b2e6dd463da86e69"
+    },
+    {
+      "file": "dist/blog/beveled-edges-cnc-machining/index.html",
+      "sha256": "0f534e51c5fe32c67418a690739afa4bdeaf714c066f92a17e2e7407c9bcb51d"
+    },
+    {
+      "file": "dist/blog/brass-cnc-machining/index.html",
+      "sha256": "77f441af83e35c13944da4cb1028bcd86fc8a78bd45d1947265fecf3170f3dd7"
+    },
+    {
+      "file": "dist/blog/bronze-cnc-machining/index.html",
+      "sha256": "31bc42012abeaf194e37cd674f64a9a3ff1a4fb384912982a4ac79e201d1112f"
+    },
+    {
+      "file": "dist/blog/building-a-humanoid-robot/index.html",
+      "sha256": "4599d3d1ccd2a015570fe217a46f829f1b10b28a2dfada3b55240ca618c9f18f"
+    },
+    {
+      "file": "dist/blog/cast-iron-cnc-machining-parts/index.html",
+      "sha256": "0ca4a3110e6ee05e57a24e92da55611ba3239071b823ffd066486b3069fabb66"
+    },
+    {
+      "file": "dist/blog/casting-vs-cnc-machining/index.html",
+      "sha256": "fb9d4842373bd516540e45cf036b576d80ec0a0a079fd1964638a3e782ba38f8"
+    },
+    {
+      "file": "dist/blog/chamfer-cnc-machining/index.html",
+      "sha256": "339d6fdd470de31aa5b1409e99a2a96c56eb9d51782039b71cbf1116551d086f"
+    },
+    {
+      "file": "dist/blog/china-humanoid-robot-companies/index.html",
+      "sha256": "49bbfde15fbfcd0aacae77335a08d84b9f621d915004ba9217042969afe22bf4"
+    },
+    {
+      "file": "dist/blog/choose-cnc-machining-company/index.html",
+      "sha256": "8d192400798b1fa04d820ccf12c5b1ffe84dbae7c7a6e8fdbd68452bc00e0f8a"
+    },
+    {
+      "file": "dist/blog/cnc-automotive-mold-machining/index.html",
+      "sha256": "a5fbb49fdce94c93ea357e588ba984dd05ef22c3b236e935097466b63208c6de"
+    },
+    {
+      "file": "dist/blog/cnc-automotive/index.html",
+      "sha256": "3db62633df759bdb9983c0604f8b78904adf23d17971280676fee50641b9d0c6"
+    },
+    {
+      "file": "dist/blog/cnc-boring/index.html",
+      "sha256": "b2a9c65071e0545a0f7fddf6fa7b9971fca51d56a48e531386d71ffcbdeed03f"
+    },
+    {
+      "file": "dist/blog/cnc-custom-parts-prototyping/index.html",
+      "sha256": "c718a4e67ad10309f9827631028f47f836cd674a8d985f18f2ab3ef88ac9a199"
+    },
+    {
+      "file": "dist/blog/cnc-drilling/index.html",
+      "sha256": "1ce46e881fc6dfcfa321f9ff5f159f729525e5c462b50c24ca7c987e037954c2"
+    },
+    {
+      "file": "dist/blog/cnc-electronic-housings/index.html",
+      "sha256": "2feff36f334b2858d77649298f917622e07d26c385cc9044f15675ecc84cf86a"
+    },
+    {
+      "file": "dist/blog/cnc-ev-motor-housings/index.html",
+      "sha256": "41178474971c68595341316d529215d4a3876f173c476c862db38b7286ff3f72"
+    },
+    {
+      "file": "dist/blog/cnc-heat-sink-manufacturing/index.html",
+      "sha256": "491c0cf8d7de05b67f5d2e2d6518a02501f9440fd195b47c19001d216dd5248e"
+    },
+    {
+      "file": "dist/blog/cnc-injection-mold-making/index.html",
+      "sha256": "457bbcb32800d72472203e541788f02118e8b291f289a0324120872ff67c3c65"
+    },
+    {
+      "file": "dist/blog/cnc-lathe-vs-mill/index.html",
+      "sha256": "a6859149cb766daf563e153bbc64c2ac5b54c8a8eca2573305baae913f6b0535"
+    },
+    {
+      "file": "dist/blog/cnc-locating-pins/index.html",
+      "sha256": "41117210269c2024170fc955d0867a62e0bc84675af4cc88fb17872bef824d73"
+    },
+    {
+      "file": "dist/blog/cnc-locating-pinsi/index.html",
+      "sha256": "e0465b069fbb09f6202c9ebf26232e9594ba1068591bc4e2a5a9112a47e6aebd"
+    },
+    {
+      "file": "dist/blog/cnc-machined-uav-parts/index.html",
+      "sha256": "7c3a86c627e23818f3a0200e263accbde0a87a8c7585385939ab53fee0143f70"
+    },
+    {
+      "file": "dist/blog/cnc-machining-aerospace/index.html",
+      "sha256": "bb1a98d4325a19196208c09e607ac8748f96fd8b89a5cbd6063bc5872fba6623"
+    },
+    {
+      "file": "dist/blog/cnc-machining-costs/index.html",
+      "sha256": "1feb75e185b1e856bea20b02b4b6d72b2afff1c76ac03db5f716562a5b64d194"
+    },
+    {
+      "file": "dist/blog/cnc-machining-defense/index.html",
+      "sha256": "c1a24feae9154a4503cd88b99183977ce7b8b4003a981ddb228f3876de156662"
+    },
+    {
+      "file": "dist/blog/cnc-machining-fillets/index.html",
+      "sha256": "8c5a418046dcb5439599f03e1f74b751d9b322c237656e9797219c34e8e01e2a"
+    },
+    {
+      "file": "dist/blog/cnc-machining-for-automotive-industry/index.html",
+      "sha256": "d6d4cf6e3417d386ad2816b4b318babd7ba1b83eb90ecafc2131e7fb5259e31e"
+    },
+    {
+      "file": "dist/blog/cnc-machining-for-furniture-industry/index.html",
+      "sha256": "224fea5a917349361034e6b1b0c29444c9b07d3e469e1ac1866c55471167f937"
+    },
+    {
+      "file": "dist/blog/cnc-machining-for-renewable-energy/index.html",
+      "sha256": "c33f46fb378e4cfdf2b4ad05fa43288e045f8ad285f55c52826c231a91563196"
+    },
+    {
+      "file": "dist/blog/cnc-machining-for-semiconductor-industry/index.html",
+      "sha256": "906c8652a2eb2964d77843ae9a9c1adea2f8e270cf33e42af6d68c9021f6e5de"
+    },
+    {
+      "file": "dist/blog/cnc-machining-heavy-truck-industry/index.html",
+      "sha256": "ce216b1ed6637d3d020b53b4dde80cf5b2970add55d070956976ac3ad9b933e5"
+    },
+    {
+      "file": "dist/blog/cnc-machining-materials/index.html",
+      "sha256": "371b78beb79909c371d648dbda31e7a0cf9d18626d22dea057765ce5d4ada121"
+    },
+    {
+      "file": "dist/blog/cnc-machining-quality-testing/index.html",
+      "sha256": "8e6d0ecc3d7983272cb701a51eefc58a716deadf5cde07a4ba4469a65c68fd66"
+    },
+    {
+      "file": "dist/blog/cnc-machining-robot-parts/index.html",
+      "sha256": "4442cc3e02eb1c4c0e09027394b2eb73978b7cb2622b2282490068a2d40e7dca"
+    },
+    {
+      "file": "dist/blog/cnc-machining-vs-injection-molding/index.html",
+      "sha256": "c5256f5f7bdad54698e81b9acdcf1da32ff811763b66cf1ff725f03fdfdfcde0"
+    },
+    {
+      "file": "dist/blog/cnc-machining-vs-manual-machining/index.html",
+      "sha256": "55ad3648ec55bc828c4c3c7c5971779b65dbc6a73b5bf536764449af415590ac"
+    },
+    {
+      "file": "dist/blog/cnc-meaning/index.html",
+      "sha256": "e6627851d3ed27564567c9656bfedf489c0e49406dbf92984c4bf7021ba00364"
+    },
+    {
+      "file": "dist/blog/cnc-metalworks/index.html",
+      "sha256": "46b96272fd40013e8c30fa4cdc7f74aa868f386857803dc3e650bbcd39d61aa6"
+    },
+    {
+      "file": "dist/blog/cnc-milling-and-turning-defense/index.html",
+      "sha256": "db8fd01cc51b2bbbc0aa5ad34b345a0376ff1327b840f9de8a464a6a31358eb3"
+    },
+    {
+      "file": "dist/blog/cnc-milling-machine-parts/index.html",
+      "sha256": "3817854d70c717052ef0db4bf5e80363543806eb002fdaf93e90e81180b88aba"
+    },
+    {
+      "file": "dist/blog/cnc-milling-parts/index.html",
+      "sha256": "03e4aa9a10e166ef69cbf3c9e7d3c74026fcb569f16c632cfdca8fbb90c851e6"
+    },
+    {
+      "file": "dist/blog/cnc-milling-vs-laser-cutting/index.html",
+      "sha256": "10ffc1394bb3f094faa0ac98ab8eff16585fea501b611edbe7a4b33c34d34420"
+    },
+    {
+      "file": "dist/blog/cnc-milling/index.html",
+      "sha256": "fbfbb6bcfc9861b2724754f8793359d7939505e1d36a5b432e95529ca65c9b71"
+    },
+    {
+      "file": "dist/blog/cnc-musical-instruments/index.html",
+      "sha256": "1fd4cc931582cf7a99f71f3b9392af0cfadcd7ab832e4bb7e12ad42f07787ed2"
+    },
+    {
+      "file": "dist/blog/cnc-near-me-vs-online-cnc-machining/index.html",
+      "sha256": "47529b76e10ee8bf53e008c33ace46443db5e3f2223807ab4fb4c30ffa653ec3"
+    },
+    {
+      "file": "dist/blog/cnc-precision-parts/index.html",
+      "sha256": "90662f35c703d3b8a7c0d6d3287e28932edb09e7a52cc2f27a36b902a28e3b5a"
+    },
+    {
+      "file": "dist/blog/cnc-prototyping/index.html",
+      "sha256": "4dbea0ae6c3d09b40cea4e5de1fddfdf4015a8e535a2993aea596e641d9887c3"
+    },
+    {
+      "file": "dist/blog/cnc-services-for-startups/index.html",
+      "sha256": "efcd22a405db267f78bf2b491f5e4ec37a8789a3d7f7b1336bd060dabc4024ef"
+    },
+    {
+      "file": "dist/blog/cnc-turned-parts/index.html",
+      "sha256": "ac18dd0901506d5e860128a2f676d89d5659804bcd7444ed687abbe44da3d8c0"
+    },
+    {
+      "file": "dist/blog/cnc-turning-and-milling-materials/index.html",
+      "sha256": "778a836a6a26a643b5446fada7632de91388289c38da17aa20cd1bec0306ee0d"
+    },
+    {
+      "file": "dist/blog/cnc-turning-and-milling/index.html",
+      "sha256": "90fc3dc9e0ee953a993c3e0c354c9d04d1f89e4b3c981b3d4b96a2803d04a821"
+    },
+    {
+      "file": "dist/blog/cnc-turning/index.html",
+      "sha256": "b208968974351d00bbc54cf4560078df29f12875b2c9a9503bc49744b737d112"
+    },
+    {
+      "file": "dist/blog/cnc-vs-conventional-machining/index.html",
+      "sha256": "c3618165d084376dbbc49b191ebbd1decd0a6a1881e395973a492d142ec06450"
+    },
+    {
+      "file": "dist/blog/cnc-vs-laser-cutting/index.html",
+      "sha256": "ea66fd7cc51cd50e5cfcde0561a119c875e6f45b4bb6f8ee05ca38a9347b689a"
+    },
+    {
+      "file": "dist/blog/cnc-vs-rapid-prototyping/index.html",
+      "sha256": "c2807e44182e6c96c7c4413287f358e9b459a0ecd27c89ba7820c2cdac073204"
+    },
+    {
+      "file": "dist/blog/cnc-vs-sheet-metal/index.html",
+      "sha256": "29da4102b5407c72e249c9a890dbf9e208aed34639dcc97bc40d24906099a0ef"
+    },
+    {
+      "file": "dist/blog/complex-cnc-machining-tasks/index.html",
+      "sha256": "05c45052943949177a3b0e106bdb9801e31b12a67a7c33760326a84f5a6617dd"
+    },
+    {
+      "file": "dist/blog/connector-machining/index.html",
+      "sha256": "96392e63679e2641c2ccece38d182c4051263d5b51fc981df31c7bf0341a59c4"
+    },
+    {
+      "file": "dist/blog/copper-cnc-machining/index.html",
+      "sha256": "b944efe1792972f2ce1839d0ac7f5eaca67f5f0758ff23652b8b84374b83fad1"
+    },
+    {
+      "file": "dist/blog/copper-t2-cnc-machining/index.html",
+      "sha256": "491b33ff4cbcd7a492f5b0aeb6c21750e8f171918c84beadc1006a27dc85ed0a"
+    },
+    {
+      "file": "dist/blog/electronics-machining/index.html",
+      "sha256": "173722991cbee0a6a111d773171feaa3c909a5086f20922a46cca23f83744e22"
+    },
+    {
+      "file": "dist/blog/face-milling/index.html",
+      "sha256": "4ad0ca9309c3af862649c0d2ae0a5f7590dd41d740d19d399ca1f80d334e5fa2"
+    },
+    {
+      "file": "dist/blog/fastener-machining/index.html",
+      "sha256": "5b18e4c18a7824bc0a233576db207c2104360e8b2811887726b2af2bec125baf"
+    },
+    {
+      "file": "dist/blog/fr4-cnc-machining/index.html",
+      "sha256": "169e5f2768b3598a2ffd00aa33816be57a46f2d489d33b428bfe450eb76b49ca"
+    },
+    {
+      "file": "dist/blog/inconel-vs-monel/index.html",
+      "sha256": "1523050cf63a93f6a7dba2a25be9b6ac238775f2a59a980b2a72d6dd2e7dc701"
+    },
+    {
+      "file": "dist/blog/inconel-vs-titanium/index.html",
+      "sha256": "ea8fc37bf985a34578a78e27199cab1682552bc26c8258bd35692fd1b6a175a1"
+    },
+    {
+      "file": "dist/blog/index.html",
+      "sha256": "c70c2df6284da4034e41f7ee9fb8676f2bd5a6f0ce0ae578300853515e074bc5"
+    },
+    {
+      "file": "dist/blog/injection-molding-vs-cnc-machining/index.html",
+      "sha256": "877e8c7d6ab2e820b0978779f9e9bbd48ee95c2d3c2527d30ba13bec55f3657c"
+    },
+    {
+      "file": "dist/blog/large-part-cnc-machining/index.html",
+      "sha256": "cd1f39240bddfc47af7a92d158660ae3989fe34283d0fa09d2e2e482af54d128"
+    },
+    {
+      "file": "dist/blog/laser-cutting-vs-cnc-routing/index.html",
+      "sha256": "b6a794d2d3aa159b7f80207dc7404cdf7d1e761846e58b6a8174d440b8f9b18b"
+    },
+    {
+      "file": "dist/blog/laser-cutting-vs-waterjet-cutting/index.html",
+      "sha256": "b294ce3705bb86f7e541198b16f7d240325b5e68c01baf117f262419bbdc8d5a"
+    },
+    {
+      "file": "dist/blog/laser-marking/index.html",
+      "sha256": "6ed6f7c964d795df03311258373f72f21411500640d5ca36755c51f98c3c4d36"
+    },
+    {
+      "file": "dist/blog/laser-vs-plasma-cutting/index.html",
+      "sha256": "12fd5f1dfab41c89eb0c47e87d07871d23087e37dfe37995f55785f9712fdf74"
+    },
+    {
+      "file": "dist/blog/low-volume-cnc-machining/index.html",
+      "sha256": "0434dbacc36e6278ec95983e77eb9a7716c9483dedbaea1427eee8ae2ac88dd4"
+    },
+    {
+      "file": "dist/blog/machining-surface-finish/index.html",
+      "sha256": "a8d9ac9d0aa94fcf65ec30bffbfad0c6321543498537910110863e01f8a2d3e8"
+    },
+    {
+      "file": "dist/blog/medical-cnc-machining/index.html",
+      "sha256": "67546b06c74e4e74effd229e6bb5106beaad9a0daed6a6832b5031496d267ed8"
+    },
+    {
+      "file": "dist/blog/medical-swiss-machining/index.html",
+      "sha256": "a7d862d118602f33f14541ebfbb94053a8b5eb60db603a5c8553074954c8f1eb"
+    },
+    {
+      "file": "dist/blog/micro-cnc-machining/index.html",
+      "sha256": "bd34afdf08ffa33d6117064bb96a053c069897b078fc47bbe1e33c59a2250d07"
+    },
+    {
+      "file": "dist/blog/nylon-cnc-machining/index.html",
+      "sha256": "03f4f9a4ca6ed92a5e7d7bb444a9ef7b5600e56c7968d836a6a4ce9daa9de38c"
+    },
+    {
+      "file": "dist/blog/oil-and-gas-machining/index.html",
+      "sha256": "18603e5a01f8f52934d18857b5768a15fced30e5c69e938d60c7c00f8a3bcff7"
+    },
+    {
+      "file": "dist/blog/oil-and-gas-plastic-machining/index.html",
+      "sha256": "8057b9864ef553331d02ce32d887c21d5ddef8ab1e04a8e3d7f582a2d94243e8"
+    },
+    {
+      "file": "dist/blog/oil-gas-cnc-machining-parts/index.html",
+      "sha256": "03e3cb82b8cfb427e9bcdac26bfbc34af77f4cfbff7d37b8c63c64f33db4615b"
+    },
+    {
+      "file": "dist/blog/page/10/index.html",
+      "sha256": "6a02f63c739f0ec3f6b6cd5f6455f15a59fdefa33d620064550f1b220b9a72ce"
+    },
+    {
+      "file": "dist/blog/page/11/index.html",
+      "sha256": "f9cec2e96e3a59dd31cfbf845db9e7fdc27ef4a965f58e76fed19dd712c58b57"
+    },
+    {
+      "file": "dist/blog/page/12/index.html",
+      "sha256": "e0270a039d4b0bec9b6d3f8c972c4127078655f18951686cc32648fc6fe2d18d"
+    },
+    {
+      "file": "dist/blog/page/13/index.html",
+      "sha256": "bb8345a91716c938b6ebc1c0182beb9fef9d40f64941e1775763464fae18f4dc"
+    },
+    {
+      "file": "dist/blog/page/14/index.html",
+      "sha256": "50f659dc3940f27db2e0ffe79d7b67037284ba3bb6130d87ccba0994b8d51a71"
+    },
+    {
+      "file": "dist/blog/page/15/index.html",
+      "sha256": "1f072dcf320fcbad7128ab38a409f7c687db9c31cb152479814f1a3e4a2aed15"
+    },
+    {
+      "file": "dist/blog/page/16/index.html",
+      "sha256": "b548eb96f20d6fe939b501234f4f40874e7f11067f9d7db6672e9002d081932c"
+    },
+    {
+      "file": "dist/blog/page/17/index.html",
+      "sha256": "c848a63ef1c6cda8f28072b759148e8de556f2469d758d3e4e2fe139fcffa82b"
+    },
+    {
+      "file": "dist/blog/page/18/index.html",
+      "sha256": "2571bd2b91b706d93b6db9f963ecaf6a83d389cf404886dfc13f9229854be651"
+    },
+    {
+      "file": "dist/blog/page/19/index.html",
+      "sha256": "f3732979f8e2830078e6ca9084faf2c3b480b550a9c1da2189a5f2b857d30616"
+    },
+    {
+      "file": "dist/blog/page/20/index.html",
+      "sha256": "96bdaa4af1fb6d5ce1121345040d29246e508f32b107618346cf780c81e2aa99"
+    },
+    {
+      "file": "dist/blog/page/2/index.html",
+      "sha256": "c16c0dc2a6bf417c9007a1c9a2c504a5c78af6079b752b1cae74f59ac20e181e"
+    },
+    {
+      "file": "dist/blog/page/3/index.html",
+      "sha256": "527f2ab25c8f817d48d59133c0e7f78fc82738b31e2da05d5b1fd987bdaac81e"
+    },
+    {
+      "file": "dist/blog/page/4/index.html",
+      "sha256": "a7edda2e9620358a4da285e795ae6f4f4dab948511359e58972366d315a100cf"
+    },
+    {
+      "file": "dist/blog/page/5/index.html",
+      "sha256": "5b65e4a6e38efb1ef11470aa5ff6b8a44c90a78b12e1d1339b1337539edd40eb"
+    },
+    {
+      "file": "dist/blog/page/6/index.html",
+      "sha256": "de4e586f35cb7644192315c9de79ad2c18c0ee0e05b79c692c62a5ec42cac7b4"
+    },
+    {
+      "file": "dist/blog/page/7/index.html",
+      "sha256": "1e31b524dd03da1851c766bb635cce8068f30a98708f389a808441ed805eaf70"
+    },
+    {
+      "file": "dist/blog/page/8/index.html",
+      "sha256": "d6d54046830cd0f3a0679952cdeaa1c632d4f709824db684251b668357f44382"
+    },
+    {
+      "file": "dist/blog/page/9/index.html",
+      "sha256": "12b1091e59423d666578a494beb618e3717a9fe431add83571fd7868a2c1815c"
+    },
+    {
+      "file": "dist/blog/precision-aerospace-cnc-machined-parts/index.html",
+      "sha256": "7f5776d53bb42f8a588c448d498c9da6e92b366814cec646f1742edf031eff7f"
+    },
+    {
+      "file": "dist/blog/precision-automotive-machining/index.html",
+      "sha256": "ca4a06622e2361dd300781d8003d0e0bf109f6a5cfeaf868e61c643fe3328379"
+    },
+    {
+      "file": "dist/blog/precision-cnc-milling-parts/index.html",
+      "sha256": "fa26f91f0603cb31813b059a10b710f3fad0d75568d16a4f6b85a096b635cdc3"
+    },
+    {
+      "file": "dist/blog/precision-cnc-turning/index.html",
+      "sha256": "b55d3abda4b80336c934ec59f49d09cad83ea4eb58091128fe09008f156341bd"
+    },
+    {
+      "file": "dist/blog/precision-medical-machining/index.html",
+      "sha256": "11b9dbc2cb3e24d8142ab3c7f069eb1c53d305b7396a28faef2562524b02cb2d"
+    },
+    {
+      "file": "dist/blog/prototype-cnc-machining/index.html",
+      "sha256": "e91f576becb560f9c87f7b630b6f029fbd6b53051ecead9fd4f013f1f92b0964"
+    },
+    {
+      "file": "dist/blog/railroad-machining/index.html",
+      "sha256": "e13d387a32271fc5dcc8cac5bd4256c6534037c122e95b06efeb6b5b7cf504ce"
+    },
+    {
+      "file": "dist/blog/railroad-seals-cnc-machining/index.html",
+      "sha256": "05664ba1ce27713334ae2fe4233a61e640d8e757b32dde642e19630de89915c3"
+    },
+    {
+      "file": "dist/blog/railroad-wheel-machining/index.html",
+      "sha256": "5bafefe7fdb29ee2adfd92bcaf1c7db7fd1f01e647fcc43d607476643fc76de9"
+    },
+    {
+      "file": "dist/blog/railroads-cnc-machining-companies/index.html",
+      "sha256": "6939a3d96ffc42e23aa8ff47f9c46f596d1fb705af0f186a504e0aabaf2f88ef"
+    },
+    {
+      "file": "dist/blog/railroads-custom-o-rings-cnc-machining/index.html",
+      "sha256": "91f7161e351a4b8118e603d9adb4889c03992abcfed967a276df5b0f7f443bd6"
+    },
+    {
+      "file": "dist/blog/railroads-skylights-cnc-machining/index.html",
+      "sha256": "22f7b2cadf666b956fd9679c9607b3128e8ccba2736130017d30c2a5471afddc"
+    },
+    {
+      "file": "dist/blog/rapid-cnc-prototyping/index.html",
+      "sha256": "75f4f302d310ceeadb37381112295228734b1d22a7f748978c72760f0b24e1d9"
+    },
+    {
+      "file": "dist/blog/robot-hands/index.html",
+      "sha256": "79b2bae4b0487368e941a1dccd71f421e224aa9059b77ba39a4d08a8f9429785"
+    },
+    {
+      "file": "dist/blog/shaft-machining/index.html",
+      "sha256": "e505acda5a0aa4a44165905df168e6d661ac223bedfa53deabe3bdc9c83b8eea"
+    },
+    {
+      "file": "dist/blog/sheet-metal-laser-cutter/index.html",
+      "sha256": "0e544306bce31ed4759f8d82ba93416550482a8664e52bf41198af744a51cf68"
+    },
+    {
+      "file": "dist/blog/slot-milling/index.html",
+      "sha256": "b65f304e6deaa70d3c3bb616fd1bfba6d97ef3c1cf2d635ce2fb1dac7c82f5d7"
+    },
+    {
+      "file": "dist/blog/stainless-steel-cnc-machining/index.html",
+      "sha256": "799bf73413bf2a64fd5fbcb2410916d767383b142cc730beb76bd5a3006601b4"
+    },
+    {
+      "file": "dist/blog/stainless-steel-surface-finishes/index.html",
+      "sha256": "40092f1ce34a2259ba91bbc7b5e3d238a9521d02979bd1d6976c9aecb1b19cf6"
+    },
+    {
+      "file": "dist/blog/surface-finish-chart/index.html",
+      "sha256": "a57caab263142c2588c9937b0e8a3219f38bcf0557f72f1192925a1f4b03d510"
+    },
+    {
+      "file": "dist/blog/surface-finish-symbols/index.html",
+      "sha256": "58b5ea6ff13c8256a1cdd18599984f9af343a3b884519e9e92a0d96582094eb8"
+    },
+    {
+      "file": "dist/blog/surface-finish/index.html",
+      "sha256": "d2a7cf3711903bc9215638f3f5f407938238f70f169a19ad16712ad4204a43a3"
+    },
+    {
+      "file": "dist/blog/surface-roughness/index.html",
+      "sha256": "4c34dd675e2e39367785af72ee9e8053ea74b07fb24661e31adbc319b35c0c80"
+    },
+    {
+      "file": "dist/blog/swiss-machining-defense/index.html",
+      "sha256": "a45d75f14a84dd6c66d64417076713789f5c0242db8968683c2eb8d6da7c40da"
+    },
+    {
+      "file": "dist/blog/swiss-machining-materials/index.html",
+      "sha256": "02c35875899aa8d86d2a79d3f79b828be021602c53abf8bed2e5bce12a9353b6"
+    },
+    {
+      "file": "dist/blog/swiss-machining/index.html",
+      "sha256": "3c05232718d1cd8fe9633e59115c098e9b69c596073c800ca0287bf737b967fd"
+    },
+    {
+      "file": "dist/blog/thread-milling-vs-tapping/index.html",
+      "sha256": "1cc5090a6d4455fb38dd0cb80a2647c524832825f902aa01a9f1d3bd689973a0"
+    },
+    {
+      "file": "dist/blog/what-is-a-cnc-lathe/index.html",
+      "sha256": "d1f07cf9d6b6ba516e9234d77082729c2b925d063b7ac9fec55974a2eadf88cf"
+    },
+    {
+      "file": "dist/blog/what-is-cnc/index.html",
+      "sha256": "b619eecbede49a8f857b5636b9f2907525a2e84c620883403ecfd0260ec5ca46"
+    },
+    {
+      "file": "dist/blog/what-is-laser-cutting/index.html",
+      "sha256": "028fd3834de8573843ba5de9e88265534d093a75d782a8b0cd15ec3e21b2c81f"
+    },
+    {
+      "file": "dist/blog/zero-waste-cnc-machining/index.html",
+      "sha256": "01536219f156e46c915f26b4530e109a9603f9af87bf456886bdd6e08f78477e"
+    },
+    {
+      "file": "dist/cnc-machining-quote/index.html",
+      "sha256": "6ce1e1c2fefbd4fab226598c36278874cbc2415d0fdad5516075ec51d1586506"
+    },
+    {
+      "file": "dist/custom-cnc-parts/5-axis-aluminum-cnc-machining-parts/index.html",
+      "sha256": "0f37e21585dc1379a1acfa76161afacaa6c99e567f202fc4a88da1c1e56e7ef9"
+    },
+    {
+      "file": "dist/custom-cnc-parts/5-axis-cnc-machining-aerospace-components/index.html",
+      "sha256": "5d7033060c76fbb7af9d7f0779702b142b190668099800ddde651ff96537ad53"
+    },
+    {
+      "file": "dist/custom-cnc-parts/5-axis-cnc-machining-brass-parts/index.html",
+      "sha256": "fb6c7d2fbf2445c7bfd1e54ef64db7316827dda32ebe7b2da6d9554b633c4bac"
+    },
+    {
+      "file": "dist/custom-cnc-parts/5-axis-cnc-machining-for-aluminum-structures/index.html",
+      "sha256": "56bf902d83b7414509b6ea563c991558f69d396f01764a3948783a5619c40851"
+    },
+    {
+      "file": "dist/custom-cnc-parts/5-axis-cnc-machining-for-humanoid-robots/index.html",
+      "sha256": "231fe81a263ddc28d95aeb027b0bb2ea0e5b366dcbcd1dc925634dcdfc499e24"
+    },
+    {
+      "file": "dist/custom-cnc-parts/5-axis-cnc-machining-mechanical-parts/index.html",
+      "sha256": "3311f5a63e776e71f8701629f14fd6c4c42bb04b01b8fd9a87ac69e020393550"
+    },
+    {
+      "file": "dist/custom-cnc-parts/5-axis-cnc-machining-robotic-joints/index.html",
+      "sha256": "dd13d01c5964add3befb1be3d5b35a8dcd0d6a457eaa9f9146eb90e01b5d95f7"
+    },
+    {
+      "file": "dist/custom-cnc-parts/5-axis-sensor-housing-machining/index.html",
+      "sha256": "8403ab912a3fc43bccf066b0938d5778cbfa8a80f69c1117808bb38aab946a71"
+    },
+    {
+      "file": "dist/custom-cnc-parts/aerospace-connector-pins/index.html",
+      "sha256": "c2bf62a402f32eec4e16867574a057e97dccfca00f2406c0fd16e1a352fdacf1"
+    },
+    {
+      "file": "dist/custom-cnc-parts/aerospace-fasteners/index.html",
+      "sha256": "dd9023c72e15b4cd20b7a7aac7e73c936d0f41e1237db5a87aca4a64cf0204e7"
+    },
+    {
+      "file": "dist/custom-cnc-parts/aerospace-fittings/index.html",
+      "sha256": "1ac83e7f5937e48a134ce84decabe33529e1e20e5b92a15cd06dfb2feec32ee5"
+    },
+    {
+      "file": "dist/custom-cnc-parts/aerospace-precision-shafts/index.html",
+      "sha256": "a5a71e13e3fd65c6cbcbe54d7056757e1dcf2154d7a637e28c37cd518b2a6f7f"
+    },
+    {
+      "file": "dist/custom-cnc-parts/aerospace-precision-terminals/index.html",
+      "sha256": "cf58ad277e667773284e59bacde3d44dbf6628487a04e514bc9a5b979d05d1c7"
+    },
+    {
+      "file": "dist/custom-cnc-parts/aluminium-alloy-cnc-turning-bushing/index.html",
+      "sha256": "4aa9ea3b31fcbbb0c827ff355ae08ff2dbfa0c277ff65d3722a10ead3b2eb987"
+    },
+    {
+      "file": "dist/custom-cnc-parts/aluminium-alloy-cnc-turning-milling-parts/index.html",
+      "sha256": "12bcdb82204530312db8e93305313f6f12f8ba2f34e509e98df7a7da64cae4e8"
+    },
+    {
+      "file": "dist/custom-cnc-parts/aluminum-alloy-5-axis-cnc-machining/index.html",
+      "sha256": "27d7ed70290f1ce53fcaf23b1c41121e5f7a872a7c4efcbe13d4768586057a0a"
+    },
+    {
+      "file": "dist/custom-cnc-parts/aluminum-bronze-bushing/index.html",
+      "sha256": "997decce983cc0061ffc602b3194503fab5f142da9fdd6e670ec3f0fe0759b5f"
+    },
+    {
+      "file": "dist/custom-cnc-parts/aluminum-cnc-machining-flanges/index.html",
+      "sha256": "0f65d1c00127de5baf0372f194582ea1c05f030b8846d232b6b0f920bffd263e"
+    },
+    {
+      "file": "dist/custom-cnc-parts/aluminum-cnc-turning-parts/index.html",
+      "sha256": "c9193da616d5de8f5ac0312ad8624188affba0d7f98550628eb5c4f5d6aa9a96"
+    },
+    {
+      "file": "dist/custom-cnc-parts/aluminum-shafts-cnc-turning/index.html",
+      "sha256": "9fbd35d13ee281079475399698dd2a877220298b69f7438c3372bb227d9be17c"
+    },
+    {
+      "file": "dist/custom-cnc-parts/aluminum-swiss-screw-machined-parts/index.html",
+      "sha256": "bf450368332709c42d5b0866e15e2b1dd26b61fd4362dbc322b8950336288a12"
+    },
+    {
+      "file": "dist/custom-cnc-parts/aluminum-threaded-bushings/index.html",
+      "sha256": "5eae8955c104a394d05ecbe417c9734aeab16d772a4286b66e6d4b4e03c57d23"
+    },
+    {
+      "file": "dist/custom-cnc-parts/battery-housings/index.html",
+      "sha256": "da57378c6bddd1b862b445231be826dbf7419783fa9adf10b9dbeae67675b5f6"
+    },
+    {
+      "file": "dist/custom-cnc-parts/bearing-bushing/index.html",
+      "sha256": "1ca2cb66daf01bb6bdc65a8e32984e4aa2edb7e8fc1008d6995741e0df1be9bd"
+    },
+    {
+      "file": "dist/custom-cnc-parts/bearing-housing/index.html",
+      "sha256": "4933e758f7c64af19c97ff2cda88c2bfe0cd5f4c2f5448555dd26c88bc02082f"
+    },
+    {
+      "file": "dist/custom-cnc-parts/brass-contact-pins/index.html",
+      "sha256": "3ad452c0240a52f8f37847da3b5f1e9fdabdca4ea3f15c227304fd7df6994d4c"
+    },
+    {
+      "file": "dist/custom-cnc-parts/brass-flange-bushing/index.html",
+      "sha256": "0851540a41234d43ca7ffd0e5625f30568a45ac91e1d15838addd95209ea3701"
+    },
+    {
+      "file": "dist/custom-cnc-parts/brass-nipple/index.html",
+      "sha256": "14833e70d0f7bc188e529d4e5e693c41d03b9ea1e88741b91af4638c009c7698"
+    },
+    {
+      "file": "dist/custom-cnc-parts/brass-pipe-fittings/index.html",
+      "sha256": "dd0527d41430de93dc76c8517c99b39bbf5c3b23a184e47f5581de968ddf491a"
+    },
+    {
+      "file": "dist/custom-cnc-parts/brass-pneumatic-fittings/index.html",
+      "sha256": "16f0290aaaf69ac57753dba9a337c8cc0376bac3d93ce0bc0d7cc0477a80babc"
+    },
+    {
+      "file": "dist/custom-cnc-parts/brass-swiss-screw-machined-parts/index.html",
+      "sha256": "a115774cae75c3ee67d301a66517f2860e120c1a31c4975007bfa125b18acaf2"
+    },
+    {
+      "file": "dist/custom-cnc-parts/brass-threaded-bushings/index.html",
+      "sha256": "25c667d887360f3384d4666ca45da91b8cdb8931c67c492a7a69f5e7210d6a67"
+    },
+    {
+      "file": "dist/custom-cnc-parts/brass-turning-milling-parts/index.html",
+      "sha256": "cd9e24c8a0cdb3748fa039baa5c183fafa1e65b31258f0940b7b12a826bf0699"
+    },
+    {
+      "file": "dist/custom-cnc-parts/bronze-bushings/index.html",
+      "sha256": "4f74a68a5ad4dead5088ffd3e4395d1722b450530c9258b6260a0fdc3b687f4d"
+    },
+    {
+      "file": "dist/custom-cnc-parts/bronze-sleeve-bushings/index.html",
+      "sha256": "3991db2e8f95fe4875409600b7fed9f70394f7178b9bff6b9ee2bebe925870eb"
+    },
+    {
+      "file": "dist/custom-cnc-parts/chassis/index.html",
+      "sha256": "bf893228778071f97c83d2bde8b84b724f42ebf769a40ad251d9741433db5172"
+    },
+    {
+      "file": "dist/custom-cnc-parts/cnc-custom-aluminum-shift-knob/index.html",
+      "sha256": "b3b7e93d2ada99ac7156be7abb382cb1c961546bbc337118a39b0884cbea33dd"
+    },
+    {
+      "file": "dist/custom-cnc-parts/cnc-machined-brass-parts/index.html",
+      "sha256": "9c27703aec2120d1b7331c68e1e468b7b33f95c73a17c439786f410f244d3f75"
+    },
+    {
+      "file": "dist/custom-cnc-parts/cnc-machined-flange/index.html",
+      "sha256": "c81fe590bd5c0d5d8f91188d81644e1e8388eb4811654fca0bac100cfd37c39c"
+    },
+    {
+      "file": "dist/custom-cnc-parts/cnc-machined-pins/index.html",
+      "sha256": "b9c25695660aa2fa7ba58aa184aa005eca6b7c821226a337de337b8e3fffa68b"
+    },
+    {
+      "file": "dist/custom-cnc-parts/cnc-machinery-parts/index.html",
+      "sha256": "f40ac3a25096c9ce5782b557e8f1ff9c9bc725abaea6100bf2b9b986d178b2c6"
+    },
+    {
+      "file": "dist/custom-cnc-parts/cnc-machining-drone-parts/index.html",
+      "sha256": "726d04549ecedc59e6890e1f9a8c61d3891d0d51a66f9ad720ef0336dff19df3"
+    },
+    {
+      "file": "dist/custom-cnc-parts/cnc-machining-for-aerospace-brackets/index.html",
+      "sha256": "49be6baad51f58df2e4578d3d2ee922a8fed56fbcf777a7ccc1bb83a4214fae6"
+    },
+    {
+      "file": "dist/custom-cnc-parts/cnc-machining-servo-motor-parts/index.html",
+      "sha256": "1b0f7d119c75ec2e2a902f6f5201067a7015ad99b3142a68d391432bf167d56f"
+    },
+    {
+      "file": "dist/custom-cnc-parts/cnc-propeller-machining/index.html",
+      "sha256": "22673e731408bfef9773dae4da197ebbe5be688ef46cc63c862b1a72435a6391"
+    },
+    {
+      "file": "dist/custom-cnc-parts/cnc-prototyping-humanoid-robot-parts/index.html",
+      "sha256": "d8fec8f3e194325c1121c7c193a4825fcbc7f78cd833e586929d776c763d2c46"
+    },
+    {
+      "file": "dist/custom-cnc-parts/cnc-turning-and-milling-parts/index.html",
+      "sha256": "83a6e179c2d6a55dad8ffb02c872a288453bad104ce46f9ea5454f796f16845b"
+    },
+    {
+      "file": "dist/custom-cnc-parts/cnc-turning-bearing-housings/index.html",
+      "sha256": "ec9f50d9aaf7d80b329264053a60fd1bc77053354f9510dda1df93009d31b106"
+    },
+    {
+      "file": "dist/custom-cnc-parts/cnc-turning-humanoid-robot-components/index.html",
+      "sha256": "9a25b3c3fc373bcc9d5a7bfe75ab9263de602d69133a4f85f450670b9cef2c20"
+    },
+    {
+      "file": "dist/custom-cnc-parts/cnc-turning-milling-parts/index.html",
+      "sha256": "3a85f87f37f162c6ee3d5d4a0d24d61615aa5d59d95c0de5084e6061fbed3ec2"
+    },
+    {
+      "file": "dist/custom-cnc-parts/cnc-turning-precision-washers/index.html",
+      "sha256": "4c2bae42e7b2556be952090dcc196bdcece34f0f2039175af9164b7d64470544"
+    },
+    {
+      "file": "dist/custom-cnc-parts/cnc-turning-titanium-nuts/index.html",
+      "sha256": "5949253b330144492d0d7862c88fb3d779a50bcf9ed85a26fca7a8d51eca0800"
+    },
+    {
+      "file": "dist/custom-cnc-parts/compression-tube-fitting/index.html",
+      "sha256": "486a598129964d424d710d32e34072e917dfaea817e024b2718905c831f8a222"
+    },
+    {
+      "file": "dist/custom-cnc-parts/connector-pins-swiss-screw-machining/index.html",
+      "sha256": "ce7b82ba64ec2b1e2755c8cd61cf26a768f5ce766ed181a523e081fe1b69fa52"
+    },
+    {
+      "file": "dist/custom-cnc-parts/connector-pins/index.html",
+      "sha256": "299d04cf88632753854ea60f2a40cc908f6d33c750b8962e23c1b76d1b4ba565"
+    },
+    {
+      "file": "dist/custom-cnc-parts/crimp-contact-pins/index.html",
+      "sha256": "cf6cf91c1ac2056601ade25e631006efdbfedd657b096c0a8c480b4965b7d706"
+    },
+    {
+      "file": "dist/custom-cnc-parts/custom-electrical-contacts/index.html",
+      "sha256": "f8ee72debdb78be79b864a0a34e1f5329050a9e86bdefbed1d8a56063bdac145"
+    },
+    {
+      "file": "dist/custom-cnc-parts/custom-flange-manufacturing/index.html",
+      "sha256": "8646c6e4992e69e1be0fe2ea835c74f5245c6e61548fbfea1c177b6b9ed87f47"
+    },
+    {
+      "file": "dist/custom-cnc-parts/custom-pipe-flanges/index.html",
+      "sha256": "15b64e490a20b4ac097b4fc286ef2e57c384f693a8398fe7484df91919dbbf40"
+    },
+    {
+      "file": "dist/custom-cnc-parts/cylinder-head-machining/index.html",
+      "sha256": "e3467aa7dc78013fccc985d50f58d28a75b0a281095905208d69cffa367f004f"
+    },
+    {
+      "file": "dist/custom-cnc-parts/defense-cnc-machining-parts/index.html",
+      "sha256": "fa0b6d1fe1bcc3ff41d1affde1e7615d578f234e4f0a6b12be5ae40531c2903d"
+    },
+    {
+      "file": "dist/custom-cnc-parts/dental-implant-manufacturing/index.html",
+      "sha256": "70c156a1ef1b379d7d4c7fef8aff3008bf937aeef792d67ef5948e2502cdb321"
+    },
+    {
+      "file": "dist/custom-cnc-parts/electric-motor-stator-housing-machining/index.html",
+      "sha256": "41a6ea844dbfa12cb19c5342f52c8093a35eab9d2f0128f0326eca02fc808101"
+    },
+    {
+      "file": "dist/custom-cnc-parts/electrical-connectors/index.html",
+      "sha256": "ba52568ede31355931ba20e39e04e3f29f71466304c84a537317e8de202f8298"
+    },
+    {
+      "file": "dist/custom-cnc-parts/ev-battery-connectors/index.html",
+      "sha256": "09e12a6b78a716e0b4a0e7539e36bf5a372cfec0b725c6a3b7b40ab17d8aea2c"
+    },
+    {
+      "file": "dist/custom-cnc-parts/ev-charger-manufacturing/index.html",
+      "sha256": "e4655259fd7285d1b449a79e87e75b9367e47d9c06583b8b2c4fc6652927d5cb"
+    },
+    {
+      "file": "dist/custom-cnc-parts/ev-charging-connector/index.html",
+      "sha256": "3da32d91ed37f24dc09172c816161340badd7994565ffe09d41bce717061a52e"
+    },
+    {
+      "file": "dist/custom-cnc-parts/ev-charging-gun/index.html",
+      "sha256": "c7fb5f0b1d69095b058568a8f4699daae41d78a5f2758321d638d0213f8369c4"
+    },
+    {
+      "file": "dist/custom-cnc-parts/ev-charging-plug/index.html",
+      "sha256": "f61b86fd4a2e5cf06ba2f160739f693550b94c55c71d5a23362ab703d2c55ab5"
+    },
+    {
+      "file": "dist/custom-cnc-parts/ev-components/index.html",
+      "sha256": "6e1c03d74e8b5598ca28a040e4b56921d08be7bdc4331c3460f7823541bb4dfd"
+    },
+    {
+      "file": "dist/custom-cnc-parts/ev-housing-cnc-machining/index.html",
+      "sha256": "2b2f357b2c9c6d00a62a66992514d59ba0d42d722c4672a3d67a50ce74a97721"
+    },
+    {
+      "file": "dist/custom-cnc-parts/evtol-bearing-housing/index.html",
+      "sha256": "da5b775f76c8640609893be0a8f856ad685bb86433cbb7f9a51dbd5226331f95"
+    },
+    {
+      "file": "dist/custom-cnc-parts/evtol-connector-pins-terminals/index.html",
+      "sha256": "e673383baa48d379e5d18945569596efba11712447f5e5865734b6ac48c01749"
+    },
+    {
+      "file": "dist/custom-cnc-parts/evtol-cooling-fittings/index.html",
+      "sha256": "a7af39d2e7253f1646008ec9dba010d4f75a1719935b70114a57ca33bd4b8781"
+    },
+    {
+      "file": "dist/custom-cnc-parts/evtol-landing-gear-actuator-parts/index.html",
+      "sha256": "3955f2e1c3e9bdb7fcbdaa54707705ce020c93913a29b5a020b06f036ae63397"
+    },
+    {
+      "file": "dist/custom-cnc-parts/evtol-motor-shaft/index.html",
+      "sha256": "b28a88d486e6599bba7b149f685ebc3612a9c5babf75da362bc92e28727ad2de"
+    },
+    {
+      "file": "dist/custom-cnc-parts/evtol-propeller/index.html",
+      "sha256": "d223fb453fd1ea96ec6df06af1fe643145a99a9e103bc62ad1863aa83017cd00"
+    },
+    {
+      "file": "dist/custom-cnc-parts/evtol-sensor-housing/index.html",
+      "sha256": "8f45322d6468d4bf39341ba0ce1988e8dc27c3b71063db08e2f629152cd1ee6d"
+    },
+    {
+      "file": "dist/custom-cnc-parts/evtol-titanium-fasteners/index.html",
+      "sha256": "23f84cc90a053848c80503aa7f3529136fd69ad3160a3bb7ec974cee8a7f7d97"
+    },
+    {
+      "file": "dist/custom-cnc-parts/flanges/index.html",
+      "sha256": "76ce18db35f0244f7b5cce0a097d9382a1b0b0f4b64844b20e9538d303e42df4"
+    },
+    {
+      "file": "dist/custom-cnc-parts/gearbox-housing/index.html",
+      "sha256": "082acfb2513aabeaabc7ae35ed9079a795fb1da8ef970f9f48caf112b9e64fc4"
+    },
+    {
+      "file": "dist/custom-cnc-parts/harmonic-drive-components/index.html",
+      "sha256": "c4da69001d2f688a7b658ca64b5db5f6bfd8e56b8e2f6fd5d997f32fc5002826"
+    },
+    {
+      "file": "dist/custom-cnc-parts/harmonic-drive-gearbox/index.html",
+      "sha256": "8b1f1e3b21e12f1a7c1c19b45ff6bb5ace41c09de9a8892ebd0ed071fcf93c5c"
+    },
+    {
+      "file": "dist/custom-cnc-parts/heat-sinks/index.html",
+      "sha256": "847ded1fb864fa3b6c59debe7eb7f463f6536cfffa742a9f12494bbf408c8721"
+    },
+    {
+      "file": "dist/custom-cnc-parts/high-volume-robotic-machining/index.html",
+      "sha256": "05b080a56c6f00761014005f440539d2ab100240f26e2495fde74748894224ef"
+    },
+    {
+      "file": "dist/custom-cnc-parts/humanoid-robot-arm-components/index.html",
+      "sha256": "de1dc69304638bf84cd3caea9365397f5736aa6b9bc67f83f76d1ca6bf86e324"
+    },
+    {
+      "file": "dist/custom-cnc-parts/humanoid-robot-finger-joints/index.html",
+      "sha256": "2e757c9b7bda724390a827aed8c1d8e97c0f865a063997f772c0c6fcba83c08c"
+    },
+    {
+      "file": "dist/custom-cnc-parts/humanoid-robot-hand-finger-parts/index.html",
+      "sha256": "08f4fd9c4b293753e55585da9d1a2638a9d4c26709a8843dde0cacf5884d310e"
+    },
+    {
+      "file": "dist/custom-cnc-parts/humanoid-robot-joint-components/index.html",
+      "sha256": "d2b96f5199a96657d5ce8efe4c7c17f119a048cd1c19edb21fd4bad9bcec20e9"
+    },
+    {
+      "file": "dist/custom-cnc-parts/humanoid-robot-joint-housings/index.html",
+      "sha256": "b9394fbaa4e466be20385fa6da9dcd2167796119bc1430f90e376956053fb208"
+    },
+    {
+      "file": "dist/custom-cnc-parts/humanoid-robot-leg-components/index.html",
+      "sha256": "9c5f4073a20b6d1fda860118f44f19cfd4ebba9bae972597fdad7165b56f4597"
+    },
+    {
+      "file": "dist/custom-cnc-parts/hydraulic-cylinder-components-machining/index.html",
+      "sha256": "572fc5e85a5055cc37bceb86d629024e6420cd9d2bcb1512d8c2f29dcb45475d"
+    },
+    {
+      "file": "dist/custom-cnc-parts/hydraulic-cylinder-piston-machining/index.html",
+      "sha256": "2310aae14149848d2c11d969566886ca326bc2bb745c5ff324869fe840e61f26"
+    },
+    {
+      "file": "dist/custom-cnc-parts/hydraulic-fittings/index.html",
+      "sha256": "7738db3b9bfe083f239f32d5c68b84a5b22bc65e02b3e66ee439ee7cff562c5e"
+    },
+    {
+      "file": "dist/custom-cnc-parts/index.html",
+      "sha256": "dce67b22282aa95208680b913cfc478469b3bf886218d8d0f9693c8fa9cf9ef7"
+    },
+    {
+      "file": "dist/custom-cnc-parts/industrial-robot-arms/index.html",
+      "sha256": "2696b5117522d0dc8476729b806364d3bd220cece396192c44d307eaf87a69c7"
+    },
+    {
+      "file": "dist/custom-cnc-parts/introducer-needles/index.html",
+      "sha256": "645576824ad910e145f34a7ac197adfccb21e4688878c217369fecef335ae15b"
+    },
+    {
+      "file": "dist/custom-cnc-parts/large-diameter-flanges/index.html",
+      "sha256": "30091fc140d28cd9c9cbc8fe6ebadbd428ed2fd8b14fa79f92b300045d7e3ce5"
+    },
+    {
+      "file": "dist/custom-cnc-parts/liquid-cooling-connectors/index.html",
+      "sha256": "b1eb2c13c7327e3ca1488dc62e9a1b7bc89171fa875ff5d1928cb333f8e66646"
+    },
+    {
+      "file": "dist/custom-cnc-parts/liquid-cooling-plate/index.html",
+      "sha256": "ebe4b025323de47c7d7ccb5c6c8fdf874002ad1415a0a767dddcacecfb5e5513"
+    },
+    {
+      "file": "dist/custom-cnc-parts/machined-contacts/index.html",
+      "sha256": "8dcc194776f927830ae2fdd367bb982e7c38b838e14dc985e821141747e40f9b"
+    },
+    {
+      "file": "dist/custom-cnc-parts/male-female-thread-nipple/index.html",
+      "sha256": "280a9051168cccd3a6a464486b49f3f9e764ccc9b107d119b5dbed8c3f994b7d"
+    },
+    {
+      "file": "dist/custom-cnc-parts/medical-device-pins/index.html",
+      "sha256": "1667e6139f92f9aef789f9aac24e26fed684a7c5f4fa08c3d4c51c820f8aa68f"
+    },
+    {
+      "file": "dist/custom-cnc-parts/medical-instrument-machining/index.html",
+      "sha256": "779dbd91346639c6d3a8036f88914a36f23614a836774b3e5ce32fe9ee9f51a8"
+    },
+    {
+      "file": "dist/custom-cnc-parts/medical-machining-parts/index.html",
+      "sha256": "9e9a8664387f076c905be7f4ef4e8ec64b2e7ad8bfa089a7a238ec434956ba33"
+    },
+    {
+      "file": "dist/custom-cnc-parts/metal-enclosures/index.html",
+      "sha256": "268cb8cb6c6c6054098a0784aef71172b9ab4eee04496aceafd00b14066fe7c1"
+    },
+    {
+      "file": "dist/custom-cnc-parts/metric-thread-adapter/index.html",
+      "sha256": "4ff00f7f211ef4c55dcdd4afafade6c26e443826086abeab17dc2de4ae1153c8"
+    },
+    {
+      "file": "dist/custom-cnc-parts/motor-housings/index.html",
+      "sha256": "cb36396cf67690846ffc60a172e65cfdff1b6098676a1f42eecbef144145e5e2"
+    },
+    {
+      "file": "dist/custom-cnc-parts/motor-shaft/index.html",
+      "sha256": "42e1946ecb7c087567da83262bd6ad591cec4c7b4aafca44df0d3eb33ce0e5ab"
+    },
+    {
+      "file": "dist/custom-cnc-parts/nickel-swiss-machining-parts/index.html",
+      "sha256": "aa566c60d423b40fd13403eaed4418d4409e4710ffb1dc995fe1d763114669d2"
+    },
+    {
+      "file": "dist/custom-cnc-parts/oil-gas-machining-components/index.html",
+      "sha256": "8b7f9ce285d82cd63acbaab6777eadf5fc55ddc27531a20c6f1691a16032b102"
+    },
+    {
+      "file": "dist/custom-cnc-parts/page/2/index.html",
+      "sha256": "56634bb1b09b5403348b0bd7e876b842d566f2766580e5fad14bd29ccff55180"
+    },
+    {
+      "file": "dist/custom-cnc-parts/page/3/index.html",
+      "sha256": "eef82b84f3807274aaaf492fdd35f60da0cf06972b646329d638898d67bbfa3e"
+    },
+    {
+      "file": "dist/custom-cnc-parts/page/4/index.html",
+      "sha256": "a9a3f4049bf5eae87d1a34187cbff90b08eac264d4bb180f26a503079f6a1b22"
+    },
+    {
+      "file": "dist/custom-cnc-parts/page/5/index.html",
+      "sha256": "3a694313419011e4af4e13ddddd97490cfcaa9a077b0db7dfbeae3568d8e4399"
+    },
+    {
+      "file": "dist/custom-cnc-parts/page/6/index.html",
+      "sha256": "643e768cb4176e92780f19bccb989dbd9ec9f588baef7dd134223a0ea7f6b344"
+    },
+    {
+      "file": "dist/custom-cnc-parts/page/7/index.html",
+      "sha256": "c8e1337e41b011a7c04887945deacdb112a2c0562f987ce7cfe9cbfe9d167e2a"
+    },
+    {
+      "file": "dist/custom-cnc-parts/pipe-fittings-full-coupling/index.html",
+      "sha256": "3c3287603af5c7968078966524d2eed624db27febd8037277e5f57b47c82772c"
+    },
+    {
+      "file": "dist/custom-cnc-parts/pipe-fittings/index.html",
+      "sha256": "cea9c6bc34b89145fbdc2aa97d8b3c4dd167a8f8f5dcb3378724a4ea195f6ef2"
+    },
+    {
+      "file": "dist/custom-cnc-parts/planetary-gearbox-components/index.html",
+      "sha256": "7a5c68420be020b789caa764014db866e198f441dd5d9a374f01217c9e862f60"
+    },
+    {
+      "file": "dist/custom-cnc-parts/planetary-gearbox/index.html",
+      "sha256": "fdd07ed2f960aa7a239547f99ceb9ccfe0ccbfe534f9e7a6aa7c935a0bcd149d"
+    },
+    {
+      "file": "dist/custom-cnc-parts/pogo-contact-pins/index.html",
+      "sha256": "9e341604ddd3a43520722a9cdcceeaf97cb59d76b1c0b6a9d72f06e76fd2ef15"
+    },
+    {
+      "file": "dist/custom-cnc-parts/precision-actuator-parts/index.html",
+      "sha256": "8c10f0efba875fa60a2e11a28af195ed481929c5048255daf20dd8fb395e40ac"
+    },
+    {
+      "file": "dist/custom-cnc-parts/precision-connector-contacts/index.html",
+      "sha256": "fc96ba474b36da9a0eebbf56489a9ff45ab839b0fceff4a6126e46e733c80c8a"
+    },
+    {
+      "file": "dist/custom-cnc-parts/precision-turned-ev-charging-pins/index.html",
+      "sha256": "210eeb4c85cf2064c41bda37463a8dcec829fa0fdcfdca3cb16d4ecdc6efa82d"
+    },
+    {
+      "file": "dist/custom-cnc-parts/radar-systems-parts-machining/index.html",
+      "sha256": "b576391e486dab070242bf2bc660acb68e92ccfc5a00d684f33ed488f3e69429"
+    },
+    {
+      "file": "dist/custom-cnc-parts/radar/index.html",
+      "sha256": "f6570c4a331a105fc0c2f9ca8b6b5d54b419d7ee3abca18f399eb0c85fc51ef2"
+    },
+    {
+      "file": "dist/custom-cnc-parts/rail-machining/index.html",
+      "sha256": "cca9a113ab7eeadc5207ddccc764b92ec820e53ee8769627ae8dc97ae583eaf0"
+    },
+    {
+      "file": "dist/custom-cnc-parts/rails/index.html",
+      "sha256": "e1f8dd853d8eff62756c2d510248e143518c214d291c2ce11429acc41fe7b3dd"
+    },
+    {
+      "file": "dist/custom-cnc-parts/reducer-hex-nipple/index.html",
+      "sha256": "3564d5193165d2da24193df0c6ee2e98a10218bd61c96aa8ecac8b1c4a91ae85"
+    },
+    {
+      "file": "dist/custom-cnc-parts/reducer-shaft/index.html",
+      "sha256": "7ca1bddda3bb8a2ef648e75c258ddb4c8d95c460857065438ff6d1e408a5d553"
+    },
+    {
+      "file": "dist/custom-cnc-parts/rf-connectors/index.html",
+      "sha256": "fd61af9f2fc7b4fb9bcae8d45bea9b6980e7cbf630ce99d2e156a69a16a977ff"
+    },
+    {
+      "file": "dist/custom-cnc-parts/rf-test-probes/index.html",
+      "sha256": "7db004a4cebc41b4631016bf672ce6652abf9a334bdb9bb07b5b2ce37d7f2cbd"
+    },
+    {
+      "file": "dist/custom-cnc-parts/robot-actuator-housings/index.html",
+      "sha256": "6fbb9b6b06d034cece1a39b7808b038364c7547612a9e904f2b66361004af1c5"
+    },
+    {
+      "file": "dist/custom-cnc-parts/robot-bearing-housings-seats/index.html",
+      "sha256": "fd932cd90adba0980de0594e58bd2d5f12102fb5c4a876870eceebd00f4508a1"
+    },
+    {
+      "file": "dist/custom-cnc-parts/robot-motor-housings-end-caps/index.html",
+      "sha256": "4bda27d9f9a0d1759e4cd53d5ee4a3c480fca2e68a384337fad355654b0c761d"
+    },
+    {
+      "file": "dist/custom-cnc-parts/robot-output-shafts/index.html",
+      "sha256": "1c96a4e023ff7c889470a4d5151be1527984071c10dccdc52773a3456a6b767d"
+    },
+    {
+      "file": "dist/custom-cnc-parts/robot-shaft-parts/index.html",
+      "sha256": "29a16d066b3cb60f17117a064264b23e177d683e0173554ed986fbd0c877ccd7"
+    },
+    {
+      "file": "dist/custom-cnc-parts/robot-structural-links-brackets/index.html",
+      "sha256": "738d8edbd39f24016e82dfca5f6025db2dd778759b15d50511adbdacd5e61104"
+    },
+    {
+      "file": "dist/custom-cnc-parts/robotic-machining-cells/index.html",
+      "sha256": "5ad59ad2464dac38dc0538960c86b52b78059147f124d5f7afda5ad84a0b8ef0"
+    },
+    {
+      "file": "dist/custom-cnc-parts/robotics-machining-parts/index.html",
+      "sha256": "a7474b33e464d31b04a85ee2c3108ee427436f43f56192f6ea18c1b48477c0e7"
+    },
+    {
+      "file": "dist/custom-cnc-parts/satellite-arms/index.html",
+      "sha256": "637af065212bde0737bc59caec5e4edcc0ef637023f899ccf09ae19b97394b4a"
+    },
+    {
+      "file": "dist/custom-cnc-parts/satellite-brackets/index.html",
+      "sha256": "1d12749606b0a36fd8c15b7b4da4d952fed2e6848284db13ce099b8bdb0a32a0"
+    },
+    {
+      "file": "dist/custom-cnc-parts/satellite-components/index.html",
+      "sha256": "e36b761f41abbf55889c42a4da24515571ca865feefc68a65dd9cdfdba9fcd91"
+    },
+    {
+      "file": "dist/custom-cnc-parts/satellite-connectors/index.html",
+      "sha256": "b77bf7219db9f54688b9e89c2ec8f9d8cd73f77541b5423ef947075874260ec3"
+    },
+    {
+      "file": "dist/custom-cnc-parts/satellite-housings/index.html",
+      "sha256": "111077f49e7c15922d5f14b5d2b2eb881e87de39c10ca8f8bd377923a05fc8be"
+    },
+    {
+      "file": "dist/custom-cnc-parts/satellite-milling-components/index.html",
+      "sha256": "7a26ec3ff5babed656b772aae7c98aec58b20194b12eec8f2771080dcd589ddf"
+    },
+    {
+      "file": "dist/custom-cnc-parts/satellite-parts/index.html",
+      "sha256": "d408f503ffde62f863586d8353c0db321271ae8f07964512cb6e753c155a8f8c"
+    },
+    {
+      "file": "dist/custom-cnc-parts/satellite-structures/index.html",
+      "sha256": "693318e629c824fc485a8ab1529d6efe105690f3158918e9048f2943731cef12"
+    },
+    {
+      "file": "dist/custom-cnc-parts/screw-threaded-sleeve/index.html",
+      "sha256": "74533efcff7135e6b692f086a65056cb6ad8d683e0ebe6fd4aba8c503c53589b"
+    },
+    {
+      "file": "dist/custom-cnc-parts/semiconductor-connector/index.html",
+      "sha256": "8755a8ff8e8ca79f1ffb9b8dd060b5ea1b66897c6bd9a2d6bd53dc4f23cf5112"
+    },
+    {
+      "file": "dist/custom-cnc-parts/semiconductor-cooling-plate/index.html",
+      "sha256": "632c0d8976aaa8d6a247f0065a4a0e6d9085cd2f202bf12d9c4dc80b69928881"
+    },
+    {
+      "file": "dist/custom-cnc-parts/semiconductor-housings/index.html",
+      "sha256": "871cddf9a9fe0146e89904db6b2b51bac3aa7c3b30faaae03ea190d8f41ff172"
+    },
+    {
+      "file": "dist/custom-cnc-parts/semiconductor-probe-pin/index.html",
+      "sha256": "5ec7a035a19a90ee5c47556fb13177e6e1d14617b9e257a5f062aef66176e436"
+    },
+    {
+      "file": "dist/custom-cnc-parts/semiconductor-test-probes/index.html",
+      "sha256": "1616f470accfebc342d140315f3403833dbbab9edcaa29d43a71cfd80ca959ad"
+    },
+    {
+      "file": "dist/custom-cnc-parts/semiconductor-vacuum-chamber-parts/index.html",
+      "sha256": "a70c65fdb9f5170197c8a8de2f15169b54f9d0cc38c9799274200b61f9304439"
+    },
+    {
+      "file": "dist/custom-cnc-parts/semiconductor-vacuum-chamber/index.html",
+      "sha256": "028938142bfeeca3dc95f52ed72d4cba4b4a1300b12fb8b34367496701a5620a"
+    },
+    {
+      "file": "dist/custom-cnc-parts/semiconductor-wet-etch-spray-nozzle/index.html",
+      "sha256": "cfec9328caa5b64cd2940f4fc9e82764dcbd2e3b7ffebbaad643a21360c87700"
+    },
+    {
+      "file": "dist/custom-cnc-parts/sensor-housings/index.html",
+      "sha256": "1a229082c43156aaf91c90e3bf0f4e71d5c818469460417bc6d726f4a016d2c7"
+    },
+    {
+      "file": "dist/custom-cnc-parts/server-components/index.html",
+      "sha256": "f8f644f7a7fbd5d79f5d40b9d58f04523d27f18d0d5aa98d0c08d15384cba662"
+    },
+    {
+      "file": "dist/custom-cnc-parts/server-parts/index.html",
+      "sha256": "bf4d93f1f3200dd9cf946e1f049226c7cf8a166be4cd5f7a1954cc13b7741cf6"
+    },
+    {
+      "file": "dist/custom-cnc-parts/spring-loaded-contact-pins/index.html",
+      "sha256": "5fcb7ab5a4446b2d1d4000c1621f90b61b6bedb0ded2dc3dbe2ebb12f7756922"
+    },
+    {
+      "file": "dist/custom-cnc-parts/spring-loaded-test-pins/index.html",
+      "sha256": "1c52a527a9dbdf2503cf2bcdf2c4bf7776f115ece983a88229479badfadc71ff"
+    },
+    {
+      "file": "dist/custom-cnc-parts/spring-test-probes/index.html",
+      "sha256": "495451d45af5cf1da4f4ddca97809d2b7a0070252aca6798b06708fe355cb905"
+    },
+    {
+      "file": "dist/custom-cnc-parts/stainless-steel-5-axis-cnc-parts/index.html",
+      "sha256": "f5c0feaab1d303ce27564f55a0c608f1a45bcdf394a80dbecbd8f5b2abdad229"
+    },
+    {
+      "file": "dist/custom-cnc-parts/stainless-steel-bushing/index.html",
+      "sha256": "8a16ee8519c2484d1c705e449c59897ac372cc4327451cebea84f18babb44c6e"
+    },
+    {
+      "file": "dist/custom-cnc-parts/stainless-steel-cnc-turning-flanges/index.html",
+      "sha256": "125385683dfb1761190e5979e0f629a9587f7b1c5570dcccdc89bcbd0e355f2c"
+    },
+    {
+      "file": "dist/custom-cnc-parts/stainless-steel-cnc-turning-parts/index.html",
+      "sha256": "9a59ebe1d223c4be4ff97383dd81da819bbcf231b175f782c8fcb21c7ff3de9f"
+    },
+    {
+      "file": "dist/custom-cnc-parts/stainless-steel-fittings/index.html",
+      "sha256": "c713ca78add6c2743c1cd45a884cad17718a38f73978110dad1a6cc8150af11f"
+    },
+    {
+      "file": "dist/custom-cnc-parts/stainless-steel-machining-semiconductor-parts/index.html",
+      "sha256": "87c2bde12e80ae5cfb001806a893aa615e7d3d940332025cbcff296d5a43fd52"
+    },
+    {
+      "file": "dist/custom-cnc-parts/stainless-steel-precision-turning-shaft/index.html",
+      "sha256": "2f7b9520ea6f3df2dc9c50bc0f7e0be28521da9e36ac2615069ee26d916769c2"
+    },
+    {
+      "file": "dist/custom-cnc-parts/swiss-machined-parts/index.html",
+      "sha256": "95b03e6df8a030fcb7d0b48c7308dabe65b4e510c4ff1c432c89a66dbe20300d"
+    },
+    {
+      "file": "dist/custom-cnc-parts/swiss-machining-robot-pins-shafts/index.html",
+      "sha256": "cd0020c596593d7448ce56a8a59d954ae184374cead8b576c700faeafe7761b0"
+    },
+    {
+      "file": "dist/custom-cnc-parts/test-probe-pins/index.html",
+      "sha256": "285d2900fc3a428f0a1ea8e30eda854ba6c0700ee1d458dd04428e58ea58a9ff"
+    },
+    {
+      "file": "dist/custom-cnc-parts/threaded-bushing/index.html",
+      "sha256": "1a67a80e0cfd9e7913b932cdd98c9e45df1cf790e85d6b3541bf6d0b2746d5da"
+    },
+    {
+      "file": "dist/custom-cnc-parts/tilt-rotor-mechanism-components/index.html",
+      "sha256": "fbf72deb3a1c40fd32cfd33ad3dabd08f0a8ad7ca2d417f97429ff724b3a987c"
+    },
+    {
+      "file": "dist/custom-cnc-parts/titanium-evtol-machining/index.html",
+      "sha256": "b51c0989467c802a5bef0822498a68683b559e308bedd2785f397b03a16e3f82"
+    },
+    {
+      "file": "dist/custom-cnc-parts/titanium-swiss-screw-machined-parts/index.html",
+      "sha256": "0386bacc6c728c2565b5837bfff6a639adc4ecf0745b872e32211d05275d48df"
+    },
+    {
+      "file": "dist/custom-cnc-parts/turned-cooling-fittings/index.html",
+      "sha256": "8455e3fead87262d14a8fa74e6482ba332b58aa09b402cc48927dbc9c4c2f5bc"
+    },
+    {
+      "file": "dist/custom-cnc-parts/wire-edm-robot-gears-splines/index.html",
+      "sha256": "38f6e8f352a7afbc45404c38496f35b3abe10fb1dde7b1f66ec8660d6be10c4b"
+    },
+    {
+      "file": "dist/index.html",
+      "sha256": "10eb70ca0431edda9d1856233c40e5a51bd81cef405c0fc5482aa70d5a373ac5"
+    },
+    {
+      "file": "dist/industries/aerospace-swiss-machining/index.html",
+      "sha256": "292fefd359c232f55a5111a1aebfe0329a7a8116f13d2e25f9c0dd922bba4da8"
+    },
+    {
+      "file": "dist/industries/aerospace/index.html",
+      "sha256": "a6bc993b7f3fdb5eaae9e07b22f402a555e8957a4c1a480efd316da307460360"
+    },
+    {
+      "file": "dist/industries/automotive-swiss-machining/index.html",
+      "sha256": "b0ab3d56f952b25287df21916eabbefe415077afb0aeec0fe76e563fb4cbb720"
+    },
+    {
+      "file": "dist/industries/automotive/index.html",
+      "sha256": "14100a62662167003785c2855a50ca7f8fc8095c6f47d1690fe1424658c9239b"
+    },
+    {
+      "file": "dist/industries/consumer-electronics/index.html",
+      "sha256": "4e5d434591542e6345f870f10b2e44273c1d3bd983cbcf0eca1014ff8903382c"
+    },
+    {
+      "file": "dist/industries/defense-precision-machining/index.html",
+      "sha256": "c38496ab5bb64da099aa9b98d88b0b616d9531259c7a12ec1d2f0343ad3ffed7"
+    },
+    {
+      "file": "dist/industries/defense-swiss-machining/index.html",
+      "sha256": "f4fa10344ed190ff2fd434f48082042b0cb5fbba150785da85e5ada46c3bf601"
+    },
+    {
+      "file": "dist/industries/defense/index.html",
+      "sha256": "ad32d30de7593727adef0b910c1da240960f59cffd8c068e40bd584cdda357fc"
+    },
+    {
+      "file": "dist/industries/evtol/index.html",
+      "sha256": "09498744e541355b0a1fe9f3a9c4c9ae54b24bd52ef22824ac950c177f902d71"
+    },
+    {
+      "file": "dist/industries/humanoid-robot-cnc-machining/index.html",
+      "sha256": "731e6f6c0cc69322087bc65d2be93f16b1843c48f4df31128c36e188fb259d0e"
+    },
+    {
+      "file": "dist/industries/index.html",
+      "sha256": "855556d4e95c353c6db4525d2acb67313365a914a1740900b564f1238e953817"
+    },
+    {
+      "file": "dist/industries/medical-swiss-machining/index.html",
+      "sha256": "72680f7e29a3be28303912313af3908052112d076ca27672ad30cae5e6ec468d"
+    },
+    {
+      "file": "dist/industries/medical/index.html",
+      "sha256": "1423abe032ce5642c794d83bb3641f917f63e1572f576851e2e260cc181718a6"
+    },
+    {
+      "file": "dist/industries/oil-gas-swiss-machining/index.html",
+      "sha256": "b6c9d33600d508d79f80992e82b61f2161c37cbb02c42a304b4c933d508df4f5"
+    },
+    {
+      "file": "dist/industries/oil-gas/index.html",
+      "sha256": "d329424923f1e0a953a2cfda901972e15dff4d3b642ab474a7a83eed2b363d87"
+    },
+    {
+      "file": "dist/industries/railroad-machining-services/index.html",
+      "sha256": "9a74b22d1f7977eef8acf239f55d5e5992d2f4e6792710052916613b89ce7b36"
+    },
+    {
+      "file": "dist/industries/railway/index.html",
+      "sha256": "c8860834aa1def8c47cf0aa923f8484132624d8640d474171b86c454400bc6bc"
+    },
+    {
+      "file": "dist/industries/robotics-cnc-machining/index.html",
+      "sha256": "51fb8862e2999fd7d6c5aebf235c913433a0ca22eccc1963817038cee7d851da"
+    },
+    {
+      "file": "dist/industries/robotics/index.html",
+      "sha256": "22b860489c939d2e15f3eb1f24bfef580b4678e0d7689e4f4ad83286c58ebdee"
+    },
+    {
+      "file": "dist/industries/satellites/index.html",
+      "sha256": "81fa4b9afe8592c2f750fefaa9ad8c3547a07e03cbab28a37a1ef4a894891538"
+    },
+    {
+      "file": "dist/industries/semiconductor-cnc-machining/index.html",
+      "sha256": "c9b00e38ddc0974763eca53a1fb369354758f6aa225031c1b699af1e9e6bc2b1"
+    },
+    {
+      "file": "dist/industries/semiconductor/index.html",
+      "sha256": "efedace1cfd29d20ad9ce855494f32837afb496483c53c339e0a23d706052264"
+    },
+    {
+      "file": "dist/industries/server/index.html",
+      "sha256": "ffcb4984ea7f85c957400971d2e332643ef0696d5dc6d6eab3462b8403e074c7"
+    },
+    {
+      "file": "dist/materials/6061-aluminum-cnc-machining/index.html",
+      "sha256": "aa11de4d567935117473cbc652b4d9d05e5c56fc22964e0f5c3de93ff77924ae"
+    },
+    {
+      "file": "dist/materials/6061-t6-aluminum-cnc-machining/index.html",
+      "sha256": "d23e2db528b7772342712825b15211686b0649305f2729b6ff0ff55cc856834c"
+    },
+    {
+      "file": "dist/materials/abs-cnc-machining/index.html",
+      "sha256": "b81eb1c18df941e278551729ae84bbce437e2251543fd1c0ff0f86eac513a587"
+    },
+    {
+      "file": "dist/materials/acrylic-cnc-machining/index.html",
+      "sha256": "83343c08be1ec2bb8f75c24749878bb8cfb9580c883b786190248ea5466b3a4f"
+    },
+    {
+      "file": "dist/materials/alloy-steel-cnc-machining/index.html",
+      "sha256": "cea762347bbd1b4ad69d7a55d0acccd9c7a762728fdfb9b745ce76d4c74e687e"
+    },
+    {
+      "file": "dist/materials/aluminum-cnc-machining/index.html",
+      "sha256": "98d11c69acd1041f3a8ac850130fcd45d591d533c3b370f9de39bb7531ee2d13"
+    },
+    {
+      "file": "dist/materials/aluminum-cnc-turning-and-milling/index.html",
+      "sha256": "c4660dae45f4fa1a9317231fac64db39e7ebe58734c0b4e84005059aef3caf92"
+    },
+    {
+      "file": "dist/materials/aluminum-swiss-machining/index.html",
+      "sha256": "0e197b9fe4a9d0d4dcf1938a41d0a80e886fdc67eac47df0bb570468f74e5bea"
+    },
+    {
+      "file": "dist/materials/brass-cnc-machining/index.html",
+      "sha256": "c25ef4a2f24a48e3e1008a5b0c63e3235fe078dd2ca81111fb49631abdcae22b"
+    },
+    {
+      "file": "dist/materials/brass-swiss-machining/index.html",
+      "sha256": "a4a5e3246b9d25dd8b8835340826c780cd8d3c95ba9825fd0d01752878ce7dd5"
+    },
+    {
+      "file": "dist/materials/bronze-cnc-machining/index.html",
+      "sha256": "39990dfe897d4ff94b40dbd0b219508860248cf68066173595a3cfe7124644dd"
+    },
+    {
+      "file": "dist/materials/carbon-steel-cnc-machining/index.html",
+      "sha256": "7b4232dc776571abf494ae2e55166d2195634cb50a4fc8c67cc854912bed1796"
+    },
+    {
+      "file": "dist/materials/copper-cnc-machining/index.html",
+      "sha256": "eb73332384f12e8efdc541e2f6aa70885bf97f91aad0e2c0cdf571dcce639927"
+    },
+    {
+      "file": "dist/materials/hdpe-cnc-machining/index.html",
+      "sha256": "13f6bd4e84900c7a54e301a4222051e187943dd0c82d6d4175d67d849e24cfa4"
+    },
+    {
+      "file": "dist/materials/inconel-600-cnc-machining/index.html",
+      "sha256": "76cc8cd8d72aa7458bfe8980c1fa866f666e205d2a23761b1f9966afdaa9a7d9"
+    },
+    {
+      "file": "dist/materials/inconel-625-cnc-machining/index.html",
+      "sha256": "b9a9dd605b1e9df137d27063a16b42d097f02550addf499c99e36341de47cffa"
+    },
+    {
+      "file": "dist/materials/inconel-718-cnc-machining/index.html",
+      "sha256": "2fe484bfd2dc987b8fd3a88f05aefd2034f7fab3d98f10ae25da406e9a7912a0"
+    },
+    {
+      "file": "dist/materials/inconel-cnc-machining/index.html",
+      "sha256": "50ce38b1a47b6e817df7126d2f65fd00a2b4d6b3833d1d31f860589eff6af45b"
+    },
+    {
+      "file": "dist/materials/index.html",
+      "sha256": "35c7d3cafd45ba5e2a3febbc9c4d4df655ea987cd375b7fc6db16730571ea16d"
+    },
+    {
+      "file": "dist/materials/invar-cnc-machining/index.html",
+      "sha256": "5c28c71d25b2cdb59b65cf21445eecbec931c64f194cf48905744d51e6715088"
+    },
+    {
+      "file": "dist/materials/kovar-cnc-machining/index.html",
+      "sha256": "5e4f07c8d1a011fbc1ab3d42fdd4841a04798065ae90f2ad3a757db4bb3cd1b4"
+    },
+    {
+      "file": "dist/materials/magnesium-cnc-machining/index.html",
+      "sha256": "1bbd381538fec41c8955f29dc5311f111a5a74130cb20e85180af301647d98b6"
+    },
+    {
+      "file": "dist/materials/metal-cnc-machining/index.html",
+      "sha256": "2cdd562729101513b7db09ab22a05a3c50c78d50bfcc3b9496ee0fcf2e86cee7"
+    },
+    {
+      "file": "dist/materials/nickel-swiss-machining/index.html",
+      "sha256": "b9a4b99aff8d3861e86ce202fcb79396ba7ab206f96908d1f2c90c49d1bc4eb7"
+    },
+    {
+      "file": "dist/materials/nitinol-cnc-machining/index.html",
+      "sha256": "61188c472e29e41696607e942d1f3cfa7754c50360ca4522941c969c94dfd002"
+    },
+    {
+      "file": "dist/materials/nylon-66-cnc-machining/index.html",
+      "sha256": "23d3b258424ea104141d71dc7012e3233f5f5516e08fef6c9a65d16805359088"
+    },
+    {
+      "file": "dist/materials/nylon-cnc-machining/index.html",
+      "sha256": "cfc8b7fcb65d85fec249e34044d38cc827401d1f8bb1c85518b8a970968525fb"
+    },
+    {
+      "file": "dist/materials/peek-cnc-machining/index.html",
+      "sha256": "4f18079ac6496b0fcd3667032ca4ea0ec278acdbbe4143b6dfa580336cae8dac"
+    },
+    {
+      "file": "dist/materials/peek-cnc-turning-and-milling/index.html",
+      "sha256": "bfbc3408231fcbfe1be8afbc92ed0ca3e66f4d04732a0392abbdba4b868bb535"
+    },
+    {
+      "file": "dist/materials/peek-swiss-machining/index.html",
+      "sha256": "b9e01729c08f791d3254d65e27a22df801f401ad0b58a47c0c563857a4a28ade"
+    },
+    {
+      "file": "dist/materials/plastic-cnc-machining/index.html",
+      "sha256": "aa34e538887cb8fcef9eee6ec9a302b25892f3f37f8f7e88cb74770e6e43af97"
+    },
+    {
+      "file": "dist/materials/polycarbonate-cnc-machining/index.html",
+      "sha256": "0778b62c4fe547dcf202a29dfe1151f742b612e9960bbd135ecede6b7678c51c"
+    },
+    {
+      "file": "dist/materials/polypropylene-cnc-machining/index.html",
+      "sha256": "15d668d8fcbcdf740e7e385c51b21b2af59c7b35fa267c2992b9b400bdb83168"
+    },
+    {
+      "file": "dist/materials/pom-cnc-machining/index.html",
+      "sha256": "8ecfb2f3644d192539b43e416948781facf458976be83129c186d6ee7af4ef67"
+    },
+    {
+      "file": "dist/materials/ptfe-cnc-machining/index.html",
+      "sha256": "538ff4f96adf80a6a55240d7cd6cfac17fdb8faf1697c3d2fba2c96c7a3e2264"
+    },
+    {
+      "file": "dist/materials/stainless-steel-cnc-machining/index.html",
+      "sha256": "b2d4068e2581fb69179daac11099c69f68c937d81e1dac26a6a2974345df5624"
+    },
+    {
+      "file": "dist/materials/stainless-steel-cnc-turning-and-milling/index.html",
+      "sha256": "03ce71d96e855c743581c5860b7aa2db9a3bfb5a556268881222792a59dc5960"
+    },
+    {
+      "file": "dist/materials/stainless-steel-swiss-machining/index.html",
+      "sha256": "54ae510aac1a27da65658b2e58b19e33efcc5270a589f1b94349433290d0d9fc"
+    },
+    {
+      "file": "dist/materials/titanium-cnc-machining/index.html",
+      "sha256": "8f18e6b4eb814ae83fbc08c6cecad32c707f5fbb29f36c6568befca740d788f4"
+    },
+    {
+      "file": "dist/materials/titanium-swiss-machining/index.html",
+      "sha256": "7098ddfb6a87d1d261bd8f0f8455b8b6d9ae1540fd9f92f4564b77c79fffde53"
+    },
+    {
+      "file": "dist/materials/ultem-cnc-machining/index.html",
+      "sha256": "b186ba4f80381dae82fdf1339f231da27e261612a5d90ea7bf31f01681fbd717"
+    },
+    {
+      "file": "dist/resources/faqs/index.html",
+      "sha256": "a0cdcbf66846092c2ee2d66140f38bfe72e4d2d9483a9dc4d4e0a743de619af3"
+    },
+    {
+      "file": "dist/resources/index.html",
+      "sha256": "59d821878fa231c41c7ae2879de9503140529f22443224de3a35e8880d2c6ea1"
+    },
+    {
+      "file": "dist/robots.txt",
+      "sha256": "9b4996acc8a7f613d5caf224355b64e5cd35f897dcc7d1a967c1fd38199894f0"
+    },
+    {
+      "file": "dist/search/index.html",
+      "sha256": "fe398cf472653654abb3cd279a1579636c129e2722d52227649d3a7c4cff1351"
+    },
+    {
+      "file": "dist/services/cnc-turning-and-milling/index.html",
+      "sha256": "ea558f152b972d309f4e13d3061ec41c5c9719f5f276c7bd45a85ebbef8be7b0"
+    },
+    {
+      "file": "dist/services/index.html",
+      "sha256": "0408924e754cc8866b743c5bd0c554c838120fa001cf06fbb7b1d9f7f6d8d194"
+    },
+    {
+      "file": "dist/services/swiss-machining/index.html",
+      "sha256": "c3ac97a2208d3ae01456848f28f99051898beae6f806d64456aaf73312c297ff"
+    },
+    {
+      "file": "dist/services/swiss-machining/swiss-micro-machining/index.html",
+      "sha256": "facbae11356594dbc9ac7929101b5c7f06e133436dd50a84ce232d1410ed5df3"
+    },
+    {
+      "file": "dist/services/swiss-machining/swiss-screw-machining/index.html",
+      "sha256": "48289bd4abfd9861aef57ee518386f30e516da3ac5952b4d6af44e966b4b970e"
+    },
+    {
+      "file": "dist/sitemap.xml",
+      "sha256": "c3a9a06f9cff9542d8ba02bcae1f99ed270a3207b46ebc6ad6cae118af89337f"
+    }
+  ],
+  "version": "a12dc74487b3fd4b73c3846f689cdeee64d281abcfe332e78016dc7acaf03568"
+}

@@ -1,0 +1,259 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import QuoteCta from "../components/native/QuoteCta.astro";
+import { getReviewedSeo } from "../data/pageSeoOverrides.mjs";
+
+const reviewed = getReviewedSeo("/about-us");
+const seo = {
+  ...reviewed,
+  title: "About CNCPioneer | Precision CNC Machining Manufacturer",
+  description: "Learn how CNCPioneer supports custom precision components with CNC turning, Swiss machining, mill-turn production, finishing and dimensional inspection.",
+  canonical: "/about-us",
+  image: "/assets/images/cnc-machining-centers-production.webp",
+};
+
+const focusAreas = [
+  { number: "01", title: "CNC turning & Swiss machining", text: "Pins, shafts, bushings, connectors and other precision turned components." },
+  { number: "02", title: "Mill-turn machining", text: "Parts that combine turned diameters with milled faces, flats, slots and cross features." },
+  { number: "03", title: "Machining & finishing", text: "CNC machining centers, precision grinding, electron-beam welding and electropolishing support a connected production route." },
+];
+
+const industries = [
+  { title: "Semiconductor & high-purity systems", text: "Ultra-high-purity valves, BA VCR pipe joints, diaphragm valve bodies and semiconductor valve components." },
+  { title: "Automotive & electronics", text: "Precision automotive components and parts for audio and electronics applications." },
+  { title: "Medical & aerospace", text: "High-precision medical equipment parts and aerospace hardware made to customer requirements." },
+];
+
+const inspection = [
+  { title: "Coordinate measurement", image: "/assets/images/coordinate-measuring-inspection.webp", alt: "Coordinate measuring machine in the inspection area" },
+  { title: "Optical measurement", image: "/assets/images/optical-measurement-inspection.webp", alt: "Optical measuring equipment used for dimensional inspection" },
+  { title: "Profile measurement", image: "/assets/images/profile-measurement-inspection.webp", alt: "Profile measurement equipment in the quality area" },
+  { title: "Height measurement", image: "/assets/images/height-measurement-inspection.webp", alt: "Height gauge inspection equipment" },
+];
+
+const milestones = [
+  { year: "2011", title: "Manufacturing operations begin", text: "Machining operations and manufacturing in Dongguan are part of CNCPioneer’s history." },
+  { year: "2018", title: "Precision machining operation established", text: "A dedicated precision-machining operation was established to support customer production programs." },
+  { year: "2020", title: "Automotive quality milestone", text: "IATF 16949:2016 certification was achieved in January 2020." },
+  { year: "2022", title: "Aerospace & measurement milestones", text: "Aerospace quality and measurement management system certifications were achieved in 2022." },
+];
+---
+
+<BaseLayout seo={seo}>
+  <div class="about-company" id="content">
+    <section class="about-hero" aria-labelledby="about-title">
+      <div class="about-shell about-hero-grid">
+        <div class="about-hero-copy">
+          <p class="about-kicker">ABOUT CNCPIONEER</p>
+          <h1 id="about-title">Precision CNC machining for custom components</h1>
+          <p class="about-hero-lead">CNCPioneer brings drawing review, CNC turning, Swiss machining, mill-turn production, finishing and dimensional inspection together to support precision parts built to your requirements.</p>
+          <div class="about-hero-actions">
+            <a class="about-button" href="/cnc-machining-quote">Discuss a Part <span aria-hidden="true">↗</span></a>
+            <a class="about-text-link" href="#capabilities">Explore our capabilities <span aria-hidden="true">↓</span></a>
+          </div>
+        </div>
+        <figure class="about-hero-photo">
+          <img src="/assets/images/cnc-machining-centers-production.webp" width="733" height="500" alt="CNC machining centers on the Dongguan factory floor" fetchpriority="high" />
+          <figcaption>CNC machining centers on the production floor</figcaption>
+        </figure>
+      </div>
+      <div class="about-shell about-proof-row" aria-label="Company focus">
+        <div><span>LOCATION</span><strong>Dongguan, China</strong></div>
+        <div><span>CORE WORK</span><strong>Precision machined components</strong></div>
+        <div><span>PRODUCTION</span><strong>Turning · Mill-turn · Milling</strong></div>
+        <div><span>QUALITY</span><strong>Measurement equipment on site</strong></div>
+      </div>
+    </section>
+
+    <section class="about-section about-story" aria-labelledby="story-title">
+      <div class="about-shell story-layout">
+        <div class="story-copy">
+          <p class="about-kicker">HOW WE WORK</p>
+          <h2 id="story-title">Production planned around the part</h2>
+          <p>Every component starts with its geometry, material and functional requirements. We review the drawing, identify critical features and plan the machining route, finishing steps and inspection approach around the part.</p>
+          <p>Our production resources include CNC lathes, machining centers and precision grinding equipment, with electropolishing and other finishing capabilities available for suitable projects. Share the drawing, quantity and acceptance requirements so we can review the right route for your order.</p>
+          <a class="about-inline-link" href="/cnc-machining-quote">Send a drawing for review <span aria-hidden="true">↗</span></a>
+        </div>
+        <figure class="story-photo">
+          <img src="/assets/images/cnc-mill-turn-production.webp" width="699" height="515" alt="A mill-turn machine cutting a metal component in the factory" loading="lazy" decoding="async" />
+          <figcaption>Mill-turn machining in production</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="about-section capabilities-section" id="capabilities" aria-labelledby="capabilities-title">
+      <div class="about-shell">
+        <div class="about-section-heading">
+          <p class="about-kicker">WHAT WE DO</p>
+          <h2 id="capabilities-title">Machining and finishing capabilities</h2>
+          <p>Choose the machining route around the component’s geometry, tolerances, material and required finish.</p>
+        </div>
+        <div class="focus-grid">
+          {focusAreas.map((area) => (
+            <article class="focus-card">
+              <span class="focus-number">{area.number}</span>
+              <h3>{area.title}</h3>
+              <p>{area.text}</p>
+            </article>
+          ))}
+        </div>
+        <div class="capability-links">
+          <a href="/services/swiss-machining">Swiss machining service <span aria-hidden="true">↗</span></a>
+          <a href="/services/cnc-turning-and-milling">CNC turning and milling service <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section industries-section" aria-labelledby="industries-title">
+      <div class="about-shell industries-layout">
+        <div class="industries-heading">
+          <p class="about-kicker">APPLICATIONS IN THE PROFILE</p>
+          <h2 id="industries-title">Components for demanding industries</h2>
+          <p>Precision hardware and machinery components for semiconductor, automotive, medical and aerospace applications.</p>
+        </div>
+        <div class="industry-list">
+          {industries.map((industry, index) => (
+            <article class="industry-item">
+              <span class="industry-index">0{index + 1}</span>
+              <div><h3>{industry.title}</h3><p>{industry.text}</p></div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section quality-section" aria-labelledby="quality-title">
+      <div class="about-shell">
+        <div class="about-section-heading quality-heading">
+          <p class="about-kicker">INSPECTION EQUIPMENT</p>
+          <h2 id="quality-title">Dimensional checks supported by dedicated equipment</h2>
+          <p>Coordinate, optical, profile and height measurement equipment support checks against drawing requirements. Inspection scope is aligned with the critical features and acceptance criteria for each order.</p>
+        </div>
+        <div class="inspection-grid">
+          {inspection.map((item) => (
+            <figure class="inspection-card">
+              <img src={item.image} alt={item.alt} loading="lazy" decoding="async" />
+              <figcaption>{item.title}</figcaption>
+            </figure>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section history-section" aria-labelledby="history-title">
+      <div class="about-shell">
+        <div class="about-section-heading history-heading">
+          <p class="about-kicker">COMPANY PROFILE MILESTONES</p>
+          <h2 id="history-title">A growing manufacturing operation</h2>
+          <p>Selected milestones in the development of CNCPioneer’s manufacturing and quality systems.</p>
+        </div>
+        <ol class="milestone-grid">
+          {milestones.map((milestone) => (
+            <li class="milestone-card">
+              <span class="milestone-year">{milestone.year}</span>
+              <h3>{milestone.title}</h3>
+              <p>{milestone.text}</p>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </section>
+
+    <QuoteCta id="about-quote" idPrefix="about-quote-form" formName="About CNCPioneer Project Enquiry" kicker="START A CONVERSATION" title="Have a precision part to make?" description="Send your drawing, material, quantity and inspection requirements for a project-specific review." />
+  </div>
+
+</BaseLayout>
+
+<style>
+  .about-company { color: var(--color-body); background: var(--color-white); }
+  .about-shell { width: min(calc(100% - 48px), var(--layout-shell)); margin-inline: auto; }
+  .about-hero { padding: 52px 0 0; background: linear-gradient(180deg, var(--color-surface) 0%, var(--color-white) 100%); }
+  .about-hero-grid { display: grid; grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr); align-items: center; gap: clamp(36px, 6vw, 84px); }
+  .about-kicker { margin: 0 0 16px; color: var(--color-brand); font: 500 var(--type-label)/1.4 var(--font-mono); letter-spacing: .08em; text-transform: uppercase; }
+  .about-hero h1 { max-width: 650px; margin: 0; color: var(--color-ink); font: 400 var(--type-h1-hero)/1.08 var(--font-heading); letter-spacing: -.035em; }
+  .about-hero-lead { max-width: 610px; margin: 24px 0 0; color: var(--color-body); font: 400 18px/1.7 var(--font-sans); }
+  .about-hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 22px; margin-top: 30px; }
+  .about-button { display: inline-flex; min-height: 50px; align-items: center; justify-content: center; gap: 12px; padding: 0 22px; border: 1px solid var(--color-brand); border-radius: 4px; color: var(--color-white); background: var(--color-brand); font: 500 15px/1.2 var(--font-sans); text-decoration: none; transition: background 160ms ease, transform 160ms ease; }
+  .about-button:hover { background: var(--color-hover); transform: translateY(-1px); }
+  .about-text-link, .about-inline-link { color: var(--color-brand); font: 500 15px/1.5 var(--font-sans); text-decoration: none; text-underline-offset: 4px; }
+  .about-text-link:hover, .about-inline-link:hover, .capability-links a:hover { text-decoration: underline; }
+  .about-hero-photo, .story-photo { position: relative; min-width: 0; margin: 0; overflow: hidden; background: var(--color-surface); }
+  .about-hero-photo { height: clamp(300px, 34vw, 440px); border-radius: 8px 8px 0 0; }
+  .about-hero-photo img, .story-photo img { width: 100%; height: 100%; object-fit: cover; }
+  .about-hero-photo figcaption, .story-photo figcaption { position: absolute; right: 0; bottom: 0; left: 0; padding: 38px 18px 14px; color: var(--color-white); background: linear-gradient(180deg, transparent, rgb(var(--color-ink-rgb)/.76)); font: 400 var(--type-caption)/1.5 var(--font-sans); }
+  .about-proof-row { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 38px; border-top: 1px solid var(--color-border); }
+  .about-proof-row > div { display: grid; gap: 8px; padding: 20px 18px 24px 0; }
+  .about-proof-row span { color: var(--color-body); font: 500 11px/1.3 var(--font-mono); letter-spacing: .08em; }
+  .about-proof-row strong { color: var(--color-ink); font: 500 15px/1.4 var(--font-sans); }
+  .about-section { padding: clamp(64px, 8vw, 104px) 0; }
+  .story-layout { display: grid; grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); align-items: center; gap: clamp(40px, 7vw, 96px); }
+  .story-copy h2, .about-section-heading h2, .industries-heading h2 { margin: 0; color: var(--color-ink); font: 400 var(--type-h2)/1.16 var(--font-heading); letter-spacing: -.025em; }
+  .story-copy > p:not(.about-kicker) { margin: 20px 0 0; color: var(--color-body); font: 400 16px/1.75 var(--font-sans); }
+  .story-copy .about-inline-link { display: inline-flex; gap: 10px; margin-top: 24px; }
+  .story-photo { height: clamp(300px, 36vw, 450px); border-radius: 8px; }
+  .capabilities-section { background: var(--color-surface); }
+  .about-section-heading { max-width: 760px; margin: 0 auto 36px; text-align: center; }
+  .about-section-heading > p:last-child, .industries-heading > p:last-child { max-width: 680px; margin: 16px auto 0; color: var(--color-body); font: 400 16px/1.7 var(--font-sans); }
+  .focus-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+  .focus-card { min-height: 220px; padding: 28px; border: 1px solid var(--color-border); border-radius: 6px; background: var(--color-white); }
+  .focus-number, .industry-index { color: var(--color-brand); font: 500 12px/1.4 var(--font-mono); }
+  .focus-card h3, .industry-item h3, .milestone-card h3 { margin: 22px 0 10px; color: var(--color-ink); font: 500 var(--type-h3)/1.25 var(--font-heading); }
+  .focus-card p, .industry-item p, .milestone-card p { margin: 0; color: var(--color-body); font: 400 15px/1.7 var(--font-sans); }
+  .capability-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 18px 36px; margin-top: 30px; }
+  .capability-links a { color: var(--color-brand); font: 500 15px/1.5 var(--font-sans); text-decoration: none; }
+  .industries-layout { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); align-items: start; gap: clamp(40px, 8vw, 120px); }
+  .industries-heading > p:last-child { margin-left: 0; }
+  .industry-list { border-top: 1px solid var(--color-border); }
+  .industry-item { display: grid; grid-template-columns: 48px 1fr; gap: 18px; padding: 22px 0; border-bottom: 1px solid var(--color-border); }
+  .industry-item h3 { margin: 0 0 7px; }
+  .quality-section { background: var(--color-surface); }
+  .quality-heading { max-width: 860px; }
+  .inspection-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+  .inspection-card { margin: 0; overflow: hidden; border: 1px solid var(--color-border); border-radius: 6px; background: var(--color-white); }
+  .inspection-card img { width: 100%; height: 190px; object-fit: cover; }
+  .inspection-card figcaption { padding: 14px 16px; color: var(--color-ink); font: 500 14px/1.4 var(--font-sans); }
+  .history-section { padding-bottom: clamp(64px, 8vw, 100px); }
+  .history-heading { max-width: 780px; }
+  .milestone-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin: 0; padding: 0; list-style: none; }
+  .milestone-card { position: relative; padding: 22px 20px 24px; border-top: 2px solid var(--color-brand); background: var(--color-surface); }
+  .milestone-year { color: var(--color-brand); font: 500 12px/1.4 var(--font-mono); letter-spacing: .05em; }
+  .milestone-card h3 { margin: 14px 0 8px; }
+  .about-cta { padding: 54px 0; color: var(--color-white); background: var(--color-brand); }
+  .about-cta-inner { display: flex; align-items: center; justify-content: space-between; gap: 36px; }
+  .about-cta .about-kicker { color: rgb(var(--color-white-rgb)/.8); }
+  .about-cta h2 { margin: 0; color: var(--color-white); font: 400 var(--type-h2)/1.15 var(--font-heading); }
+  .about-cta-inner > div > p:last-child { margin: 12px 0 0; color: rgb(var(--color-white-rgb)/.86); font: 400 16px/1.6 var(--font-sans); }
+  .about-button-light { flex: 0 0 auto; border-color: var(--color-white); color: var(--color-brand); background: var(--color-white); }
+  .about-button-light:hover { color: var(--color-hover); background: var(--color-surface); }
+  @media (max-width: 900px) {
+    .about-hero-grid, .story-layout, .industries-layout { grid-template-columns: 1fr; gap: 34px; }
+    .about-hero-copy { max-width: 740px; }
+    .about-hero-photo { height: clamp(280px, 48vw, 420px); border-radius: 8px; }
+    .story-photo { height: clamp(280px, 52vw, 410px); }
+    .focus-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .inspection-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .milestone-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  @media (max-width: 600px) {
+    .about-shell { width: calc(100% - 36px); }
+    .about-hero { padding-top: 34px; }
+    .about-hero-grid { gap: 28px; }
+    .about-hero h1 { font-size: var(--type-h1); }
+    .about-hero-lead { margin-top: 18px; font-size: 16px; }
+    .about-hero-actions { align-items: flex-start; flex-direction: column; gap: 16px; margin-top: 22px; }
+    .about-hero-photo { height: 260px; }
+    .about-proof-row { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 24px; }
+    .about-proof-row > div { padding: 16px 10px 16px 0; }
+    .about-proof-row strong { font-size: 14px; }
+    .about-section { padding: 56px 0; }
+    .story-layout { gap: 26px; }
+    .story-photo { height: 260px; }
+    .focus-grid, .inspection-grid, .milestone-grid { grid-template-columns: 1fr; }
+    .focus-card { min-height: 0; padding: 22px; }
+    .focus-card h3 { margin-top: 15px; }
+    .inspection-card img { height: 220px; }
+    .capability-links { align-items: flex-start; flex-direction: column; gap: 14px; }
+    .about-cta-inner { align-items: flex-start; flex-direction: column; }
+    .about-button-light { width: 100%; }
+  }
+</style>

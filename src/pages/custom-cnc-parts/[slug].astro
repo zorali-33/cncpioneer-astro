@@ -1,0 +1,70 @@
+---
+import PartPage from "../../components/native/PartPage.astro";
+import ProductPage from "../../components/native/ProductPage.astro";
+import { nativeParts } from "../../data/nativeParts.mjs";
+import { productContent } from "../../data/productContent.mjs";
+import { isRetiredProduct } from "../../data/productRedirects.mjs";
+
+export function getStaticPaths() {
+  return nativeParts.filter((page) => !isRetiredProduct(`custom-cnc-parts/${page.slug}`)).map((page) => ({
+    params: { slug: page.slug },
+    props: { page },
+  }));
+}
+
+const { page } = Astro.props;
+const isReference = page.slug === "stainless-steel-cnc-turning-flanges";
+const applicationLinkOverrides = {
+  "semiconductor-probe-pin": {
+    href: "/industries/semiconductor",
+    label: "Explore semiconductor machining",
+    description: "Explore machining capabilities, material options and quality support for semiconductor components.",
+  },
+  "robot-actuator-housings": {
+    href: "/industries/robotics",
+    label: "Explore robotics machining",
+    description: "Explore machining capabilities, material options and quality support for robotics components.",
+  },
+  "satellite-housings": {
+    href: "/industries/satellites",
+    label: "Explore satellite machining",
+    description: "Explore machining capabilities, material options and quality support for satellite components.",
+  },
+  "satellite-milling-components": {
+    href: "/industries/satellites",
+    label: "Explore satellite machining",
+    description: "Explore machining capabilities, material options and quality support for satellite components.",
+  },
+  "cnc-machining-drone-parts": {
+    href: "/industries/aerospace",
+    label: "Explore aerospace machining",
+    description: "Explore machining capabilities, material options and quality support for drone and UAV components.",
+  },
+  "aerospace-fasteners": {
+    href: "/industries/aerospace",
+    label: "Explore aerospace machining",
+    description: "Explore machining capabilities, material options and quality support for aerospace components.",
+  },
+  "evtol-titanium-fasteners": {
+    href: "/industries/evtol",
+    label: "Explore eVTOL machining",
+    description: "Explore machining capabilities, material options and quality support for eVTOL components.",
+  },
+};
+const applicationsLink = applicationLinkOverrides[page.slug] || null;
+// Preserve related-product matching when a product URL is renamed.
+const relatedTerms = (slug) => slug === "cnc-propeller-machining" ? ["evtol", "propeller"]
+  : slug === "electric-motor-stator-housing-machining" ? ["robot", "motor", "housings", "end", "caps"]
+  : slug.split("-");
+const relatedSlugs = productContent[page.slug]?.relatedSlugs;
+const related = relatedSlugs?.length
+  ? relatedSlugs.flatMap((slug) => nativeParts.filter((item) => item.slug === slug))
+  : isReference
+  ? nativeParts.filter((item) => item.slug !== page.slug && item.categoryLabel === page.categoryLabel).slice(0, 4)
+  : nativeParts.filter((item) => item.slug !== page.slug).map((item) => {
+      const terms = relatedTerms(page.slug).filter((term) => !["cnc", "parts", "machining", "machined", "precision", "custom", "for", "and"].includes(term));
+      const score = terms.filter((term) => relatedTerms(item.slug).includes(term)).length * 4 + (item.categoryLabel === page.categoryLabel ? 3 : 0);
+      return { item, score };
+    }).sort((a, b) => b.score - a.score || a.item.slug.localeCompare(b.item.slug)).slice(0, 4).map(({ item }) => item);
+---
+{isReference ? <PartPage page={page} related={related} /> : <ProductPage page={page} related={related} applicationsLink={applicationsLink} />}

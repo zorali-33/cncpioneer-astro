@@ -1,0 +1,44 @@
+.elementor-2034 .elementor-element.elementor-element-3be06d7d {
+  --gap: 32px;
+  --row-gap: 32px;
+}
+
+.elementor-element-3be06d7d > .e-con-inner {
+  gap: 32px;
+}
+
+.elementor-element-3be06d7d .elementor-post__thumbnail__link {
+  margin-bottom: 0;
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+.elementor-element-3be06d7d .elementor-post__thumbnail {
+  padding-bottom: 0 !important;
+  aspect-ratio: 16 / 9;
+}
+
+.elementor-element-3be06d7d .elementor-post__thumbnail img {
+  position: absolute;
+  inset: 0;
+  width: 100% !important;
+  height: 100%;
+  object-fit: cover;
+}
+
+.elementor-element-3be06d7d .elementor-post__card .elementor-post__text {
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+}
+
+.elementor-element-3be06d7d .elementor-post__card .elementor-post__title {
+  flex: 1;
+}
+
+@media (max-width: 767px) {
+  .elementor-element-3be06d7d > .e-con-inner {
+    gap: 24px;
+    padding-inline: 20px !important;
+  }
+}

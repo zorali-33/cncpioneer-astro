@@ -1,0 +1,64 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import {equipmentDocuments,equipmentServices} from '../../data/equipmentDocument.mjs';
+const seo={title:'Equipment List | CNCPioneer',description:"Download CNCPioneer's equipment lists for CNC turning and milling and Swiss machining, including manufacturing machines and inspection equipment in PDF format.",canonical:'/resources/equipment-list',type:'website',includeOgImage:false};
+---
+<BaseLayout seo={seo}>
+  <div class="equipment-page">
+    <section class="equipment-hero equipment-container">
+      <nav class="equipment-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/resources">Resources</a><span aria-hidden="true">/</span><span aria-current="page">Equipment List</span></nav>
+      <p class="equipment-kicker">Manufacturing Resources</p><h1>Equipment List</h1>
+      <p class="equipment-lead">Explore our equipment by machining service. Download machine and inspection equipment lists for your project review.</p>
+    </section>
+    <div class="equipment-services equipment-container">
+    {equipmentServices.map(service=><section class="equipment-service" aria-labelledby={`${service.id}-title`} data-equipment-service={service.id}>
+      <div class="equipment-service-intro">
+        <p class="equipment-kicker">Equipment &amp; Inspection</p>
+        <h2 id={`${service.id}-title`}>{service.title}</h2>
+        <p>{service.description}</p>
+      </div>
+      <div class="equipment-service-files">
+        <p class="equipment-files-label">Download Equipment Lists</p>
+        <ul class="equipment-file-list">
+        {equipmentDocuments.filter(document=>document.service===service.id).map(document=><li class="equipment-file" data-equipment-document={document.id}>
+          <div class="equipment-file-heading">
+            <svg class="equipment-file-icon" width="32" height="38" viewBox="0 0 32 38" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 2h13l7 7v27H6z"/><path d="M19 2v8h7M11 18h10M11 23h10M11 28h6"/></svg>
+            <div><h3>{document.label}</h3><p class="equipment-file-meta">PDF · {document.pages} {document.pages===1?'page':'pages'} · {Math.ceil(document.bytes / 1024)} KB</p></div>
+          </div>
+          <div class="equipment-actions">
+            <a class="equipment-view" href={document.url} target="_blank" rel="noopener" aria-label={`View ${document.title} PDF in a new tab`}>View PDF <span aria-hidden="true">↗</span></a>
+            <a class="equipment-download" href={document.url} download={document.filename} aria-label={`Download ${document.title} PDF`}>Download <span aria-hidden="true">↓</span></a>
+          </div>
+        </li>)}
+        </ul>
+      </div>
+    </section>)}
+    </div>
+  </div>
+</BaseLayout>
+<style>
+  .equipment-container{width:min(var(--layout-content),calc(100% - 48px));margin-inline:auto}
+  .equipment-hero{padding-block:26px 44px}.equipment-breadcrumb{display:flex;flex-wrap:wrap;gap:10px;font-size:14px;color:var(--color-body);margin-bottom:44px}
+  .equipment-breadcrumb a,.equipment-view{color:var(--color-brand);text-underline-offset:3px}
+  .equipment-kicker{font-size:14px;font-weight:500;color:var(--color-brand);margin:0 0 12px}
+  .equipment-hero h1{font-size:var(--type-h1);line-height:1.12;margin:0 0 22px;color:var(--color-ink)}.equipment-lead{max-width:820px;font-size:18px;line-height:1.7;margin:0}
+  .equipment-services{display:grid;gap:28px;padding-bottom:72px}
+  .equipment-service{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.6fr);border:1px solid var(--color-border);border-radius:8px;overflow:hidden;background:var(--color-white)}
+  .equipment-service-intro{padding:32px;background:var(--color-surface);border-top:4px solid var(--color-brand)}
+  .equipment-service-intro h2{font-size:var(--type-h2);line-height:1.2;color:var(--color-ink);margin:16px 0 20px}
+  .equipment-service-intro>p:last-child{margin:0;color:var(--color-body);font-size:16px;line-height:1.7}
+  .equipment-service-files{padding:28px 32px;min-width:0}
+  .equipment-files-label{font-size:14px;font-weight:500;color:var(--color-body);margin:0 0 8px}
+  .equipment-file-list{list-style:none;margin:0;padding:0}
+  .equipment-file{padding:24px 0}.equipment-file+.equipment-file{border-top:1px solid var(--color-border)}.equipment-file:last-child{padding-bottom:0}
+  .equipment-file-heading{display:flex;align-items:center;gap:16px}.equipment-file-icon{color:var(--color-brand);flex-shrink:0}
+  .equipment-file-heading h3{margin:0 0 6px;font-size:20px;line-height:1.4;font-weight:600;color:var(--color-ink)}
+  .equipment-file-meta{margin:0;font-size:14px;line-height:1.5;color:var(--color-body)}
+  .equipment-actions{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;gap:24px;margin-top:20px}
+  .equipment-view{font-size:14px;font-weight:500;text-decoration:none;padding-block:10px}.equipment-view:hover{text-decoration:underline}
+  .equipment-download{display:inline-flex;align-items:center;justify-content:center;gap:16px;padding:11px 20px;border-radius:4px;font-size:14px;font-weight:600;text-decoration:none;background:var(--color-brand);color:var(--color-white)}
+  .equipment-download:hover{background:var(--color-hover)}
+  .equipment-actions a:focus-visible{outline:2px solid var(--color-brand);outline-offset:4px}
+  @media(min-width:1100px){.equipment-file{display:flex;align-items:center;justify-content:space-between;gap:20px}.equipment-actions{margin-top:0;flex-wrap:nowrap;flex-shrink:0;gap:16px}.equipment-file-heading h3{font-size:18px}.equipment-download{padding:11px 16px}}
+  @media(max-width:767px){.equipment-container{width:calc(100% - 32px)}.equipment-hero{padding-bottom:32px}.equipment-breadcrumb{margin-bottom:32px}.equipment-services{padding-bottom:44px}.equipment-service{grid-template-columns:minmax(0,1fr)}.equipment-service-intro{padding:28px 24px}.equipment-service-files{padding:24px}.equipment-file-heading h3{font-size:18px}.equipment-actions{justify-content:flex-start}}
+</style>

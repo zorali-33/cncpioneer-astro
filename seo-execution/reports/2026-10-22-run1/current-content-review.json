@@ -1,0 +1,1673 @@
+{
+  "candidates": [
+    {
+      "slug": "flanges",
+      "title": "Custom CNC Machined Flanges",
+      "label": "CNC Machined Flanges",
+      "hero": "/wp-content/uploads/2026/05/flange-machining-precision-cnc.jpg",
+      "heroDescription": "Custom CNC machined flanges for pipe connections, robot tool changers, motor mounts, vacuum systems and non-standard assemblies. Send your drawing for material, machining, finishing and inspection review.",
+      "overview": [
+        "A CNC machined flange provides a bolted interface between pipes, shafts, housings or equipment. Turning, milling, boring, drilling and threading control the sealing face, bore, pilot register and bolt pattern around the mating assembly.",
+        "Custom flange manufacturing is useful when a catalog part cannot meet the required bore, bolt pattern, mounting geometry, material or sealing arrangement. CNCPioneer reviews standard-based and non-standard designs for piping, robot end-effectors, motor mounts, vacuum equipment and structural connections."
+      ],
+      "overviewImage": "/wp-content/uploads/2026/05/flange-machining.jpg",
+      "overviewPoints": [
+        {
+          "title": "Standard-Based and Non-Standard Designs",
+          "text": "Provide the applicable standard or drawing, flange geometry, mating interfaces and intended operating conditions."
+        },
+        {
+          "title": "Common Datums for Critical Features",
+          "text": "Review the bore, pilot register, mounting face and bolt circle together to define setup and inspection requirements."
+        },
+        {
+          "title": "Sealing and Surface Requirements",
+          "text": "Specify sealing-face finish, O-ring grooves, flatness and coating allowances for the mating parts."
+        },
+        {
+          "title": "Material and Documentation Review",
+          "text": "Confirm alloy, delivery condition, traceability, dimensional reports and any required production approval records."
+        }
+      ],
+      "benefits": [
+        {
+          "title": "Custom Flange Engineering Review",
+          "text": "Review non-standard bores, bolt patterns, pilot fits, wall sections and mating geometry before selecting the manufacturing route."
+        },
+        {
+          "title": "Turning and Milling Around Shared Datums",
+          "text": "Coordinate face, bore, hub, thread and bolt-circle machining to control alignment between functional features."
+        },
+        {
+          "title": "Pipe, Robot, Motor and Vacuum Interfaces",
+          "text": "Bring pipe connections, tool changer interfaces, shaft couplings, vacuum adapters and structural flange designs into one drawing review."
+        },
+        {
+          "title": "Material Options for the Application",
+          "text": "Select aluminum, stainless steel, carbon or alloy steel, brass, titanium or nickel alloys around the drawing and service environment."
+        },
+        {
+          "title": "Finishing and Inspection Planning",
+          "text": "Account for sealing surfaces, coating thickness and critical dimensions when agreeing the finish and inspection plan."
+        },
+        {
+          "title": "Prototype and Repeat Production Support",
+          "text": "Share the expected quantity, delivery schedule and documentation requirements so the quotation reflects the complete part scope."
+        }
+      ],
+      "portfolio": [
+        {
+          "title": "Pipe, Process & RTJ Flanges",
+          "image": "/wp-content/uploads/2026/05/pipe-flange.jpg",
+          "text": "Weld neck, slip-on, blind, threaded and other pipe flanges, including specified RTJ sealing faces. Provide the applicable standard, pressure class, material and drawing.",
+          "illustration": false
+        },
+        {
+          "title": "Custom Aluminum Flanges",
+          "image": "/wp-content/uploads/2026/05/aluminum-cnc-machining-flange.jpg",
+          "text": "6061-T6 and 7075-T6 aluminum flanges for lightweight equipment, cooling systems and mounting interfaces. Define critical fits and finishing allowances.",
+          "illustration": false
+        },
+        {
+          "title": "Stainless Steel Flanges",
+          "image": "/wp-content/uploads/2026/05/stainless-steel-cnc-machining-flange.jpg",
+          "text": "Stainless flange bodies for process equipment, piping and precision assemblies, with the grade, sealing finish and inspection requirements confirmed to the drawing.",
+          "illustration": false
+        },
+        {
+          "title": "Precision Brass Flanges",
+          "image": "/wp-content/uploads/2026/05/brass-machining-precision-flange.jpg",
+          "text": "Brass flanges for pressure gauges, instrumentation, valves and pneumatic connections. Specify ports, threads, mating features and any plating requirements.",
+          "illustration": false
+        },
+        {
+          "title": "Robot Tool Changer & End-Effector Flanges",
+          "image": "/wp-content/uploads/2026/08/robot-tool-changer-flange-iso9409-custom.jpg",
+          "text": "Robot mounting and tool changer flanges with pilot registers, bolt circles and customer-specific interfaces. Share the mating drawing and any applicable ISO 9409-1 interface requirements.",
+          "illustration": false
+        },
+        {
+          "title": "Motor Mounting & Shaft Coupling Flanges",
+          "image": "/wp-content/uploads/2026/08/motor-mounting-shaft-coupling-flanges-custom.jpg",
+          "text": "Motor mounting and shaft coupling flanges with controlled pilot fits, shaft clearance and bolt patterns, including customer-defined mounting geometry.",
+          "illustration": false
+        },
+        {
+          "title": "Vacuum & Cleanroom Flanges",
+          "image": "/wp-content/uploads/2026/08/vacuum-flanges-conflat-iso-kf-cleanroom.jpg",
+          "text": "CF, ISO-KF, ISO-K and custom vacuum interfaces. Define the sealing arrangement, material, surface finish, cleaning and documentation requirements with your drawing.",
+          "illustration": false
+        },
+        {
+          "title": "Hydraulic & Pneumatic Manifold Flanges",
+          "image": "/wp-content/uploads/2026/08/hydraulic-sae-j518-manifold-flange-custom.jpg",
+          "text": "Manifold and hydraulic connection flanges with specified ports, O-ring grooves and bolt patterns. Confirm the interface standard and inspection scope for the application.",
+          "illustration": false
+        },
+        {
+          "title": "Structural & Non-Standard Flanges",
+          "image": "/wp-content/uploads/2026/08/structural-machine-frame-flanges-custom.jpg",
+          "text": "Machine frame, base, ring and custom-profile flanges made to the required mounting geometry, with datums, flatness and material condition reviewed before machining.",
+          "illustration": false
+        }
+      ],
+      "applications": [
+        {
+          "title": "Oil, Gas & Process Equipment",
+          "industry": "Oil & Gas",
+          "href": "/industries/oil-gas",
+          "image": "/wp-content/uploads/2026/05/oil-gas.jpg",
+          "text": "Pipe connections, manifold interfaces and process equipment flanges, with the material, sealing arrangement and operating requirements reviewed against the drawing."
+        },
+        {
+          "title": "Robotics & Automation",
+          "industry": "Robotics",
+          "href": "/industries/robotics",
+          "image": "/wp-content/uploads/2026/08/robot-system-integrator.jpg",
+          "text": "Robot tool changer, end-effector and motor mounting flanges with coordinated pilot fits, bolt patterns and mechanical interfaces."
+        },
+        {
+          "title": "Semiconductor & Vacuum Equipment",
+          "industry": "Semiconductor",
+          "href": "/industries/semiconductor",
+          "image": "/wp-content/uploads/2026/08/semiconductor-vacuum.jpg",
+          "text": "Vacuum chamber connections, instrument adapters and process equipment interfaces with specified sealing surfaces and cleaning requirements."
+        },
+        {
+          "title": "Aerospace & Defense",
+          "industry": "Aerospace",
+          "href": "/industries/aerospace",
+          "image": "/wp-content/uploads/2026/05/aerospace.jpg",
+          "text": "Lightweight and high-strength flange components for equipment and fluid-system interfaces, with drawing-specific inspection and documentation requirements."
+        },
+        {
+          "title": "Automotive & Cooling Systems",
+          "industry": "Automotive",
+          "href": "/industries/automotive",
+          "image": "/wp-content/uploads/2026/05/automotive.jpg",
+          "text": "Mounting and connection flanges for vehicle equipment, cooling systems and related assemblies, matched to the mating geometry and material specification."
+        },
+        {
+          "title": "Medical & Pharmaceutical Equipment",
+          "industry": "Medical",
+          "href": "/industries/medical",
+          "image": "/wp-content/uploads/2026/08/medical-pharmaceutical.jpg",
+          "text": "Instrument, process and equipment flanges with the material, cleanability, surface finish and documentation agreed for the application."
+        }
+      ],
+      "materials": [
+        {
+          "title": "316L / ASTM A182 F316L",
+          "text": "Process-industry stainless with 2–3% molybdenum for better pitting and crevice corrosion resistance than 304, plus low carbon for welded assemblies.",
+          "tag": "Stainless Steel",
+          "category": "metals"
+        },
+        {
+          "title": "304 / 304L",
+          "text": "General corrosion-resistant choice for atmospheric, water, and mild chemical service when 316L is unnecessary.",
+          "tag": "Stainless Steel",
+          "category": "metals"
+        },
+        {
+          "title": "17-4PH H900",
+          "text": "Precipitation-hardened stainless for high-strength flanges that also need corrosion resistance.",
+          "tag": "Stainless Steel",
+          "category": "metals"
+        },
+        {
+          "title": "6061-T6",
+          "text": "General lightweight flange alloy with strong machining performance and good corrosion resistance when anodised.",
+          "tag": "Aluminum",
+          "category": "metals"
+        },
+        {
+          "title": "7075-T6",
+          "text": "High-strength aluminium for weight-critical aerospace structures and high-load robot mounts.",
+          "tag": "Aluminum",
+          "category": "metals"
+        },
+        {
+          "title": "ASTM A105 Carbon Steel",
+          "text": "Cost-effective structural material for high-volume ASME B16.5 pipe flanges in non-corrosive service, including Class 150 through 2500.",
+          "tag": "Carbon Steel",
+          "category": "metals"
+        },
+        {
+          "title": "C3604 Free-Cutting Brass",
+          "text": "Highly machinable brass for instrumentation ports, pressure gauges, pneumatic manifolds, and plumbing valves.",
+          "tag": "Brass",
+          "category": "metals"
+        },
+        {
+          "title": "42CrMo4 Alloy Steel",
+          "tag": "Alloy Steel",
+          "category": "metals",
+          "text": "An option for high-strength coupling and structural flange designs. Confirm the specified heat treatment and material condition with the drawing."
+        },
+        {
+          "title": "Ti-6Al-4V Titanium",
+          "tag": "Titanium",
+          "category": "special-alloys",
+          "text": "An option for weight-sensitive or corrosion-resistant flange designs, subject to the specified grade, condition and machining requirements."
+        },
+        {
+          "title": "Inconel 625",
+          "tag": "Nickel Alloys",
+          "category": "special-alloys",
+          "text": "Nickel-alloy options for demanding flange applications. Confirm the exact alloy, service conditions, material certification and finishing scope."
+        }
+      ],
+      "finishes": [
+        {
+          "title": "Passivation",
+          "category": "Corrosion control",
+          "use": "Stainless steel surface requirements",
+          "specify": "Method, masking & inspection records",
+          "icon": "shield",
+          "tone": "blue",
+          "summary": "Removes free iron and machining contamination to support stainless corrosion resistance in process, marine, and food applications."
+        },
+        {
+          "title": "Electropolishing",
+          "category": "Surface finish",
+          "use": "Functional or hygienic surfaces",
+          "specify": "Required Ra, geometry & allowance",
+          "icon": "spark",
+          "tone": "teal",
+          "summary": "Electrochemical smoothing to Ra 0.4µm for high-purity semiconductor, pharmaceutical, food, and biotechnology equipment."
+        },
+        {
+          "title": "Hard Anodize",
+          "category": "Appearance & protection",
+          "use": "Specified material and service conditions",
+          "specify": "Process, color sample & thickness",
+          "icon": "color",
+          "tone": "color",
+          "summary": "Type III hard anodise adds surface hardness above HV 400 for corrosion and wear resistance."
+        },
+        {
+          "title": "Chemical Film",
+          "category": "Finish selection",
+          "use": "Drawing-specific surface requirements",
+          "specify": "Process, functional surfaces & acceptance",
+          "icon": "layers",
+          "tone": "blue",
+          "summary": "Conversion coating for conductive aerospace and automotive bonding, RF continuity, and ESD protection."
+        },
+        {
+          "title": "Electroless Nickel",
+          "category": "Finish selection",
+          "use": "Drawing-specific surface requirements",
+          "specify": "Process, functional surfaces & acceptance",
+          "icon": "layers",
+          "tone": "blue",
+          "summary": "Uniform 25–50µm corrosion and wear protection for brass flanges in marine or aggressive chemical service."
+        },
+        {
+          "title": "Zinc, Epoxy & Hot-Dip Galvanizing (Carbon Steel)",
+          "category": "Finish selection",
+          "use": "Drawing-specific surface requirements",
+          "specify": "Process, functional surfaces & acceptance",
+          "icon": "layers",
+          "tone": "blue",
+          "summary": "Hot-dip galvanising, zinc phosphate plus epoxy, and cold-zinc systems protect carbon steel outdoors, underground, and near marine service."
+        },
+        {
+          "title": "DLC & PVD Coating",
+          "category": "Functional coatings",
+          "use": "Specified wear and surface requirements",
+          "specify": "Coating system, masking & acceptance",
+          "icon": "layers",
+          "tone": "blue",
+          "summary": "Review coating compatibility with the flange material, mating surfaces and dimensional allowances before specifying the process."
+        }
+      ],
+      "controls": [
+        {
+          "title": "Material Verification",
+          "check": "Specified grade, material condition and lot identity.",
+          "verify": "Material certificates and agreed identification checks.",
+          "record": "Material certificates and required traceability records."
+        },
+        {
+          "title": "Machining Process Control",
+          "check": "Threads, bores and sealing surfaces.",
+          "verify": "Drawing datums, setup planning and in-process inspection.",
+          "record": "Agreed critical-feature and process inspection records."
+        },
+        {
+          "title": "Dimensional Inspection",
+          "check": "Functional dimensions, mating features and surface condition.",
+          "verify": "Suitable measuring equipment and drawing-specific gauges.",
+          "record": "Dimensional reports and specified finish results."
+        },
+        {
+          "title": "Production Documentation",
+          "check": "First-piece approval, production records and delivery requirements.",
+          "verify": "The inspection plan and customer approval process.",
+          "record": "Agreed document pack, including PPAP or FAIR when required."
+        }
+      ],
+      "stats": [
+        [
+          "Mill-turn",
+          "Combined turning & milling"
+        ],
+        [
+          "To drawing",
+          "Critical dimensions"
+        ],
+        [
+          "As agreed",
+          "Inspection scope"
+        ],
+        [
+          "CNC",
+          "Prototype & batch machining"
+        ]
+      ],
+      "faqs": [
+        {
+          "question": "Which custom CNC machined flanges can you produce?",
+          "answer": "The range includes pipe and process flanges, aluminum, stainless steel and brass flanges, robot tool changer interfaces, motor mounts, vacuum flanges, manifold connections and non-standard structural profiles.",
+          "points": [
+            "Provide the mating drawing, material and expected quantity."
+          ]
+        },
+        {
+          "question": "Can you machine a non-standard flange from my drawing?",
+          "answer": "Yes. Share the bore, bolt pattern, pilot register, sealing arrangement and mounting geometry. These features are reviewed together to define the machining datums, finishing allowances and inspection plan.",
+          "points": [
+            "Include a 2D drawing and 3D model where available.",
+            "Identify the dimensions that control fit, sealing or alignment."
+          ]
+        },
+        {
+          "question": "What should I specify for robot and motor mounting flanges?",
+          "answer": "Define the mating pilot, bolt circle, mounting face and any shaft or cable clearance. Include the relevant interface standard where applicable and identify customer-specific geometry or positioning requirements."
+        },
+        {
+          "question": "What information is needed for vacuum or sealing flanges?",
+          "answer": "State the mating flange type, sealing method, material, surface finish and any cleaning requirements. Include O-ring grooves, knife-edge geometry or other sealing details on the approved drawing."
+        },
+        {
+          "question": "Which materials, finishes and inspection records are available?",
+          "answer": "Material options include aluminum, stainless steel, carbon and alloy steel, brass, titanium and nickel alloys. Finishing and documentation are agreed for the specific material and application.",
+          "points": [
+            "Specify material certificates, dimensional reports and any PPAP or FAIR requirements with the enquiry."
+          ]
+        },
+        {
+          "question": "How do I request a custom flange quote?",
+          "answer": "Send your drawing or model, material, quantity, critical tolerances, surface finish and requested delivery date. Include the mating interface and any sealing, cleaning or documentation requirements so the quote covers the full scope."
+        }
+      ],
+      "sourceUrl": "https://www.cncpioneer.com/custom-cnc-parts/flanges",
+      "h1": "Custom CNC Machined Flanges",
+      "overviewTitle": "Custom CNC Machined Flanges: Product Overview"
+    },
+    {
+      "slug": "cnc-machined-flange",
+      "h1": "CNC Machined Flange",
+      "title": "CNC Machined Flanges",
+      "label": "CNC Machined Flanges",
+      "hero": "/wp-content/uploads/2026/08/custom-flange-machining-cnc-turning-mill-turn.jpg",
+      "heroDescription": "CNCPioneer manufactures custom pipe flanges, flange adapters and CNC connection flanges for piping, robotics, automation, semiconductor and industrial equipment.",
+      "overview": [
+        "Custom flange machining produces non-standard pipe flanges, flange adapters and connection flanges whose bore, pilot register, sealing face, bolt pattern, surface finish and external geometry match a defined equipment interface rather than a catalog part.",
+        "The critical control point is the relationship between those features."
+      ],
+      "overviewImage": "/wp-content/uploads/2026/08/custom-flange-machining-mazak-single-setup.jpg",
+      "overviewPoints": [
+        {
+          "title": "MAZAK mill-turn single-setup",
+          "text": "Plan support and setup around critical diameters, datums and mating interfaces."
+        },
+        {
+          "title": "Sealing face Ra 0.8μm direct from CNC turning",
+          "text": "ASME B16.5 serrated face Ra 3.2–6.3μm and smooth face Ra 0.8–1.6μm achieved directly from MAZAK face turning with optimized feed rate and nose radius."
+        },
+        {
+          "title": "Thermal management for custom aluminum CNC machining flanges",
+          "text": "Review threads, bores and sealing surfaces and functional requirements before defining the process."
+        },
+        {
+          "title": "Documented flange inspection and treatment control",
+          "text": "CMM records cover bore, pilot concentricity, bolt-circle true position and face geometry."
+        }
+      ],
+      "benefits": [
+        {
+          "title": "MAZAK Mill-Turn Single-Setup as the Process Foundation",
+          "text": "CNCPioneer's MAZAK mill-turn centers machine the complete custom machining flange feature set — bore, pilot OD/ID, both faces, C-axis bolt circle, O-ring grooves — in one chucking from one spindle datum."
+        },
+        {
+          "title": "Custom Flange Adapter CNC as Design-Engineering Partnership",
+          "text": "Review threads, bores and sealing surfaces and functional requirements before defining the process."
+        },
+        {
+          "title": "Custom Aluminum CNC Machining",
+          "text": "Review threads, bores and sealing surfaces and functional requirements before defining the process."
+        },
+        {
+          "title": "Sealing Face Ra 0.8μm Direct from CNC Turning",
+          "text": "Review threads, bores and sealing surfaces and functional requirements before defining the process."
+        },
+        {
+          "title": "Documentation and Production Support",
+          "text": "Review threads, bores and sealing surfaces and functional requirements before defining the process."
+        },
+        {
+          "title": "24-Hour DFM & Quote on Any Custom Flange Machining Requirement",
+          "text": "Review geometry, batch quantity and process requirements to prepare the quotation."
+        }
+      ],
+      "portfolio": [
+        {
+          "title": "CNC Turning Custom Pipe Flanges",
+          "image": "/wp-content/uploads/2026/08/cnc-turning-custom-pipe-flange-asme-b165.jpg",
+          "text": "Weld neck, slip-on, blind, socket weld, threaded, and lap joint pipe flanges in ASME B16.5, EN 1092-1, DIN, JIS, and non-standard configurations — machined on MAZAK mill-turn in single setup.",
+          "illustration": false
+        },
+        {
+          "title": "Custom Aluminum CNC Machining Flanges",
+          "image": "/wp-content/uploads/2026/08/custom-aluminum-cnc-machining-flange-robot.jpg",
+          "text": "Custom Aluminum CNC Machining Flanges machined to your drawing. Confirm material, functional dimensions and finish before production.",
+          "illustration": false
+        },
+        {
+          "title": "Custom Flange Adapter CNC Programs",
+          "image": "/wp-content/uploads/2026/08/custom-flange-adapter-cnc-dual-interface.jpg",
+          "text": "Custom Flange Adapter CNC Programs machined to your drawing. Confirm material, functional dimensions and finish before production.",
+          "illustration": false
+        },
+        {
+          "title": "Custom CNC Connection Flanges",
+          "image": "/wp-content/uploads/2026/08/custom-cnc-connection-flange-robot-shaft.jpg",
+          "text": "Structural flange bodies coupling machine frame members, robot structural links, actuator housings, and drive system elements.",
+          "illustration": false
+        },
+        {
+          "title": "Custom Precision Flange Pipe CNC Machining",
+          "image": "/wp-content/uploads/2026/08/custom-precision-pipe-flange-cnc-instrument.jpg",
+          "text": "Pipe flanges at accuracy levels exceeding ASME B16.5 standard grades — required when bore diameter governs flow measurement accuracy, when a pilot register not in standard geometry provides precision alignment, or when sealing face finish must meet specialty gasket requirements.",
+          "illustration": false
+        },
+        {
+          "title": "5-Axis Compound & Swiss CNC Miniature Flanges",
+          "image": "/wp-content/uploads/2026/08/5-axis-compound-swiss-miniature-custom-flange.jpg",
+          "text": "5-Axis Compound & Swiss CNC Miniature Flanges machined to your drawing. Confirm material, functional dimensions and finish before production.",
+          "illustration": false
+        }
+      ],
+      "applications": [
+        {
+          "title": "Robot System Integrators & Automation OEMs",
+          "industry": "Robotics",
+          "href": "/industries/robotics",
+          "image": "/wp-content/uploads/2026/08/robot-automation.jpg",
+          "text": "CNC Machined Flanges for robot joints, actuators and mechanical assemblies, with material and inspection requirements confirmed for the application."
+        },
+        {
+          "title": "Semiconductor Equipment Developers",
+          "industry": "Semiconductor",
+          "href": "/industries/semiconductor",
+          "image": "/wp-content/uploads/2026/08/semiconductor-vacuum.jpg",
+          "text": "CNC Machined Flanges for process equipment, precision interfaces and test systems, with material and inspection requirements confirmed for the application."
+        },
+        {
+          "title": "Aerospace & Defense Manufacturers",
+          "industry": "Aerospace",
+          "href": "/industries/aerospace",
+          "image": "/wp-content/uploads/2026/08/aerospace-defense.jpg",
+          "text": "CNC Machined Flanges for aircraft equipment, structures and precision assemblies, with material and inspection requirements confirmed for the application."
+        },
+        {
+          "title": "Medical Device & Pharmaceutical Producers",
+          "industry": "Medical",
+          "href": "/industries/medical",
+          "image": "/wp-content/uploads/2026/08/medical-pharmaceutical.jpg",
+          "text": "CNC Machined Flanges for medical equipment, instruments and component assemblies, with material and inspection requirements confirmed for the application."
+        }
+      ],
+      "materials": [
+        {
+          "title": "Aluminum 7075-T6",
+          "text": "Aluminum options for lightweight machined components. Confirm the alloy, temper, finishing allowance and critical assembly dimensions.",
+          "tag": "Robot & Automation Standard",
+          "category": "metals"
+        },
+        {
+          "title": "Aluminum 6061-T6",
+          "text": "Aluminum options for lightweight machined components. Confirm the alloy, temper, finishing allowance and critical assembly dimensions.",
+          "tag": "Structural & Vacuum Flanges",
+          "category": "metals"
+        },
+        {
+          "title": "Steel 42CrMo4",
+          "text": "HRC 28–34 through hardened · 950 MPa yield · Heavy-duty custom CNC connection flanges for large machine shaft coupling where maximum toughness and fatigue resistance are required.",
+          "tag": "High-Strength Coupling Flanges",
+          "category": "metals"
+        },
+        {
+          "title": "Stainless 316L",
+          "text": "Corrosion resistant · Non-magnetic · Weldable · Dominant for custom precision flange pipe CNC machining programs across chemical process, food/pharmaceutical sanitary, vacuum, and medical instrument applications — 316L low carbon content (<0.03%) prevents sensitization at weld heat-affected zones.",
+          "tag": "Pipe / Chemical / Food / Medical",
+          "category": "metals"
+        },
+        {
+          "title": "ASTM A105 / A182 & 17-4PH H900",
+          "text": "A105 (carbon steel, normalized): standard CNC turning custom pipe flange programs in hydrocarbon and utility piping — good machinability, ±0.005mm bore, EN 10204 3.1/3.2.",
+          "tag": "Pipe Flanges & High-Strength Adapters",
+          "category": "metals"
+        },
+        {
+          "title": "Titanium Ti-6Al-4V & Grade 2 CP",
+          "text": "Titanium options for weight-sensitive and corrosion-resistant components. Confirm the approved grade, material condition and surface requirements.",
+          "tag": "Chemical / Marine / MRI / Aerospace",
+          "category": "special-alloys"
+        },
+        {
+          "title": "Inconel 625",
+          "text": "Inconel 625 (965 MPa yield, oxidation resistance to 982°C): custom precision flange pipe CNC machining for gas turbine exhaust, petrochemical high-temperature process, and reactor vessel nozzle flanges.",
+          "tag": "Extreme Service",
+          "category": "special-alloys"
+        }
+      ],
+      "finishes": [
+        {
+          "title": "Type III Hard Anodize",
+          "category": "Appearance & protection",
+          "use": "Specified material and service conditions",
+          "specify": "Process, color sample & thickness",
+          "icon": "color",
+          "tone": "color",
+          "summary": "Review type iii hard anodize against the material, functional surfaces and intended service conditions."
+        },
+        {
+          "title": "Passivation & Electropolish",
+          "category": "Corrosion control",
+          "use": "Stainless steel surface requirements",
+          "specify": "Method, masking & inspection records",
+          "icon": "shield",
+          "tone": "blue",
+          "summary": "Review passivation & electropolish against the material, functional surfaces and intended service conditions."
+        },
+        {
+          "title": "Electroless Nickel",
+          "category": "Finish selection",
+          "use": "Drawing-specific surface requirements",
+          "specify": "Process, functional surfaces & acceptance",
+          "icon": "layers",
+          "tone": "blue",
+          "summary": "Uniform corrosion protection (MIL-C-26074, 0.015–0.050mm coating ±0.003mm thickness variation) for carbon steel custom pipe flanges and custom flange adapter CNC components in humid or chemically aggressive environments."
+        },
+        {
+          "title": "Zinc Plate & Hot-Dip Galvanize",
+          "category": "Finish selection",
+          "use": "Drawing-specific surface requirements",
+          "specify": "Process, functional surfaces & acceptance",
+          "icon": "layers",
+          "tone": "blue",
+          "summary": "Review zinc plate & hot-dip galvanize against the material, functional surfaces and intended service conditions."
+        },
+        {
+          "title": "Black Oxide & Powder Coat",
+          "category": "Finish selection",
+          "use": "Drawing-specific surface requirements",
+          "specify": "Process, functional surfaces & acceptance",
+          "icon": "layers",
+          "tone": "blue",
+          "summary": "Review black oxide & powder coat against the material, functional surfaces and intended service conditions."
+        },
+        {
+          "title": "DLC Coating",
+          "category": "Finish selection",
+          "use": "Drawing-specific surface requirements",
+          "specify": "Process, functional surfaces & acceptance",
+          "icon": "layers",
+          "tone": "blue",
+          "summary": "Review dlc coating against the material, functional surfaces and intended service conditions."
+        }
+      ],
+      "controls": [
+        {
+          "title": "Material Verification",
+          "check": "Specified grade, material condition and lot identity.",
+          "verify": "Material certificates and agreed identification checks.",
+          "record": "Material certificates and required traceability records."
+        },
+        {
+          "title": "Machining Process Control",
+          "check": "Threads, bores and sealing surfaces.",
+          "verify": "Drawing datums, setup planning and in-process inspection.",
+          "record": "Agreed critical-feature and process inspection records."
+        },
+        {
+          "title": "Dimensional Inspection",
+          "check": "Functional dimensions, mating features and surface condition.",
+          "verify": "Suitable measuring equipment and drawing-specific gauges.",
+          "record": "Dimensional reports and specified finish results."
+        },
+        {
+          "title": "Production Documentation",
+          "check": "First-piece approval, production records and delivery requirements.",
+          "verify": "The inspection plan and customer approval process.",
+          "record": "Agreed document pack, including PPAP or FAIR when required."
+        }
+      ],
+      "stats": [
+        [
+          "Mill-turn",
+          "Combined turning & milling"
+        ],
+        [
+          "To drawing",
+          "Critical dimensions"
+        ],
+        [
+          "As agreed",
+          "Inspection scope"
+        ],
+        [
+          "CNC",
+          "Prototype & batch machining"
+        ]
+      ],
+      "faqs": [
+        {
+          "question": "Which CNC Machined Flanges designs can you manufacture?",
+          "answer": "The product range includes CNC Turning Custom Pipe Flanges, Custom Aluminum CNC Machining Flanges, Custom Flange Adapter CNC Programs. Custom geometry is reviewed against the approved drawing.",
+          "points": [
+            "Include the mating interfaces, critical datums and expected order quantity."
+          ]
+        },
+        {
+          "question": "Which materials can I specify?",
+          "answer": "Material options include Aluminum 7075-T6, Aluminum 6061-T6, Steel 42CrMo4. The exact grade and condition should be confirmed for your application.",
+          "points": [
+            "Include material certificate, finish and any restricted-substance requirements with your enquiry."
+          ]
+        },
+        {
+          "question": "What should I include in the drawing?",
+          "answer": "Define threads, bores and sealing surfaces, together with datums, tolerances and required surface condition.",
+          "points": [
+            "Include a 2D drawing and 3D model where available.",
+            "Identify the dimensions that affect assembly or function."
+          ]
+        },
+        {
+          "question": "What finishing and inspection records can be requested?",
+          "answer": "Finishing options include type iii hard anodize, passivation & electropolish, electroless nickel. Applicability is reviewed against the specified material and geometry.",
+          "points": [
+            "Agree material certificates, dimensional reports and any PPAP or FAIR requirements with the order."
+          ]
+        },
+        {
+          "question": "How are pricing and lead time confirmed?",
+          "answer": "Pricing and delivery are confirmed after reviewing the drawing, material availability, quantity, machining route, finishing and inspection scope.",
+          "points": [
+            "Prototype and repeat-production schedules are quoted for the specific order."
+          ]
+        }
+      ],
+      "sourceUrl": "https://www.cncpioneer.com/custom-cnc-parts/cnc-machined-flange"
+    },
+    {
+      "slug": "cnc-turning-and-milling-parts",
+      "title": "Custom CNC Turning and Milling Parts",
+      "label": "CNC Turning and Milling Parts",
+      "hero": "/wp-content/uploads/2026/10/cnc-turning-and-milling-lathe.png",
+      "heroAlt": "CNC lathe cutting a metal workpiece",
+      "heroDescription": "Custom CNC Turning and Milling Parts made to your drawing. Review critical dimensions, datums and mating features, material, finishing and inspection requirements before production.",
+      "overview": [
+        "Custom cnc turning and milling parts are reviewed around critical dimensions, datums and mating features. The machining route, material, finishing and inspection plan follow the approved drawing and intended application."
+      ],
+      "overviewImage": "/wp-content/uploads/2026/10/cnc-turning-milling-parts-overview.png",
+      "overviewImageAlt": "Four CNC turned and milled metal components with bores and machined faces",
+      "overviewPoints": [
+        {
+          "title": "Functional Geometry Review",
+          "text": "Review critical dimensions, datums and mating features before choosing the machining and inspection route."
+        },
+        {
+          "title": "Material & Condition",
+          "text": "Match the specified material and delivery condition to function, fit and service conditions."
+        },
+        {
+          "title": "Machining & Datum Control",
+          "text": "Coordinate turning, milling and secondary operations around the drawing datums and functional interfaces."
+        },
+        {
+          "title": "Finishing Allowance",
+          "text": "Account for coating, polishing or heat-treatment effects on mating features and critical dimensions."
+        }
+      ],
+      "benefits": [
+        {
+          "title": "Functional Geometry Review",
+          "text": "Review critical dimensions, datums and mating features before choosing the machining and inspection route."
+        },
+        {
+          "title": "Material & Condition",
+          "text": "Match the specified material and delivery condition to function, fit and service conditions."
+        },
+        {
+          "title": "Machining & Datum Control",
+          "text": "Coordinate turning, milling and secondary operations around the drawing datums and functional interfaces."
+        },
+        {
+          "title": "Finishing Allowance",
+          "text": "Account for coating, polishing or heat-treatment effects on mating features and critical dimensions."
+        },
+        {
+          "title": "Inspection Planning",
+          "text": "Agree critical-feature checks, measuring methods and the reports required for your order."
+        },
+        {
+          "title": "Prototype to Production",
+          "text": "Review first-piece approval, batch quantity, packaging and repeat-order requirements with the quotation."
+        }
+      ],
+      "portfolio": [
+        {
+          "title": "Stepped & Splined Shafts",
+          "image": "/wp-content/uploads/2026/07/solid-robot-output-shaft.jpg",
+          "text": "Custom drive shafts with turned bearing journals and shoulders, plus milled flats, keyways, or spline features. Specify the mating fits and alignment requirements on your drawing.",
+          "illustration": false
+        },
+        {
+          "title": "Flange Adapters",
+          "image": "/wp-content/uploads/2026/08/custom-flange-adapter-cnc-dual-interface.jpg",
+          "text": "Connection flanges with turned faces, pilot diameters, and bores, combined with drilled bolt patterns and milled interfaces. Define the sealing face and mounting geometry for the assembly.",
+          "illustration": false
+        },
+        {
+          "title": "Valve Bodies & Manifolds",
+          "image": "/wp-content/uploads/2026/09/aluminium-cnc-turning-milling-valve-body-manifold.jpg",
+          "text": "Fluid-control bodies combining precision bores and cylindrical ports with milled mounting faces and cross-drilled passages. Specify port threads, sealing surfaces, and internal deburring requirements.",
+          "illustration": false
+        },
+        {
+          "title": "Threaded Adapters & Fittings",
+          "image": "/wp-content/uploads/2026/09/brass-threaded-adapters.jpg",
+          "text": "Male-to-female adapters with turned threads and internal passages, plus hex or wrench-flat features. Confirm the thread standard, sealing method, and material compatibility for the connection.",
+          "illustration": false
+        },
+        {
+          "title": "Sensor Housings",
+          "image": "/wp-content/uploads/2026/09/brass-sensor-housings.jpg",
+          "text": "Sensor bodies with turned stems, shoulders, and mounting threads, combined with wrench flats and drawing-defined ports. Review the internal cavity, sensor fit, and sealing interface before machining.",
+          "illustration": false
+        },
+        {
+          "title": "Flanged Bearing Housings",
+          "image": "/wp-content/uploads/2026/08/evtol-rotor-head-bearing-housing-block.jpg",
+          "text": "Bearing housings with precision bores and locating shoulders, plus milled mounting profiles and drilled fixing holes. Define bearing fits, datum relationships, and mounting-face requirements on the drawing.",
+          "illustration": false
+        }
+      ],
+      "applications": [
+        {
+          "title": "Semiconductor",
+          "href": "/industries/semiconductor",
+          "image": "/assets/semiconductor-industry.jpg",
+          "text": "Drawing-based cnc turning and milling parts for process equipment, precision interfaces and test systems. Confirm the material and inspection scope for your application."
+        },
+        {
+          "title": "Aerospace",
+          "href": "/industries/aerospace",
+          "image": "/assets/aerospace-industry.jpg",
+          "text": "Drawing-based cnc turning and milling parts for aircraft equipment, structures and precision assemblies. Confirm the material and inspection scope for your application."
+        },
+        {
+          "title": "Automotive",
+          "href": "/industries/automotive",
+          "image": "/assets/automotive-industry.jpg",
+          "text": "Drawing-based cnc turning and milling parts for vehicle systems, electrical connections and production assemblies. Confirm the material and inspection scope for your application."
+        },
+        {
+          "title": "Medical",
+          "href": "/industries/medical",
+          "image": "/assets/medical-industry.jpg",
+          "text": "Drawing-based cnc turning and milling parts for medical equipment, instruments and component assemblies. Confirm the material and inspection scope for your application."
+        }
+      ],
+      "materials": [
+        {
+          "title": "Aluminum Alloys",
+          "text": "Aluminum options for lightweight machined components. Confirm the alloy, temper, finishing allowance and critical assembly dimensions.",
+          "tag": "Review with your drawing",
+          "category": "metals"
+        },
+        {
+          "title": "Stainless Steel",
+          "text": "Stainless steel options for corrosion-resistant components. Confirm the grade, delivery condition, surface finish and cleaning requirements.",
+          "tag": "Review with your drawing",
+          "category": "metals"
+        },
+        {
+          "title": "Brass",
+          "text": "Brass options for precision turned threads and small components. Confirm the alloy, lead-content requirements and any plating allowance.",
+          "tag": "Review with your drawing",
+          "category": "metals"
+        }
+      ],
+      "finishes": [
+        {
+          "title": "Deburring & Edge Control",
+          "category": "Clean edges & surfaces",
+          "use": "Assembly and handling requirements",
+          "specify": "Edge condition, cleanliness & packaging",
+          "icon": "spark",
+          "tone": "blue",
+          "summary": "Confirm the required surface condition and acceptance criteria during drawing review."
+        },
+        {
+          "title": "Surface Finish to Drawing",
+          "category": "Finish selection",
+          "use": "Drawing-specific surface requirements",
+          "specify": "Process, functional surfaces & acceptance",
+          "icon": "layers",
+          "tone": "blue",
+          "summary": "Confirm the required surface condition and acceptance criteria during drawing review."
+        },
+        {
+          "title": "Cleaning & Protective Packaging",
+          "category": "Clean edges & surfaces",
+          "use": "Assembly and handling requirements",
+          "specify": "Edge condition, cleanliness & packaging",
+          "icon": "spark",
+          "tone": "blue",
+          "summary": "Confirm the required surface condition and acceptance criteria during drawing review."
+        }
+      ],
+      "controls": [
+        {
+          "title": "Material Verification",
+          "check": "Specified grade, material condition and lot identity.",
+          "verify": "Material certificates and agreed identification checks.",
+          "record": "Material certificates and required traceability records."
+        },
+        {
+          "title": "Machining Process Control",
+          "check": "Critical dimensions, datums and mating features.",
+          "verify": "Drawing datums, setup planning and in-process inspection.",
+          "record": "Agreed critical-feature and process inspection records."
+        },
+        {
+          "title": "Dimensional Inspection",
+          "check": "Functional dimensions, mating features and surface condition.",
+          "verify": "Suitable measuring equipment and drawing-specific gauges.",
+          "record": "Dimensional reports and specified finish results."
+        },
+        {
+          "title": "Production Documentation",
+          "check": "First-piece approval, production records and delivery requirements.",
+          "verify": "The inspection plan and customer approval process.",
+          "record": "Agreed document pack, including PPAP or FAIR when required."
+        }
+      ],
+      "stats": [
+        [
+          "Mill-turn",
+          "Combined turning & milling"
+        ],
+        [
+          "To drawing",
+          "Critical dimensions"
+        ],
+        [
+          "As agreed",
+          "Inspection scope"
+        ],
+        [
+          "CNC",
+          "Prototype & batch machining"
+        ]
+      ],
+      "faqs": [
+        {
+          "question": "Which CNC Turning and Milling Parts designs can you manufacture?",
+          "answer": "The product range includes Turned Parts with Milled Features, Threaded & Bored Components, Multi-Face Precision Parts. Custom geometry is reviewed against the approved drawing.",
+          "points": [
+            "Include the mating interfaces, critical datums and expected order quantity."
+          ]
+        },
+        {
+          "question": "Which materials can I specify?",
+          "answer": "Material options include Aluminum Alloys, Stainless Steel, Brass. The exact grade and condition should be confirmed for your application.",
+          "points": [
+            "Include material certificate, finish and any restricted-substance requirements with your enquiry."
+          ]
+        },
+        {
+          "question": "What should I include in the drawing?",
+          "answer": "Define critical dimensions, datums and mating features, together with datums, tolerances and required surface condition.",
+          "points": [
+            "Include a 2D drawing and 3D model where available.",
+            "Identify the dimensions that affect assembly or function."
+          ]
+        },
+        {
+          "question": "What finishing and inspection records can be requested?",
+          "answer": "Finishing options include deburring & edge control, surface finish to drawing, cleaning & protective packaging. Applicability is reviewed against the specified material and geometry.",
+          "points": [
+            "Agree material certificates, dimensional reports and any PPAP or FAIR requirements with the order."
+          ]
+        },
+        {
+          "question": "How are pricing and lead time confirmed?",
+          "answer": "Pricing and delivery are confirmed after reviewing the drawing, material availability, quantity, machining route, finishing and inspection scope.",
+          "points": [
+            "Prototype and repeat-production schedules are quoted for the specific order."
+          ]
+        }
+      ],
+      "sourceUrl": "https://www.cncpioneer.com/custom-cnc-parts/cnc-turning-and-milling-parts"
+    },
+    {
+      "slug": "cnc-turning-milling-parts",
+      "title": "CNC Turning Milling Parts",
+      "h1": "CNC Turning Milling Parts",
+      "label": "CNC Turning Milling Parts",
+      "applicationsIntro": "Explore industry applications for CNC turning milling parts, with materials, interfaces and inspection requirements defined for each project.",
+      "hero": "/wp-content/uploads/2026/08/cnc-turning-milling-parts-mazak-mill-turn.jpg",
+      "heroDescription": "Custom CNC Turning Milling Parts made to your drawing. Review critical dimensions, datums and mating features, material, finishing and inspection requirements before production.",
+      "overview": [
+        "CNC turning milling — also called mill-turn machining or multi-tasking machining — combines turning operations (rotating the workpiece to produce cylindrical geometry) and milling operations (rotating the cutting tool to produce flats, keyways, slots, cross-holes, bolt circles, and compound-angled faces) in a single machine setup from one datum reference frame.",
+        "The reason is fundamental: a shaft with a keyway machined sequentially on a lathe then a milling machine must be re-registered in the milling fixture — introducing ±0.050–0.200mm repositioning error from fixture positioning uncertainty."
+      ],
+      "overviewImage": "/wp-content/uploads/2026/08/cnc-turning-milling-parts.jpg",
+      "overviewPoints": [
+        {
+          "title": "Single-setup datum preservation",
+          "text": "Plan support and setup around critical diameters, datums and mating interfaces."
+        },
+        {
+          "title": "Cycle time reduction of 75",
+          "text": "Review critical dimensions, datums and mating features and functional requirements before defining the process."
+        },
+        {
+          "title": "OEM and ODM turning milling programs from one source",
+          "text": "OEM programs (customer-designed parts, CNCPioneer manufacturing to specification): IATF 16949 PPAP Level 3 or AS9100D FAIR."
+        },
+        {
+          "title": "40",
+          "text": "Review critical dimensions, datums and mating features and functional requirements before defining the process."
+        }
+      ],
+      "benefits": [
+        {
+          "title": "MAZAK Mill-Turn Fleet Depth",
+          "text": "Review critical dimensions, datums and mating features and functional requirements before defining the process."
+        },
+        {
+          "title": "Swiss CNC C-Axis",
+          "text": "Review critical dimensions, datums and mating features and functional requirements before defining the process."
+        },
+        {
+          "title": "Turning Milling Grinding Integration",
+          "text": "Review critical dimensions, datums and mating features and functional requirements before defining the process."
+        },
+        {
+          "title": "OEM + ODM from One Factory, One Quality System",
+          "text": "OEM programs (customer-designed drawings): IATF 16949 PPAP Level 3 or AS9100D FAIR from the same machine fleet and quality system as ODM programs."
+        },
+        {
+          "title": "40",
+          "text": "Review critical dimensions, datums and mating features and functional requirements before defining the process."
+        },
+        {
+          "title": "Functional Geometry Review",
+          "text": "Review critical dimensions, datums and mating features before choosing the machining and inspection route."
+        }
+      ],
+      "portfolio": [
+        {
+          "title": "Aluminium Turning Milling Parts",
+          "image": "/wp-content/uploads/2026/08/aluminium-cnc-turning-milling-shaft-keyway-manifold.jpg",
+          "text": "The highest-volume turning milling category — 6061-T6 and 7075-T6 at PCD 500–1,000 m/min.",
+          "illustration": false
+        },
+        {
+          "title": "Stainless Turning Milling Parts",
+          "image": "/wp-content/uploads/2026/08/stainless-cnc-turning-milling-valve-body-316l.jpg",
+          "text": "Stainless Turning Milling Parts machined to your drawing. Confirm material, functional dimensions and finish before production.",
+          "illustration": false
+        },
+        {
+          "title": "Brass & Copper Turning Milling Parts",
+          "image": "/wp-content/uploads/2026/08/brass-h59-copper-cnc-turning-milling-valve-body.jpg",
+          "text": "Brass & Copper Turning Milling Parts machined to your drawing. Confirm material, functional dimensions and finish before production.",
+          "illustration": false
+        },
+        {
+          "title": "Custom Valve Core Turning Milling Parts",
+          "image": "/wp-content/uploads/2026/08/custom-valve-core-cnc-turning-milling-ball-needle.jpg",
+          "text": "Custom Valve Core Turning Milling Parts machined to your drawing. Confirm material, functional dimensions and finish before production.",
+          "illustration": false
+        },
+        {
+          "title": "5-Axis Compound-Geometry Turning Milling Parts",
+          "image": "/wp-content/uploads/2026/08/5-axis-turning-milling-aerospace-structural-fitting.jpg",
+          "text": "5-Axis Compound-Geometry Turning Milling Parts machined to your drawing. Confirm material, functional dimensions and finish before production.",
+          "illustration": false
+        },
+        {
+          "title": "Turning Milling Grinding Parts",
+          "image": "/wp-content/uploads/2026/08/cnc-turning-milling-grinding-valve-stem-motor-shaft.jpg",
+          "text": "Turning Milling Grinding Parts machined to your drawing. Confirm material, functional dimensions and finish before production.",
+          "illustration": false
+        }
+      ],
+      "applications": [
+        {
+          "title": "Automotive",
+          "industry": "Automotive",
+          "href": "/industries/automotive",
+          "image": "/wp-content/uploads/2026/08/automotive.jpg",
+          "imageAlt": "Vehicle assembly line in an automotive factory",
+          "text": "CNC turning milling parts for drivetrain shafts, valve bodies and vehicle hardware. Define bearing journals, milled flats and mounting features around the mating assembly."
+        },
+        {
+          "title": "Aerospace",
+          "industry": "Aerospace",
+          "href": "/industries/aerospace",
+          "image": "/wp-content/uploads/2026/08/aerospace.jpg",
+          "imageAlt": "Aircraft undergoing work in an aerospace hangar",
+          "text": "Turned and milled actuator shafts, connector bodies and mounting hardware for aircraft systems. Specify datum relationships, material traceability and inspection records."
+        },
+        {
+          "title": "Medical",
+          "industry": "Medical",
+          "href": "/industries/medical",
+          "image": "/wp-content/uploads/2026/09/medical.jpg",
+          "imageAlt": "Medical professionals using equipment in an operating room",
+          "text": "Custom shafts, sleeves and instrument bodies for medical equipment. Coordinate bores, threads and milled interfaces with material, finish and cleaning requirements."
+        },
+        {
+          "title": "Robotics & Automation",
+          "industry": "Robotics",
+          "href": "/industries/robotics",
+          "image": "/wp-content/uploads/2026/09/robotics.jpg",
+          "imageAlt": "Industrial robots working in an automated production cell",
+          "text": "Robot joint shafts, bearing sleeves and actuator housings with combined turned and milled features. Review concentricity, locating faces and cable or fastener access."
+        },
+        {
+          "title": "Semiconductor",
+          "industry": "Semiconductor",
+          "href": "/industries/semiconductor",
+          "image": "/wp-content/uploads/2026/08/semiconductor-robot-research.jpg",
+          "imageAlt": "Robotic wafer handling in semiconductor production",
+          "text": "Gas manifold bodies, vacuum fittings and positioning-stage parts for semiconductor equipment. Define sealing faces, port geometry and surface requirements for the process."
+        },
+        {
+          "title": "Oil & Gas",
+          "industry": "Oil & Gas",
+          "href": "/industries/oil-gas",
+          "image": "/wp-content/uploads/2026/09/oil-gas.jpg",
+          "imageAlt": "Oil extraction pumpjacks in an oil field",
+          "text": "Valve components, threaded adapters and instrument bodies for oil and gas equipment. Specify material grade, sealing geometry and any required pressure-test records."
+        }
+      ],
+      "materials": [
+        {
+          "title": "Aluminium 6061-T6 / 7075-T6",
+          "text": "Aluminum options for lightweight machined components. Confirm the alloy, temper, finishing allowance and critical assembly dimensions.",
+          "tag": "6061-T6 · Most Common · Anodized",
+          "category": "metals"
+        },
+        {
+          "title": "Stainless 316L & 304",
+          "text": "Stainless steel options for corrosion-resistant components. Confirm the grade, delivery condition, surface finish and cleaning requirements.",
+          "tag": "316L / 304 · Chemical/Food/Marine",
+          "category": "metals"
+        },
+        {
+          "title": "17-4PH H900 Stainless",
+          "text": "HRC 44–47 · UTS 1,170–1,310 MPa · Machinability 50–60% H900.",
+          "tag": "17-4PH H900 · Aerospace · 1,170 MPa",
+          "category": "metals"
+        },
+        {
+          "title": "Brass C36000 & H59 (CuZn40)",
+          "text": "Brass options for precision turned threads and small components. Confirm the alloy, lead-content requirements and any plating allowance.",
+          "tag": "C36000 / H59 · Valve Bodies · High Volume",
+          "category": "metals"
+        },
+        {
+          "title": "Copper C11000 ETP",
+          "text": "Copper-alloy options for electrical or thermal interfaces. Confirm the grade, condition, contact geometry and finish requirements.",
+          "tag": "Confirm grade & condition",
+          "category": "metals"
+        },
+        {
+          "title": "TC4 Titanium & 4340 Steel",
+          "text": "Titanium options for weight-sensitive and corrosion-resistant components. Confirm the approved grade, material condition and surface requirements.",
+          "tag": "TC4 · AMS 4928 · Aerospace Structural",
+          "category": "special-alloys"
+        }
+      ],
+      "finishes": [
+        {
+          "title": "Anodize",
+          "category": "Appearance & protection",
+          "use": "Specified material and service conditions",
+          "specify": "Process, color sample & thickness",
+          "icon": "color",
+          "tone": "color",
+          "summary": "Type II clear anodize (5–10μm) for corrosion protection; Type III hard anodize (25–75μm, HV 400+) for wear-resistant exterior surfaces."
+        },
+        {
+          "title": "Passivation & Electropolish",
+          "category": "Corrosion control",
+          "use": "Stainless steel surface requirements",
+          "specify": "Method, masking & inspection records",
+          "icon": "shield",
+          "tone": "blue",
+          "summary": "Review passivation & electropolish against the material, functional surfaces and intended service conditions."
+        },
+        {
+          "title": "Nickel, Chrome, DLC & Powder Coat",
+          "category": "Finish selection",
+          "use": "Drawing-specific surface requirements",
+          "specify": "Process, functional surfaces & acceptance",
+          "icon": "layers",
+          "tone": "blue",
+          "summary": "Bright nickel (ASTM B689, 5–20μm) on brass turning milling valve bodies and hardware — XRF thickness ±1μm per lot; corrosion protection and decorative finish."
+        }
+      ],
+      "controls": [
+        {
+          "title": "Material Verification",
+          "check": "Specified grade, material condition and lot identity.",
+          "verify": "Material certificates and agreed identification checks.",
+          "record": "Material certificates and required traceability records."
+        },
+        {
+          "title": "Machining Process Control",
+          "check": "Critical dimensions, datums and mating features.",
+          "verify": "Drawing datums, setup planning and in-process inspection.",
+          "record": "Agreed critical-feature and process inspection records."
+        },
+        {
+          "title": "Dimensional Inspection",
+          "check": "Functional dimensions, mating features and surface condition.",
+          "verify": "Suitable measuring equipment and drawing-specific gauges.",
+          "record": "Dimensional reports and specified finish results."
+        },
+        {
+          "title": "Production Documentation",
+          "check": "First-piece approval, production records and delivery requirements.",
+          "verify": "The inspection plan and customer approval process.",
+          "record": "Agreed document pack, including PPAP or FAIR when required."
+        }
+      ],
+      "stats": [
+        [
+          "Mill-turn",
+          "Combined turning & milling"
+        ],
+        [
+          "To drawing",
+          "Critical dimensions"
+        ],
+        [
+          "As agreed",
+          "Inspection scope"
+        ],
+        [
+          "CNC",
+          "Prototype & batch machining"
+        ]
+      ],
+      "faqs": [
+        {
+          "question": "Which CNC Turning Milling Parts designs can you manufacture?",
+          "answer": "The product range includes Aluminium Turning Milling Parts, Stainless Turning Milling Parts, Brass & Copper Turning Milling Parts. Custom geometry is reviewed against the approved drawing.",
+          "points": [
+            "Include the mating interfaces, critical datums and expected order quantity."
+          ]
+        },
+        {
+          "question": "Which materials can I specify?",
+          "answer": "Material options include Aluminium 6061-T6 / 7075-T6, Stainless 316L & 304, 17-4PH H900 Stainless. The exact grade and condition should be confirmed for your application.",
+          "points": [
+            "Include material certificate, finish and any restricted-substance requirements with your enquiry."
+          ]
+        },
+        {
+          "question": "What should I include in the drawing?",
+          "answer": "Define critical dimensions, datums and mating features, together with datums, tolerances and required surface condition.",
+          "points": [
+            "Include a 2D drawing and 3D model where available.",
+            "Identify the dimensions that affect assembly or function."
+          ]
+        },
+        {
+          "question": "What finishing and inspection records can be requested?",
+          "answer": "Finishing options include anodize, passivation & electropolish, nickel, chrome, dlc & powder coat. Applicability is reviewed against the specified material and geometry.",
+          "points": [
+            "Agree material certificates, dimensional reports and any PPAP or FAIR requirements with the order."
+          ]
+        },
+        {
+          "question": "How are pricing and lead time confirmed?",
+          "answer": "Pricing and delivery are confirmed after reviewing the drawing, material availability, quantity, machining route, finishing and inspection scope.",
+          "points": [
+            "Prototype and repeat-production schedules are quoted for the specific order."
+          ]
+        }
+      ],
+      "sourceUrl": "https://www.cncpioneer.com/custom-cnc-parts/cnc-turning-milling-parts"
+    }
+  ],
+  "materials": [
+    {
+      "slug": "brass-cnc-machining",
+      "seo": {
+        "title": "Brass CNC Machining Service | CNCPioneer",
+        "description": "Brass CNC machining services from CNCPioneer in China. Request quotes for custom fittings, bushings, and contacts with finishing and inspection to your drawings.",
+        "canonical": "/materials/brass-cnc-machining",
+        "image": "/wp-content/uploads/2026/01/material-cnc-machining-brass.jpg",
+        "ogDescription": "Brass CNC machining services from CNCPioneer in China. Request quotes for custom fittings, bushings, and contacts with finishing and inspection to your drawings."
+      },
+      "hero": {
+        "title": "Brass CNC Machining Service",
+        "image": "/wp-content/uploads/2026/01/brass-cnc-machining-banner.jpg",
+        "description": "Custom brass fittings, bushings and contact components made to your drawings. Send the alloy designation, mating dimensions, finish and quantity for a machining and inspection review."
+      },
+      "material": {
+        "heading": "Brass Parts: Material and Drawing Review",
+        "description": "A brass machining quote should start with the specified alloy and part function. Threaded fittings, electrical contacts and decorative hardware can require different material, surface and inspection choices. Confirm the purchase specification before substituting one brass grade for another.",
+        "image": "/wp-content/uploads/2026/01/material-cnc-machining-brass.jpg",
+        "alt": "material cnc machining brass",
+        "partsHeading": "Available Parts for Brass CNC Machining",
+        "partsIntro": "Explore representative brass components below. Material, geometry and acceptance requirements are reviewed for each drawing.",
+        "bullets": [
+          "Specify the brass grade, stock condition and any lead-content or application restrictions.",
+          "Identify thread standards, sealing features, contact surfaces and mating dimensions.",
+          "State plating or polishing requirements, thickness allowances and masked surfaces."
+        ]
+      },
+      "parts": [
+        {
+          "name": "Brass Turning Milling Parts",
+          "href": "/custom-cnc-parts/brass-turning-milling-parts",
+          "image": "/wp-content/uploads/2026/01/brass-cnc-machining-shaft-coupling.jpg",
+          "alt": "brass cnc machining shaft coupling"
+        },
+        {
+          "name": "Custom Brass Pneumatic Fittings",
+          "href": "/custom-cnc-parts/brass-pneumatic-fittings",
+          "image": "/wp-content/uploads/2026/01/brass-quick-connect-coupling.jpg",
+          "alt": "brass quick connect coupling"
+        },
+        {
+          "name": "Custom Pogo Contact Pins",
+          "href": "/custom-cnc-parts/pogo-contact-pins",
+          "image": "/wp-content/uploads/2026/01/brass-cnc-machining-pogo-pin.jpg",
+          "alt": "brass cnc machining pogo pin"
+        }
+      ],
+      "capabilitiesHeading": "Brass Machining Process Review",
+      "faqs": [
+        {
+          "question": "What is needed to quote a brass part?",
+          "answer": "Specify the brass grade, stock condition and any lead-content or application restrictions. Identify thread standards, sealing features, contact surfaces and mating dimensions. State plating or polishing requirements, thickness allowances and masked surfaces. Provide drawing revision, quantity, material-document requirements and the inspection scope."
+        },
+        {
+          "question": "How are tolerances and acceptance checks agreed?",
+          "answer": "Identify critical dimensions, datums and functional surfaces on the drawing. Feasibility, inspection method, material condition and any post-processing allowances are reviewed before acceptance; no single tolerance applies to every part."
+        }
+      ],
+      "capabilityCards": [
+        {
+          "title": "Turning and Milled Features",
+          "text": "Review bores, diameters, threads, flats and cross-holes together with workholding and access. The agreed process depends on the drawing and material condition.",
+          "serviceLabel": "CNC Turning and Milling Services",
+          "serviceHref": "/services/cnc-turning-and-milling",
+          "image": "/wp-content/uploads/2025/12/cnc-turning-and-milling-services-540x260-1.png"
+        },
+        {
+          "title": "Small Turned Components",
+          "text": "For small parts made from bar stock, review diameter, length, slender features and inspection access before selecting a Swiss machining route.",
+          "serviceLabel": "Swiss Machining Services",
+          "serviceHref": "/services/swiss-machining",
+          "image": "/wp-content/uploads/2025/12/swiss-machining-service-540x260-1.png"
+        }
+      ],
+      "procurement": {
+        "intro": "Provide the following information so material, process, finishing and inspection can be reviewed against your actual part.",
+        "items": [
+          "Specify the brass grade, stock condition and any lead-content or application restrictions.",
+          "Identify thread standards, sealing features, contact surfaces and mating dimensions.",
+          "State plating or polishing requirements, thickness allowances and masked surfaces.",
+          "Provide drawing revision, quantity, material-document requirements and the inspection scope."
+        ],
+        "links": [
+          {
+            "href": "/blog/brass-cnc-machining",
+            "label": "Brass material selection guide"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "bronze-cnc-machining",
+      "seo": {
+        "title": "Bronze CNC Machining Service | CNCPioneer",
+        "description": "Bronze CNC machining services from CNCPioneer in China. Request quotes for custom bushings, sleeves, and precision parts made to your drawings and specifications.",
+        "canonical": "/materials/bronze-cnc-machining",
+        "image": "/wp-content/uploads/2026/01/bronze-hex-bushing.jpg",
+        "ogDescription": "Bronze CNC machining services from CNCPioneer in China. Request quotes for custom bushings, sleeves, and precision parts made to your drawings and specifications."
+      },
+      "hero": {
+        "title": "Bronze CNC Machining Service",
+        "image": "/wp-content/uploads/2026/01/bronze-cnc-machining-banner​.jpg",
+        "description": "Custom bronze bushings, sleeves and machined components to your drawings. Define the bearing interface, material grade and inspection condition before the production route is agreed."
+      },
+      "material": {
+        "heading": "Bronze Parts: Material and Drawing Review",
+        "description": "For a bronze bushing or sleeve, the bore, outside diameter and shoulder must be considered with the mating shaft and housing. State the bronze specification, lubrication arrangement and service conditions so the material and fit can be reviewed together. A generic bronze label does not establish a bearing performance rating.",
+        "image": "/wp-content/uploads/2026/01/bronze-cnc-machining-material​.jpg",
+        "alt": "bronze cnc machining material",
+        "partsHeading": "Available Parts for Bronze CNC Machining",
+        "partsIntro": "Explore representative bronze components below. Material, geometry and acceptance requirements are reviewed for each drawing.",
+        "bullets": [
+          "Provide the exact bronze designation and material condition; avoid substituting brass for bronze.",
+          "Dimension the bore, outside diameter, shoulders, grooves and mating fits from defined datums.",
+          "Describe the lubrication arrangement, load, motion and operating environment for application review."
+        ]
+      },
+      "parts": [
+        {
+          "name": "Bronze Bushings",
+          "image": "/assets/images/bronze-bushing-catalog-v2.webp",
+          "alt": "Flanged bronze bushing",
+          "href": "/custom-cnc-parts/bronze-bushings"
+        },
+        {
+          "name": "Aluminum Bronze Bushing",
+          "image": "/assets/images/aluminum-bronze-bushing-catalog-v2.webp",
+          "alt": "Aluminum bronze bushing",
+          "href": "/custom-cnc-parts/aluminum-bronze-bushing"
+        },
+        {
+          "name": "Pogo Pin",
+          "image": "/wp-content/uploads/2026/01/bronze-cnc-machining-pogo-pin​.jpg",
+          "alt": "Bronze CNC machined pogo pin",
+          "href": "/custom-cnc-parts/pogo-contact-pins"
+        }
+      ],
+      "capabilitiesHeading": "Bronze Machining Process Review",
+      "faqs": [
+        {
+          "question": "What is needed to quote a bronze part?",
+          "answer": "Provide the exact bronze designation and material condition; avoid substituting brass for bronze. Dimension the bore, outside diameter, shoulders, grooves and mating fits from defined datums. Describe the lubrication arrangement, load, motion and operating environment for application review. State the inspection condition, surface finish, order quantity and traceability documents required."
+        },
+        {
+          "question": "How are tolerances and acceptance checks agreed?",
+          "answer": "Identify critical dimensions, datums and functional surfaces on the drawing. Feasibility, inspection method, material condition and any post-processing allowances are reviewed before acceptance; no single tolerance applies to every part."
+        }
+      ],
+      "capabilityCards": [
+        {
+          "title": "Turning and Milled Features",
+          "text": "Review bores, diameters, threads, flats and cross-holes together with workholding and access. The agreed process depends on the drawing and material condition.",
+          "serviceLabel": "CNC Turning and Milling Services",
+          "serviceHref": "/services/cnc-turning-and-milling",
+          "image": "/wp-content/uploads/2025/12/cnc-turning-and-milling-services-540x260-1.png"
+        },
+        {
+          "title": "Small Turned Components",
+          "text": "For small parts made from bar stock, review diameter, length, slender features and inspection access before selecting a Swiss machining route.",
+          "serviceLabel": "Swiss Machining Services",
+          "serviceHref": "/services/swiss-machining",
+          "image": "/wp-content/uploads/2025/12/swiss-machining-service-540x260-1.png"
+        }
+      ],
+      "procurement": {
+        "intro": "Provide the following information so material, process, finishing and inspection can be reviewed against your actual part.",
+        "items": [
+          "Provide the exact bronze designation and material condition; avoid substituting brass for bronze.",
+          "Dimension the bore, outside diameter, shoulders, grooves and mating fits from defined datums.",
+          "Describe the lubrication arrangement, load, motion and operating environment for application review.",
+          "State the inspection condition, surface finish, order quantity and traceability documents required."
+        ],
+        "links": [
+          {
+            "href": "/blog/bronze-cnc-machining",
+            "label": "Bronze material selection guide"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "nitinol-cnc-machining",
+      "seo": {
+        "title": "Nitinol CNC Machining Service | CNCPioneer",
+        "description": "Request Nitinol CNC machining quotes from CNCPioneer in China. Share your drawings, material condition, quantity, and inspection needs for an engineering review.",
+        "canonical": "/materials/nitinol-cnc-machining",
+        "image": "/wp-content/uploads/2026/01/nitinol-material.jpg",
+        "ogDescription": "Request Nitinol CNC machining quotes from CNCPioneer in China. Share your drawings, material condition, quantity, and inspection needs for an engineering review."
+      },
+      "hero": {
+        "title": "Nitinol Machining Service",
+        "image": "/wp-content/uploads/2026/01/nitinol-machining.jpg",
+        "description": "Request a drawing review for custom nickel-titanium components. Provide the material specification, supplied condition and intended function so the machining and verification scope can be assessed."
+      },
+      "material": {
+        "heading": "Nitinol Parts: Material and Drawing Review",
+        "description": "Nitinol components require a defined material and functional specification. Specify whether the design relies on superelastic or shape-memory behavior and identify the relevant transformation-temperature and test requirements. Geometry, supplied condition and subsequent processing must be assessed together; a machining quote does not by itself validate device performance.",
+        "image": "/wp-content/uploads/2026/01/nitinol-material.jpg",
+        "alt": "nitinol material",
+        "partsHeading": "Available Parts for Nitinol CNC Machining",
+        "partsIntro": "Explore representative nitinol components below. Material, geometry and acceptance requirements are reviewed for each drawing.",
+        "bullets": [
+          "Provide the NiTi material specification, supplier certificate and supplied condition; do not use an unverified grade label.",
+          "Define the intended function, transformation-temperature requirements and any required functional test.",
+          "Identify critical geometry, surface condition, edge requirements and allowed post-processing."
+        ]
+      },
+      "parts": [
+        {
+          "name": "nitinol probes",
+          "image": "/wp-content/uploads/2026/01/nitinol-probes.jpg",
+          "alt": "nitinol probes"
+        },
+        {
+          "name": "nitinol screw",
+          "image": "/wp-content/uploads/2026/01/nitinol-screw.jpg",
+          "alt": "nitinol screw"
+        },
+        {
+          "name": "nitinol pin",
+          "image": "/wp-content/uploads/2026/01/nitinol-pin.jpg",
+          "alt": "nitinol pin"
+        }
+      ],
+      "capabilitiesHeading": "Nitinol Machining Process Review",
+      "faqs": [
+        {
+          "question": "What is needed to quote a nitinol part?",
+          "answer": "Provide the NiTi material specification, supplier certificate and supplied condition; do not use an unverified grade label. Define the intended function, transformation-temperature requirements and any required functional test. Identify critical geometry, surface condition, edge requirements and allowed post-processing. State quantity, traceability and acceptance requirements; agree feasibility and inspection before production."
+        },
+        {
+          "question": "How are tolerances and acceptance checks agreed?",
+          "answer": "Identify critical dimensions, datums and functional surfaces on the drawing. Feasibility, inspection method, material condition and any post-processing allowances are reviewed before acceptance; no single tolerance applies to every part."
+        }
+      ],
+      "capabilityCards": [
+        {
+          "title": "Turning and Milled Features",
+          "text": "Review bores, diameters, threads, flats and cross-holes together with workholding and access. The agreed process depends on the drawing and material condition.",
+          "serviceLabel": "CNC Turning and Milling Services",
+          "serviceHref": "/services/cnc-turning-and-milling",
+          "image": "/wp-content/uploads/2025/12/cnc-turning-and-milling-services-540x260-1.png"
+        },
+        {
+          "title": "Small Turned Components",
+          "text": "For small parts made from bar stock, review diameter, length, slender features and inspection access before selecting a Swiss machining route.",
+          "serviceLabel": "Swiss Machining Services",
+          "serviceHref": "/services/swiss-machining",
+          "image": "/wp-content/uploads/2025/12/swiss-machining-service-540x260-1.png"
+        }
+      ],
+      "procurement": {
+        "intro": "Provide the following information so material, process, finishing and inspection can be reviewed against your actual part.",
+        "items": [
+          "Provide the NiTi material specification, supplier certificate and supplied condition; do not use an unverified grade label.",
+          "Define the intended function, transformation-temperature requirements and any required functional test.",
+          "Identify critical geometry, surface condition, edge requirements and allowed post-processing.",
+          "State quantity, traceability and acceptance requirements; agree feasibility and inspection before production."
+        ],
+        "links": [
+          {
+            "href": "/materials",
+            "label": "Explore machining materials"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "nylon-cnc-machining",
+      "seo": {
+        "title": "Nylon CNC Machining Service | CNCPioneer",
+        "description": "Nylon CNC machining services from CNCPioneer in China. Request quotes for custom PA parts, with material condition and inspection reviewed to your drawings.",
+        "canonical": "/materials/nylon-cnc-machining",
+        "image": "/wp-content/uploads/2026/01/nylon-cnc-machining-material.jpg",
+        "ogDescription": "Nylon CNC machining services from CNCPioneer in China. Request quotes for custom PA parts, with material condition and inspection reviewed to your drawings."
+      },
+      "hero": {
+        "title": "Nylon CNC Machining Service",
+        "image": "/wp-content/uploads/2026/01/nylon-cnc-machining-service-banner.jpg",
+        "description": "Custom machined nylon gears, bushings, rollers and wear components. Share the PA grade, material conditioning requirements, drawing and quantity for a manufacturing review."
+      },
+      "material": {
+        "heading": "Nylon Parts: Material and Drawing Review",
+        "description": "Nylon parts should be quoted with the exact PA grade, filler and stock condition identified. Agree the moisture conditioning and inspection environment with the drawing so dimensions are assessed under defined conditions. The fit in service needs its own review against the application environment.",
+        "image": "/wp-content/uploads/2026/01/nylon-cnc-machining-material.jpg",
+        "alt": "Nylon CNC Machining Service",
+        "partsHeading": "Available Parts for Nylon CNC Machining",
+        "partsIntro": "Explore representative nylon components below. Material, geometry and acceptance requirements are reviewed for each drawing.",
+        "bullets": [
+          "Identify the PA grade, filler, stock form and any specified conditioning procedure.",
+          "State operating temperature, humidity, fluids and the mating materials.",
+          "Define dimensional tolerances, inspection temperature and moisture condition, especially for fits."
+        ]
+      },
+      "parts": [
+        {
+          "name": "Engine Cover",
+          "image": "/wp-content/uploads/2026/01/nylon-cnc-machining-engine-cover.jpg",
+          "alt": "nylon cnc machining engine cover"
+        },
+        {
+          "name": "Pump Impeller",
+          "image": "/wp-content/uploads/2026/01/nylon-cnc-machining-pump-impeller.jpg",
+          "alt": "nylon cnc machining pump impeller"
+        },
+        {
+          "name": "Bushing",
+          "image": "/wp-content/uploads/2026/01/nylon-cnc-machining-bushing.jpg",
+          "alt": "nylon cnc machining bushing"
+        }
+      ],
+      "capabilitiesHeading": "Nylon Machining Process Review",
+      "faqs": [
+        {
+          "question": "What is needed to quote a nylon part?",
+          "answer": "Identify the PA grade, filler, stock form and any specified conditioning procedure. State operating temperature, humidity, fluids and the mating materials. Define dimensional tolerances, inspection temperature and moisture condition, especially for fits. Include edge finish, quantity, packaging and material documentation requirements."
+        },
+        {
+          "question": "How are tolerances and acceptance checks agreed?",
+          "answer": "Identify critical dimensions, datums and functional surfaces on the drawing. Feasibility, inspection method, material condition and any post-processing allowances are reviewed before acceptance; no single tolerance applies to every part."
+        }
+      ],
+      "capabilityCards": [
+        {
+          "title": "Turning and Milled Features",
+          "text": "Review bores, diameters, threads, flats and cross-holes together with workholding and access. The agreed process depends on the drawing and material condition.",
+          "serviceLabel": "CNC Turning and Milling Services",
+          "serviceHref": "/services/cnc-turning-and-milling",
+          "image": "/wp-content/uploads/2025/12/cnc-turning-and-milling-services-540x260-1.png"
+        },
+        {
+          "title": "Small Turned Components",
+          "text": "For small parts made from bar stock, review diameter, length, slender features and inspection access before selecting a Swiss machining route.",
+          "serviceLabel": "Swiss Machining Services",
+          "serviceHref": "/services/swiss-machining",
+          "image": "/wp-content/uploads/2025/12/swiss-machining-service-540x260-1.png"
+        }
+      ],
+      "procurement": {
+        "intro": "Provide the following information so material, process, finishing and inspection can be reviewed against your actual part.",
+        "items": [
+          "Identify the PA grade, filler, stock form and any specified conditioning procedure.",
+          "State operating temperature, humidity, fluids and the mating materials.",
+          "Define dimensional tolerances, inspection temperature and moisture condition, especially for fits.",
+          "Include edge finish, quantity, packaging and material documentation requirements."
+        ],
+        "links": [
+          {
+            "href": "/blog/nylon-cnc-machining",
+            "label": "Nylon material selection guide"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "stainless-steel-cnc-machining",
+      "seo": {
+        "title": "Stainless Steel CNC Machining Service | CNCPioneer",
+        "description": "Stainless steel CNC machining from CNCPioneer in China. Request quotes for custom parts, with grade selection, finishing, and inspection agreed to your drawings.",
+        "canonical": "/materials/stainless-steel-cnc-machining",
+        "image": "/wp-content/uploads/2026/01/stainless-steel-material.jpg",
+        "ogDescription": "Stainless steel CNC machining from CNCPioneer in China. Request quotes for custom parts, with grade selection, finishing, and inspection agreed to your drawings."
+      },
+      "hero": {
+        "title": "Stainless Steel CNC Machining Service",
+        "image": "/wp-content/uploads/2026/01/stainless-steel-machining.jpg",
+        "description": "Custom stainless steel shafts, fittings and housings made to your drawings. Request a review of the specified grade, material condition, post-processing and critical dimensions."
+      },
+      "material": {
+        "heading": "Stainless Steel Parts: Material and Drawing Review",
+        "description": "Stainless steel procurement requires more than a family name. The grade and condition, exposure to chemicals or cleaning, and the mating geometry inform machining and finishing choices. Define any passivation, polishing or heat-treatment requirements on the drawing or purchase specification.",
+        "image": "/wp-content/uploads/2026/01/stainless-steel-material.jpg",
+        "alt": "stainless steel CNC machining material",
+        "partsHeading": "Available Parts for Stainless Steel CNC Machining",
+        "partsIntro": "Explore representative stainless steel components below. Material, geometry and acceptance requirements are reviewed for each drawing.",
+        "bullets": [
+          "Identify the grade, material standard, stock form and required condition.",
+          "Describe the corrosive medium, cleaning process and operating temperature relevant to material review.",
+          "Specify bores, threads, sealing faces and surface requirements, including post-process dimensional checks."
+        ]
+      },
+      "parts": [
+        {
+          "name": "Stainless Steel Fittings",
+          "image": "/wp-content/uploads/2026/10/stainless-material-cards/stainless-steel-fitting-single-v1.webp",
+          "alt": "Single upright stainless steel threaded hose fitting on a pale background",
+          "href": "/custom-cnc-parts/stainless-steel-fittings"
+        },
+        {
+          "name": "Stainless Steel Shaft",
+          "image": "/wp-content/uploads/2026/10/stainless-material-cards/stainless-steel-precision-shaft-single-v1.webp",
+          "alt": "Single upright stainless steel stepped precision shaft on a pale background",
+          "href": "/custom-cnc-parts/stainless-steel-precision-turning-shaft"
+        },
+        {
+          "name": "Stainless Steel Dowel Pin",
+          "image": "/wp-content/uploads/2026/10/stainless-material-cards/stainless-steel-dowel-pin-single-v1.webp",
+          "alt": "Single upright stainless steel cylindrical dowel pin on a pale background",
+          "href": "/custom-cnc-parts/cnc-machined-pins"
+        }
+      ],
+      "capabilitiesHeading": "Stainless Steel Machining Process Review",
+      "faqs": [
+        {
+          "question": "What is needed to quote a stainless steel part?",
+          "answer": "Identify the grade, material standard, stock form and required condition. Describe the corrosive medium, cleaning process and operating temperature relevant to material review. Specify bores, threads, sealing faces and surface requirements, including post-process dimensional checks. Request the material records, critical-feature inspection and quantity needed for the order."
+        },
+        {
+          "question": "How are tolerances and acceptance checks agreed?",
+          "answer": "Identify critical dimensions, datums and functional surfaces on the drawing. Feasibility, inspection method, material condition and any post-processing allowances are reviewed before acceptance; no single tolerance applies to every part."
+        }
+      ],
+      "capabilityCards": [
+        {
+          "title": "Turning and Milled Features",
+          "text": "Review bores, diameters, threads, flats and cross-holes together with workholding and access. The agreed process depends on the drawing and material condition.",
+          "serviceLabel": "CNC Turning and Milling Services",
+          "serviceHref": "/services/cnc-turning-and-milling",
+          "image": "/wp-content/uploads/2025/12/cnc-turning-and-milling-services-540x260-1.png"
+        },
+        {
+          "title": "Small Turned Components",
+          "text": "For small parts made from bar stock, review diameter, length, slender features and inspection access before selecting a Swiss machining route.",
+          "serviceLabel": "Swiss Machining Services",
+          "serviceHref": "/services/swiss-machining",
+          "image": "/wp-content/uploads/2025/12/swiss-machining-service-540x260-1.png"
+        }
+      ],
+      "procurement": {
+        "intro": "Provide the following information so material, process, finishing and inspection can be reviewed against your actual part.",
+        "items": [
+          "Identify the grade, material standard, stock form and required condition.",
+          "Describe the corrosive medium, cleaning process and operating temperature relevant to material review.",
+          "Specify bores, threads, sealing faces and surface requirements, including post-process dimensional checks.",
+          "Request the material records, critical-feature inspection and quantity needed for the order."
+        ],
+        "links": [
+          {
+            "href": "/blog/stainless-steel-cnc-machining",
+            "label": "Stainless Steel material selection guide"
+          }
+        ]
+      }
+    }
+  ]
+}

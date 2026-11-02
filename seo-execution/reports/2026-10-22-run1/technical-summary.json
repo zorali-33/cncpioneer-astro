@@ -1,0 +1,247 @@
+{
+  "checked": 483,
+  "redirects": 65,
+  "failedRedirects": [],
+  "sitemapCount": 349,
+  "sitemapUnique": 349,
+  "sitemapRetired": [],
+  "activeStructuralProblems": [
+    {
+      "path": "/resources",
+      "status": 200,
+      "location": null,
+      "title": "Resources | CNCPioneer",
+      "h1Count": 1,
+      "description": [],
+      "canonical": [
+        "https://www.cncpioneer.com/resources"
+      ],
+      "noindex": false,
+      "links": [
+        "/search",
+        "/",
+        "/search",
+        "/",
+        "/services",
+        "/services/cnc-turning-and-milling",
+        "/services/swiss-machining",
+        "/materials",
+        "/industries",
+        "/industries/aerospace",
+        "/industries/defense",
+        "/industries/medical",
+        "/industries/semiconductor",
+        "/industries/consumer-electronics",
+        "/industries/oil-gas",
+        "/industries/automotive",
+        "/industries/railway",
+        "/resources",
+        "/about-us",
+        "/cnc-machining-quote",
+        "/cnc-machining-quote",
+        "/",
+        "/blog",
+        "/resources/faqs",
+        "/materials",
+        "/blog/swiss-machining",
+        "/blog/swiss-machining",
+        "/blog/cnc-lathe-vs-mill",
+        "/blog/cnc-lathe-vs-mill",
+        "/blog/cnc-machining-materials",
+        "/blog/cnc-machining-materials",
+        "/cnc-machining-quote",
+        "/services/swiss-machining",
+        "/services/cnc-turning-and-milling",
+        "/industries/aerospace",
+        "/industries/defense",
+        "/industries/medical",
+        "/industries/semiconductor",
+        "/industries/consumer-electronics",
+        "/industries/oil-gas",
+        "/industries/automotive",
+        "/industries/railway",
+        "/about-us",
+        "/blog"
+      ]
+    },
+    {
+      "path": "/about-us",
+      "status": 200,
+      "location": null,
+      "title": "About Us | CNCPioneer",
+      "h1Count": 1,
+      "description": [],
+      "canonical": [
+        "https://www.cncpioneer.com/about-us"
+      ],
+      "noindex": false
+    },
+    {
+      "path": "/author/ryan-wang",
+      "status": 200,
+      "location": null,
+      "title": "Ryan Wang, Author at CNCPioneer",
+      "h1Count": 1,
+      "description": [],
+      "canonical": [
+        "https://www.cncpioneer.com/author/ryan-wang"
+      ],
+      "noindex": false
+    },
+    {
+      "path": "/author/david-li/page/2",
+      "status": 200,
+      "location": null,
+      "title": "David Li, Author at CNCPioneer - Page 2 of 3",
+      "h1Count": 1,
+      "description": [],
+      "canonical": [
+        "https://www.cncpioneer.com/author/david-li/page/2"
+      ],
+      "noindex": false
+    },
+    {
+      "path": "/author/david-li/page/3",
+      "status": 200,
+      "location": null,
+      "title": "David Li, Author at CNCPioneer - Page 3 of 3",
+      "h1Count": 1,
+      "description": [],
+      "canonical": [
+        "https://www.cncpioneer.com/author/david-li/page/3"
+      ],
+      "noindex": false
+    },
+    {
+      "path": "/author/ryan-wang/page/2",
+      "status": 200,
+      "location": null,
+      "title": "Ryan Wang, Author at CNCPioneer - Page 2 of 9",
+      "h1Count": 1,
+      "description": [],
+      "canonical": [
+        "https://www.cncpioneer.com/author/ryan-wang/page/2"
+      ],
+      "noindex": false
+    },
+    {
+      "path": "/author/ryan-wang/page/3",
+      "status": 200,
+      "location": null,
+      "title": "Ryan Wang, Author at CNCPioneer - Page 3 of 9",
+      "h1Count": 1,
+      "description": [],
+      "canonical": [
+        "https://www.cncpioneer.com/author/ryan-wang/page/3"
+      ],
+      "noindex": false
+    },
+    {
+      "path": "/author/ryan-wang/page/4",
+      "status": 200,
+      "location": null,
+      "title": "Ryan Wang, Author at CNCPioneer - Page 4 of 9",
+      "h1Count": 1,
+      "description": [],
+      "canonical": [
+        "https://www.cncpioneer.com/author/ryan-wang/page/4"
+      ],
+      "noindex": false
+    },
+    {
+      "path": "/author/ryan-wang/page/6",
+      "status": 200,
+      "location": null,
+      "title": "Ryan Wang, Author at CNCPioneer - Page 6 of 9",
+      "h1Count": 1,
+      "description": [],
+      "canonical": [
+        "https://www.cncpioneer.com/author/ryan-wang/page/6"
+      ],
+      "noindex": false
+    },
+    {
+      "path": "/author/ryan-wang/page/7",
+      "status": 200,
+      "location": null,
+      "title": "Ryan Wang, Author at CNCPioneer - Page 7 of 9",
+      "h1Count": 1,
+      "description": [],
+      "canonical": [
+        "https://www.cncpioneer.com/author/ryan-wang/page/7"
+      ],
+      "noindex": false
+    },
+    {
+      "path": "/author/ryan-wang/page/5",
+      "status": 200,
+      "location": null,
+      "title": "Ryan Wang, Author at CNCPioneer - Page 5 of 9",
+      "h1Count": 1,
+      "description": [],
+      "canonical": [
+        "https://www.cncpioneer.com/author/ryan-wang/page/5"
+      ],
+      "noindex": false
+    },
+    {
+      "path": "/author/ryan-wang/page/8",
+      "status": 200,
+      "location": null,
+      "title": "Ryan Wang, Author at CNCPioneer - Page 8 of 9",
+      "h1Count": 1,
+      "description": [],
+      "canonical": [
+        "https://www.cncpioneer.com/author/ryan-wang/page/8"
+      ],
+      "noindex": false
+    },
+    {
+      "path": "/author/ryan-wang/page/9",
+      "status": 200,
+      "location": null,
+      "title": "Ryan Wang, Author at CNCPioneer - Page 9 of 9",
+      "h1Count": 1,
+      "description": [],
+      "canonical": [
+        "https://www.cncpioneer.com/author/ryan-wang/page/9"
+      ],
+      "noindex": false
+    },
+    {
+      "path": "/blog",
+      "status": 200,
+      "location": null,
+      "title": "Blog | CNCPioneer",
+      "h1Count": 1,
+      "description": [],
+      "canonical": [
+        "https://www.cncpioneer.com/blog"
+      ],
+      "noindex": false
+    },
+    {
+      "path": "/resources/faqs",
+      "status": 200,
+      "location": null,
+      "title": "FAQs | CNCPioneer",
+      "h1Count": 1,
+      "description": [],
+      "canonical": [
+        "https://www.cncpioneer.com/resources/faqs"
+      ],
+      "noindex": false
+    }
+  ],
+  "scopeNon200Links": [],
+  "sensorOld": {
+    "path": "/custom-cnc-parts/sensor-housing-machining",
+    "status": 404,
+    "location": null
+  },
+  "swissQuery": {
+    "path": "/services/swiss-machining/swiss-micro-machining?seo_check=1",
+    "status": 301,
+    "location": "/services/swiss-machining?seo_check=1"
+  }
+}

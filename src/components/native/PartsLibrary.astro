@@ -1,0 +1,86 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import QuoteCta from "./QuoteCta.astro";
+import { catalogParts, catalogCategories, catalogMaterials, catalogPageCount, catalogPageHref, PARTS_PER_PAGE } from "../../parts-catalog-native.mjs";
+import "../../styles/parts-library.css";
+const { page = 1 } = Astro.props;
+const pageParts = catalogParts.slice((page - 1) * PARTS_PER_PAGE, page * PARTS_PER_PAGE);
+const canonical = catalogPageHref(page);
+const seo = {
+  title: page === 1 ? "Custom CNC Parts | Swiss & Mill-Turn Manufacturing | CNCPioneer" : `Custom CNC Parts Library - Page ${page} | CNCPioneer`,
+  description: "Explore custom CNC parts, from precision pins and bushings to flanges, shafts and housings. Browse by part type and material, then request a quote to your drawing.",
+  canonical, type: "website", image: "/wp-content/uploads/2026/04/precision-swiss-machined-parts.jpg",
+};
+const schema = {
+  "@context": "https://schema.org", "@type": "CollectionPage",
+  name: "Custom CNC Parts Library", url: `https://www.cncpioneer.com${canonical}`,
+  mainEntity: { "@type": "ItemList", numberOfItems: catalogParts.length,
+    itemListElement: pageParts.map((part, index) => ({ "@type": "ListItem", position: (page - 1) * PARTS_PER_PAGE + index + 1, name: part.title, url: `https://www.cncpioneer.com${part.href}` })),
+  },
+};
+const faqs = [
+  ["Are these stock parts or custom manufacturing examples?", "These are examples of components we can manufacture. Parts are made to your drawing and specifications; the library is a starting point for discussing your project, not a stock inventory."],
+  ["What should I include when requesting a quote?", "Share your 2D drawing or 3D CAD file, material and grade, quantity, critical tolerances, surface finish and delivery requirements. Our team can review manufacturability with you before production."],
+  ["How do I choose between Swiss machining and mill-turn machining?", "Swiss machining suits small, slender components such as pins and precision shafts. Mill-turn machining combines turning and milling for components with multiple features. The best process depends on the drawing, material and volume."],
+  ["Can I request a different material or finish?", "Yes. The material shown on a card describes that example. Tell us your required alloy, treatment and inspection requirements so we can confirm a suitable manufacturing route."],
+];
+---
+<BaseLayout seo={seo}>
+  <Fragment slot="head">
+    {page > 1 && <link rel="prev" href={`https://www.cncpioneer.com${catalogPageHref(page - 1)}`} />}
+    {page < catalogPageCount && <link rel="next" href={`https://www.cncpioneer.com${catalogPageHref(page + 1)}`} />}
+    <script type="application/ld+json" set:html={JSON.stringify(schema).replaceAll("<", "\\u003c")} />
+  </Fragment>
+  <div class="parts-library" data-parts-library data-page={page} data-per-page={PARTS_PER_PAGE}>
+    <section class:list={["pl-hero", page > 1 && "pl-hero--compact"]}>
+      <div class="pl-container">
+        <nav class="pl-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span>Custom CNC Parts</span>{page > 1 && <><span aria-hidden="true">/</span><span>Page {page}</span></>}</nav>
+        <div class="pl-hero-layout">
+          <div class="pl-hero-copy">
+            <p class="pl-eyebrow">PRECISION IN EVERY COMPONENT</p>
+            <h1>{page === 1 ? <>Custom CNC parts,<br />made to your drawing.</> : "Custom CNC parts library"}</h1>
+            <p class="pl-hero-description">From miniature contact pins to complex machined housings. Explore our work and find the right starting point for your next component.</p>
+            <div class="pl-actions"><button class="pl-button pl-button--blue" type="button" data-pl-explore>Explore parts <span aria-hidden="true">↓</span></button><a class="pl-button pl-button--outline" href="/cnc-machining-quote">Get a custom quote <span aria-hidden="true">↗</span></a></div>
+            <p class="pl-hero-note">Swiss machining <span>·</span> CNC turning & milling <span>·</span> Made to order</p>
+          </div>
+          {page === 1 && <figure class="pl-hero-visual"><img src="/wp-content/uploads/2026/04/precision-swiss-machined-parts.jpg" alt="Precision machined shafts and sleeves arranged on a metal workshop table" width="604" height="391" fetchpriority="high" /><figcaption><span class="pl-live-dot" /> YOUR DESIGN. OUR PRECISION.</figcaption></figure>}
+        </div>
+      </div>
+    </section>
+    <div class="pl-context-strip"><div class="pl-container"><span><strong>{catalogParts.length}</strong> component examples</span><span>Swiss & mill-turn expertise</span><span>Prototypes to production</span><a href="/cnc-machining-quote">Manufactured to your specification <span aria-hidden="true">↗</span></a></div></div>
+    <section class="pl-catalog pl-container" id="parts-catalog" aria-labelledby="pl-catalog-title">
+      <div class="pl-section-heading"><div><p class="pl-eyebrow">THE PARTS LIBRARY</p><h2 id="pl-catalog-title" data-pl-heading>Find your next component.</h2></div><p>Real manufacturing examples.<br />Custom-built around your requirements.</p></div>
+      <form class="pl-toolbar" role="search" data-pl-tools>
+        <label class="pl-search"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5" /><path d="m16 16 4.5 4.5" /></svg><span class="pl-sr-only">Search CNC parts</span><input type="search" name="q" placeholder="Search a part, material or process…" data-pl-search autocomplete="off" /></label>
+        <label class="pl-select"><span>Material</span><select name="material" data-pl-material aria-label="Filter by material"><option value="all">All materials</option>{catalogMaterials.map(material => <option value={material}>{material === "To specification" ? "Other / project specific" : material}</option>)}</select></label>
+        <label class="pl-select"><span>Sort by</span><select name="sort" data-pl-sort aria-label="Sort parts"><option value="featured">Featured</option><option value="az">Name: A–Z</option><option value="za">Name: Z–A</option></select></label>
+      </form>
+      <div class="pl-catalog-layout">
+        <aside class="pl-sidebar" aria-label="Part types">
+          <p class="pl-sidebar-label">BROWSE BY PART TYPE</p>
+          <div class="pl-categories" data-pl-categories><button type="button" class="is-active" data-pl-category="all" aria-pressed="true"><span>All parts</span><span data-pl-category-count="all">{catalogParts.length}</span></button>{catalogCategories.map(category => <button type="button" data-pl-category={category.id} aria-pressed="false"><span>{category.label}</span><span data-pl-category-count={category.id}>{category.count}</span></button>)}</div>
+          <div class="pl-help"><span aria-hidden="true">↗</span><h3>Have a drawing?</h3><p>Start with your design. We’ll help you find the manufacturing route.</p><a href="/cnc-machining-quote">Discuss your project <span aria-hidden="true">→</span></a></div>
+        </aside>
+        <div class="pl-results">
+          <div class="pl-results-bar"><p role="status" aria-live="polite" aria-atomic="true" data-pl-count>Showing {(page - 1) * PARTS_PER_PAGE + 1}–{Math.min(page * PARTS_PER_PAGE, catalogParts.length)} of {catalogParts.length} parts</p><button type="button" data-pl-clear hidden>Clear filters <span aria-hidden="true">×</span></button><span class="pl-results-note" data-pl-note>Made to order, never off the shelf.</span></div>
+          <div class="pl-grid" data-pl-results>
+            {pageParts.map(part => <article class="pl-card"><a href={part.href} class="pl-card-main"><div class="pl-card-media"><img src={part.image} alt={part.title} width="600" height="450" loading="lazy" decoding="async" /><span class="pl-card-arrow" aria-hidden="true">↗</span></div><div class="pl-card-content"><p class="pl-card-category">{part.categoryLabel}</p><h3>{part.title}</h3><dl><div><dt>Material</dt><dd>{part.material}</dd></div><div><dt>Process</dt><dd>{part.process}</dd></div></dl><span class="pl-card-link">Explore component <span aria-hidden="true">→</span></span></div></a></article>)}
+          </div>
+          <div class="pl-empty" data-pl-empty hidden><span aria-hidden="true">⌕</span><h3>No matching components</h3><p>Try a broader search or clear your filters. We can also review a custom part from your drawing.</p><button class="pl-button pl-button--blue" type="button" data-pl-reset>Clear filters</button><a href="/cnc-machining-quote">Ask about a custom part →</a></div>
+          <nav class="pl-pagination" aria-label="Parts library pages" data-pl-pagination>{page > 1 && <a href={catalogPageHref(page - 1)} rel="prev">← <span>Previous</span></a>}{Array.from({ length: catalogPageCount }, (_, i) => i + 1).map(number => number === page ? <span class="is-current" aria-current="page">{number}</span> : <a href={catalogPageHref(number)} aria-label={`Page ${number}`}>{number}</a>)}{page < catalogPageCount && <a href={catalogPageHref(page + 1)} rel="next"><span>Next</span> →</a>}</nav>
+          <noscript><p>Search and filters need JavaScript. You can browse every component using the page links above.</p></noscript>
+        </div>
+      </div>
+    </section>
+    {page === 1 && <>
+      <section class="pl-capabilities"><div class="pl-container"><div class="pl-section-heading"><div><p class="pl-eyebrow">THE RIGHT PROCESS FOR YOUR PART</p><h2>Small details. Complex geometries.</h2></div><p>Two complementary machining routes,<br />one team focused on your specification.</p></div><div class="pl-capability-grid"><a href="/services/swiss-machining"><span class="pl-step">01 / SWISS MACHINING</span><h3>Small, slender & intricate.</h3><p>Precision pins, contacts, micro shafts and threaded components produced with close workpiece support.</p><span class="pl-text-link">Explore Swiss machining <span aria-hidden="true">↗</span></span></a><a href="/services/cnc-turning-and-milling"><span class="pl-step">02 / CNC TURNING & MILLING</span><h3>More features. Fewer setups.</h3><p>Flanges, fittings, housings and multi-feature components made with combined turning and milling operations.</p><span class="pl-text-link">Explore mill-turn machining <span aria-hidden="true">↗</span></span></a></div></div></section>
+      <section class="pl-materials pl-container"><div><p class="pl-eyebrow">BUILT AROUND YOUR REQUIREMENTS</p><h2>The material is part of the design.</h2><p>Explore material options, then specify your grade, finish and inspection requirements with your drawing.</p><a class="pl-text-link" href="/materials">Explore all materials <span aria-hidden="true">→</span></a></div><div class="pl-material-links"><a href="/materials/stainless-steel-cnc-machining">Stainless steel <span>↗</span></a><a href="/materials/aluminum-cnc-machining">Aluminum <span>↗</span></a><a href="/materials/brass-cnc-machining">Brass <span>↗</span></a><a href="/materials/titanium-cnc-machining">Titanium <span>↗</span></a></div></section>
+      <section class="pl-faq pl-container"><div><p class="pl-eyebrow">BEFORE YOU GET STARTED</p><h2>A few useful answers.</h2><a href="/resources/faqs" class="pl-text-link">More manufacturing FAQs →</a></div><div>{faqs.map(([question, answer]) => <details><summary>{question}<span aria-hidden="true">+</span></summary><p>{answer}</p></details>)}</div></section>
+    </>}
+    <QuoteCta id={`parts-library-page-${page}-quote`} idPrefix={`parts-library-page-${page}-quote-form`} formName="Custom CNC Parts Enquiry" kicker="YOUR NEXT COMPONENT STARTS HERE" title="Have something specific in mind?" description="Send your drawing, material and quantity. We’ll review the details and suitable machining route." />
+    <script type="application/json" id="pl-catalog-data" set:html={JSON.stringify(catalogParts).replaceAll("<", "\\u003c")} />
+  </div>
+</BaseLayout>
+<script>
+  import "../../scripts/parts-library.js";
+</script>

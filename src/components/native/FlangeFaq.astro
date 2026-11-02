@@ -1,0 +1,50 @@
+---
+const { items, title = "CNC Turning Stainless Steel Flanges FAQ", id = "flange-faq" } = Astro.props;
+---
+
+<section class="flange-faq" id={id} aria-labelledby={`${id}-title`}>
+  <div class="flange-faq-container">
+    <h2 id={`${id}-title`}>{title}</h2>
+    <div class="flange-faq-list">
+      {items.map((item) => (
+        <details class="flange-faq-item" name="stainless-flange-faq">
+          <summary>
+            <span>{item.question}</span>
+            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m5 8 5 5 5-5" /></svg>
+          </summary>
+          <div class="flange-faq-answer">
+            <p>{item.answer}</p>
+            {item.points?.length > 0 && <ul>{item.points.map((point) => <li>{point}</li>)}</ul>}
+          </div>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .flange-faq { padding: 64px 0; background: var(--color-surface); color: var(--color-ink); scroll-margin-top: 24px; }
+  .flange-faq-container { max-width: var(--layout-shell); margin: 0 auto; padding-inline: 24px; }
+  .flange-faq h2 { margin: 0 auto 28px; color: var(--color-ink); font-size: var(--type-h2); line-height: 1.2; text-align: center; text-wrap: balance; }
+  .flange-faq-list { max-width: 900px; margin: 0 auto; overflow: hidden; border: 1px solid var(--color-border); border-radius: 8px; background: var(--color-white); }
+  .flange-faq-item + .flange-faq-item { border-top: 1px solid var(--color-border); }
+  .flange-faq summary { display: flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 64px; padding: 18px 24px; color: var(--color-ink); font-size: 16px; font-weight: 600; line-height: 1.5; list-style: none; cursor: pointer; }
+  .flange-faq summary::-webkit-details-marker { display: none; }
+  .flange-faq summary:hover { background: var(--color-surface); color: var(--color-hover); }
+  .flange-faq summary:focus-visible { outline: 2px solid var(--color-brand); outline-offset: -4px; border-radius: 5px; }
+  .flange-faq summary svg { flex: 0 0 18px; width: 18px; height: 18px; color: var(--color-brand); }
+  .flange-faq-item[open] summary svg { transform: rotate(180deg); }
+  .flange-faq-answer { padding: 0 24px 24px; }
+  .flange-faq .flange-faq-answer p, .flange-faq .flange-faq-answer li { margin: 0; color: var(--color-body); font-size: 16px; line-height: 1.7; overflow-wrap: anywhere; }
+  .flange-faq-answer ul { display: grid; gap: 8px; margin: 12px 0 0; padding-left: 20px; }
+  .flange-faq-answer li::marker { color: var(--color-brand); }
+
+  @media (max-width: 767px) {
+    .flange-faq { padding: 48px 0; }
+    .flange-faq-container { padding-inline: 16px; }
+    .flange-faq h2 { margin-bottom: 24px; font-size: var(--type-h2); }
+    .flange-faq summary { gap: 14px; padding: 18px 16px; }
+    .flange-faq-answer { padding: 0 16px 20px; }
+    .flange-faq .flange-faq-answer p, .flange-faq .flange-faq-answer li { font-size: 15px; }
+  }
+</style>

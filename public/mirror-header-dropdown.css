@@ -1,0 +1,25 @@
+.elementor-location-header .elementor-nav-menu--main .sub-menu {
+  min-width: max-content;
+}
+
+body:is(.page-id-2976, .page-id-2706, .page-id-2838, .page-id-887)
+  .elementor-42 .elementor-element.elementor-element-6d2a5a5a {
+  --display: flex;
+  --flex-direction: column;
+  --container-widget-width: calc((1 - var(--container-widget-flex-grow)) * 100%);
+  --container-widget-height: initial;
+  --container-widget-flex-grow: 0;
+  --container-widget-align-self: initial;
+  --flex-wrap-mobile: wrap;
+  --align-items: center;
+  --gap: 0px 0px;
+  --row-gap: 0px;
+  --column-gap: 0px;
+  --flex-wrap: wrap;
+  box-shadow: 0 5px 30px 0 rgb(var(--color-ink-rgb)/0.1);
+  --padding-top: 0%;
+  --padding-bottom: 0%;
+  --padding-left: 0%;
+  --padding-right: 0%;
+  --z-index: 10;
+}

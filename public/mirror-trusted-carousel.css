@@ -1,0 +1,58 @@
+.elementor-element-106ea122.mirror-logo-carousel {
+  --mirror-visible: var(--mirror-desktop, 5);
+  --mirror-gap: 55px;
+}
+
+.elementor-element-106ea122.mirror-logo-carousel .elementor-image-carousel-wrapper {
+  overflow: hidden;
+  cursor: grab;
+  touch-action: pan-y;
+}
+
+.elementor-element-106ea122.mirror-logo-carousel .elementor-image-carousel-wrapper:active {
+  cursor: grabbing;
+}
+
+.elementor-element-106ea122.mirror-logo-carousel .swiper-wrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--mirror-gap);
+  transition-property: transform;
+  transition-timing-function: ease;
+  will-change: transform;
+}
+
+.elementor-element-106ea122.mirror-logo-carousel .swiper-slide {
+  display: flex;
+  flex: 0 0 calc((100% - (var(--mirror-visible) - 1) * var(--mirror-gap)) / var(--mirror-visible));
+  align-items: center;
+  justify-content: center;
+  max-width: none;
+  user-select: none;
+}
+
+.elementor-element-106ea122.mirror-logo-carousel .swiper-slide img {
+  max-width: 100%;
+  height: auto;
+  -webkit-user-drag: none;
+}
+
+@media (max-width: 1024px) {
+  .elementor-element-106ea122.mirror-logo-carousel {
+    --mirror-visible: var(--mirror-tablet, 4);
+    --mirror-gap: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .elementor-element-106ea122.mirror-logo-carousel {
+    --mirror-visible: 2;
+    --mirror-gap: 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .elementor-element-106ea122.mirror-logo-carousel .swiper-wrapper {
+    transition-duration: 0ms !important;
+  }
+}

@@ -1,0 +1,24 @@
+﻿page,type,before,after,count
+blog/aluminium-melting-point/index.html,remove_missing_cache_script,"<script src=""/wp-content/cache/min/1/60e0c289215fe32921f1710278513b4a.js"" data-minify=""1""></script>",,1
+blog/china-humanoid-robot-companies/index.html,remove_missing_language_alternate,"<link rel=""alternate"" hreflang=""zh-TW"" href=""/zh-TW/blog/china-humanoid-robot-companies"" />",,1
+blog/china-humanoid-robot-companies/index.html,remove_missing_cache_script,"<script src=""/wp-content/cache/min/1/b2ff3122b83c58e692309e02a7276868.js"" data-minify=""1""></script>",,1
+blog/cnc-automotive/index.html,remove_missing_cache_script,"<script src=""/wp-content/cache/min/1/f694c35dfdeed2186302090c7296d130.js"" data-minify=""1""></script>",,1
+blog/cnc-heat-sink-manufacturing/index.html,remove_missing_cache_script,"<script src=""/wp-content/cache/min/1/88c7b1532480e7b32c804bf8ac5246e4.js"" data-minify=""1""></script>",,1
+blog/cnc-machining-aerospace/index.html,remove_missing_cache_script,"<script src=""/wp-content/cache/min/1/27815c7ccca887bf8dbc8489805407aa.js"" data-minify=""1""></script>",,1
+blog/cnc-machining-fillets/index.html,remove_missing_cache_script,"<script src=""/wp-content/cache/min/1/9845ebc9609e95878d3dd9a3766e4968.js"" data-minify=""1""></script>",,1
+blog/cnc-machining-for-semiconductor-industry/index.html,remove_missing_cache_script,"<script src=""/wp-content/cache/min/1/623b889a3bbfed3cf2ddd3c11a4ba1fe.js"" data-minify=""1""></script>",,1
+blog/cnc-machining-materials/index.html,remove_missing_cache_script,"<script src=""/wp-content/cache/min/1/c699c2d53d3f00a733e05d32967be6db.js"" data-minify=""1""></script>",,1
+blog/cnc-turning-and-milling/index.html,remove_missing_cache_script,"<script src=""/wp-content/cache/min/1/4b985293463a52e8fc7c0396e3f8ca8f.js"" data-minify=""1""></script>",,1
+blog/cnc-turning-and-milling-materials/index.html,remove_missing_cache_script,"<script src=""/wp-content/cache/min/1/f0ba5735d5ee27da11ca35ece03d09dc.js"" data-minify=""1""></script>",,1
+blog/cnc-vs-rapid-prototyping/index.html,remove_missing_cache_script,"<script src=""/wp-content/cache/min/1/bcb649386929eab8d7ba725ff81c6eb6.js"" data-minify=""1""></script>",,1
+blog/connector-machining/index.html,remove_missing_cache_script,"<script src=""/wp-content/cache/min/1/972caf78957a6c3f25a3d247811aaf70.js"" data-minify=""1""></script>",,1
+blog/fr4-cnc-machining/index.html,remove_missing_cache_script,"<script src=""/wp-content/cache/min/1/e80f87051463a1852ae0266cd060087f.js"" data-minify=""1""></script>",,1
+blog/oil-and-gas-machining/index.html,remove_missing_cache_script,"<script src=""/wp-content/cache/min/1/6cecdc1bc0be66f834fa88522df9bb25.js"" data-minify=""1""></script>",,1
+blog/precision-medical-machining/index.html,remove_missing_cache_script,"<script src=""/wp-content/cache/min/1/e7d0b0a2a6be854e0a520bdc199cec4c.js"" data-minify=""1""></script>",,1
+blog/sheet-metal-laser-cutter/index.html,remove_missing_cache_script,"<script src=""/wp-content/cache/min/1/7c8ffe0deee7855df5c28d472e26914a.js"" data-minify=""1""></script>",,1
+blog/swiss-machining-materials/index.html,remove_missing_cache_script,"<script src=""/wp-content/cache/min/1/a0221eb3a1b2db04965f170696e0c6bc.js"" data-minify=""1""></script>",,1
+blog/what-is-a-cnc-lathe/index.html,remove_missing_cache_script,"<script src=""/wp-content/cache/min/1/4fe5de06c51850792b095e2b9f5fd83c.js"" data-minify=""1""></script>",,1
+custom-cnc-parts/index.html,remove_missing_cache_script,"<script src=""/wp-content/cache/min/1/a2294497ea067a27bd3685a8e024dd1d.js"" data-minify=""1""></script>",,1
+industries/semiconductor/index.html,fix_protocol_relative_external,href='//cdn-reach.hostinger.com,href='https://cdn-reach.hostinger.com,1
+industries/semiconductor/index.html,remove_missing_cache_script,"<script src=""/wp-content/cache/min/1/79c997701dea299c01b7cc504ca205c5.js"" data-minify=""1""></script>",,1
+services/swiss-machining/index.html,remove_missing_cache_script,"<script src=""/wp-content/cache/min/1/caca5f51cf3de4257cb9247a4cd32d0e.js"" data-minify=""1""></script>",,1

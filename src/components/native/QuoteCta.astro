@@ -1,0 +1,41 @@
+---
+import CompactQuoteForm from "./CompactQuoteForm.astro";
+
+const {
+  id = "project-enquiry",
+  idPrefix = "project-enquiry",
+  formName = "Project Enquiry",
+  kicker = "START YOUR PROJECT",
+  title = "Tell us about your part",
+  description = "Share your drawing and requirements. We’ll review the machining route, finishing, inspection scope and delivery target.",
+  email = true,
+} = Astro.props;
+---
+
+<section class="quote-cta" id={id} aria-labelledby={`${id}-title`}>
+  <div class="quote-cta__inner">
+    <div class="quote-cta__copy">
+      <p class="quote-cta__kicker">{kicker}</p>
+      <h2 id={`${id}-title`}>{title}</h2>
+      <p class="quote-cta__description">{description}</p>
+      {email && <div class="quote-cta__email"><span>PREFER TO EMAIL?</span><a href="mailto:info@cncpioneer.com">info@cncpioneer.com <span aria-hidden="true">↗</span></a></div>}
+    </div>
+    <CompactQuoteForm idPrefix={idPrefix} formName={formName} />
+  </div>
+</section>
+
+<style>
+  .quote-cta { padding: 74px 0; color: var(--color-white); background: var(--color-brand); }
+  .quote-cta__inner { display: grid; width: min(var(--layout-content), calc(100% - 64px)); grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: 80px; margin-inline: auto; }
+  .quote-cta__copy { max-width: 470px; }
+  .quote-cta__kicker { margin: 0 0 16px; color: rgb(var(--color-white-rgb)/.78); font: 500 var(--type-label)/1.4 var(--font-mono); letter-spacing: .08em; }
+  .quote-cta h2 { margin: 0 0 20px; color: var(--color-white); font: 400 var(--type-h2)/1.16 var(--font-heading); }
+  .quote-cta__description { max-width: 590px; margin: 0; color: rgb(var(--color-white-rgb)/.9); font: 400 16px/1.7 var(--font-sans); }
+  .quote-cta__email { display: grid; gap: 7px; margin-top: 32px; padding-top: 22px; border-top: 1px solid rgb(var(--color-white-rgb)/.3); }
+  .quote-cta__email > span { color: rgb(var(--color-white-rgb)/.76); font: 500 11px/1.4 var(--font-mono); letter-spacing: .08em; }
+  .quote-cta__email a { width: fit-content; color: var(--color-white); font: 400 16px/1.5 var(--font-sans); text-decoration: none; }
+  .quote-cta__email a:hover { text-decoration: underline; text-underline-offset: 3px; }
+  .quote-cta :global(.compact-quote-form) { justify-self: end; }
+  @media (max-width: 1100px) { .quote-cta__inner { gap: 40px; } }
+  @media (max-width: 800px) { .quote-cta { padding: 58px 0; } .quote-cta__inner { width: calc(100% - 40px); grid-template-columns: minmax(0,1fr); gap: 32px; } .quote-cta__copy { max-width: 650px; } .quote-cta :global(.compact-quote-form) { justify-self: start; } }
+</style>

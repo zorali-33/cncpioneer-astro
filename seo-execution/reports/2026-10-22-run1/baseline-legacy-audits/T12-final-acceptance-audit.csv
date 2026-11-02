@@ -1,0 +1,8 @@
+﻿id,name,status,command_status,report,summary
+T04,P1 mirrored page SEO structure,fail,1,seo-migration/reports/T04-P1-current-seo-audit.csv,"node:fs:440 return binding.readFileUtf8(path, stringToFlags(options.flag)); ^ Error: ENOENT: no such file or directory, open 'C:\Users\HP\Documents\Codex\2026-09-28\dom-css-1-1\outputs\cncpioneer-astro\src\mirrored-pages\custom-cnc-parts\ev"
+T06,Generated archive pagination SEO,fail,0,seo-migration/reports/T06-generated-pagination-audit.csv,44 rows audited; problem rows: 33
+T08,P2 mirrored page link technical,pass,0,seo-migration/reports/T08-P2-current-link-audit.csv,current findings: 0
+T10,P2/P3 closure status,fail,0,seo-migration/reports/T10-P2-P3-closure-audit.csv,resolved: 39; needs_review: 6; external_reference_ok: 28
+T11,Robots and sitemap indexing assets,pass,0,seo-migration/reports/T11-site-indexing-assets.csv,sitemap URLs: 352; included: 352; excluded: 72
+T13,Dist internal links and resources,fail,1,seo-migration/reports/T13-dist-internal-link-audit.csv,"{ ""pagesScanned"": 424, ""checkedReferences"": 28573, ""missingReferences"": 320, ""byKind"": { ""page_or_file"": 320 } }"
+T14,Dist SEO integrity,fail,1,seo-migration/reports/T14-dist-seo-integrity-audit.csv,"{ ""pagesAudited"": 424, ""indexable"": 352, ""noindex"": 72, ""sitemapUrls"": 352, ""problemPages"": 202, ""problems"": { ""title_too_short"": 4, ""missing_meta_description"": 80, ""h1_count_not_one"": 63, ""missing_og_url"": 63, ""title_too_long"": 14, ""meta_d"

@@ -1,0 +1,202 @@
+[
+  {
+    "slug": "6061-aluminum-cnc-machining",
+    "scoped": false,
+    "unchanged": true
+  },
+  {
+    "slug": "6061-t6-aluminum-cnc-machining",
+    "scoped": false,
+    "unchanged": true
+  },
+  {
+    "slug": "abs-cnc-machining",
+    "scoped": false,
+    "unchanged": true
+  },
+  {
+    "slug": "acrylic-cnc-machining",
+    "scoped": false,
+    "unchanged": true
+  },
+  {
+    "slug": "alloy-steel-cnc-machining",
+    "scoped": false,
+    "unchanged": true
+  },
+  {
+    "slug": "aluminum-cnc-machining",
+    "scoped": false,
+    "unchanged": true
+  },
+  {
+    "slug": "aluminum-cnc-turning-and-milling",
+    "scoped": false,
+    "unchanged": true
+  },
+  {
+    "slug": "aluminum-swiss-machining",
+    "scoped": false,
+    "unchanged": true
+  },
+  {
+    "slug": "brass-cnc-machining",
+    "scoped": true,
+    "unchanged": false
+  },
+  {
+    "slug": "brass-swiss-machining",
+    "scoped": false,
+    "unchanged": true
+  },
+  {
+    "slug": "bronze-cnc-machining",
+    "scoped": true,
+    "unchanged": false
+  },
+  {
+    "slug": "carbon-steel-cnc-machining",
+    "scoped": false,
+    "unchanged": true
+  },
+  {
+    "slug": "copper-cnc-machining",
+    "scoped": false,
+    "unchanged": false
+  },
+  {
+    "slug": "hdpe-cnc-machining",
+    "scoped": false,
+    "unchanged": true
+  },
+  {
+    "slug": "inconel-600-cnc-machining",
+    "scoped": false,
+    "unchanged": true
+  },
+  {
+    "slug": "inconel-625-cnc-machining",
+    "scoped": false,
+    "unchanged": true
+  },
+  {
+    "slug": "inconel-718-cnc-machining",
+    "scoped": false,
+    "unchanged": true
+  },
+  {
+    "slug": "inconel-cnc-machining",
+    "scoped": false,
+    "unchanged": true
+  },
+  {
+    "slug": "invar-cnc-machining",
+    "scoped": false,
+    "unchanged": true
+  },
+  {
+    "slug": "kovar-cnc-machining",
+    "scoped": false,
+    "unchanged": false
+  },
+  {
+    "slug": "magnesium-cnc-machining",
+    "scoped": false,
+    "unchanged": true
+  },
+  {
+    "slug": "metal-cnc-machining",
+    "scoped": false,
+    "unchanged": true
+  },
+  {
+    "slug": "plastic-cnc-machining",
+    "scoped": false,
+    "unchanged": true
+  },
+  {
+    "slug": "nickel-swiss-machining",
+    "scoped": false,
+    "unchanged": true
+  },
+  {
+    "slug": "nitinol-cnc-machining",
+    "scoped": true,
+    "unchanged": false
+  },
+  {
+    "slug": "nylon-66-cnc-machining",
+    "scoped": false,
+    "unchanged": true
+  },
+  {
+    "slug": "nylon-cnc-machining",
+    "scoped": true,
+    "unchanged": false
+  },
+  {
+    "slug": "peek-cnc-machining",
+    "scoped": false,
+    "unchanged": true
+  },
+  {
+    "slug": "peek-cnc-turning-and-milling",
+    "scoped": false,
+    "unchanged": true
+  },
+  {
+    "slug": "peek-swiss-machining",
+    "scoped": false,
+    "unchanged": true
+  },
+  {
+    "slug": "polycarbonate-cnc-machining",
+    "scoped": false,
+    "unchanged": true
+  },
+  {
+    "slug": "polypropylene-cnc-machining",
+    "scoped": false,
+    "unchanged": true
+  },
+  {
+    "slug": "pom-cnc-machining",
+    "scoped": false,
+    "unchanged": true
+  },
+  {
+    "slug": "ptfe-cnc-machining",
+    "scoped": false,
+    "unchanged": true
+  },
+  {
+    "slug": "stainless-steel-cnc-machining",
+    "scoped": true,
+    "unchanged": false
+  },
+  {
+    "slug": "stainless-steel-cnc-turning-and-milling",
+    "scoped": false,
+    "unchanged": true
+  },
+  {
+    "slug": "stainless-steel-swiss-machining",
+    "scoped": false,
+    "unchanged": true
+  },
+  {
+    "slug": "titanium-cnc-machining",
+    "scoped": false,
+    "unchanged": true
+  },
+  {
+    "slug": "titanium-swiss-machining",
+    "scoped": false,
+    "unchanged": true
+  },
+  {
+    "slug": "ultem-cnc-machining",
+    "scoped": false,
+    "unchanged": true
+  }
+]

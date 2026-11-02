@@ -1,0 +1,410 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const seo = {
+  title: "Request CNC machining quotes | CNCPioneer",
+  description:
+    "Request a CNC machining quote from CNCPioneer. Share your part drawings, material, quantity, surface finish and inspection requirements for review.",
+  ogDescription:
+    "Request a CNC machining quote from CNCPioneer. Share your part drawings, material, quantity, surface finish and inspection requirements for review.",
+  canonical: "/cnc-machining-quote",
+  includeDescription: true,
+  includeOgImage: false,
+  modifiedTime: "2026-04-14T09:17:41+00:00",
+  twitterLabel1: "Est. reading time",
+  twitterData1: "2 minutes",
+};
+
+const contacts = [
+  {
+    heading: "Visit us",
+    lines: ["Room 1202B54, 12th Floor, Tairan Cangsong Building, No. 25,", "Futian District, Shenzhen, China"],
+  },
+  {
+    heading: "Email Us",
+    lines: ["info@cncpioneer.com"],
+  },
+  {
+    heading: "Call Us",
+    lines: ["+8613725562746"],
+  },
+  {
+    heading: "Business Hours",
+    lines: ["24 hours"],
+  },
+];
+
+const countries = [
+  "Select Country",
+  "United States",
+  "United Kingdom",
+  "Canada",
+  "Afghanistan",
+  "Albania",
+  "Algeria",
+  "Andorra",
+  "Angola",
+  "Anguilla",
+  "Antigua and Barbuda",
+  "Argentina",
+  "Armenia",
+  "Aruba",
+  "Australia",
+  "Austria",
+  "Azerbaijan",
+  "Bahamas, The",
+  "Bahrain",
+  "Bangladesh",
+  "Barbados",
+  "Belarus",
+  "Belgium",
+  "Belize",
+  "Benin",
+  "Bermuda",
+  "Bhutan",
+  "Bolivia",
+  "Bosnia and Herzegovina",
+  "Botswana",
+  "Brazil",
+  "Brunei",
+  "Bulgaria",
+  "Burkina Faso",
+  "Burundi",
+  "Cambodia",
+  "Cameroon",
+  "Cape Verde",
+  "Central African Republic",
+  "Chad",
+  "Chile",
+  "China",
+  "Colombia",
+  "Comoros",
+  "Congo (Brazzaville)",
+  "Congo (Kinshasa)",
+  "Costa Rica",
+  "Croatia",
+  "Cuba",
+  "Cyprus",
+  "Czech Republic",
+  "Denmark",
+  "Djibouti",
+  "Dominica",
+  "Dominican Republic",
+  "Ecuador",
+  "Egypt",
+  "El Salvador",
+  "Equatorial Guinea",
+  "Eritrea",
+  "Estonia",
+  "Ethiopia",
+  "Faroe Islands",
+  "Fiji",
+  "Finland",
+  "France",
+  "Gabon",
+  "Gambia, The",
+  "Georgia",
+  "Germany",
+  "Ghana",
+  "Greece",
+  "Grenada",
+  "Guam",
+  "Guatemala",
+  "Guinea",
+  "Guinea-Bissau",
+  "Guyana",
+  "Haiti",
+  "Holy See",
+  "Honduras",
+  "Hong Kong",
+  "Hungary",
+  "Iceland",
+  "India",
+  "Indonesia",
+  "Iran",
+  "Iraq",
+  "Ireland",
+  "Israel",
+  "Italy",
+  "Jamaica",
+  "Japan",
+  "Jordan",
+  "Kazakhstan",
+  "Kenya",
+  "Kiribati",
+  "Korea, North",
+  "Korea, South",
+  "Kuwait",
+  "Kyrgyzstan",
+  "Laos",
+  "Latvia",
+  "Lebanon",
+  "Lesotho",
+  "Liberia",
+  "Libya",
+  "Liechtenstein",
+  "Lithuania",
+  "Luxembourg",
+  "Macau",
+  "Macedonia, FYR",
+  "Madagascar",
+  "Malawi",
+  "Malaysia",
+  "Maldives",
+  "Mali",
+  "Malta",
+  "Marshall Islands",
+  "Mauritania",
+  "Mauritius",
+  "Mexico",
+  "Micronesia, Federated States of",
+  "Moldova",
+  "Monaco",
+  "Mongolia",
+  "Montenegro",
+  "Morocco",
+  "Mozambique",
+  "Myanmar",
+  "Namibia",
+  "Nauru",
+  "Nepal",
+  "Netherlands",
+  "Netherlands Antilles",
+  "New Zealand",
+  "Nicaragua",
+  "Niger",
+  "Nigeria",
+  "Norway",
+  "Oman",
+  "Pakistan",
+  "Palau",
+  "Panama",
+  "Papua New Guinea",
+  "Paraguay",
+  "Peru",
+  "Philippines",
+  "Poland",
+  "Portugal",
+  "Qatar",
+  "Romania",
+  "Russia",
+  "Rwanda",
+  "Saint Kitts and Nevis",
+  "Saint Lucia",
+  "Saint Vincent and the Grenadines",
+  "Samoa",
+  "San Marino",
+  "Sao Tome and Principe",
+  "Saudi Arabia",
+  "Senegal",
+  "Serbia",
+  "Seychelles",
+  "Sierra Leone",
+  "Singapore",
+  "Slovakia",
+  "Slovenia",
+  "Solomon Islands",
+  "Somalia",
+  "South Africa",
+  "Spain",
+  "Sri Lanka",
+  "Sudan",
+  "Suriname",
+  "Swaziland",
+  "Sweden",
+  "Switzerland",
+  "Syria",
+  "Taiwan",
+  "Tajikistan",
+  "Tanzania",
+  "Thailand",
+  "Togo",
+  "Tonga",
+  "Trinidad and Tobago",
+  "Tunisia",
+  "Turkey",
+  "Turkmenistan",
+  "Tuvalu",
+  "Uganda",
+  "Ukraine",
+  "United Arab Emirates",
+  "Uruguay",
+  "Uzbekistan",
+  "Vanuatu",
+  "Venezuela",
+  "Vietnam",
+  "Virgin Islands",
+  "Yemen",
+  "Zambia",
+  "Zimbabwe",
+  "Other",
+];
+---
+
+<BaseLayout seo={seo}>
+  <section class="quote-hero" aria-labelledby="quote-title">
+    <div class="quote-hero__inner">
+      <nav class="quote-breadcrumbs" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span aria-hidden="true">/</span>
+        <span>Request CNC machining quotes</span>
+      </nav>
+      <p class="quote-hero__eyebrow">PROJECT ENQUIRY</p>
+      <h1 id="quote-title">Request a CNC Machining Quote</h1>
+      <p class="quote-hero__intro">Share your drawing and project requirements. We’ll review the part, process, material and inspection scope for your enquiry.</p>
+    </div>
+  </section>
+
+  <section class="quote-content" aria-label="Request CNC machining quote">
+    <div class="quote-content__inner">
+      <aside class="quote-contact" aria-label="CNCPioneer contact details">
+        <div class="quote-contact__details">
+          <h2>Contact Directly</h2>
+          {contacts.map((contact) => (
+            <section class="quote-contact__item">
+              <span class="quote-contact__icon" aria-hidden="true">
+                {contact.heading === "Visit us" ? (
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+                ) : contact.heading === "Email Us" ? (
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>
+                ) : contact.heading === "Call Us" ? (
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M21 16.5v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 1.1 3.8 2 2 0 0 1 3.1 1.6h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L7 9.6a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2Z"/></svg>
+                ) : (
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+                )}
+              </span>
+              <div><h3>{contact.heading}</h3><p>{contact.lines.map((line) => <><span>{line}</span><br /></>)}</p></div>
+            </section>
+          ))}
+        </div>
+      </aside>
+
+      <form class="quote-form" action="/api/quote.php" method="post" enctype="multipart/form-data" name="Contact Form" aria-label="Contact Form" data-quote-form>
+        <div class="quote-form__heading">
+          <div><h2>Project details</h2></div>
+          <p><span aria-hidden="true">*</span> Required fields</p>
+        </div>
+        <div class="quote-form__honeypot" aria-hidden="true">
+          <label for="quote-company-website">Leave this field empty</label>
+          <input id="quote-company-website" name="company_website" type="text" tabindex="-1" autocomplete="off" />
+        </div>
+
+        <div class="quote-form__row">
+          <div class="quote-field"><label for="form-field-name">First name <span>*</span></label><input id="form-field-name" type="text" name="first_name" placeholder="e.g. Alex" maxlength="80" autocomplete="given-name" required /></div>
+          <div class="quote-field"><label for="form-field-last-name">Last name <span>*</span></label><input id="form-field-last-name" type="text" name="last_name" placeholder="e.g. Chen" maxlength="80" autocomplete="family-name" required /></div>
+        </div>
+
+        <div class="quote-form__row">
+          <div class="quote-field"><label for="form-field-email">Work email <span>*</span></label><input id="form-field-email" type="email" name="email" placeholder="name@company.com" maxlength="254" autocomplete="email" required /></div>
+          <div class="quote-field"><label for="form-field-phone">Phone number <span>(optional)</span></label><input id="form-field-phone" type="tel" name="phone" placeholder="Include country code" maxlength="40" autocomplete="tel" /></div>
+        </div>
+
+        <div class="quote-field"><label for="form-field-country">Country / region <span>(optional)</span></label><select id="form-field-country" name="country" autocomplete="country-name">
+          {countries.map((country, index) => <option value={index === 0 ? "" : country} selected={index === 0} disabled={index === 0}>{country}</option>)}
+        </select></div>
+
+        <div class="quote-form__project">
+          <label for="form-field-message">Project requirements <span>*</span></label>
+          <textarea
+            id="form-field-message"
+            name="message"
+            maxlength="12000"
+            rows="4"
+            placeholder={`Material and grade:
+Quantity:
+Surface finish:
+Critical dimensions and inspection:
+Target delivery:`}
+            required
+          ></textarea>
+        </div>
+
+        <div class="quote-form__attachment">
+          <label for="form-field-file">Drawing or CAD file <span>*</span></label>
+          <input id="form-field-file" type="file" name="drawing" accept=".pdf,.step,.stp,.iges,.igs,.stl,.dxf,.dwg,.zip" aria-describedby="quote-file-help" required />
+          <p id="quote-file-help" class="quote-form__hint">PDF, STEP, STP, IGES, IGS, STL, DXF, DWG or ZIP · Maximum 50 MB</p>
+        </div>
+
+        <button type="submit"><span data-submit-label>Send Quote Request</span><span aria-hidden="true">→</span></button>
+        <p class="quote-form__status" data-quote-status role="status" aria-live="polite" tabindex="-1"></p>
+        <noscript><p>Please email your enquiry and drawing to <a href="mailto:info@cncpioneer.com">info@cncpioneer.com</a> if you cannot use this form.</p></noscript>
+      </form>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  import "../scripts/quote-form.js";
+</script>
+
+<style>
+  .quote-hero { background-color: var(--color-brand); background-image: none; }
+  .quote-hero__inner { width: min(var(--layout-content), calc(100% - 48px)); margin-inline: auto; padding: 0 0 46px; }
+  .quote-breadcrumbs { display: flex; align-items: center; gap: 10px; width: 100vw; margin: 0 0 34px calc(50% - 50vw); padding: 10px max(24px, calc((100vw - var(--layout-content)) / 2)); color: var(--color-body); background: var(--color-surface); font-size: var(--type-small); line-height: 1.5; }
+  .quote-breadcrumbs a { color: var(--color-body); text-decoration: none; }
+  .quote-breadcrumbs > span:last-child { color: var(--color-ink); }
+  .quote-breadcrumbs a:hover { text-decoration: underline; text-underline-offset: 3px; }
+  .quote-hero__eyebrow { margin: 0 0 10px; color: var(--color-white); font-family: var(--font-mono); font-size: var(--type-mono); font-weight: 500; letter-spacing: .06em; opacity: .88; text-align: center; }
+  .quote-hero h1 { max-width: 850px; margin: 0 auto; color: var(--color-white); font-family: var(--font-heading); font-size: var(--type-h1); font-weight: 400; line-height: 1.12; text-align: center; }
+  .quote-hero__intro { max-width: 760px; margin: 16px auto 0; color: var(--color-white); font-size: var(--type-body); line-height: 1.6; opacity: .92; text-align: center; }
+  .quote-content { padding: 44px 0 58px; background: var(--color-white); }
+  .quote-content__inner { width: min(1120px, calc(100% - 48px)); margin: 0 auto; display: grid; grid-template-columns: minmax(210px, .64fr) minmax(0, 1.36fr); align-items: start; gap: 34px; }
+  .quote-contact { display: flex; flex-direction: column; padding: 14px 0 0; }
+  .quote-contact__details { display: grid; gap: 18px; }
+  .quote-contact__details > h2 { width: max-content; max-width: 100%; margin: 0 0 4px -18px; color: var(--color-ink); font-family: var(--font-heading); font-size: var(--type-h4); font-weight: 500; line-height: 1.25; white-space: nowrap; }
+  .quote-contact__item { display: grid; grid-template-columns: 30px minmax(0,1fr); align-items: center; gap: 12px; }
+  .quote-contact__icon { display: grid; place-items: center; width: 30px; height: 30px; color: var(--color-brand); }
+  .quote-contact__icon svg { width: 21px; height: 21px; }
+  .quote-contact__item h3 { margin: 0 0 4px; color: var(--color-ink); font-size: var(--type-small); font-weight: 500; }
+  .quote-contact__item p { margin: 0; color: var(--color-body); font-size: var(--type-caption); line-height: 1.55; overflow-wrap: anywhere; }
+  .quote-form { position: relative; justify-self: end; width: 100%; max-width: 640px; display: grid; gap: 13px; padding: 20px; background: rgb(var(--color-brand-rgb) / .035); border: 1px solid rgb(var(--color-brand-rgb) / .18); border-radius: 4px; }
+  .quote-form__heading { display: flex; justify-content: space-between; align-items: end; gap: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--color-border); }
+  .quote-form__heading h2 { margin: 0; color: var(--color-ink); font-family: var(--font-heading); font-size: var(--type-h4); font-weight: 500; }
+  .quote-form__heading > p { margin: 0; color: var(--color-body); font-size: var(--type-caption); white-space: nowrap; }
+  .quote-form__heading > p span,.quote-field label span,.quote-form__project label span,.quote-form__attachment > label span { color: var(--color-brand); }
+  .quote-form__honeypot { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+  .quote-form__row { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 12px; }
+  .quote-field { display: grid; gap: 4px; min-width: 0; }
+  .quote-field label,.quote-form__project > label,.quote-form__attachment > label { color: var(--color-ink); font-size: var(--type-small); font-weight: 500; }
+  .quote-form input:not([type="file"]),.quote-form select,.quote-form textarea { box-sizing: border-box; width: 100%; min-height: 40px; padding: 8px 10px; border: 1px solid var(--color-border); border-radius: 3px; background: var(--color-white); color: var(--color-ink); font-family: var(--font-sans); font-size: var(--type-small); font-weight: 400; line-height: 1.4; }
+  .quote-form input::placeholder,.quote-form textarea::placeholder { color: var(--color-body); opacity: .72; }
+  .quote-form :is(input,select,textarea):focus-visible { outline: 2px solid var(--color-brand); outline-offset: 1px; border-color: var(--color-brand); }
+  .quote-form select { appearance: auto; }
+  .quote-form__project { display: grid; gap: 5px; }
+  .quote-form textarea { min-height: 96px; resize: vertical; }
+  .quote-form .quote-form__hint { margin: 0; color: var(--color-body); font-size: var(--type-caption); line-height: 1.55; }
+  .quote-form__attachment { display: grid; gap: 6px; }
+  .quote-form input[type="file"] { box-sizing: border-box; width: 100%; padding: 7px; border: 1px dashed var(--color-border); border-radius: 3px; background: var(--color-white); color: var(--color-body); font-family: var(--font-sans); font-size: var(--type-caption); }
+  .quote-form input[type="file"]::file-selector-button { margin-right: 12px; padding: 8px 12px; border: 1px solid var(--color-brand); border-radius: 2px; background: var(--color-white); color: var(--color-brand); font: inherit; font-weight: 500; cursor: pointer; }
+  .quote-form button { justify-self: start; display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 42px; padding: 0 16px; border: 1px solid var(--color-brand); border-radius: 2px; background: var(--color-brand); color: var(--color-white); cursor: pointer; font-family: var(--font-sans); font-size: var(--type-small); font-weight: 500; transition: background-color .18s ease; }
+  .quote-form button:hover,.quote-form button:focus-visible { background: var(--color-hover); outline: 2px solid var(--color-brand); outline-offset: 2px; }
+  .quote-form button:disabled { opacity: .65; cursor: wait; }
+  .quote-form__status { margin: 0; font-size: var(--type-small); line-height: 1.6; }
+  .quote-form__status[data-state="error"] { color: var(--color-ink); }
+  .quote-form__status[data-state="success"] { color: var(--color-brand); }
+  .quote-form noscript p { margin: 0; font-size: var(--type-small); line-height: 1.5; }
+  .quote-form noscript a { color: var(--color-brand); }
+  .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+  @media (max-width: 960px) {
+    .quote-content__inner { grid-template-columns: 1fr; gap: 28px; }
+    .quote-contact { display: flex; padding-top: 0; }
+    .quote-contact__details { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 18px; }
+    .quote-contact__details > h2 { grid-column: 1 / -1; }
+    .quote-form { justify-self: center; }
+  }
+  @media (max-width: 640px) {
+    .quote-hero__inner,.quote-content__inner { width: min(100% - 32px,1120px); }
+    .quote-hero__inner { padding: 0 0 36px; }
+    .quote-breadcrumbs { margin-bottom: 28px; padding-inline: 16px; font-size: var(--type-caption); }
+    .quote-hero h1 { font-size: var(--type-h1); }
+    .quote-hero__intro { font-size: var(--type-body-small); }
+    .quote-content { padding: 30px 0 44px; }
+    .quote-contact { display: flex; }
+    .quote-contact__details { display: grid; grid-template-columns: 1fr; gap: 14px; }
+    .quote-contact__details > h2 { grid-column: auto; }
+    .quote-form { gap: 14px; padding: 18px 14px; }
+    .quote-form__heading { align-items: flex-start; flex-direction: column; gap: 8px; }
+    .quote-form__row { grid-template-columns: 1fr; gap: 16px; }
+    .quote-form button { width: 100%; }
+  }
+</style>

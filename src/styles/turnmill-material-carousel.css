@@ -1,0 +1,73 @@
+.turnmill-materials .turnmill-material-link {
+  display: block;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.turnmill-materials .turnmill-material-link figure { margin: 0; }
+
+.turnmill-materials .turnmill-material-link figcaption {
+  color: var(--color-brand);
+  font-style: normal;
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.turnmill-materials .turnmill-material-link__arrow {
+  display: inline-block;
+  margin-left: 7px;
+}
+
+.turnmill-materials .turnmill-material-link:hover figcaption { color: var(--color-hover); }
+
+.turnmill-materials .turnmill-material-link:focus-visible {
+  outline: 2px solid var(--color-brand);
+  outline-offset: -4px;
+}
+
+.turnmill-materials .turnmill-carousel-btn {
+  display: grid;
+  place-items: center;
+  top: 150px;
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  background: var(--color-white);
+  color: var(--color-brand);
+  box-shadow: 0 3px 12px rgb(var(--color-ink-rgb)/0.1);
+  transform: translateY(-50%);
+}
+
+.turnmill-materials .turnmill-carousel-btn--prev { left: 0; }
+.turnmill-materials .turnmill-carousel-btn--next { right: 0; }
+
+.turnmill-materials .turnmill-carousel-btn svg {
+  display: block;
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.turnmill-materials .turnmill-carousel-btn:hover {
+  border-color: var(--color-hover);
+  background: var(--color-hover);
+  color: var(--color-white);
+}
+
+.turnmill-materials .turnmill-carousel-btn:focus-visible {
+  outline: 3px solid var(--color-border);
+  outline-offset: 3px;
+}
+
+.turnmill-materials .turnmill-carousel-btn:disabled {
+  opacity: .4;
+  box-shadow: none;
+  cursor: default;
+}

@@ -1,0 +1,132 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import FaqList from "../../components/native/FaqList.astro";
+import QuoteCta from "../../components/native/QuoteCta.astro";
+import "../../styles/three-axis-service.css";
+
+const seo = {
+  title: "CNC Turning and Milling Services | CNCPioneer",
+  description: "CNC turn-mill machining for precision shafts, valve bodies and fittings. Typical tolerances to ±0.01 mm and 5–7 day lead times. Send a drawing for review.",
+  canonical: "/services/cnc-turning-and-milling",
+  image: "/assets/images/aluminum-cnc-turning-and-milling-banner.webp"
+};
+
+const quote = "/cnc-machining-quote";
+const parts = [
+  { name: "Semiconductor & Medical Parts", image: "/assets/images/turnmill-semiconductor-medical-parts.webp", alt: "Precision metal components for semiconductor and medical applications, photographed in the company profile", detail: "Compact precision components with turned interfaces, bores and machined faces." },
+  { name: "Cylinder Components", image: "/assets/images/turnmill-cylinder-components.webp", alt: "Machined cylinder components shown in the company profile", detail: "Cylindrical parts with concentric features, shoulders and machined end faces." },
+  { name: "Control Valve Screws", image: "/assets/images/turnmill-control-valve-screws.webp", alt: "Control valve screws photographed in the company profile", detail: "Turned screw features combined with flats and other details defined by the drawing." }
+];
+
+const faqs = [
+  { question: "What part size can you machine?", answer: "The listed Mazak QTC100MY L/500 equipment indicates a typical envelope of up to about Ø300 mm diameter and 500 mm turning length, depending on the selected machine, workholding and part geometry. Send the drawing to confirm the usable capacity for your part." },
+  { question: "What tolerance can CNC turning and milling hold?", answer: "For general features, use ±0.01 mm as a typical starting point. Selected features may be reviewed for ±0.005 mm where material, geometry, setup stability and inspection method support it. The quote confirms achievable tolerances feature by feature; tighter callouts should be identified on the drawing." },
+  { question: "Can all turned and milled features be completed in one setup?", answer: "Not always. A turn-mill machine can combine operations where tool access and workholding allow, but some parts need a second setup or a separate finishing operation. We review datums, gripping surfaces, feature access and critical relationships before confirming the route." },
+  { question: "What is the lead time?", answer: "The typical lead time is 5–7 days after drawing and order requirements are confirmed. The quoted schedule is confirmed for the specific material, quantity, finishing and inspection scope." },
+  { question: "Which materials and finishes can I request?", answer: "Listed materials include stainless steel, aluminum alloys, copper alloys, carbon steel, engineering plastics, titanium and Inconel. Available finishing options include electroplating, heat treatment, anodizing, honing, passivation and electropolishing. Confirm the grade and finish on your enquiry so availability and dimensional impact can be reviewed." },
+  { question: "What should I send for a quote?", answer: "Send the latest 2D drawing and, if available, a 3D model. Include drawing revision, material grade, order quantity, critical dimensions and datums, surface finish, inspection records and target date." }
+];
+---
+
+<BaseLayout seo={seo}>
+  <div class="three-axis turnmill-page">
+    <section class="ta-hero service-hero" aria-labelledby="turnmill-heading">
+      <div class="ta-shell">
+        <div class="ta-breadcrumb-wrap"><nav class="ta-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/services">Services</a><span aria-hidden="true">/</span><span aria-current="page">CNC Turning and Milling</span></nav></div>
+        <div class="ta-hero-grid">
+          <div class="ta-hero-copy">
+            <p class="ta-kicker">CNC TURN-MILL MACHINING</p>
+            <h1 id="turnmill-heading">CNC Turning and<br />Milling Services</h1>
+            <p class="ta-hero-body">For parts that combine turned diameters, bores or faces with milled features. We review your drawing, critical dimensions and order requirements, then confirm a practical process, inspection plan and delivery schedule.</p>
+            <div class="ta-actions"><a class="ta-button" href={quote}>Request a Quote <span aria-hidden="true">↗</span></a><a class="ta-button ta-button-outline" href="#parts">Explore Part Types <span aria-hidden="true">↓</span></a></div>
+            <ul class="ta-hero-points"><li>18 Mazak turn-mill machines listed</li><li>5–7 day typical lead time</li><li>Drawing-based inspection planning</li></ul>
+          </div>
+          <figure class="ta-hero-visual"><img src="/assets/images/aluminum-cnc-turning-and-milling-banner.webp" width="1280" height="760" alt="CNC turning and milling production for precision components" loading="eager" fetchpriority="high" /><figcaption>Turned and milled features planned around your part requirements</figcaption></figure>
+        </div>
+        <dl class="ta-hero-specs"><div><dt>Typical Part Envelope</dt><dd>Up to Ø300 × 500 mm*</dd></div><div><dt>General Tolerance</dt><dd>±0.01 mm*</dd></div><div><dt>Selected Features</dt><dd>To ±0.005 mm*</dd></div><div><dt>Typical Lead Time</dt><dd>5–7 days</dd></div></dl>
+        <p class="ta-hero-spec-note">* Typical limits depend on machine selection, material, geometry, setup and inspection method. Confirm against the drawing.</p>
+      </div>
+    </section>
+
+    <nav class="ta-section-nav" aria-label="On this page"><div class="ta-shell ta-section-nav-inner"><a href="#parts">Part Types</a><a href="#materials">Materials & Finishing</a><a href="#quality">Inspection</a><a href="#faq">FAQ</a></div></nav>
+
+    <section class="ta-section ta-surface" id="parts" aria-labelledby="parts-title"><div class="ta-shell">
+      <div class="ta-section-heading"><div><p class="ta-kicker">01 / PART TYPES</p><h2 id="parts-title">Parts That Combine Turning and Milling</h2></div><p>Examples reflect component families listed in the company profile. Each job is reviewed against its own drawing, quantity and application requirements.</p></div>
+      <div class="ta-part-grid">{parts.map((part) => <article class="ta-part"><div class="ta-part-photo"><img src={part.image} alt={part.alt} width="1280" height="855" loading="lazy" decoding="async" /></div><div class="ta-part-content"><p class="ta-kicker">TURN-MILL APPLICATION</p><h3>{part.name}</h3><p>{part.detail}</p></div></article>)}</div>
+    </div></section>
+
+    <section id="materials" class="ta-section ta-redesigned ta-surface" aria-labelledby="materials-title"><div class="ta-shell">
+      <div class="ta-section-heading"><div><p class="ta-kicker">02 / MATERIALS & FINISHING</p><h2 id="materials-title">Material and Finish Options</h2></div><p>Material grade and surface treatment can affect cutting behavior, dimensions and delivery. Include them in the enquiry so the quote covers the full requirement.</p></div>
+      <div class="turnmill-materials-grid"><div><h3>Materials listed</h3><ul><li>Stainless steel</li><li>Aluminum alloys</li><li>Copper alloys</li><li>Carbon steel</li><li>Engineering plastics</li><li>Titanium and Inconel</li></ul></div><div><h3>Finishing options listed</h3><ul><li>Electroplating</li><li>Heat treatment</li><li>Anodizing</li><li>Honing</li><li>Passivation</li><li>Electropolishing</li></ul></div></div>
+      <p class="caption">Availability and processing route are confirmed per material, finish, quantity and dimensional requirements.</p>
+    </div></section>
+
+    <section id="quality" class="ta-section ta-shell" aria-labelledby="quality-title"><div class="ta-section-heading"><div><p class="ta-kicker">03 / INSPECTION & DELIVERY</p><h2 id="quality-title">Inspection Planned Around Critical Features</h2></div><p>Inspection equipment listed in the company materials includes CMM, optical measurement, a profile measuring instrument and height gauges. The report scope is agreed with your drawing and order.</p></div>
+      <div class="turnmill-quality-grid"><figure><img src="/assets/images/headwayer-quality-optical-measurement.webp" width="800" height="600" alt="Optical measurement equipment in the inspection area shown in the company profile" loading="lazy" /><figcaption>Optical measurement equipment shown in the company profile</figcaption></figure><div class="turnmill-delivery-panel"><span class="turnmill-range-label">TYPICAL LEAD TIME</span><strong>5–7 days</strong><p>Lead time is confirmed with the order after reviewing material availability, quantity, finishing and inspection requirements.</p><a class="ta-text-link" href={quote}>Confirm Timing for Your Part <span aria-hidden="true">↗</span></a></div></div>
+    </section>
+
+    <section id="faq" class="ta-section ta-redesigned ta-surface ta-faq" aria-labelledby="faq-title"><div class="ta-shell"><div class="ta-heading-centered"><h2 id="faq-title">CNC Turning and Milling FAQ</h2><p>Quick answers about part size, tolerances, process selection and quotation details.</p></div><div class="ta-faq-list">{faqs.map((faq) => <details><summary>{faq.question}<span aria-hidden="true">+</span></summary><div class="ta-faq-answer"><p>{faq.answer}</p></div></details>)}</div></div></section>
+
+    <QuoteCta id="turnmill-quote" idPrefix="turnmill-quote-form" formName="CNC Turning and Milling Quote" kicker="START WITH YOUR DRAWING" title="Get a Turn-Mill Quote Built Around Your Part" description="Share the geometry, material, quantity, critical features and delivery target. We will review feasibility, finishing, inspection and the production schedule together." />
+  </div>
+</BaseLayout>
+
+<style is:global>
+  .turnmill-page .turnmill-qualification { margin: -12px 0 24px; color: var(--color-body); }
+  .turnmill-page .turnmill-range-label { display:block; margin-bottom:16px; color:var(--color-brand); font-family:var(--font-mono); font-size:var(--type-mono); font-weight:500; letter-spacing:.04em; }
+  .turnmill-page .ta-hero-spec-note { margin:12px 0 0; color:var(--color-body); font-size:var(--type-caption); }
+  .turnmill-page #parts .ta-section-heading { margin-bottom:36px; }
+  .turnmill-page .ta-part-grid { grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr); grid-template-rows:repeat(2,minmax(220px,1fr)); gap:20px; align-items:stretch; }
+  .turnmill-page .ta-part { overflow:hidden; border:1px solid var(--color-border); transition:border-color .2s ease, transform .2s ease; }
+  .turnmill-page .ta-part:hover { border-color:var(--color-brand); transform:translateY(-2px); }
+  .turnmill-page .ta-part:first-child { grid-row:1 / span 2; display:grid; grid-template-rows:minmax(0,1fr) auto; }
+  .turnmill-page .ta-part-photo { background:var(--color-surface); }
+  .turnmill-page .ta-part-photo img { display:block; width:100%; height:100%; min-height:210px; aspect-ratio:4 / 3; object-fit:cover; }
+  .turnmill-page .ta-part:first-child .ta-part-photo img { min-height:300px; }
+  .turnmill-page .ta-part:not(:first-child) { display:grid; grid-template-columns:minmax(150px,.72fr) minmax(0,1fr); align-items:stretch; }
+  .turnmill-page .ta-part:not(:first-child) .ta-part-photo img { min-height:100%; aspect-ratio:1 / 1; }
+  .turnmill-page .ta-part-content { padding:24px; }
+  .turnmill-page .ta-part-content > p:not(.ta-kicker) { min-height:0; margin-top:12px; }
+  .turnmill-page .ta-part h3 { margin-top:10px; }
+  .turnmill-materials-grid { display:grid; grid-template-columns:1fr 1fr; gap:48px; }
+  .turnmill-materials-grid > div { padding:28px 32px; background:var(--color-white); border:1px solid var(--color-border); }
+  .turnmill-materials-grid h3 { margin:0 0 18px; color:var(--color-ink); font-family:var(--font-heading); font-size:var(--type-h3); font-weight:500; }
+  .turnmill-materials-grid ul { display:grid; grid-template-columns:1fr 1fr; gap:12px 20px; margin:0; padding:0; list-style:none; }
+  .turnmill-materials-grid li { color:var(--color-body); font-size:var(--type-small); }
+  .turnmill-materials-grid li::before { content:'✓'; margin-right:10px; color:var(--color-brand); }
+  .turnmill-page #materials .caption { margin-top:18px; }
+  .turnmill-quality-grid { display:grid; grid-template-columns:minmax(0, .9fr) minmax(0, 1.1fr); gap:44px; align-items:center; }
+  .turnmill-quality-grid figure { margin:0; }
+  .turnmill-quality-grid img { display:block; width:100%; max-width:420px; height:auto; aspect-ratio:4 / 3; object-fit:cover; }
+  .turnmill-quality-grid figcaption { padding-top:10px; color:var(--color-body); font-size:var(--type-caption); }
+  .turnmill-delivery-panel { display:flex; flex-direction:column; align-items:flex-start; justify-content:center; padding:38px; background:var(--color-surface); }
+  .turnmill-delivery-panel .turnmill-range-label { margin-bottom:8px; }
+  .turnmill-delivery-panel strong { color:var(--color-brand); font-family:var(--font-heading); font-size:var(--type-h2); font-weight:500; line-height:1.1; }
+  .turnmill-delivery-panel p { margin:16px 0 22px; color:var(--color-body); }
+  @media (max-width:900px) {
+    .turnmill-page .ta-part-grid { grid-template-columns:minmax(0,1fr) minmax(0,1fr); grid-template-rows:auto auto; gap:16px; }
+    .turnmill-page .ta-part:first-child { grid-row:auto; grid-column:1 / -1; grid-template-columns:minmax(0,1fr) minmax(0,1fr); grid-template-rows:auto; }
+    .turnmill-page .ta-part:first-child .ta-part-photo img { min-height:250px; }
+    .turnmill-page .ta-part:not(:first-child) { grid-template-columns:1fr; }
+    .turnmill-page .ta-part:not(:first-child) .ta-part-photo img { min-height:0; aspect-ratio:1.45 / 1; }
+    .turnmill-materials-grid { gap:20px; }
+    .turnmill-quality-grid { gap:24px; }
+  }
+  @media (max-width:767px) {
+    .turnmill-page .turnmill-qualification { margin:0 0 18px; }
+    .turnmill-page .ta-part-grid { grid-template-columns:minmax(0,1fr); max-width:640px; }
+    .turnmill-page .ta-part:first-child { grid-column:auto; grid-template-columns:minmax(0,1fr); }
+    .turnmill-page .ta-part:first-child .ta-part-photo img { min-height:0; aspect-ratio:1.45 / 1; }
+    .turnmill-page .ta-part-content { padding:22px; }
+    .turnmill-materials-grid,.turnmill-quality-grid { grid-template-columns:1fr; }
+    .turnmill-materials-grid > div { padding:22px 20px; }
+    .turnmill-materials-grid ul { gap:10px; }
+    .turnmill-quality-grid img { min-height:0; aspect-ratio:4 / 3; }
+    .turnmill-delivery-panel { padding:26px 22px; }
+  }
+  @media (max-width:520px) {
+    .turnmill-page #parts .ta-section-heading { margin-bottom:28px; }
+    .turnmill-page .ta-part:not(:first-child) { grid-template-columns:minmax(0,1fr); }
+    .turnmill-page .ta-part:not(:first-child) .ta-part-photo img { aspect-ratio:1.45 / 1; }
+  }
+</style>

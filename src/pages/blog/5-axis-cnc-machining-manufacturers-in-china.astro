@@ -1,0 +1,23 @@
+---
+import '../../styles/blog-native.css';
+import '../../styles/blog-detail-native.css';
+import BlogDetailTemplate from '../../components/native/BlogDetailTemplate.astro';
+import {
+  getBlogDetailEntries,
+  relatedPostsFor,
+  ryanAuthorBio,
+} from '../../blog-detail-native.mjs';
+
+const slug = '5-axis-cnc-machining-manufacturers-in-china';
+const pages = import.meta.glob("../../mirrored-pages/blog/*/index.html", {
+  query: "?raw",
+  import: "default",
+  eager: true,
+});
+const entries = getBlogDetailEntries(pages);
+const entry = entries.find((item) => item.slug === slug);
+if (!entry) throw new Error(`Missing native blog detail source: ${slug}`);
+const relatedPosts = relatedPostsFor(entry.slug, entries);
+---
+
+<BlogDetailTemplate article={entry.detail} relatedPosts={relatedPosts} authorBio={ryanAuthorBio} />

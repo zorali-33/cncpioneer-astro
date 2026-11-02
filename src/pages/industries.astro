@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import QuoteCta from '../components/native/QuoteCta.astro';
+
+const seo={title:'CNC Machining Industries Served | CNCPioneer',description:'Explore CNC machining for medical, aerospace, electronics, semiconductor, defense, oil and gas, railway, and automotive components.',canonical:'/industries',type:'website',image:'/assets/images/industries-banner.webp'};
+const industries=[
+  {name:'Medical',slug:'medical',image:'medical-industry',text:'Machined components for medical instruments, devices and equipment assemblies.'},
+  {name:'Aerospace',slug:'aerospace',image:'aerospace-industry',text:'Custom pins, housings, shafts and fittings for aerospace component projects.'},
+  {name:'Consumer Electronics',slug:'consumer-electronics',image:'consumer-electronics-industry',text:'Small turned contacts, housings and mechanical parts for electronic products.'},
+  {name:'Semiconductor',slug:'semiconductor',image:'semiconductor-industry',text:'Precision interfaces, handling components and parts for semiconductor equipment.'},
+  {name:'Defense',slug:'defense',image:'defense-industry',text:'Drawing-based machining for mechanical assemblies and connection components.'},
+  {name:'Oil & Gas',slug:'oil-gas',image:'oil-gas-industry',text:'Custom fittings, valve components, sleeves and parts for demanding equipment.'},
+  {name:'Railway',slug:'railway',image:'railway-industry',text:'Machined pins, bushings, shafts and fittings for railway applications.'},
+  {name:'Automotive',slug:'automotive',image:'automotive-industry',text:'Turned and milled components for vehicle systems and manufacturing equipment.'},
+];
+const resources=[
+  {title:'Precision Medical Machining: Processes & Materials',href:'/blog/medical-cnc-machining',image:'precision-medical-machining',alt:'Robotic equipment and surgical instruments',text:'Explore machining processes, material choices, and finishing considerations for surgical instruments, implants, and medical device components.'},
+  {title:'CNC Machining for Aerospace',href:'/blog/aerospace-cnc-machining',image:'cnc-machining-aerospace',alt:'Machining a turbine component',text:'Explore aerospace applications, titanium and aluminum material choices, and manufacturing considerations for lightweight, complex components.'},
+  {title:'CNC Machining for Semiconductor Industry',href:'/blog/cnc-machining-for-semiconductor-industry',image:'semiconductor-cnc-machining-parts',alt:'Precision machined components for semiconductor equipment',text:'Explore precision requirements, materials, surface integrity, and contamination control for wafer handling systems, vacuum chambers, and other semiconductor equipment parts.'},
+];
+---
+<BaseLayout seo={seo}>
+  <div id="content" class="industry-hub" data-native-industry-hub>
+    <section class="industry-hero" aria-labelledby="industries-title"><div class="hub-container">
+      <nav aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">»</span><span aria-current="page">Industries</span></nav>
+      <h1 id="industries-title">CNC Machining for Your Industry</h1><p>Precision components for eight core industries. Explore applications, materials, and machining services for your next project.</p><a class="hub-button" href="/cnc-machining-quote">Get a Quote</a>
+    </div></section>
+    <section class="hub-container hub-section" aria-labelledby="industries-heading"><h2 id="industries-heading">Industries We Serve</h2><p class="hub-intro">Find machining support for your application, from engineering prototypes to repeat production.</p>
+      <div class="industry-grid">{industries.map(item=><a class="industry-card" href={`/industries/${item.slug}`} aria-label={`Explore ${item.name} machining`}><img src={`/assets/images/${item.image}.webp`} alt={item.name} width="600" height="400" loading="lazy" decoding="async"/><div><h3>{item.name}</h3><p>{item.text}</p></div></a>)}</div>
+    </section>
+    <section class="hub-services"><div class="hub-container hub-section"><h2>High-Precision CNC Machining On-Demand</h2><div class="service-grid">
+      <article><h3>Swiss Machining</h3><p>Swiss machining for small turned parts such as pins, slender shafts and threaded fittings. Material, part features and inspection needs are reviewed against your drawing.</p><a href="/cnc-machining-quote">Quote Now →</a><a href="/services/swiss-machining">Swiss Machining Services →</a></article>
+      <article><h3>CNC Turning and Milling</h3><p>CNC turning and milling for housings, shafts, and parts with both cylindrical and milled features, supporting prototypes and production quantities.</p><a href="/cnc-machining-quote">Quote Now →</a><a href="/services/cnc-turning-and-milling">CNC Turning and Milling Services →</a></article>
+    </div></div></section>
+    <section class="hub-container hub-section"><h2>CNC Machining Insights by Industry</h2><div class="resource-grid">{resources.map(item=><article><a href={item.href} tabindex="-1" aria-label={item.title}><img src={`/assets/images/${item.image}.webp`} alt={item.alt} width="600" height="400" loading="lazy" decoding="async"/></a><h3><a href={item.href}>{item.title}</a></h3><p>{item.text}</p></article>)}</div></section>
+    <QuoteCta id="industries-quote" idPrefix="industries-quote-form" formName="Industry Project Enquiry" kicker="INDUSTRY PARTS" title="Discuss your next CNC project" description="Share the component, application, material, quantity and inspection requirements for a drawing-based review." />
+  </div>
+</BaseLayout>
+<style>
+  .hub-container{width:min(var(--layout-shell),100%);padding-inline:24px;margin-inline:auto}.industry-hero{padding:25px 0 48px;color:var(--color-white);background:linear-gradient(rgb(var(--color-ink-rgb)/0.667),rgb(var(--color-ink-rgb)/0.667)),url(/assets/images/industries-banner.webp)center/cover}.industry-hero nav{display:flex;gap:8px;font-size:14px}.industry-hero h1{font-size:var(--type-h1);text-align:center;line-height:1.12;margin:50px auto 20px;color:var(--color-white)}.industry-hero p{max-width:850px;margin:0 auto 25px;text-align:center}.industry-hero .hub-button{display:table;margin:auto}.hub-button{display:inline-block;padding:12px 28px;background:var(--color-brand);color:var(--color-white);text-decoration:none;font-weight:600;border-radius:4px}.hub-section{padding-block:65px}.hub-section>h2,.hub-cta h2{color:var(--color-ink);font-size:var(--type-h2);text-align:center;line-height:1.2;margin:0 0 20px}.hub-intro{text-align:center;margin:0 0 35px}.industry-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}.industry-card{overflow:hidden;border:1px solid var(--color-border);border-radius:8px;text-decoration:none;background:var(--color-white)}.industry-card img,.resource-grid img{width:100%;aspect-ratio:3/2;object-fit:cover}.industry-card>div{padding:20px}.industry-card h3{margin:0 0 10px;color:var(--color-ink);font-size:19px}.industry-card p{font-size:14px;margin:0}.industry-card:hover{box-shadow:0 6px 20px rgb(var(--color-ink-rgb)/0.1)}.hub-services,.hub-cta{background:var(--color-surface)}.service-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:35px}.service-grid article{padding:30px;background:var(--color-white);border-radius:8px}.service-grid h3{font-size:25px;color:var(--color-ink);margin:0 0 16px}.service-grid a{display:block;margin-top:14px;color:var(--color-brand);font-weight:600;text-underline-offset:4px}.resource-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px}.resource-grid img{border-radius:6px}.resource-grid h3{font-size:21px;line-height:1.4;color:var(--color-ink)}.resource-grid h3 a{text-decoration:none}.resource-grid h3 a:hover{text-decoration:underline}.hub-cta{text-align:center;padding:50px 24px}.hub-cta p{margin:0 0 12px}@media(max-width:1000px){.industry-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:650px){.industry-hero h1{font-size:var(--type-h1);margin-top:35px}.industry-grid,.service-grid,.resource-grid{grid-template-columns:minmax(0,1fr)}.hub-section{padding-block:42px}.hub-container{padding-inline:20px}.hub-section>h2,.hub-cta h2{font-size:var(--type-h2)}.service-grid article{padding:24px}}
+</style>

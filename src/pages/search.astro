@@ -1,0 +1,26 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+const seo = { title: "Search CNCPioneer", description: "Search CNC parts, machining services, materials, industries and engineering resources.", canonical: "/search", robots: "noindex, follow" };
+---
+<BaseLayout seo={seo}>
+  <div class="site-search-page" data-search-page>
+    <a class="site-search-back" href="/">Home <span aria-hidden="true">/</span> Search</a>
+    <p class="site-search-eyebrow">EXPLORE CNCPIONEER</p>
+    <h1>Find the right part, process or material.</h1>
+    <form class="site-search-form" action="/search" method="get" role="search">
+      <label class="site-search-sr-only" for="site-search-page-input">Search CNCPioneer</label>
+      <svg class="site-search-input-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4.5 4.5"/></svg>
+      <input id="site-search-page-input" name="q" type="search" placeholder="Search parts, materials, services…" maxlength="120" autocomplete="off" enterkeyhint="search" aria-describedby="site-search-page-status" />
+      <button class="site-search-clear" type="button" data-search-clear aria-label="Clear search" hidden>×</button>
+      <button class="site-search-submit" type="submit">Search <span aria-hidden="true">→</span></button>
+    </form>
+    <div class="site-search-filters" data-search-filters aria-label="Filter search results">
+      {[["all", "All"], ["parts", "Parts"], ["services", "Services"], ["materials", "Materials"], ["industries", "Industries"], ["resources", "Resources"]].map(([type, label]) => <button type="button" data-search-type={type} aria-pressed={String(type === "all")}>{label}</button>)}
+    </div>
+    <div class="site-search-content" data-search-content>
+      <p class="site-search-status" id="site-search-page-status" data-search-status role="status" aria-live="polite"></p>
+      <div data-search-output></div>
+    </div>
+    <noscript><p>Browse our <a href="/custom-cnc-parts">parts library</a>, <a href="/services">services</a>, <a href="/materials">materials</a> and <a href="/industries">industries</a>, or <a href="/cnc-machining-quote">request a quote</a>.</p></noscript>
+  </div>
+</BaseLayout>

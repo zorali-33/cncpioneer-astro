@@ -1,0 +1,9 @@
+﻿type,source,target,file,count,note
+internal_link,/blog/cnc-machining-defense,/blog/cnc-milling-and-turning-defense,public/wp-content/cache/min/1/d,2,Updated internal reference away from historical 404 URL.
+internal_link,/blog/swiss-machining-defense,/services/swiss-machining,public/wp-content/cache/min/1/d,2,Updated internal reference away from historical 404 URL.
+redirect_page,/blog/ai-cnc-machining,/blog/what-is-cnc,src/mirrored-pages/blog/ai-cnc-machining/index.html,1,Historical Ahrefs 404 with no local source page; closest existing general CNC machining guide.
+redirect_page,/blog/ai-cnc-programming,/blog/what-is-cnc,src/mirrored-pages/blog/ai-cnc-programming/index.html,1,Historical Ahrefs 404 with no local source page; closest existing CNC fundamentals article.
+redirect_page,/blog/cnc-locating-pinsi,/blog/cnc-locating-pins,src/mirrored-pages/blog/cnc-locating-pinsi/index.html,1,Typo URL found in existing internal reference links.
+redirect_page,/blog/cnc-machining-defense,/blog/cnc-milling-and-turning-defense,src/mirrored-pages/blog/cnc-machining-defense/index.html,1,Historical Ahrefs 404 and related defense article already exists locally.
+redirect_page,/blog/cnc-musical-instruments,/blog/medical-cnc-machining,src/mirrored-pages/blog/cnc-musical-instruments/index.html,1,Historical Ahrefs 404; only internal reference used mismatched text about medical instruments.
+redirect_page,/blog/swiss-machining-defense,/services/swiss-machining,src/mirrored-pages/blog/swiss-machining-defense/index.html,1,Historical Ahrefs 404 and no matching local article; closest existing Swiss machining page.

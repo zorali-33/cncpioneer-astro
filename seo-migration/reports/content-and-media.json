@@ -1,0 +1,17 @@
+{
+  "generatedAt": "2026-11-02T02:52:06.411Z",
+  "pages": 330,
+  "imageFiles": 3670,
+  "imgElements": 4451,
+  "srcsetCandidates": 676,
+  "benefitPages": 142,
+  "largestBytes": 99772,
+  "strictMaxBytes": 100000,
+  "totalBytes": 85187704,
+  "fontFiles": [
+    "/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.svg",
+    "/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.svg",
+    "/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900.svg"
+  ],
+  "errors": []
+}

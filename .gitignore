@@ -1,0 +1,19 @@
+node_modules/
+dist/
+.astro/
+.cncpioneer-mail.php
+.env
+.env.*
+!.env.example
+work/
+
+# Generated verification and preview output
+dist-*/
+artifacts/
+outputs/
+tmp/
+
+# Local logs and operating-system files
+*.log
+.DS_Store
+Thumbs.db

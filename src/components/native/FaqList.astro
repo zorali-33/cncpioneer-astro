@@ -1,0 +1,48 @@
+---
+const { items = [], title = "FAQs", variant = "", openIndexes = [], singleOpen = false } = Astro.props;
+const openIndexSet = new Set(openIndexes);
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: items.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.answer,
+    },
+  })),
+};
+---
+<section class:list={["section", "faq-section", variant && `faq-section--${variant}`]}>
+  <h2>{title}</h2>
+  <div class="faq-list" data-single-open={singleOpen ? "true" : undefined}>
+    {items.map((item, index) => (
+      <details open={openIndexSet.has(index)}>
+        <summary>{item.question}</summary>
+        <p>{item.answer}</p>
+      </details>
+    ))}
+  </div>
+  {
+    singleOpen && (
+      <script is:inline>
+        (() => {
+          const lists = document.querySelectorAll(".faq-list[data-single-open='true']");
+          for (const list of lists) {
+            const items = Array.from(list.querySelectorAll("details"));
+            for (const item of items) {
+              item.addEventListener("toggle", () => {
+                if (!item.open) return;
+                for (const other of items) {
+                  if (other !== item) other.open = false;
+                }
+              });
+            }
+          }
+        })();
+      </script>
+    )
+  }
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+</section>

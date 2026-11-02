@@ -1,0 +1,47 @@
+.elementor-1008 .elementor-element.elementor-element-0104d85:not(.elementor-motion-effects-element-type-background) {
+  /* The archived WP Rocket background variable requires a script we no longer ship. */
+  background-image: url("/assets/images/blog-banner-1.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.elementor-element-50923972 .elementor-post__thumbnail__link {
+  margin-bottom: 0;
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+.elementor-element-50923972 .elementor-post__thumbnail {
+  padding-bottom: 0 !important;
+  aspect-ratio: 16 / 10;
+}
+
+.elementor-element-50923972 .elementor-post__thumbnail img {
+  position: absolute;
+  inset: 0;
+  width: 100% !important;
+  height: 100%;
+  object-fit: cover;
+}
+
+.elementor-element-50923972 .elementor-post__card .elementor-post__text {
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+}
+
+.elementor-element-50923972 .elementor-post__card .elementor-post__title {
+  flex: 1;
+}
+
+@media (max-width: 767px) {
+  .elementor-42 .elementor-element.elementor-element-62d09810 > .e-con-inner,
+  .elementor-1008 .elementor-element.elementor-element-0104d85 > .e-con-inner {
+    padding-inline: 15px !important;
+  }
+
+  .elementor-element-50923972 .elementor-posts-container {
+    padding-inline: 15px;
+  }
+}

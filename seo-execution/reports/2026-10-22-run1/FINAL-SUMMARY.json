@@ -1,0 +1,12 @@
+{
+  "checked": 27,
+  "failedUrls": 0,
+  "warnings": 1,
+  "redirects": 65,
+  "failedRedirects": 0,
+  "sitemap": 349,
+  "globalAcceptance": "2 pass / 5 fail; see final-valid-acceptance.csv",
+  "build": "passed; final-build-limited.log",
+  "deployed": false,
+  "trackingEnabled": false
+}

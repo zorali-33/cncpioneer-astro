@@ -1,0 +1,58 @@
+[
+  {
+    "id": "T00",
+    "status": "Complete"
+  },
+  {
+    "id": "T01",
+    "status": "Complete"
+  },
+  {
+    "id": "T02",
+    "status": "Complete"
+  },
+  {
+    "id": "T03",
+    "status": "Complete (scoped edits)"
+  },
+  {
+    "id": "T04",
+    "status": "Complete; decisions need data"
+  },
+  {
+    "id": "T05",
+    "status": "Conditionally skipped"
+  },
+  {
+    "id": "T06",
+    "status": "Complete"
+  },
+  {
+    "id": "T07",
+    "status": "Complete (scoped copy); engineering confirmation remains"
+  },
+  {
+    "id": "T08",
+    "status": "Complete (scoped links)"
+  },
+  {
+    "id": "T09",
+    "status": "Local plan and adapter complete; tracking disabled"
+  },
+  {
+    "id": "T10",
+    "status": "Complete locally; production verification pending"
+  },
+  {
+    "id": "T11",
+    "status": "Local build passed; global acceptance needs attention"
+  },
+  {
+    "id": "T12",
+    "status": "Preparation complete; not deployed"
+  },
+  {
+    "id": "T13",
+    "status": "Review template prepared; awaiting launch and data"
+  }
+]

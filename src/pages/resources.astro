@@ -1,0 +1,564 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import QuoteCta from "../components/native/QuoteCta.astro";
+
+const seo = {
+  title: "Resources | CNCPioneer",
+  description:
+    "Explore CNC machining articles, FAQs, and material guides from CNCPioneer. Find practical answers to help plan your next precision machining project.",
+  ogDescription:
+    "Explore CNC machining articles, FAQs, and material guides from CNCPioneer. Find practical answers to help plan your next precision machining project.",
+  canonical: "/resources",
+  includeDescription: false,
+  includeOgImage: false,
+  modifiedTime: "2026-03-30T08:33:36+00:00",
+  twitterLabel1: "Est. reading time",
+  twitterData1: "2 minutes",
+};
+
+const quickLinks = [
+  {
+    title: "CNC Machining Blog",
+    href: "/blog",
+    description: "Explore machining processes, design tips, and practical manufacturing insights.",
+    label: "Read Articles",
+    iconPaths: ["M4 3h6a3 3 0 0 1 3 3v15a4 4 0 0 0-4-2H4V3Z", "M13 6a3 3 0 0 1 3-3h5v16h-4a4 4 0 0 0-4 2"],
+  },
+  {
+    title: "CNC FAQs",
+    href: "/resources/faqs",
+    description: "Find answers about tolerances, materials, lead times, and requesting a quote.",
+    label: "View FAQs",
+    iconPaths: ["M21 11.5a8.5 8.5 0 0 1-8.5 8.5H4l-2 2v-10A9.5 9.5 0 0 1 11.5 2 9.5 9.5 0 0 1 21 11.5Z", "M9 8a3 3 0 0 1 6 0c0 2-3 2-3 4", "M12 16h.01"],
+  },
+  {
+    title: "Equipment List",
+    href: "/resources/equipment-list",
+    description: "Explore machining equipment and review manufacturing requirements for your custom parts.",
+    label: "View Equipment List",
+    iconPaths: ["m12 3 10 5-10 5L2 8l10-5Z", "m2 12 10 5 10-5", "m2 16 10 5 10-5"],
+  },
+];
+
+const learningCards = [
+  {
+    title: "What is Swiss Machining?",
+    href: "/blog/swiss-machining",
+    image: "/wp-content/uploads/2025/12/swiss-machining.png",
+    alt: "What is Swiss Machining?",
+    excerpt:
+      "Swiss machining uses a sliding headstock and guide bushing, unlike standard lathes, to support material while the tool remains stationary.",
+  },
+  {
+    title: "What is CNC Turning and Milling？",
+    href: "/blog/cnc-turning-and-milling",
+    image: "/wp-content/uploads/2025/12/cnc-turning-and-milling.png",
+    alt: "What is CNC Turning and Milling？",
+    excerpt: "In CNC milling, the tool moves while the material is stationary. In CNC turning, the material spins while the tool moves.",
+  },
+  {
+    title: "CNC Machining Materials: A Comprehensive Guide",
+    href: "/blog/cnc-machining-materials",
+    image: "/wp-content/uploads/2025/12/cnc-machining-materials.png",
+    alt: "STL file",
+    excerpt:
+      "CNC machining can be applied to a wide variety of materials, including but not limited to metals, plastics, and composites. ",
+  },
+];
+---
+
+<BaseLayout seo={seo}>
+  <Fragment slot="head">
+    <link rel="preload" as="image" href="/wp-content/uploads/2025/12/resources-banner.png" fetchpriority="high" />
+  </Fragment>
+
+  <div class="resources-page">
+    <section class="resources-hero" aria-labelledby="resources-title">
+      <div class="resources-hero__inner">
+        <p id="breadcrumbs" class="resources-breadcrumbs">
+          <span><a href="/">Home</a></span>
+          <span aria-hidden="true">»</span>
+          <span aria-current="page">Resources</span>
+        </p>
+        <h1 id="resources-title">Resources</h1>
+      </div>
+    </section>
+
+    <section class="resources-quick" aria-label="Resources">
+      <div class="resources-container">
+        <div class="quick-grid">
+          {
+            quickLinks.map((item) => (
+              <a class="quick-card" href={item.href} aria-labelledby={`resource-${item.href.split("/").pop()}`}>
+                <div class="quick-card__content">
+                  <span class="quick-card__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                      {item.iconPaths.map((path) => <path d={path} />)}
+                    </svg>
+                  </span>
+                  <h2 class="quick-card__title" id={`resource-${item.href.split("/").pop()}`}>{item.title}</h2>
+                  <p class="quick-card__description">{item.description}</p>
+                  <span class="quick-card__link">
+                    {item.label}
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M4 12h16m-6-6 6 6-6 6" />
+                    </svg>
+                  </span>
+                </div>
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <section class="learning-hub" aria-labelledby="learning-title">
+      <div class="resources-container">
+        <h2 id="learning-title" class="learning-title">Discover our CNC Learning Hub</h2>
+        <div class="learning-posts" role="list">
+          {
+            learningCards.map((post) => (
+              <article class="learning-card" role="listitem">
+                <a class="learning-card__media" href={post.href} tabindex="-1" style={`--learning-card-image: url("${post.image}")`}>
+                  <img src={post.image} alt={post.alt} decoding="async" loading="eager" class="learning-card__image" />
+                </a>
+                <div class="learning-card__body">
+                  <h3 class="learning-card__title">
+                    <a href={post.href}>{post.title}</a>
+                  </h3>
+                  <div class="learning-card__excerpt">
+                    <p>{post.excerpt}</p>
+                  </div>
+                </div>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <QuoteCta id="resources-quote" idPrefix="resources-quote-form" formName="Resources Project Enquiry" kicker="PLAN YOUR PROJECT" title="Discuss your next CNC project" description="Share your drawing and requirements. We can help review machining, material and inspection considerations." />
+  </div>
+</BaseLayout>
+
+<style>
+  .resources-page {
+    background: var(--color-white);
+  }
+
+  .resources-container {
+    max-width: var(--layout-shell);
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .resources-hero {
+    position: relative;
+    min-height: 233px;
+    display: flex;
+    align-items: flex-start;
+    background-image: url("/wp-content/uploads/2025/12/resources-banner.png");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .resources-hero::before {
+    position: absolute;
+    inset: 0;
+    content: "";
+    background: rgb(var(--color-ink-rgb)/0.5);
+  }
+
+  .resources-hero__inner {
+    position: relative;
+    z-index: 1;
+    width: min(var(--layout-shell), 100%);
+    margin: 0 auto;
+    padding: 28px 24px 0;
+    text-align: center;
+  }
+
+  .resources-breadcrumbs {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 0 0 55px;
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.4;
+  }
+
+  .resources-breadcrumbs a {
+    color: var(--color-brand);
+    text-decoration: underline;
+  }
+
+  .resources-hero h1 {
+    margin: 0;
+    color: var(--color-white);
+    font-family: var(--font-sans);
+    font-size: var(--type-h1);
+    font-weight: 700;
+    line-height: 1.12;
+  }
+
+  .resources-quick {
+    padding: 0;
+  }
+
+  .resources-quick .resources-container {
+    padding-top: 32px;
+    padding-bottom: 56px;
+  }
+
+  .quick-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .quick-card {
+    flex: 1;
+    min-width: 0;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .quick-card__content {
+    display: flex;
+    height: 100%;
+    min-height: 280px;
+    flex-direction: column;
+    padding: 28px;
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    background: var(--color-white);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+  }
+
+  .quick-card:hover .quick-card__content,
+  .quick-card:focus-visible .quick-card__content {
+    border-color: var(--color-hover);
+    box-shadow: 0 8px 24px rgb(var(--color-ink-rgb)/0.08);
+    transform: translateY(-3px);
+  }
+
+  .quick-card:focus-visible {
+    border-radius: 12px;
+    outline: 2px solid var(--color-brand);
+    outline-offset: 4px;
+  }
+
+  .quick-card__icon {
+    display: grid;
+    width: 44px;
+    height: 44px;
+    place-items: center;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background: var(--color-surface);
+    color: var(--color-brand);
+  }
+
+  .quick-card__icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .quick-card__title {
+    margin: 0 0 12px;
+    color: var(--color-ink);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  .quick-card__description {
+    margin: 0 0 24px;
+    color: var(--color-body);
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  .quick-card__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: auto;
+    color: var(--color-brand);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.5;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
+
+  .quick-card__link svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+  }
+
+  .quick-card:hover .quick-card__link,
+  .quick-card:focus-visible .quick-card__link {
+    color: var(--color-hover);
+  }
+
+  .learning-hub {
+    min-height: 112px;
+    margin: 0 0 50px;
+  }
+
+  .learning-title {
+    position: relative;
+    margin: 0 0 20px;
+    padding-bottom: 15px;
+    color: var(--color-ink);
+    text-align: center;
+    font-size: var(--type-h2);
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .learning-posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+  }
+
+  .learning-card {
+    display: flex;
+    height: 100%;
+    overflow: hidden;
+    flex-direction: column;
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    background: var(--color-white);
+    box-shadow: 0 6px 15px rgb(var(--color-ink-rgb)/0.08);
+    transition: border-color 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
+      transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  }
+
+  .learning-card:hover {
+    border-color: var(--color-hover);
+    box-shadow: 0 12px 25px rgb(var(--color-ink-rgb)/0.1);
+    transform: translateY(-8px);
+  }
+
+  .learning-card__media {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    aspect-ratio: 3 / 2;
+    background-color: var(--color-surface);
+    text-decoration: none;
+  }
+
+  .learning-card__media::before {
+    position: absolute;
+    inset: 0;
+    content: "";
+    background-image: var(--learning-card-image);
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    transition: filter 0.3s ease, transform 0.5s ease;
+  }
+
+  .learning-card__image {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .learning-card__media:hover::before {
+    filter: brightness(1.05);
+    transform: scale(1.08);
+  }
+
+  .learning-card__body {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    padding: 25px;
+  }
+
+  .learning-card__title {
+    margin: 0 0 15px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  .learning-card__title a {
+    display: block;
+    color: var(--color-ink);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+    transition: color 0.2s ease;
+  }
+
+  .learning-card__title a:hover,
+  .learning-card__title a:focus-visible {
+    color: var(--color-hover);
+  }
+
+  .learning-card__excerpt {
+    flex-grow: 1;
+    color: var(--color-body);
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .learning-card__excerpt p {
+    margin: 0;
+  }
+
+  .resources-cta {
+    min-height: 343px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    gap: 30px;
+    padding: 0;
+    background: var(--color-brand);
+    text-align: center;
+  }
+
+  .resources-cta p {
+    margin: 0;
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 26px;
+  }
+
+  .resources-cta h2 {
+    margin: 0;
+    color: var(--color-white);
+    font-family: var(--font-sans);
+    font-size: var(--type-h2);
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+
+  .resources-cta__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    min-height: 40px;
+    padding: 12px 24px;
+    border-radius: 3px;
+    background: var(--color-brand);
+    color: var(--color-white);
+    font-family: var(--font-sans);
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+  }
+
+  .resources-cta__button:hover,
+  .resources-cta__button:focus-visible {
+    color: var(--color-white);
+    text-decoration: underline;
+  }
+
+  @media (max-width: 1024px) {
+    .resources-container {
+      max-width: 1024px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .quick-card__content {
+      transition: none;
+    }
+
+    .quick-card:hover .quick-card__content,
+    .quick-card:focus-visible .quick-card__content {
+      transform: none;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .resources-container {
+      padding: 20px 15px;
+    }
+
+    .resources-quick .resources-container {
+      padding-bottom: 20px;
+    }
+
+    .resources-hero__inner {
+      padding: 24px 25px 0;
+    }
+
+    .resources-breadcrumbs {
+      margin-bottom: 55px;
+      font-size: 12px;
+    }
+
+    .resources-hero h1 {
+      font-size: var(--type-h1);
+    }
+
+    .quick-grid {
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .quick-card__content {
+      min-height: 0;
+      padding: 20px;
+    }
+
+    .learning-title {
+      font-size: var(--type-h2);
+    }
+
+    .learning-posts {
+      grid-template-columns: 1fr;
+    }
+
+    .learning-card {
+      box-shadow: none;
+    }
+
+    .learning-card:hover {
+      box-shadow: 0 6px 15px rgb(var(--color-ink-rgb)/0.08);
+      transform: none;
+    }
+
+    .resources-cta {
+      min-height: 327px;
+      gap: 13px;
+    }
+
+    .resources-cta p {
+      font-size: 16px;
+    }
+
+    .resources-cta h2 {
+      font-size: var(--type-h2);
+    }
+  }
+</style>

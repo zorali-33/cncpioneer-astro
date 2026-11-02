@@ -1,0 +1,20 @@
+---
+const { details } = Astro.props;
+---
+{details && <section class="procurement" aria-labelledby="procurement-title">
+  <h2 id="procurement-title">{details.title || "What to Include in Your Quote Request"}</h2>
+  <p>{details.intro}</p>
+  <ul>{details.items.map((item) => <li>{item}</li>)}</ul>
+  <div class="procurement-links">
+    {details.links.map((link) => <a href={link.href}>{link.label} →</a>)}
+    <a href="/cnc-machining-quote">Request a drawing review →</a>
+  </div>
+</section>}
+<style>
+  .procurement { max-width: 1160px; width: calc(100% - 40px); margin: 36px auto; padding: 28px; box-sizing: border-box; background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 8px; color: var(--color-ink); }
+  h2 { font-size: var(--type-h2); line-height: 1.2; margin: 0 0 14px; }
+  p, li { line-height: 1.65; } ul { padding-left: 22px; } li + li { margin-top: 8px; }
+  .procurement-links { display: flex; flex-wrap: wrap; gap: 16px 24px; margin-top: 20px; } a { color: var(--color-brand); font-weight: 600; text-underline-offset: 3px; }
+  a:focus-visible { outline: 3px solid var(--color-brand); outline-offset: 4px; }
+  @media(max-width: 600px) { .procurement { padding: 22px; } }
+</style>

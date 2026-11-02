@@ -1,0 +1,30 @@
+---
+const {
+  title,
+  eyebrow,
+  description,
+  image,
+  crumbs = [],
+  variant = "",
+  ctaHref = "/cnc-machining-quote",
+  ctaLabel = "Get Instant Quote",
+} = Astro.props;
+---
+<section class:list={["page-hero", variant && `page-hero--${variant}`]} style={`--hero-image: url('${image}')`}>
+  <div class="page-hero__overlay"></div>
+  <div class="page-hero__content">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      {crumbs.map((crumb) => (
+        <>
+          <span>&raquo;</span>
+          {crumb.href ? <a href={crumb.href}>{crumb.label}</a> : <span>{crumb.label}</span>}
+        </>
+      ))}
+    </nav>
+    {eyebrow && <p class="hero-eyebrow">{eyebrow}</p>}
+    <h1>{title}</h1>
+    {description && <p>{description}</p>}
+    {ctaLabel && <a class="button" href={ctaHref}>{ctaLabel}</a>}
+  </div>
+</section>

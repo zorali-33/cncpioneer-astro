@@ -1,0 +1,48 @@
+---
+import { getReviewedSeo } from "../../data/pageSeoOverrides.mjs";
+import { canonicalPageUrl, absoluteAssetUrl, normalizeInternalHref } from "../../data/siteUrls.mjs";
+
+const {
+  title,
+  description,
+  ogDescription = description,
+  canonical,
+  includeDescription = true,
+  image = "/wp-content/uploads/2025/11/cncpioneer_nav_logo.png",
+  includeOgImage = true,
+  robots = "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  type = "article",
+  modifiedTime,
+  alternates = [],
+  twitterLabel1,
+  twitterData1,
+} = { ...Astro.props, ...getReviewedSeo(Astro.props.canonical) };
+
+const canonicalUrl = canonical && canonicalPageUrl(canonical);
+const imageUrl = absoluteAssetUrl(image);
+const normalizedAlternates = alternates.map((alternate) => ({
+  ...alternate,
+  href: normalizeInternalHref(alternate.href, canonical || '/', true),
+}));
+---
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content={robots} />
+{normalizedAlternates.map((alternate) => <link rel="alternate" hreflang={alternate.hreflang} href={alternate.href} />)}
+<title>{title}</title>
+{includeDescription && description && <meta name="description" content={description} />}
+{canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content={type} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={ogDescription} />
+{canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
+<meta property="og:site_name" content="CNCPioneer" />
+{modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
+{includeOgImage && imageUrl && <meta property="og:image" content={imageUrl} />}
+<meta name="twitter:card" content={includeOgImage && imageUrl ? "summary_large_image" : "summary"} />
+{twitterLabel1 && <meta name="twitter:label1" content={twitterLabel1} />}
+{twitterData1 && <meta name="twitter:data1" content={twitterData1} />}
+<link rel="icon" href="/wp-content/uploads/2026/01/cropped-site-icon-32x32.png" sizes="32x32" />
+<link rel="icon" href="/wp-content/uploads/2026/01/cropped-site-icon-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="/wp-content/uploads/2026/01/cropped-site-icon-180x180.png" />

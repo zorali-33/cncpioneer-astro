@@ -1,0 +1,301 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import QuoteCta from "../components/native/QuoteCta.astro";
+import PageHero from "../components/native/PageHero.astro";
+import FaqList from "../components/native/FaqList.astro";
+
+const seo = {
+  title: "Precision CNC Machining Services | CNCPioneer",
+  description:
+    "Services from CNCPioneer, with precision CNC machining capabilities, material options, quality control, finishing services, and custom manufacturing.",
+  canonical: "/services",
+  image: "/wp-content/uploads/2025/12/precision-cnc-machining-service.jpg",
+};
+
+const faqs = [
+  {
+    question: "What is your typical lead time for CNC machining orders?",
+    answer:
+      "Standard lead time is 3–7 days, and most parts ship in 3–5 days. For simple parts with available material, we routinely hit 3-day delivery, often faster than anyone else in the industry.",
+  },
+  {
+    question: "What tolerances can your CNC machines achieve?",
+    answer:
+      "Standard tolerance is ±0.01 mm (0.0004″). With advanced 3-, 4-, and 5-axis machines and in-process inspection, we routinely hold ±0.005 mm (0.0002″) or tighter when required.",
+  },
+  {
+    question: "What types of materials work with your CNC machining services?",
+    answer:
+      "We machine aluminum, stainless steel, titanium, brass, copper, Invar, POM, PC, ABS, PEEK, PTFE, ULTEM, nylon, acrylic, and many other engineering-grade materials.",
+  },
+  {
+    question: "Can you accommodate rush orders or expedited delivery for CNC machining?",
+    answer:
+      "Yes, 24-hour and 48-hour expedited options are available for most parts. We have delivered complex aluminum parts in under 24 hours when needed. Just mention rush when quoting.",
+  },
+  {
+    question: "What certifications or industry standards do you adhere to?",
+    answer:
+      "ISO 9001:2015 certified. Full material certifications and inspection reports, including CMM, RoHS, REACH, and CoC, are available on request. ITAR compliant for U.S. defense-related projects.",
+  },
+];
+
+const serviceCards = [
+  {
+    title: "3-Axis CNC Machining",
+    image: "/images/three-axis/ysv-966-vertical-cnc-machining-center.webp",
+    href: "/services/3-axis-cnc-machining",
+    label: "3-Axis CNC Machining Services",
+    text:
+      "Custom milling for metal and engineering plastic plates, brackets, frames and pocketed parts, with drawing review, inspection and surface finishing support.",
+  },
+  {
+    title: "5-Axis CNC Machining",
+    image: "/assets/images/five-axis-multi-face-structural-component.webp",
+    alt: "Multi-face structural component from our factory part portfolio",
+    href: "/services/5-axis-cnc-machining",
+    label: "5-Axis CNC Machining Services",
+    text:
+      "Custom machining for angled features, contoured surfaces and multi-face components, with workholding, tool access and inspection reviewed against your drawing.",
+  },
+  {
+    title: "Swiss Machining",
+    image: "/wp-content/uploads/2025/12/swiss-machining-service-540x260-1.png",
+    href: "/services/swiss-machining",
+    label: "Swiss Machining Services",
+    text:
+      "Swiss machining: ultra-precise, small-diameter complex parts machined from bar stock in a single setup with micron-level tolerances and zero secondary operations.",
+  },
+  {
+    title: "CNC Turning and Milling",
+    image: "/wp-content/uploads/2025/12/cnc-turning-and-milling-services-540x260-1.png",
+    href: "/services/cnc-turning-and-milling",
+    label: "CNC Turning and Milling Services",
+    text:
+      "CNC turning with live tooling combines both lathe and mill capabilities to machine parts with cylindrical features from metal rod stock.",
+  },
+];
+---
+<BaseLayout seo={seo}>
+  <div class="services-template">
+    <PageHero
+      title="Services"
+      image="/wp-content/uploads/2025/12/precision-cnc-machining-service.jpg"
+      crumbs={[{ label: "Services" }]}
+      variant="services"
+      ctaLabel={null}
+    />
+
+    <section class="section services-overview">
+      <h2>High-Precision CNC Machining On-Demand</h2>
+      <div class="services-card-grid">
+        {serviceCards.map((card) => (
+          <article class="services-card">
+            <a class="services-card__image" href={card.href} aria-label={card.title}>
+              <img src={card.image} alt={card.alt || card.title} loading="lazy" />
+            </a>
+            <div class="services-card__content">
+              <h3>{card.title}</h3>
+              <p>{card.text}</p>
+              <div class="services-card__links">
+                <a href="/cnc-machining-quote">Quote Now →</a>
+                <a href={card.href}>{card.label} →</a>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <FaqList items={faqs} title="FAQs" variant="material" />
+
+    <QuoteCta id="services-quote" idPrefix="services-quote-form" formName="Services Project Enquiry" kicker="START A PROJECT" title="Need a machining partner?" description="Send your drawing and order requirements. We’ll review suitable processes, materials, finishing and inspection." />
+  </div>
+
+  <style is:global>
+    .services-template .page-hero--services {
+      min-height: 233px;
+      align-items: stretch;
+      background-position: center center;
+    }
+
+    .services-template .page-hero--services .page-hero__overlay {
+      background: rgb(var(--color-ink-rgb)/0.6);
+    }
+
+    .services-template .page-hero--services .page-hero__content {
+      width: min(100%, var(--layout-shell));
+      margin: 0 auto;
+      padding: 26px 24px 70px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .services-template .page-hero--services .breadcrumbs {
+      margin-bottom: 38px;
+      color: var(--color-white);
+      font-size: 14px;
+    }
+
+    .services-template .page-hero--services .breadcrumbs a {
+      color: var(--color-brand);
+      text-decoration: underline;
+    }
+
+    .services-template .page-hero--services h1 {
+      margin: 0;
+      text-align: center;
+      font-family: var(--font-sans);
+      font-size: var(--type-h1);
+      font-weight: 700;
+      line-height: 1.12;
+    }
+
+    .services-template .services-overview {
+      max-width: var(--layout-shell);
+      padding-top: 112px;
+      padding-bottom: 36px;
+    }
+
+    .services-template .services-overview h2 {
+      margin-bottom: 38px;
+      font-size: var(--type-h2);
+      font-weight: 700;
+    }
+
+    .services-template .services-card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 30px;
+    }
+
+    .services-template .services-card {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      border: 1px solid var(--color-border);
+      border-radius: 4px;
+      background: var(--color-white);
+      box-shadow: 0 2px 4px rgb(var(--color-ink-rgb)/0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .services-template .services-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgb(var(--color-ink-rgb)/0.1);
+    }
+
+    .services-template .services-card__image {
+      flex: 0 0 auto;
+      width: 100%;
+      aspect-ratio: 2 / 1;
+      overflow: hidden;
+    }
+
+    .services-template .services-card__image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .services-template .services-card__content {
+      flex: 1;
+      width: 100%;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .services-template .services-card h3 {
+      margin: 0 0 10px;
+      color: var(--color-ink);
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 1.35;
+    }
+
+    .services-template .services-card p {
+      margin: 0 0 10px;
+      color: var(--color-body);
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+
+    .services-template .services-card__links {
+      margin-top: auto;
+    }
+
+    .services-template .services-card__links a {
+      display: block;
+      margin-top: 8px;
+      color: var(--bright-blue);
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    .services-template .services-card__links a:hover {
+      color: var(--color-hover);
+      text-decoration: underline;
+    }
+
+    .services-template .faq-section--material {
+      padding-top: 5%;
+      padding-bottom: 5%;
+    }
+
+    .services-template .cta-band {
+      background: var(--cta-blue);
+    }
+
+    @media (max-width: 1024px) {
+      .services-template .services-card-grid {
+        grid-template-columns: 1fr;
+        max-width: 620px;
+        margin: 0 auto;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .services-template .page-hero--services {
+        min-height: 210px;
+      }
+
+      .services-template .page-hero--services .page-hero__content {
+        padding: 22px 24px 56px;
+      }
+
+      .services-template .page-hero--services h1 {
+        font-size: var(--type-h1);
+      }
+
+      .services-template .services-overview {
+        padding-top: 64px;
+        padding-bottom: 36px;
+      }
+
+      .services-template .services-card {
+        height: auto;
+        flex-direction: column;
+      }
+
+      .services-template .services-card__image,
+      .services-template .services-card__content {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+
+      .services-template .services-card__image {
+        height: 180px;
+        min-height: 180px;
+      }
+
+      .services-template .services-card__content {
+        padding: 20px 15px;
+      }
+    }
+  </style>
+</BaseLayout>

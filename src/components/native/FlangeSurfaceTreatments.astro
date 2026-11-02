@@ -1,0 +1,271 @@
+---
+const treatments = Astro.props.items || [
+  {
+    title: "Passivation",
+    category: "Corrosion control",
+    summary: "Remove free iron after machining and restore the stainless surface's passive layer.",
+    use: "General stainless flange programs",
+    specify: "ASTM A967 method & inspection records",
+    tone: "blue",
+    paths: ["m12 3-8 3v6c0 4 3.5 7 8 9 4.5-2 8-5 8-9V6l-8-3Z", "m8 12 3 3 5-6"],
+  },
+  {
+    title: "Electropolishing",
+    category: "Hygienic finish",
+    summary: "Smooth the surface for hygienic stainless flange applications.",
+    use: "Sanitary, food & pharmaceutical equipment",
+    specify: "Required Ra, finish grade & material allowance",
+    tone: "teal",
+    paths: ["m11 4 2 6 6 2-6 2-2 6-2-6-6-2 6-2 2-6Z", "M20 2v5m-2.5-2.5h5"],
+  },
+  {
+    title: "Pickling & Passivation",
+    category: "Post-weld cleanup",
+    summary: "Remove weld heat tint before passivation of welded stainless assemblies.",
+    use: "Welded assemblies & heat-affected areas",
+    specify: "Weld condition & post-treatment inspection",
+    tone: "blue",
+    paths: ["M7 3C5 6 3 8 3 10a4 4 0 0 0 8 0c0-2-2-4-4-7Z", "m13 16 3 3 6-6", "M3 21h8"],
+  },
+  {
+    title: "PVD Black TiN & Black Oxide",
+    category: "Black appearance",
+    summary: "Specify a black finish matched to the component and its service environment.",
+    use: "Architectural & decorative components",
+    specify: "Coating process, color & base surface finish",
+    tone: "ink",
+    paths: ["m12 3 9 5-9 5-9-5 9-5Z", "m3 12 9 5 9-5", "m3 16 9 5 9-5"],
+  },
+  {
+    title: "Electrochemical Coloring",
+    category: "Decorative color",
+    summary: "Add a decorative stainless finish with an agreed color and base surface.",
+    use: "Architectural trim & decorative flanges",
+    specify: "Color sample, base finish & application",
+    tone: "color",
+    paths: ["M3 5h5v14H3z", "M10 5h5v14h-5z", "M17 5h4v14h-4z"],
+  },
+  {
+    title: "Precision Face Finishing",
+    category: "Sealing-face finish",
+    summary: "Match the machined sealing-face finish to the gasket and mating interface.",
+    use: "Process, vacuum & sanitary connections",
+    specify: "Gasket type, required Ra & face geometry",
+    tone: "blue",
+    paths: ["M4 4h16M6 4v5m12-5v5M12 4v16m-5 0h10", "M4 12h4m8 0h4M4 16h4m8 0h4"],
+  },
+];
+
+const { heading = "Surface Treatments for Stainless Steel CNC Turning Flanges", intro = "Select by corrosion protection, hygienic finish, appearance or sealing-face requirements. Review the required process and inspection records with your drawing." } = Astro.props;
+const iconPaths = {
+  shield: ["m12 3-8 3v6c0 4 3.5 7 8 9 4.5-2 8-5 8-9V6l-8-3Z", "m8 12 3 3 5-6"],
+  spark: ["m11 4 2 6 6 2-6 2-2 6-2-6-6-2 6-2 2-6Z", "M20 2v5m-2.5-2.5h5"],
+  layers: ["m12 3 9 5-9 5-9-5 9-5Z", "m3 12 9 5 9-5", "m3 16 9 5 9-5"],
+  color: ["M3 5h5v14H3z", "M10 5h5v14h-5z", "M17 5h4v14h-4z"],
+};
+
+---
+<section class="flange-finishes" id="surface-treatments" aria-labelledby="surface-treatments-title">
+  <div class="finishes-container">
+    <header class="finishes-header">
+      <p class="finishes-kicker">Finish selection</p>
+      <h2 id="surface-treatments-title">{heading}</h2>
+      <p class="finishes-intro">{intro}</p>
+    </header>
+
+    <div class="finishes-grid">
+      {treatments.map((card) => (
+        <article class="finish-card">
+          <div class="finish-card-head">
+            <div class="finish-icon" data-tone={card.tone} aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                {(card.paths || iconPaths[card.icon] || iconPaths.layers).map((path) => <path d={path} />)}
+              </svg>
+            </div>
+            <div>
+              <div class="finish-category">{card.category}</div>
+              <h3>{card.title}</h3>
+            </div>
+          </div>
+          <p class="finish-summary">{card.summary}</p>
+          <dl class="finish-facts">
+            <div><dt>Best for</dt><dd>{card.use}</dd></div>
+            <div><dt>Specify</dt><dd>{card.specify}</dd></div>
+          </dl>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .flange-finishes {
+    padding: 64px 0;
+    background: var(--color-white);
+    color: var(--color-ink);
+    scroll-margin-top: 24px;
+  }
+
+  .finishes-container {
+    max-width: var(--layout-shell);
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .finishes-header {
+    max-width: 800px;
+    margin: 0 auto 32px;
+    text-align: center;
+  }
+
+  .flange-finishes .finishes-kicker {
+    margin: 0 0 10px;
+    color: var(--color-brand);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+  }
+
+  .flange-finishes .finishes-header h2 {
+    margin: 0;
+    color: var(--color-ink);
+    font-size: var(--type-h2);
+    line-height: 1.2;
+    text-wrap: balance;
+  }
+
+  .flange-finishes .finishes-intro {
+    max-width: 740px;
+    margin: 14px auto 0;
+    color: var(--color-body);
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .finishes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .flange-finishes .finish-card {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 22px;
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    background: var(--color-white);
+    box-shadow: 0 6px 22px rgb(var(--color-ink-rgb)/0.035);
+  }
+
+  .finish-card-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    min-height: 68px;
+  }
+
+  .finish-card-head > div:last-child {
+    min-width: 0;
+  }
+
+  .finish-icon {
+    flex: 0 0 42px;
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    background: var(--color-surface);
+    color: var(--color-brand);
+  }
+
+  .finish-icon svg {
+    width: 25px;
+    height: 25px;
+  }
+
+  .finish-icon[data-tone="teal"] {
+    background: var(--color-surface);
+    color: var(--color-brand);
+  }
+
+  .finish-icon[data-tone="ink"] {
+    background: var(--color-surface);
+    color: var(--color-ink);
+  }
+
+  .finish-icon[data-tone="color"] {
+    background: var(--color-surface);
+    color: var(--color-body);
+  }
+
+  .finish-icon[data-tone="color"] path:nth-child(2) { stroke: var(--color-brand); }
+  .finish-icon[data-tone="color"] path:nth-child(3) { stroke: var(--color-body); }
+
+  .finish-category {
+    margin-bottom: 6px;
+    color: var(--color-body);
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  .flange-finishes .finish-card h3 {
+    margin: 0;
+    color: var(--color-ink);
+    font-size: 19px;
+    line-height: 1.3;
+    overflow-wrap: anywhere;
+  }
+
+  .flange-finishes .finish-summary {
+    margin: 16px 0 20px;
+    color: var(--color-body);
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  .finish-facts {
+    display: grid;
+    gap: 14px;
+    margin: 0;
+  }
+
+  .finish-facts > div {
+    display: grid;
+    grid-template-columns: 58px minmax(0, 1fr);
+    gap: 10px;
+    align-items: baseline;
+  }
+
+  .finish-facts dt {
+    color: var(--color-body);
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.6;
+  }
+
+  .finish-facts dd {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+  }
+
+  @media (max-width: 1024px) {
+    .finishes-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+
+  @media (max-width: 640px) {
+    .finishes-container { padding-inline: 16px; }
+    .finishes-header { margin-bottom: 26px; text-align: left; }
+    .flange-finishes .finishes-header h2 { font-size: var(--type-h2); }
+    .finishes-grid { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+    .flange-finishes .finish-card { padding: 22px 20px; }
+    .finish-card-head { min-height: 0; }
+    .finish-facts dd { font-size: 15px; }
+  }
+</style>

@@ -1,0 +1,327 @@
+[
+  {
+    "source": "/custom-cnc-parts/titanium-evtol-machining",
+    "target": "/custom-cnc-parts/aluminum-cnc-machining-flanges",
+    "pass": true
+  },
+  {
+    "source": "/custom-cnc-parts/tilt-rotor-mechanism-components",
+    "target": "/custom-cnc-parts/bearing-bushing",
+    "pass": true
+  },
+  {
+    "source": "/custom-cnc-parts/evtol-bearing-housing",
+    "target": "/custom-cnc-parts/bearing-housing",
+    "pass": true
+  },
+  {
+    "source": "/custom-cnc-parts/connector-pins-swiss-screw-machining",
+    "target": "/custom-cnc-parts/connector-pins",
+    "pass": true
+  },
+  {
+    "source": "/custom-cnc-parts/server-parts",
+    "target": "/custom-cnc-parts/server-components",
+    "pass": true
+  },
+  {
+    "source": "/custom-cnc-parts/satellite-components",
+    "target": "/industries/satellites",
+    "pass": true
+  },
+  {
+    "source": "/custom-cnc-parts/satellite-parts",
+    "target": "/industries/satellites",
+    "pass": true
+  },
+  {
+    "source": "/custom-cnc-parts/robotics-machining-parts",
+    "target": "/industries/robotics",
+    "pass": true
+  },
+  {
+    "source": "/custom-cnc-parts/robot-structural-links-brackets",
+    "target": "/custom-cnc-parts/cnc-machining-for-aerospace-brackets",
+    "pass": true
+  },
+  {
+    "source": "/custom-cnc-parts/swiss-machining-robot-pins-shafts",
+    "target": "/custom-cnc-parts/medical-device-pins",
+    "pass": true
+  },
+  {
+    "source": "/custom-cnc-parts/robot-motor-housings-end-caps",
+    "target": "/custom-cnc-parts/electric-motor-stator-housing-machining",
+    "pass": true
+  },
+  {
+    "source": "/custom-cnc-parts/evtol-sensor-housing",
+    "target": "/custom-cnc-parts/5-axis-sensor-housing-machining",
+    "pass": true
+  },
+  {
+    "source": "/custom-cnc-parts/high-volume-robotic-machining",
+    "target": "/industries/robotics",
+    "pass": true
+  },
+  {
+    "source": "/custom-cnc-parts/evtol-motor-shaft",
+    "target": "/custom-cnc-parts/motor-shaft",
+    "pass": true
+  },
+  {
+    "source": "/custom-cnc-parts/evtol-propeller",
+    "target": "/custom-cnc-parts/cnc-propeller-machining",
+    "pass": true
+  },
+  {
+    "source": "/custom-cnc-parts/evtol-cooling-fittings",
+    "target": "/custom-cnc-parts/turned-cooling-fittings",
+    "pass": true
+  },
+  {
+    "source": "/custom-cnc-parts/evtol-connector-pins-terminals",
+    "target": "/custom-cnc-parts/connector-pins",
+    "pass": true
+  },
+  {
+    "source": "/custom-cnc-parts/custom-flange-manufacturing",
+    "target": "/custom-cnc-parts/flanges",
+    "pass": true
+  },
+  {
+    "source": "/custom-cnc-parts/harmonic-drive-components",
+    "target": "/custom-cnc-parts/harmonic-drive-gearbox",
+    "pass": true
+  },
+  {
+    "source": "/custom-cnc-parts/planetary-gearbox-components",
+    "target": "/custom-cnc-parts/planetary-gearbox",
+    "pass": true
+  },
+  {
+    "source": "/custom-cnc-parts/radar",
+    "target": "/custom-cnc-parts/radar-systems-parts-machining",
+    "pass": true
+  },
+  {
+    "source": "/custom-cnc-parts/rails",
+    "target": "/custom-cnc-parts/rail-machining",
+    "pass": true
+  },
+  {
+    "source": "/custom-cnc-parts/evtol-landing-gear-actuator-parts",
+    "target": "/custom-cnc-parts/precision-actuator-parts",
+    "pass": true
+  },
+  {
+    "source": "/custom-cnc-parts/robot-bearing-housings-seats",
+    "target": "/custom-cnc-parts/cnc-turning-bearing-housings",
+    "pass": true
+  },
+  {
+    "source": "/custom-cnc-parts/robot-output-shafts",
+    "target": "/custom-cnc-parts/aluminum-shafts-cnc-turning",
+    "pass": true
+  },
+  {
+    "source": "/custom-cnc-parts/semiconductor-vacuum-chamber-parts",
+    "target": "/custom-cnc-parts/semiconductor-vacuum-chamber",
+    "pass": true
+  },
+  {
+    "source": "/industries/defense-precision-machining",
+    "target": "/industries/defense",
+    "pass": true
+  },
+  {
+    "source": "/industries/robotics-cnc-machining",
+    "target": "/industries/robotics",
+    "pass": true
+  },
+  {
+    "source": "/industries/semiconductor-cnc-machining",
+    "target": "/industries/semiconductor",
+    "pass": true
+  },
+  {
+    "source": "/services/swiss-machining/swiss-screw-machining",
+    "target": "/services/swiss-machining",
+    "pass": true
+  },
+  {
+    "source": "/services/swiss-machining/swiss-micro-machining",
+    "target": "/services/swiss-machining",
+    "pass": true
+  },
+  {
+    "source": "/blog/micro-cnc-machining",
+    "target": "/blog/swiss-machining",
+    "pass": true
+  },
+  {
+    "source": "/blog/cnc-meaning",
+    "target": "/blog/what-is-cnc",
+    "pass": true
+  },
+  {
+    "source": "/blog/cnc-vs-conventional-machining",
+    "target": "/blog/cnc-machining-vs-manual-machining",
+    "pass": true
+  },
+  {
+    "source": "/blog/injection-molding-vs-cnc-machining",
+    "target": "/blog/cnc-machining-vs-injection-molding",
+    "pass": true
+  },
+  {
+    "source": "/blog/prototype-cnc-machining",
+    "target": "/blog/cnc-prototyping",
+    "pass": true
+  },
+  {
+    "source": "/blog/cnc-custom-parts-prototyping",
+    "target": "/blog/cnc-prototyping",
+    "pass": true
+  },
+  {
+    "source": "/blog/rapid-cnc-prototyping",
+    "target": "/blog/cnc-prototyping",
+    "pass": true
+  },
+  {
+    "source": "/blog/cnc-vs-rapid-prototyping",
+    "target": "/blog/3d-printing-vs-cnc-machining",
+    "pass": true
+  },
+  {
+    "source": "/blog/cnc-machining-aerospace",
+    "target": "/blog/aerospace-cnc-machining",
+    "pass": true
+  },
+  {
+    "source": "/blog/automotive-machining",
+    "target": "/blog/cnc-machining-for-automotive-industry",
+    "pass": true
+  },
+  {
+    "source": "/blog/cnc-automotive",
+    "target": "/blog/cnc-machining-for-automotive-industry",
+    "pass": true
+  },
+  {
+    "source": "/blog/precision-automotive-machining",
+    "target": "/blog/cnc-machining-for-automotive-industry",
+    "pass": true
+  },
+  {
+    "source": "/blog/precision-medical-machining",
+    "target": "/blog/medical-cnc-machining",
+    "pass": true
+  },
+  {
+    "source": "/blog/cnc-turning-and-milling-materials",
+    "target": "/blog/cnc-machining-materials",
+    "pass": true
+  },
+  {
+    "source": "/blog/machining-surface-finish",
+    "target": "/blog/surface-finish",
+    "pass": true
+  },
+  {
+    "source": "/blog/cnc-vs-laser-cutting",
+    "target": "/blog/cnc-milling-vs-laser-cutting",
+    "pass": true
+  },
+  {
+    "source": "/blog/cnc-turning-and-milling",
+    "target": "/blog/cnc-lathe-vs-mill",
+    "pass": true
+  },
+  {
+    "source": "/blog/page/13",
+    "target": "/blog/page/12",
+    "pass": true
+  },
+  {
+    "source": "/blog/page/14",
+    "target": "/blog/page/12",
+    "pass": true
+  },
+  {
+    "source": "/blog/page/15",
+    "target": "/blog/page/12",
+    "pass": true
+  },
+  {
+    "source": "/blog/page/16",
+    "target": "/blog/page/12",
+    "pass": true
+  },
+  {
+    "source": "/blog/page/17",
+    "target": "/blog/page/12",
+    "pass": true
+  },
+  {
+    "source": "/blog/page/18",
+    "target": "/blog/page/12",
+    "pass": true
+  },
+  {
+    "source": "/blog/page/19",
+    "target": "/blog/page/12",
+    "pass": true
+  },
+  {
+    "source": "/blog/page/20",
+    "target": "/blog/page/12",
+    "pass": true
+  },
+  {
+    "source": "/author/ryan-wang/page/10",
+    "target": "/author/ryan-wang/page/9",
+    "pass": true
+  },
+  {
+    "source": "/author/ryan-wang/page/11",
+    "target": "/author/ryan-wang/page/9",
+    "pass": true
+  },
+  {
+    "source": "/author/ryan-wang/page/12",
+    "target": "/author/ryan-wang/page/9",
+    "pass": true
+  },
+  {
+    "source": "/author/ryan-wang/page/13",
+    "target": "/author/ryan-wang/page/9",
+    "pass": true
+  },
+  {
+    "source": "/author/ryan-wang/page/14",
+    "target": "/author/ryan-wang/page/9",
+    "pass": true
+  },
+  {
+    "source": "/author/ryan-wang/page/15",
+    "target": "/author/ryan-wang/page/9",
+    "pass": true
+  },
+  {
+    "source": "/author/ryan-wang/page/16",
+    "target": "/author/ryan-wang/page/9",
+    "pass": true
+  },
+  {
+    "source": "/author/ryan-wang/page/17",
+    "target": "/author/ryan-wang/page/9",
+    "pass": true
+  },
+  {
+    "source": "/author/david-li/page/4",
+    "target": "/author/david-li/page/3",
+    "pass": true
+  }
+]

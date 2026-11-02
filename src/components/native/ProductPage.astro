@@ -1,0 +1,292 @@
+---
+import ProcurementChecklist from "./ProcurementChecklist.astro";
+import QuoteCta from "./QuoteCta.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ProductFinishes from "./FlangeSurfaceTreatments.astro";
+import ProductQuality from "./FlangeQualityControl.astro";
+import ProductFaq from "./FlangeFaq.astro";
+import { productContent } from "../../data/productContent.mjs";
+import { getProductMaterialLinks } from "../../data/productMaterialLinks.mjs";
+
+const { page, related = [], applicationsLink = null } = Astro.props;
+const product = productContent[page.slug];
+if (!product) throw new Error(`Missing product content: ${page.slug}`);
+const materialLinks = getProductMaterialLinks(page.slug, product);
+// This page keeps a direct industry entry on every card, including automotive and EV.
+const industryLinksOnEveryCard = page.slug === "5-axis-aluminum-cnc-machining-parts";
+const industryNames = {
+  aerospace: "aerospace", automotive: "automotive", "consumer-electronics": "electronics",
+  defense: "defense", evtol: "eVTOL", medical: "medical", "oil-gas": "oil & gas",
+  railway: "railway", robotics: "robotics", satellites: "satellite",
+  semiconductor: "semiconductor", server: "server",
+};
+const applicationGroups = new Map();
+for (const card of product.applications) {
+  if (!card.href) continue;
+  const group = applicationGroups.get(card.href);
+  if (group) group.count += 1;
+  else applicationGroups.set(card.href, { card, count: 1 });
+}
+// Keep each repeated destination once below the cards. Other industry links
+// stay on their own cards; an explicit page override keeps its chosen layout.
+const applicationFooterLinks = industryLinksOnEveryCard ? [] : applicationsLink ? [applicationsLink] : [...applicationGroups.values()]
+  .filter((group) => group.count > 1)
+  .map(({ card }) => {
+    const industry = industryNames[card.href.split("/").pop()] || (card.industry || card.title).toLowerCase();
+    return {
+      href: card.href,
+      label: `Explore ${industry} machining`,
+      description: `Explore machining capabilities, material options and quality support for ${industry} components.`,
+    };
+  });
+const footerIndustryHrefs = new Set(applicationFooterLinks.map((link) => link.href));
+const hasCardIndustryLink = (card) => Boolean(card.href) && (industryLinksOnEveryCard || (!applicationsLink && !footerIndustryHrefs.has(card.href)));
+const heroTitle = product.h1 || product.label;
+const titleWords = heroTitle.split(/\s+/);
+const accentWords = titleWords.length > 5 ? 3 : titleWords.length > 2 ? 2 : 1;
+const titleLead = titleWords.length > 1 ? titleWords.slice(0, -accentWords).join(" ") : heroTitle;
+const titleAccent = titleWords.length > 1 ? titleWords.slice(-accentWords).join(" ") : "";
+const materialGroups = [...new Set(product.materials.map((item) => item.category))];
+const groupNames = { metals: "Metals", plastics: "Engineering plastics", "special-alloys": "Special alloys" };
+const metrics = product.qualityMetrics || product.stats.slice(1, 3).map(([value, label]) => ({ value, label }));
+const heroTrust = product.heroTrust || [
+  "IATF 16949 & AS9100D quality systems",
+  "Material and inspection scope reviewed with your drawing",
+  "Prototype and repeat-production enquiries",
+  "Finishing and documentation agreed with the order",
+];
+---
+
+<BaseLayout seo={page.seo}>
+  <div class="native-product product-detail-template product-page" data-product-template="flange-v1" data-product-slug={page.slug} data-scope-reviewed={product.scopeReviewed ? "true" : undefined}>
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <nav class="hero-breadcrumb" aria-label="Breadcrumb">
+            <a href="/">Home</a><span aria-hidden="true">/</span><a href="/custom-cnc-parts">Custom CNC Parts</a><span aria-hidden="true">/</span><span aria-current="page">{product.label}</span>
+          </nav>
+          <h1>{titleLead}{titleAccent && <><br /><span>{titleAccent}</span></>}</h1>
+          <p class="hero-sub">{product.heroDescription}</p>
+          <div class="hero-ctas">
+            <a class="btn-primary" href="/cnc-machining-quote">↑ Upload Drawing</a>
+            <a class="btn-secondary" href="/cnc-machining-quote">Request a Quote →</a>
+          </div>
+          <div class="hero-trust">
+            {heroTrust.map((item) => <div class="trust-item">{item}</div>)}
+          </div>
+        </div>
+        <div class="hero-image-wrap">
+          <img class="hero-img" src={product.hero} alt={product.heroAlt || product.label} loading="eager" fetchpriority="high" />
+          <div class="hero-img-badge">
+            <div class="hero-img-badge-row"><span class="badge-val">DFM</span><span class="badge-label">Drawing &amp; process review</span></div>
+            <div class="hero-img-badge-divider"></div>
+            <div class="hero-img-badge-row"><span class="badge-val">QC</span><span class="badge-label">Agreed inspection plan</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-overview" id="product-overview">
+      <div class="container">
+        <div class="overview-grid-b">
+          <div class="overview-text-col">
+            <h2 class="section-title">{product.overviewTitle || `${product.label}: Product Overview`}</h2>
+            <div class="overview-body">{product.overview.map((paragraph) => <p>{paragraph}</p>)}</div>
+            <ul class="op-list">
+              {product.overviewPoints.map((item) => <li><div class="op-list-icon" aria-hidden="true">+</div><div><strong>{item.title}</strong><span>{item.text}</span></div></li>)}
+            </ul>
+          </div>
+          <div class="overview-photo-col"><div class="overview-photo-main"><img src={product.overviewImage} alt={product.overviewImageAlt || product.label} loading="lazy" /></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-dark" id="machining-benefits">
+      <div class="container">
+        <div class="text-center"><h2 class="section-title">{product.benefitsTitle || `Why CNCPioneer for ${product.label}?`}</h2><p class="section-intro">{product.benefitsIntro || "Coordinate geometry, material, finishing and inspection around the part's intended function."}</p></div>
+        <div class="why-cards">
+          {product.benefits.map((card, index) => <article class="why-card"><div class="why-card-num" aria-hidden="true">{String(index + 1).padStart(2, "0")}</div><div class="why-card-body"><h3>{card.title}</h3><p>{card.text}</p></div></article>)}
+        </div>
+      </div>
+    </section>
+
+    <ProcurementChecklist details={product.procurement} />
+
+    {product.applications.length === 0 && <span id="industries-applications" aria-hidden="true"></span>}
+    <section class="section-light" id="product-portfolio">
+      <div class="container">
+        <div class="text-center"><h2 class="section-title">{product.portfolioTitle || `${product.label} We Manufacture`}</h2><p class="section-intro">{product.portfolioIntro || "Explore representative configurations and share your drawing for a product-specific review."}</p></div>
+        <div class="portfolio-grid parts-grid">
+          {product.portfolio.map((card) => <article class="portfolio-card"><div class="portfolio-image"><img src={card.image} alt={`${card.title}${card.illustration ? " — design illustration" : ""}`} loading="lazy" />{card.illustration && product.showIllustrationLabels !== false && <span class="illustration-label">Design illustration</span>}</div><h3>{card.title}</h3><p>{card.text}</p></article>)}
+        </div>
+      </div>
+    </section>
+
+    {product.configurations && <section class="section-white" id="product-configurations" aria-labelledby="product-configurations-title">
+      <div class="container">
+        <div class="text-center"><h2 class="section-title" id="product-configurations-title">{product.configurations.title}</h2><p class="section-intro">{product.configurations.intro}</p></div>
+        <div class="portfolio-grid parts-grid">
+          {product.configurations.cards.map((card) => <article class="portfolio-card"><div class="portfolio-image"><img src={card.image} alt={card.title} loading="lazy" /></div><h3>{card.title}</h3><p>{card.text}</p></article>)}
+        </div>
+      </div>
+    </section>}
+
+    {product.applicationDetail && <section class="section-white" id="product-application-detail" aria-labelledby="product-application-detail-title">
+      <div class="container">
+        <div class="text-center"><h2 class="section-title" id="product-application-detail-title">{product.applicationDetail.title}</h2><p class="section-intro">{product.applicationDetail.intro}</p></div>
+        <div class="portfolio-grid parts-grid">
+          {product.applicationDetail.cards.map((card) => <article class="portfolio-card"><div class="portfolio-image"><img src={card.image} alt={card.title} loading="lazy" /></div><h3>{card.title}</h3><p>{card.text}</p></article>)}
+        </div>
+        <div class="application-industry-cta"><p>{product.applicationDetail.note}</p><a class="industry-overview-link" href={product.applicationDetail.industryLink.href}>{product.applicationDetail.industryLink.label}<span aria-hidden="true"> →</span></a></div>
+      </div>
+    </section>}
+
+    {product.applications.length > 0 && <section class="section-white" id="industries-applications">
+      <div class="container">
+        <div class="text-center"><h2 class="section-title">Industries &amp; Applications</h2><p class="section-intro">{product.applicationsIntro || "Match the component to its operating environment, assembly interfaces and documentation requirements."}</p></div>
+        <div class:list={["application-grid industries-grid", product.applications.length === 4 && "industry-grid-four", product.applications.length === 2 && "industry-grid-two", product.applications.length === 1 && "industry-grid-one"]}>
+          {product.applications.map((card) => <article class:list={["application-card has-industry-link", !hasCardIndustryLink(card) && "application-card--summary"]}><img src={card.image} alt={card.imageAlt || card.title} loading="lazy" /><h3>{card.title}</h3><p>{card.text}</p>{hasCardIndustryLink(card) && <a class="industry-link" href={card.href}>{card.linkLabel || `Explore ${(card.industry || card.title).toLowerCase()} machining`}<span aria-hidden="true"> →</span></a>}</article>)}
+        </div>
+        {applicationFooterLinks.map((link) => <div class="application-industry-cta"><p>{link.description}</p><a class="industry-overview-link" href={link.href}>{link.label}<span aria-hidden="true"> →</span></a></div>)}
+      </div>
+    </section>}
+
+    <section class="section-light" id="product-materials">
+      <div class="container">
+        <div class="text-center"><p class="section-kicker">Materials</p><h2 class="section-title">{product.materialsTitle || `Materials for ${product.label}`}</h2><p class="section-intro">{product.materialsIntro || "Confirm the exact grade, delivery condition and finish compatibility with your drawing."}</p></div>
+        {materialGroups.length > 1 && <div class="mat-tabs" data-product-material-tabs aria-label="Filter materials"><button class="mat-tab active" type="button" data-filter="all" aria-pressed="true">All materials</button>{materialGroups.map((group) => <button class="mat-tab" type="button" data-filter={group} aria-pressed="false">{groupNames[group]}</button>)}</div>}
+        <div class="material-grid mat-cards">
+          {product.materials.map((card) => <article class="material-card" data-category={card.category}><div class="mat-swatch" data-material={card.category}></div><div class="mat-card-tag">{card.tag}</div><h3>{card.href ? <a class="material-card-link" href={card.href}>{card.title}<span aria-hidden="true">&nbsp;→</span></a> : card.title}</h3><p>{card.text}</p></article>)}
+        </div>
+        {materialLinks.length > 0 && <nav class="material-page-links" aria-labelledby="product-material-links-title" style={`--material-link-columns: ${Math.min(materialLinks.length, 5)}; --material-link-tablet-columns: ${Math.min(materialLinks.length, 3)}`}>
+          <h3 id="product-material-links-title">Explore Material Machining</h3>
+          <p>Review machining considerations and finishing options for these materials.</p>
+          <ul>{materialLinks.map((link) => <li><a href={link.href}>{link.label}<span aria-hidden="true"> →</span></a></li>)}</ul>
+        </nav>}
+      </div>
+    </section>
+
+    <ProductFinishes heading={product.finishesTitle || `Surface Treatments for ${product.label}`} intro={product.finishesIntro || "Select the finish around the specified material, functional surfaces and service conditions. Confirm process details and acceptance requirements with your drawing."} items={product.finishes} />
+    <ProductQuality capacityHeading={product.capacityTitle} heading={product.qualityTitle || `Quality Control for ${product.label}`} intro={product.qualityIntro || "Review material identity, machining datums, functional dimensions and production records for your component."} capacityIntro={product.capacityIntro || "Machining resources for drawing review, prototypes and repeat-production programs."} stats={product.stats} controls={product.controls} metrics={metrics} standards={product.qualityStandards} referenceNote={product.qualityReferenceNote || "Final tolerances, inspection coverage and acceptance criteria are confirmed against your drawing, material and geometry."} />
+    <ProductFaq items={product.faqs} title={product.faqTitle || `${product.label} FAQ`} id="product-faq" />
+
+    <section class="section-related" id="related-custom-cnc-parts">
+      <div class="container">
+        <h2 class="section-title text-center">Related Custom CNC Parts</h2>
+        <div class="related-grid">
+          {related.map((item) => <a class="related-card" href={`/custom-cnc-parts/${item.slug}`}><img src={productContent[item.slug]?.portfolio[0]?.image || item.image} alt={productContent[item.slug]?.label || item.title} loading="lazy" /><strong>{productContent[item.slug]?.label || item.title}</strong></a>)}
+        </div>
+      </div>
+    </section>
+
+    <QuoteCta id={`product-${page.slug}-quote`} idPrefix={`product-${page.slug}-quote-form`} formName={`${product.label} Part Quote`} kicker="CUSTOM CNC PARTS" title={product.ctaTitle || `Get a Quote for ${product.label}`} description={product.ctaDescription || "Share your drawing or 3D model, material, critical dimensions, finish and order quantity. We’ll review the machining route, inspection scope and delivery requirements."} />
+  </div>
+  <script>
+    for (const root of document.querySelectorAll(".product-page")) {
+      const buttons = Array.from(root.querySelectorAll("[data-product-material-tabs] button"));
+      const cards = Array.from(root.querySelectorAll("#product-materials .material-card"));
+      for (const button of buttons) button.addEventListener("click", () => {
+        const filter = button.getAttribute("data-filter");
+        for (const item of buttons) { item.classList.toggle("active", item === button); item.setAttribute("aria-pressed", String(item === button)); }
+        for (const card of cards) card.hidden = filter !== "all" && card.getAttribute("data-category") !== filter;
+      });
+    }
+  </script>
+</BaseLayout>
+
+<style>
+  .product-page [hidden] { display: none !important; }
+  .product-page .hero h1 { max-width: none; }
+  .product-page .hero .btn-primary, .product-page .hero .btn-secondary { min-height: 48px; font-size: 14px; line-height: 1.4; }
+  .product-page .hero-sub, .product-page .section-intro, .product-page .overview-body p { font-size: 15px; line-height: 1.7; }
+  .product-page .section-intro { max-width: 720px; }
+  .product-page .section-kicker, .product-page .mat-card-tag { font-size: 12px; line-height: 1.5; letter-spacing: 0.4px; }
+  .product-page .hero .trust-item { font-size: 12px; line-height: 1.6; }
+  .product-page .why-card-body h3, .product-page .parts-grid .portfolio-card h3, .product-page .mat-cards .material-card h3 { font-size: 19px; line-height: 1.4; overflow-wrap: anywhere; }
+  .product-page .why-card-body p, .product-page .parts-grid .portfolio-card p, .product-page .mat-cards .material-card p { display: block; font-size: 15px; line-height: 1.7; -webkit-line-clamp: unset; }
+  .product-page .parts-grid .portfolio-card img { width: 100%; height: 200px; object-fit: contain; background: var(--color-white); }
+  .product-page .portfolio-image { position: relative; height: 200px; }
+  .product-page .illustration-label { position: absolute; left: 12px; bottom: 10px; padding: 4px 8px; border: 1px solid var(--color-border); border-radius: 4px; background: rgb(var(--color-white-rgb)/0.96); color: var(--color-body); font-size: 12px; line-height: 1.5; }
+  .product-page .overview-photo-main img { object-fit: contain; background: var(--color-white); }
+  .product-page[data-product-slug="reducer-shaft"] .overview-photo-main img { object-fit: cover; }
+  .product-page .op-list strong { font-size: 16px; line-height: 1.45; }
+  .product-page .op-list span { font-size: 14px; line-height: 1.65; }
+  .product-page .industry-grid-four, .product-page .industry-grid-two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .product-page .industry-grid-one { grid-template-columns: minmax(0, 1fr); max-width: 520px; margin-inline: auto; }
+  .product-page[data-product-slug="bearing-housing"] #industries-applications .industries-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .product-page[data-product-slug="cnc-custom-aluminum-shift-knob"] #industries-applications .application-card img { height: auto; aspect-ratio: 19 / 9; }
+  .product-page[data-product-slug="swiss-machined-parts"] #industries-applications .industries-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: stretch; }
+  .product-page[data-product-slug="swiss-machined-parts"] #industries-applications .industry-link { display: flex; align-items: center; gap: 8px; margin-top: auto; min-height: 48px; font-size: 14px; white-space: nowrap; }
+  .product-page[data-product-slug="swiss-machined-parts"] #industries-applications .industry-link > span { flex-shrink: 0; }
+  .product-page .industries-grid .application-card--summary { padding-bottom: 20px; }
+  .product-page .industries-grid .application-card--summary:hover { transform: none; border-color: var(--np-border); }
+  .product-page .application-industry-cta { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-top: 28px; padding: 24px; border: 1px solid var(--color-border); border-radius: 8px; background: var(--color-surface); }
+  .product-page .application-industry-cta p { max-width: 640px; margin: 0; color: var(--color-body); font-size: 15px; line-height: 1.65; }
+  .product-page .industry-overview-link { display: inline-flex; flex: none; align-items: center; justify-content: center; gap: 8px; min-height: 48px; padding: 12px 20px; border-radius: 5px; background: var(--color-brand); color: var(--color-white); font-size: 14px; font-weight: 600; line-height: 1.5; text-decoration: none; }
+  .product-page .industry-overview-link:hover { background: var(--color-hover); }
+  .product-page .industry-overview-link:focus-visible { outline: 2px solid var(--color-brand); outline-offset: 4px; }
+  .product-page .mat-tabs { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 0 0 24px; }
+  .product-page .mat-tab { min-height: 44px; padding: 10px 16px; border: 1px solid var(--color-border); border-radius: 5px; background: var(--color-white); color: var(--color-ink); font: inherit; font-size: 14px; cursor: pointer; }
+  .product-page .mat-tab.active { border-color: var(--color-brand); background: var(--color-brand); color: var(--color-white); }
+  .product-page .mat-tab:focus-visible, .product-page .related-card:focus-visible { outline: 2px solid var(--color-brand); outline-offset: 3px; }
+  .product-page .material-page-links { margin-top: 28px; padding: 24px; border: 1px solid var(--color-border); border-radius: 8px; background: var(--color-white); }
+  .product-page .material-card-link { color: var(--color-brand); text-decoration: underline; text-underline-offset: 3px; }
+  .product-page .material-card-link:hover { color: var(--color-hover); }
+  .product-page .material-card-link:focus-visible { outline: 2px solid var(--color-brand); outline-offset: 4px; }
+  .product-page .material-page-links h3 { margin: 0 0 8px; font-size: 20px; line-height: 1.4; }
+  .product-page .material-page-links p { margin: 0; color: var(--color-body); font-size: 15px; line-height: 1.65; }
+  .product-page .material-page-links ul { display: grid; grid-template-columns: repeat(var(--material-link-columns, 5), minmax(0, 1fr)); gap: 10px; margin: 16px 0 0; padding: 0; list-style: none; }
+  .product-page[data-product-slug="brass-contact-pins"] .material-page-links ul,
+  .product-page[data-product-slug="liquid-cooling-plate"] .material-page-links ul { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .product-page[data-product-slug="aluminium-alloy-cnc-turning-bushing"] .material-page-links ul { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .product-page[data-product-slug="brass-pipe-fittings"] .material-page-links ul,
+  .product-page[data-product-slug="titanium-swiss-screw-machined-parts"] .material-page-links ul,
+  .product-page[data-product-slug="stainless-steel-precision-turning-shaft"] .material-page-links ul { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .product-page .material-page-links li { display: flex; min-width: 0; }
+  .product-page .material-page-links a { display: inline-flex; align-items: center; justify-content: space-between; gap: 8px; min-height: 44px; width: 100%; padding: 10px 14px; border: 1px solid var(--color-border); border-radius: 5px; color: var(--color-brand); font-size: 14px; font-weight: 600; line-height: 1.5; text-decoration: none; }
+  .product-page .material-page-links a span { flex-shrink: 0; }
+  .product-page .material-page-links a:hover { border-color: var(--color-hover); background: var(--color-surface); }
+  .product-page .material-page-links a:focus-visible { outline: 2px solid var(--color-brand); outline-offset: 3px; }
+  .product-page .mat-swatch[data-material="plastics"] { background: linear-gradient(135deg,var(--color-surface),var(--color-surface),var(--color-surface)); }
+  .product-page .mat-swatch[data-material="special-alloys"] { background: linear-gradient(135deg,var(--color-surface),var(--color-surface),var(--color-border)); }
+  .product-page .mat-swatch[data-material="metals"] { background: linear-gradient(135deg,var(--color-surface),var(--color-surface),var(--color-border)); }
+  .product-page .related-card strong { font-size: 14px; }
+  .product-page .cta-final p { max-width: 720px; font-size: 15px; line-height: 1.7; }
+  .product-page .cta-final .btn-white, .product-page .cta-final .btn-outline-white { min-height: 48px; font-size: 14px; line-height: 1.4; }
+  .product-page .cta-trust-line { font-size: 12px; line-height: 1.6; }
+  @media (max-width: 1100px) {
+    .product-page .material-page-links ul { grid-template-columns: repeat(var(--material-link-tablet-columns, 3), minmax(0, 1fr)); }
+    .product-page[data-product-slug="bearing-housing"] #industries-applications .industries-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  @media (min-width: 769px) and (max-width: 1023px) {
+    .product-page[data-product-slug="swiss-machined-parts"] #industries-applications .industries-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  @media (max-width: 768px) {
+    .product-page[data-product-slug="aluminium-alloy-cnc-turning-bushing"] .material-page-links ul,
+    .product-page[data-product-slug="brass-contact-pins"] .material-page-links ul,
+    .product-page[data-product-slug="liquid-cooling-plate"] .material-page-links ul { grid-template-columns: minmax(0, 1fr); }
+    .product-page[data-product-slug="brass-pipe-fittings"] .material-page-links ul,
+    .product-page[data-product-slug="titanium-swiss-screw-machined-parts"] .material-page-links ul,
+    .product-page[data-product-slug="stainless-steel-precision-turning-shaft"] .material-page-links ul { grid-template-columns: minmax(0, 1fr); }
+    .product-page[data-product-slug="swiss-machined-parts"] #industries-applications .industries-grid { grid-template-columns: minmax(0, 1fr); }
+    .product-page .material-page-links ul { grid-template-columns: minmax(0, 1fr); }
+    .product-page[data-product-slug="bearing-housing"] #industries-applications .industries-grid { grid-template-columns: minmax(0, 1fr); }
+    .product-page .application-industry-cta { flex-direction: column; align-items: stretch; gap: 18px; padding: 20px; }
+    .product-page .industry-grid-four, .product-page .industry-grid-two { grid-template-columns: minmax(0, 1fr); }
+    .product-page .parts-grid .portfolio-card img { height: 210px; }
+    .product-page .portfolio-image { height: 210px; }
+    .product-page .op-list span { font-size: 15px; }
+    .product-page .why-card-body h3, .product-page .parts-grid .portfolio-card h3, .product-page .mat-cards .material-card h3 { font-size: 18px; }
+    .product-page .related-card strong { font-size: 14px; overflow-wrap: anywhere; }
+  }
+</style>
+
+<style is:global>
+  @media (max-width: 768px) {
+    .native-product.product-detail-template[data-scope-reviewed="true"] :is(.container, .hero-inner, .cta-final-inner, .finishes-container, .qc-container, .flange-faq-container) { padding-inline: 24px; }
+    .native-product.product-detail-template[data-scope-reviewed="true"] > .procurement { width: calc(100% - 48px); padding-inline: 20px; }
+  }
+  @media (max-width: 480px) {
+    .native-product.product-detail-template[data-scope-reviewed="true"] .hero-ctas { grid-template-columns: minmax(0, 1fr); }
+  }
+</style>

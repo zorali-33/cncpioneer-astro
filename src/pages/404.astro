@@ -1,0 +1,95 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const seo = {
+  title: "Page Not Found | CNCPioneer",
+  description: "The page you were looking for does not exist. Return to CNCPioneer to explore our CNC machining services, materials, and custom parts.",
+  robots: "noindex, follow",
+  type: "website",
+  includeOgImage: false,
+};
+---
+
+<BaseLayout seo={seo}>
+  <div class="not-found" aria-labelledby="not-found-title" aria-describedby="not-found-description">
+    <div class="not-found__inner">
+      <h1 id="not-found-title" aria-label="404: Page not found">404</h1>
+      <p id="not-found-description">The page you were looking for does not exist</p>
+      <a class="not-found__home" href="/">Back Home</a>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .not-found {
+    display: grid;
+    min-height: 428px;
+    place-items: center;
+    padding: 24px 20px 10px;
+    background: var(--color-surface);
+    text-align: center;
+  }
+
+  .not-found__inner {
+    display: flex;
+    width: min(var(--layout-shell), 100%);
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .not-found h1 {
+    margin: 0;
+    color: var(--navy,var(--color-ink));
+    font-size: clamp(120px, 18vw, 200px);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+
+  .not-found p {
+    margin: 40px 0 74px;
+    color: var(--text,var(--color-body));
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
+  .not-found__home {
+    display: inline-flex;
+    min-width: 204px;
+    min-height: 50px;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 32px;
+    border-radius: 999px;
+    background: var(--blue,var(--color-brand));
+    color: var(--color-white);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    text-decoration: none;
+  }
+
+  .not-found__home:hover {
+    background: var(--color-hover);
+  }
+
+  .not-found__home:focus-visible {
+    outline: 3px solid var(--navy,var(--color-brand));
+    outline-offset: 4px;
+  }
+
+  @media (max-width: 767px) {
+    .not-found {
+      min-height: 375px;
+      padding: 40px 20px 44px;
+    }
+
+    .not-found p {
+      max-width: 30ch;
+      margin: 28px 0 40px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+  }
+</style>

@@ -1,0 +1,452 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import QuoteCta from "./QuoteCta.astro";
+import PageHero from "./PageHero.astro";
+import FaqList from "./FaqList.astro";
+
+const { seo, hero, parts, faqs } = Astro.props;
+
+const metalTypes = [
+  {
+    title: "Stainless Steel",
+    text:
+      "Stainless steel stands out as a highly adaptable and widely favored material, prized for its outstanding strength, long-lasting durability, excellent resistance to high temperatures, and superior corrosion protection. It finds extensive use across numerous sectors, including construction, automotive, aerospace, medical, food processing, and general manufacturing. Common applications encompass heat exchangers, exhaust manifolds, industrial furnaces, structural components, heavy-duty machinery parts, engine elements, bolts and screws, turbine components, storage vessels, pumps, control valves, surgical instruments, orthopedic devices, and precision medical tools.",
+    bullets: [
+      "Mill Lead Time: As fast as 7 days",
+      "Finishing Options: Black Oxide, Electropolishing, ENP, Media Blasting, Nickel Plating, Passivation, Powder Coating, Tumble Polishing, Zinc Plating, Vibratory Tumbling",
+      "Alloys: 303, 304, 316L, 410, 416, 420, 440C, 17-4PH",
+    ],
+    href: "/materials/stainless-steel-cnc-machining",
+    image: "/wp-content/uploads/2026/01/stainless-steel-material.jpg",
+    alt: "stainless steel CNC machining material",
+  },
+  {
+    title: "Aluminum",
+    text:
+      "Aluminum is a lightweight, highly versatile material renowned for its excellent strength-to-weight ratio, superior machinability, good corrosion resistance, and exceptional thermal and electrical conductivity. It is extensively utilized across industries such as automotive, aerospace, construction, electronics, marine, and medical, with applications including aircraft structures, engine components, heat sinks, wheels and chassis parts, body panels, frames and extrusions, enclosures, brackets, fixtures, medical devices, consumer electronics housings, and marine fittings.",
+    bullets: [
+      "Mill Lead Time: As fast as 7 days",
+      "Finishing Options: Anodizing (Type II & III), Chem Film (Chromate Conversion), Powder Coating, Media Blasting, Bead Blasting, Electropolishing, Polishing, Painting, Clear Coating, Vibratory Tumbling",
+      "Alloys: 6061, 7075, 2024, 5052, 6063, 5083, 6082, 2011, MIC-6 (cast)",
+    ],
+    href: "/materials/aluminum-cnc-machining",
+    image: "/wp-content/uploads/2026/01/aluminum-cnc-machining-material.jpg",
+    alt: "aluminum cnc machining material",
+  },
+  {
+    title: "Brass",
+    text:
+      "Brass is a highly workable and attractive metal alloy prized for its excellent machinability, good corrosion resistance, and distinctive golden appearance. It combines impressive strength with superior electrical and thermal conductivity, making it a go-to material for components that require both functionality and aesthetic appeal. Brass is widely used in plumbing fittings, valves, connectors, musical instruments, decorative hardware, electrical terminals, gears, bushings, marine components, and precision turned parts.",
+    bullets: [
+      "Mill Lead Time: As fast as 5 days",
+      "Finishing Options: Bright Dip, Chemical Polishing, Electropolishing, Media Blasting, Nickel Plating, Passivation, Powder Coating, Tumble Polishing, Vibratory Tumbling, Gold Plating, Lacquer Coating",
+      "Alloys: C36000 (free-cutting brass), C3604, C37700, C26000 (cartridge brass), C28000 (Muntz metal), C46400 (naval brass), C48500",
+    ],
+    href: "/materials/brass-cnc-machining",
+    image: "/wp-content/uploads/2026/01/material-cnc-machining-brass.jpg",
+    alt: "material cnc machining brass",
+  },
+  {
+    title: "Bronze",
+    text:
+      "Bronze is a timeless and highly reliable material, celebrated for its excellent wear resistance, low friction properties, superior corrosion resistance (especially in marine and harsh environments), good machinability, and attractive golden-brown appearance. It serves as a go-to choice in industries such as marine, automotive, heavy machinery, aerospace, oil & gas, bearings manufacturing, and general engineering. Typical applications include bushings, bearings, gears, pump components, valve bodies, marine propellers and fittings, hydraulic parts, wear plates, sleeves, fasteners, impellers, and heavy-load structural elements.",
+    bullets: [
+      "Mill Lead Time: As fast as 5 days",
+      "Finishing Options: Black Oxide, Electropolishing, Media Blasting, Nickel Plating, Passivation, Powder Coating, Tumble Polishing, Vibratory Tumbling, Chemical Patina, Clear Coating",
+      "Alloys: C93200, C95400, C51000, C62300, C63000, C86300, C65500, C64200, SAE 660",
+    ],
+    href: "/materials/bronze-cnc-machining",
+    image: "/wp-content/uploads/2026/01/bronze-cnc-machining-material​.jpg",
+    alt: "bronze cnc machining material",
+  },
+  {
+    title: "Copper",
+    text:
+      "Copper is a highly valued and versatile material, renowned for its exceptional electrical and thermal conductivity, outstanding corrosion resistance, excellent ductility, and natural antimicrobial properties. It is extensively utilized across industries such as electronics, electrical, plumbing, automotive, aerospace, telecommunications, power generation, and precision manufacturing. Typical applications include electrical connectors, busbars, heat sinks, waveguides, radiators, plumbing fittings, valves, terminals, switches, coils, antennas, semiconductor components, and various conductive hardware.",
+    bullets: [
+      "Mill Lead Time: As fast as 5 days",
+      "Finishing Options: Black Oxide, Electropolishing, ENP, Media Blasting, Nickel Plating, Passivation, Powder Coating, Tumble Polishing, Zinc Plating, Vibratory Tumbling",
+      "C101, C110, C145, C360, C932, C36000, C14500, C11000",
+    ],
+    href: "/materials/copper-cnc-machining",
+    image: "/wp-content/uploads/2026/01/copper-cnc-machining-material.jpg",
+    alt: "copper cnc machining material",
+  },
+  {
+    title: "Magnesium",
+    text:
+      "Magnesium is the lightest structural metal in widespread use, renowned for its exceptional strength-to-weight ratio, outstanding machinability, excellent vibration damping, and good thermal conductivity. It delivers significant weight savings compared to aluminum (about 35% lighter) and steel (about 75% lighter), making it a preferred choice in weight-critical applications. Magnesium sees broad adoption in industries such as automotive, aerospace, electronics, medical devices, sports equipment, and consumer products. Typical uses include gearbox housings, transmission cases, wheel rims, drone frames, laptop chassis, helicopter components, orthopedic implants, surgical tools, bicycle parts, camera bodies, and heat sinks.",
+    bullets: [
+      "Mill Lead Time: As fast as 5 days",
+      "Finishing Options: Black Oxide, Electropolishing, Media Blasting, Powder Coating, Anodizing (specialized), Passivation, Chem Film, Vibratory Tumbling, Tumble Polishing, Nickel Plating",
+      "Alloys: AZ31B, AZ61, AZ80, AZ91D, WE43, WE54, ZK60, AM60, Elektron series",
+    ],
+    href: "/materials/magnesium-cnc-machining",
+    image: "/wp-content/uploads/2026/01/magnesium-cnc-machining-material.jpg",
+    alt: "magnesium cnc machining material",
+  },
+  {
+    title: "Titanium",
+    text:
+      "Titanium is a premium, lightweight material renowned for its exceptional strength-to-weight ratio, outstanding corrosion resistance, biocompatibility, and ability to perform in high-temperature and harsh environments. It excels in demanding sectors such as aerospace, medical devices, automotive racing, marine, and energy, where components require superior durability, reduced weight, and long-term reliability. Typical applications include aircraft structural parts, turbine blades and engine components, orthopedic implants and surgical tools, prosthetics, exhaust systems, fasteners, downhole tools for oil & gas, and high-performance racing parts.",
+    bullets: [
+      "Mill Lead Time: As fast as 5 days",
+      "Finishing Options: Anodizing (Type II & III for color and wear resistance), Passivation, Bead/Media Blasting, Polishing, Powder Coating, PVD Coating, Tumble Polishing, Electropolishing, Chem Film",
+      "Alloys: Grade 2, Grade 5 (Ti-6Al-4V), Grade 23 (Ti-6Al-4V ELI), Grade 9, Ti-6Al-7Nb",
+    ],
+    href: "/materials/titanium-cnc-machining",
+    image: "/wp-content/uploads/2026/01/material-cnc-machining-titanium.jpg",
+    alt: "Titanium CNC Machining Service",
+  },
+  {
+    title: "Nitinol",
+    text:
+      "Nitinol is a remarkable nickel-titanium shape memory alloy, celebrated for its extraordinary superelasticity, shape memory effect, exceptional biocompatibility, high fatigue resistance, and strong corrosion protection. It is extensively employed in advanced sectors such as medical devices, minimally invasive surgery, orthopedics, aerospace, robotics, and actuators, with key applications including vascular stents, self-expanding heart valve frames, guidewires, catheter reinforcement, orthopedic implants, stone retrieval baskets, orthodontic archwires, surgical instruments, aerospace actuators, deployable structures, and temperature-responsive sensors.",
+    bullets: [
+      "Mill Lead Time: As fast as 10 days",
+      "Finishing Options: Electropolishing, Passivation, Oxide Layer Formation, Mechanical Polishing, Laser Etching, Tumble Finishing, Media Blasting, Chemical Etching, Black Oxide (limited), Vibratory Tumbling",
+      "Alloys: Binary NiTi (Superelastic), Binary NiTi (Shape Memory), NiTi #8 (Af ~37°C), NiTiNb, NiTiCu, NiTiCr, ASTM F2063 Grade",
+    ],
+    href: "/materials/nitinol-cnc-machining",
+    image: "/wp-content/uploads/2026/01/nitinol-material.jpg",
+    alt: "nitinol material",
+  },
+  {
+    title: "Alloy Steel",
+    text:
+      "Alloy Steel is a highly robust and adaptable material, renowned for its superior strength, excellent toughness, outstanding wear resistance, and enhanced hardenability through heat treatment. It is extensively employed across industries such as automotive, heavy machinery, oil & gas, construction, aerospace, tooling, and general manufacturing. Typical applications include gears, crankshafts, shafts, axles, connecting rods, heavy-duty fasteners, drill bits, dies, structural components, landing gear, high-stress machinery parts, tools, and pressure vessels.",
+    bullets: [
+      "Mill Lead Time: As fast as 7 days",
+      "Finishing Options: Black Oxide, Electropolishing, ENP, Media Blasting, Nickel Plating, Passivation, Powder Coating, Tumble Polishing, Zinc Plating, Vibratory Tumbling",
+      "Alloys: 4130, 4140, 4340, 8620, 4150, 6150, 9310, 300M",
+    ],
+    href: "/materials/alloy-steel-cnc-machining",
+    image: "/wp-content/uploads/2026/01/alloy-steel-cnc-machining-material.jpg",
+    alt: "Alloy Steel CNC Machining Service",
+  },
+  {
+    title: "Carbon Steel",
+    text:
+      "Carbon steel is a widely used and cost-effective material, renowned for its excellent strength, high machinability, good weldability (especially in lower grades), and versatility in structural and mechanical applications. It excels in scenarios where high volume, affordability, and robust mechanical performance are prioritized over corrosion resistance. It is extensively employed across industries such as construction, automotive, machinery, infrastructure, agriculture, oil & gas, and general fabrication, with typical uses including structural beams, shafts, gears, axles, fasteners, brackets, machinery frames, automotive components, pipelines, tools, agricultural equipment, and heavy-duty frames.",
+    bullets: [
+      "Mill Lead Time: As fast as 7 days",
+      "Finishing Options: Black Oxide, Media Blasting, Powder Coating, Zinc Plating, Nickel Plating, Passivation (for select grades), Tumble Polishing, Vibratory Tumbling, Phosphate Coating, Electropolishing (limited)",
+      "Alloys: 1018, 1020, 1045, A36, 1144, 12L14, 4140, 4340, 8620",
+    ],
+    href: "/materials/carbon-steel-cnc-machining",
+    image: "/wp-content/uploads/2026/01/carbon-steel-cnc-machining-material.jpg",
+    alt: "Carbon Steel CNC Machining Service",
+  },
+  {
+    title: "Kovar",
+    text:
+      "Kovar is a specialized controlled-expansion alloy, renowned for its precisely matched thermal expansion coefficient to borosilicate glass and certain ceramics, ensuring reliable hermetic seals under temperature variations. It offers excellent dimensional stability, good machinability, corrosion resistance, and compatibility with glass-to-metal sealing processes. This alloy is extensively employed in high-reliability industries such as electronics, telecommunications, aerospace, defense, scientific instrumentation, and vacuum technology. Typical applications include hermetic seals, glass-to-metal feedthroughs, electronic packages, microelectronic housings, vacuum tube components, X-ray tube parts, microwave tube elements, power tube leads, semiconductor packages, aerospace sensors, and precision scientific apparatus.",
+    bullets: [
+      "Mill Lead Time: As fast as 7 days",
+      "Finishing Options: Black Oxide, Electropolishing, ENP, Media Blasting, Nickel Plating, Passivation, Powder Coating, Tumble Polishing, Zinc Plating, Vibratory Tumbling",
+      "Alloys: Kovar (ASTM F15)",
+    ],
+    href: "/materials/kovar-cnc-machining",
+    image: "/wp-content/uploads/2026/01/kovar-material.jpg",
+    alt: "Kovar Material",
+  },
+  {
+    title: "Inconel",
+    text:
+      "Inconel is a renowned family of nickel-chromium-based superalloys, highly valued for its superior high-temperature strength, exceptional oxidation and corrosion resistance, and outstanding performance under extreme pressure and harsh environments. It is extensively employed in demanding sectors such as aerospace, oil and gas, chemical processing, power generation, marine engineering, and nuclear industries. Typical applications include turbine blades and engine components, exhaust systems, heat shields, combustion chambers, downhole tooling, chemical reactors, pressure vessels, heat exchangers, rocket motor casings, and high-performance fasteners.",
+    bullets: [
+      "Mill Lead Time: As fast as 7 days",
+      "Finishing Options: Black Oxide, Electropolishing, ENP, Media Blasting, Nickel Plating, Passivation, Powder Coating, Tumble Polishing, Zinc Plating, Vibratory Tumbling",
+      "Alloys: 600, 625, 718, 601, 825, X-750, 690",
+    ],
+    href: "/materials/inconel-cnc-machining",
+    image: "/wp-content/uploads/2026/01/inconel-material.jpg",
+    alt: "inconel material",
+  },
+  {
+    title: "Invar",
+    text:
+      "Invar is a specialized nickel-iron alloy renowned for its exceptionally low coefficient of thermal expansion, combined with good mechanical strength, ductility, and moderate corrosion resistance in dry environments. It excels in maintaining dimensional stability across wide temperature ranges, making it a preferred choice for precision-critical applications in industries such as aerospace, optics, electronics, instrumentation, metrology, and composite tooling. Typical uses include precision instruments, optical and laser system components, shadow masks in displays, cryogenic containers, large aerostructure molds, engine valve components, measuring tools, seismic gauges, aircraft controls, bimetal thermostats, and structural supports requiring minimal thermal distortion.",
+    bullets: [
+      "Mill Lead Time: As fast as 7 days",
+      "Finishing Options: Black Oxide, Electropolishing, ENP, Media Blasting, Nickel Plating, Passivation, Powder Coating, Tumble Polishing, Zinc Plating, Vibratory Tumbling",
+      "Invar 36, Free-Cut Invar 36, Super Invar 32-5, Invar 42,",
+    ],
+    href: "/materials/invar-cnc-machining",
+    image: "/wp-content/uploads/2026/01/invar-material.jpg",
+    alt: "invar material",
+  },
+];
+
+const serviceCards = [
+  {
+    title: "Swiss Machining",
+    image: "/wp-content/uploads/2025/12/swiss-machining-service-540x260-1.png",
+    text:
+      "Swiss machining: ultra-precise, small-diameter complex parts machined from bar stock in a single setup - with micron-level tolerances and zero secondary operations.",
+    href: "/services/swiss-machining",
+    label: "Swiss Machining Services",
+  },
+  {
+    title: "CNC Turning and Milling",
+    image: "/wp-content/uploads/2025/12/cnc-turning-and-milling-services-540x260-1.png",
+    text:
+      "CNC turning with live tooling combines both lathe and mill capabilities to machine parts with cylindrical features from metal rod stock.",
+    href: "/services/cnc-turning-and-milling",
+    label: "CNC Turning and Milling Services",
+  },
+];
+
+const industries = [
+  { name: "Semiconductor", image: "/wp-content/uploads/2025/12/semiconductor.jpg" },
+  { name: "Railway", image: "/wp-content/uploads/2025/12/railway.jpg" },
+  { name: "Oil & Gas", image: "/wp-content/uploads/2025/12/oil-gas.jpg" },
+  { name: "Medical", image: "/wp-content/uploads/2025/12/medical.jpg" },
+  { name: "Defense", image: "/wp-content/uploads/2025/12/defense.jpg" },
+  { name: "Consumer Electronics", image: "/wp-content/uploads/2025/12/consumer-electronics.jpg" },
+  { name: "Automotive", image: "/wp-content/uploads/2025/12/automotive.jpg" },
+  { name: "Aerospace", image: "/wp-content/uploads/2025/12/aerospace.jpg" },
+];
+
+const partsIntro =
+  "CNC Metal Machining is suitable for a wide range of materials including metals (aluminum, brass, stainless steel, alloy steels, titanium, copper alloys, superalloys), engineering plastics, magnesium alloys, and special controlled-expansion alloys. The suitability depends on the material's machinability. Here are the materials we can provide for Metal CNC Machining.";
+
+const industriesIntro =
+  "Metal CNC Machining is trusted across the most demanding industries for producing high-precision, complex geometry, and high-value critical components: aerospace, medical implants & instruments, energy & petrochemical, and defense & military.";
+---
+<BaseLayout seo={seo}>
+  <PageHero
+    title={hero.title}
+    image={hero.image}
+    crumbs={[{ label: "Materials", href: "/materials" }, { label: hero.title }]}
+    description={hero.description}
+  />
+
+  <section class="section metal-types" data-metal-tabs>
+    <h2>Types of Metal CNC Machining</h2>
+    <div class="metal-tabs__list" role="tablist" aria-label="Types of Metal CNC Machining">
+      {metalTypes.map((item, index) => (
+        <button
+          id={`metal-tab-${index}`}
+          class={`metal-tab${index === 0 ? " is-active" : ""}`}
+          type="button"
+          role="tab"
+          aria-selected={index === 0 ? "true" : "false"}
+          aria-controls={`metal-panel-${index}`}
+          tabindex={index === 0 ? "0" : "-1"}
+          data-metal-tab
+        >
+          {item.title}
+        </button>
+      ))}
+    </div>
+    <div class="metal-tabs__panels">
+      {metalTypes.map((item, index) => (
+        <article
+          id={`metal-panel-${index}`}
+          class={`metal-panel${index === 0 ? " is-active" : ""}`}
+          role="tabpanel"
+          aria-labelledby={`metal-tab-${index}`}
+          hidden={index !== 0}
+          data-metal-panel
+        >
+          <div class="metal-panel__copy">
+            <h3>{item.title}</h3>
+            <p>{item.text}</p>
+            <ul class="check-list">{item.bullets.map((bullet) => <li>{bullet}</li>)}</ul>
+            <a class="button button--small" href={item.href}>Learn More</a>
+          </div>
+          <div class="metal-panel__media">
+            <img src={item.image} alt={item.alt} loading="eager" decoding="async" width="720" height="480" />
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section material-capabilities">
+    <h2>Metal CNC Services and Capabilities</h2>
+    <div class="material-service-grid">
+      {serviceCards.map((card) => (
+        <article class="material-service-card">
+          <a class="material-service-card__image" href={card.href} aria-label={card.title}>
+            <img src={card.image} alt={card.title} loading="lazy" />
+          </a>
+          <div class="material-service-card__content">
+            <h3>{card.title}</h3>
+            <p>{card.text}</p>
+            <div class="material-service-card__links">
+              <a href="/cnc-machining-quote">Quote Now -&gt;</a>
+              <a href={card.href}>{card.label} -&gt;</a>
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section metal-slider-section">
+    <h2>Available Parts for Metal CNC Machining</h2>
+    <p class="section__intro">{partsIntro}</p>
+    <div class="metal-slider" data-metal-slider>
+      <button class="metal-slider__button metal-slider__button--prev" type="button" aria-label="Previous parts" data-slider-prev>‹</button>
+      <div class="metal-slider__viewport" role="region" aria-roledescription="carousel" aria-label="Available Parts for Metal CNC Machining">
+        <div class="metal-slider__track" data-slider-track>
+          {parts.map((part) => (
+            <figure class="metal-slide">
+              <img src={part.image} alt={part.alt || part.name} loading="lazy" />
+              <figcaption>{part.name}</figcaption>
+            </figure>
+          ))}
+        </div>
+      </div>
+      <button class="metal-slider__button metal-slider__button--next" type="button" aria-label="Next parts" data-slider-next>›</button>
+      <div class="metal-slider__dots" aria-label="Parts carousel pagination" data-slider-dots></div>
+    </div>
+  </section>
+
+  <section class="section metal-slider-section metal-industries-section">
+    <h2>Industries We Serve with Metal CNC Machining</h2>
+    <p class="section__intro">{industriesIntro}</p>
+    <div class="metal-slider metal-slider--industries" data-metal-slider>
+      <button class="metal-slider__button metal-slider__button--prev" type="button" aria-label="Previous industries" data-slider-prev>‹</button>
+      <div class="metal-slider__viewport" role="region" aria-roledescription="carousel" aria-label="Industries We Serve with Metal CNC Machining">
+        <div class="metal-slider__track" data-slider-track>
+          {industries.map((industry) => (
+            <figure class="metal-slide">
+              <img src={industry.image} alt={industry.name} loading="lazy" />
+              <figcaption>{industry.name}</figcaption>
+            </figure>
+          ))}
+        </div>
+      </div>
+      <button class="metal-slider__button metal-slider__button--next" type="button" aria-label="Next industries" data-slider-next>›</button>
+      <div class="metal-slider__dots" aria-label="Industries carousel pagination" data-slider-dots></div>
+    </div>
+  </section>
+
+  {faqs.length > 0 && <FaqList items={faqs} variant="material" />}
+
+  <QuoteCta id="metal-material-quote" idPrefix={`metal-material-quote-form-${hero.title.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`} formName={`${hero.title} Machining Enquiry`} kicker="MATERIAL SELECTION" title={`Plan your ${hero.title} machining project`} description="Share the alloy grade, drawing, quantity and surface requirements for a review of process and inspection scope." />
+</BaseLayout>
+
+<script is:inline>
+  (() => {
+    const tabRoots = document.querySelectorAll("[data-metal-tabs]");
+
+    tabRoots.forEach((root) => {
+      const tabs = Array.from(root.querySelectorAll("[data-metal-tab]"));
+      const panels = Array.from(root.querySelectorAll("[data-metal-panel]"));
+
+      const activate = (index) => {
+        tabs.forEach((tab, tabIndex) => {
+          const active = tabIndex === index;
+          tab.classList.toggle("is-active", active);
+          tab.setAttribute("aria-selected", String(active));
+          tab.setAttribute("tabindex", active ? "0" : "-1");
+        });
+        panels.forEach((panel, panelIndex) => {
+          const active = panelIndex === index;
+          panel.hidden = !active;
+          panel.classList.toggle("is-active", active);
+        });
+      };
+
+      tabs.forEach((tab, index) => {
+        tab.addEventListener("click", () => activate(index));
+        tab.addEventListener("keydown", (event) => {
+          if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
+          event.preventDefault();
+          const current = tabs.indexOf(tab);
+          const next =
+            event.key === "Home"
+              ? 0
+              : event.key === "End"
+                ? tabs.length - 1
+                : event.key === "ArrowRight"
+                  ? (current + 1) % tabs.length
+                  : (current - 1 + tabs.length) % tabs.length;
+          activate(next);
+          tabs[next].focus();
+        });
+      });
+    });
+
+    const sliders = document.querySelectorAll("[data-metal-slider]");
+
+    sliders.forEach((slider) => {
+      const track = slider.querySelector("[data-slider-track]");
+      const prev = slider.querySelector("[data-slider-prev]");
+      const next = slider.querySelector("[data-slider-next]");
+      const dotsRoot = slider.querySelector("[data-slider-dots]");
+      const slides = Array.from(track?.children || []);
+      if (!track || !prev || !next || !dotsRoot || slides.length === 0) return;
+
+      let index = 0;
+      let timer = 0;
+      const perView = () => (window.matchMedia("(max-width: 700px)").matches ? 1 : window.matchMedia("(max-width: 1024px)").matches ? 2 : 3);
+      const maxIndex = () => Math.max(0, slides.length - perView());
+      const dotCount = () => maxIndex() + 1;
+
+      const renderDots = () => {
+        dotsRoot.innerHTML = "";
+        for (let i = 0; i < dotCount(); i += 1) {
+          const dot = document.createElement("button");
+          dot.type = "button";
+          dot.className = "metal-slider__dot";
+          dot.setAttribute("aria-label", `Go to slide ${i + 1}`);
+          dot.addEventListener("click", () => {
+            index = i;
+            update();
+            schedule();
+          });
+          dotsRoot.append(dot);
+        }
+      };
+
+      const update = () => {
+        index = Math.min(Math.max(index, 0), maxIndex());
+        const slide = slides[0];
+        const gap = parseFloat(window.getComputedStyle(track).gap || "0") || 0;
+        const distance = slide.getBoundingClientRect().width + gap;
+        track.style.transform = `translate3d(${-index * distance}px, 0, 0)`;
+        prev.disabled = index === 0;
+        next.disabled = index === maxIndex();
+        Array.from(dotsRoot.children).forEach((dot, dotIndex) => {
+          dot.classList.toggle("is-active", dotIndex === index);
+        });
+      };
+
+      const go = (direction) => {
+        index = direction === "next" ? (index >= maxIndex() ? 0 : index + 1) : (index <= 0 ? maxIndex() : index - 1);
+        update();
+      };
+
+      const schedule = () => {
+        window.clearInterval(timer);
+        timer = window.setInterval(() => go("next"), 5000);
+      };
+
+      prev.addEventListener("click", () => {
+        go("prev");
+        schedule();
+      });
+      next.addEventListener("click", () => {
+        go("next");
+        schedule();
+      });
+      slider.addEventListener("mouseenter", () => window.clearInterval(timer));
+      slider.addEventListener("mouseleave", schedule);
+      slider.addEventListener("focusin", () => window.clearInterval(timer));
+      slider.addEventListener("focusout", schedule);
+      window.addEventListener("resize", () => {
+        renderDots();
+        update();
+      });
+
+      renderDots();
+      update();
+      schedule();
+    });
+  })();
+</script>

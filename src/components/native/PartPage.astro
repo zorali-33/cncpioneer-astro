@@ -1,0 +1,581 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import QuoteCta from "./QuoteCta.astro";
+import FlangeSurfaceTreatments from "./FlangeSurfaceTreatments.astro";
+import FlangeQualityControl from "./FlangeQualityControl.astro";
+import FlangeFaq from "./FlangeFaq.astro";
+
+const { page, related = [] } = Astro.props;
+const sections = page.sections.filter((section) => section.heading);
+const gallery = page.gallery.slice(0, 8);
+const overview = sections[0];
+const why = sections.find((section) => section.heading.toLowerCase().startsWith("why"));
+const portfolio = sections.find((section) => {
+  const heading = section.heading.toLowerCase();
+  return heading.includes("portfolio") || heading.includes("we manufacture");
+});
+const applications = sections.find((section) => section.heading.toLowerCase().includes("industries"));
+const materials = sections.find((section) => {
+  const heading = section.heading.toLowerCase();
+  return heading.includes("material") || heading.includes("grade");
+});
+const treatments = sections.find((section) => section.heading.toLowerCase().includes("surface"));
+const quality = sections.find((section) => section.heading.toLowerCase().includes("quality"));
+const heroImage = gallery[0]?.image || page.image;
+const overviewImage = overview?.image || gallery[1]?.image || page.image;
+const titleWords = page.title.split(/\s+/);
+const titleLead = titleWords.length > 2 ? titleWords.slice(0, -2).join(" ") : page.title;
+const titleAccent = titleWords.length > 2 ? titleWords.slice(-2).join(" ") : "";
+const isSpringLoaded = page.slug === "spring-loaded-test-pins";
+const isStainlessFlanges = page.slug === "stainless-steel-cnc-turning-flanges";
+const splitItem = (item) => {
+  const parts = item.split(/(?<=\.)\s+/);
+  return {
+    title: parts[0]?.replace(/\.$/, "") || item,
+    text: parts.slice(1).join(" ") || item,
+  };
+};
+const flangeOverviewParagraphs = [
+  "CNC turning of stainless steel flanges is the precision computer-controlled turning, facing, boring, threading, and integrated C-axis milling process — executed on 66+ MAZAK mill-turn centers with live tooling and full C-axis, 78+ Swiss CNC lathes for small-diameter programs, and MAZAK VARIAXIS 5-axis for compound-geometry exhaust manifold flanges — that produces the complete family of circular, disc, and ring metallic connection elements from stainless steel alloys for sealing, connecting, and structurally joining pipes, tubes, vessels, housings, and mechanical systems across every industry where corrosion resistance, hygienic surface quality, elevated temperature performance, or pressure vessel integrity governs material selection.",
+  "The stainless steel CNC turning flange is among the most geometrically deceptive precision components in industrial manufacturing: appearing simple from its essentially flat-disc geometry, the flange's functional performance depends entirely on dimensional relationships that are each individually achievable by standard turning but collectively require MAZAK mill-turn single-setup datum preservation to achieve simultaneously. Face flatness 0.010mm/100mm, bore ±0.005mm, bolt circle ±0.020mm true position, and raised face height ±0.050mm must all derive from the same turning center datum — the structural reason why CNCPioneer's mill-turn approach produces flanges that mate and align without the shimming, bolt hole filing, and face lapping that dimensionally non-conforming flanges require at installation.",
+];
+const flangeOverviewItems = [
+  ["MAZAK mill-turn single-setup geometric coherence", "Flange face turned to 0.010mm/100mm flatness; bore bored to ±0.005mm; bolt circle drilled by C-axis indexed live tooling — all from one spindle datum. Bolt hole true position ±0.020mm from bore axis achieved in production, eliminating the ±0.050–0.150mm re-fixturing error of multi-machine sequential operations."],
+  ["Stainless work-hardening management in flange facing", "Minimum feed rate ≥0.10 mm/rev enforced on all 316L and 304 stainless flange facing passes; no programmed dwell at the facing tool center or raised face OD stop; PVD TiAlN positive-rake inserts; 70 bar coolant — producing Ra 0.4–0.8μm face finish consistently rather than the work-hardened Ra 1.6–3.2μm that results from inadequate chip load at the facing pass."],
+  ["Complete flange standard compliance from one source", "ANSI/ASME B16.5 (Class 150–2500), DIN EN 1092-1 (PN6–PN160), JIS B2220 (10K–63K), ASME BPE sanitary (Tri-Clamp SF1–SF4), vacuum flanges (ConFlat CF, KF/QF, ISO-K, ASA), and automotive exhaust OEM-specific — all produced from one IATF 16949/AS9100D quality system with consistent dimensional compliance methodology regardless of the governing standard."],
+  ["40–60% China stainless flange cost advantage", "Precision stainless steel CNC turned flanges from European or North American manufacturers cost 40–60% more than CNCPioneer's IATF 16949-equivalent programs at identical dimensional accuracy, standard compliance, and ASTM A967 passivation quality — decisive economics for competitive process equipment, automotive exhaust, and industrial flange supply chains."],
+].map(([title, text]) => ({ title, text }));
+const flangeLongText = "Face flatness, bore concentricity, bolt circle true position, sealing-face finish, material identity, passivation, and documentation are controlled from one CNC turning and mill-turn process so the flange installs without shimming, filing, rework, or field leakage.";
+const pageVisual = isStainlessFlanges
+  ? {
+      titleLead: "Precision Stainless Steel",
+      titleAccent: "CNC Turning Flange",
+      description: page.description,
+      heroImage: "/wp-content/uploads/2026/09/stainless-steel-cnc-turning-flanges.jpg",
+      overviewImage: "/wp-content/uploads/2026/09/stainless-flange-ansi-din-exhaust-vacuum.jpg",
+      heroBadge: [
+        ["0.010", "mm/100mm Face Flatness"],
+        ["±0.020", "mm Bolt Circle T.P."],
+      ],
+      trust: [
+        "IATF 16949:2016 & AS9100D Certified",
+        "66+ MAZAK Mill-Turn Centers · C-Axis Live Tooling",
+        "Face Flatness 0.010mm/100mm · Bolt Circle ±0.020mm",
+        "ASTM A967 Passivation Standard — All Austenitic SS",
+        "24-Hour Flange DFM & Quote",
+      ],
+      stats: [
+        ["66+", "MAZAK Mill-Turn Centers"],
+        ["0.010mm", "Face Flatness / 100mm"],
+        ["±0.020mm", "Bolt Circle True Position"],
+        ["2M+", "Annual Unit Capacity"],
+      ],
+    }
+  : null;
+const springWhyCards = [
+  ["Plunger and Barrel Geometry for Repeatable Contact", "Controlled plunger diameter, barrel bore, guide length, spring seat, tip, shoulder, and termination enable smooth movement and return. We review clearance, stroke, overtravel, alignment, tip radius, pad, retention, and assembly method."],
+  ["Force, Stroke, and Cycle-Life DFM", "Test fixtures need reliable contact without damage to pads, joints, terminals, or device surfaces. We review free length, working force, spring rate, stroke, compression limit, cycle count, alignment, vibration, and pad finish."],
+  ["PCB, ICT, FCT, Battery, and Functional Test", "Our pins serve bed-of-nails, in-circuit, functional, boundary-scan, battery, connector, semiconductor, and end-of-line test systems with clean handling and fixture-matched replacement planning."],
+  ["Brass, Copper, Stainless Options", "C36000, C14500, C17200, phosphor bronze, stainless options are matched to conductivity, spring interface, resistance, finish, and service environment before production."],
+  ["Gold, Nickel, Tin, and Silver Plating", "Gold supports low-level signals; nickel provides a barrier and wear layer; tin suits solderable or low-resistance interfaces; and silver serves high-conductivity applications."],
+  ["Clean Packaging and Production Documentation", "Programs can include certificates, dimensional reports, force, stroke, resistance records, RoHS/REACH, COC, PPAP, AS9102 FAIR, lot traceability, trays, tubes, reels, and clean packs."],
+];
+const flangeWhyCards = [
+  ["Single-Setup Mill-Turn Accuracy", "Face, bore and bolt circle stay on one datum, helping hold 0.010mm/100mm flatness and +/-0.020mm true position."],
+  ["Controlled Stainless Facing", "Feed, insert geometry and coolant are tuned for 304, 316L stainless to avoid work-hardened sealing faces."],
+  ["C-Axis Port & Bolt Features", "Live tooling supports bolt circles, slots, oval ports and exhaust flange geometry without moving the part between machines."],
+  ["Flange Standards Covered", "ANSI/ASME B16.5, DIN, JIS, ASME BPE, ConFlat/KF/ISO and exhaust OEM drawings can run under one quality workflow."],
+  ["Passivation & Surface Finish", "ASTM A967 passivation, electropolish and gasket-specific Ra targets are matched to sanitary, vacuum or process service."],
+  ["Inspection Documents Ready", "XRF checks, CMM reports, EN 10204 3.1, PPAP, AS9102 FAIR and pressure-test records can be supplied when required."],
+];
+const flangePortfolioCards = [
+  ["ANSI/ASME B16.5 Weld Neck, Blind & Slip-On Flanges — 316L", "/wp-content/uploads/2026/09/ansi-b165-316l-weld-neck-blind-flange.jpg", "Standard North American process pipe flanges in ANSI/ASME B16.5 Class 150 through Class 2500 in 316L (ASTM A182 F316L) — weld neck, blind, slip-on, socket weld, threaded, and lap joint configurations. Weld neck: bore ±0.010mm per pipe schedule; raised face height ±0.050mm (6.4mm for Class 400–2500); face flatness 0.010mm/100mm; weld bevel 37.5° ±2.5° per ASME B16.25; bolt circle ±0.020mm true position from C-axis indexed drill. Blind flanges: face flatness 0.010mm/100mm governing full-pressure gasket uniformity. RTJ (Ring Type Joint) groove: width ±0.020mm, depth ±0.010mm, groove Ra 0.4μm for metal-to-metal ring sealing at Class 900–2500. SII XRF per incoming 316L lot; EN 10204 3.1 mill certificate archived; ASTM A967 passivation standard."],
+  ["Automotive Exhaust Manifold Flanges — 316Ti, 304", "/wp-content/uploads/2026/09/316ti-automotive-exhaust-manifold-flange.jpg", "Stainless steel CNC turning exhaust flanges for automotive and commercial vehicle exhaust systems — cylinder head manifold flanges (316Ti mandatory for sustained 700–950°C service from Ti-stabilized sensitization prevention), turbocharger turbine inlet flanges (5-axis VARIAXIS for divided-scroll geometry), downpipe and converter flanges (304 standard for ≤500°C zones), and muffler connection flanges. Non-circular port bores (oval, D-shape, custom profile from customer DXF) machined by MAZAK mill-turn C-axis live tooling; port position ±0.020mm from bolt circle datum; face flatness 0.020mm; inter-port web ≥2.0mm CMM-verified. SII XRF Ti 0.10–0.60% per 316Ti lot mandatory; IATF 16949 PPAP Level 3; SPC Cpk ≥1.67 on port bore position and face flatness for automotive OEM supply."],
+  ["ASME BPE Tri-Clamp Sanitary Flanges — 316L (3-A, EHEDG)", "/wp-content/uploads/2026/09/asme-bpe-tri-clamp-316l-sanitary-flange.jpg", "316L stainless Tri-Clamp (TC) ferrules and sanitary flanges for pharmaceutical, biotechnology, food, and dairy processing equipment — the most demanding surface finish standard for stainless turned flanges. Ferrule OD ±0.100mm for clamp band engagement; bore Ra ≤0.8μm for 3-A product-contact compliance; ferrule face flatness 0.010mm/30mm; bore-to-face transition radius ≥0.5mm (3-A crevice-free). Electropolish to ASME BPE SF2 (Ra ≤0.38μm) or SF3 (Ra ≤0.25μm) with Ra certificate per EP lot; citric acid ASTM A967 passivation for food-grade applications; C ≤0.030% SII XRF per 316L lot; ISO 13485-compatible documentation for medical-grade programs. DFM verifies 3-A crevice geometry before machining commitment on every sanitary flange program."],
+  ["ConFlat CF, KF, ISO-K Vacuum Flanges — 304L, 316L", "/wp-content/uploads/2026/09/conflat-cf-kf-vacuum-flange.jpg", "Precision vacuum flanges for UHV and high vacuum systems in 304L and 316L — ConFlat (CF) flanges with knife-edge machining (tip height ±0.050mm; 70° included angle ±0.5°; Ra ≤0.4μm for leak rates <10⁻¹⁰ mbar·L/s with copper gasket), KF/QF flanges (O-ring groove width ±0.020mm, depth ±0.010mm, Ra 0.8μm; face flatness 0.010mm/50mm), and ISO-K flanges (O-ring groove ±0.010mm depth, ±0.020mm width). All ConFlat flanges acetone-wiped after machining and individually sealed in polyethylene bags for installation cleanliness. Used in scientific instruments, electron microscopes, particle accelerators, semiconductor process chambers, and space simulation equipment. AS9100D documentation for scientific instrument programs; bolt circle ±0.010mm for ConFlat."],
+  ["DIN EN 1092-1 & JIS B2220 Stainless Flanges — 316L, 304", "/wp-content/uploads/2026/09/din-en-1092-jis-b2220-stainless-flange.jpg", "European DIN EN 1092-1 stainless flanges in PN6 through PN160 (Type 11 weld neck, Type 01 plate/blind, Type 13 hubbed slip-on) and Japanese JIS B2220 stainless flanges in 10K through 63K pressure ratings — for European and Japanese-origin process equipment, LNG plants, and petrochemical installations. Face form B raised face (2mm height) flatness 0.010mm/100mm; bolt hole pattern per DIN EN 1092-1 Table 6 or JIS B2220 Table, true position ±0.020mm; EN 10204 3.1 or JIS G3214-equivalent material certificate per lot; face Ra 3.2–6.3μm for standard spiral wound gasket contact. Architectural and decorative stainless flanges with PVD TiN gold or electrochemical oxide coloring also produced in this program family."],
+  ["Custom Stainless Steel Flanges — Made to Drawing", "/wp-content/uploads/2026/05/stainless-steel-cnc-machining-flange.jpg", "Custom stainless steel flanges with non-standard dimensions, bolt patterns, stepped bores and sealing grooves. Material, tolerances and finish are confirmed against your drawing."],
+].map(([title, image, text]) => ({ title, image, text }));
+const flangePortfolioSummaries = new Map([
+  ["ANSI/ASME B16.5 Weld Neck, Blind & Slip-On Flanges — 316L", "316L process pipe flanges for Class 150-2500 programs, with controlled face flatness, bolt circle accuracy, passivation and material documentation."],
+  ["Automotive Exhaust Manifold Flanges — 316Ti, 304", "316Ti and 304 exhaust flanges with C-axis port machining, heat-resistant material control and IATF 16949 production support."],
+  ["ASME BPE Tri-Clamp Sanitary Flanges — 316L (3-A, EHEDG)", "316L sanitary Tri-Clamp ferrules and flanges for food, pharma and bioprocess equipment, with Ra and electropolish options."],
+  ["ConFlat CF, KF, ISO-K Vacuum Flanges — 304L, 316L", "Precision vacuum flanges for UHV and high-vacuum systems, including ConFlat knife-edge and KF/ISO O-ring groove programs."],
+  ["DIN EN 1092-1 & JIS B2220 Stainless Flanges — 316L, 304", "DIN and JIS stainless flanges for European and Japanese equipment programs, with CMM verification and certificate support."],
+]);
+const flangeIndustryLinks = new Map([
+  ["Aerospace", "/industries/aerospace"],
+  ["Defense", "/industries/defense"],
+  ["Medical", "/industries/medical"],
+  ["Semiconductor", "/industries/semiconductor"],
+  ["Oil & Gas", "/industries/oil-gas"],
+  ["Automotive", "/industries/automotive"],
+]);
+const flangeApplicationCards = [
+  ["Aerospace", "/assets/generated/stainless-flanges/industry-aerospace.webp", "AS9100D stainless flange programs for aircraft support equipment, test systems, vacuum hardware and precision fluid interfaces."],
+  ["Defense", "/assets/generated/stainless-flanges/industry-defense.webp", "Controlled stainless flange machining for radar, vehicle, naval and mission equipment programs requiring traceable documentation."],
+  ["Medical", "/assets/generated/stainless-flanges/industry-medical.webp", "316L sanitary and hygienic stainless flange components for medical equipment, bioprocessing and clean fluid systems."],
+  ["Semiconductor", "/assets/generated/stainless-flanges/industry-semiconductor.webp", "ConFlat, KF, ISO and custom stainless vacuum flanges for semiconductor process, metrology and test equipment."],
+  ["Oil & Gas", "/assets/generated/stainless-flanges/industry-oil-gas.webp", "316L stainless flanges for valves, pumps, instrumentation, offshore systems and corrosion-resistant process service."],
+  ["Automotive", "/assets/generated/stainless-flanges/industry-automotive.webp", "IATF 16949 stainless exhaust and connection flanges with C-axis port machining and repeatable production control."],
+].map(([title, image, text]) => ({ title, image, text, href: flangeIndustryLinks.get(title) }));
+const flangeMaterialCards = [
+  ["316L Stainless (UNS S31603)", "Primary process & hygienic grade", "austenitic", "C ≤0.030%; Mo 2.0–3.0%; PREN 24. Best for chemical, pharmaceutical, food, marine and semiconductor process flanges. ASTM A967 passivation and ASME BPE electropolish options available."],
+  ["304 Stainless (UNS S30400)", "General industrial & food grade", "austenitic", "Cr 18–20%; Ni 8–10.5%; C ≤0.080%. Cost-effective stainless for industrial, food equipment, architectural and lower-temperature automotive flange programs."],
+  ["304L Stainless (UNS S30403)", "Cryogenic, vacuum & weld-critical", "austenitic", "C ≤0.030% verified per lot. Selected for welded flange assemblies, cryogenic service and ConFlat / vacuum flange programs where low carbon and cleanliness matter."],
+  ["303 Free-Machining Stainless", "Best machinability / indoor precision", "austenitic", "S 0.15–0.35% verified. Short-chip machining grade for instrument body flanges and indoor precision mechanisms where maximum corrosion resistance is not required."],
+  ["316Ti Stainless (UNS S31635)", "Automotive exhaust — Ti stabilized", "hightemp", "Ti 0.10–0.60% verified; Mo 2.0–2.5%. Used for sustained 400–900°C exhaust manifold, turbocharger and EGR flange programs with IATF documentation."],
+  ["304H Stainless (UNS S30409)", "Industrial high-temp & power generation", "hightemp", "C 0.04–0.10%. Higher-carbon 304 for boiler, furnace, superheater and power-plant exhaust flange service requiring better creep resistance."],
+  ["17-4PH H900 Stainless (AMS 5643)", "Aerospace & high-pressure instrument", "ph", "HRC 44–47; UTS 1,170–1,310 MPa. High-strength option for aerospace structural, hydraulic and precision instrument flange programs with AS9102 FAIR support."],
+].map(([title, tag, category, text]) => ({ title, tag, category, text }));
+const flangeTreatmentCards = [
+  ["Passivation — ASTM A967 (Standard, Included)", "ASTM A967 passivation — nitric or citric acid — is included at no additional charge on every 303, 304, 304L, 316L, 316Ti stainless steel CNC turned flange delivery from CNCPioneer. Removes free iron from turning and C-axis drilling operations; restores passive chromium oxide at all machined flange surfaces; prevents the free-iron surface rust (brown spots) that develops within 24–48 hours on unpassivated machined stainless flanges in humid environments. Copper sulfate spot test per monthly lot with certificate in standard shipment documentation. Citric acid method preferred for pharmaceutical and food programs — no nitric acid residue on product-contact surfaces. Zero dimensional change from passivation."],
+  ["Electropolishing — ASME BPE SF Grades (Pharma & Food)", "Electropolishing removes 10–20μm per side while simultaneously planarizing the flange face Ra (40–60% Ra reduction) and creating a chromium-enriched passive oxide superior to mechanical passivation — the hygienic surface treatment standard for pharmaceutical, bioprocessing, and food-grade stainless flanges. From CNCPioneer's standard 316L mill-turn flange face Ra 0.8μm: electropolish achieves SF2 (Ra ≤0.38μm) or SF3 (Ra ≤0.25μm) per ASME BPE; Ra certificate per EP lot at 3 positions per flange. Pre-EP machined Ra target calculated to achieve SF grade after 10–20μm removal; DFM confirms EP feasibility on Tri-Clamp bore transitions and ferrule face geometry before program commitment."],
+  ["Pickling & Passivation — Weld Heat Tint Removal", "Stainless steel flanges welded into assemblies develop weld heat tint (oxide discoloration) at the heat-affected zone — a chromium-depleted zone that reduces local corrosion resistance. Pickling with hydrofluoric-nitric acid (HF-HNO₃) mixture dissolves the heat tint and chromium-depleted layer, restoring full corrosion resistance at the weld zone. CNCPioneer coordinates pickling and passivation of welded stainless flange assemblies through qualified Pearl River Delta pickling facilities at 1–2 day transit. Applied on customer-supplied pre-welded assemblies for combined machining plus surface treatment; also available as a standalone post-machining treatment for flanges with visible heat tint from laser or plasma pre-cutting operations."],
+  ["PVD Black TiN & Black Oxide — Decorative Flanges", "For architectural and decorative stainless steel flanges requiring a black or dark-metallic appearance: PVD black TiN (1–4μm; HV 2,300+; satin to gloss black depending on base surface Ra — electropolished base produces gloss black; turned base produces satin black) for premium architectural hardware, furniture fittings, and consumer product flanges. Black oxide (chemical blackening; flat matte black; <1μm dimensional change — compatible with ±0.020mm bolt hole true position without re-inspection after treatment) for lower-cost decorative flanges in indoor applications where mild corrosion protection is adequate. Both treatments applied after flange machining and ASTM A967 passivation; XRF thickness per PVD lot; adhesion test per ASTM C1624 per PVD lot."],
+  ["Electrochemical Oxide Coloring — Architectural & Decorative", "Controlled electrochemical oxidation producing interference-color oxide films (champagne/gold at 0.2μm; blue at 0.4μm; magenta/purple at 0.7μm; green at 1.0μm) on 304 and 316L stainless flanges — the \"stainless anodized color\" equivalent for architectural hardware, premium furniture fittings, and decorative structural flanges where the stainless aesthetic is desired in color without PVD equipment cost. Negligible dimensional impact; applied after machining and passivation; colors consistent lot-to-lot from voltage-controlled process. Combined with electropolishing base (Ra ≤0.1μm mirror) for the mirror-colored stainless aesthetic. PVD TiN gold (1–4μm; HV 2,300+; consistent metallic gold) also available for higher-durability decorative gold flanges."],
+  ["Precision Face Finish Programs — Gasket-Specific Ra", "Flange face Ra specification is gasket-type-dependent: phonographic (concentric serrated) Ra 3.2–6.3μm for spiral wound graphite/PTFE gaskets (ASME B16.5 standard for most process flanges — serrations anchor the SWG); smooth Ra 0.4–1.6μm for PTFE envelope, rubber full-face, and metallic ring joint gaskets; RTJ groove Ra 0.4μm for metal-to-metal ring type joint sealing (ASME B16.20 Class 900–2500); ConFlat knife-edge Ra ≤0.4μm for UHV copper gasket sealing; ASME BPE SF2/SF3 EP Ra ≤0.38/0.25μm for sanitary flanges. CNCPioneer programs the correct Ra target from the gasket specification — mismatched face Ra is the most common cause of field leaks from correctly dimensioned flanges."],
+].map(([title, text]) => ({ title, text }));
+const flangeQualityCards = [
+  ["Material Identification & Traceability", "Check the specified stainless grade against the material certificate and heat or lot identity before machining. XRF can verify detectable alloying elements such as chromium, nickel, molybdenum and titanium. XRF alone cannot confirm the carbon content required to distinguish low-carbon grades such as 304L or 316L. Confirm carbon-dependent requirements using material certificates and a suitable carbon-analysis method when specified. Agree the certificate type, test coverage and traceability requirements with the order."],
+  ["MAZAK Mill-Turn Face Flatness Protocol", "Flange face flatness 0.010mm/100mm is achieved by four protocol elements implemented for every stainless flange program: (1) single continuous facing pass from OD to bore without interruption; (2) CNC-controlled tool height maintaining flatness from machine positioning rather than manual cross-slide feed; (3) 30-minute MAZAK mill-turn spindle warm-up before the first flange face in a production session; (4) CMM 9-point face flatness verification after the facing pass for critical programs (pharmaceutical SF-grade, RTJ, ConFlat) before bolt hole drilling is committed in that flange body. Work-hardening prevention: minimum feed ≥0.10 mm/rev on all 316L and 304 facing passes; no dwell at facing tool center or raised face OD stop; insert condition checked every 50 flanges."],
+  ["CMM Bolt Circle & Dimensional Verification", "CMM governs bolt circle true position (±0.020mm standard; ±0.010mm for ConFlat and precision instrument programs), bore diameter, bore perpendicularity to face, raised face height, RTJ groove dimensions (width ±0.020mm, depth ±0.010mm), ConFlat knife-edge height (±0.050mm), Tri-Clamp ferrule OD, flange thickness, and inter-port web minimum for exhaust flanges. 100% CMM bolt circle for IATF 16949 automotive and AS9100D aerospace programs; sampling plan for standard commercial process flange programs. 100% thread GO/NO-GO on all threaded flanges; 100% pressure test sealed configurations. Profilometry Ra verification at 3 positions per flange for RTJ, ConFlat, ASME BPE EP, and phonographic face programs; passivation copper sulfate per monthly lot."],
+  ["PPAP Level 3 & AS9102 FAIR Production Qualification", "PPAP Level 3 for IATF 16949 automotive exhaust flange programs: 30-piece dimensional data; Cpk ≥1.33 minimum (1.67 target) on face flatness, bolt hole true position, and exhaust port bore position; MSA Gage R&R ≤10% on CMM and profilometer measurement systems; PFMEA (covering work-hardening failure mode, 316Ti Ti-content substitution risk, inter-port web minimum); Control Plan; PSW. AS9102 First Article Inspection Report for AS9100D aerospace and high-pressure instrument vacuum flange programs — all drawing requirements verified with CMM measurement uncertainty documentation. Cpk ≥1.67 on face flatness, raised face height, and bolt circle true position maintained by SPC monitoring for volume production programs."],
+].map(([title, text]) => ({ title, text }));
+const flangeFaqs = [
+  {
+    question: "Is 316Ti required for every exhaust manifold flange?",
+    answer: "316Ti is a titanium-stabilized option for some elevated-temperature applications. The required grade should follow the OEM drawing and operating conditions.",
+    points: [
+      "Confirm temperature cycles, corrosion exposure and welding requirements.",
+      "Include the specified grade and material certificate requirements with your drawing.",
+    ],
+  },
+  {
+    question: "How do flatness and surface finish affect flange sealing?",
+    answer: "Flatness helps maintain even gasket compression. The required surface texture depends on the gasket and flange design, so both requirements should be defined together.",
+    points: [
+      "Specify flatness, surface roughness (Ra), gasket type and the applicable flange standard.",
+      "Agree the inspection method and required reports before production.",
+    ],
+  },
+  {
+    question: "Which stainless steel exhaust flange designs can you machine?",
+    answer: "Typical designs include manifold, turbocharger inlet and outlet, downpipe and catalytic-converter flanges. Port shape, bolt pattern and sealing face are machined to the approved drawing.",
+    points: [
+      "Provide the mating interface, gasket details and any critical datums.",
+      "Confirm material, tolerances and production quantity during drawing review.",
+    ],
+  },
+  {
+    question: "What determines lead time and quality documentation?",
+    answer: "Lead time is confirmed after reviewing the drawing, quantity, material availability, finishing and inspection requirements.",
+    points: [
+      "Prototype and volume-production schedules are quoted for the specific order.",
+      "Request material certificates, dimensional reports, PPAP or FAIR with your enquiry so the document scope can be agreed.",
+    ],
+  },
+  {
+    question: "What makes ConFlat vacuum flanges different?",
+    answer: "ConFlat (CF) flanges use precision knife edges to compress a soft metal gasket, commonly copper, and form an all-metal vacuum seal.",
+    points: [
+      "Confirm the CF size, mating interface and gasket material.",
+      "Specify cleaning, packaging and any leak-testing requirements with the order.",
+    ],
+  },
+];
+const whyCards = isSpringLoaded
+  ? springWhyCards.map(([title, text]) => ({ title, text }))
+  : isStainlessFlanges
+    ? flangeWhyCards.map(([title, text]) => ({ title, text }))
+  : (overview?.items?.length ? overview.items.slice(0, 6).map(splitItem) : sections.slice(1, 7).map((section) => ({ title: section.heading, text: section.text })));
+const portfolioCards = isSpringLoaded
+  ? [
+      {
+        title: "Pogo Pin Plungers",
+        text: "Precision turned plungers and tips for PCB fixtures, spring probes, battery test, ICT/FCT, connector test, and production inspection.",
+        image: "/wp-content/uploads/2026/09/pogo-pin-plungers.jpg",
+      },
+      {
+        title: "Pogo Pin Barrels",
+        text: "Machined barrels and spring housings with internal bores, spring seats, plunger guides, shoulders, flanges, and fixture mounting details.",
+        image: "/wp-content/uploads/2026/09/pogo-pin-barrels.jpg",
+      },
+      {
+        title: "Spring Probes Test Pins",
+        text: "Spring probes and signal pins for connector validation, sensors, cable continuity, semiconductor handling, and instrumentation.",
+        image: "/wp-content/uploads/2026/09/spring-probe-test-pins.jpg",
+      },
+    ]
+  : isStainlessFlanges
+    ? flangePortfolioCards
+  : gallery.slice(2, 5).map((item) => ({ title: item.name, text: portfolio?.text || item.alt || item.name, image: item.image }));
+const applicationCards = isSpringLoaded
+  ? [
+      { title: "Automotive", text: applications?.text || page.description, image: "/wp-content/uploads/2026/09/automotive.jpg" },
+      { title: "Semiconductor", text: applications?.text || page.description, image: "/wp-content/uploads/2026/09/semiconductor.jpg" },
+      { title: "Aerospace", text: applications?.text || page.description, image: "/wp-content/uploads/2026/09/aerospace.jpg" },
+    ]
+  : isStainlessFlanges
+    ? flangeApplicationCards
+  : gallery.slice(4, 7).map((item) => ({ title: item.name.split(" ").slice(0, 3).join(" "), text: applications?.text || item.alt || item.name, image: item.image }));
+const materialLabels = isSpringLoaded ? [
+  "Brass and copper alloys",
+  "Beryllium copper and bronze",
+  "stainless steel",
+] : [
+  "Brass and copper alloys",
+  "Beryllium copper and bronze",
+  "stainless steel",
+  "Specified conductive alloys",
+  "Customer supplied material",
+  "Clean packaged components",
+];
+const materialCards = isStainlessFlanges ? flangeMaterialCards : materialLabels.map((title) => ({ title, text: materials?.text || page.description }));
+const treatmentCards = isStainlessFlanges ? flangeTreatmentCards : [
+  "Gold Plating",
+  "Nickel Barrier",
+  "Tin Plating",
+  "Silver Plating",
+  "Low-Burr Finishing",
+  "Clean Packaging",
+].map((title) => ({ title, text: treatments?.text || page.description }));
+const qualityCards = isStainlessFlanges
+  ? flangeQualityCards
+  : (quality?.items?.length ? quality.items.slice(0, 4) : [
+    "Material, tooling, and fixture control",
+    "In-process and final inspection",
+    "Critical feature documentation",
+    "Certificates and batch traceability",
+  ]).map(splitItem);
+const flangeLiveOverviewParagraphs = [
+  "Precision stainless steel CNC turning flanges connect pipe, vessel, vacuum, sanitary and exhaust interfaces where sealing face quality, bore alignment and bolt-circle accuracy matter.",
+  "CNCPioneer machines 304, 316L and 316Ti flanges with mill-turn datum control, CMM inspection, material verification and passivation or pressure-test documentation when required.",
+];
+const flangeLiveOverviewItems = [
+  {
+    title: "MAZAK mill-turn single-setup geometric coherence",
+    text: "Face, bore and bolt circle are machined from one datum to control flatness, concentricity and true position.",
+  },
+  {
+    title: "Stainless work-hardening management in flange facing",
+    text: "Feed, insert geometry and coolant are controlled to avoid hardened sealing faces and unstable Ra.",
+  },
+  {
+    title: "Complete flange standard compliance from one source",
+    text: "ANSI/ASME, DIN, JIS, ASME BPE, ConFlat/KF/ISO and exhaust OEM flange programs are supported.",
+  },
+  {
+    title: "Material, standard and sealing-face verification",
+    text: "Available records include XRF checks, CMM reports, face profiling, thread gauges and passivation data.",
+  },
+];
+const overviewParagraphs = isStainlessFlanges ? flangeLiveOverviewParagraphs : [overview?.text || page.description];
+const overviewItems = isStainlessFlanges ? flangeLiveOverviewItems : (overview?.items?.length ? overview.items.slice(0, 4).map(splitItem) : []);
+const visualTitleLead = pageVisual?.titleLead || titleLead;
+const visualTitleAccent = pageVisual?.titleAccent || titleAccent;
+const visualHeroImage = pageVisual?.heroImage || heroImage;
+const visualOverviewImage = pageVisual?.overviewImage || overviewImage;
+const visualStats = pageVisual?.stats || [
+  ["78+", "Swiss CNC"],
+  ["66+", "MAZAK Centres"],
+  ["+/-0.005mm", "Capability"],
+  ["100%", "Inspection"],
+];
+const displayFaqs = isStainlessFlanges ? flangeFaqs : page.faqs;
+---
+<BaseLayout seo={page.seo}>
+  <div class:list={["native-product", isStainlessFlanges && "product-detail-template"]}>
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="hero-content">
+        <nav class="hero-breadcrumb" aria-label="Breadcrumb">
+          <a href="/">Home</a>
+          <span aria-hidden="true">/</span>
+          <a href="/custom-cnc-parts">Custom CNC Parts</a>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">{isStainlessFlanges ? "Stainless Steel CNC Turning Flanges" : page.title}</span>
+        </nav>
+        {!isStainlessFlanges && <div class="hero-eyebrow">{pageVisual?.eyebrow || `${page.categoryLabel} · China Factory · IATF 16949 · AS9100D`}</div>}
+        <h1>{visualTitleLead}{visualTitleAccent && <><br /><span>{visualTitleAccent}</span></>}</h1>
+        <p class="hero-sub">{pageVisual?.description || page.description}</p>
+        <div class="hero-ctas">
+          <a class="btn-primary" href="/cnc-machining-quote">{isStainlessFlanges ? "↑ Upload Drawing" : "Upload Drawing"}</a>
+          <a class="btn-secondary" href="/cnc-machining-quote">{isStainlessFlanges ? "Request a Quote →" : "Request a Quote"}</a>
+        </div>
+        <div class="hero-trust">
+          {(pageVisual?.trust || [
+            "IATF 16949:2016 & AS9100D & ISO 10012:2003",
+            "78+ Swiss CNC · 66+ MAZAK Mill-Turn Centres",
+            "Plunger / Barrel Diameter to +/-0.005mm",
+            "100% Critical-Feature Inspection",
+          ]).map((item) => <div class="trust-item">{item}</div>)}
+        </div>
+      </div>
+      <div class="hero-image-wrap">
+        <img class="hero-img" src={visualHeroImage} alt={page.title} loading="eager" fetchpriority="high" />
+        <div class="hero-img-badge">
+          <div class="hero-img-badge-row"><span class="badge-val">{pageVisual?.heroBadge?.[0]?.[0] || "+/-0.005mm"}</span><span class="badge-label">{pageVisual?.heroBadge?.[0]?.[1] || "Plunger / Barrel Diameter"}</span></div>
+          <div class="hero-img-badge-divider"></div>
+          <div class="hero-img-badge-row"><span class="badge-val">{pageVisual?.heroBadge?.[1]?.[0] || "100%"}</span><span class="badge-label">{pageVisual?.heroBadge?.[1]?.[1] || "Critical Test-Pin Inspection"}</span></div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <section class="section-overview">
+      <div class="container">
+        <div class="overview-grid-b">
+          <div class="overview-text-col">
+            <h2 class="section-title">{isStainlessFlanges ? <Fragment>What Are Precision Stainless Steel<br />CNC Turning Flanges?</Fragment> : (overview?.heading || `What Are ${page.title}?`)}</h2>
+            <div class="overview-body">
+              {overviewParagraphs.map((paragraph) => <p>{paragraph}</p>)}
+            </div>
+            {overviewItems.length > 0 && (
+              <ul class="op-list">
+                {overviewItems.map((item) => <li><div class="op-list-icon">+</div><div><strong>{item.title}</strong><span>{item.text}</span></div></li>)}
+              </ul>
+            )}
+          </div>
+          <div class="overview-photo-col">
+            <div class="overview-photo-main">
+              <img src={visualOverviewImage} alt={overview?.heading || page.title} loading="lazy" />
+              <div class="overview-chip overview-chip-tl"><div class="chip-val">{isStainlessFlanges ? "66+ MAZAK" : "6+"}</div><div class="chip-label">{isStainlessFlanges ? "Mill-Turn Centers" : "Materials"}</div></div>
+              <div class="overview-chip overview-chip-br"><div class="chip-val">{isStainlessFlanges ? "99%" : "+/-0.005mm"}</div><div class="chip-label">{isStainlessFlanges ? "Qualification Rate" : "Diameter"}</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-dark">
+      <div class="container">
+        <div class="text-center">
+          <h2 class="section-title">{isStainlessFlanges ? <Fragment>Why CNCPioneer for CNC Turning<br />Stainless Steel Flanges?</Fragment> : (why?.heading || `Why CNCPioneer for ${page.title}?`)}</h2>
+          <p class="section-intro">
+            {isStainlessFlanges ? "Single-setup mill-turn accuracy, stainless surface control and documented inspection for process, automotive, sanitary and vacuum flange programs." : (why?.text || page.description)}
+          </p>
+        </div>
+        <div class="why-cards">
+          {whyCards.map((card, index) => (
+            <article class="why-card">
+              <div class="why-card-num">{String(index + 1).padStart(2, "0")}</div>
+              <div class="why-card-body">
+                <h3>{card.title}</h3>
+                <p>{card.text}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+        {!isStainlessFlanges && (
+          <div class="why-compare-bar">
+            <span>Quality System</span>
+            <span>Material Control</span>
+            <span>Force Testing</span>
+            <span>Clean Packaging</span>
+            <span>Fast Quote</span>
+          </div>
+        )}
+      </div>
+    </section>
+
+    {portfolioCards.length > 0 && (
+      <section class="section-light">
+        <div class="container">
+          <div class="text-center">
+            <h2 class="section-title">{isStainlessFlanges ? <Fragment>Stainless Steel CNC Turning Flanges<br />We Manufacture</Fragment> : (portfolio?.heading || `${page.title} Product Portfolio`)}</h2>
+            <p class="section-intro">{portfolio?.text || page.description}</p>
+          </div>
+          <div class:list={["portfolio-grid", isStainlessFlanges && "parts-grid"]}>
+            {portfolioCards.map((card) => (
+              <article class="portfolio-card">
+                <img src={card.image} alt={card.title} loading="lazy" />
+                <h3>{card.title}</h3>
+                <p>{isStainlessFlanges ? (flangePortfolioSummaries.get(card.title) || card.text) : card.text}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+    {applicationCards.length > 0 && (
+      <section class="section-white" id={isStainlessFlanges ? "industries-applications" : undefined}>
+        <div class="container">
+          <div class="text-center">
+            <h2 class="section-title">{applications?.heading || "Industries & Applications"}</h2>
+            <p class="section-intro">{applications?.text || page.description}</p>
+          </div>
+          <div class:list={["application-grid", isStainlessFlanges && "industries-grid"]}>
+            {applicationCards.map((card) => (
+              <article class:list={["application-card", card.href && "has-industry-link"]}>
+                <img src={card.image} alt={card.title} loading="lazy" />
+                <h3>{card.title}</h3>
+                <p>{card.text}</p>
+                {card.href && <a class="industry-link" href={card.href}>Explore {card.title.toLowerCase()} machining<span aria-hidden="true"> →</span></a>}
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+    <section class="section-light" id={isStainlessFlanges ? "product-materials" : undefined}>
+      <div class="container">
+        <div class="text-center">
+          <p class="section-kicker">Materials</p>
+          <h2 class="section-title">{materials?.heading || `Materials for ${page.title}`}</h2>
+          <p class="section-intro">{materials?.text || page.description}</p>
+        </div>
+        <div class:list={["material-grid", isStainlessFlanges && "mat-cards"]}>
+          {materialCards.map((card) => (
+            <article class="material-card" data-category={card.category}>
+              {isStainlessFlanges && <div class="mat-swatch"></div>}
+              {card.tag && <div class="mat-card-tag">{card.tag}</div>}
+              <h3>{card.title}</h3>
+              <p>{card.text}</p>
+            </article>
+          ))}
+        </div>
+        {isStainlessFlanges && <nav class="flange-material-links" aria-labelledby="flange-material-links-title">
+          <div>
+            <h3 id="flange-material-links-title">Explore Stainless Steel Machining</h3>
+            <p>Review stainless grades, machinability and finishing options before confirming your flange material.</p>
+          </div>
+          <a href="/materials/stainless-steel-cnc-machining"><span>Stainless Steel CNC Machining</span><span aria-hidden="true">→</span></a>
+        </nav>}
+      </div>
+      </section>
+
+    {isStainlessFlanges ? <FlangeSurfaceTreatments /> : (
+    <section class="finish-dark">
+      <div class="container">
+        <div class="text-center">
+          <h2 class="section-title">{treatments?.heading || `Surface Treatments for ${page.title}`}</h2>
+          <p class="section-intro">{treatments?.text || page.description}</p>
+        </div>
+        <div class:list={["surface-grid", isStainlessFlanges && "finish-cards"]}>
+          {treatmentCards.map((card) => (
+            <article class:list={["surface-card", isStainlessFlanges && "fin-card"]}>
+              <div class={isStainlessFlanges ? "fin-card-visual" : "surface-pill"}></div>
+              <h3>{card.title}</h3>
+              <p>{card.text}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+    )}
+
+    {isStainlessFlanges ? <FlangeQualityControl stats={visualStats} /> : (
+    <section class="section-light">
+      <div class="container">
+        <div class="text-center">
+          <h2 class="section-title">{quality?.heading || `Quality System for ${page.title}`}</h2>
+          <p class="section-intro">{quality?.text || page.description}</p>
+        </div>
+        <div class:list={["quality-grid", isStainlessFlanges && "quality-steps"]}>
+          {qualityCards.map((card) => (
+            <article class:list={["quality-card", isStainlessFlanges && "quality-step"]}>
+              <h3>{card.title}</h3>
+              <p>{card.text}</p>
+            </article>
+          ))}
+        </div>
+        <div class:list={["stats-strip", isStainlessFlanges && "stats-bar"]}>
+          {visualStats.map(([value, label]) => <div><strong>{value}</strong><span>{label}</span></div>)}
+        </div>
+      </div>
+    </section>
+    )}
+
+    {isStainlessFlanges ? <FlangeFaq items={displayFaqs} /> : displayFaqs.length > 0 && (
+      <section class="section-faq">
+        <div class="container">
+          <h2 class="section-title text-center">{isStainlessFlanges ? "CNC Turning Stainless Steel Flanges FAQ" : `${page.title} FAQ`}</h2>
+          <div class="faq-accordion" data-faq-accordion>
+            {displayFaqs.map((item, index) => (
+              <div class="faq-row">
+                <button class="faq-question" id={`faq-question-${page.slug}-${index}`} type="button" aria-controls={`faq-answer-${page.slug}-${index}`} aria-expanded={index === 0 ? "true" : "false"}>
+                  <span>{item.question}</span>
+                  <span class="faq-chevron" aria-hidden="true">⌄</span>
+                </button>
+                <div id={`faq-answer-${page.slug}-${index}`} role="region" aria-labelledby={`faq-question-${page.slug}-${index}`} class:list={["faq-answer", index === 0 && "open"]}><p>{item.answer}</p></div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+    {!isSpringLoaded && related.length > 0 && (
+      <section class="section-related" id="related-custom-cnc-parts">
+        <div class="container">
+        <h2 class="section-title text-center">Related Custom CNC Parts</h2>
+        <div class="related-grid">
+          {related.map((item) => (
+            <a class="related-card" href={`/custom-cnc-parts/${item.slug}`}>
+              <img src={item.image} alt={item.title} loading="lazy" />
+              <strong>{item.title}</strong>
+            </a>
+          ))}
+        </div>
+        </div>
+      </section>
+    )}
+
+    <QuoteCta id={`part-${page.slug}-quote`} idPrefix={`part-${page.slug}-quote-form`} formName={`${page.title} Part Quote`} kicker="CUSTOM CNC PARTS" title={`Get a quote for ${isStainlessFlanges ? "CNC Turning Stainless Steel Flanges" : page.title}`} description={isStainlessFlanges ? "Share the flange drawing, 3D model, standard, material grade and gasket-face requirements for a quote and DFM review." : "Upload a drawing or 3D model. We’ll review geometry, material, finishing, lead time and inspection requirements."} />
+  </div>
+  <script>
+      (() => {
+        const root = document.querySelector(".native-product");
+        if (!root) return;
+
+        const tabs = Array.from(root.querySelectorAll("[data-mat-tabs] .mat-tab"));
+        const cards = Array.from(root.querySelectorAll(".mat-cards .material-card"));
+        for (const tab of tabs) {
+          tab.addEventListener("click", () => {
+            const filter = tab.getAttribute("data-filter") || "all";
+            for (const item of tabs) {
+              const active = item === tab;
+              item.classList.toggle("active", active);
+              item.setAttribute("aria-pressed", String(active));
+            }
+            for (const card of cards) {
+              const show = filter === "all" || card.getAttribute("data-category") === filter;
+              card.hidden = !show;
+            }
+          });
+        }
+
+        const faqRows = Array.from(root.querySelectorAll("[data-faq-accordion] .faq-row"));
+        for (const row of faqRows) {
+          const button = row.querySelector(".faq-question");
+          const answer = row.querySelector(".faq-answer");
+          button?.addEventListener("click", () => {
+            const shouldOpen = !answer?.classList.contains("open");
+            for (const item of faqRows) {
+              item.querySelector(".faq-answer")?.classList.remove("open");
+              item.querySelector(".faq-question")?.setAttribute("aria-expanded", "false");
+            }
+            if (shouldOpen) {
+              answer?.classList.add("open");
+              button.setAttribute("aria-expanded", "true");
+            }
+          });
+        }
+      })();
+  </script>
+  <style>
+    .flange-material-links { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 24px; margin-top: 28px; padding: 24px; border: 1px solid var(--color-border); border-radius: 8px; background: var(--color-white); }
+    .flange-material-links h3 { margin: 0 0 8px; color: var(--color-ink); font-size: 20px; line-height: 1.4; }
+    .flange-material-links p { max-width: 620px; margin: 0; color: var(--color-body); font-size: 15px; line-height: 1.65; }
+    .flange-material-links a { display: inline-flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 44px; padding: 12px 16px; border: 1px solid var(--color-border); border-radius: 5px; color: var(--color-brand); font-size: 14px; font-weight: 600; line-height: 1.5; text-decoration: none; }
+    .flange-material-links a > span:last-child { flex-shrink: 0; }
+    .flange-material-links a:hover { border-color: var(--color-hover); background: var(--color-surface); }
+    .flange-material-links a:focus-visible { outline: 2px solid var(--color-brand); outline-offset: 3px; }
+    @media (max-width: 768px) {
+      .flange-material-links { grid-template-columns: minmax(0, 1fr); gap: 18px; padding: 20px; }
+    }
+  </style>
+</BaseLayout>

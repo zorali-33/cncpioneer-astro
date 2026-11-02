@@ -1,0 +1,1418 @@
+[
+  {
+    "slug": "about-us",
+    "file": "about-us/index.html"
+  },
+  {
+    "slug": "author/david-li",
+    "file": "author/david-li/index.html"
+  },
+  {
+    "slug": "author/ryan-wang",
+    "file": "author/ryan-wang/index.html"
+  },
+  {
+    "slug": "blog",
+    "file": "blog/index.html"
+  },
+  {
+    "slug": "blog/3d-printing-vs-cnc-machining",
+    "file": "blog/3d-printing-vs-cnc-machining/index.html"
+  },
+  {
+    "slug": "blog/5-axis-cnc-machining-manufacturers-in-china",
+    "file": "blog/5-axis-cnc-machining-manufacturers-in-china/index.html"
+  },
+  {
+    "slug": "blog/abrasion-resistant-vs-carbon-steel-cnc-machining",
+    "file": "blog/abrasion-resistant-vs-carbon-steel-cnc-machining/index.html"
+  },
+  {
+    "slug": "blog/acrylic-cnc-machining",
+    "file": "blog/acrylic-cnc-machining/index.html"
+  },
+  {
+    "slug": "blog/aerospace-cnc-machining",
+    "file": "blog/aerospace-cnc-machining/index.html"
+  },
+  {
+    "slug": "blog/ai-cnc-machining",
+    "file": "blog/ai-cnc-machining/index.html"
+  },
+  {
+    "slug": "blog/ai-cnc-programming",
+    "file": "blog/ai-cnc-programming/index.html"
+  },
+  {
+    "slug": "blog/aluminium-melting-point",
+    "file": "blog/aluminium-melting-point/index.html"
+  },
+  {
+    "slug": "blog/aluminum-cnc-machining",
+    "file": "blog/aluminum-cnc-machining/index.html"
+  },
+  {
+    "slug": "blog/aluminum-surface-finishes",
+    "file": "blog/aluminum-surface-finishes/index.html"
+  },
+  {
+    "slug": "blog/aluminum-vs-stainless-steel",
+    "file": "blog/aluminum-vs-stainless-steel/index.html"
+  },
+  {
+    "slug": "blog/anodized-aluminum-vs-stainless-steel",
+    "file": "blog/anodized-aluminum-vs-stainless-steel/index.html"
+  },
+  {
+    "slug": "blog/automotive-machining",
+    "file": "blog/automotive-machining/index.html"
+  },
+  {
+    "slug": "blog/avoid-haz-laser-cutting-sheet-metal",
+    "file": "blog/avoid-haz-laser-cutting-sheet-metal/index.html"
+  },
+  {
+    "slug": "blog/bakelite-cnc-machining",
+    "file": "blog/bakelite-cnc-machining/index.html"
+  },
+  {
+    "slug": "blog/beveled-edges-cnc-machining",
+    "file": "blog/beveled-edges-cnc-machining/index.html"
+  },
+  {
+    "slug": "blog/brass-cnc-machining",
+    "file": "blog/brass-cnc-machining/index.html"
+  },
+  {
+    "slug": "blog/bronze-cnc-machining",
+    "file": "blog/bronze-cnc-machining/index.html"
+  },
+  {
+    "slug": "blog/building-a-humanoid-robot",
+    "file": "blog/building-a-humanoid-robot/index.html"
+  },
+  {
+    "slug": "blog/cast-iron-cnc-machining-parts",
+    "file": "blog/cast-iron-cnc-machining-parts/index.html"
+  },
+  {
+    "slug": "blog/casting-vs-cnc-machining",
+    "file": "blog/casting-vs-cnc-machining/index.html"
+  },
+  {
+    "slug": "blog/chamfer-cnc-machining",
+    "file": "blog/chamfer-cnc-machining/index.html"
+  },
+  {
+    "slug": "blog/china-humanoid-robot-companies",
+    "file": "blog/china-humanoid-robot-companies/index.html"
+  },
+  {
+    "slug": "blog/choose-cnc-machining-company",
+    "file": "blog/choose-cnc-machining-company/index.html"
+  },
+  {
+    "slug": "blog/cnc-automotive",
+    "file": "blog/cnc-automotive/index.html"
+  },
+  {
+    "slug": "blog/cnc-automotive-mold-machining",
+    "file": "blog/cnc-automotive-mold-machining/index.html"
+  },
+  {
+    "slug": "blog/cnc-boring",
+    "file": "blog/cnc-boring/index.html"
+  },
+  {
+    "slug": "blog/cnc-custom-parts-prototyping",
+    "file": "blog/cnc-custom-parts-prototyping/index.html"
+  },
+  {
+    "slug": "blog/cnc-drilling",
+    "file": "blog/cnc-drilling/index.html"
+  },
+  {
+    "slug": "blog/cnc-electronic-housings",
+    "file": "blog/cnc-electronic-housings/index.html"
+  },
+  {
+    "slug": "blog/cnc-ev-motor-housings",
+    "file": "blog/cnc-ev-motor-housings/index.html"
+  },
+  {
+    "slug": "blog/cnc-heat-sink-manufacturing",
+    "file": "blog/cnc-heat-sink-manufacturing/index.html"
+  },
+  {
+    "slug": "blog/cnc-injection-mold-making",
+    "file": "blog/cnc-injection-mold-making/index.html"
+  },
+  {
+    "slug": "blog/cnc-lathe-vs-mill",
+    "file": "blog/cnc-lathe-vs-mill/index.html"
+  },
+  {
+    "slug": "blog/cnc-locating-pins",
+    "file": "blog/cnc-locating-pins/index.html"
+  },
+  {
+    "slug": "blog/cnc-locating-pinsi",
+    "file": "blog/cnc-locating-pinsi/index.html"
+  },
+  {
+    "slug": "blog/cnc-machined-uav-parts",
+    "file": "blog/cnc-machined-uav-parts/index.html"
+  },
+  {
+    "slug": "blog/cnc-machining-aerospace",
+    "file": "blog/cnc-machining-aerospace/index.html"
+  },
+  {
+    "slug": "blog/cnc-machining-costs",
+    "file": "blog/cnc-machining-costs/index.html"
+  },
+  {
+    "slug": "blog/cnc-machining-defense",
+    "file": "blog/cnc-machining-defense/index.html"
+  },
+  {
+    "slug": "blog/cnc-machining-fillets",
+    "file": "blog/cnc-machining-fillets/index.html"
+  },
+  {
+    "slug": "blog/cnc-machining-for-automotive-industry",
+    "file": "blog/cnc-machining-for-automotive-industry/index.html"
+  },
+  {
+    "slug": "blog/cnc-machining-for-furniture-industry",
+    "file": "blog/cnc-machining-for-furniture-industry/index.html"
+  },
+  {
+    "slug": "blog/cnc-machining-for-renewable-energy",
+    "file": "blog/cnc-machining-for-renewable-energy/index.html"
+  },
+  {
+    "slug": "blog/cnc-machining-for-semiconductor-industry",
+    "file": "blog/cnc-machining-for-semiconductor-industry/index.html"
+  },
+  {
+    "slug": "blog/cnc-machining-heavy-truck-industry",
+    "file": "blog/cnc-machining-heavy-truck-industry/index.html"
+  },
+  {
+    "slug": "blog/cnc-machining-materials",
+    "file": "blog/cnc-machining-materials/index.html"
+  },
+  {
+    "slug": "blog/cnc-machining-quality-testing",
+    "file": "blog/cnc-machining-quality-testing/index.html"
+  },
+  {
+    "slug": "blog/cnc-machining-robot-parts",
+    "file": "blog/cnc-machining-robot-parts/index.html"
+  },
+  {
+    "slug": "blog/cnc-machining-vs-injection-molding",
+    "file": "blog/cnc-machining-vs-injection-molding/index.html"
+  },
+  {
+    "slug": "blog/cnc-machining-vs-manual-machining",
+    "file": "blog/cnc-machining-vs-manual-machining/index.html"
+  },
+  {
+    "slug": "blog/cnc-meaning",
+    "file": "blog/cnc-meaning/index.html"
+  },
+  {
+    "slug": "blog/cnc-metalworks",
+    "file": "blog/cnc-metalworks/index.html"
+  },
+  {
+    "slug": "blog/cnc-milling",
+    "file": "blog/cnc-milling/index.html"
+  },
+  {
+    "slug": "blog/cnc-milling-and-turning-defense",
+    "file": "blog/cnc-milling-and-turning-defense/index.html"
+  },
+  {
+    "slug": "blog/cnc-milling-machine-parts",
+    "file": "blog/cnc-milling-machine-parts/index.html"
+  },
+  {
+    "slug": "blog/cnc-milling-parts",
+    "file": "blog/cnc-milling-parts/index.html"
+  },
+  {
+    "slug": "blog/cnc-milling-vs-laser-cutting",
+    "file": "blog/cnc-milling-vs-laser-cutting/index.html"
+  },
+  {
+    "slug": "blog/cnc-musical-instruments",
+    "file": "blog/cnc-musical-instruments/index.html"
+  },
+  {
+    "slug": "blog/cnc-near-me-vs-online-cnc-machining",
+    "file": "blog/cnc-near-me-vs-online-cnc-machining/index.html"
+  },
+  {
+    "slug": "blog/cnc-precision-parts",
+    "file": "blog/cnc-precision-parts/index.html"
+  },
+  {
+    "slug": "blog/cnc-prototyping",
+    "file": "blog/cnc-prototyping/index.html"
+  },
+  {
+    "slug": "blog/cnc-services-for-startups",
+    "file": "blog/cnc-services-for-startups/index.html"
+  },
+  {
+    "slug": "blog/cnc-turned-parts",
+    "file": "blog/cnc-turned-parts/index.html"
+  },
+  {
+    "slug": "blog/cnc-turning",
+    "file": "blog/cnc-turning/index.html"
+  },
+  {
+    "slug": "blog/cnc-turning-and-milling",
+    "file": "blog/cnc-turning-and-milling/index.html"
+  },
+  {
+    "slug": "blog/cnc-turning-and-milling-materials",
+    "file": "blog/cnc-turning-and-milling-materials/index.html"
+  },
+  {
+    "slug": "blog/cnc-vs-conventional-machining",
+    "file": "blog/cnc-vs-conventional-machining/index.html"
+  },
+  {
+    "slug": "blog/cnc-vs-laser-cutting",
+    "file": "blog/cnc-vs-laser-cutting/index.html"
+  },
+  {
+    "slug": "blog/cnc-vs-rapid-prototyping",
+    "file": "blog/cnc-vs-rapid-prototyping/index.html"
+  },
+  {
+    "slug": "blog/cnc-vs-sheet-metal",
+    "file": "blog/cnc-vs-sheet-metal/index.html"
+  },
+  {
+    "slug": "blog/cnc-watchmaking",
+    "file": "blog/cnc-watchmaking/index.html"
+  },
+  {
+    "slug": "blog/complex-cnc-machining-tasks",
+    "file": "blog/complex-cnc-machining-tasks/index.html"
+  },
+  {
+    "slug": "blog/connector-machining",
+    "file": "blog/connector-machining/index.html"
+  },
+  {
+    "slug": "blog/copper-cnc-machining",
+    "file": "blog/copper-cnc-machining/index.html"
+  },
+  {
+    "slug": "blog/copper-t2-cnc-machining",
+    "file": "blog/copper-t2-cnc-machining/index.html"
+  },
+  {
+    "slug": "blog/electronics-machining",
+    "file": "blog/electronics-machining/index.html"
+  },
+  {
+    "slug": "blog/face-milling",
+    "file": "blog/face-milling/index.html"
+  },
+  {
+    "slug": "blog/fastener-machining",
+    "file": "blog/fastener-machining/index.html"
+  },
+  {
+    "slug": "blog/fr4-cnc-machining",
+    "file": "blog/fr4-cnc-machining/index.html"
+  },
+  {
+    "slug": "blog/inconel-vs-monel",
+    "file": "blog/inconel-vs-monel/index.html"
+  },
+  {
+    "slug": "blog/inconel-vs-titanium",
+    "file": "blog/inconel-vs-titanium/index.html"
+  },
+  {
+    "slug": "blog/injection-molding-vs-cnc-machining",
+    "file": "blog/injection-molding-vs-cnc-machining/index.html"
+  },
+  {
+    "slug": "blog/large-part-cnc-machining",
+    "file": "blog/large-part-cnc-machining/index.html"
+  },
+  {
+    "slug": "blog/laser-cutting-vs-cnc-routing",
+    "file": "blog/laser-cutting-vs-cnc-routing/index.html"
+  },
+  {
+    "slug": "blog/laser-cutting-vs-waterjet-cutting",
+    "file": "blog/laser-cutting-vs-waterjet-cutting/index.html"
+  },
+  {
+    "slug": "blog/laser-marking",
+    "file": "blog/laser-marking/index.html"
+  },
+  {
+    "slug": "blog/laser-vs-plasma-cutting",
+    "file": "blog/laser-vs-plasma-cutting/index.html"
+  },
+  {
+    "slug": "blog/low-volume-cnc-machining",
+    "file": "blog/low-volume-cnc-machining/index.html"
+  },
+  {
+    "slug": "blog/machining-surface-finish",
+    "file": "blog/machining-surface-finish/index.html"
+  },
+  {
+    "slug": "blog/medical-cnc-machining",
+    "file": "blog/medical-cnc-machining/index.html"
+  },
+  {
+    "slug": "blog/medical-swiss-machining",
+    "file": "blog/medical-swiss-machining/index.html"
+  },
+  {
+    "slug": "blog/micro-cnc-machining",
+    "file": "blog/micro-cnc-machining/index.html"
+  },
+  {
+    "slug": "blog/nylon-cnc-machining",
+    "file": "blog/nylon-cnc-machining/index.html"
+  },
+  {
+    "slug": "blog/oil-and-gas-machining",
+    "file": "blog/oil-and-gas-machining/index.html"
+  },
+  {
+    "slug": "blog/oil-and-gas-plastic-machining",
+    "file": "blog/oil-and-gas-plastic-machining/index.html"
+  },
+  {
+    "slug": "blog/oil-gas-cnc-machining-parts",
+    "file": "blog/oil-gas-cnc-machining-parts/index.html"
+  },
+  {
+    "slug": "blog/precision-aerospace-cnc-machined-parts",
+    "file": "blog/precision-aerospace-cnc-machined-parts/index.html"
+  },
+  {
+    "slug": "blog/precision-automotive-machining",
+    "file": "blog/precision-automotive-machining/index.html"
+  },
+  {
+    "slug": "blog/precision-cnc-milling-parts",
+    "file": "blog/precision-cnc-milling-parts/index.html"
+  },
+  {
+    "slug": "blog/precision-cnc-turning",
+    "file": "blog/precision-cnc-turning/index.html"
+  },
+  {
+    "slug": "blog/precision-medical-machining",
+    "file": "blog/precision-medical-machining/index.html"
+  },
+  {
+    "slug": "blog/prototype-cnc-machining",
+    "file": "blog/prototype-cnc-machining/index.html"
+  },
+  {
+    "slug": "blog/railroad-machining",
+    "file": "blog/railroad-machining/index.html"
+  },
+  {
+    "slug": "blog/railroad-seals-cnc-machining",
+    "file": "blog/railroad-seals-cnc-machining/index.html"
+  },
+  {
+    "slug": "blog/railroad-wheel-machining",
+    "file": "blog/railroad-wheel-machining/index.html"
+  },
+  {
+    "slug": "blog/railroads-cnc-machining-companies",
+    "file": "blog/railroads-cnc-machining-companies/index.html"
+  },
+  {
+    "slug": "blog/railroads-custom-o-rings-cnc-machining",
+    "file": "blog/railroads-custom-o-rings-cnc-machining/index.html"
+  },
+  {
+    "slug": "blog/railroads-skylights-cnc-machining",
+    "file": "blog/railroads-skylights-cnc-machining/index.html"
+  },
+  {
+    "slug": "blog/rapid-cnc-prototyping",
+    "file": "blog/rapid-cnc-prototyping/index.html"
+  },
+  {
+    "slug": "blog/robot-hands",
+    "file": "blog/robot-hands/index.html"
+  },
+  {
+    "slug": "blog/shaft-machining",
+    "file": "blog/shaft-machining/index.html"
+  },
+  {
+    "slug": "blog/sheet-metal-laser-cutter",
+    "file": "blog/sheet-metal-laser-cutter/index.html"
+  },
+  {
+    "slug": "blog/slot-milling",
+    "file": "blog/slot-milling/index.html"
+  },
+  {
+    "slug": "blog/stainless-steel-cnc-machining",
+    "file": "blog/stainless-steel-cnc-machining/index.html"
+  },
+  {
+    "slug": "blog/stainless-steel-surface-finishes",
+    "file": "blog/stainless-steel-surface-finishes/index.html"
+  },
+  {
+    "slug": "blog/surface-finish",
+    "file": "blog/surface-finish/index.html"
+  },
+  {
+    "slug": "blog/surface-finish-chart",
+    "file": "blog/surface-finish-chart/index.html"
+  },
+  {
+    "slug": "blog/surface-finish-symbols",
+    "file": "blog/surface-finish-symbols/index.html"
+  },
+  {
+    "slug": "blog/surface-roughness",
+    "file": "blog/surface-roughness/index.html"
+  },
+  {
+    "slug": "blog/swiss-machining",
+    "file": "blog/swiss-machining/index.html"
+  },
+  {
+    "slug": "blog/swiss-machining-defense",
+    "file": "blog/swiss-machining-defense/index.html"
+  },
+  {
+    "slug": "blog/swiss-machining-materials",
+    "file": "blog/swiss-machining-materials/index.html"
+  },
+  {
+    "slug": "blog/thread-milling-vs-tapping",
+    "file": "blog/thread-milling-vs-tapping/index.html"
+  },
+  {
+    "slug": "blog/what-is-a-cnc-lathe",
+    "file": "blog/what-is-a-cnc-lathe/index.html"
+  },
+  {
+    "slug": "blog/what-is-cnc",
+    "file": "blog/what-is-cnc/index.html"
+  },
+  {
+    "slug": "blog/what-is-laser-cutting",
+    "file": "blog/what-is-laser-cutting/index.html"
+  },
+  {
+    "slug": "blog/zero-waste-cnc-machining",
+    "file": "blog/zero-waste-cnc-machining/index.html"
+  },
+  {
+    "slug": "cnc-machining-quote",
+    "file": "cnc-machining-quote/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts",
+    "file": "custom-cnc-parts/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/5-axis-aluminum-cnc-machining-parts",
+    "file": "custom-cnc-parts/5-axis-aluminum-cnc-machining-parts/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/5-axis-cnc-machining-aerospace-components",
+    "file": "custom-cnc-parts/5-axis-cnc-machining-aerospace-components/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/5-axis-cnc-machining-brass-parts",
+    "file": "custom-cnc-parts/5-axis-cnc-machining-brass-parts/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/5-axis-cnc-machining-for-aluminum-structures",
+    "file": "custom-cnc-parts/5-axis-cnc-machining-for-aluminum-structures/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/5-axis-cnc-machining-for-humanoid-robots",
+    "file": "custom-cnc-parts/5-axis-cnc-machining-for-humanoid-robots/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/5-axis-cnc-machining-mechanical-parts",
+    "file": "custom-cnc-parts/5-axis-cnc-machining-mechanical-parts/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/5-axis-cnc-machining-robotic-joints",
+    "file": "custom-cnc-parts/5-axis-cnc-machining-robotic-joints/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/aerospace-connector-pins",
+    "file": "custom-cnc-parts/aerospace-connector-pins/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/aerospace-fasteners",
+    "file": "custom-cnc-parts/aerospace-fasteners/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/aerospace-fittings",
+    "file": "custom-cnc-parts/aerospace-fittings/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/aerospace-precision-shafts",
+    "file": "custom-cnc-parts/aerospace-precision-shafts/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/aerospace-precision-terminals",
+    "file": "custom-cnc-parts/aerospace-precision-terminals/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/aluminium-alloy-cnc-turning-bushing",
+    "file": "custom-cnc-parts/aluminium-alloy-cnc-turning-bushing/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/aluminium-alloy-cnc-turning-milling-parts",
+    "file": "custom-cnc-parts/aluminium-alloy-cnc-turning-milling-parts/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/aluminum-alloy-5-axis-cnc-machining",
+    "file": "custom-cnc-parts/aluminum-alloy-5-axis-cnc-machining/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/aluminum-bronze-bushing",
+    "file": "custom-cnc-parts/aluminum-bronze-bushing/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/aluminum-cnc-turning-parts",
+    "file": "custom-cnc-parts/aluminum-cnc-turning-parts/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/aluminum-swiss-screw-machined-parts",
+    "file": "custom-cnc-parts/aluminum-swiss-screw-machined-parts/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/aluminum-threaded-bushings",
+    "file": "custom-cnc-parts/aluminum-threaded-bushings/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/battery-housings",
+    "file": "custom-cnc-parts/battery-housings/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/brass-contact-pins",
+    "file": "custom-cnc-parts/brass-contact-pins/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/brass-flange-bushing",
+    "file": "custom-cnc-parts/brass-flange-bushing/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/brass-nipple",
+    "file": "custom-cnc-parts/brass-nipple/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/brass-pipe-fittings",
+    "file": "custom-cnc-parts/brass-pipe-fittings/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/brass-pneumatic-fittings",
+    "file": "custom-cnc-parts/brass-pneumatic-fittings/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/brass-swiss-screw-machined-parts",
+    "file": "custom-cnc-parts/brass-swiss-screw-machined-parts/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/brass-threaded-bushings",
+    "file": "custom-cnc-parts/brass-threaded-bushings/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/brass-turning-milling-parts",
+    "file": "custom-cnc-parts/brass-turning-milling-parts/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/bronze-bushings",
+    "file": "custom-cnc-parts/bronze-bushings/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/bronze-sleeve-bushings",
+    "file": "custom-cnc-parts/bronze-sleeve-bushings/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/chassis",
+    "file": "custom-cnc-parts/chassis/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/cnc-custom-aluminum-shift-knob",
+    "file": "custom-cnc-parts/cnc-custom-aluminum-shift-knob/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/cnc-machined-brass-parts",
+    "file": "custom-cnc-parts/cnc-machined-brass-parts/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/cnc-machined-flange",
+    "file": "custom-cnc-parts/cnc-machined-flange/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/cnc-machined-pins",
+    "file": "custom-cnc-parts/cnc-machined-pins/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/cnc-machinery-parts",
+    "file": "custom-cnc-parts/cnc-machinery-parts/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/cnc-machining-drone-parts",
+    "file": "custom-cnc-parts/cnc-machining-drone-parts/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/cnc-machining-servo-motor-parts",
+    "file": "custom-cnc-parts/cnc-machining-servo-motor-parts/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/cnc-prototyping-humanoid-robot-parts",
+    "file": "custom-cnc-parts/cnc-prototyping-humanoid-robot-parts/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/cnc-turning-and-milling-parts",
+    "file": "custom-cnc-parts/cnc-turning-and-milling-parts/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/cnc-turning-humanoid-robot-components",
+    "file": "custom-cnc-parts/cnc-turning-humanoid-robot-components/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/cnc-turning-milling-parts",
+    "file": "custom-cnc-parts/cnc-turning-milling-parts/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/cnc-turning-precision-washers",
+    "file": "custom-cnc-parts/cnc-turning-precision-washers/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/cnc-turning-titanium-nuts",
+    "file": "custom-cnc-parts/cnc-turning-titanium-nuts/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/compression-tube-fitting",
+    "file": "custom-cnc-parts/compression-tube-fitting/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/connector-pins",
+    "file": "custom-cnc-parts/connector-pins/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/connector-pins-swiss-screw-machining",
+    "file": "custom-cnc-parts/connector-pins-swiss-screw-machining/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/crimp-contact-pins",
+    "file": "custom-cnc-parts/crimp-contact-pins/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/custom-electrical-contacts",
+    "file": "custom-cnc-parts/custom-electrical-contacts/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/custom-flange-manufacturing",
+    "file": "custom-cnc-parts/custom-flange-manufacturing/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/custom-pipe-flanges",
+    "file": "custom-cnc-parts/custom-pipe-flanges/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/cylinder-head-machining",
+    "file": "custom-cnc-parts/cylinder-head-machining/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/defense-cnc-machining-parts",
+    "file": "custom-cnc-parts/defense-cnc-machining-parts/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/dental-implant-manufacturing",
+    "file": "custom-cnc-parts/dental-implant-manufacturing/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/electrical-connectors",
+    "file": "custom-cnc-parts/electrical-connectors/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/ev-battery-connectors",
+    "file": "custom-cnc-parts/ev-battery-connectors/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/ev-charger-manufacturing",
+    "file": "custom-cnc-parts/ev-charger-manufacturing/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/ev-charging-connector",
+    "file": "custom-cnc-parts/ev-charging-connector/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/ev-charging-gun",
+    "file": "custom-cnc-parts/ev-charging-gun/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/ev-charging-plug",
+    "file": "custom-cnc-parts/ev-charging-plug/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/ev-components",
+    "file": "custom-cnc-parts/ev-components/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/ev-housing-cnc-machining",
+    "file": "custom-cnc-parts/ev-housing-cnc-machining/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/evtol-bearing-housing",
+    "file": "custom-cnc-parts/evtol-bearing-housing/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/evtol-connector-pins-terminals",
+    "file": "custom-cnc-parts/evtol-connector-pins-terminals/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/evtol-cooling-fittings",
+    "file": "custom-cnc-parts/evtol-cooling-fittings/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/evtol-landing-gear-actuator-parts",
+    "file": "custom-cnc-parts/evtol-landing-gear-actuator-parts/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/evtol-motor-shaft",
+    "file": "custom-cnc-parts/evtol-motor-shaft/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/evtol-propeller",
+    "file": "custom-cnc-parts/evtol-propeller/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/5-axis-sensor-housing-machining",
+    "file": "custom-cnc-parts/5-axis-sensor-housing-machining/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/evtol-titanium-fasteners",
+    "file": "custom-cnc-parts/evtol-titanium-fasteners/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/flanges",
+    "file": "custom-cnc-parts/flanges/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/gearbox-housing",
+    "file": "custom-cnc-parts/gearbox-housing/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/harmonic-drive-components",
+    "file": "custom-cnc-parts/harmonic-drive-components/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/heat-sinks",
+    "file": "custom-cnc-parts/heat-sinks/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/humanoid-robot-arm-components",
+    "file": "custom-cnc-parts/humanoid-robot-arm-components/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/humanoid-robot-finger-joints",
+    "file": "custom-cnc-parts/humanoid-robot-finger-joints/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/humanoid-robot-hand-finger-parts",
+    "file": "custom-cnc-parts/humanoid-robot-hand-finger-parts/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/humanoid-robot-joint-components",
+    "file": "custom-cnc-parts/humanoid-robot-joint-components/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/humanoid-robot-joint-housings",
+    "file": "custom-cnc-parts/humanoid-robot-joint-housings/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/humanoid-robot-leg-components",
+    "file": "custom-cnc-parts/humanoid-robot-leg-components/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/hydraulic-cylinder-components-machining",
+    "file": "custom-cnc-parts/hydraulic-cylinder-components-machining/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/hydraulic-cylinder-piston-machining",
+    "file": "custom-cnc-parts/hydraulic-cylinder-piston-machining/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/hydraulic-fittings",
+    "file": "custom-cnc-parts/hydraulic-fittings/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/industrial-robot-arms",
+    "file": "custom-cnc-parts/industrial-robot-arms/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/introducer-needles",
+    "file": "custom-cnc-parts/introducer-needles/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/large-diameter-flanges",
+    "file": "custom-cnc-parts/large-diameter-flanges/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/liquid-cooling-connectors",
+    "file": "custom-cnc-parts/liquid-cooling-connectors/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/liquid-cooling-plate",
+    "file": "custom-cnc-parts/liquid-cooling-plate/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/machined-contacts",
+    "file": "custom-cnc-parts/machined-contacts/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/male-female-thread-nipple",
+    "file": "custom-cnc-parts/male-female-thread-nipple/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/medical-instrument-machining",
+    "file": "custom-cnc-parts/medical-instrument-machining/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/medical-machining-parts",
+    "file": "custom-cnc-parts/medical-machining-parts/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/metal-enclosures",
+    "file": "custom-cnc-parts/metal-enclosures/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/metric-thread-adapter",
+    "file": "custom-cnc-parts/metric-thread-adapter/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/motor-housings",
+    "file": "custom-cnc-parts/motor-housings/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/nickel-swiss-machining-parts",
+    "file": "custom-cnc-parts/nickel-swiss-machining-parts/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/oil-gas-machining-components",
+    "file": "custom-cnc-parts/oil-gas-machining-components/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/pipe-fittings",
+    "file": "custom-cnc-parts/pipe-fittings/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/pipe-fittings-full-coupling",
+    "file": "custom-cnc-parts/pipe-fittings-full-coupling/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/planetary-gearbox-components",
+    "file": "custom-cnc-parts/planetary-gearbox-components/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/pogo-contact-pins",
+    "file": "custom-cnc-parts/pogo-contact-pins/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/precision-connector-contacts",
+    "file": "custom-cnc-parts/precision-connector-contacts/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/precision-turned-ev-charging-pins",
+    "file": "custom-cnc-parts/precision-turned-ev-charging-pins/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/radar",
+    "file": "custom-cnc-parts/radar/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/rails",
+    "file": "custom-cnc-parts/rails/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/reducer-hex-nipple",
+    "file": "custom-cnc-parts/reducer-hex-nipple/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/reducer-shaft",
+    "file": "custom-cnc-parts/reducer-shaft/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/rf-connectors",
+    "file": "custom-cnc-parts/rf-connectors/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/rf-test-probes",
+    "file": "custom-cnc-parts/rf-test-probes/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/robot-actuator-housings",
+    "file": "custom-cnc-parts/robot-actuator-housings/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/robot-bearing-housings-seats",
+    "file": "custom-cnc-parts/robot-bearing-housings-seats/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/electric-motor-stator-housing-machining",
+    "file": "custom-cnc-parts/electric-motor-stator-housing-machining/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/robot-output-shafts",
+    "file": "custom-cnc-parts/robot-output-shafts/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/robot-shaft-parts",
+    "file": "custom-cnc-parts/robot-shaft-parts/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/cnc-machining-for-aerospace-brackets",
+    "file": "custom-cnc-parts/cnc-machining-for-aerospace-brackets/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/robotic-machining-cells",
+    "file": "custom-cnc-parts/robotic-machining-cells/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/satellite-arms",
+    "file": "custom-cnc-parts/satellite-arms/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/satellite-brackets",
+    "file": "custom-cnc-parts/satellite-brackets/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/satellite-components",
+    "file": "custom-cnc-parts/satellite-components/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/satellite-connectors",
+    "file": "custom-cnc-parts/satellite-connectors/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/satellite-housings",
+    "file": "custom-cnc-parts/satellite-housings/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/satellite-milling-components",
+    "file": "custom-cnc-parts/satellite-milling-components/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/satellite-parts",
+    "file": "custom-cnc-parts/satellite-parts/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/satellite-structures",
+    "file": "custom-cnc-parts/satellite-structures/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/screw-threaded-sleeve",
+    "file": "custom-cnc-parts/screw-threaded-sleeve/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/semiconductor-connector",
+    "file": "custom-cnc-parts/semiconductor-connector/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/semiconductor-cooling-plate",
+    "file": "custom-cnc-parts/semiconductor-cooling-plate/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/semiconductor-housings",
+    "file": "custom-cnc-parts/semiconductor-housings/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/semiconductor-probe-pin",
+    "file": "custom-cnc-parts/semiconductor-probe-pin/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/semiconductor-test-probes",
+    "file": "custom-cnc-parts/semiconductor-test-probes/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/semiconductor-vacuum-chamber-parts",
+    "file": "custom-cnc-parts/semiconductor-vacuum-chamber-parts/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/semiconductor-wet-etch-spray-nozzle",
+    "file": "custom-cnc-parts/semiconductor-wet-etch-spray-nozzle/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/sensor-housings",
+    "file": "custom-cnc-parts/sensor-housings/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/server-components",
+    "file": "custom-cnc-parts/server-components/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/server-parts",
+    "file": "custom-cnc-parts/server-parts/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/spring-loaded-contact-pins",
+    "file": "custom-cnc-parts/spring-loaded-contact-pins/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/spring-loaded-test-pins",
+    "file": "custom-cnc-parts/spring-loaded-test-pins/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/spring-test-probes",
+    "file": "custom-cnc-parts/spring-test-probes/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/stainless-steel-5-axis-cnc-parts",
+    "file": "custom-cnc-parts/stainless-steel-5-axis-cnc-parts/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/stainless-steel-bushing",
+    "file": "custom-cnc-parts/stainless-steel-bushing/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/stainless-steel-cnc-turning-flanges",
+    "file": "custom-cnc-parts/stainless-steel-cnc-turning-flanges/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/stainless-steel-cnc-turning-parts",
+    "file": "custom-cnc-parts/stainless-steel-cnc-turning-parts/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/stainless-steel-fittings",
+    "file": "custom-cnc-parts/stainless-steel-fittings/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/stainless-steel-machining-semiconductor-parts",
+    "file": "custom-cnc-parts/stainless-steel-machining-semiconductor-parts/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/stainless-steel-precision-turning-shaft",
+    "file": "custom-cnc-parts/stainless-steel-precision-turning-shaft/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/swiss-machined-parts",
+    "file": "custom-cnc-parts/swiss-machined-parts/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/swiss-machining-robot-pins-shafts",
+    "file": "custom-cnc-parts/swiss-machining-robot-pins-shafts/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/test-probe-pins",
+    "file": "custom-cnc-parts/test-probe-pins/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/threaded-bushing",
+    "file": "custom-cnc-parts/threaded-bushing/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/tilt-rotor-mechanism-components",
+    "file": "custom-cnc-parts/tilt-rotor-mechanism-components/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/aluminum-cnc-machining-flanges",
+    "file": "custom-cnc-parts/aluminum-cnc-machining-flanges/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/titanium-swiss-screw-machined-parts",
+    "file": "custom-cnc-parts/titanium-swiss-screw-machined-parts/index.html"
+  },
+  {
+    "slug": "custom-cnc-parts/wire-edm-robot-gears-splines",
+    "file": "custom-cnc-parts/wire-edm-robot-gears-splines/index.html"
+  },
+  {
+    "slug": "industries",
+    "file": "industries/index.html"
+  },
+  {
+    "slug": "industries/aerospace",
+    "file": "industries/aerospace/index.html"
+  },
+  {
+    "slug": "industries/aerospace-swiss-machining",
+    "file": "industries/aerospace-swiss-machining/index.html"
+  },
+  {
+    "slug": "industries/automotive",
+    "file": "industries/automotive/index.html"
+  },
+  {
+    "slug": "industries/automotive-swiss-machining",
+    "file": "industries/automotive-swiss-machining/index.html"
+  },
+  {
+    "slug": "industries/consumer-electronics",
+    "file": "industries/consumer-electronics/index.html"
+  },
+  {
+    "slug": "industries/defense",
+    "file": "industries/defense/index.html"
+  },
+  {
+    "slug": "industries/defense-swiss-machining",
+    "file": "industries/defense-swiss-machining/index.html"
+  },
+  {
+    "slug": "industries/evtol",
+    "file": "industries/evtol/index.html"
+  },
+  {
+    "slug": "industries/humanoid-robot-cnc-machining",
+    "file": "industries/humanoid-robot-cnc-machining/index.html"
+  },
+  {
+    "slug": "industries/medical",
+    "file": "industries/medical/index.html"
+  },
+  {
+    "slug": "industries/medical-swiss-machining",
+    "file": "industries/medical-swiss-machining/index.html"
+  },
+  {
+    "slug": "industries/oil-gas",
+    "file": "industries/oil-gas/index.html"
+  },
+  {
+    "slug": "industries/oil-gas-swiss-machining",
+    "file": "industries/oil-gas-swiss-machining/index.html"
+  },
+  {
+    "slug": "industries/railroad-machining-services",
+    "file": "industries/railroad-machining-services/index.html"
+  },
+  {
+    "slug": "industries/railway",
+    "file": "industries/railway/index.html"
+  },
+  {
+    "slug": "industries/robotics",
+    "file": "industries/robotics/index.html"
+  },
+  {
+    "slug": "industries/satellites",
+    "file": "industries/satellites/index.html"
+  },
+  {
+    "slug": "industries/semiconductor",
+    "file": "industries/semiconductor/index.html"
+  },
+  {
+    "slug": "industries/server",
+    "file": "industries/server/index.html"
+  },
+  {
+    "slug": "materials",
+    "file": "materials/index.html"
+  },
+  {
+    "slug": "materials/6061-aluminum-cnc-machining",
+    "file": "materials/6061-aluminum-cnc-machining/index.html"
+  },
+  {
+    "slug": "materials/6061-t6-aluminum-cnc-machining",
+    "file": "materials/6061-t6-aluminum-cnc-machining/index.html"
+  },
+  {
+    "slug": "materials/abs-cnc-machining",
+    "file": "materials/abs-cnc-machining/index.html"
+  },
+  {
+    "slug": "materials/acrylic-cnc-machining",
+    "file": "materials/acrylic-cnc-machining/index.html"
+  },
+  {
+    "slug": "materials/alloy-steel-cnc-machining",
+    "file": "materials/alloy-steel-cnc-machining/index.html"
+  },
+  {
+    "slug": "materials/aluminum-cnc-machining",
+    "file": "materials/aluminum-cnc-machining/index.html"
+  },
+  {
+    "slug": "materials/aluminum-cnc-turning-and-milling",
+    "file": "materials/aluminum-cnc-turning-and-milling/index.html"
+  },
+  {
+    "slug": "materials/aluminum-swiss-machining",
+    "file": "materials/aluminum-swiss-machining/index.html"
+  },
+  {
+    "slug": "materials/brass-cnc-machining",
+    "file": "materials/brass-cnc-machining/index.html"
+  },
+  {
+    "slug": "materials/brass-swiss-machining",
+    "file": "materials/brass-swiss-machining/index.html"
+  },
+  {
+    "slug": "materials/bronze-cnc-machining",
+    "file": "materials/bronze-cnc-machining/index.html"
+  },
+  {
+    "slug": "materials/carbon-steel-cnc-machining",
+    "file": "materials/carbon-steel-cnc-machining/index.html"
+  },
+  {
+    "slug": "materials/copper-cnc-machining",
+    "file": "materials/copper-cnc-machining/index.html"
+  },
+  {
+    "slug": "materials/hdpe-cnc-machining",
+    "file": "materials/hdpe-cnc-machining/index.html"
+  },
+  {
+    "slug": "materials/inconel-600-cnc-machining",
+    "file": "materials/inconel-600-cnc-machining/index.html"
+  },
+  {
+    "slug": "materials/inconel-625-cnc-machining",
+    "file": "materials/inconel-625-cnc-machining/index.html"
+  },
+  {
+    "slug": "materials/inconel-718-cnc-machining",
+    "file": "materials/inconel-718-cnc-machining/index.html"
+  },
+  {
+    "slug": "materials/inconel-cnc-machining",
+    "file": "materials/inconel-cnc-machining/index.html"
+  },
+  {
+    "slug": "materials/invar-cnc-machining",
+    "file": "materials/invar-cnc-machining/index.html"
+  },
+  {
+    "slug": "materials/kovar-cnc-machining",
+    "file": "materials/kovar-cnc-machining/index.html"
+  },
+  {
+    "slug": "materials/magnesium-cnc-machining",
+    "file": "materials/magnesium-cnc-machining/index.html"
+  },
+  {
+    "slug": "materials/metal-cnc-machining",
+    "file": "materials/metal-cnc-machining/index.html"
+  },
+  {
+    "slug": "materials/nickel-swiss-machining",
+    "file": "materials/nickel-swiss-machining/index.html"
+  },
+  {
+    "slug": "materials/nitinol-cnc-machining",
+    "file": "materials/nitinol-cnc-machining/index.html"
+  },
+  {
+    "slug": "materials/nylon-66-cnc-machining",
+    "file": "materials/nylon-66-cnc-machining/index.html"
+  },
+  {
+    "slug": "materials/nylon-cnc-machining",
+    "file": "materials/nylon-cnc-machining/index.html"
+  },
+  {
+    "slug": "materials/peek-cnc-machining",
+    "file": "materials/peek-cnc-machining/index.html"
+  },
+  {
+    "slug": "materials/peek-cnc-turning-and-milling",
+    "file": "materials/peek-cnc-turning-and-milling/index.html"
+  },
+  {
+    "slug": "materials/peek-swiss-machining",
+    "file": "materials/peek-swiss-machining/index.html"
+  },
+  {
+    "slug": "materials/polycarbonate-cnc-machining",
+    "file": "materials/polycarbonate-cnc-machining/index.html"
+  },
+  {
+    "slug": "materials/polypropylene-cnc-machining",
+    "file": "materials/polypropylene-cnc-machining/index.html"
+  },
+  {
+    "slug": "materials/pom-cnc-machining",
+    "file": "materials/pom-cnc-machining/index.html"
+  },
+  {
+    "slug": "materials/ptfe-cnc-machining",
+    "file": "materials/ptfe-cnc-machining/index.html"
+  },
+  {
+    "slug": "materials/stainless-steel-cnc-machining",
+    "file": "materials/stainless-steel-cnc-machining/index.html"
+  },
+  {
+    "slug": "materials/stainless-steel-cnc-turning-and-milling",
+    "file": "materials/stainless-steel-cnc-turning-and-milling/index.html"
+  },
+  {
+    "slug": "materials/stainless-steel-swiss-machining",
+    "file": "materials/stainless-steel-swiss-machining/index.html"
+  },
+  {
+    "slug": "materials/titanium-cnc-machining",
+    "file": "materials/titanium-cnc-machining/index.html"
+  },
+  {
+    "slug": "materials/titanium-swiss-machining",
+    "file": "materials/titanium-swiss-machining/index.html"
+  },
+  {
+    "slug": "materials/ultem-cnc-machining",
+    "file": "materials/ultem-cnc-machining/index.html"
+  },
+  {
+    "slug": "resources",
+    "file": "resources/index.html"
+  },
+  {
+    "slug": "resources/faqs",
+    "file": "resources/faqs/index.html"
+  },
+  {
+    "slug": "services",
+    "file": "services/index.html"
+  },
+  {
+    "slug": "services/cnc-turning-and-milling",
+    "file": "services/cnc-turning-and-milling/index.html"
+  },
+  {
+    "slug": "services/swiss-machining",
+    "file": "services/swiss-machining/index.html"
+  },
+  {
+    "slug": "services/swiss-machining/swiss-micro-machining",
+    "file": "services/swiss-machining/swiss-micro-machining/index.html"
+  },
+  {
+    "slug": "services/swiss-machining/swiss-screw-machining",
+    "file": "services/swiss-machining/swiss-screw-machining/index.html"
+  }
+]

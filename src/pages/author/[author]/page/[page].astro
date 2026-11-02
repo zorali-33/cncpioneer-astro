@@ -1,0 +1,33 @@
+---
+import { getAuthorPageEntries } from "../../../../author-archive.mjs";
+import { getBlogArticles } from "../../../../blog-archive.mjs";
+import ArchivePage from '../../../../components/native/ArchivePage.astro';
+const pages = import.meta.glob("../../../../mirrored-pages/blog/*/index.html", {
+  query: "?raw",
+  import: "default",
+  eager: true,
+});
+
+function loadArticles(source = pages) {
+  return getBlogArticles(source);
+}
+
+export function getStaticPaths() {
+  const pathPages = import.meta.glob("../../../../mirrored-pages/blog/*/index.html", {
+    query: "?raw",
+    import: "default",
+    eager: true,
+  });
+  const pathArticles = getBlogArticles(pathPages);
+
+  return getAuthorPageEntries(pathArticles).map(({ author, page }) => ({
+    params: { author, page: String(page) },
+  }));
+}
+
+const author = Astro.params.author;
+const page = Number(Astro.params.page);
+const articles = loadArticles();
+---
+
+<ArchivePage articles={articles} page={page} authorSlug={author}/>

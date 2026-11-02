@@ -1,0 +1,146 @@
+---
+const { stats, controls, metrics, capacityHeading = "Production Capacity", standards = ["IATF 16949", "AS9100D"], heading = "Quality Control for Stainless Steel Flanges", intro = "See how material identity, machining datums, flange dimensions and production records are controlled for your project.", capacityIntro = "MAZAK mill-turn resources for prototype and volume flange programs.", referenceNote = "Reference capability. Final tolerances, inspection coverage and acceptance criteria are confirmed against your drawing, material and geometry." } = Astro.props;
+
+const controlPoints = controls || [
+  {
+    title: "Material Verification",
+    check: "Stainless grade, material lot and purchase specification.",
+    verify: "Material certificates and XRF for detectable alloying elements.",
+    record: "Material certificate and agreed PMI records.",
+  },
+  {
+    title: "Machining Process Control",
+    check: "Face flatness, bore alignment and the common machining datum.",
+    verify: "MAZAK mill-turn datum control and in-process inspection.",
+    record: "Agreed critical-feature and process inspection records.",
+  },
+  {
+    title: "Dimensional Inspection",
+    check: "Bolt circle, bore, sealing face and drawing-specific features.",
+    verify: "CMM, surface profilometry and applicable gauges.",
+    record: "Dimensional reports and specified surface-finish results.",
+  },
+  {
+    title: "Production Documentation",
+    check: "First-article, production approval and delivery requirements.",
+    verify: "Agreed inspection plan and customer approval process.",
+    record: "PPAP Level 3 or AS9102 FAIR where required by the order.",
+  },
+];
+
+const qualityMetrics = metrics || [
+  { value: stats[1][0], label: "Face flatness / 100mm" },
+  { value: stats[2][0], label: "Bolt-circle position" },
+];
+---
+<section class="flange-capacity" aria-labelledby="flange-capacity-title">
+  <div class="qc-container capacity-layout">
+    <div>
+      <h2 id="flange-capacity-title">{capacityHeading}</h2>
+      <p>{capacityIntro}</p>
+    </div>
+    <div class="capacity-metric"><strong>{stats[0][0]}</strong><span>{stats[0][1]}</span></div>
+    <div class="capacity-metric"><strong>{stats[3][0]}</strong><span>{stats[3][1]}</span></div>
+  </div>
+</section>
+
+<section class="flange-quality" id="quality-control" aria-labelledby="flange-quality-title">
+  <div class="qc-container">
+    <header class="qc-header">
+      <p class="qc-kicker">Inspection &amp; documentation</p>
+      <h2 id="flange-quality-title">{heading}</h2>
+      <p class="qc-intro">{intro}</p>
+      {standards.length > 0 && <div class="qc-standards" aria-label="Quality system standards">{standards.map((standard) => <span>{standard}</span>)}</div>}
+    </header>
+
+    <div class="qc-reference">
+      <div class="qc-metric-grid" aria-label="Reference quality capabilities">
+        {qualityMetrics.map((metric) => <div><strong>{metric.value}</strong><span>{metric.label}</span></div>)}
+      </div>
+      <p>{referenceNote}</p>
+    </div>
+
+    <div class="qc-cards">
+      {controlPoints.map((card, index) => (
+        <article class="qc-card">
+          <div class="qc-card-heading"><span class="qc-step" aria-hidden="true">{String(index + 1).padStart(2, "0")}</span><h3>{card.title}</h3></div>
+          <dl class="qc-facts">
+            <div><dt>Check</dt><dd>{card.check}</dd></div>
+            <div><dt>Verify</dt><dd>{card.verify}</dd></div>
+            <div><dt>Records</dt><dd>{card.record}</dd></div>
+          </dl>
+        </article>
+      ))}
+    </div>
+
+    <div class="qc-documents">
+      <div><h3>Agree Your Quality Document Pack</h3><p>Confirm the certificates, inspection reports and production records needed for your order when sharing your drawing.</p></div>
+      <a class="qc-document-link" href="/cnc-machining-quote">Request quality documents <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .qc-container { max-width: var(--layout-shell); margin: 0 auto; padding-inline: 24px; }
+  .flange-capacity { padding: 36px 0; border-top: 1px solid var(--color-border); background: var(--color-surface); color: var(--color-ink); }
+  .capacity-layout { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 32px; align-items: center; }
+  .flange-capacity h2 { margin: 0 0 8px; color: var(--color-ink); font-size: var(--type-h2); line-height: 1.2; }
+  .flange-capacity p { margin: 0; color: var(--color-body); font-size: 14px; line-height: 1.65; }
+  .capacity-metric { display: flex; flex-direction: column; gap: 6px; border-left: 1px solid var(--color-border); padding-left: 28px; }
+  .capacity-metric strong { color: var(--color-brand); font-size: 28px; line-height: 1.2; }
+  .capacity-metric span { color: var(--color-body); font-size: 13px; line-height: 1.5; }
+
+  .flange-quality { padding: 64px 0; background: var(--color-white); color: var(--color-ink); scroll-margin-top: 24px; }
+  .qc-header { max-width: 800px; margin: 0 auto 28px; text-align: center; }
+  .flange-quality .qc-kicker { margin: 0 0 10px; color: var(--color-brand); font-size: 12px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; }
+  .flange-quality .qc-header h2 { margin: 0; color: var(--color-ink); font-size: var(--type-h2); line-height: 1.2; text-wrap: balance; }
+  .flange-quality .qc-intro { margin: 14px 0 18px; color: var(--color-body); font-size: 15px; line-height: 1.7; }
+  .qc-standards { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+  .qc-standards span { padding: 7px 14px; border: 1px solid var(--color-border); border-radius: 6px; background: var(--color-white); color: var(--color-ink); font-size: 13px; font-weight: 600; }
+
+  .qc-reference { margin-bottom: 26px; padding: 22px 24px 18px; border: 1px solid var(--color-border); border-radius: 10px; background: var(--color-surface); }
+  .qc-metric-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; text-align: center; }
+  .qc-metric-grid > div { display: flex; flex-direction: column; gap: 6px; }
+  .qc-metric-grid > div + div { border-left: 1px solid var(--color-border); }
+  .qc-metric-grid strong { color: var(--color-brand); font-size: 28px; line-height: 1.2; }
+  .qc-metric-grid span { color: var(--color-ink); font-size: 14px; line-height: 1.5; }
+  .flange-quality .qc-reference p { margin: 16px auto 0; color: var(--color-body); font-size: 13px; line-height: 1.65; text-align: center; }
+
+  .qc-cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+  .flange-quality .qc-card { min-width: 0; padding: 24px; border: 1px solid var(--color-border); border-radius: 10px; background: var(--color-white); box-shadow: 0 6px 22px rgb(var(--color-ink-rgb)/0.035); }
+  .qc-card-heading { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+  .qc-step { flex: 0 0 36px; width: 36px; height: 36px; display: grid; place-items: center; border-radius: 8px; background: var(--color-surface); color: var(--color-brand); font-size: 13px; font-weight: 700; }
+  .flange-quality .qc-card h3 { margin: 0; color: var(--color-ink); font-size: 20px; line-height: 1.35; }
+  .qc-facts { display: grid; gap: 14px; margin: 0; }
+  .qc-facts > div { display: grid; grid-template-columns: 58px minmax(0, 1fr); gap: 14px; align-items: baseline; }
+  .qc-facts dt { color: var(--color-body); font-size: 12px; font-weight: 600; line-height: 1.65; }
+  .qc-facts dd { margin: 0; font-size: 15px; line-height: 1.65; overflow-wrap: anywhere; }
+  .qc-document-link:focus-visible { outline: 2px solid var(--color-brand); outline-offset: 4px; border-radius: 3px; }
+
+  .qc-documents { display: flex; align-items: center; justify-content: space-between; gap: 28px; margin-top: 26px; padding: 24px; border: 1px solid var(--color-border); border-radius: 10px; background: var(--color-white); }
+  .flange-quality .qc-documents h3 { margin: 0 0 8px; color: var(--color-ink); font-size: 20px; line-height: 1.35; }
+  .flange-quality .qc-documents p { max-width: 620px; margin: 0; color: var(--color-body); font-size: 15px; line-height: 1.65; }
+  .qc-document-link { display: inline-flex; flex: none; align-items: center; justify-content: center; gap: 10px; min-height: 48px; padding: 12px 18px; border-radius: 5px; background: var(--color-brand); color: var(--color-white); font-size: 14px; font-weight: 600; line-height: 1.5; text-decoration: none; }
+  .qc-document-link:hover { background: var(--color-hover); }
+
+  @media (max-width: 767px) {
+    .qc-container { padding-inline: 16px; }
+    .capacity-layout { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+    .capacity-layout > div:first-child { grid-column: 1 / -1; }
+    .capacity-metric { border-left: 0; padding-left: 0; }
+    .capacity-metric + .capacity-metric { border-left: 1px solid var(--color-border); padding-left: 20px; }
+    .qc-header { text-align: left; }
+    .flange-quality .qc-header h2 { font-size: var(--type-h2); }
+    .qc-standards { justify-content: flex-start; }
+    .qc-reference { padding: 20px 14px 16px; }
+    .qc-metric-grid { gap: 16px; }
+    .qc-metric-grid strong { font-size: 24px; }
+    .qc-metric-grid span { font-size: 13px; }
+    .flange-quality .qc-reference p { text-align: left; }
+    .qc-cards { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+    .flange-quality .qc-card { padding: 22px 20px; }
+    .flange-quality .qc-card h3 { font-size: 19px; }
+    .qc-facts > div { grid-template-columns: 52px minmax(0, 1fr); gap: 10px; }
+    .qc-documents { flex-direction: column; align-items: stretch; gap: 18px; padding: 22px 20px; }
+  }
+</style>

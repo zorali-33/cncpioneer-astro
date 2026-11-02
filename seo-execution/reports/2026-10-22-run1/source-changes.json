@@ -1,0 +1,206 @@
+[
+  {
+    "file": "src/blog-archive.mjs",
+    "before": "860bf76a369276d1d0535b2b78bd6c40cbf708ce5c3ed0eaf34efdf1e417a213",
+    "after": "c862df6b32d68c5f982608674daf01f789eca437a194bf41beba1bd35a70bc5d",
+    "scope": "本轮之外的同步差异；保留，不归因于本轮"
+  },
+  {
+    "file": "src/blog-detail-native.mjs",
+    "before": "8eafe3c9e57d48fb78f2ae7284ca16a0bed3716e96867c662923179ea216bc48",
+    "after": "420571d4c28f4280fe020793d32ac3f9c3b022dae12af0b0e69b346ccf1f5d72",
+    "scope": "本轮涉及；共享文件可能含并行修改"
+  },
+  {
+    "file": "src/blog-internal-links-curated.mjs",
+    "before": "50e06175dc13266b9d22effe1e0ab74428ece628121e2b1764d35534c20b6848",
+    "after": "c32066e7f8da03762d12b86068299db133de96f9c05ac12744cc6893a460f899",
+    "scope": "本轮之外的同步差异；保留，不归因于本轮"
+  },
+  {
+    "file": "src/blog-related-curated.mjs",
+    "before": "a48030be0fd58fdc8773a3df215de7a4729dbc404afc24c20cb0497ab982b66f",
+    "after": "3450e93754b7da9c148631e01512da17a7811c7704b600e63e379b4b9be9f06c",
+    "scope": "本轮之外的同步差异；保留，不归因于本轮"
+  },
+  {
+    "file": "src/components/native/IndustryPage.astro",
+    "before": "e07f3ec36a5daa5b191b1d0bff076e4ff02ba87342c127d557f4ac95518ae1b8",
+    "after": "f63c800dc7e556135cab71433a462ba69cae2b7b4cf6c11b5184b53fbc9158ea",
+    "scope": "本轮之外的同步差异；保留，不归因于本轮"
+  },
+  {
+    "file": "src/components/native/MaterialPage.astro",
+    "before": "77631836f18484a63d009db7e51d4e10026ff6fe21a273e1e0e70590f2e68d29",
+    "after": "3be95f2f314ccfd18ffda677a4109a896bc091beb2bf6a31aba5c68bfc0efa78",
+    "scope": "本轮涉及；共享文件可能含并行修改"
+  },
+  {
+    "file": "src/components/native/ProductPage.astro",
+    "before": "8dd3e40f97d1608e0c8ac5099e00fc3547d508a8799bb27e035db3ac272fce0a",
+    "after": "947ff6e66b7e4187b8a64181e8bda8b7251d48255eb9784d64de7a3d65795a56",
+    "scope": "本轮涉及；共享文件可能含并行修改"
+  },
+  {
+    "file": "src/data/blogConsolidatedArticles.mjs",
+    "before": "9aa525e38ebcf8965f5b34a46f035596822a2542628045439f98ef214b720f01",
+    "after": "e87efe2edd2c5a4b3bb98ca2a5ef327522d94e2578583bdb37b67de12a92c3e8",
+    "scope": "本轮之外的同步差异；保留，不归因于本轮"
+  },
+  {
+    "file": "src/data/blogConsolidation.mjs",
+    "before": "666a94999be008356c30dbc1b36b4235dbe6a53ee1d3050bf2fc321c8ec9cbc7",
+    "after": "4b827f9133b79405d165adc5bc6695afab70ddd03d817fae800fd4e41d508c0c",
+    "scope": "本轮之外的同步差异；保留，不归因于本轮"
+  },
+  {
+    "file": "src/data/industryMaterialLinks.mjs",
+    "before": "ac43c75a91590673686fb9e29247bc8eb51b5da750412bef221257f2a766857c",
+    "after": "a8a7dbd33367d5771fc075f8e5e7c71f69174f323ae2637720ac8bee2813f0bd",
+    "scope": "本轮之外的同步差异；保留，不归因于本轮"
+  },
+  {
+    "file": "src/data/industrySpecializations.mjs",
+    "before": "d67844cd420509b9d73812b1144558c19bd6ed58dd263b04e58e843e675991ae",
+    "after": "1b572724a03a7b9bea090dd5e484e4252ec364418077555e98b1bbd8634eba75",
+    "scope": "本轮之外的同步差异；保留，不归因于本轮"
+  },
+  {
+    "file": "src/data/nativeMaterials.mjs",
+    "before": "60d526aeeb10fa92fdf30def7a7677e6ede30da6fbad788e3cb92cda52e59fba",
+    "after": "03615ecb6a89ffdeaf46b46bbfdfd419f29de6babb9192ee44250d7098eed37a",
+    "scope": "本轮涉及；共享文件可能含并行修改"
+  },
+  {
+    "file": "src/data/nativeParts.mjs",
+    "before": "23f77e26260ad34fb5edbd63ae211abe6d4b2cd0583478e2d1ace2702d3e042c",
+    "after": "4feedd8526069d64a7b93e370892bfafcd8d248e9b6f993ca5188b5cd11a3447",
+    "scope": "本轮涉及；共享文件可能含并行修改"
+  },
+  {
+    "file": "src/data/productContent.mjs",
+    "before": "dac5f626d13ce456a24fc8d773ef413e1bc0c7667e0f8f0206d34cb94433c225",
+    "after": "432cc6aeff461776df735e25cdaa1294d782bcccfcea549f0796a38beb8de9fa",
+    "scope": "本轮涉及；共享文件可能含并行修改"
+  },
+  {
+    "file": "src/mirrored-pages/materials/copper-cnc-machining/index.html",
+    "before": "34f0119327b81fe0fbfbabed7899df71c07502a3471e8a3570e06035d6cfaf1e",
+    "after": "85b617ec109f39702e10cd64af5c63c7696dc056bb8512200f4d42a7947c8130",
+    "scope": "本轮之外的同步差异；保留，不归因于本轮"
+  },
+  {
+    "file": "src/pages/cnc-machining-quote.astro",
+    "before": "0ac613605c492a8d25349b4b4c27a70a9a5b06e8e71924996789bd80acde565f",
+    "after": "040912a77d66857d46a986ffa3ef7e70dd7f350e60b96dfe684a25c215e1ddad",
+    "scope": "本轮涉及；共享文件可能含并行修改"
+  },
+  {
+    "file": "src/pages/materials/[slug].astro",
+    "before": "3dae5999ef8c90b1bf89b4d11ed3591a8a1993634b2a2b1aca44643f63dc9979",
+    "after": "e6fbe264245a423e7f9779d9fb1f3df8220c036265fc36475add57c549a28f9c",
+    "scope": "本轮涉及；共享文件可能含并行修改"
+  },
+  {
+    "file": "src/pages/materials.astro",
+    "before": "d7eaa62159569048b18523f3466bff665a4268dfb694b6dd2327743febd6a501",
+    "after": "7b77d409842fa085ceb38f578411dd60199c45923c7fa43ee427e4af4ee73c0c",
+    "scope": "本轮之外的同步差异；保留，不归因于本轮"
+  },
+  {
+    "file": "src/pages/services/cnc-turning-and-milling.astro",
+    "before": "aaaa5d466e01673f02a77ea25ca3b23c80a38eac24f83c9fdbfa24b7fabf6b57",
+    "after": "72e1cea7982ba2bdc60a607774b9413e151f470dab5c9678b72d7090a054b340",
+    "scope": "本轮之外的同步差异；保留，不归因于本轮"
+  },
+  {
+    "file": "src/pages/services/swiss-machining.astro",
+    "before": "c5367440d8050316e9dae0082126619047dbeb3ff0c5c360df971595376af7d1",
+    "after": "cc3b90c9b9074ae37fc7316a49f2330ebc44558277e6271bbf23c00f7b63cefe",
+    "scope": "本轮之外的同步差异；保留，不归因于本轮"
+  },
+  {
+    "file": "src/pages/[...slug].astro",
+    "before": "cc1b87acc510e246690840536038be68655bcf6b4fbdb72021a5cece0da0e2ab",
+    "after": "93bbb31b14f8fbd52091b11a8ec9867ee67aa65251e7aa1996becd0aa968fe6f",
+    "scope": "本轮之外的同步差异；保留，不归因于本轮"
+  },
+  {
+    "file": "src/search-index.mjs",
+    "before": "d6b32501db181fe16240dd6051d50e5c364b8ad258947eaf6877e58f23ef0250",
+    "after": "da9b18d82f402b3de2c1d79f2e76850ed6875b53f16105d37336c5e1284beb5e",
+    "scope": "本轮之外的同步差异；保留，不归因于本轮"
+  },
+  {
+    "file": "src/styles/industry-detail.css",
+    "before": "afa82cf6abd7660d0d6bce13669e2484e42ba0d318781cbb5cf62436b5124f93",
+    "after": "2bfb666dd0759171b650c7f90fbe2d5154869998facdface164a13739488f8e4",
+    "scope": "本轮之外的同步差异；保留，不归因于本轮"
+  },
+  {
+    "file": "scripts/build-product-content.mjs",
+    "before": "d2c065595a5e0c997ddc87789a2fcd577813630ed01fed09102e04173f93c595",
+    "after": "e1337b28e8ea96075c6ce676ba5d67435f03cc10ced8c2656a403550bc075253",
+    "scope": "本轮涉及；共享文件可能含并行修改"
+  },
+  {
+    "file": "scripts/industry-redirect-integration.mjs",
+    "before": "bb9aa4e5a01d8357830e4d361dd61312284bcedef6ddc577239a34cd1d8c15d8",
+    "after": "7738dd9705f9de5a78e5fbe3f44fdb25aaa1ddc0c9c44e562c97f3a300039278",
+    "scope": "本轮之外的同步差异；保留，不归因于本轮"
+  },
+  {
+    "file": "scripts/t11-generate-robots-sitemap.mjs",
+    "before": "7d47e50ac3f793fdba9cdb093be265e6f3543659ada55683c5ce1ae0b6cb3807",
+    "after": "5b7e72ece0904dab783e9ac74dc4407e9430345893f35c0c6689952faf21d4f3",
+    "scope": "本轮之外的同步差异；保留，不归因于本轮"
+  },
+  {
+    "file": "scripts/t24-generate-native-materials.mjs",
+    "before": "34457eb44cc3e5ef54e0d7f6e1d67a4aa98383f956765021a938d0c31f5af80d",
+    "after": "1620f813065c1fda75df6a89172d1fb156ef39b28aa31b7b52f1d37439b6d1a2",
+    "scope": "本轮涉及；共享文件可能含并行修改"
+  },
+  {
+    "file": "scripts/t24-generate-native-parts.mjs",
+    "before": "7b2cc4684f9cb53a87e2b5e2abc1c07815be349930dd594c9b2a7bee935aba8d",
+    "after": "be7d94bfa93338c22e7cfb61cf9e1d17f824b1a0f60bdeb7098a78dbae1cfe31",
+    "scope": "本轮涉及；共享文件可能含并行修改"
+  },
+  {
+    "file": "src/data/blogSeoOverrides.mjs",
+    "before": null,
+    "after": "da39bfc51ef6a9fafca4090908caf96dd1f8f360be119c09340a21b79167c595",
+    "scope": "本轮涉及；共享文件可能含并行修改"
+  },
+  {
+    "file": "src/data/blogContentAmendments.mjs",
+    "before": null,
+    "after": "0b9210f96f4ff550ea2267db1eb162d5879170211ba4e829e38dfdaf77c79c82",
+    "scope": "本轮涉及；共享文件可能含并行修改"
+  },
+  {
+    "file": "src/data/englishSeoContent.mjs",
+    "before": null,
+    "after": "a73d4de91c74d352d539ad4c7ff965ade7ec0fab35aa522955ddbb05dd84713c",
+    "scope": "本轮涉及；共享文件可能含并行修改"
+  },
+  {
+    "file": "src/components/native/ProcurementChecklist.astro",
+    "before": null,
+    "after": "68962f96c84f89287a4f0ddbb0f9b182c480d697265a60a3ba91e778212253b6",
+    "scope": "本轮涉及；共享文件可能含并行修改"
+  },
+  {
+    "file": "src/lib/quoteMeasurement.mjs",
+    "before": null,
+    "after": "715337a4deb3f68f5fd54f25c80bad34d2a0f3d67d88ce214efc2bde82472896",
+    "scope": "本轮涉及；共享文件可能含并行修改"
+  },
+  {
+    "file": "scripts/test-quote-measurement.mjs",
+    "before": null,
+    "after": "33b27b3fb9096d721b747d0341d514e37352dc2ab850271001d4034fa97b53c7",
+    "scope": "本轮涉及；共享文件可能含并行修改"
+  }
+]

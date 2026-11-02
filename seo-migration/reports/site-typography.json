@@ -1,0 +1,35 @@
+{
+  "generatedAt": "2026-11-02T02:52:09.898Z",
+  "status": "pass",
+  "pages": 330,
+  "stylesheets": 19,
+  "fontDeclarations": 3464,
+  "headingDeclarations": 725,
+  "fontFaces": [
+    {
+      "file": "D:\\cncpioneer.com-astro\\dist\\brand-theme.css",
+      "font-family": "'Inter'",
+      "font-style": "normal",
+      "font-weight": "400 700",
+      "font-display": "swap",
+      "src": "url('/assets/fonts/inter-latin-variable.woff2') format('woff2')"
+    },
+    {
+      "file": "D:\\cncpioneer.com-astro\\dist\\brand-theme.css",
+      "font-family": "'DM Sans'",
+      "font-style": "normal",
+      "font-weight": "400 700",
+      "font-display": "swap",
+      "src": "url('/assets/fonts/dm-sans-latin-variable.woff2') format('woff2')"
+    },
+    {
+      "file": "D:\\cncpioneer.com-astro\\dist\\brand-theme.css",
+      "font-family": "'JetBrains Mono'",
+      "font-style": "normal",
+      "font-weight": "400 700",
+      "font-display": "swap",
+      "src": "url('/assets/fonts/jetbrains-mono-latin-variable.woff2') format('woff2')"
+    }
+  ],
+  "errors": []
+}

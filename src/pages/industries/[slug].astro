@@ -1,0 +1,15 @@
+---
+import IndustryPage from "../../components/native/IndustryPage.astro";
+import { nativeIndustries } from "../../data/nativeIndustries.mjs";
+import { isRetiredIndustry } from "../../data/industryRedirects.mjs";
+
+export function getStaticPaths() {
+  return nativeIndustries.filter((page) => !isRetiredIndustry(`industries/${page.slug}`)).map((page) => ({
+    params: { slug: page.slug },
+    props: { page },
+  }));
+}
+
+const { page } = Astro.props;
+---
+<IndustryPage page={page} />

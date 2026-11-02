@@ -1,0 +1,17 @@
+﻿type,source,target,file,status
+redirect_page,/blog/cnc-milling-parts,/blog/cnc-milling-machine-parts,src/mirrored-pages/blog/cnc-milling-parts/index.html,written
+redirect_page,/blog/medical-swiss-machining,/industries/medical-swiss-machining,src/mirrored-pages/blog/medical-swiss-machining/index.html,written
+redirect_page,/industries/railroad-machining-services,/blog/railroad-machining,src/mirrored-pages/industries/railroad-machining-services/index.html,written
+asset_alias,/wp-content/uploads/2026/01/medical-cnc-machining.jpg,/wp-content/uploads/2021/07/5-Axis-Aluminum-Alloy-CNC-Precision-Machining-Medical-Parts.jpg,public/wp-content/uploads/2021/07/5-Axis-Aluminum-Alloy-CNC-Precision-Machining-Medical-Parts.jpg,written
+asset_alias,/wp-content/uploads/2026/03/cnc-aluminum-milling.webp,/wp-content/uploads/2024/08/aluminum-alloys-and-their-melting-points-1024x658.webp,public/wp-content/uploads/2024/08/aluminum-alloys-and-their-melting-points-1024x658.webp,written
+asset_alias,/wp-content/uploads/2026/05/construction-mining-gearbox-housing.jpg,/wp-content/uploads/2026/06/construction-agricultural-reducer.jpg,public/wp-content/uploads/2026/06/construction-agricultural-reducer.jpg,written
+asset_alias,/wp-content/uploads/2026/06/robot-cell-measurement-air-gauge-vision-cmm.jpg,/wp-content/uploads/2026/06/robot-cell-chip-coolant-peripheral-hardware.jpg,public/wp-content/uploads/2026/06/robot-cell-chip-coolant-peripheral-hardware.jpg,written
+asset_alias,/wp-content/uploads/2026/04/brass-electrical-connector-terminals.jpg,/wp-content/uploads/2026/09/electricals.jpg,public/wp-content/uploads/2026/09/electricals.jpg,written
+asset_alias,/wp-content/uploads/2026/04/fluid-control.jpg,/wp-content/uploads/2026/09/fluid-control.jpg,public/wp-content/uploads/2026/09/fluid-control.jpg,written
+asset_alias,/wp-content/uploads/2026/05/industrial-machinery.jpg,/wp-content/uploads/2026/09/industrial-machinery.jpg,public/wp-content/uploads/2026/09/industrial-machinery.jpg,written
+dynamic_redirect_page,/blog/page/15,/blog/page/14,src/pages/blog/page/[page].astro,handled_by_dynamic_route
+dynamic_redirect_page,/blog/page/16,/blog/page/14,src/pages/blog/page/[page].astro,handled_by_dynamic_route
+dynamic_redirect_page,/blog/page/17,/blog/page/14,src/pages/blog/page/[page].astro,handled_by_dynamic_route
+dynamic_redirect_page,/blog/page/18,/blog/page/14,src/pages/blog/page/[page].astro,handled_by_dynamic_route
+dynamic_redirect_page,/blog/page/19,/blog/page/14,src/pages/blog/page/[page].astro,handled_by_dynamic_route
+dynamic_redirect_page,/blog/page/20,/blog/page/14,src/pages/blog/page/[page].astro,handled_by_dynamic_route

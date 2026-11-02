@@ -1,0 +1,17 @@
+[
+  {
+    "file": "scripts/build-product-content.mjs",
+    "hasOverrideImport": true,
+    "hasApplyCall": true
+  },
+  {
+    "file": "scripts/t24-generate-native-materials.mjs",
+    "hasOverrideImport": true,
+    "hasApplyCall": true
+  },
+  {
+    "file": "scripts/t24-generate-native-parts.mjs",
+    "hasOverrideImport": true,
+    "hasApplyCall": true
+  }
+]

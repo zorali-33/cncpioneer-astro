@@ -1,0 +1,413 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import QuoteCta from "./QuoteCta.astro";
+import PageHero from "./PageHero.astro";
+import FaqList from "./FaqList.astro";
+
+const { seo, hero, parts, faqs } = Astro.props;
+
+const plasticTypes = [
+  {
+    title: "PEEK",
+    text:
+      "PEEK is a premium high-performance engineering plastic selected for demanding CNC machined parts that need strength, heat resistance, chemical resistance, and stable dimensions. It performs well in aerospace, medical, oil and gas, semiconductor, and high-temperature industrial assemblies, including bearings, bushings, seals, insulators, pump components, implant tooling, and precision fixtures.",
+    bullets: [
+      "Mill Lead Time: As fast as 7 days",
+      "Finishing Options: As-machined, polishing, bead blasting, deburring, vapor smoothing, marking, and precision cleaning",
+      "Grades: Virgin PEEK, glass-filled PEEK, carbon-filled PEEK, bearing-grade PEEK, medical-grade PEEK",
+    ],
+    href: "/materials/peek-cnc-machining",
+    image: "/wp-content/uploads/2026/01/peek-cnc-machining-material.jpg",
+    alt: "peek cnc machining material",
+  },
+  {
+    title: "Nylon",
+    text:
+      "Nylon is a tough, low-friction engineering plastic with excellent wear resistance, impact strength, and fatigue performance. It is widely used for CNC machined gears, rollers, bushings, bearings, sliding parts, wear pads, pump parts, and durable functional prototypes where lightweight strength and good machinability matter.",
+    bullets: [
+      "Mill Lead Time: As fast as 5 days",
+      "Finishing Options: As-machined, deburring, tumble finishing, polishing, dyeing, marking, and precision cleaning",
+      "Grades: Nylon 6, Nylon 66, cast nylon, glass-filled nylon, oil-filled nylon, heat-stabilized nylon",
+    ],
+    href: "/materials/nylon-cnc-machining",
+    image: "/wp-content/uploads/2026/01/nylon-cnc-machining-material.jpg",
+    alt: "nylon cnc machining material",
+  },
+  {
+    title: "ABS",
+    text:
+      "ABS is a cost-effective plastic for CNC machined prototypes and production parts that need impact resistance, clean machining, good dimensional stability, and easy finishing. It is commonly used for electronic housings, covers, enclosures, automotive interior parts, fixtures, consumer product prototypes, and low-volume functional components.",
+    bullets: [
+      "Mill Lead Time: As fast as 5 days",
+      "Finishing Options: As-machined, sanding, painting, vapor smoothing, polishing, bonding, deburring, and marking",
+      "Grades: General-purpose ABS, flame-retardant ABS, black ABS, natural ABS, engineering ABS sheet and rod",
+    ],
+    href: "/materials/abs-cnc-machining",
+    image: "/wp-content/uploads/2026/01/abs-cnc-machining-material.jpg",
+    alt: "abs cnc machining material",
+  },
+  {
+    title: "Acrylic",
+    text:
+      "Acrylic is chosen for CNC machined clear plastic parts that require optical clarity, clean edges, attractive appearance, and reliable dimensional repeatability. It is suitable for light guides, lenses, transparent covers, display components, signage, medical device parts, inspection windows, and polished prototypes.",
+    bullets: [
+      "Mill Lead Time: As fast as 5 days",
+      "Finishing Options: Flame polishing, mechanical polishing, vapor polishing, sanding, deburring, painting, and bonding",
+      "Grades: Clear acrylic, colored acrylic, cast acrylic, extruded acrylic, optical-grade PMMA",
+    ],
+    href: "/materials/acrylic-cnc-machining",
+    image: "/wp-content/uploads/2026/02/acrylic-cnc-machining-material.jpg",
+    alt: "acrylic cnc machining material",
+  },
+  {
+    title: "Acetal (POM)",
+    text:
+      "Acetal, also known as POM or Delrin, is a dimensionally stable engineering plastic with low friction, high stiffness, excellent machinability, and low moisture absorption. It is ideal for precision gears, cams, rollers, bushings, valve parts, pump components, sliding mechanisms, fixtures, and mechanical assemblies requiring consistent fits.",
+    bullets: [
+      "Mill Lead Time: As fast as 5 days",
+      "Finishing Options: As-machined, deburring, tumble finishing, polishing, engraving, marking, and precision cleaning",
+      "Grades: POM homopolymer, POM copolymer, Delrin, black acetal, natural acetal, glass-filled acetal",
+    ],
+    href: "/materials/pom-cnc-machining",
+    image: "/wp-content/uploads/2026/01/pom-cnc-machining-material.jpg",
+    alt: "pom cnc machining material",
+  },
+  {
+    title: "HDPE",
+    text:
+      "HDPE is a lightweight and durable plastic valued for excellent chemical resistance, toughness, low moisture absorption, and food-safe material options. CNC machined HDPE is used for pipe ends, tanks, conveyor components, marine fittings, wear strips, wheel chocks, food processing components, and corrosion-resistant housings.",
+    bullets: [
+      "Mill Lead Time: As fast as 5 days",
+      "Finishing Options: As-machined, deburring, tumble finishing, engraving, marking, and clean packaging",
+      "Grades: Natural HDPE, black HDPE, UV-stabilized HDPE, food-grade HDPE, marine-grade HDPE",
+    ],
+    href: "/materials/hdpe-cnc-machining",
+    image: "/wp-content/uploads/2026/02/hdpe-cnc-machining-material.jpg",
+    alt: "hdpe cnc machining material",
+  },
+  {
+    title: "Polycarbonate",
+    text:
+      "Polycarbonate is a tough transparent plastic used when parts need high impact resistance, good dimensional stability, and optical clarity. CNC machining supports guards, lenses, protective covers, transparent housings, lighting parts, medical device components, inspection windows, and high-impact prototype parts.",
+    bullets: [
+      "Mill Lead Time: As fast as 5 days",
+      "Finishing Options: As-machined, polishing, vapor polishing, sanding, coating, painting, deburring, and marking",
+      "Grades: Clear polycarbonate, black polycarbonate, UV-stabilized PC, flame-retardant PC, optical-grade PC",
+    ],
+    href: "/materials/polycarbonate-cnc-machining",
+    image: "/wp-content/uploads/2026/02/polycarbonate-cnc-machining-material.jpg",
+    alt: "polycarbonate cnc machining material",
+  },
+  {
+    title: "Polypropylene",
+    text:
+      "Polypropylene is a lightweight plastic with strong chemical resistance, low moisture absorption, good fatigue performance, and cost-effective machinability. It is used for chemical-resistant housings, fluid handling parts, pipe couplings, medical components, electrical insulators, lightweight covers, and functional prototypes.",
+    bullets: [
+      "Mill Lead Time: As fast as 5 days",
+      "Finishing Options: As-machined, deburring, tumble finishing, engraving, marking, and clean packaging",
+      "Grades: Homopolymer PP, copolymer PP, natural polypropylene, black polypropylene, medical and food-contact grades",
+    ],
+    href: "/materials/polypropylene-cnc-machining",
+    image: "/wp-content/uploads/2026/02/polypropylene-cnc-machining-material.jpg",
+    alt: "polypropylene cnc machining material",
+  },
+  {
+    title: "PTFE",
+    text:
+      "PTFE, widely known as Teflon, is selected for CNC machined parts that require exceptional chemical resistance, ultra-low friction, non-stick behavior, electrical insulation, and performance across extreme temperatures. It is common in seals, gaskets, bushings, valve seats, insulators, slide plates, and high-purity fluid components.",
+    bullets: [
+      "Mill Lead Time: As fast as 7 days",
+      "Finishing Options: As-machined, deburring, skiving, polishing, etching for bonding, marking, and precision cleaning",
+      "Grades: Virgin PTFE, filled PTFE, glass-filled PTFE, carbon-filled PTFE, bronze-filled PTFE",
+    ],
+    href: "/materials/ptfe-cnc-machining",
+    image: "/wp-content/uploads/2026/01/ptfe-cnc-machining-materials.jpg",
+    alt: "ptfe cnc machining material",
+  },
+  {
+    title: "Ultem",
+    text:
+      "Ultem, also known as PEI, is a high-performance plastic chosen for strength, rigidity, flame resistance, dimensional stability, and continuous use at elevated temperatures. CNC machined Ultem is used for aerospace fittings, sterilizable medical parts, electrical connectors, semiconductor handling parts, fuel system elements, and high-temperature insulators.",
+    bullets: [
+      "Mill Lead Time: As fast as 7 days",
+      "Finishing Options: As-machined, deburring, polishing, bead blasting, marking, and precision cleaning",
+      "Grades: Ultem 1000, Ultem 2300, PEI sheet and rod, natural amber Ultem, black Ultem",
+    ],
+    href: "/materials/ultem-cnc-machining",
+    image: "/wp-content/uploads/2026/01/ultem-cnc-machining-material.jpg",
+    alt: "ultem cnc machining material",
+  },
+];
+
+const serviceCards = [
+  {
+    title: "Swiss Machining",
+    image: "/wp-content/uploads/2025/12/swiss-machining-service-540x260-1.png",
+    text:
+      "Swiss machining supports small, high-precision plastic components from PEEK, Nylon, Acetal, PTFE, Ultem, and other engineering plastics where tight concentricity and repeatability are required.",
+    href: "/services/swiss-machining",
+    label: "Swiss Machining Services",
+  },
+  {
+    title: "CNC Turning and Milling",
+    image: "/wp-content/uploads/2025/12/cnc-turning-and-milling-services-540x260-1.png",
+    text:
+      "CNC turning and milling produce complex plastic parts with stable tolerances, clean edges, controlled heat, and reliable surface quality for prototypes through production batches.",
+    href: "/services/cnc-turning-and-milling",
+    label: "CNC Turning and Milling Services",
+  },
+];
+
+const industries = [
+  { name: "Semiconductor", image: "/wp-content/uploads/2025/12/semiconductor.jpg" },
+  { name: "Medical", image: "/wp-content/uploads/2025/12/medical.jpg" },
+  { name: "Consumer Electronics", image: "/wp-content/uploads/2025/12/consumer-electronics.jpg" },
+  { name: "Automotive", image: "/wp-content/uploads/2025/12/automotive.jpg" },
+  { name: "Aerospace", image: "/wp-content/uploads/2025/12/aerospace.jpg" },
+  { name: "Oil & Gas", image: "/wp-content/uploads/2025/12/oil-gas.jpg" },
+  { name: "Railway", image: "/wp-content/uploads/2025/12/railway.jpg" },
+  { name: "Defense", image: "/wp-content/uploads/2025/12/defense.jpg" },
+];
+
+const partsIntro =
+  "CNC Plastic Machining is suitable for a wide range of engineering plastics including PEEK, Nylon, ABS, Acrylic, Acetal (POM), HDPE, Polycarbonate, Polypropylene, PTFE, and Ultem. Material selection depends on heat resistance, optical clarity, chemical exposure, wear behavior, dimensional stability, and machinability. Here are the plastic parts we can provide for CNC Machining.";
+
+const industriesIntro =
+  "Plastic CNC Machining is trusted across demanding industries for lightweight, insulating, chemical-resistant, transparent, and wear-resistant components: semiconductor, medical, consumer electronics, automotive, aerospace, oil and gas, railway, and defense.";
+---
+<BaseLayout seo={seo}>
+  <PageHero
+    title={hero.title}
+    image={hero.image}
+    crumbs={[{ label: "Materials", href: "/materials" }, { label: hero.title }]}
+    description={hero.description}
+  />
+
+  <section class="section metal-types" data-metal-tabs>
+    <h2>Types of Plastic CNC Machining</h2>
+    <div class="metal-tabs__list" role="tablist" aria-label="Types of Plastic CNC Machining">
+      {plasticTypes.map((item, index) => (
+        <button
+          id={`plastic-tab-${index}`}
+          class={`metal-tab${index === 0 ? " is-active" : ""}`}
+          type="button"
+          role="tab"
+          aria-selected={index === 0 ? "true" : "false"}
+          aria-controls={`plastic-panel-${index}`}
+          tabindex={index === 0 ? "0" : "-1"}
+          data-metal-tab
+        >
+          {item.title}
+        </button>
+      ))}
+    </div>
+    <div class="metal-tabs__panels">
+      {plasticTypes.map((item, index) => (
+        <article
+          id={`plastic-panel-${index}`}
+          class={`metal-panel${index === 0 ? " is-active" : ""}`}
+          role="tabpanel"
+          aria-labelledby={`plastic-tab-${index}`}
+          hidden={index !== 0}
+          data-metal-panel
+        >
+          <div class="metal-panel__copy">
+            <h3>{item.title}</h3>
+            <p>{item.text}</p>
+            <ul class="check-list">{item.bullets.map((bullet) => <li>{bullet}</li>)}</ul>
+            <a class="button button--small" href={item.href}>Learn More</a>
+          </div>
+          <div class="metal-panel__media">
+            <img src={item.image} alt={item.alt} loading="eager" decoding="async" width="720" height="480" />
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section material-capabilities">
+    <h2>Plastic CNC Services and Capabilities</h2>
+    <div class="material-service-grid">
+      {serviceCards.map((card) => (
+        <article class="material-service-card">
+          <a class="material-service-card__image" href={card.href} aria-label={card.title}>
+            <img src={card.image} alt={card.title} loading="lazy" />
+          </a>
+          <div class="material-service-card__content">
+            <h3>{card.title}</h3>
+            <p>{card.text}</p>
+            <div class="material-service-card__links">
+              <a href="/cnc-machining-quote">Quote Now -&gt;</a>
+              <a href={card.href}>{card.label} -&gt;</a>
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section metal-slider-section">
+    <h2>Available Parts for Plastic CNC Machining</h2>
+    <p class="section__intro">{partsIntro}</p>
+    <div class="metal-slider" data-metal-slider>
+      <button class="metal-slider__button metal-slider__button--prev" type="button" aria-label="Previous parts" data-slider-prev>‹</button>
+      <div class="metal-slider__viewport" role="region" aria-roledescription="carousel" aria-label="Available Parts for Plastic CNC Machining">
+        <div class="metal-slider__track" data-slider-track>
+          {parts.map((part) => (
+            <figure class="metal-slide">
+              <img src={part.image} alt={part.alt || part.name} loading="lazy" />
+              <figcaption>{part.name}</figcaption>
+            </figure>
+          ))}
+        </div>
+      </div>
+      <button class="metal-slider__button metal-slider__button--next" type="button" aria-label="Next parts" data-slider-next>›</button>
+      <div class="metal-slider__dots" aria-label="Parts carousel pagination" data-slider-dots></div>
+    </div>
+  </section>
+
+  <section class="section metal-slider-section metal-industries-section">
+    <h2>Industries We Serve with Plastic CNC Machining</h2>
+    <p class="section__intro">{industriesIntro}</p>
+    <div class="metal-slider metal-slider--industries" data-metal-slider>
+      <button class="metal-slider__button metal-slider__button--prev" type="button" aria-label="Previous industries" data-slider-prev>‹</button>
+      <div class="metal-slider__viewport" role="region" aria-roledescription="carousel" aria-label="Industries We Serve with Plastic CNC Machining">
+        <div class="metal-slider__track" data-slider-track>
+          {industries.map((industry) => (
+            <figure class="metal-slide">
+              <img src={industry.image} alt={industry.name} loading="lazy" />
+              <figcaption>{industry.name}</figcaption>
+            </figure>
+          ))}
+        </div>
+      </div>
+      <button class="metal-slider__button metal-slider__button--next" type="button" aria-label="Next industries" data-slider-next>›</button>
+      <div class="metal-slider__dots" aria-label="Industries carousel pagination" data-slider-dots></div>
+    </div>
+  </section>
+
+  {faqs.length > 0 && <FaqList items={faqs} variant="material" />}
+
+  <QuoteCta id="plastic-material-quote" idPrefix={`plastic-material-quote-form-${hero.title.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`} formName={`${hero.title} Machining Enquiry`} kicker="MATERIAL SELECTION" title={`Plan your ${hero.title} machining project`} description="Share the material grade, drawing, quantity and finish requirements for a project-specific review." />
+</BaseLayout>
+
+<script is:inline>
+  (() => {
+    const tabRoots = document.querySelectorAll("[data-metal-tabs]");
+
+    tabRoots.forEach((root) => {
+      const tabs = Array.from(root.querySelectorAll("[data-metal-tab]"));
+      const panels = Array.from(root.querySelectorAll("[data-metal-panel]"));
+
+      const activate = (index) => {
+        tabs.forEach((tab, tabIndex) => {
+          const active = tabIndex === index;
+          tab.classList.toggle("is-active", active);
+          tab.setAttribute("aria-selected", String(active));
+          tab.setAttribute("tabindex", active ? "0" : "-1");
+        });
+        panels.forEach((panel, panelIndex) => {
+          const active = panelIndex === index;
+          panel.hidden = !active;
+          panel.classList.toggle("is-active", active);
+        });
+      };
+
+      tabs.forEach((tab, index) => {
+        tab.addEventListener("click", () => activate(index));
+        tab.addEventListener("keydown", (event) => {
+          if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
+          event.preventDefault();
+          const current = tabs.indexOf(tab);
+          const next =
+            event.key === "Home"
+              ? 0
+              : event.key === "End"
+                ? tabs.length - 1
+                : event.key === "ArrowRight"
+                  ? (current + 1) % tabs.length
+                  : (current - 1 + tabs.length) % tabs.length;
+          activate(next);
+          tabs[next].focus();
+        });
+      });
+    });
+
+    const sliders = document.querySelectorAll("[data-metal-slider]");
+
+    sliders.forEach((slider) => {
+      const track = slider.querySelector("[data-slider-track]");
+      const prev = slider.querySelector("[data-slider-prev]");
+      const next = slider.querySelector("[data-slider-next]");
+      const dotsRoot = slider.querySelector("[data-slider-dots]");
+      const slides = Array.from(track?.children || []);
+      if (!track || !prev || !next || !dotsRoot || slides.length === 0) return;
+
+      let index = 0;
+      let timer = 0;
+      const perView = () => (window.matchMedia("(max-width: 700px)").matches ? 1 : window.matchMedia("(max-width: 1024px)").matches ? 2 : 3);
+      const maxIndex = () => Math.max(0, slides.length - perView());
+      const dotCount = () => maxIndex() + 1;
+
+      const renderDots = () => {
+        dotsRoot.innerHTML = "";
+        for (let i = 0; i < dotCount(); i += 1) {
+          const dot = document.createElement("button");
+          dot.type = "button";
+          dot.className = "metal-slider__dot";
+          dot.setAttribute("aria-label", `Go to slide ${i + 1}`);
+          dot.addEventListener("click", () => {
+            index = i;
+            update();
+            schedule();
+          });
+          dotsRoot.append(dot);
+        }
+      };
+
+      const update = () => {
+        index = Math.min(Math.max(index, 0), maxIndex());
+        const slide = slides[0];
+        const gap = parseFloat(window.getComputedStyle(track).gap || "0") || 0;
+        const distance = slide.getBoundingClientRect().width + gap;
+        track.style.transform = `translate3d(${-index * distance}px, 0, 0)`;
+        prev.disabled = index === 0;
+        next.disabled = index === maxIndex();
+        Array.from(dotsRoot.children).forEach((dot, dotIndex) => {
+          dot.classList.toggle("is-active", dotIndex === index);
+        });
+      };
+
+      const go = (direction) => {
+        index = direction === "next" ? (index >= maxIndex() ? 0 : index + 1) : (index <= 0 ? maxIndex() : index - 1);
+        update();
+      };
+
+      const schedule = () => {
+        window.clearInterval(timer);
+        timer = window.setInterval(() => go("next"), 5000);
+      };
+
+      prev.addEventListener("click", () => {
+        go("prev");
+        schedule();
+      });
+      next.addEventListener("click", () => {
+        go("next");
+        schedule();
+      });
+      slider.addEventListener("mouseenter", () => window.clearInterval(timer));
+      slider.addEventListener("mouseleave", schedule);
+      slider.addEventListener("focusin", () => window.clearInterval(timer));
+      slider.addEventListener("focusout", schedule);
+      window.addEventListener("resize", () => {
+        renderDots();
+        update();
+      });
+
+      renderDots();
+      update();
+      schedule();
+    });
+  })();
+</script>

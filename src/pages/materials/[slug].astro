@@ -1,0 +1,48 @@
+---
+import MaterialPage from "../../components/native/MaterialPage.astro";
+import MetalMaterialPage from "../../components/native/MetalMaterialPage.astro";
+import PlasticMaterialPage from "../../components/native/PlasticMaterialPage.astro";
+import { nativeMaterials } from "../../data/nativeMaterials.mjs";
+import { getMaterialRelatedParts } from "../../data/materialRelatedParts.mjs";
+
+export function getStaticPaths() {
+  return nativeMaterials.map((page) => ({
+    params: { slug: page.slug },
+    props: { page },
+  }));
+}
+
+const { page } = Astro.props;
+const isMetalOverview = page.slug === "metal-cnc-machining";
+const isPlasticOverview = page.slug === "plastic-cnc-machining";
+---
+{
+  isMetalOverview ? (
+    <MetalMaterialPage
+      seo={page.seo}
+      hero={page.hero}
+      parts={page.parts}
+      faqs={page.faqs}
+    />
+  ) : isPlasticOverview ? (
+    <PlasticMaterialPage
+      seo={page.seo}
+      hero={page.hero}
+      parts={page.parts}
+      faqs={page.faqs}
+    />
+  ) : (
+    <MaterialPage
+      seo={page.seo}
+      hero={page.hero}
+      material={page.material}
+      parts={getMaterialRelatedParts(page.slug, page.parts)}
+      procurement={page.procurement}
+      learningLinks={page.learningLinks}
+      learningPosts={page.learningPosts}
+      capabilityCards={page.capabilityCards}
+      capabilitiesHeading={page.capabilitiesHeading}
+      faqs={page.faqs}
+    />
+  )
+}

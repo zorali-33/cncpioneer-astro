@@ -1,0 +1,80 @@
+{
+  "rows": 343,
+  "clicks": 369.0,
+  "impressions": 67162.0,
+  "anchorRows": 51,
+  "anchorClicks": 0.0,
+  "anchorImpressions": 8765.0,
+  "categories": [
+    {
+      "category": "about-us",
+      "rows": 1,
+      "clicks": 2.0,
+      "impressions": 38.0,
+      "ctr": 0.05263157894736842
+    },
+    {
+      "category": "author",
+      "rows": 4,
+      "clicks": 1.0,
+      "impressions": 40.0,
+      "ctr": 0.025
+    },
+    {
+      "category": "blog",
+      "rows": 130,
+      "clicks": 331.0,
+      "impressions": 57247.0,
+      "ctr": 0.005781962373574161
+    },
+    {
+      "category": "cnc-machining-quote",
+      "rows": 1,
+      "clicks": 0.0,
+      "impressions": 20.0,
+      "ctr": 0.0
+    },
+    {
+      "category": "custom-cnc-parts",
+      "rows": 138,
+      "clicks": 12.0,
+      "impressions": 4318.0,
+      "ctr": 0.002779064381658175
+    },
+    {
+      "category": "home",
+      "rows": 1,
+      "clicks": 4.0,
+      "impressions": 126.0,
+      "ctr": 0.031746031746031744
+    },
+    {
+      "category": "industries",
+      "rows": 22,
+      "clicks": 2.0,
+      "impressions": 1070.0,
+      "ctr": 0.001869158878504673
+    },
+    {
+      "category": "materials",
+      "rows": 40,
+      "clicks": 17.0,
+      "impressions": 4148.0,
+      "ctr": 0.004098360655737705
+    },
+    {
+      "category": "resources",
+      "rows": 1,
+      "clicks": 0.0,
+      "impressions": 2.0,
+      "ctr": 0.0
+    },
+    {
+      "category": "services",
+      "rows": 5,
+      "clicks": 0.0,
+      "impressions": 153.0,
+      "ctr": 0.0
+    }
+  ]
+}

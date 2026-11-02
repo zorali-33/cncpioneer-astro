@@ -1,0 +1,27 @@
+---
+const {group} = Astro.props;
+---
+<details class="material-nav-group" name="material-navigation">
+  <summary>{group.label}<span aria-hidden="true">›</span></summary>
+  <div class="material-nav-links">
+    <a class="material-nav-overview" href={group.href}>All {group.label} <span aria-hidden="true">→</span></a>
+    {group.children.map(material=><a href={material.href} aria-current={Astro.url.pathname===material.href?'page':undefined}>{material.label}</a>)}
+  </div>
+</details>
+<script>
+  for (const group of document.querySelectorAll<HTMLDetailsElement>('.material-nav-group')) {
+    const desktop = window.matchMedia('(min-width: 1025px)');
+    group.querySelector('summary')?.addEventListener('click', event => {
+      if (desktop.matches && event.detail > 0) { event.preventDefault(); group.open = true; }
+    });
+    group.addEventListener('mouseenter', () => { if (desktop.matches) group.open = true; });
+    group.addEventListener('mouseleave', () => { if (desktop.matches && !group.contains(document.activeElement)) group.open = false; });
+    group.addEventListener('focusout', event => { if (!group.contains(event.relatedTarget as Node)) group.open = false; });
+    group.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && group.open) {
+        event.preventDefault(); event.stopPropagation(); group.open = false; group.querySelector('summary')?.focus();
+      }
+    });
+    desktop.addEventListener('change', () => { group.open = false; });
+  }
+</script>

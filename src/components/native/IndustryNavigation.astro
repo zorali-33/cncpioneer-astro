@@ -1,0 +1,20 @@
+---
+import {industryNavigation} from '../../data/industryNavigation.mjs';
+---
+<div class="industry-menu-grid">
+  {industryNavigation.map(group=><details class="industry-menu-group" open>
+    <summary>{group.label}<span aria-hidden="true">⌄</span></summary>
+    <div class="industry-menu-links">
+      {group.children.map(item=><a href={item.href} aria-current={Astro.url.pathname===item.href?'page':undefined}>{item.label}</a>)}
+    </div>
+  </details>)}
+</div>
+<a class="industry-menu-all" href="/industries">View All Industries <span aria-hidden="true">→</span></a>
+<script>
+  const desktop = window.matchMedia('(min-width:1025px)');
+  for (const group of document.querySelectorAll<HTMLDetailsElement>('.industry-menu-group')) {
+    const update = () => { group.open = desktop.matches; };
+    update(); desktop.addEventListener('change',update);
+    group.querySelector('summary')?.addEventListener('click',event=>{if(desktop.matches)event.preventDefault();});
+  }
+</script>

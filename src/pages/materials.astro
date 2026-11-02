@@ -1,0 +1,312 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import QuoteCta from "../components/native/QuoteCta.astro";
+import PageHero from "../components/native/PageHero.astro";
+import FaqList from "../components/native/FaqList.astro";
+
+const seo = {
+  title: "CNC Machining Materials Guide | CNCPioneer",
+  description:
+    "Materials from CNCPioneer, with precision CNC machining capabilities, material options, quality control, finishing services, and custom manufacturing.",
+  ogDescription:
+    "CNC Machining Materials Choose from hundreds of commercial-grade plastics, metals, and elastomers suitable for both prototyping and production Get Instant Quote Material Options   Metals Plastics Stainless Steel Aluminum Brass Bronze Copper Magnesium Titanium Nitinol Alloy Steel Carbon Steel Kovar Inconel Invar PEEK Nylon ABS Acrylic Acetal (POM) HDPE Polycarbonate Polypropylene PTFE Ultem [...]",
+  canonical: "/materials",
+  includeOgImage: false,
+  modifiedTime: "2026-03-30T08:50:20+00:00",
+  alternates: [{ hreflang: "en", href: "/materials" }],
+  twitterLabel1: "Est. reading time",
+  twitterData1: "2 minutes",
+};
+
+const materialOptions = {
+  metals: [
+    ["Stainless Steel", "/materials/stainless-steel-cnc-machining"],
+    ["Aluminum", "/materials/aluminum-cnc-machining"],
+    ["Brass", "/materials/brass-cnc-machining"],
+    ["Bronze", "/materials/bronze-cnc-machining"],
+    ["Copper", "/materials/copper-cnc-machining"],
+    ["Magnesium", "/materials/magnesium-cnc-machining"],
+    ["Titanium", "/materials/titanium-cnc-machining"],
+    ["Nitinol", "/materials/nitinol-cnc-machining"],
+    ["Alloy Steel", "/materials/alloy-steel-cnc-machining"],
+    ["Carbon Steel", "/materials/carbon-steel-cnc-machining"],
+    ["Kovar", "/materials/kovar-cnc-machining"],
+    ["Inconel", "/materials/inconel-cnc-machining"],
+    ["Invar", "/materials/invar-cnc-machining"],
+  ],
+  plastics: [
+    ["PEEK", "/materials/peek-cnc-machining"],
+    ["Nylon", "/materials/nylon-cnc-machining"],
+    ["ABS", "/materials/abs-cnc-machining"],
+    ["Acrylic", "/materials/acrylic-cnc-machining"],
+    ["Acetal (POM)", "/materials/pom-cnc-machining"],
+    ["HDPE", "/materials/hdpe-cnc-machining"],
+    ["Polycarbonate", "/materials/polycarbonate-cnc-machining"],
+    ["Polypropylene", "/materials/polypropylene-cnc-machining"],
+    ["PTFE", "/materials/ptfe-cnc-machining"],
+    ["Ultem", "/materials/ultem-cnc-machining"],
+  ],
+};
+
+const serviceTabs = [
+  {
+    id: "swiss-machining",
+    label: "Swiss Machining",
+    columns: {
+      metals: [
+        ["Stainless Steel", "/materials/stainless-steel-swiss-machining"],
+        ["Aluminum", "/materials/aluminum-swiss-machining"],
+        ["Brass", "/materials/brass-swiss-machining"],
+        ["Titanium", "/materials/titanium-swiss-machining"],
+        ["Nickel", "/materials/nickel-swiss-machining"],
+      ],
+      plastics: [
+        ["PEEK", "/materials/peek-swiss-machining"],
+      ],
+    },
+  },
+  {
+    id: "cnc-turning-and-milling",
+    label: "CNC Turning and Milling",
+    columns: {
+      metals: [
+        ["Stainless Steel", "/materials/stainless-steel-cnc-turning-and-milling"],
+        ["Aluminum", "/materials/aluminum-cnc-turning-and-milling"],
+      ],
+      plastics: [
+        ["PEEK", "/materials/peek-cnc-turning-and-milling"],
+      ],
+    },
+  },
+];
+
+const learningPosts = [
+  {
+    title: "CNC Machining Materials: A Comprehensive Guide",
+    href: "/blog/cnc-machining-materials",
+    image: "/wp-content/uploads/2025/12/cnc-machining-materials.png",
+    alt: "What is Swiss Machining?",
+    excerpt:
+      "CNC machining can be applied to a wide variety of materials, including but not limited to metals, plastics, and composites.",
+  },
+  {
+    title: "Swiss Machining Materials: A Comprehensive Guide",
+    href: "/blog/swiss-machining-materials",
+    image: "/wp-content/uploads/2025/12/swiss-machining-materials.jpg",
+    alt: "What is swiss machining materials?",
+    excerpt:
+      "Swiss machining can be applied to a wide variety of materials, including aluminum, brass, titanium, nickel and peek.",
+  },
+  {
+    title: "CNC Turning and Milling Materials: A Comprehensive Guide",
+    href: "/blog/cnc-turning-and-milling-materials",
+    image: "/wp-content/uploads/2025/12/cnc-turning-and-milling-materials.jpg",
+    alt: "STL file",
+    excerpt:
+      "CNC turning and milling can be applied to a wide variety of materials, including but not limited to metals and plastics.",
+  },
+];
+
+const faqs = [
+  {
+    question: "What materials can be CNC machined?",
+    answer:
+      "CNC machining supports a wide range of metals and plastics, including aluminum, stainless steel, brass, bronze, copper, titanium, magnesium, Inconel, Kovar, Invar, PEEK, Nylon, ABS, Acrylic, Acetal (POM), HDPE, Polycarbonate, Polypropylene, PTFE, and Ultem. The best choice depends on strength, tolerance, temperature, chemical exposure, surface finish, and cost requirements.",
+  },
+  {
+    question: "How do I choose between metal and plastic for CNC machining?",
+    answer:
+      "Choose metals when the part needs higher strength, stiffness, heat resistance, conductivity, wear resistance, or structural durability. Choose plastics when lightweight design, electrical insulation, low friction, chemical resistance, optical clarity, or lower material weight is more important. Our team can review your CAD file and application requirements to recommend a suitable material.",
+  },
+  {
+    question: "Which CNC machining materials are best for tight tolerances?",
+    answer:
+      "Aluminum, stainless steel, brass, Acetal (POM), and PEEK are commonly selected for precision CNC machining because they machine consistently and hold stable dimensions well. The final achievable tolerance also depends on part geometry, wall thickness, feature depth, material condition, and finishing requirements.",
+  },
+  {
+    question: "Can CNCPioneer help recommend the right material?",
+    answer:
+      "Yes. CNCPioneer can help compare material options based on your part's function, working environment, target tolerance, production quantity, and finishing needs. Share your drawings, CAD files, or application details, and our engineers can suggest practical material choices for prototyping or production.",
+  },
+];
+
+const renderList = (items) => items;
+---
+
+<BaseLayout seo={seo}>
+  <PageHero
+    variant="materials"
+    title="CNC Machining Materials"
+    image="/wp-content/uploads/2025/12/cnc-machining-materials-banner.jpg"
+    crumbs={[{ label: "Materials" }]}
+    description="Choose from hundreds of commercial-grade plastics, metals, and elastomers suitable for both prototyping and production"
+  />
+
+  <div class="materials-archive">
+    <section class="section materials-options">
+      <h2>Material Options</h2>
+      <div class="materials-table-wrap">
+        <table class="materials-table">
+          <tbody>
+            <tr class="materials-table__head">
+              <th><h3><a class="materials-category-link" href="/materials/metal-cnc-machining">Metals</a></h3></th>
+              <th><h3><a class="materials-category-link" href="/materials/plastic-cnc-machining">Plastics</a></h3></th>
+            </tr>
+            <tr>
+              <td>
+                <ul class="materials-bullets">
+                  {renderList(materialOptions.metals).map(([label, href]) => (
+                    <li>{href ? <a href={href} title={label}>{label}</a> : label}</li>
+                  ))}
+                </ul>
+              </td>
+              <td>
+                <ul class="materials-bullets">
+                  {renderList(materialOptions.plastics).map(([label, href]) => (
+                    <li>{href ? <a href={href} title={label}>{label}</a> : label}</li>
+                  ))}
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section materials-by-service">
+      <h2>Material by Service</h2>
+      <div class="materials-tabs" data-material-tabs>
+        <div class="materials-tabs__heading" role="tablist" aria-label="Material by Service">
+          {serviceTabs.map((tab, index) => (
+            <button
+              id={`materials-tab-${tab.id}`}
+              class:list={["materials-tab", index === 0 && "is-active"]}
+              type="button"
+              role="tab"
+              aria-selected={index === 0 ? "true" : "false"}
+              aria-controls={`materials-panel-${tab.id}`}
+              tabindex={index === 0 ? "0" : "-1"}
+              data-material-tab
+            >
+              {tab.label}
+            </button>
+          ))}
+        </div>
+        <div class="materials-tabs__content">
+          {serviceTabs.map((tab, index) => (
+            <section
+              id={`materials-panel-${tab.id}`}
+              class="materials-tabs__panel"
+              role="tabpanel"
+              aria-labelledby={`materials-tab-${tab.id}`}
+              hidden={index !== 0}
+            >
+              <table class="materials-table">
+                <tbody>
+                  <tr class="materials-table__head">
+                    <th><h3>Metals</h3></th>
+                    <th><h3>Plastics</h3></th>
+                  </tr>
+                  <tr>
+                    <td>
+                      <ul class="materials-bullets">
+                        {renderList(tab.columns.metals).map(([label, href]) => (
+                          <li>{href ? <a href={href} title={label}>{label}</a> : label}</li>
+                        ))}
+                      </ul>
+                    </td>
+                    <td>
+                      <ul class="materials-bullets">
+                        {renderList(tab.columns.plastics).map(([label, href]) => (
+                          <li>{href ? <a href={href} title={label}>{label}</a> : label}</li>
+                        ))}
+                      </ul>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="section material-learning materials-learning">
+      <h2>Discover our CNC Learning Hub</h2>
+      <div class="learning-grid">
+        {learningPosts.map((post) => (
+          <article class="learning-card">
+            <a class="learning-card__image" href={post.href} tabindex="-1">
+              <img src={post.image} alt={post.alt} loading="lazy" />
+            </a>
+            <div class="learning-card__body">
+              <h3><a href={post.href}>{post.title}</a></h3>
+              <p>{post.excerpt}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <FaqList items={faqs} variant="material" />
+
+    <QuoteCta id="materials-quote" idPrefix="materials-quote-form" formName="Materials Project Enquiry" kicker="MATERIAL SELECTION" title="Need help planning your material?" description="Tell us the material grade, part geometry, quantity and finish requirements so we can review the machining route." />
+  </div>
+
+  <script is:inline>
+    (() => {
+      document.querySelectorAll("[data-material-tabs]").forEach((root) => {
+        const tabs = Array.from(root.querySelectorAll("[data-material-tab]"));
+        const panels = tabs.map((tab) => document.getElementById(tab.getAttribute("aria-controls")));
+
+        const activate = (nextTab) => {
+          tabs.forEach((tab, index) => {
+            const selected = tab === nextTab;
+            tab.classList.toggle("is-active", selected);
+            tab.setAttribute("aria-selected", selected ? "true" : "false");
+            tab.tabIndex = selected ? 0 : -1;
+            if (panels[index]) panels[index].hidden = !selected;
+          });
+          nextTab.focus();
+        };
+
+        tabs.forEach((tab, index) => {
+          tab.addEventListener("click", () => activate(tab));
+          tab.addEventListener("keydown", (event) => {
+            const key = event.key;
+            const last = tabs.length - 1;
+            let nextIndex = index;
+
+            if (key === "ArrowRight") nextIndex = index === last ? 0 : index + 1;
+            else if (key === "ArrowLeft") nextIndex = index === 0 ? last : index - 1;
+            else if (key === "Home") nextIndex = 0;
+            else if (key === "End") nextIndex = last;
+            else return;
+
+            event.preventDefault();
+            activate(tabs[nextIndex]);
+          });
+        });
+      });
+    })();
+  </script>
+</BaseLayout>
+
+<style>
+  .materials-category-link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .materials-category-link:hover,
+  .materials-category-link:focus-visible {
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+  }
+
+  .materials-category-link:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
+  }
+</style>

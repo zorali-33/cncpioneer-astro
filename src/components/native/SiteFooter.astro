@@ -1,0 +1,57 @@
+---
+const columns = [
+  {
+    title: "Services",
+    links: [
+      { label: "Swiss Machining Service", href: "/services/swiss-machining" },
+      { label: "CNC Turning and Milling Service", href: "/services/cnc-turning-and-milling" },
+      { label: "3-Axis CNC Machining Service", href: "/services/3-axis-cnc-machining" },
+      { label: "5-Axis CNC Machining Service", href: "/services/5-axis-cnc-machining" },
+    ],
+  },
+  {
+    title: "Industries",
+    links: [
+      { label: "Aerospace", href: "/industries/aerospace" },
+      { label: "Defense", href: "/industries/defense" },
+      { label: "Medical", href: "/industries/medical" },
+      { label: "Semiconductor", href: "/industries/semiconductor" },
+      { label: "Consumer Electronics", href: "/industries/consumer-electronics" },
+      { label: "Oil & Gas", href: "/industries/oil-gas" },
+      { label: "Automotive", href: "/industries/automotive" },
+      { label: "Railway", href: "/industries/railway" },
+    ],
+  },
+  {
+    title: "About",
+    links: [
+      { label: "About Us", href: "/about-us" },
+      { label: "Blog", href: "/blog" },
+    ],
+  },
+];
+---
+<footer class="site-footer">
+  <div class="footer-grid">
+    {columns.map((column) => (
+      <section>
+        <h2>{column.title}</h2>
+        <ul>
+          {column.links.map((link) => (
+            <li><a href={link.href}>{link.label}</a></li>
+          ))}
+        </ul>
+      </section>
+    ))}
+    <section>
+      <h2>Get In Touch</h2>
+      <p>Room 1202B54, 12th Floor, Tairan Cangsong Building, No. 25, Futian District, Shenzhen, China</p>
+      <ul>
+        <li><a href="mailto:info@cncpioneer.com">Email: info@cncpioneer.com</a></li>
+        <li><a href="tel:+8613725562746">Phone: +8613725562746</a></li>
+        <li>Hours: Mon-Fri 9:00AM - 6:00PM</li>
+      </ul>
+    </section>
+  </div>
+  <p class="copyright">Copyright © 2026 CNCPioneer All Rights Reserved.</p>
+</footer>

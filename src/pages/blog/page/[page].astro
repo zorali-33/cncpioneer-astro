@@ -1,0 +1,26 @@
+---
+import { getBlogArticles, postsPerPage } from "../../../blog-archive.mjs";
+import ArchivePage from '../../../components/native/ArchivePage.astro';
+const pages = import.meta.glob("../../../mirrored-pages/blog/*/index.html", {
+  query: "?raw",
+  import: "default",
+  eager: true,
+});
+const articles = getBlogArticles(pages);
+
+export function getStaticPaths() {
+  const staticPages = import.meta.glob("../../../mirrored-pages/blog/*/index.html", {
+    query: "?raw",
+    import: "default",
+    eager: true,
+  });
+  const lastPage = Math.ceil(getBlogArticles(staticPages).length / postsPerPage);
+  const activePages = Array.from({ length: lastPage - 1 }, (_, index) => ({
+    params: { page: String(index + 2) },
+  }));
+  return activePages;
+}
+
+const page = Number(Astro.params.page);
+---
+<ArchivePage articles={articles} page={page}/>

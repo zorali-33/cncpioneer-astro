@@ -1,0 +1,26 @@
+{
+  "scripts": {
+    "dev": "node ./scripts/astro-env.mjs dev",
+    "localize:cache": "node ./scripts/localize-cache-assets.mjs",
+    "repair:css": "node ./scripts/repair-elementor-css.mjs",
+    "images:optimize": "node ./scripts/optimize-site-images.mjs",
+    "clean:gtranslate": "node ./scripts/remove-gtranslate.mjs",
+    "repair:legacy": "node ./scripts/repair-elementor-css.mjs && node ./scripts/remove-gtranslate.mjs && node ./scripts/t13-clean-wp-head-resources.mjs && node ./scripts/t22-clean-wp-runtime-scripts.mjs",
+    "build": "node ./scripts/astro-env.mjs build && node ./scripts/t11-generate-robots-sitemap.mjs",
+    "audit:acceptance": "node ./scripts/release-acceptance.mjs",
+    "test:quote-mail": "node ./scripts/test-quote-mail.mjs",
+    "audit:migration-history": "node ./scripts/t12-final-acceptance-audit.mjs",
+    "manifest:dist": "node ./scripts/t19-generate-dist-route-manifest.mjs",
+    "release:verify": "npm run build && npm run audit:acceptance && npm run manifest:dist",
+    "preview": "node ./scripts/astro-env.mjs preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^7.3.5",
+    "css-tree": "3.2.1",
+    "entities": "4.5.0",
+    "postcss": "8.5.32",
+    "sharp": "0.35.5",
+    "ultrahtml": "1.7.0"
+  }
+}

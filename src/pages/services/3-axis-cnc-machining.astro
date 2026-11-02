@@ -1,0 +1,132 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import QuoteCta from '../../components/native/QuoteCta.astro';
+import {threeAxisSeo, materialGroups, partExamples, finishes, processSteps, industries, threeAxisFaqs} from '../../data/threeAxisContent.mjs';
+import '../../styles/three-axis-service.css';
+const imageRoot = '/images/three-axis/';
+const quote = '/cnc-machining-quote';
+---
+<BaseLayout seo={threeAxisSeo}>
+  <div class="three-axis">
+    <section class="ta-hero service-hero" aria-labelledby="three-axis-heading">
+      <div class="ta-shell">
+        <div class="ta-breadcrumb-wrap"><nav class="ta-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/services">Services</a><span aria-hidden="true">/</span><span aria-current="page">3-Axis CNC Machining</span></nav></div>
+        <div class="ta-hero-grid">
+          <div class="ta-hero-copy">
+            <p class="ta-kicker">CUSTOM CNC MILLING</p>
+            <h1 id="three-axis-heading">3-Axis CNC<br />Machining Services</h1>
+            <p class="ta-hero-body">Custom metal and engineering plastic parts, from prototypes to production. Get the milling, finishing and inspection your drawing requires through one point of contact.</p>
+            <div class="ta-actions"><a class="ta-button" href={quote}>Request a Quote <span aria-hidden="true">↗</span></a><a class="ta-button ta-button-outline" href="#part-examples">View Examples <span aria-hidden="true">↓</span></a></div>
+            <ul class="ta-hero-points"><li>Drawing & process review</li><li>One-stop surface finishing</li><li>Agreed inspection plan</li></ul>
+          </div>
+          <figure class="ta-hero-visual"><img src="/assets/images/cnc-aluminum-pocket-milling-process.webp" width="1280" height="720" alt="Vertical CNC spindle milling an open pocket in an aluminum part" loading="eager" fetchpriority="high" /><figcaption>Pocket milling on an aluminum component</figcaption></figure>
+        </div>
+        <dl class="ta-hero-specs"><div><dt>Dimensional Tolerances</dt><dd>±0.05–±0.10 mm</dd></div><div><dt>Surface Roughness</dt><dd>Ra 0.8–6.3 μm</dd></div><div><dt>Materials</dt><dd>Metals & Engineering Plastics</dd></div><div><dt>Production</dt><dd>Prototypes to Batch Orders</dd></div></dl>
+      </div>
+    </section>
+    <nav class="ta-section-nav" aria-label="On this page"><div class="ta-shell ta-section-nav-inner"><a href="#capabilities">Capabilities</a><a href="#part-examples">Part Examples</a><a href="#materials">Materials</a><a href="#finishing">Surface Finishing</a><a href="#quality">Equipment & Quality</a><a href="#faq">FAQ</a></div></nav>
+
+    <section id="capabilities" class="ta-section ta-redesigned ta-shell" aria-labelledby="capabilities-title">
+      <div class="ta-heading-centered"><h2 id="capabilities-title">3-Axis CNC Machining Capabilities</h2><p>From flat mounting surfaces to open pockets and threaded holes, we plan the machining around your part's geometry and assembly requirements.</p></div>
+      <div class="ta-feature-grid">
+        <article><svg class="ta-feature-icon" viewBox="0 0 80 64" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M7 24 34 8l39 15-27 17L7 24v16l39 17 27-17V23M46 40v17"/><path d="m24 24 12-7 20 8-12 8-20-9Z"/><path d="M24 24v6m32-5v6"/></svg><h3>Profiles & Pockets</h3><p>Face milling, contours, steps, open cavities and slots for plates, brackets and equipment components.</p><span class="ta-feature-caption">Plates · Brackets · Fixture bodies</span></article>
+        <article><svg class="ta-feature-icon" viewBox="0 0 80 64" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m8 35 30-18 34 15-30 18L8 35v11l34 13 30-18v-9M42 50v9M31 4h15v14l-7 10-8-10V4"/><path d="m31 9 15 6m-14 3 10 4M39 28v6"/><ellipse cx="25" cy="37" rx="5" ry="2.7"/><ellipse cx="55" cy="35" rx="5" ry="2.7"/></svg><h3>Holes & Threads</h3><p>Drilling, boring and tapping, with hole sizes, spacing and functional requirements reviewed against the drawing.</p><span class="ta-feature-caption">Mounting holes · Bores · Threads</span></article>
+        <article><svg class="ta-feature-icon" viewBox="0 0 80 64" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m25 24 17-10 19 9-17 11-19-10v21l19 10 17-11V23M44 34v21"/><path d="M15 39C4 23 16 7 30 6M15 39l-8-3m8 3 2-8M66 25c10 17 1 30-13 34m13-34 8 3m-8-3-2 8"/></svg><h3>Multi-Face Setups</h3><p>Repositioning and fixtures for accessible features on additional faces, with datum relationships considered from the start.</p><span class="ta-feature-caption">Workholding · Datums · Tool access</span></article>
+      </div>
+      <div class="ta-capability-note"><p><strong>Specify the dimensions that matter.</strong> Tolerances depend on material, feature size and part geometry. Surface roughness depends on material, part geometry and machining conditions. Mark critical fits, geometric tolerances and required surfaces on your drawing.</p><a class="ta-text-link" href={quote}>Review Your Part <span aria-hidden="true">↗</span></a></div>
+    </section>
+
+    <section id="part-examples" class="ta-section ta-surface" aria-labelledby="examples-title">
+      <div class="ta-shell">
+        <div class="ta-section-heading"><div><p class="ta-kicker">02 / PART EXAMPLES</p><h2 id="examples-title">Custom CNC<br />Milled Part Examples.</h2></div><p>Three factory part photographs show the types of geometry suited to CNC milling. Explore an illustrative specification for each.</p></div>
+        <div class="ta-part-grid">
+          {partExamples.map((part,index) => <article class="ta-part">
+            <div class="ta-part-photo"><img src={imageRoot + part.image} alt={part.alt} width="1280" height="855" loading="lazy" decoding="async" /><span class="ta-part-number ta-step-number">0{index+1}</span></div>
+            <div class="ta-part-content"><p class="ta-kicker">{part.feature}</p><h3>{part.name}</h3><p>{part.text}</p>
+              <dl class="ta-part-basics"><div><dt>Illustrative material</dt><dd>Aluminum 6061</dd></div><div><dt>Example dimensions</dt><dd>{part.size}</dd></div></dl>
+              <details class="ta-example-details"><summary>View Example Specifications <span aria-hidden="true">+</span></summary><dl><div><dt>Example quantity</dt><dd>{part.quantity}</dd></div><div><dt>General dimensions</dt><dd>±0.10 mm</dd></div><div><dt>Selected feature</dt><dd>{part.tolerance}</dd></div><div><dt>Selected machined surface</dt><dd>{part.roughness}</dd></div><div><dt>Example finish</dt><dd>{part.finish}</dd></div></dl></details>
+            </div>
+          </article>)}
+        </div>
+        <p class="ta-example-note caption">Illustrative specifications for machining evaluation; not verified production records for the pictured parts. Roughness values refer to selected machined surfaces before finishing.</p>
+      </div>
+    </section>
+
+    <section id="materials" class="ta-section ta-redesigned ta-shell" aria-labelledby="materials-title">
+      <div class="ta-heading-centered"><h2 id="materials-title">Materials for 3-Axis CNC Machining</h2><p>Select a material category to explore available grades. Include the grade, condition and documentation requirements with your drawing.</p></div>
+      <div class="ta-material-selector" data-material-selector>
+        <div class="ta-material-tabs" role="tablist" aria-label="Material categories" hidden>{materialGroups.map((group,index)=><button type="button" role="tab" id={'tab-'+group.id} aria-controls={'panel-'+group.id} aria-selected={index===0?'true':'false'} tabindex={index===0?0:-1} data-material-tab={group.id}>{group.label}<span aria-hidden="true">↗</span></button>)}</div>
+        {materialGroups.map(group=><div class="ta-material-panel" id={'panel-'+group.id} data-material-panel={group.id}>
+          <h3 class="ta-material-fallback">{group.label}</h3>
+          <div class="ta-material-display"><figure><img src={group.id==='metals'?'/assets/images/aluminum-cnc-machining-material-768x768.webp':'/assets/images/peek-cnc-machining-material.webp'} width={group.id==='metals'?768:960} height={group.id==='metals'?768:960} alt={group.id==='metals'?'Stacked aluminum sheet stock with brushed surfaces':'Stacked PEEK engineering plastic sheets'} loading="lazy" /><figcaption>{group.id==='metals'?'Aluminum stock · One of our metal material options':'PEEK stock · One of our engineering plastic options'}</figcaption></figure><div class="ta-material-table"><table><caption class="ta-sr-only">{group.label} available for 3-axis CNC machining</caption><thead><tr><th scope="col">Material</th><th scope="col">Available Grades</th></tr></thead><tbody>{group.items.map(item=><tr><th scope="row">{item.href?<a href={item.href}>{item.name}<span aria-hidden="true"> ↗</span></a>:item.name}</th><td>{item.grades}</td></tr>)}</tbody></table><p class="caption">{group.id==='metals'?'Material suitability and finishing are reviewed against your application.':'Delrin and ULTEM refer to branded grades. Specify the exact grade when required.'}</p></div></div>
+        </div>)}
+      </div>
+      <div class="ta-material-bottom"><p>Need help matching material, geometry and finish?</p><a class="ta-text-link" href="/materials">Explore Our Materials <span aria-hidden="true">↗</span></a></div>
+    </section>
+
+    <section id="finishing" class="ta-section ta-redesigned ta-surface" aria-labelledby="finishing-title"><div class="ta-shell">
+      <div class="ta-heading-centered"><h2 id="finishing-title">One-Stop Surface Finishing</h2><p>Complete your machined part with a finish selected for its material, appearance and functional requirements.</p></div>
+      <div class="ta-finishing-display"><figure><img src="/assets/images/sandblasting-anodizing.webp" width="720" height="405" alt="Rows of anodized metal components showing surface finish options" loading="lazy" /><figcaption>Anodized components · Surface finish example</figcaption></figure><div class="ta-finish-options"><h3>Available Finishing Options</h3><ul>{finishes.map(finish=><li><span aria-hidden="true">✓</span>{finish}</li>)}</ul><p class="body-small">Confirm color, coating thickness, masking areas and whether dimensions apply before or after finishing.</p></div></div>
+      <div class="ta-finish-guidance"><div><h4>Aluminum</h4><p class="body-small">Anodizing or hard anodizing for suitable grades.</p></div><div><h4>Stainless Steel</h4><p class="body-small">Passivation and suitable mechanical finishes.</p></div><div><h4>Carbon & Alloy Steel</h4><p class="body-small">Zinc plating, black oxide or suitable nickel plating.</p></div></div>
+      <p class="caption ta-finish-footnote">Finishing compatibility varies by material and grade. Other combinations, including plastic parts, are reviewed individually.</p>
+    </div></section>
+
+    <section id="quality" class="ta-section ta-shell" aria-labelledby="quality-title">
+      <div class="ta-section-heading"><div><p class="ta-kicker">05 / EQUIPMENT & QUALITY</p><h2 id="quality-title">Machining Equipment<br />& Quality Control.</h2></div><p>Vertical and gantry machining centers support the production route. Inspection is planned around your part's functional dimensions.</p></div>
+      <div class="ta-quality-grid">
+        <div class="ta-equipment-pair">
+          <figure><img src={imageRoot+'ysv-966-vertical-cnc-machining-center.webp'} width="389" height="253" alt="YSV-966 vertical CNC machining center in the factory" loading="lazy" /><figcaption><strong>YSV-966</strong><span>Vertical machining center</span></figcaption></figure>
+          <figure><img src={imageRoot+'ysmv-2013-gantry-machining-center.webp'} width="389" height="254" alt="YSMV-2013 gantry machining center in the factory" loading="lazy" /><figcaption><strong>YSMV-2013</strong><span>Gantry machining center</span></figcaption></figure>
+          <div class="ta-equipment-note"><p class="body-small">YSMV-1517 gantry machining is also available. Part size and fixture clearance are confirmed during drawing review.</p></div>
+        </div>
+        <div class="ta-inspection"><img src={imageRoot+'coordinate-measuring-machine-inspection.webp'} width="489" height="327" alt="Coordinate measuring machine in the factory inspection area" loading="lazy" /><div class="ta-inspection-copy"><p class="ta-kicker">INSPECTION THAT FOLLOWS THE DRAWING</p><h3>Check What Matters</h3><p>CMM, optical measurement and height gauges support incoming, first-article, in-process and final checks.</p><ul><li>Critical dimensions identified before production</li><li>Full or sampling inspection as agreed</li><li>Inspection records retained for three years</li></ul><p class="body-small">Confirm report requirements with your quotation.</p></div></div>
+      </div>
+      <div class="ta-process-heading"><h3>From Drawing to Delivery</h3><p class="body-small">A clear sequence. Defined checks at each stage.</p></div>
+      <ol class="ta-process">{processSteps.map((step,index)=><li><span class="ta-step-number">0{index+1}</span><h4>{step.title}</h4><p class="body-small">{step.text}</p></li>)}</ol>
+      <div class="ta-leadtime"><div><span class="ta-kicker">REFERENCE PRODUCTION WINDOWS</span><p><strong>Samples: 3–5 working days</strong><span aria-hidden="true"> / </span><strong>Batches: 7–15 working days</strong></p></div><p class="body-small">Final timing depends on material, quantity, complexity, finishing and inspection. Transit time is separate.</p></div>
+    </section>
+
+    <section class="ta-section ta-redesigned ta-design-section" aria-labelledby="cost-title"><div class="ta-shell">
+      <div class="ta-heading-centered"><h2 id="cost-title">Design for Efficient Machining</h2><p>Three decisions that help align your drawing with a practical machining route.</p></div>
+      <div class="ta-design-grid"><article><h3>Specify Critical Features</h3><p>Identify mating surfaces, assembly holes and functional dimensions. Apply tighter tolerances where the part needs them.</p><a href={quote}>Discuss Your Drawing <span aria-hidden="true">↗</span></a></article><article><h3>Allow Practical Tool Access</h3><p>Deep pockets, narrow slots and small internal radii influence tool reach, cutting stability and cycle time.</p><a href="/blog/cnc-machining-fillets">Review Internal Corner Radii <span aria-hidden="true">↗</span></a></article><article><h3>Compare the Complete Route</h3><p>Consider setup count, material, quantity, finishing and inspection together when reviewing machining cost.</p><a href="/blog/cnc-machining-costs">Understand Machining Costs <span aria-hidden="true">↗</span></a></article></div>
+      <div class="ta-process-choice"><p><strong>Does your part also need turned features?</strong> Explore the process options for cylindrical geometry and milled details.</p><a class="ta-text-link" href="/services/cnc-turning-and-milling">CNC Turning & Milling <span aria-hidden="true">↗</span></a></div>
+    </div></section>
+
+    <section class="ta-section ta-redesigned ta-shell" aria-labelledby="applications-title"><div class="ta-heading-centered"><h2 id="applications-title">Applications Across Industries</h2><p>Custom milled components for equipment, tooling and assembly interfaces.</p></div>
+      <div class="ta-industry-grid">{industries.map((industry,index)=><a class="ta-industry" href={industry.href}><img src={['/assets/images/three-axis-robotics-automation-fixture-scene.webp','/assets/images/three-axis-semiconductor-equipment-scene.webp','/assets/images/three-axis-automotive-ev-assembly-fixture-scene.webp','/assets/images/three-axis-electronics-instrumentation-test-scene.webp'][index]} width="1120" height="680" alt={['Industrial robot above an aluminum locating fixture and machined mounting plate','Semiconductor wafer inspection equipment with an aluminum baseplate and optical head','EV battery housing inspection station with assembly fixtures and a robotic inspection arm','Electronics test bench with a machined aluminum enclosure, circuit board and measuring instrument'][index]} loading="lazy" decoding="async" /><div><h3>{industry.title}</h3><p>{industry.text}</p><span class="ta-industry-link">Explore Industry <span aria-hidden="true">↗</span></span></div></a>)}</div>
+    </section>
+
+    <section id="faq" class="ta-section ta-redesigned ta-surface ta-faq" aria-labelledby="faq-title"><div class="ta-shell"><div class="ta-heading-centered"><h2 id="faq-title">3-Axis CNC Machining FAQ</h2><p>Practical answers about part suitability, tolerances, finishing and quotations.</p></div><div class="ta-faq-list">{threeAxisFaqs.map(faq=><details><summary>{faq.question}<span aria-hidden="true">+</span></summary><div class="ta-faq-answer"><p>{faq.answer}</p></div></details>)}</div></div></section>
+
+    <QuoteCta id="three-axis-quote" idPrefix="three-axis-quote-form" formName="3-Axis CNC Machining Quote" kicker="START WITH YOUR DRAWING" title="Get a 3-Axis CNC Machining Quote" description="Send your part requirements for a quotation covering machining, finishing, inspection and production timing." />
+  </div>
+</BaseLayout>
+
+<script>
+  const selector = document.querySelector<HTMLElement>('[data-material-selector]');
+  if (selector) {
+    const tabs = [...selector.querySelectorAll<HTMLButtonElement>('[data-material-tab]')];
+    const panels = [...selector.querySelectorAll<HTMLElement>('[data-material-panel]')];
+    const activate = (selected: HTMLButtonElement, focus = false) => {
+      tabs.forEach(tab => { const active = tab === selected; tab.setAttribute('aria-selected', String(active)); tab.tabIndex = active ? 0 : -1; });
+      panels.forEach(panel => { panel.hidden = panel.dataset.materialPanel !== selected.dataset.materialTab; });
+      if (focus) selected.focus();
+    };
+    panels.forEach(panel => { panel.setAttribute('role','tabpanel'); panel.setAttribute('aria-labelledby','tab-'+panel.dataset.materialPanel); panel.tabIndex=0; });
+    selector.querySelectorAll<HTMLElement>('.ta-material-fallback').forEach(heading => heading.hidden = true);
+    selector.querySelector<HTMLElement>('[role="tablist"]')!.hidden = false;
+    tabs.forEach((tab,index) => {
+      tab.addEventListener('click', () => activate(tab));
+      tab.addEventListener('keydown', event => {
+        let next = index;
+        if (event.key === 'ArrowRight') next = (index + 1) % tabs.length;
+        else if (event.key === 'ArrowLeft') next = (index + tabs.length - 1) % tabs.length;
+        else if (event.key === 'Home') next = 0;
+        else if (event.key === 'End') next = tabs.length - 1;
+        else return;
+        event.preventDefault(); activate(tabs[next],true);
+      });
+    });
+    activate(tabs[0]);
+  }
+</script>

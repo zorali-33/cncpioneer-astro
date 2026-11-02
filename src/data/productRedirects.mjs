@@ -1,0 +1,37 @@
+// Retired product URLs stay available as permanent redirects.
+export const productRedirects = {
+  "/custom-cnc-parts/cnc-turning-milling-parts": "/custom-cnc-parts/cnc-turning-and-milling-parts",
+  "/custom-cnc-parts/machined-contacts": "/custom-cnc-parts/precision-connector-contacts",
+  "/custom-cnc-parts/aluminum-alloy-5-axis-cnc-machining": "/custom-cnc-parts/5-axis-aluminum-cnc-machining-parts",
+  "/custom-cnc-parts/page/7": "/custom-cnc-parts/page/6",
+
+  '/custom-cnc-parts/wire-edm-robot-gears-splines': '/custom-cnc-parts/aluminum-cnc-milling-connectors',
+  '/custom-cnc-parts/titanium-evtol-machining': '/custom-cnc-parts/aluminum-cnc-machining-flanges',
+  '/custom-cnc-parts/tilt-rotor-mechanism-components': '/custom-cnc-parts/bearing-bushing',
+  '/custom-cnc-parts/evtol-bearing-housing': '/custom-cnc-parts/bearing-housing',
+  '/custom-cnc-parts/connector-pins-swiss-screw-machining': '/custom-cnc-parts/connector-pins',
+  '/custom-cnc-parts/server-parts': '/custom-cnc-parts/server-components',
+  '/custom-cnc-parts/satellite-components': '/industries/satellites',
+  '/custom-cnc-parts/satellite-parts': '/industries/satellites',
+  '/custom-cnc-parts/robotics-machining-parts': '/industries/robotics',
+  '/custom-cnc-parts/robot-structural-links-brackets': '/custom-cnc-parts/cnc-machining-for-aerospace-brackets',
+  '/custom-cnc-parts/swiss-machining-robot-pins-shafts': '/custom-cnc-parts/medical-device-pins',
+  '/custom-cnc-parts/robot-motor-housings-end-caps': '/custom-cnc-parts/electric-motor-stator-housing-machining',
+  '/custom-cnc-parts/evtol-sensor-housing': '/custom-cnc-parts/5-axis-sensor-housing-machining',
+  '/custom-cnc-parts/high-volume-robotic-machining': '/industries/robotics',
+  '/custom-cnc-parts/evtol-motor-shaft': '/custom-cnc-parts/motor-shaft',
+  '/custom-cnc-parts/evtol-propeller': '/custom-cnc-parts/cnc-propeller-machining',
+  '/custom-cnc-parts/evtol-cooling-fittings': '/custom-cnc-parts/turned-cooling-fittings',
+  '/custom-cnc-parts/evtol-connector-pins-terminals': '/custom-cnc-parts/connector-pins',
+  '/custom-cnc-parts/custom-flange-manufacturing': '/custom-cnc-parts/flanges',
+  '/custom-cnc-parts/harmonic-drive-components': '/custom-cnc-parts/harmonic-drive-gearbox',
+  '/custom-cnc-parts/planetary-gearbox-components': '/custom-cnc-parts/planetary-gearbox',
+  '/custom-cnc-parts/radar': '/custom-cnc-parts/radar-systems-parts-machining',
+  '/custom-cnc-parts/rails': '/custom-cnc-parts/rail-machining',
+  '/custom-cnc-parts/evtol-landing-gear-actuator-parts': '/custom-cnc-parts/precision-actuator-parts',
+  '/custom-cnc-parts/robot-bearing-housings-seats': '/custom-cnc-parts/cnc-turning-bearing-housings',
+  '/custom-cnc-parts/robot-output-shafts': '/custom-cnc-parts/aluminum-shafts-cnc-turning',
+  '/custom-cnc-parts/semiconductor-vacuum-chamber-parts': '/custom-cnc-parts/semiconductor-vacuum-chamber',
+};
+
+export const isRetiredProduct = (route) => Object.hasOwn(productRedirects, `/${route.replace(/^\/+|\/+$/g, '')}`);

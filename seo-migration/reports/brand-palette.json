@@ -1,0 +1,19 @@
+{
+  "generatedAt": "2026-11-02T02:52:08.990Z",
+  "status": "pass",
+  "pages": 330,
+  "stylesheets": 19,
+  "inlineStyles": 791,
+  "literalColors": 7,
+  "palette": {
+    "brand": "#1F5D85",
+    "hover": "#174868",
+    "ink": "#202830",
+    "body": "#59636E",
+    "white": "#FFFFFF",
+    "surface": "#F5F6F7",
+    "border": "#DDE2E6"
+  },
+  "issues": [],
+  "scope": "Authored UI styles and inline SVG. Photographs, videos, product illustrations and logo image pixels retain their original colours."
+}

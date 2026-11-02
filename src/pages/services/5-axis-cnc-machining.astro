@@ -1,0 +1,55 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import QuoteCta from '../../components/native/QuoteCta.astro';
+import {fiveAxisSeo,machiningModes,engineeringSteps,fiveAxisFaqs} from '../../data/fiveAxisContent.mjs';
+import {materialGroups,finishes} from '../../data/threeAxisContent.mjs';
+import '../../styles/three-axis-service.css';
+import '../../styles/five-axis-service.css';
+const quote='/cnc-machining-quote';
+const partExamples=[
+ {image:'five-axis-multi-face-structural-component.webp',alt:'Factory structural component with bores and mounting features on several faces',feature:'MULTI-FACE STRUCTURE',name:'Structural Components',text:'Open sections, mounting faces and bores require a planned approach to workholding and feature relationships.'},
+ {image:'five-axis-contoured-housing-detail.webp',alt:'Factory machined housing with contoured surfaces, openings and an angled threaded boss',feature:'CONTOURED GEOMETRY',name:'Housings & Angled Features',text:'Curved surfaces and angled interfaces bring tool access and drawing datums into the same review.'},
+ {image:'five-axis-multi-face-mounting-bracket.webp',alt:'Factory mounting bracket with several machined faces, tabs and mounting holes',feature:'MULTI-FACE MOUNTING',name:'Brackets & Interfaces',text:'Pockets, tabs and holes across multiple faces can benefit from a coordinated setup sequence.'},
+];
+---
+<BaseLayout seo={fiveAxisSeo}>
+  <div class="three-axis five-axis">
+    <section class="ta-hero service-hero" aria-labelledby="five-axis-heading"><div class="ta-shell">
+      <div class="ta-breadcrumb-wrap"><nav class="ta-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/services">Services</a><span aria-hidden="true">/</span><span aria-current="page">5-Axis CNC Machining</span></nav></div>
+      <div class="ta-hero-grid"><div class="ta-hero-copy"><p class="ta-kicker">COMPLEX GEOMETRY · CONSIDERED MACHINING</p><h1 id="five-axis-heading">5-Axis CNC<br />Machining Services</h1><p class="ta-hero-body">Angled features, contoured surfaces and multi-face components need a machining plan built around the drawing. We review tool access, workholding and the dimensions that matter.</p><div class="ta-actions"><a class="ta-button" href={quote}>Request a Drawing Review <span aria-hidden="true">↗</span></a><a class="ta-button ta-button-outline" href="#part-examples">View Part Examples <span aria-hidden="true">↓</span></a></div><ul class="ta-hero-points"><li>UT-380 five-axis machining center</li><li>Programming & process review</li><li>First-article inspection</li></ul></div>
+        <figure class="ta-hero-visual"><img src="/assets/images/five-axis-multi-face-structural-component.webp" width="1280" height="855" alt="Multi-face structural component from the factory part portfolio" loading="eager" fetchpriority="high" /><figcaption>Multi-face structural component · factory part portfolio</figcaption></figure></div>
+      <dl class="ta-hero-specs"><div><dt>Machine</dt><dd>UT-380 · 5-axis</dd></div><div><dt>Machining Routes</dt><dd>Indexed 3+2 · Simultaneous*</dd></div><div><dt>Quality Checks</dt><dd>First article · In process</dd></div><div><dt>Inspection Tools</dt><dd>CMM · Optical · Height gauge</dd></div></dl>
+      <p class="fa-qualification caption">*The suitable route and machine configuration are confirmed against the part and equipment requirements.</p>
+    </div></section>
+
+    <nav class="ta-section-nav" aria-label="On this page"><div class="ta-shell ta-section-nav-inner"><a href="#machining-approach">Machining Approach</a><a href="#part-examples">Part Examples</a><a href="#engineering">Engineering & Quality</a><a href="#materials">Materials</a><a href="#faq">FAQ</a></div></nav>
+
+    <section id="machining-approach" class="ta-section ta-redesigned ta-shell" aria-labelledby="approach-title"><div class="ta-heading-centered"><h2 id="approach-title">Choose the Machining Route for Your Geometry</h2><p>Five-axis machining expands access to angled and multi-face features. Whether indexed or simultaneous motion is appropriate depends on the drawing, setup and available machine configuration.</p></div>
+      <div class="fa-mode-explorer" data-machining-modes><div class="fa-mode-tabs" role="tablist" aria-label="Compare machining approaches" hidden>{machiningModes.map((mode,index)=><button id={'mode-tab-'+mode.id} type="button" role="tab" aria-controls={'mode-'+mode.id} aria-selected={index===0?'true':'false'} tabindex={index===0?0:-1} data-mode-tab={mode.id}>{mode.name}</button>)}</div>{machiningModes.map(mode=><article class="fa-mode-panel" id={'mode-'+mode.id} data-mode-panel={mode.id}><p class="ta-kicker">{mode.label}</p><h3>{mode.title}</h3><p>{mode.text}</p><ul>{mode.features.map(feature=><li>{feature}</li>)}</ul><p class="fa-mode-note body-small">{mode.note}</p></article>)}</div>
+      <div class="ta-capability-note"><p><strong>Use the process the part needs.</strong> If three-axis machining can meet the drawing efficiently, it may be the more practical route.</p><a class="ta-text-link" href="/services/3-axis-cnc-machining">Compare 3-Axis Machining <span aria-hidden="true">↗</span></a></div>
+    </section>
+
+    <section id="part-examples" class="ta-section ta-surface" aria-labelledby="examples-title"><div class="ta-shell"><div class="ta-section-heading"><div><p class="ta-kicker">02 / PART GEOMETRY</p><h2 id="examples-title">Features That Shape the Setup.</h2></div><p>These factory portfolio photographs illustrate part geometry. The machining route and specifications are reviewed for each drawing.</p></div>
+      <div class="ta-part-grid">{partExamples.map(part=><article class="ta-part"><div class="ta-part-photo"><img src={'/assets/images/'+part.image} alt={part.alt} width="1280" height="855" loading="lazy" decoding="async" /></div><div class="ta-part-content"><p class="ta-kicker">{part.feature}</p><h3>{part.name}</h3><p>{part.text}</p></div></article>)}</div><p class="caption ta-example-note">Representative factory part photographs; individual five-axis operations and tolerances are not attributed to these examples.</p>
+    </div></section>
+
+    <section id="engineering" class="ta-section ta-shell" aria-labelledby="engineering-title"><div class="ta-section-heading"><div><p class="ta-kicker">03 / ENGINEERING & QUALITY</p><h2 id="engineering-title">From Drawing Review to Inspection.</h2></div><p>Plan the datum scheme, workholding and tool access before machining; agree the inspection scope against the dimensions that control function.</p></div>
+      <ol class="ta-process">{engineeringSteps.map((step,index)=><li><span class="ta-step-number">0{index+1}</span><h3>{step.title}</h3><p class="body-small">{step.text}</p></li>)}</ol>
+      <div class="fa-equipment-row"><figure><img src="/assets/images/five-axis-ut-380-machining-center.webp" alt="UT-380 five-axis machining center shown in factory equipment documentation" width="389" height="253" loading="lazy" decoding="async"/><figcaption>UT-380 · 5-axis machining center</figcaption></figure><div><p class="ta-kicker">INSPECTION EQUIPMENT & RECORDS</p><h3>Check the Features That Matter.</h3><p>CMM, optical projector and height gauge support incoming, first-article, in-process and outgoing checks. Inspection records are retained for three years. Confirm report requirements with your quotation.</p></div></div>
+    </section>
+
+    <section id="materials" class="ta-section ta-redesigned ta-surface" aria-labelledby="materials-title"><div class="ta-shell"><div class="ta-heading-centered"><h2 id="materials-title">Materials & Surface Finishing</h2><p>Choose a material grade, then specify the finish, appearance and dimensions that matter for your part.</p></div>
+      <div class="fa-material-tables">{materialGroups.map(group=><div class="fa-material-table"><h3>{group.label}</h3><table><caption class="ta-sr-only">{group.label} grades available for 5-axis machining review</caption><thead><tr><th scope="col">Material</th><th scope="col">Available Grades</th></tr></thead><tbody>{group.items.map(item=><tr><th scope="row">{item.href?<a href={item.href}>{item.name}<span aria-hidden="true"> ↗</span></a>:item.name}</th><td>{item.grades}</td></tr>)}</tbody></table></div>)}</div>
+      <div class="fa-finishing"><div class="fa-finishing-heading"><p class="ta-kicker">FINISH OPTIONS</p><h3>One-Stop Surface Finishing</h3><p>Finish availability depends on material and part requirements.</p></div><ul>{finishes.map(finish=><li><span aria-hidden="true">✓</span>{finish}</li>)}</ul><p class="fa-finishing-note body-small">Confirm coating thickness, masked areas and whether critical dimensions apply before or after finishing.</p></div>
+    </div></section>
+
+    <section id="faq" class="ta-section ta-surface" aria-labelledby="faq-title"><div class="ta-shell"><div class="ta-heading-centered"><h2 id="faq-title">5-Axis CNC Machining FAQ</h2><p>Answers to common engineering and sourcing questions.</p></div><div class="ta-faq-list">{fiveAxisFaqs.map(faq=><details><summary>{faq.question}<span aria-hidden="true">+</span></summary><div class="ta-faq-answer"><p>{faq.answer}</p></div></details>)}</div></div></section>
+
+    <QuoteCta id="five-axis-quote" idPrefix="five-axis-quote-form" formName="5-Axis CNC Machining Quote" kicker="START WITH YOUR DRAWING" title="Get a 5-Axis Machining Quote" description="Send your model and requirements for a review of process, material, inspection and production timing." />
+  </div>
+</BaseLayout>
+
+<script>
+const root=document.querySelector<HTMLElement>('[data-machining-modes]');
+if(root){const tabs=[...root.querySelectorAll<HTMLButtonElement>('[data-mode-tab]')],panels=[...root.querySelectorAll<HTMLElement>('[data-mode-panel]')];const activate=(selected:HTMLButtonElement,focus=false)=>{tabs.forEach(tab=>{const active=tab===selected;tab.setAttribute('aria-selected',String(active));tab.tabIndex=active?0:-1;});panels.forEach(panel=>{panel.hidden=panel.dataset.modePanel!==selected.dataset.modeTab;});if(focus)selected.focus();};panels.forEach(panel=>{panel.setAttribute('role','tabpanel');panel.setAttribute('aria-labelledby','mode-tab-'+panel.dataset.modePanel);panel.tabIndex=0;});root.querySelector<HTMLElement>('[role=tablist]')!.hidden=false;tabs.forEach((tab,index)=>{tab.addEventListener('click',()=>activate(tab));tab.addEventListener('keydown',event=>{let next=index;if(event.key==='ArrowRight')next=(index+1)%tabs.length;else if(event.key==='ArrowLeft')next=(index+tabs.length-1)%tabs.length;else if(event.key==='Home')next=0;else if(event.key==='End')next=tabs.length-1;else return;event.preventDefault();activate(tabs[next],true);});});activate(tabs[0]);}
+</script>

@@ -1,0 +1,1176 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CompactQuoteForm from "../components/native/CompactQuoteForm.astro";
+import { finishes } from "../data/threeAxisContent.mjs";
+
+const seo = {
+  "title": "Custom CNC Machining Services | Milling & Turning | CNCPioneer",
+  "description": "Custom CNC machining for metal and plastic parts, from prototypes to production. Explore milling, turning, Swiss machining and finishing. Request a quote.",
+  "canonical": "/",
+  "type": "website",
+  "image": "/wp-content/uploads/2025/12/cncpioneer-1.jpg"
+};
+
+const services = [
+  {
+    title: "3-Axis CNC Machining",
+    image: "/assets/images/cnc-aluminum-pocket-milling-process.webp",
+    href: "/services/3-axis-cnc-machining",
+    label: "Explore 3-Axis Machining",
+    text: "For prismatic parts with flat faces, pockets, slots and drilled features.",
+  },
+  {
+    title: "5-Axis CNC Machining",
+    image: "/assets/images/five-axis-multi-face-structural-component.webp",
+    alt: "Multi-face structural component from our factory part portfolio",
+    width: 1280,
+    height: 855,
+    href: "/services/5-axis-cnc-machining",
+    label: "Explore 5-Axis Machining",
+    text: "For complex contours and angled features across multiple faces, often with fewer setups.",
+  },
+  {
+    title: "Swiss Machining",
+    image: "/wp-content/uploads/2025/12/swiss-machining-service-540x260-1.png",
+    href: "/services/swiss-machining",
+    label: "Explore Swiss Machining",
+    text:
+      "For small-diameter, slender parts such as precision shafts, connector pins and threaded fittings.",
+  },
+  {
+    title: "CNC Turning & Milling",
+    image: "/wp-content/uploads/2025/12/cnc-turning-and-milling-services-540x260-1.png",
+    href: "/services/cnc-turning-and-milling",
+    label: "Explore Turning & Milling",
+    text:
+      "For parts combining turned profiles with milled flats, holes or other features.",
+  },
+];
+
+const heroBullets = [
+  "5–7 Day Lead Time",
+  "One-stop machining & surface finishing",
+  "General Tolerance ±0.01 mm",
+  "Drawing review & dimensional inspection"
+];
+
+
+const materialTabs = [
+  {
+    label: "Metals",
+    items: [
+      ["Stainless Steel", "/materials/stainless-steel-cnc-machining", "/wp-content/uploads/2026/02/stainless-steel-55x55-1.jpg"],
+      ["Aluminum", "/materials/aluminum-cnc-machining", "/wp-content/uploads/2026/02/aluminum-55x55-1.jpg"],
+      ["Brass", "/materials/brass-cnc-machining", "/wp-content/uploads/2026/02/brass-55x55-1.jpg"],
+      ["Bronze", "/materials/bronze-cnc-machining", "/wp-content/uploads/2026/02/bronze-55x55-1.jpg"],
+      ["Copper", "/materials/copper-cnc-machining", "/wp-content/uploads/2026/02/copper-55x55-1.jpg"],
+      ["Magnesium", "/materials/magnesium-cnc-machining", "/wp-content/uploads/2026/02/magnesium-55x55-1.jpg"],
+      ["Titanium", "/materials/titanium-cnc-machining", "/wp-content/uploads/2026/02/titanium-55x55-2.jpg"],
+      ["Nitinol", "/materials/nitinol-cnc-machining", "/wp-content/uploads/2026/02/nitinol.jpg"],
+      ["Alloy Steel", "/materials/alloy-steel-cnc-machining", "/wp-content/uploads/2026/02/alloy-steel-55x55-1.jpg"],
+      ["Carbon Steel", "/materials/carbon-steel-cnc-machining", "/wp-content/uploads/2026/02/carbon-steel-55x55-1.jpg"],
+      ["Kovar", "/materials/kovar-cnc-machining", "/wp-content/uploads/2026/02/kovar-55x55-1.jpg"],
+      ["Inconel", "/materials/inconel-cnc-machining", "/wp-content/uploads/2026/02/inconel-55x55-1.jpg"],
+      ["Invar", "/materials/invar-cnc-machining", "/wp-content/uploads/2026/02/invar-55x55-1.jpg"],
+    ],
+  },
+  {
+    label: "Engineering Plastics",
+    items: [
+      ["PEEK", "/materials/peek-cnc-machining", "/wp-content/uploads/2026/02/peek-55x55-1.jpg"],
+      ["Nylon", "/materials/nylon-cnc-machining", "/wp-content/uploads/2026/02/nylon-55x55-1.jpg"],
+      ["ABS", "/materials/abs-cnc-machining", "/wp-content/uploads/2026/02/abs-55x55-1.jpg"],
+      ["Acrylic", "/materials/acrylic-cnc-machining", "/wp-content/uploads/2026/02/acrylic-55x55-1.jpg"],
+      ["Acetal (POM)", "/materials/pom-cnc-machining", "/wp-content/uploads/2026/02/acetal-55x55-1.jpg"],
+      ["HDPE", "/materials/hdpe-cnc-machining", "/wp-content/uploads/2026/02/HDPE-55x55-1.jpg"],
+      ["Polycarbonate", "/materials/polycarbonate-cnc-machining", "/wp-content/uploads/2026/02/polycarbonate-55x55-1.jpg"],
+      ["Polypropylene", "/materials/polypropylene-cnc-machining", "/wp-content/uploads/2026/02/polypropylene-55x55-1.jpg"],
+      ["PTFE", "/materials/ptfe-cnc-machining", "/wp-content/uploads/2026/02/PTFE-55x55-1.jpg"],
+      ["PEI / ULTEM", "/materials/ultem-cnc-machining", "/wp-content/uploads/2026/02/Ultem-55x55-1.jpg"],
+    ],
+  },
+].map((tab) => ({
+  ...tab,
+  items: tab.items.map(([label, href, image]) => ({ label, href, image })),
+}));
+
+const homeMaterials = materialTabs.map((group, index) => ({
+  ...group,
+  visuals: index === 0 ? [
+    {src: "/assets/images/stainless-steel-material-768x768.webp", alt: "Stainless steel sheet stock"},
+    {src: "/assets/images/material-swiss-machining-brass-768x768.webp", alt: "Golden brass sheet stock"},
+    {src: "/assets/images/copper-cnc-machining-material-768x768.webp", alt: "Reddish copper sheet stock"},
+    {src: "/assets/images/titanium-alloy-machining-material.webp", alt: "Titanium alloy round bar stock"},
+  ] : [
+    {src: "/assets/images/cnc-engineering-plastics-assortment.webp", alt: "Illustrative assortment of engineering plastic rods, blocks and sheets in white, black, tan, amber and clear finishes"},
+  ],
+  caption: index === 0 ? "Stainless steel, brass, copper & titanium · Material examples" : "Engineering plastic rods, blocks & sheets · Illustrative material assortment",
+}));
+
+const parts = [
+  {slug: "metal-enclosures", category: "HOUSINGS & ENCLOSURES", image: "/assets/images/cnc-electronic-housings.webp", name: "Machined Enclosures", feature: "Pockets, mounting faces and connector interfaces for equipment housings.", alt: "Precision machined metal housings with pockets and mounting interfaces"},
+  {slug: "heat-sinks", category: "THERMAL COMPONENTS", image: "/assets/images/cnc-heat-sink.webp", name: "Heat Sinks", feature: "Finned bases and mounting surfaces for thermal assemblies.", alt: "Machined finned aluminum heat sink"},
+  {slug: "bearing-housing", category: "BEARING COMPONENTS", image: "/assets/images/custom-bearing-housing-overview.webp", name: "Bearing Housings", feature: "Bearing seats, precision bores and mounting faces made to drawing.", alt: "Machined bearing housing with a raised precision bore"},
+  {slug: "aerospace-fittings", category: "STRUCTURAL FITTINGS", image: "/assets/images/aerospace-5-axis-aluminum-structural-fitting.webp", name: "Structural Fittings", feature: "Multi-face brackets and fittings with intersecting bores and angled faces.", alt: "Complex aluminum structural fitting with multiple machined faces"},
+  {slug: "cnc-machined-flange", category: "FLUID & MOUNTING INTERFACES", image: "/assets/images/aluminum-flange-product-overview-v1.webp", name: "Machined Flanges", feature: "Concentric bores, bolt patterns and sealing faces for assembled systems.", alt: "Precision machined metal flange with central bore and bolt holes"},
+  {slug: "aerospace-connector-pins", category: "ELECTRICAL CONTACTS", image: "/assets/images/aluminum-connector-pins-white-v1.webp", name: "Connector Pins", feature: "Turned contact pins with mating surfaces, shoulders and solder cups.", alt: "Assorted machined electrical connector contact pins"},
+].map(part => ({...part, href: `/custom-cnc-parts/${part.slug}`}));
+
+const projectSteps = [
+  {
+    "title": "Review",
+    "text": "Check the drawing revision, material, functional dimensions and finish."
+  },
+  {
+    "title": "Plan",
+    "text": "Define the machining route, datum scheme, fixtures and tool access."
+  },
+  {
+    "title": "Prove",
+    "text": "Set up the part and inspect the first article before batch production."
+  },
+  {
+    "title": "Produce",
+    "text": "Machine the batch with in-process checks and agreed finishing."
+  },
+  {
+    "title": "Inspect & Pack",
+    "text": "Complete final checks, protect the parts and prepare them for shipment."
+  }
+];
+
+const faqs = [
+  {
+    "question": "Which CNC machining process fits my part?",
+    "answer": "Swiss machining is a useful starting point for small bar-stock parts with slender sections or fine features. CNC turning and milling suits parts that combine cylindrical surfaces with milled or drilled features. Send your drawing so the process can be reviewed against material, geometry, quantity and inspection needs."
+  },
+  {
+    "question": "What tolerances can you quote?",
+    "answer": "Specify the tolerances, datums and surface finish that the part needs to function. Feasibility is reviewed feature by feature because material, geometry, workholding and measurement access affect the result. The accepted drawing and quotation define the requirements for your order."
+  },
+  {
+    "question": "Which materials can I request?",
+    "answer": "Material guides cover metals such as stainless steel, aluminum, brass and titanium, and engineering plastics such as PEEK and POM. State the exact grade and stock condition in your request; availability and suitability must be confirmed for the particular part."
+  },
+  {
+    "question": "How are quantity and delivery time confirmed?",
+    "answer": "Include the initial quantity, likely repeat demand, target date and destination. Material availability, setup, machining, finishing and inspection affect cost and timing. Batch size and any expedited schedule are confirmed with the quotation."
+  },
+  {
+    "question": "Can I request certification and inspection documents?",
+    "answer": "Yes, include the required standard, report type, material records and traceability scope with your enquiry. Availability and applicability must be confirmed before ordering. If supplier certification is mandatory, request the current certificate and check that its scope meets your project requirements."
+  }
+];
+
+const learningPosts = [
+  {
+    title: "What is Swiss Machining?",
+    href: "/blog/swiss-machining",
+    image: "/wp-content/uploads/2025/12/swiss-machining.png",
+    excerpt:
+      "Learn how guide-bushing support close to the cutting tool helps with small, slender bar-stock parts.",
+  },
+  {
+    title: "CNC Lathe vs Mill",
+    href: "/blog/cnc-lathe-vs-mill",
+    image: "/wp-content/uploads/2025/12/cnc-turning-and-milling.png",
+    excerpt:
+      "Compare turning and milling, the features each process suits, and when a component needs both.",
+  },
+  {
+    title: "CNC Machining Materials: A Comprehensive Guide",
+    href: "/blog/cnc-machining-materials",
+    image: "/wp-content/uploads/2025/12/cnc-machining-materials.png",
+    excerpt:
+      "CNC machining can be applied to a wide variety of materials, including but not limited to metals, plastics, and composites.",
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.answer,
+    },
+  })),
+};
+---
+
+<BaseLayout seo={seo}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  </Fragment>
+
+  <div class="home-page">
+    <section class="home-hero" aria-labelledby="home-hero-title">
+      <div class="home-hero__inner">
+        <div class="home-hero__copy">
+          <p class="home-hero__eyebrow">CNC MILLING · TURNING · SWISS MACHINING</p>
+          <h1 id="home-hero-title">Custom CNC Machining Services<br /><span>Your Parts. Made to Your Specs.</span></h1>
+          <p>
+            Get your metal and plastic parts machined to your drawing—from housings and brackets
+            to precision shafts and fittings. Coordinate machining, finishing and inspection through one point of contact.
+          </p>
+          <ul class="home-hero__bullets">
+            {heroBullets.map((item) => <li>{item === "General Tolerance ±0.01 mm" ? <>General Tolerance <strong>±0.01 mm</strong></> : item}</li>)}
+          </ul>
+          <div class="home-hero__actions">
+            <a class="home-button" href="/cnc-machining-quote">Get a Quote for Your Parts <span aria-hidden="true">→</span></a>
+            <a class="home-hero__secondary" href="/services">Explore Our Capabilities <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <figure class="home-hero__visual">
+          <img src="/assets/images/cnc-machined-components-hero.webp" alt="Illustration of CNC milled housing and bracket with turned flange, shaft, brass bushing and plastic component" width="1000" height="667" loading="eager" fetchpriority="high" decoding="async" />
+          <figcaption>Representative CNC machined components</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <nav class="home-section-nav" aria-label="On this page">
+      <div class="home-section-nav__inner">
+        <a href="#machining-processes">Capabilities</a>
+        <a href="#equipment-quality">Equipment &amp; Quality</a>
+        <a href="#materials">Materials</a>
+        <a href="#surface-finishing">Surface Finishing</a>
+        <a href="#machined-parts">Part Types</a>
+        <a href="#production-workflow">Workflow</a>
+        <a href="#home-faq">FAQs</a>
+      </div>
+    </nav>
+
+    <section class="home-section home-services" id="machining-processes" aria-labelledby="processes-title">
+      <h2 id="processes-title">CNC Machining Capabilities</h2>
+      <p class="home-section__intro">Choose a process based on your part’s geometry and features. We machine custom components from drawings for prototype and production orders.</p>
+      <div class="home-service-grid">
+        {services.map((service) => (
+          <article class="home-service-card">
+            <a class="home-service-card__image" href={service.href} aria-label={service.title}>
+              <img src={service.image} alt={service.alt || service.title} width={service.width || 540} height={service.height || 260} loading="lazy" />
+            </a>
+            <div class="home-service-card__body">
+              <h3><a href={service.href}>{service.title}</a></h3>
+              <p>{service.text}</p>
+              <div class="home-service-card__links">
+                <a href={service.href}>{service.label} <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+      <div class="home-section-footer"><p>Not sure which process fits your part?</p><a class="home-text-link" href="/cnc-machining-quote">Request a Drawing Review <span aria-hidden="true">↗</span></a></div>
+    </section>
+
+    <section class="home-section home-equipment" id="equipment-quality" aria-labelledby="equipment-quality-title">
+      <div class="home-equipment__header">
+        <div class="home-equipment__copy">
+          <p class="home-equipment-kicker">FACTORY CAPACITY</p>
+          <h2 id="equipment-quality-title">Equipment &amp; Quality Control</h2>
+          <p>Documented production and measurement resources support drawing-based manufacturing and inspection.</p>
+        </div>
+        <div class="home-equipment-stats" aria-label="Equipment register totals">
+          <div class="home-equipment-stat"><strong>86</strong><span>CNC machines in the turning &amp; milling register</span></div>
+          <div class="home-equipment-stat"><strong>122</strong><span>measurement instruments in the calibration plan</span></div>
+        </div>
+      </div>
+      <div class="home-equipment-grid">
+        <article class="home-equipment-card"><img src="/assets/images/headwayer-factory-cnc-machining-centers.webp" alt="CNC machining centers on the factory floor" loading="lazy" decoding="async" /><div><p class="home-equipment-kicker">MILLING</p><h3>CNC Machining Centers</h3><p>Mazak VCN-430AL, HCN-5000L and VARIAXIS C-600 centers, with FANUC-controlled equipment, handle prismatic and multi-face parts.</p></div></article>
+        <article class="home-equipment-card"><img src="/assets/images/headwayer-factory-cnc-mill-turn.webp" alt="CNC mill-turn machine operating in the factory" loading="lazy" decoding="async" /><div><p class="home-equipment-kicker">TURNING &amp; SWISS-TYPE</p><h3>Lathes &amp; Mill-Turn Centers</h3><p>Mazak, Tsugami, Star and Takisawa equipment supports turned profiles, slender shafts and parts with milled features.</p></div></article>
+        <article class="home-equipment-card"><img src="/assets/images/headwayer-quality-cmm-inspection.webp" alt="Coordinate measuring machine in the inspection room" loading="lazy" decoding="async" /><div><p class="home-equipment-kicker">DIMENSIONAL INSPECTION</p><h3>CMM, OMM &amp; Gauges</h3><p>Coordinate and optical measuring machines, contour instruments and height gauges support checks against drawing requirements.</p></div></article>
+      </div>
+      <div class="home-equipment__footer"><span>Inspection scope is matched to the critical dimensions and records specified for each order.</span><a href="/resources/equipment-list">View Equipment List <span aria-hidden="true">↗</span></a></div>
+    </section>
+
+    <section class="home-section home-materials" id="materials" aria-labelledby="home-materials-title" data-home-tabs>
+      <h2 id="home-materials-title">Materials for CNC Machining</h2>
+      <p class="home-section__intro">Explore metals and engineering plastics for your custom CNC parts. Select a material to learn more about its machining options and applications.</p>
+      <div class="home-tabs" role="tablist" aria-label="CNC machining materials" hidden>
+        {homeMaterials.map((tab, index) => (
+          <button
+            class:list={["home-tab", index === 0 && "is-active"]}
+            type="button"
+            role="tab"
+            aria-selected={index === 0 ? "true" : "false"}
+            tabindex={index === 0 ? 0 : -1}
+            aria-controls={`home-material-panel-${index}`}
+            id={`home-material-tab-${index}`}
+            data-home-tab={index}
+          >
+            {tab.label}<span aria-hidden="true">↗</span>
+          </button>
+        ))}
+      </div>
+      <div class="home-material-panels">
+        {homeMaterials.map((tab, index) => (
+          <div
+            class="home-material-panel"
+            id={`home-material-panel-${index}`}
+            data-home-panel={index}
+          >
+            <h3 class="home-material-fallback">{tab.label}</h3>
+            <div class="home-material-display">
+              <figure>
+                <div
+                  class="home-material-visual"
+                  style={tab.visuals.length > 1
+                    ? "display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(2, minmax(0, 1fr)); gap: clamp(8px, 1vw, 12px); width: 100%; aspect-ratio: 1 / 1; overflow: hidden;"
+                    : "width: 100%; aspect-ratio: 1 / 1; overflow: hidden;"}
+                >
+                  {tab.visuals.map(visual => <img src={visual.src} alt={visual.alt} width="768" height="768" loading="lazy" decoding="async" style="display: block; width: 100%; height: 100%; min-width: 0; min-height: 0; object-fit: cover;" />)}
+                </div>
+                <figcaption>{tab.caption}</figcaption>
+              </figure>
+              <div class="home-material-details">
+                <ul class="home-material-links" aria-label={tab.label}>{tab.items.map(item => <li><a href={item.href}><span>{item.label}</span><span aria-hidden="true">↗</span></a></li>)}</ul>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div class="home-section-footer"><p>Match material, geometry and finish to your application.</p><a class="home-text-link" href="/materials">Explore All CNC Materials <span aria-hidden="true">↗</span></a></div>
+    </section>
+
+    <section class="home-section home-finishing" id="surface-finishing" aria-labelledby="home-finishing-title">
+      <h2 id="home-finishing-title">Surface Finishing for CNC Machined Parts</h2>
+      <p class="home-section__intro">Get machining and finishing through one point of contact. Choose a finish for the appearance, wear or corrosion requirements of your part.</p>
+      <div class="home-finishing-display">
+        <figure><img src="/assets/images/sandblasting-anodizing.webp" alt="Anodized metal components in different surface finish colors" width="720" height="405" loading="lazy" decoding="async" /><figcaption>Anodized components · Surface finish example</figcaption></figure>
+        <div class="home-finishing-options"><h3>Finishing Options</h3><ul>{finishes.map(finish => <li><span aria-hidden="true">✓</span>{finish}</li>)}</ul><p class="body-small">Include the color, coating thickness, masking areas and final dimensional requirements with your drawing. Compatibility is reviewed for the selected material and grade.</p></div>
+      </div>
+      <div class="home-section-footer"><a class="home-text-link" href="/blog/surface-finish">Read the Surface Finish Guide <span aria-hidden="true">↗</span></a><a class="home-text-link" href="/cnc-machining-quote">Quote Machining & Finishing <span aria-hidden="true">↗</span></a></div>
+    </section>
+
+    <section class="home-section home-parts" id="machined-parts" aria-labelledby="machined-parts-title">
+      <h2 id="machined-parts-title">Explore Machined Component Types</h2>
+      <p class="home-section__intro">
+        Explore product examples across equipment housings, thermal parts, structural fittings, flanges and electrical contacts.
+      </p>
+      <div class="home-component-grid">
+        {parts.map((part, index) => (
+          <article class="home-component">
+            <a class="home-component__link" href={part.href} aria-labelledby={`component-${part.slug}`}>
+              <div class="home-component__visual">
+                <img src={part.image} alt={part.alt} width="640" height="480" loading="lazy" decoding="async" />
+                <span class="home-component__number" aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
+              </div>
+              <div class="home-component__body">
+                <p class="home-component__category">{part.category}</p>
+                <h3 id={`component-${part.slug}`}>{part.name}</h3>
+                <p>{part.feature}</p>
+                <span class="home-component__action">View Product Details <span aria-hidden="true">↗</span></span>
+              </div>
+            </a>
+          </article>
+        ))}
+      </div>
+      <div class="home-parts__footer">
+        <p>Have a different geometry? Send your drawing for a machining review.</p>
+        <div><a class="home-text-link" href="/custom-cnc-parts">Browse All Custom Parts <span aria-hidden="true">↗</span></a><a class="home-button" href="/cnc-machining-quote">Get a Quote <span aria-hidden="true">↗</span></a></div>
+      </div>
+    </section>
+
+    <section class="home-section home-project-steps" id="production-workflow" aria-labelledby="home-project-steps-title">
+      <div class="home-process-heading"><h2 id="home-project-steps-title">From Drawing to Delivery</h2><p>A clear sequence. Defined checks at each stage.</p></div>
+      <ol class="home-process-grid">
+        {projectSteps.map((item, index) => (
+          <li class="home-process-step">
+            <span class="home-process-step__marker" aria-hidden="true"></span>
+            <span class="home-process-step__number">0{index + 1}</span>
+            <h3>{item.title}</h3>
+            <p>{item.text}</p>
+          </li>
+        ))}
+      </ol>
+      <div class="home-process-footer">
+        <div><p class="home-process-footer__label">REFERENCE PRODUCTION WINDOWS</p><p class="home-process-footer__timing"><span>Samples: 3–5 working days</span><span aria-hidden="true">/</span><span>Batches: 7–15 working days</span></p></div>
+        <p class="home-process-footer__note">Final timing depends on material, quantity, complexity, finishing and inspection. Transit time is separate.</p>
+      </div>
+    </section>
+
+    <section class="home-faq" id="home-faq">
+      <div class="home-faq__inner">
+        <h2>CNC Machining Questions</h2>
+        <div class="home-faq__list">
+          {faqs.map((item) => (
+            <details>
+              <summary>{item.question}</summary>
+              <p>{item.answer}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="home-section home-learning">
+      <h2>CNC Machining Learning Center</h2>
+      <div class="home-learning-grid">
+        {learningPosts.map((post) => (
+          <article class="home-learning-card">
+            <a class="home-learning-card__image" href={post.href} tabindex="-1">
+              <img src={post.image} alt={post.title} width="360" height="220" loading="lazy" />
+            </a>
+            <div class="home-learning-card__body">
+              <h3><a href={post.href}>{post.title}</a></h3>
+              <p>{post.excerpt}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="home-cta" aria-labelledby="home-cta-title">
+      <div class="home-cta__inner">
+        <div class="home-cta__copy">
+          <p class="home-cta__eyebrow">START A PROJECT</p>
+          <h2 id="home-cta-title">Send Your Requirements for Review</h2>
+          <p>Share your contact details and attach a drawing or CAD file. We’ll review the part and requested manufacturing scope.</p>
+          <a href="/cnc-machining-quote">Prefer the full quote form? <span aria-hidden="true">→</span></a>
+        </div>
+        <CompactQuoteForm idPrefix="home-quote" formName="Home Quote Form" submitLabel="Send Requirements" />
+      </div>
+    </section>
+  </div>
+
+  <script is:inline>
+    for (const root of document.querySelectorAll("[data-home-tabs]")) {
+      const tabs = Array.from(root.querySelectorAll("[data-home-tab]"));
+      const panels = Array.from(root.querySelectorAll("[data-home-panel]"));
+
+      const activate = (tab, focus = false) => {
+          const activeIndex = tab.getAttribute("data-home-tab");
+          tabs.forEach((item) => {
+            const active = item.getAttribute("data-home-tab") === activeIndex;
+            item.classList.toggle("is-active", active);
+            item.setAttribute("aria-selected", String(active));
+            item.tabIndex = active ? 0 : -1;
+          });
+          panels.forEach((panel) => {
+            panel.hidden = panel.getAttribute("data-home-panel") !== activeIndex;
+          });
+          if (focus) tab.focus();
+      };
+      panels.forEach((panel, index) => {
+        panel.setAttribute("role", "tabpanel");
+        panel.setAttribute("aria-labelledby", `home-material-tab-${index}`);
+        panel.tabIndex = 0;
+      });
+      root.querySelectorAll(".home-material-fallback").forEach(heading => heading.hidden = true);
+      root.querySelector('[role="tablist"]').hidden = false;
+      tabs.forEach((tab, index) => {
+        tab.addEventListener("click", () => activate(tab));
+        tab.addEventListener("keydown", event => {
+          let next;
+          if (event.key === "ArrowRight") next = (index + 1) % tabs.length;
+          else if (event.key === "ArrowLeft") next = (index + tabs.length - 1) % tabs.length;
+          else if (event.key === "Home") next = 0;
+          else if (event.key === "End") next = tabs.length - 1;
+          else return;
+          event.preventDefault();
+          activate(tabs[next], true);
+        });
+      });
+      activate(tabs[0]);
+    }
+
+  </script>
+  <script>
+  </script>
+</BaseLayout>
+
+<style>
+  .home-section.home-project-steps { width: 100%; box-sizing: border-box; margin: 0; padding: 64px max(24px, calc((100% - var(--layout-content)) / 2)); background: var(--color-brand); }
+  .home-process-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 32px; }
+  .home-section.home-project-steps .home-process-heading h2 { margin: 0; color: var(--color-white); text-align: left; font-size: var(--type-h2); line-height: 1.2; font-weight: 400; }
+  .home-process-heading > p { margin: 0; color: var(--color-white); font-size: var(--type-small); line-height: 1.6; text-align: right; }
+  .home-process-grid { position: relative; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 30px; margin: 22px 0 0; padding: 0; list-style: none; }
+  .home-process-grid::before { position: absolute; top: 3px; right: 0; left: 0; border-top: 1px solid rgb(var(--color-white-rgb) / .42); content: ""; }
+  .home-process-step { position: relative; min-width: 0; padding-top: 34px; }
+  .home-process-step__marker { position: absolute; top: 0; left: 0; z-index: 1; width: 7px; height: 7px; background: var(--color-white); }
+  .home-process-step__number { display: block; margin-bottom: 11px; color: var(--color-white); font-family: var(--font-mono); font-size: var(--type-mono); font-weight: 500; }
+  .home-process-step h3 { margin: 0 0 9px; color: var(--color-white); font-family: var(--font-heading); font-size: var(--type-h4); font-weight: 500; line-height: 1.35; }
+  .home-process-step p { max-width: 245px; margin: 0; color: var(--color-white); font-size: var(--type-small); line-height: 1.7; }
+  .home-process-footer { display: grid; grid-template-columns: 1.2fr 1fr; align-items: center; gap: 36px; margin-top: 34px; padding: 20px 28px; background: var(--color-white); }
+  .home-process-footer p { margin: 0; }
+  .home-process-footer__label { margin-bottom: 8px !important; color: var(--color-brand); font-family: var(--font-mono); font-size: var(--type-mono); font-weight: 500; letter-spacing: .04em; }
+  .home-process-footer__timing { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; color: var(--color-ink); font-size: var(--type-body-small); font-weight: 500; }
+  .home-process-footer__timing > span[aria-hidden="true"] { color: var(--color-border); }
+  .home-process-footer__note { max-width: 520px; color: var(--color-body); font-size: var(--type-small); line-height: 1.65; }
+  .home-page {
+    color: var(--color-body);
+    background: var(--color-white);
+  }
+
+  .home-section-nav { border-bottom: 1px solid var(--color-border); background: var(--color-white); }
+  .home-section-nav__inner { display:flex; align-items:center; width:min(var(--layout-content), calc(100% - 48px)); min-height:60px; gap:28px; margin-inline:auto; overflow-x:auto; scrollbar-width:none; }
+  .home-section-nav__inner::-webkit-scrollbar { display:none; }
+  .home-section-nav a { display:inline-flex; flex:none; align-items:center; min-height:60px; border-bottom:2px solid transparent; color:var(--color-body); font-size:var(--type-small); text-decoration:none; white-space:nowrap; }
+  .home-section-nav a:hover { border-color:var(--color-brand); color:var(--color-brand); }
+  .home-page section[id] { scroll-margin-top:calc(var(--site-header-height, 0px) + 16px); }
+
+  .home-hero {
+    position: relative;
+    overflow: hidden;
+    min-height: 583px;
+    background: var(--color-surface);
+    color: var(--color-ink);
+  }
+
+  .home-hero__inner {
+    position: relative;
+    z-index: 1;
+    width: min(var(--layout-content), calc(100% - 48px));
+    min-height: 583px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.08fr 1fr;
+    gap: 32px;
+    align-items: center;
+  }
+
+  .home-hero__copy {
+    min-width: 0;
+    padding: 64px 0;
+  }
+
+  .home-hero__eyebrow {
+    margin: 0 0 14px;
+    color: var(--color-brand);
+    font-family: var(--font-mono);
+    font-size: var(--type-label);
+    line-height: 1.5;
+    font-weight: 500;
+  }
+
+  .home-hero h1 {
+    margin: 0 0 22px;
+    color: var(--color-ink);
+    font-size: var(--type-h1-home);
+    line-height: 1.12;
+    font-weight: 400;
+  }
+
+  .home-hero h1 span { color: var(--color-brand); }
+
+  .home-hero__copy > p:not(.home-hero__eyebrow):not(.home-hero__quote-note) {
+    max-width: 620px;
+    margin: 0 0 18px;
+    color: var(--color-body);
+    font-size: var(--type-body);
+    line-height: 1.55;
+    font-weight: 400;
+  }
+
+  .home-hero__bullets {
+    margin: 0 0 30px;
+    margin-left: -8px;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: max-content max-content;
+    column-gap: 24px;
+    row-gap: 8px;
+  }
+
+  .home-hero__bullets li {
+    position: relative;
+    min-height: 0;
+    padding: 2px 0;
+    color: var(--color-ink);
+    font-size: 15px;
+    line-height: 1.35;
+    white-space: nowrap;
+  }
+
+  .home-hero__bullets li::before {
+    content: "✓";
+    display: inline-block;
+    margin-right: 8px;
+    color: var(--color-brand);
+    background: none;
+    border: 0;
+    border-radius: 0;
+    width: auto;
+    height: auto;
+    position: static;
+  }
+
+  .home-hero__bullets li::after {
+    content: none;
+  }
+
+  .home-hero__actions { display: flex; align-items: center; flex-wrap: wrap; gap: 20px; }
+  .home-hero__actions .home-button { min-height: 48px; gap: 12px; font-weight: 500; }
+  .home-hero__secondary { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; color: var(--color-brand); font-size: var(--type-small); font-weight: 500; text-decoration: none; }
+  .home-hero__secondary:hover { color: var(--color-hover); text-decoration: underline; text-underline-offset: 4px; }
+  .home-hero__copy > .home-hero__quote-note { margin: 14px 0 0; font-size: var(--type-small); }
+  .home-hero__visual { margin: 0; min-width: 0; text-align: center; }
+  .home-hero__visual img { display: block; width: 100%; height: auto; }
+  .home-hero__visual figcaption { margin-top: 14px; color: var(--color-body); font-size: var(--type-caption); }
+
+  .home-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+    padding: 10px 22px;
+    border-radius: 2px;
+    background: var(--color-brand);
+    color: var(--color-white);
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .home-button:hover,
+  .home-service-card__links a:hover,
+  .home-learning-card h3 a:hover {
+    color: var(--color-white);
+    background: var(--color-hover);
+  }
+
+  .home-button--outline {
+    color: var(--color-white);
+  }
+
+  .home-button--center {
+    margin: 34px auto 0;
+  }
+
+  .home-section {
+    width: min(var(--layout-content), calc(100% - 48px));
+    margin: 0 auto;
+    padding: 76px 0;
+  }
+
+  .home-section h2,
+  .trusted-strip h2,
+  .home-faq h2,
+  .home-cta h2 {
+    margin: 0;
+    color: var(--color-ink);
+    text-align: center;
+    font-size: var(--type-h2);
+    line-height: 1.2;
+    font-weight: 700;
+  }
+
+  .home-section__intro {
+    max-width: 880px;
+    margin: 16px auto 36px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 1.45;
+    font-weight: 400;
+  }
+
+  .home-service-grid {
+    margin-top: 36px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  .home-service-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    background: var(--color-white);
+    transition: border-color .2s ease;
+  }
+
+  .home-service-card:hover { border-color: var(--color-brand); }
+  .home-service-card__image { display: block; position: relative; aspect-ratio: 2 / 1; flex-shrink: 0; min-width: 0; overflow: hidden; background: var(--color-surface); }
+
+  .home-service-card__image img {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .home-service-card__body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .home-service-card h3 {
+    margin: 0 0 10px;
+    min-height: 2.4em;
+    color: var(--color-ink);
+    font-family: var(--font-heading);
+    font-size: var(--type-h3);
+    line-height: 1.2;
+    font-weight: 500;
+  }
+
+  .home-service-card h3 a { color: inherit; text-decoration: none; }
+  .home-service-card h3 a:hover { color: var(--color-brand); }
+
+  .home-service-card p {
+    margin: 0 0 16px;
+    font-size: var(--type-body);
+    line-height: 1.65;
+  }
+
+  .home-service-card__links {
+    display: grid;
+    gap: 9px;
+    margin-top: auto;
+    padding-top: 4px;
+  }
+
+  .home-service-card__links a {
+    width: fit-content;
+    color: var(--color-brand);
+    font-size: var(--type-small);
+    font-weight: 500;
+    text-decoration: none;
+  }
+
+  .home-service-card__links a:hover { color: var(--color-hover); background: transparent; text-decoration: underline; text-underline-offset: 4px; }
+
+  .home-section.home-equipment { box-sizing: border-box; width: 100%; max-width: none; margin: 0; padding: 76px max(24px, calc((100% - var(--layout-content)) / 2)); background: var(--color-surface); }
+  .home-equipment__header { display: grid; grid-template-columns: minmax(0, 1fr) minmax(380px, .9fr); align-items: end; gap: 56px; }
+  .home-equipment__copy .home-equipment-kicker { margin: 0 0 12px; color: var(--color-brand); font-family: var(--font-mono); font-size: var(--type-mono); font-weight: 500; letter-spacing: .06em; }
+  .home-equipment__copy h2 { max-width: 620px; text-align: left; }
+  .home-equipment__copy > p:last-child { max-width: 610px; margin: 14px 0 0; color: var(--color-body); font-size: var(--type-body); line-height: 1.6; }
+  .home-equipment-stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+  .home-equipment-stat { display: flex; flex-direction: column; gap: 8px; min-width: 0; padding-top: 14px; border-top: 1px solid var(--color-border); }
+  .home-equipment-stat strong { color: var(--color-brand); font-family: var(--font-heading); font-size: clamp(36px, 4vw, 48px); font-weight: 500; line-height: 1; }
+  .home-equipment-stat span { max-width: 240px; color: var(--color-ink); font-size: var(--type-small); line-height: 1.45; }
+  .home-equipment-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin-top: 42px; }
+  .home-equipment-card { display: flex; min-width: 0; flex-direction: column; overflow: hidden; background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 2px; }
+  .home-equipment-card > img { display: block; width: 100%; height: 200px; object-fit: cover; }
+  .home-equipment-card > div { flex: 1; padding: 20px 22px 24px; }
+  .home-equipment-card .home-equipment-kicker { margin: 0 0 8px; color: var(--color-brand); font-family: var(--font-mono); font-size: var(--type-mono); font-weight: 500; letter-spacing: .04em; }
+  .home-equipment-card h3 { margin: 0 0 10px; color: var(--color-ink); font-family: var(--font-heading); font-size: var(--type-h3); font-weight: 500; line-height: 1.3; }
+  .home-equipment-card div > p:last-child { margin: 0; color: var(--color-body); font-size: var(--type-body-small); line-height: 1.6; }
+  .home-equipment__footer { display: flex; justify-content: space-between; align-items: center; gap: 20px; margin-top: 22px; padding-top: 16px; border-top: 1px solid var(--color-border); color: var(--color-body); font-size: var(--type-small); }
+  .home-equipment__footer a { flex: 0 0 auto; color: var(--color-brand); font-weight: 500; text-decoration: none; }
+  .home-equipment__footer a:hover { color: var(--color-hover); text-decoration: underline; text-underline-offset: 4px; }
+  .home-section-footer { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 12px 28px; margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--color-border); text-align: center; }
+  .home-section-footer p { margin: 0; font-size: var(--type-body); }
+  .home-text-link { color: var(--color-brand); font-size: var(--type-body); font-weight: 500; text-decoration: none; }
+  .home-text-link:hover { color: var(--color-hover); text-decoration: underline; text-underline-offset: 4px; }
+  .home-page :is(a, button):focus-visible { outline: 2px solid var(--color-brand); outline-offset: 4px; }
+
+  .home-faq {
+    background: var(--color-surface);
+  }
+
+  .trusted-strip {
+    background: var(--color-white);
+  }
+
+  .trusted-strip__inner {
+    width: min(var(--layout-content), calc(100% - 48px));
+    margin: 0 auto;
+    padding: 56px 0;
+  }
+
+  .trusted-logos {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+  }
+
+  .trusted-logo {
+    display: flex;
+    flex: 1 1 150px;
+    max-width: 200px;
+    min-width: 0;
+    height: 104px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .trusted-logo svg {
+    display: block;
+    max-width: 100%;
+    height: 96px;
+    overflow: hidden;
+  }
+
+  .home-materials {
+    width: 100%;
+    max-width: none;
+    background: var(--color-surface);
+    padding-right: max(24px, calc((100vw - var(--layout-shell)) / 2));
+    padding-left: max(24px, calc((100vw - var(--layout-shell)) / 2));
+    text-align: center;
+  }
+
+  .home-tabs {
+    margin: 32px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+  }
+  .home-tabs[hidden], .home-material-panel[hidden], .home-material-fallback[hidden] { display: none; }
+
+  .home-tab {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    min-width: 220px;
+    min-height: 50px;
+    padding: 12px 24px;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    background: var(--color-white);
+    color: var(--color-ink);
+    font: inherit;
+    font-size: var(--type-body);
+    cursor: pointer;
+  }
+
+  .home-tab.is-active {
+    background: var(--color-brand);
+    border-color: var(--color-brand);
+    color: var(--color-white);
+  }
+
+  .home-material-display { display: grid; grid-template-columns: .8fr 1.2fr; gap: 48px; text-align: left; align-items: start; }
+  .home-material-display figure { margin: 0; min-width: 0; }
+  .home-material-display img { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; border-radius: 4px; }
+  .home-material-display figcaption { margin-top: 12px; font-size: var(--type-caption); }
+  .home-material-details { min-width: 0; }
+  .home-material-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 32px; margin: 0; padding: 0; list-style: none; }
+  .home-material-links li { display: flex; min-width: 0; border-bottom: 1px solid var(--color-border); }
+  .home-material-links a { display: flex; align-items: center; justify-content: space-between; gap: 12px; width: 100%; min-height: 64px; padding: 16px 4px; color: var(--color-brand); font-size: var(--type-body); text-decoration: none; }
+  .home-material-links a:hover { color: var(--color-hover); text-decoration: underline; text-underline-offset: 4px; }
+  .home-material-links a > span:last-child { flex-shrink: 0; }
+
+  .home-finishing-display { display: grid; grid-template-columns: 1fr 1.1fr; gap: 48px; align-items: center; }
+  .home-finishing-display figure { margin: 0; min-width: 0; }
+  .home-finishing-display img { display: block; width: 100%; height: auto; aspect-ratio: 1.4; object-fit: cover; border-radius: 4px; }
+  .home-finishing-display figcaption { margin-top: 12px; font-size: var(--type-caption); }
+  .home-finishing-options h3 { font-family: var(--font-heading); font-size: var(--type-h3); font-weight: 500; color: var(--color-ink); margin: 0 0 16px; }
+  .home-finishing-options ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 24px; list-style: none; padding: 0; margin: 0 0 20px; }
+  .home-finishing-options li { display: flex; gap: 10px; align-items: baseline; padding: 12px 0; border-bottom: 1px solid var(--color-border); color: var(--color-ink); font-size: var(--type-body); }
+  .home-finishing-options li span { color: var(--color-brand); }
+  .home-finishing-options > p { margin: 0; font-size: var(--type-body-small); }
+
+  .home-parts { padding-top: 62px; }
+  .home-component-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; }
+  .home-component { min-width:0; overflow:hidden; border:1px solid var(--color-border); background:var(--color-white); transition:border-color .2s,transform .2s; }
+  .home-component__link { display:flex; height:100%; flex-direction:column; color:var(--color-ink); text-decoration:none; }
+  .home-component__visual { position:relative; display:grid; place-items:center; overflow:hidden; aspect-ratio:1.5; background:var(--color-surface); }
+  .home-component__visual img { display:block; box-sizing:border-box; width:100%; height:100%; padding:12px; object-fit:contain; transition:transform .2s; }
+  .home-component__body { display:flex; flex:1; flex-direction:column; padding:22px 24px 20px; }
+  .home-component__number { position:absolute; top:14px; left:14px; display:grid; place-items:center; width:34px; height:34px; border:1px solid var(--color-border); background:var(--color-white); color:var(--color-brand); font-family:var(--font-mono); font-size:var(--type-mono); font-weight:500; }
+  .home-component__category { margin:0 0 10px !important; color:var(--color-brand) !important; font-family:var(--font-sans); font-size:var(--type-label) !important; font-weight:500; letter-spacing:.04em; line-height:1.4 !important; }
+  .home-component h3 { margin:0 0 8px; color:var(--color-ink); font-family:var(--font-heading); font-size:var(--type-h3); font-weight:500; line-height:1.2; }
+  .home-component__body > p:not(.home-component__category) { margin:0 0 20px; color:var(--color-body); font-size:var(--type-body-small); line-height:1.6; }
+  .home-component__action { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-top:auto; padding-top:16px; border-top:1px solid var(--color-border); color:var(--color-brand); font-size:var(--type-small); font-weight:500; }
+  .home-component:hover { border-color:var(--color-brand); transform:translateY(-2px); }
+  .home-component:hover .home-component__visual img { transform:scale(1.04); }
+  .home-component:hover h3 { color:var(--color-brand); }
+  .home-component__link:hover .home-component__action { text-decoration:underline; text-underline-offset:4px; }
+  .home-parts__footer { display: flex; flex-wrap: wrap; gap: 20px 32px; justify-content: space-between; align-items: center; margin-top: 32px; padding: 24px; background: var(--color-surface); border-radius: 4px; }
+  .home-parts__footer p { flex: 1 1 300px; margin: 0; font-size: var(--type-body); }
+  .home-parts__footer > div { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 28px; }
+  @media (prefers-reduced-motion: reduce) { .home-component__visual img { transition: none; } .home-component__link:hover .home-component__visual img { transform: none; } }
+
+  .home-testimonials {
+    padding-top: 52px;
+  }
+
+  .home-testimonial-grid {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+  }
+
+  .home-testimonial {
+    margin: 0;
+    padding: 32px 28px;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    background: var(--color-white);
+    box-shadow: 0 12px 30px rgb(var(--color-ink-rgb)/0.08);
+  }
+
+  .home-testimonial p {
+    margin: 0 0 26px;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .home-testimonial__person {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: var(--color-ink);
+  }
+
+  .home-testimonial__person img {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .home-faq__inner {
+    width: min(940px, calc(100% - 48px));
+    margin: 0 auto;
+    padding: 74px 0 78px;
+  }
+
+  .home-faq__list {
+    margin-top: 40px;
+    border-top: 2px solid var(--color-border);
+  }
+
+  .home-faq details {
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .home-faq summary {
+    position: relative;
+    min-height: 70px;
+    padding: 22px 48px 22px 0;
+    color: var(--color-ink);
+    font-size: 19px;
+    line-height: 1.25;
+    font-weight: 700;
+    cursor: pointer;
+    list-style: none;
+  }
+
+  .home-faq summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .home-faq summary::after {
+    content: "+";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    color: var(--color-ink);
+    font-size: 30px;
+    line-height: 1;
+    transform: translateY(-50%);
+  }
+
+  .home-faq details[open] summary::after {
+    content: "-";
+  }
+
+  .home-faq details p {
+    margin: -6px 0 24px;
+    color: var(--color-body);
+    line-height: 1.65;
+  }
+
+  .home-learning-grid {
+    margin-top: 42px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+  }
+
+  .home-learning-card {
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    background: var(--color-white);
+    box-shadow: 0 12px 30px rgb(var(--color-ink-rgb)/0.08);
+  }
+
+  .home-learning-card__image img {
+    width: 100%;
+    aspect-ratio: 1.62 / 1;
+    object-fit: cover;
+    transition: transform 0.25s ease;
+  }
+
+  .home-learning-card:hover img {
+    transform: scale(1.04);
+  }
+
+  .home-learning-card__body {
+    padding: 24px;
+  }
+
+  .home-learning-card h3 {
+    margin: 0 0 14px;
+    font-size: 18px;
+    line-height: 1.35;
+  }
+
+  .home-learning-card h3 a {
+    color: var(--color-ink);
+    text-decoration: underline;
+  }
+
+  .home-learning-card p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .home-cta { padding: 64px max(24px, calc((100% - var(--layout-content)) / 2)); background: var(--color-brand); }
+  .home-cta__inner { width: min(100%, var(--layout-shell)); margin: 0 auto; display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); align-items: center; gap: 56px; }
+  .home-cta__copy { max-width: 470px; }
+  .home-cta__eyebrow { margin: 0 0 12px; color: var(--color-white); font-family: var(--font-mono); font-size: var(--type-mono); font-weight: 500; letter-spacing: .06em; opacity: .82; }
+  .home-cta__copy h2 { margin: 0 0 18px; color: var(--color-white); font-family: var(--font-heading); font-size: var(--type-h2); font-weight: 400; line-height: 1.18; text-align: left; text-transform: none; }
+  .home-cta__copy > p:not(.home-cta__eyebrow) { margin: 0 0 18px; color: var(--color-white); font-size: var(--type-body-small); line-height: 1.65; opacity: .92; }
+  .home-cta__copy > a { color: var(--color-white); font-size: var(--type-small); font-weight: 500; text-underline-offset: 4px; }
+
+  @media (max-width: 1024px) {
+    .home-hero__inner { gap: 24px; }
+    .home-hero__bullets { column-gap: 12px; }
+    .home-hero__bullets li { font-size: 14px; }
+
+    .home-service-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .home-process-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+    .home-process-grid::before { display: none; }
+    .home-equipment__header { grid-template-columns: 1fr; gap: 24px; }
+    .home-equipment-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 720px; }
+    .home-equipment-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .home-cta__inner { grid-template-columns: 1fr; gap: 28px; }
+    .home-cta__copy { max-width: 720px; }
+    .home-material-display { gap: 28px; }
+    .home-finishing-display { grid-template-columns: 1fr; gap: 28px; }
+    .home-finishing-display img { aspect-ratio: 2; }
+
+  }
+
+  @media (max-width: 900px) {
+    .home-hero__bullets { grid-template-columns: minmax(0, 1fr); }
+  }
+
+  @media (max-width: 767px) {
+    .home-section-nav__inner { width:calc(100% - 40px); min-height:52px; gap:24px; }
+    .home-section-nav a { min-height:52px; }
+    .home-hero__bullets { grid-template-columns: minmax(0, 1fr); }
+    .home-hero__bullets li { font-size: clamp(12px, 3.6vw, 14px); }
+    .home-process-heading { align-items: flex-start; flex-direction: column; gap: 10px; }
+    .home-equipment-grid { grid-template-columns: 1fr; }
+    .home-cta { padding-block: 44px; }
+    .home-equipment__footer { align-items: flex-start; flex-direction: column; }
+    .home-process-heading > p { max-width: 540px; text-align: left; }
+    .home-process-grid { grid-template-columns: 1fr; gap: 22px; margin-top: 26px; padding-left: 16px; }
+    .home-process-grid::before { display: block; top: 3px; right: auto; bottom: 6px; left: 3px; border-top: 0; border-left: 1px solid rgb(var(--color-white-rgb) / .42); }
+    .home-process-step { padding: 0 0 0 20px; }
+    .home-process-step__marker { left: -16px; }
+    .home-process-step__number { margin-bottom: 7px; }
+    .home-process-step h3 { margin-bottom: 5px; }
+    .home-process-footer { grid-template-columns: 1fr; gap: 12px; margin-top: 28px; padding: 18px; }
+    .home-process-footer__timing { gap: 8px; }
+    .home-equipment-card > img { height: 190px; }
+    .home-equipment-card > div { padding: 20px; }
+    .home-component-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; }
+    .home-parts__footer { padding: 24px; }
+    .home-parts__footer p { flex-basis: 100%; }
+    .home-parts__footer > div { align-items: flex-start; flex-direction: column; }
+
+    .home-hero__inner,
+    .home-section,
+    .trusted-strip__inner,
+    .home-faq__inner {
+      width: min(100% - 48px, var(--layout-content));
+    }
+
+    .home-hero__inner {
+      min-height: auto;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    .home-hero__copy {
+      width: 100%;
+      padding: 42px 0 0;
+    }
+
+    .home-hero__visual { width: min(100%, 520px); justify-self: center; padding-bottom: 32px; }
+    .home-hero__actions { gap: 8px 20px; }
+
+    .home-hero h1 {
+      font-size: var(--type-h1-home);
+    }
+
+    .home-hero__copy > p:not(.home-hero__eyebrow):not(.home-hero__quote-note) {
+      font-size: var(--type-body);
+    }
+
+    .home-hero__copy > .home-hero__quote-note { font-size: var(--type-small); }
+
+    .home-section {
+      padding: 54px 0;
+    }
+
+    .home-section.home-equipment { padding-block: 54px; }
+
+    .home-section h2,
+    .trusted-strip h2,
+    .home-faq h2,
+    .home-cta__copy h2 {
+      font-size: var(--type-h2);
+    }
+
+    .home-service-grid,
+    .home-testimonial-grid,
+    .home-learning-grid {
+      grid-template-columns: 1fr;
+    }
+
+
+    .home-tabs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: stretch;
+      width: 100%;
+    }
+
+    .home-tab {
+      min-width: 0;
+      padding-inline: 12px;
+      gap: 8px;
+      font-size: var(--type-body);
+    }
+    .home-tab > span { display: none; }
+    .home-section.home-materials { width: 100%; padding-block: 54px; }
+    .home-material-display { grid-template-columns: 1fr; gap: 24px; }
+    .home-material-display img { aspect-ratio: 1; }
+    .home-finishing-options ul { gap: 0 16px; }
+    .home-material-links { gap: 0 20px; }
+    .home-material-links a { padding-inline: 0; gap: 8px; }
+    .home-service-card h3 { min-height: 0; }
+    .home-section-footer { gap: 16px; flex-direction: column; align-items: center; }
+
+
+
+
+
+    .home-faq summary {
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: 520px) {
+    .home-component-grid { grid-template-columns:minmax(0,1fr); }
+    .home-component__link { display:grid; grid-template-columns:112px minmax(0,1fr); min-height:0; }
+    .home-component__visual { min-height:100%; aspect-ratio:auto; }
+    .home-component__body { padding:16px; }
+    .home-component__number { top:8px; left:8px; width:28px; height:28px; }
+  }
+</style>

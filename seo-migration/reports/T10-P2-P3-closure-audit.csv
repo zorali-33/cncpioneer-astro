@@ -1,0 +1,74 @@
+﻿priority,classification,path,status,evidence,recommended_action
+P2,ahrefs_only_nonlocal_url,/blog/cnc-milling-parts,resolved,route_exists=true; normalized_path=/blog/cnc-milling-parts,review
+P2,ahrefs_only_nonlocal_url,/blog/medical-swiss-machining,resolved,route_exists=true; normalized_path=/blog/medical-swiss-machining,review
+P2,ahrefs_only_nonlocal_url,/blog/page/15,resolved,route_exists=true; normalized_path=/blog/page/15,review
+P2,ahrefs_only_nonlocal_url,/blog/page/16,resolved,route_exists=true; normalized_path=/blog/page/16,review
+P2,ahrefs_only_nonlocal_url,/blog/page/17,resolved,route_exists=true; normalized_path=/blog/page/17,review
+P2,ahrefs_only_nonlocal_url,/blog/page/18,resolved,route_exists=true; normalized_path=/blog/page/18,review
+P2,ahrefs_only_nonlocal_url,/blog/page/19,resolved,route_exists=true; normalized_path=/blog/page/19,review
+P2,ahrefs_only_nonlocal_url,/blog/page/20,resolved,route_exists=true; normalized_path=/blog/page/20,review
+P2,ahrefs_only_nonlocal_url,/industries/railroad-machining-services,resolved,route_exists=true; normalized_path=/industries/railroad-machining-services,review
+P2,ahrefs_only_nonlocal_url,/services//swiss-machining,resolved,route_exists=true; normalized_path=/services/swiss-machining,review
+P2,ahrefs_only_nonlocal_url,/wp-content/plugins/wpforms-lite/assets/css/frontend/modern/wpforms-full.min.css,resolved,asset_exists=true; normalized_path=/wp-content/plugins/wpforms-lite/assets/css/frontend/modern/wpforms-full.min.css,review
+P2,ahrefs_only_nonlocal_url,/wp-content/uploads/2021/07/5-Axis-Aluminum-Alloy-CNC-Precision-Machining-Medical-Parts.jpg,resolved,asset_exists=true; normalized_path=/wp-content/uploads/2021/07/5-Axis-Aluminum-Alloy-CNC-Precision-Machining-Medical-Parts.jpg,review
+P2,ahrefs_only_nonlocal_url,/wp-content/uploads/2024/08/aluminum-alloys-and-their-melting-points-1024x658.webp,resolved,asset_exists=true; normalized_path=/wp-content/uploads/2024/08/aluminum-alloys-and-their-melting-points-1024x658.webp,review
+P2,ahrefs_only_nonlocal_url,/wp-content/uploads/2026/06/construction-agricultural-reducer.jpg,resolved,asset_exists=true; normalized_path=/wp-content/uploads/2026/06/construction-agricultural-reducer.jpg,review
+P2,ahrefs_only_nonlocal_url,/wp-content/uploads/2026/06/robot-cell-chip-coolant-peripheral-hardware.jpg,resolved,asset_exists=true; normalized_path=/wp-content/uploads/2026/06/robot-cell-chip-coolant-peripheral-hardware.jpg,review
+P2,ahrefs_only_nonlocal_url,/wp-content/uploads/2026/09/electricals.jpg,resolved,asset_exists=true; normalized_path=/wp-content/uploads/2026/09/electricals.jpg,review
+P2,ahrefs_only_nonlocal_url,/wp-content/uploads/2026/09/fluid-control.jpg,resolved,asset_exists=true; normalized_path=/wp-content/uploads/2026/09/fluid-control.jpg,review
+P2,ahrefs_only_nonlocal_url,/wp-content/uploads/2026/09/industrial-machinery.jpg,resolved,asset_exists=true; normalized_path=/wp-content/uploads/2026/09/industrial-machinery.jpg,review
+P2,generated_parts_archive,/custom-cnc-parts/page/2,needs_review,route_exists=true; generated_pagination_clean=false,fix_parts_archive_generator
+P2,generated_parts_archive,/custom-cnc-parts/page/3,needs_review,route_exists=true; generated_pagination_clean=false,fix_parts_archive_generator
+P2,generated_parts_archive,/custom-cnc-parts/page/4,needs_review,route_exists=true; generated_pagination_clean=false,fix_parts_archive_generator
+P2,generated_parts_archive,/custom-cnc-parts/page/5,needs_review,route_exists=true; generated_pagination_clean=false,fix_parts_archive_generator
+P2,generated_parts_archive,/custom-cnc-parts/page/6,needs_review,route_exists=true; generated_pagination_clean=false,fix_parts_archive_generator
+P2,generated_parts_archive,/custom-cnc-parts/page/7,needs_review,route_exists=true; generated_pagination_clean=false,fix_parts_archive_generator
+P2,mirrored_page_link_technical,/blog/aluminium-melting-point,resolved,T08 current link audit has zero findings,batch_fix_links
+P2,mirrored_page_link_technical,/blog/china-humanoid-robot-companies,resolved,T08 current link audit has zero findings,batch_fix_links
+P2,mirrored_page_link_technical,/blog/cnc-automotive,resolved,T08 current link audit has zero findings,batch_fix_links
+P2,mirrored_page_link_technical,/blog/cnc-heat-sink-manufacturing,resolved,T08 current link audit has zero findings,batch_fix_links
+P2,mirrored_page_link_technical,/blog/cnc-machining-aerospace,resolved,T08 current link audit has zero findings,batch_fix_links
+P2,mirrored_page_link_technical,/blog/cnc-machining-fillets,resolved,T08 current link audit has zero findings,batch_fix_links
+P2,mirrored_page_link_technical,/blog/cnc-machining-for-semiconductor-industry,resolved,T08 current link audit has zero findings,batch_fix_links
+P2,mirrored_page_link_technical,/blog/cnc-machining-materials,resolved,T08 current link audit has zero findings,batch_fix_links
+P2,mirrored_page_link_technical,/blog/cnc-turning-and-milling,resolved,T08 current link audit has zero findings,batch_fix_links
+P2,mirrored_page_link_technical,/blog/cnc-turning-and-milling-materials,resolved,T08 current link audit has zero findings,batch_fix_links
+P2,mirrored_page_link_technical,/blog/cnc-vs-rapid-prototyping,resolved,T08 current link audit has zero findings,batch_fix_links
+P2,mirrored_page_link_technical,/blog/connector-machining,resolved,T08 current link audit has zero findings,batch_fix_links
+P2,mirrored_page_link_technical,/blog/fr4-cnc-machining,resolved,T08 current link audit has zero findings,batch_fix_links
+P2,mirrored_page_link_technical,/blog/oil-and-gas-machining,resolved,T08 current link audit has zero findings,batch_fix_links
+P2,mirrored_page_link_technical,/blog/precision-medical-machining,resolved,T08 current link audit has zero findings,batch_fix_links
+P2,mirrored_page_link_technical,/blog/sheet-metal-laser-cutter,resolved,T08 current link audit has zero findings,batch_fix_links
+P2,mirrored_page_link_technical,/blog/swiss-machining-materials,resolved,T08 current link audit has zero findings,batch_fix_links
+P2,mirrored_page_link_technical,/blog/what-is-a-cnc-lathe,resolved,T08 current link audit has zero findings,batch_fix_links
+P2,mirrored_page_link_technical,/custom-cnc-parts,resolved,T08 current link audit has zero findings,batch_fix_links
+P2,mirrored_page_link_technical,/industries/semiconductor,resolved,T08 current link audit has zero findings,batch_fix_links
+P2,mirrored_page_link_technical,/services/swiss-machining,resolved,T08 current link audit has zero findings,batch_fix_links
+P3,external_or_reference_url,/10.1016/j.promfg.2016.08.093,external_reference_ok,no mistaken root-relative href/src references found in local HTML,defer_or_fix_source_link
+P3,external_or_reference_url,/article/10.1007/s11633-019-1190-y,external_reference_ok,no mistaken root-relative href/src references found in local HTML,defer_or_fix_source_link
+P3,external_or_reference_url,/article/10.1007/s12541-025-01318-2,external_reference_ok,no mistaken root-relative href/src references found in local HTML,defer_or_fix_source_link
+P3,external_or_reference_url,/article/10.1007/s40436-020-00323-0,external_reference_ok,no mistaken root-relative href/src references found in local HTML,defer_or_fix_source_link
+P3,external_or_reference_url,/articles/a-history-of-precision-the-invention-and-evolution-of-swiss-style-machining-,external_reference_ok,no mistaken root-relative href/src references found in local HTML,defer_or_fix_source_link
+P3,external_or_reference_url,/articles/understanding-swiss-type-machining,external_reference_ok,no mistaken root-relative href/src references found in local HTML,defer_or_fix_source_link
+P3,external_or_reference_url,/bitstream/handle/1721.1/69013/Kinematic%20coupling%20review%20article.pdf,external_reference_ok,no mistaken root-relative href/src references found in local HTML,defer_or_fix_source_link
+P3,external_or_reference_url,/cgi/viewcontent.cgi,external_reference_ok,no mistaken root-relative href/src references found in local HTML,defer_or_fix_source_link
+P3,external_or_reference_url,/codes-standards/find-codes-standards/y14-5-geometric-dimensioning-tolerancing,external_reference_ok,no mistaken root-relative href/src references found in local HTML,defer_or_fix_source_link
+P3,external_or_reference_url,/context/mesp/article/1687/viewcontent/F12_FDR.pdf,external_reference_ok,no mistaken root-relative href/src references found in local HTML,defer_or_fix_source_link
+P3,external_or_reference_url,/d2000-18.html,external_reference_ok,no mistaken root-relative href/src references found in local HTML,defer_or_fix_source_link
+P3,external_or_reference_url,/e0018-20.html,external_reference_ok,no mistaken root-relative href/src references found in local HTML,defer_or_fix_source_link
+P3,external_or_reference_url,/journal/journal-of-manufacturing-processes,external_reference_ok,no mistaken root-relative href/src references found in local HTML,defer_or_fix_source_link
+P3,external_or_reference_url,/machinery-s-handbook-31st-edition-large-print,external_reference_ok,no mistaken root-relative href/src references found in local HTML,defer_or_fix_source_link
+P3,external_or_reference_url,/manufacturingscience/article/146/4/041004/1195163,external_reference_ok,no mistaken root-relative href/src references found in local HTML,defer_or_fix_source_link
+P3,external_or_reference_url,/products/codes-standards/y145-2018-dimensioning-and-tolerancing,external_reference_ok,no mistaken root-relative href/src references found in local HTML,defer_or_fix_source_link
+P3,external_or_reference_url,/report/aerospace-cnc-machining-market,external_reference_ok,no mistaken root-relative href/src references found in local HTML,defer_or_fix_source_link
+P3,external_or_reference_url,/science/article/abs/pii/S0007850612002077,external_reference_ok,no mistaken root-relative href/src references found in local HTML,defer_or_fix_source_link
+P3,external_or_reference_url,/science/article/pii/S0924013696000301,external_reference_ok,no mistaken root-relative href/src references found in local HTML,defer_or_fix_source_link
+P3,external_or_reference_url,/science/article/pii/S145239812400483X,external_reference_ok,no mistaken root-relative href/src references found in local HTML,defer_or_fix_source_link
+P3,external_or_reference_url,/science/article/pii/S221282712200717X/pdf,external_reference_ok,no mistaken root-relative href/src references found in local HTML,defer_or_fix_source_link
+P3,external_or_reference_url,/sites/fra.dot.gov/files/fra_net/15067/Roller_Bearing_Failure.pdf,external_reference_ok,no mistaken root-relative href/src references found in local HTML,defer_or_fix_source_link
+P3,external_or_reference_url,/sme-blog/posts/inflection-point-2026-marks-a-transformative-era,external_reference_ok,no mistaken root-relative href/src references found in local HTML,defer_or_fix_source_link
+P3,external_or_reference_url,/smemedia/white-papers-and-reports,external_reference_ok,no mistaken root-relative href/src references found in local HTML,defer_or_fix_source_link
+P3,external_or_reference_url,/standard/38007.html,external_reference_ok,no mistaken root-relative href/src references found in local HTML,defer_or_fix_source_link
+P3,external_or_reference_url,/technologies/manufacturing-processes/cnc-turning,external_reference_ok,no mistaken root-relative href/src references found in local HTML,defer_or_fix_source_link
+P3,external_or_reference_url,/wp-content/uploads/2019/02/195-IJSES-V3N1.pdf,external_reference_ok,no mistaken root-relative href/src references found in local HTML,defer_or_fix_source_link
+P3,external_or_reference_url,/xpl/RecentIssue.jsp,external_reference_ok,no mistaken root-relative href/src references found in local HTML,defer_or_fix_source_link

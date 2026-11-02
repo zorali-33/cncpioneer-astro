@@ -1,0 +1,573 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import QuoteCta from "../../components/native/QuoteCta.astro";
+
+const seo = {
+  title: "FAQs | CNCPioneer",
+  description: "Find answers about CNC drawings, material specifications, order quantities, finishing, inspection, and quotations for Swiss machining and mill-turn components.",
+  canonical: "/resources/faqs",
+  includeDescription: true,
+  includeOgImage: false,
+  modifiedTime: "2025-12-28T08:45:51+00:00",
+  twitterLabel1: "Est. reading time",
+  twitterData1: "6 minutes",
+};
+
+const faqGroups = [
+  {
+    id: "swiss",
+    tabId: "faq-tab-swiss",
+    panelId: "faq-panel-swiss",
+    label: "Swiss Machining",
+    items: [
+      {
+        question: "When should I consider Swiss machining?",
+        answer: [
+          "Swiss machining is an option for small turned components such as pins, slender shafts and threaded fittings. Send your drawing so we can review the geometry, material, critical features and inspection requirements for your project.",
+        ],
+      },
+      {
+        question: "What is the typical cost of parts machined by CNCPioneer Swiss-type lathes?",
+        answer: [
+          "Pricing depends on the drawing, material grade, quantity, tolerances, surface finish and inspection needs. Include these details with your enquiry. The quotation should identify the production scope and any applicable setup, tooling or secondary-operation charges before you order.",
+        ],
+      },
+      {
+        question: "How does the quotation process work?",
+        answer: [
+          "Send your drawing and project requirements through the enquiry form or email info@cncpioneer.com. Include material grade, quantity, drawing revision, critical tolerances, finish and inspection requirements. We review the information, clarify open points and prepare a quotation for the agreed scope.",
+        ],
+      },
+      {
+        question: "What materials does CNCPioneer offer for Swiss-type lathe machining?",
+        answer: [
+          "Specify the exact material grade and condition required by your drawing. Stainless steel, aluminum, brass, copper and engineering plastics can be discussed for suitable components. Availability, stock form, machining suitability and any material documentation are confirmed during the quotation review.",
+        ],
+      },
+      {
+        question: "What are the machining capabilities of CNCPioneer Swiss-type lathes? What are the minimum and maximum dimensions?",
+        answer: [
+          "Share the part diameter, overall length, internal features and critical dimensions rather than relying on a general size limit. We review the drawing to determine the machining route, workholding, tool access and inspection approach. Feasible dimensions and tolerances are confirmed for the individual part.",
+        ],
+      },
+    ],
+  },
+  {
+    id: "turning",
+    tabId: "faq-tab-turning",
+    panelId: "faq-panel-turning",
+    label: "CNC Turning and Milling",
+    items: [
+      {
+        question: "What affects production lead time for turned and milled parts?",
+        answer: [
+          "Lead time depends on material availability, part geometry, order quantity, secondary operations, inspection and the agreed production schedule. Tell us your target delivery date with the enquiry. The quotation and order confirmation should state the delivery plan for your project.",
+        ],
+      },
+      {
+        question: "How is the machining process selected for my part?",
+        answer: [
+          "The drawing determines the process. Cylindrical surfaces, flats, slots, bores and cross-holes are reviewed along with the material, datums and acceptance requirements. We clarify which machining and finishing operations are included in the quotation before production.",
+        ],
+      },
+      {
+        question: "What materials does CNCPioneer offer for machining?",
+        answer: [
+          "Review the material pages for options, then specify the required grade, condition and any certification on your enquiry. Suitability and stock availability are confirmed for the part. If you plan to supply your own material, discuss its condition, dimensions and documentation before arranging shipment.",
+        ],
+      },
+      {
+        question: "What are CNCPioneer's machining capabilities? What are the minimum and maximum sizes offered?",
+        answer: [
+          "Send a dimensioned drawing showing the overall size, critical features, datums, threads and surface finish. We assess machining access, workholding and inspection requirements. The quotation confirms the achievable scope for your component rather than promising a general tolerance or size range for every part.",
+        ],
+      },
+    ],
+  },
+];
+
+const faqJsonLd = faqGroups.map((group) => ({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: group.items.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.answer.map((paragraph) => `<p>${paragraph}</p>`).join(""),
+    },
+  })),
+}));
+---
+
+<BaseLayout seo={seo}>
+  <Fragment slot="head">
+    <link rel="preload" as="image" href="/wp-content/uploads/2025/12/faqs-banners.jpg" fetchpriority="high" />
+    {faqJsonLd.map((json) => <script type="application/ld+json" set:html={JSON.stringify(json)} />)}
+  </Fragment>
+
+  <div class="faqs-page">
+    <section class="faq-hero" aria-labelledby="faq-title">
+      <div class="faq-hero__inner">
+        <h1 id="faq-title">FAQ</h1>
+        <p>We’re here to answer these common questions for you, helping you choose the right process and efficiently achieve high-precision part production!</p>
+      </div>
+    </section>
+
+    <section class="faq-tabs-section" aria-label="CNC machining FAQs">
+      <div class="faq-tabs" data-faq-tabs>
+        {
+          faqGroups.map((group, index) => (
+            <>
+              <button
+                id={group.tabId}
+                class:list={["faq-tab", index === 0 && "is-active"]}
+                type="button"
+                role="tab"
+                aria-selected={index === 0 ? "true" : "false"}
+                aria-controls={group.panelId}
+                data-tab={group.id}
+              >
+                {group.label}
+              </button>
+              <div
+                id={group.panelId}
+                class:list={["faq-panel", index === 0 && "is-active"]}
+                role="tabpanel"
+                aria-labelledby={group.tabId}
+                data-panel={group.id}
+                hidden={index !== 0}
+              >
+                <div class="faq-accordion" data-accordion>
+                  {
+                    group.items.map((item, itemIndex) => {
+                      const contentId = `${group.id}-answer-${itemIndex + 1}`;
+                      return (
+                        <article class="faq-item">
+                          <button class="faq-question" type="button" aria-expanded="false" aria-controls={contentId}>
+                            <span>{item.question}</span>
+                            <span class="faq-icon" aria-hidden="true" />
+                          </button>
+                          <div id={contentId} class="faq-answer" hidden>
+                            {item.answer.map((paragraph) => (
+                              <p>{paragraph}</p>
+                            ))}
+                          </div>
+                        </article>
+                      );
+                    })
+                  }
+                </div>
+              </div>
+            </>
+          ))
+        }
+      </div>
+    </section>
+
+    <QuoteCta id="faq-quote" idPrefix="faq-quote-form" formName="FAQ Project Enquiry" kicker="STILL HAVE QUESTIONS?" title="Discuss your next CNC project" description="Send your drawing or question and tell us what material, quantity and inspection scope you have in mind." />
+  </div>
+</BaseLayout>
+
+<style>
+  .faqs-page {
+    background: var(--color-white);
+  }
+
+  .faq-hero {
+    position: relative;
+    min-height: 256px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("/wp-content/uploads/2025/12/faqs-banners.jpg");
+    background-position: left top;
+    background-size: auto;
+    background-repeat: no-repeat;
+  }
+
+  .faq-hero::before {
+    position: absolute;
+    inset: 0;
+    content: "";
+    background: rgb(var(--color-brand-rgb)/0.5);
+  }
+
+  .faq-hero__inner {
+    position: relative;
+    z-index: 1;
+    width: min(var(--layout-shell), 100%);
+    min-height: 236px;
+    margin: 0 auto;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .faq-hero h1 {
+    margin: 50px 0 20px;
+    color: var(--color-white);
+    font-family: var(--font-sans);
+    font-size: var(--type-h1);
+    font-weight: 700;
+    line-height: 1.12;
+  }
+
+  .faq-hero p {
+    margin: 0 auto;
+    color: var(--color-white);
+    font-family: var(--font-sans);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  .faq-tabs-section {
+    margin: 80px 0 70px;
+  }
+
+  .faq-tabs {
+    display: grid;
+    grid-template-columns: 186px 244px;
+    justify-content: center;
+    gap: 0 10px;
+    padding-bottom: 20px;
+  }
+
+  .faq-tab {
+    grid-row: 1;
+    min-height: 54px;
+    padding: 10px 24px;
+    border: 0;
+    background: var(--color-brand);
+    color: var(--color-body);
+    font-family: var(--font-sans);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.2;
+    cursor: pointer;
+  }
+
+  .faq-tab.is-active,
+  .faq-tab:hover,
+  .faq-tab:focus-visible {
+    background: var(--color-hover);
+    color: var(--color-white);
+  }
+
+  .faq-panel {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    width: min(var(--layout-shell), calc(100vw - 40px));
+    margin-top: 30px;
+    justify-self: center;
+    background: var(--color-surface);
+    padding: 57px 0;
+  }
+
+  .faq-panel[hidden] {
+    display: none;
+  }
+
+  .faq-accordion {
+    width: 100%;
+    border-top: 3px solid var(--color-border);
+  }
+
+  .faq-item + .faq-item {
+    margin-top: 16px;
+  }
+
+  .faq-item:last-child {
+    margin-bottom: 16px;
+  }
+
+  .faq-question {
+    position: relative;
+    display: flex;
+    width: 100%;
+    min-height: 0;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 36.5px 0;
+    border: 0;
+    border-bottom: 1px solid var(--color-border);
+    background: transparent;
+    color: var(--color-body);
+    text-align: left;
+    font-family: var(--font-sans);
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.45px;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  .faq-question span:first-child {
+    flex: 0 1 auto;
+    font-family: var(--font-sans);
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  .faq-icon {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    flex: 0 0 24px;
+    width: 24px;
+    height: 24px;
+    transform: translateY(-50%);
+  }
+
+  .faq-icon::before,
+  .faq-icon::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    content: "";
+    background: var(--color-body);
+    transform: translate(-50%, -50%);
+  }
+
+  .faq-icon::before {
+    width: 24px;
+    height: 5px;
+  }
+
+  .faq-icon::after {
+    width: 5px;
+    height: 24px;
+  }
+
+  .faq-question[aria-expanded="true"] .faq-icon::after {
+    display: none;
+  }
+
+  .faq-answer {
+    border-bottom: 1px solid var(--color-border);
+    padding: 0 0 24px;
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+
+  .faq-answer p {
+    margin: 0 0 16px;
+  }
+
+  .faq-answer p:last-child {
+    margin-bottom: 0;
+  }
+
+  .faq-answer[hidden] {
+    display: none;
+  }
+
+  .faq-cta {
+    min-height: 343px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    gap: 30px;
+    padding: 0;
+    background: var(--color-brand);
+    text-align: center;
+  }
+
+  .faq-cta p {
+    margin: 0;
+    color: var(--color-white);
+    font-family: var(--font-sans);
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 26px;
+  }
+
+  .faq-cta h2 {
+    margin: 0;
+    color: var(--color-white);
+    font-family: var(--font-sans);
+    font-size: var(--type-h2);
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+
+  .faq-cta__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    min-height: 40px;
+    padding: 12px 24px;
+    border-radius: 3px;
+    background: var(--color-brand);
+    color: var(--color-white);
+    font-family: var(--font-sans);
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+  }
+
+  .faq-cta__button:hover,
+  .faq-cta__button:focus-visible {
+    color: var(--color-white);
+  }
+
+  @media (max-width: 1024px) {
+    .faq-panel {
+      padding: 57px 0;
+    }
+
+    .faq-question {
+      font-size: 26px;
+    }
+
+    .faq-question span:first-child {
+      font-size: 26px;
+    }
+
+    .faq-cta {
+      min-height: 421px;
+    }
+
+    .faq-cta p {
+      font-size: 24px;
+    }
+
+    .faq-cta h2 {
+      font-size: var(--type-h2);
+      line-height: 1.2;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .faq-hero__inner {
+      padding: 10px 0;
+    }
+
+    .faq-hero h1 {
+      font-size: var(--type-h1);
+    }
+
+    .faq-hero p {
+      padding: 0 4px;
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    .faq-tabs-section {
+      margin: 80px 0 70px;
+    }
+
+    .faq-tabs {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+      padding-bottom: 20px;
+    }
+
+    .faq-tab,
+    .faq-tab:nth-of-type(2) {
+      width: 100%;
+      min-width: 0;
+    }
+
+    .faq-panel {
+      width: 100%;
+      margin-top: 30px;
+      padding: 78px 0;
+    }
+
+    .faq-accordion {
+      border-top-width: 3px;
+      padding-bottom: 16px;
+    }
+
+    .faq-item + .faq-item {
+      margin-top: 16px;
+    }
+
+    .faq-question {
+      min-height: 0;
+      padding: 38px 0;
+      gap: 12px;
+      font-size: 28px;
+      line-height: 28px;
+      letter-spacing: -0.45px;
+    }
+
+    .faq-question span:first-child {
+      font-size: 20px;
+      line-height: 28px;
+    }
+
+    .faq-icon {
+      right: 8px;
+    }
+
+    .faq-answer {
+      padding: 0 10px 22px;
+      font-size: 16px;
+    }
+
+    .faq-cta {
+      min-height: 327px;
+      gap: 13px;
+    }
+
+    .faq-cta p {
+      font-size: 16px;
+    }
+
+    .faq-cta h2 {
+      font-size: var(--type-h2);
+      line-height: 1.2;
+    }
+  }
+</style>
+
+<script>
+  const root = document.querySelector("[data-faq-tabs]");
+
+  if (root) {
+    const tabs = Array.from(root.querySelectorAll("[data-tab]"));
+    const panels = Array.from(root.querySelectorAll("[data-panel]"));
+
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        const selected = tab.getAttribute("data-tab");
+        tabs.forEach((item) => {
+          const isActive = item === tab;
+          item.classList.toggle("is-active", isActive);
+          item.setAttribute("aria-selected", String(isActive));
+        });
+        panels.forEach((panel) => {
+          const isActive = panel.getAttribute("data-panel") === selected;
+          panel.classList.toggle("is-active", isActive);
+          panel.hidden = !isActive;
+        });
+      });
+    });
+
+    root.querySelectorAll(".faq-question").forEach((button) => {
+      button.addEventListener("click", () => {
+        const content = document.getElementById(button.getAttribute("aria-controls") || "");
+        const expanded = button.getAttribute("aria-expanded") === "true";
+        button.setAttribute("aria-expanded", String(!expanded));
+        if (content) {
+          content.hidden = expanded;
+        }
+      });
+    });
+  }
+</script>

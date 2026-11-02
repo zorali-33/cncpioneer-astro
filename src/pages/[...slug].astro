@@ -1,0 +1,63 @@
+---
+import { withHeaderControls } from "../mirror-html.mjs";
+import { getNativeBlogRoutes } from "../blog-detail-native.mjs";
+import manifest from "../mirrored-pages/manifest.json";
+import { nativeMaterials } from "../data/nativeMaterials.mjs";
+import { nativeIndustries } from "../data/nativeIndustries.mjs";
+import { nativeParts } from "../data/nativeParts.mjs";
+import { isRetiredMaterial } from "../data/materialRedirects.mjs";
+import { isRetiredIndustry } from "../data/industryRedirects.mjs";
+import { isConsolidatedRoute } from "../data/blogConsolidation.mjs";
+import { isRetiredProduct } from "../data/productRedirects.mjs";
+import { isRetiredService } from "../data/serviceRedirects.mjs";
+import { isRemovedProductRoute } from "../data/productRemovals.mjs";
+import { isRemovedBlogRoute } from "../data/blogRemovals.mjs";
+import { isRetiredPagePath } from "../data/siteUrls.mjs";
+
+const pages = import.meta.glob("../mirrored-pages/**/*.html", {
+  query: "?raw",
+  import: "default",
+  eager: true,
+});
+
+export function getStaticPaths() {
+  const blogPages = import.meta.glob("../mirrored-pages/blog/*/index.html", {
+    query: "?raw",
+    import: "default",
+    eager: true,
+  });
+  const nativeRoutes = new Set([
+    "blog",
+    "author/ryan-wang",
+    "author/david-li",
+    "blog/5-axis-cnc-machining-manufacturers-in-china",
+    "cnc-machining-quote",
+    "resources",
+    "resources/faqs",
+    "industries",
+    "services/cnc-turning-and-milling",
+  ]);
+  // Native pages own their URLs; do not also emit them from the legacy mirror.
+  for (const file of Object.keys(import.meta.glob("./**/*.astro"))) {
+    if (!file.includes("[")) nativeRoutes.add(file.replace(/^\.\//, "").replace(/\.astro$/, "").replace(/(?:^|\/)index$/, ""));
+  }
+  for (const [prefix, entries] of [["materials", nativeMaterials], ["industries", nativeIndustries], ["custom-cnc-parts", nativeParts]]) {
+    for (const page of entries) nativeRoutes.add(`${prefix}/${page.slug}`);
+  }
+  for (const route of getNativeBlogRoutes(blogPages)) nativeRoutes.add(route);
+  return manifest.filter((page) => !nativeRoutes.has(page.slug) && !isRetiredPagePath('/' + page.slug) && !isRetiredIndustry(page.slug) && !isRetiredMaterial(page.slug) && !isConsolidatedRoute(page.slug) && !isRetiredProduct(page.slug) && !isRetiredService(page.slug) && !isRemovedBlogRoute(page.slug) && !isRemovedProductRoute(page.slug)).map((page) => ({
+    params: { slug: page.slug },
+    props: { file: page.file },
+  }));
+}
+
+const { file } = Astro.props;
+const html = pages[`../mirrored-pages/${file}`];
+
+if (typeof html !== "string") {
+  throw new Error(`Missing mirrored page: ${file}`);
+}
+
+const renderedHtml = file === "industries/semiconductor/index.html" ? html : withHeaderControls(html);
+---
+<Fragment set:html={renderedHtml} />

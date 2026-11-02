@@ -1,0 +1,113 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CompactQuoteForm from '../../components/native/CompactQuoteForm.astro';
+import {swissSeo,swissParts,swissPlanningRanges,swissCapabilities,swissMaterials,swissPlastics,swissFinishes,swissProcess,swissFaqs} from '../../data/swissServiceContent.mjs';
+import '../../styles/swiss-service.css';
+const quote='#swiss-quote';
+const img='/assets/images/';
+// Actual equipment photographs extracted from the owner-supplied Richconn
+// company profile: manufacturing equipment on p.8 and CMM on p.19.
+const equipment=[
+  {label:'SWISS-TYPE MACHINING',title:'Citizen Cincom Swiss Lathe',image:'citizen-cincom-swiss-type-cnc-lathe-factory.webp',width:960,height:720,alt:'Citizen Cincom Swiss-type CNC lathe with bar feeder in the factory',text:'Sliding-headstock machining for precision pins, shafts and other bar-stock components.'},
+  {label:'SUPPORTING PRODUCTION',title:'Automatic Lathes',image:'automatic-lathe-production-workshop.webp',width:960,height:720,alt:'Rows of automatic lathes in the manufacturing workshop',text:'Supporting equipment for repeat production of turned components.'},
+  {label:'DIMENSIONAL INSPECTION',title:'CMM Inspection',image:'cmm-dimensional-inspection-equipment.webp',width:575,height:413,alt:'Coordinate measuring machine with probe and measurement table in the inspection room',text:'Checking dimensions, datums and specified geometric requirements.'},
+];
+---
+<BaseLayout seo={swissSeo}>
+  <div class="sw-service">
+    <section class="sw-hero service-hero" aria-labelledby="sw-title">
+      <div class="sw-shell">
+        <nav class="sw-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/services">Services</a><span aria-hidden="true">/</span><span aria-current="page">Swiss CNC Machining</span></nav>
+        <div class="sw-hero-grid">
+          <div class="sw-hero-copy">
+            <p class="sw-kicker">PRECISION SWISS TURNING</p>
+            <h1 id="sw-title">Swiss CNC<br /> Machining Services</h1>
+            <p class="sw-hero-description">Custom pins, shafts, terminals and threaded components made to your drawings. From samples to repeat production, we bring together Swiss machining, surface finishing and dimensional inspection.</p>
+            <div class="sw-actions"><a class="sw-button" href={quote}>Request a Quote <span aria-hidden="true">↗</span></a><a class="sw-link" href="#swiss-parts">Explore Part Examples <span aria-hidden="true">↓</span></a></div>
+            <ul class="sw-hero-benefits"><li>Metals & plastics</li><li>Surface finishing</li><li>Samples & batch production</li><li>Dimensional inspection</li></ul>
+          </div>
+          <figure class="sw-hero-media sw-hero-products"><img src={`${img}swiss-cnc-turned-pins-shafts-terminals-transparent.webp`} width="960" height="640" alt="Representative Swiss-turned steel shafts, brass contact pins, threaded adapter, sleeve and plunger on a transparent background" fetchpriority="high" /></figure>
+        </div>
+      </div>
+    </section>
+
+    <nav class="sw-section-nav" aria-label="On this page"><div class="sw-shell"><a href="#swiss-capabilities">Capabilities</a><a href="#swiss-parts">Part Examples</a><a href="#swiss-materials">Materials & Finishing</a><a href="#swiss-quality">Equipment & Quality</a><a href="#swiss-faq">FAQ</a></div></nav>
+
+    <section class="sw-section sw-shell" id="swiss-capabilities" aria-labelledby="sw-cap-title">
+      <div class="sw-heading sw-cap-heading"><div><p class="sw-kicker">01 / PROCESS CAPABILITIES</p><h2 id="sw-cap-title">Swiss Machining Capabilities</h2></div><p>Start with the planning ranges below, then send your drawing for a part-specific machining review.</p></div>
+      <div class="sw-planning" aria-labelledby="sw-planning-title">
+        <h3 id="sw-planning-title">Typical Planning Ranges</h3>
+        <dl class="sw-range-grid">{swissPlanningRanges.map(range=><div><dt class="parameter-label">{range.label}</dt><dd><span class="sw-range-value">{range.value}</span><span class="sw-range-unit">{range.unit}</span><p class="caption">{range.note}</p></dd></div>)}</dl>
+        <p class="caption sw-range-note">Typical industry reference ranges, not confirmed equipment limits. Final capacity, tolerances and finish depend on your material, part geometry and machine setup, and are confirmed in the quotation.</p>
+      </div>
+      <div class="sw-cap-panel">
+        <table class="sw-cap-table"><caption class="sw-sr-only">Swiss machining operations and typical part features</caption><thead><tr><th scope="col">Operation</th><th scope="col">Typical Features</th></tr></thead><tbody>{swissCapabilities.map(([name,features])=><tr><th scope="row">{name}</th><td data-label="Typical Features">{features}</td></tr>)}</tbody></table>
+        <dl class="sw-cap-notes"><div><dt>Production Quantities</dt><dd>Samples, trial batches and repeat production. Include initial quantity and annual demand in your enquiry.</dd></div><div><dt>Drawing Review</dt><dd>Specify critical fits, datums, threads and finish requirements, including dimensions after plating.</dd></div></dl>
+      </div>
+      <div class="sw-cap-footer"><a class="sw-link" href={quote}>Discuss Your Part <span aria-hidden="true">↗</span></a></div>
+    </section>
+
+    <section class="sw-section sw-surface" id="swiss-parts" aria-labelledby="sw-parts-title"><div class="sw-shell">
+      <div class="sw-heading sw-parts-heading"><div><p class="sw-kicker">02 / PART FAMILIES</p><h2 id="sw-parts-title">Swiss Machined Parts</h2></div><p>Precision contacts, shafts and threaded components. Explore the part family that fits your project.</p></div>
+      <div class="sw-parts-grid">
+        {swissParts.map((part,index)=><article class="sw-part">
+          <a class="sw-part-link" href={part.href} aria-labelledby={`sw-part-title-${index}`}>
+            <div class="sw-part-image"><img src={`${img}${part.image}`} width="600" height="600" loading="lazy" alt={part.alt} /></div>
+            <div class="sw-part-copy"><div class="sw-part-meta"><span class="step-number">0{index+1}</span><span class="sw-part-arrow" aria-hidden="true">↗</span></div><h3 id={`sw-part-title-${index}`}>{part.name}</h3><p class="body-small">{part.text}</p></div>
+          </a>
+        </article>)}
+      </div>
+    </div></section>
+
+    <section class="sw-principle" id="swiss-machining-options" aria-labelledby="sw-principle-title"><div class="sw-shell sw-principle-grid">
+      <div><p class="sw-kicker">THE SWISS MACHINING PRINCIPLE</p><h2 id="sw-principle-title">Why Choose<br /> Swiss Machining?</h2><p>A guide bushing supports the bar close to the cutting tool, helping reduce deflection on slender sections. Suitable tooling can combine turning, drilling and milling to reduce separate setups.</p><a class="sw-link" href={quote}>Review Your Part Geometry <span aria-hidden="true">↗</span></a></div>
+      <figure class="sw-principle-media"><img src={`${img}swiss-lathe-guide-bushing-turning-close-up.webp`} width="960" height="640" loading="lazy" alt="Illustration of one Swiss lathe setup with a guide bushing supporting a stepped steel shaft near a turning tool" /><figcaption>AI-generated process illustration: guide-bushing support near the cutting point.</figcaption></figure>
+    </div></section>
+
+    <section class="sw-section sw-surface" id="swiss-materials" aria-labelledby="sw-mat-title"><div class="sw-shell">
+      <div class="sw-heading"><div><p class="sw-kicker">03 / MATERIALS & SURFACE FINISHING</p><h2 id="sw-mat-title">Materials &amp;<br /> Surface Finishing</h2></div><p>Choose a material grade and finish for your application. Stock availability and coating allowances are checked before production.</p></div>
+      <div class="sw-material-layout"><div class="sw-material-panel" data-sw-materials><div class="sw-tabs" role="tablist" aria-label="Material groups"><button id="sw-metal-tab" type="button" role="tab" aria-selected="true" aria-controls="sw-metal-panel" tabindex="0">Metals <span>07</span></button><button id="sw-plastic-tab" type="button" role="tab" aria-selected="false" aria-controls="sw-plastic-panel" tabindex="-1">Engineering Plastics <span>02</span></button></div>
+        {[{id:'metal',items:swissMaterials},{id:'plastic',items:swissPlastics}].map((group,index)=><div role="tabpanel" id={`sw-${group.id}-panel`} aria-labelledby={`sw-${group.id}-tab`} tabindex="0" hidden={index!==0}><table class="sw-material-table"><caption class="sw-sr-only">{index===0?'Metal':'Engineering plastic'} options for Swiss machining</caption><thead><tr><th scope="col">Material</th><th scope="col">Grades / Specification</th></tr></thead><tbody>{group.items.map(item=><tr><th scope="row">{item.href?<a href={item.href}>{item.name} <span aria-hidden="true">↗</span></a>:item.name}</th><td>{item.grades}</td></tr>)}</tbody></table></div>)}
+        <p class="caption sw-material-footnote">Grade availability and bar-stock suitability are reviewed for each part.</p></div>
+      <div class="sw-finishing"><p class="sw-kicker">SURFACE TREATMENT</p><h3>Finishing Options</h3><div class="sw-finish-list">{swissFinishes.map(([name,text])=><details><summary>{name}<span aria-hidden="true">+</span></summary><p>{text}</p></details>)}</div><p class="caption">Coating thickness, masked areas and final acceptance dimensions belong on the drawing.</p></div></div>
+    </div></section>
+
+    <section class="sw-section sw-shell" id="swiss-quality" aria-labelledby="sw-quality-title"><div class="sw-heading sw-equipment-heading"><div><p class="sw-kicker">04 / EQUIPMENT & QUALITY CONTROL</p><h2 id="sw-quality-title">Equipment &amp; Quality Control</h2></div><p>Our process combines Swiss-type machining, dimensional inspection and sample approval before batch production.</p></div>
+      <div class="sw-equipment-panel">
+        <div class="sw-equipment-layout">
+          <figure class="sw-equipment-feature"><img src={`${img}${equipment[0].image}`} width={equipment[0].width} height={equipment[0].height} alt={equipment[0].alt} loading="lazy" /><figcaption><div><p class="sw-kicker">{equipment[0].label}</p><h3>{equipment[0].title}</h3></div><span class="step-number" aria-hidden="true">01</span></figcaption></figure>
+          <div class="sw-equipment-support">
+            {equipment.slice(1).map(machine=><article class="sw-equipment-item"><figure><img src={`${img}${machine.image}`} width={machine.width} height={machine.height} alt={machine.alt} loading="lazy" /></figure><div><p class="sw-kicker">{machine.label}</p><h3>{machine.title}</h3><p class="body-small">{machine.text}</p></div></article>)}
+            <div class="sw-equipment-checks"><span class="sw-kicker">PRODUCTION CHECKS</span><ul><li>Sample approval</li><li>In-process checks</li><li>Final inspection</li></ul></div>
+          </div>
+        </div>
+        <a class="sw-equipment-download" href="/assets/documents/cncpioneer-swiss-type-cnc-lathe-machines-list.pdf" download><span class="sw-equipment-file" aria-hidden="true"><svg viewBox="0 0 24 28" width="24" height="28" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 1h10l6 6v20H4zM14 1v7h6M8 14h8M8 18h8M8 22h5"/></svg></span><span><strong>Equipment & Inspection List</strong><span class="caption">Swiss machining · PDF</span></span><span class="sw-equipment-download-action">Download List <span aria-hidden="true">↓</span></span></a>
+      </div>
+    </section>
+
+    <section class="sw-applications sw-surface" aria-labelledby="sw-app-title"><div class="sw-shell"><div class="sw-heading"><div><p class="sw-kicker">05 / APPLICATIONS</p><h2 id="sw-app-title">Applications Across Industries</h2></div><p>Components for automotive connections, electronic contacts and communication equipment.</p></div><div class="sw-app-grid"><article><span class="sw-kicker">01 / APPLICATION</span><h3>Automotive &amp; EV</h3><p>Connector terminals, charging contacts and sensor components with defined mating features.</p><a class="sw-link" href="/industries/automotive">Explore Automotive Machining <span aria-hidden="true">↗</span></a></article><article><span class="sw-kicker">02 / APPLICATION</span><h3>Electronics &amp; Interconnect</h3><p>Contact pins, POGO pin components and miniature turned parts for electronic connections.</p><a class="sw-link" href="/industries/consumer-electronics">Explore Electronics Machining <span aria-hidden="true">↗</span></a></article><article><span class="sw-kicker">03 / APPLICATION</span><h3>Communication Equipment</h3><p>Connector bodies and turned communication components with controlled interface geometry.</p><a class="sw-link" href="/custom-cnc-parts/rf-connectors">Explore RF Connectors <span aria-hidden="true">↗</span></a></article></div></div></section>
+
+    <section class="sw-section sw-shell" aria-labelledby="sw-process-title"><div class="sw-heading"><div><p class="sw-kicker">06 / FROM SAMPLE TO PRODUCTION</p><h2 id="sw-process-title">From Drawing to Delivery</h2></div></div><ol class="sw-process">{swissProcess.map((step,index)=><li><span class="step-number">0{index+1}</span><h3>{step.title}</h3><p>{step.text}</p></li>)}</ol></section>
+
+    <section class="sw-section sw-surface" id="swiss-faq" aria-labelledby="sw-faq-title"><div class="sw-shell sw-faq-grid"><div><p class="sw-kicker">BEFORE YOU SEND THE DRAWING</p><h2 id="sw-faq-title">Swiss Machining<br />FAQ</h2><a class="sw-link" href={quote}>Ask About Your Part <span aria-hidden="true">↗</span></a></div><div class="sw-faq-list">{swissFaqs.map(faq=><details><summary>{faq.question}<span aria-hidden="true">+</span></summary><p>{faq.answer}</p></details>)}</div></div></section>
+
+    <section class="sw-quote" id="swiss-quote" aria-labelledby="sw-quote-title">
+      <div class="sw-shell sw-quote-grid">
+        <div class="sw-quote-copy">
+          <p class="sw-kicker">START YOUR PROJECT</p>
+          <h2 id="sw-quote-title">Request a Swiss<br /> Machining Quote</h2>
+          <p>Tell us what you need and upload your drawing. We’ll review the material, quantity, machining requirements and delivery schedule.</p>
+          <div class="sw-quote-contact"><span class="sw-kicker">PREFER TO EMAIL?</span><a class="sw-link" href="mailto:info@cncpioneer.com">info@cncpioneer.com <span aria-hidden="true">↗</span></a></div>
+        </div>
+        <CompactQuoteForm idPrefix="swiss-quote" formName="Swiss Machining Quote Request" />
+      </div>
+    </section>
+  </div>
+  <script>
+    document.querySelectorAll('[data-sw-materials]').forEach(root=>{
+      const tabs=Array.from(root.querySelectorAll<HTMLButtonElement>('[role="tab"]'));
+      const activate=(tab:HTMLButtonElement)=>{tabs.forEach(item=>{const active=item===tab;item.setAttribute('aria-selected',String(active));item.tabIndex=active?0:-1;const panel=document.getElementById(item.getAttribute('aria-controls')||'');if(panel)panel.hidden=!active;});};
+      tabs.forEach((tab,index)=>{tab.addEventListener('click',()=>activate(tab));tab.addEventListener('keydown',event=>{let next=index;if(event.key==='ArrowRight')next=(index+1)%tabs.length;else if(event.key==='ArrowLeft')next=(index-1+tabs.length)%tabs.length;else if(event.key==='Home')next=0;else if(event.key==='End')next=tabs.length-1;else return;event.preventDefault();activate(tabs[next]);tabs[next].focus();});});
+    });
+  </script>
+</BaseLayout>

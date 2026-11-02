@@ -1,0 +1,5 @@
+event,trigger,success_event,required_signal,enabled
+quote_cta_click,Valid existing quote link click,no,Consent and approved transport,false
+quote_form_start,First meaningful form entry,no,Consent and one binding per form,false
+quote_submit_success,Confirmed accepted enquiry,yes,Real server receipt confirmed=true and unique local id,false
+drawing_upload_success,Completed accepted upload,yes,Real upload receipt confirmed=true and unique local id,false

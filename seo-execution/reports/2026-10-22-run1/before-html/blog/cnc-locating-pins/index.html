@@ -1,0 +1,570 @@
+<!DOCTYPE html><html lang="en-US" class="blog-detail-document"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="profile" href="https://gmpg.org/xfn/11"><meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"><title>CNC Locating Pins: Precision Workholding and Fixture Design</title><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Archivo:wght@100;300;400;600;700;900&family=Merriweather:wght@300;400;700&family=Montserrat:wght@100;300;400;500;600;700;900&family=Poppins:wght@100;300;400;500;600;700;900&family=Roboto+Slab:wght@100;300;400;600;700;900&family=Roboto:wght@100;300;400;500;600;700;900&display=swap" rel="stylesheet"><meta name="description" content="Master CNC locating pins with our guide. Learn round vs diamond pins, 3-2-1 principles, and material specs. Essential for fixture designers."><link rel="canonical" href="https://www.cncpioneer.com/blog/cnc-locating-pins"><link rel="alternate" type="application/rss+xml" title="CNCPioneer &raquo; Feed" href="https://www.cncpioneer.com/feed"><link rel="alternate" type="application/rss+xml" title="CNCPioneer &raquo; Comments Feed" href="https://www.cncpioneer.com/comments/feed"><link rel="alternate" type="application/rss+xml" title="CNCPioneer &amp;raquo; CNC Locating Pins: Precision Workholding and Fixture Design Comments Feed" href="https://www.cncpioneer.com/blog/cnc-locating-pins/feed"><meta property="og:locale" content="en_US"><meta property="og:type" content="article"><meta property="og:title" content="CNC Locating Pins: Precision Workholding and Fixture Design"><meta property="og:description" content="Master CNC locating pins with our guide. Learn round vs diamond pins, 3-2-1 principles, and material specs. Essential for fixture designers."><meta property="og:url" content="https://www.cncpioneer.com/blog/cnc-locating-pins"><meta property="og:site_name" content="CNCPioneer"><meta property="article:published_time" content="2026-04-07T02:43:50+00:00"><meta property="article:modified_time" content="2026-06-18T09:53:28+00:00"><meta property="og:image" content="https://www.cncpioneer.com/wp-content/uploads/2026/04/3-2-1-locating-principle-diagram.webp"><meta property="og:image:width" content="1168"><meta property="og:image:height" content="784"><meta property="og:image:type" content="image/webp"><meta name="author" content="Ryan Wang"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:label1" content="Written by"><meta name="twitter:data1" content="Ryan Wang"><meta name="twitter:label2" content="Est. reading time"><meta name="twitter:data2" content="13 minutes"><link rel="icon" href="/wp-content/uploads/2026/01/cropped-site-icon-32x32.png" sizes="32x32"><link rel="icon" href="/wp-content/uploads/2026/01/cropped-site-icon-192x192.png" sizes="192x192"><link rel="apple-touch-icon" href="/wp-content/uploads/2026/01/cropped-site-icon-180x180.png"><meta name="msapplication-TileImage" content="/wp-content/uploads/2026/01/cropped-site-icon-270x270.png"><link rel="stylesheet" href="/_astro/blog-native.BViWiLMq.css"><link rel="stylesheet" href="/_astro/BlogDetailTemplate.C19ii7Xt.css"><link rel="stylesheet" href="/_astro/SiteSearch.B7woKU6f.css"></head><body class="blog-detail-page wp-singular post-template-default single single-post postid-5865 single-format-standard wp-custom-logo wp-embed-responsive wp-theme-hello-elementor ehf-template-hello-elementor ehf-stylesheet-hello-elementor hello-elementor-default elementor-default elementor-template-canvas elementor-kit-6 elementor-page-2034"><header class="site-header"><div class="topbar"><div class="topbar-inner"><div class="topbar-contact" aria-label="Contact details"><span class="topbar-item"><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"></path></svg>+8613725562746</span><span class="topbar-item"><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"></path></svg>info@cncpioneer.com</span></div><div class="topbar-actions"><button class="icon-button" aria-label="Search"><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M505 442.7 405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path></svg></button></div></div></div><div class="mainnav"><div class="nav-inner"><a class="brand" href="/" aria-label="CNC Pioneer home"><img src="/wp-content/uploads/2025/11/cncpioneer_nav_logo.png" alt="CNC Pioneer" width="160" height="35"></a><input class="menu-state" type="checkbox" id="menu-state" aria-hidden="true"><label class="menu-toggle" for="menu-state" aria-label="Menu Toggle"><span></span><span></span><span></span></label><nav class="primary-nav" aria-label="Menu"><ul><li><a href="/">Home</a></li><li class="has-submenu"><a href="/services">Services<span class="caret" aria-hidden="true"></span></a><ul class="submenu"><li><a href="/services/cnc-turning-and-milling">CNC Turning and Milling</a></li><li><a href="/services/swiss-machining">Swiss Machining</a></li></ul></li><li><a href="/materials">Materials</a></li><li class="has-submenu"><a href="/industries">Industries<span class="caret" aria-hidden="true"></span></a><ul class="submenu"><li><a href="/industries/aerospace">Aerospace</a></li><li><a href="/industries/defense">Defense</a></li><li><a href="/industries/medical">Medical</a></li><li><a href="/industries/semiconductor">Semiconductor</a></li><li><a href="/industries/consumer-electronics">Consumer Electronics</a></li><li><a href="/industries/oil-gas">Oil &amp; Gas</a></li><li><a href="/industries/automotive">Automotive</a></li><li><a href="/industries/railway">Railway</a></li></ul></li><li><a href="/resources">Resources</a></li><li><a href="/about-us">About Us</a></li><li><a href="/cnc-machining-quote">Get A Quote</a></li></ul></nav></div></div></header><main id="content" class="detail-main"><nav class="detail-breadcrumb-bar" aria-label="Breadcrumb"><div class="detail-breadcrumb-inner"><p id="breadcrumbs" class="detail-breadcrumbs"><span><a href="/">Home</a></span> <span aria-hidden="true">&raquo;</span> <span><a href="/blog">Blog</a></span> <span aria-hidden="true">&raquo;</span> <span aria-current="page">CNC Locating Pins: Precision Workholding and Fixture Design</span></p></div></nav><section class="detail-title-hero" aria-labelledby="article-title"><div class="detail-title-inner"><h1 id="article-title">CNC Locating Pins: Precision Workholding and Fixture Design</h1><ul class="post-meta" aria-label="Post information"><li><span>Written by</span> Ryan Wang</li><li><span>Last updated on</span> <time datetime="2026-06-18">2026-06-18</time></li><li><span>Reading time</span> <span>13 minutes</span></li></ul></div></section><section class="detail-shell"><article class="detail-article-column" aria-labelledby="article-title"><div id="main-article-content" class="article-content"><p>Precision manufacturing demands precision positioning. Understanding CNC locating pins is the foundation of repeatable, high-quality machining operations.</p>
+
+
+
+<p>In CNC machining, the difference between a scrap part and a precision component often comes down to one seemingly simple element: the locating pin. These precision-engineered components serve as the backbone of modern workholding systems, ensuring that every workpiece occupies the exact same position—within thousandths of an inch—operation after operation, part after part.</p>
+
+
+
+<p>Whether you&#8217;re designing your first fixture or optimizing a high-volume production line, this comprehensive guide covers everything from fundamental kinematic principles to advanced material selection, helping you make informed decisions that directly impact your manufacturing quality and efficiency.</p>
+
+
+
+<h2 class="wp-block-heading" id="section-1-what-are-cnc-locating-pins"><strong>What Are CNC Locating Pins?</strong> </h2>
+
+
+
+<p>CNC locating pins are precision-machined cylindrical components used to establish accurate, repeatable positioning of workpieces within fixtures, jigs, and tooling systems. Unlike <a class="blog-post-link" href="/blog/fastener-machining" type="page">general-purpose fasteners</a>, locating pins are engineered specifically for dimensional accuracy, typically manufactured to tolerances of ±0.0002 inches or tighter.</p>
+
+
+
+<p>The primary function of locating pins extends beyond simple alignment—they create a deterministic reference frame that eliminates variation in workpiece placement. In practical terms, this means when an operator loads a part onto a fixture with properly designed locating pins, the CNC program can execute with confidence that the cutting tool will encounter material exactly where expected.</p>
+
+
+
+<h2 class="wp-block-heading" id="section-2-the-3-2-1-locating-principle-the-kinematic-foundation"><strong>The 3-2-1 Locating Principle: The Kinematic Foundation</strong> </h2>
+
+
+
+<p>Every rigid body in three-dimensional space possesses six degrees of freedom (DOF): three translational movements (X, Y, Z axes) and three rotational movements (pitch, yaw, roll). To machine a part accurately, a fixture must constrain all six degrees of freedom without over-constraining the workpiece.</p>
+
+
+
+<figure class="wp-block-image size-large"><img fetchpriority="high" decoding="async" width="1024" height="687" src="/wp-content/uploads/2026/04/3-2-1-locating-principle-diagram-1024x687.webp" alt="3 2 1 locating principle diagram" class="wp-image-5880" srcset="/wp-content/uploads/2026/04/3-2-1-locating-principle-diagram-1024x687.webp 1024w, /wp-content/uploads/2026/04/3-2-1-locating-principle-diagram-300x201.webp 300w, /wp-content/uploads/2026/04/3-2-1-locating-principle-diagram-768x516.webp 768w, /wp-content/uploads/2026/04/3-2-1-locating-principle-diagram.webp 1168w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<p>The 3-2-1 principle—also known as the six-point locating method—provides the systematic approach based on kinematic constraint theory:</p>
+
+
+
+<p>• 3 points define the primary datum plane (removing Z translation, pitch, and roll) </p>
+
+
+
+<p>• 2 points define the secondary datum plane (removing Y translation and yaw) </p>
+
+
+
+<p>• 1 point defines the tertiary datum plane (removing X translation)</p>
+
+
+
+<p>Locating pins typically serve as the 2-point secondary locators or the 1-point tertiary locator in this system, working in conjunction with support pads that establish the primary 3-point plane. According to the ASME Y14.5 standard, datum reference frames are established by the ordered set of datum features and by how those features are simulated, not by an assumed “base-plane, side-plane, end-plane” pattern. The effect of the primary, secondary, and tertiary references depends on the type of datum feature, the specified material boundary, and the intended simulator. <sup><a href="/blog/cnc-locating-pins#ref02" type="link" id="/blog/cnc-locating-pins#ref02">[2]</a></sup></p>
+
+
+
+<p>Design Insight: The 3-2-1 principle isn’t merely theoretical—it’s the difference between consistent quality and dimensional drift. Violating this principle by adding redundant locators creates “over-constraint,” where the workpiece rocks between competing reference points, producing unpredictable positioning. <sup><a href="/blog/cnc-locating-pins#ref01" type="link" id="/blog/cnc-locating-pins#ref01">[1</a>]</sup></p>
+
+
+
+<h2 class="wp-block-heading" id="section-3-types-of-cnc-locating-pins"><strong>Types of CNC Locating Pins</strong> </h2>
+
+
+
+<p>Understanding the distinct types of locating pins enables designers to select components that match specific functional requirements, loading conditions, and tolerance demands.</p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" width="1024" height="687" src="/wp-content/uploads/2026/04/locating-pin-types-1024x687.webp" alt="locating pin types" class="wp-image-5883" /><noscript><img decoding="async" width="1024" height="687" src="/wp-content/uploads/2026/04/locating-pin-types-1024x687.webp" alt="locating pin types" class="wp-image-5883" srcset="/wp-content/uploads/2026/04/locating-pin-types-1024x687.webp 1024w, /wp-content/uploads/2026/04/locating-pin-types-300x201.webp 300w, /wp-content/uploads/2026/04/locating-pin-types-768x516.webp 768w, /wp-content/uploads/2026/04/locating-pin-types.webp 1168w" sizes="(max-width: 1024px) 100vw, 1024px" /></noscript></figure>
+
+
+
+<h3 class="wp-block-heading"><strong>Round Locating Pins (Cylindrical Pins)</strong> </h3>
+
+
+
+<p>Round locating pins represent the most common configuration, featuring a cylindrical locating surface that provides equal constraint in all radial directions. These pins serve as primary locators when used singly, constraining both X and Y axes simultaneously.</p>
+
+
+
+<p><strong>Key Variants:</strong></p>
+
+
+
+<p>• Plain Locating Pins: Simple cylindrical design, typically press-fit directly into the fixture body. Best suited for short-to-medium production runs where pin replacement isn’t anticipated. </p>
+
+
+
+<p>• Shoulder-Type Pins: Feature a flange or shoulder that provides Z-axis location (depth control) in addition to X-Y positioning. Available in press-fit and lockscrew configurations, with the latter using liner bushings for renewable applications.</p>
+
+
+
+<p> • Bullet-Nose Dowels: Incorporate a radiused tip that facilitates easier insertion and alignment, particularly valuable in automated loading scenarios or when operator visibility is limited.</p>
+
+
+
+<h3 class="wp-block-heading"><strong>Diamond Locating Pins (Relieved Pins)</strong> </h3>
+
+
+
+<p>The diamond locating pin represents one of the most elegant solutions to a persistent fixture design challenge: how to locate a workpiece using two holes without over-constraining the system.</p>
+
+
+
+<p>The diamond pin features four machined flats creating a diamond-shaped cross-section. This geometry provides full constraint in one axis while allowing controlled clearance in the perpendicular axis. When paired with a round pin, the combination achieves precise 2-hole location while accommodating natural tolerance variations in hole spacing. <a href="/blog/cnc-locating-pins#ref04" type="link" id="/blog/cnc-locating-pins#ref04"><sup><strong>[</strong>4]</sup></a></p>
+
+
+
+<p><strong>Critical Design Considerations:</strong></p>
+
+
+
+<p>• The diamond pin must be oriented correctly—the constrained axis must align with the line connecting the two pin centers </p>
+
+
+
+<p>• Contact area is reduced to approximately one-third of the cylindrical surface, minimizing friction during loading </p>
+
+
+
+<p>• Available in multiple pilot diameters (typically designated X, Y, Z) with varying clearance tolerances</p>
+
+
+
+<p>Engineering Note: Using two round pins in two holes is a common design error. Unless hole spacing is held to unrealistic tolerances, the pins will fight each other, causing binding, part distortion, or inconsistent seating. The round-diamond combination is the industry-standard solution. </p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" width="1024" height="687" src="/wp-content/uploads/2026/04/round-vs-diamond-pin-comparison-1024x687.webp" alt="round vs diamond pin comparison" class="wp-image-5886" /><noscript><img decoding="async" width="1024" height="687" src="/wp-content/uploads/2026/04/round-vs-diamond-pin-comparison-1024x687.webp" alt="round vs diamond pin comparison" class="wp-image-5886" srcset="/wp-content/uploads/2026/04/round-vs-diamond-pin-comparison-1024x687.webp 1024w, /wp-content/uploads/2026/04/round-vs-diamond-pin-comparison-300x201.webp 300w, /wp-content/uploads/2026/04/round-vs-diamond-pin-comparison-768x516.webp 768w, /wp-content/uploads/2026/04/round-vs-diamond-pin-comparison.webp 1168w" sizes="(max-width: 1024px) 100vw, 1024px" /></noscript></figure>
+
+
+
+<h3 class="wp-block-heading"><strong>Floating Locating Pins</strong> </h3>
+
+
+
+<p>For applications where hole spacing tolerances exceed acceptable limits, floating locating pins provide an alternative to the diamond pin approach. These specialized components feature a mechanism that allows controlled movement (typically up to 1/8 inch) in one axis while maintaining precise location in the perpendicular axis.</p>
+
+
+
+<p><strong>Floating pins are particularly valuable when:</strong></p>
+
+
+
+<p>• Working with castings or forgings with loose tolerances </p>
+
+
+
+<p>• Accommodating thermal expansion differentials </p>
+
+
+
+<p>• Positioning large workpieces where hole spacing errors compound</p>
+
+
+
+<p><strong>Specialized Configurations</strong></p>
+
+
+
+<p>• Stepped Head Pins: Enable simultaneous location of two workpiece layers, common in sheet metal stacking applications </p>
+
+
+
+<p>• Cone Locator Pins: Feature a tapered profile that compensates for significant misalignment, useful for quick-change pallet systems </p>
+
+
+
+<p>• Height-Adjustable Pins: Allow Z-axis fine-tuning for workpiece leveling or compensating for surface variations</p>
+
+
+
+<h2 class="wp-block-heading" id="section-4-material-selection-and-technical-specifications"><strong>Material Selection and Technical Specifications</strong> </h2>
+
+
+
+<p>The performance and longevity of locating pins depend critically on material selection, heat treatment, and surface engineering.</p>
+
+
+
+<h3 class="wp-block-heading"><strong>Standard Materials and Hardness</strong></h3>
+
+
+
+<figure class="wp-block-table" tabindex="0" role="region" aria-label="Scrollable comparison table"><table class="has-fixed-layout" style="min-width:416px"><thead><tr><th>Material</th><th>Hardness</th><th>Characteristics</th><th>Best Applications</th></tr></thead><tbody><tr><td>1045 Carbon Steel</td><td>HRC 45-50 (case-hardened)</td><td>Cost-effective, good machinability</td><td>Medium-volume, general purpose</td></tr><tr><td>420 Stainless Steel</td><td>HRC 50-55</td><td>Corrosion resistance, moderate wear</td><td>Medical, food processing, corrosive environments</td></tr><tr><td>440C Stainless</td><td>HRC 58-60</td><td>High hardness + corrosion resistance</td><td>Marine, chemical processing</td></tr></tbody></table></figure>
+
+
+
+<p>Critical Insight: Soft materials (unhardened 300-series stainless, aluminum) are rarely suitable for locating pins in production environments. While they may function initially, rapid wear destroys positioning accuracy within hundreds of cycles, compromising part quality and requiring frequent replacement.</p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" width="1024" height="687" src="/wp-content/uploads/2026/04/material-hardness-chart-1024x687.webp" alt="material hardness chart" class="wp-image-5884" /><noscript><img loading="lazy" decoding="async" width="1024" height="687" src="/wp-content/uploads/2026/04/material-hardness-chart-1024x687.webp" alt="material hardness chart" class="wp-image-5884" srcset="/wp-content/uploads/2026/04/material-hardness-chart-1024x687.webp 1024w, /wp-content/uploads/2026/04/material-hardness-chart-300x201.webp 300w, /wp-content/uploads/2026/04/material-hardness-chart-768x516.webp 768w, /wp-content/uploads/2026/04/material-hardness-chart.webp 1168w" sizes="(max-width: 1024px) 100vw, 1024px" /></noscript></figure>
+
+
+
+<h2 class="wp-block-heading" id="section-5-tolerance-standards-and-fit-classes"><strong>Tolerance Standards and Fit Classes</strong> </h2>
+
+
+
+<p>Locating pin applications typically employ three primary fit categories based on ISO 286 and ASME B4.1 standards:</p>
+
+
+
+<h3 class="wp-block-heading"><strong>Press-Fit (Interference Fit):</strong> </h3>
+
+
+
+<p>• Tolerance: 0.0002&#8243;–0.0005&#8243; interference </p>
+
+
+
+<p>• Application: Permanent or semi-permanent installation </p>
+
+
+
+<p>• Installation: Requires arbor press or hydraulic installation • Repeatability: ±0.0002&#8243;</p>
+
+
+
+<h3 class="wp-block-heading"><strong>Slip-Fit (Clearance Fit):</strong> </h3>
+
+
+
+<p>• Tolerance: 0.0002&#8243;–0.0005&#8243; clearance </p>
+
+
+
+<p>• Application: Renewable pins, frequent replacement scenarios </p>
+
+
+
+<p>• Installation: Hand-insertable • Repeatability: ±0.0005&#8243;</p>
+
+
+
+<h3 class="wp-block-heading"><strong>Transition Fit:</strong> </h3>
+
+
+
+<p>• Tolerance: Near-zero clearance/interference </p>
+
+
+
+<p>• Application: Precision location with moderate renewability </p>
+
+
+
+<p>• Installation: Light press or thermal methods</p>
+
+
+
+<p>According to NIST research on precision manufacturing, high-end mechanical parts sometimes require accuracy of a few micrometers, and billions of accurate dimensional measurements performed each day guarantee that parts will fit and operate as intended. <strong><sup><a href="/blog/cnc-locating-pins#ref03" type="link" id="/blog/cnc-locating-pins#ref03">[3]</a></sup></strong></p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" width="1024" height="687" src="/wp-content/uploads/2026/04/tolerance-and-fit-diagram-1024x687.webp" alt="tolerance and fit diagra" class="wp-image-5887" /><noscript><img loading="lazy" decoding="async" width="1024" height="687" src="/wp-content/uploads/2026/04/tolerance-and-fit-diagram-1024x687.webp" alt="tolerance and fit diagra" class="wp-image-5887" srcset="/wp-content/uploads/2026/04/tolerance-and-fit-diagram-1024x687.webp 1024w, /wp-content/uploads/2026/04/tolerance-and-fit-diagram-300x201.webp 300w, /wp-content/uploads/2026/04/tolerance-and-fit-diagram-768x516.webp 768w, /wp-content/uploads/2026/04/tolerance-and-fit-diagram.webp 1168w" sizes="(max-width: 1024px) 100vw, 1024px" /></noscript></figure>
+
+
+
+<h2 class="wp-block-heading" id="section-6-surface-treatments-and-coatings"><strong>Surface Treatments and Coatings</strong> </h2>
+
+
+
+<p>Advanced surface engineering extends pin life and enables specialized applications:</p>
+
+
+
+<p>• Hard Chrome Plating: Increases surface hardness to 70+ HRC, provides corrosion resistance, reduces friction coefficient </p>
+
+
+
+<p>• TiCN (Titanium Carbonitride): Gold-colored coating offering 3000+ Vickers hardness, exceptional wear resistance for high-cycle applications </p>
+
+
+
+<p>• KCF Coating: Ceramic-based insulation coating preventing weld spatter adhesion in resistance welding fixtures </p>
+
+
+
+<p>• Diamond-Like Carbon (DLC): Ultra-low friction coating for delicate workpiece surfaces</p>
+
+
+
+<h2 class="wp-block-heading" id="section-7-design-principles-and-best-practices-the-golden-rule-pin-pairing-strategy"><strong>Design Principles and Best Practices</strong> <strong>The Golden Rule: Pin Pairing Strategy</strong> </h2>
+
+
+
+<p>When locating a workpiece using two holes (the most common scenario), always implement the round-diamond pairing:</p>
+
+
+
+<ol class="wp-block-list">
+<li>Primary Pin (Round): Full cylindrical contact, establishes the primary datum location in X and Y</li>
+
+
+
+<li>Secondary Pin (Diamond): Relieved contact, constrains rotation only, accommodates hole spacing variation</li>
+</ol>
+
+
+
+<p>This configuration provides complete 2D location while remaining tolerant of realistic manufacturing tolerances.</p>
+
+
+
+<p><strong>Placement Strategy</strong> </p>
+
+
+
+<p>Maximize Pin Separation: Position locating pins as far apart as possible within the workpiece envelope. Greater separation improves angular accuracy and reduces the impact of individual pin tolerances on overall positioning.</p>
+
+
+
+<p>Symmetrical Considerations: While symmetrical pin placement is aesthetically pleasing, asymmetrical arrangements can provide anti-rotation features and prevent 180-degree part loading errors—a form of poka-yoke (mistake-proofing) in fixture design.</p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" width="1024" height="687" src="/wp-content/uploads/2026/04/common-design-mistakes-1024x687.webp" alt="common design mistakes" class="wp-image-5881" /><noscript><img loading="lazy" decoding="async" width="1024" height="687" src="/wp-content/uploads/2026/04/common-design-mistakes-1024x687.webp" alt="common design mistakes" class="wp-image-5881" srcset="/wp-content/uploads/2026/04/common-design-mistakes-1024x687.webp 1024w, /wp-content/uploads/2026/04/common-design-mistakes-300x201.webp 300w, /wp-content/uploads/2026/04/common-design-mistakes-768x516.webp 768w, /wp-content/uploads/2026/04/common-design-mistakes.webp 1168w" sizes="(max-width: 1024px) 100vw, 1024px" /></noscript></figure>
+
+
+
+<p><strong>Shank Mounting Selection</strong></p>
+
+
+
+<figure class="wp-block-table"><table class="has-fixed-layout"><thead><tr><th>Mounting Type</th><th>Best For</th><th>Key Considerations</th></tr></thead><tbody><tr><td>Press-Fit</td><td>Permanent installation, high vibration</td><td>Requires access to both sides for replacement</td></tr><tr><td>Lockscrew with Liner</td><td>High-volume production, renewable pins</td><td>Liner bushings protect fixture body; pins replaceable without damage</td></tr><tr><td>Threaded Shank</td><td>Limited access, adjustable height</td><td>Requires precise perpendicularity to prevent binding</td></tr><tr><td>Set Screw Flat</td><td>Quick-change applications</td><td>Flat provides anti-rotation and positive retention</td></tr></tbody></table></figure>
+
+
+
+<p><strong>Common Design Errors to Avoid</strong></p>
+
+
+
+<ol class="wp-block-list">
+<li>Over-Constraint: Using four support pads on a flat surface (only three define a plane) or two round pins in two holes creates unpredictable positioning</li>
+
+
+
+<li>Insufficient Clearance: Failing to provide air vent grooves in blind holes makes pin removal difficult or impossible due to vacuum lock</li>
+
+
+
+<li>Ignoring Chip Management: Locating surfaces near machining zones accumulate chips, causing part seating errors; implement air blow-off or strategic positioning</li>
+
+
+
+<li>Material Mismatch: Using unhardened pins in production environments leads to rapid wear and quality degradation</li>
+</ol>
+
+
+
+<h2 class="wp-block-heading" id="section-8-applications"><strong>Applications</strong> </h2>
+
+
+
+<h3 class="wp-block-heading"><strong>Automotive Body-in-White (BIW)</strong> </h3>
+
+
+
+<p>Automotive assembly fixtures rely heavily on locating pins for panel positioning. Round pins (often called “four-way” locators) combined with diamond pins (“two-way” locators) provide the precise location required for robotic welding operations. Research on flexible adaptive fixtures for precision grinding of thin-walled bearing rings demonstrates the critical importance of precise locating systems in automotive component manufacturing.</p>
+
+
+
+<h3 class="wp-block-heading"><strong>Aerospace Precision Assembly</strong></h3>
+
+
+
+<p>Aerospace applications demand the highest precision, often using tapered locating pins with mating bushings to achieve micron-level repeatability. Temperature-compensated designs account for thermal expansion differentials between aluminum workpieces and steel fixtures.</p>
+
+
+
+<h3 class="wp-block-heading"><strong>Electronics Manufacturing</strong> </h3>
+
+
+
+<p>PCB assembly fixtures use miniature locating pins (2mm–6mm diameter) with precision-ground shoulders for component placement accuracy. ESD-safe coatings prevent static damage to sensitive electronics.</p>
+
+
+
+<h3 class="wp-block-heading"><strong>Semiconductor and Optomechanical Systems</strong> </h3>
+
+
+
+<p>Kinematic couplings—precision locating systems based on exact constraint principles—are extensively used in semiconductor manufacturing and optical instrumentation. According to research from MIT, kinematic couplings exactly constrain six degrees of freedom between two parts, enabling sub-micron repeatability in wafer positioning and optical component alignment. <strong><sup><a href="/blog/cnc-locating-pins#ref01" type="link" id="/blog/cnc-locating-pins#ref01">[1]</a></sup></strong></p>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" width="1024" height="687" src="/wp-content/uploads/2026/04/fixture-application-example-1024x687.webp" alt="fixture application example" class="wp-image-5882" /><noscript><img loading="lazy" decoding="async" width="1024" height="687" src="/wp-content/uploads/2026/04/fixture-application-example-1024x687.webp" alt="fixture application example" class="wp-image-5882" srcset="/wp-content/uploads/2026/04/fixture-application-example-1024x687.webp 1024w, /wp-content/uploads/2026/04/fixture-application-example-300x201.webp 300w, /wp-content/uploads/2026/04/fixture-application-example-768x516.webp 768w, /wp-content/uploads/2026/04/fixture-application-example.webp 1168w" sizes="(max-width: 1024px) 100vw, 1024px" /></noscript></figure>
+
+
+
+<h2 class="wp-block-heading" id="section-9-installation-and-maintenance-best-practices-proper-installation"><strong>Installation and Maintenance Best Practices</strong> <strong>Proper Installation</strong></h2>
+
+
+
+<ol class="wp-block-list">
+<li>Hole Preparation: Ream mounting holes to H7 tolerance; ensure perpendicularity to the locating surface within 0.001&#8243; per inch</li>
+
+
+
+<li>Press-Fit Technique: Use an arbor press with parallel plates; never hammer pins into place</li>
+
+
+
+<li>Lubrication: Light oil during installation reduces galling risk; remove excess before production</li>
+
+
+
+<li>Orientation: For diamond pins, verify correct orientation using the orientation flat on the flange</li>
+</ol>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" width="1024" height="687" src="/wp-content/uploads/2026/04/pin-installation-methods-1024x687.webp" alt="pin installation methods" class="wp-image-5885" /><noscript><img loading="lazy" decoding="async" width="1024" height="687" src="/wp-content/uploads/2026/04/pin-installation-methods-1024x687.webp" alt="pin installation methods" class="wp-image-5885" srcset="/wp-content/uploads/2026/04/pin-installation-methods-1024x687.webp 1024w, /wp-content/uploads/2026/04/pin-installation-methods-300x201.webp 300w, /wp-content/uploads/2026/04/pin-installation-methods-768x516.webp 768w, /wp-content/uploads/2026/04/pin-installation-methods.webp 1168w" sizes="(max-width: 1024px) 100vw, 1024px" /></noscript></figure>
+
+
+
+<h3 class="wp-block-heading"><strong>Air Vent Considerations</strong> </h3>
+
+
+
+<p>Blind holes require air vent grooves (typically a flat ground along the pin length) to prevent vacuum lock during pin removal. Without venting, hydraulic pressure makes pin extraction difficult and can damage the fixture.</p>
+
+
+
+<h3 class="wp-block-heading"><strong>Maintenance Protocol</strong></h3>
+
+
+
+<p>• Daily: Visual inspection for chip accumulation; air blow-off of locating surfaces </p>
+
+
+
+<p>• Weekly: Check for looseness in lockscrew-mounted pins; verify diamond pin orientation </p>
+
+
+
+<p>• Monthly: Measure pin diameter at contact points; check for wear patterns indicating misalignment </p>
+
+
+
+<p>• Quarterly: Replace liner bushings showing wear; recalibrate fixture datums</p>
+
+
+
+<h2 class="wp-block-heading" id="section-10-faqs">FAQs</h2>
+
+
+
+<h3 class="wp-block-heading">What&#8217;s the difference between a dowel pin and a locating pin? </h3>
+
+
+
+<p>While both are cylindrical precision components, dowel pins are primarily designed for alignment and shear load transmission between mating parts. Locating pins are engineered specifically for fixture applications, with features like shoulders for depth control, specialized head shapes for easy loading, and often include renewable mounting systems. Locating pins typically achieve tighter positional tolerances than standard dowel pins.</p>
+
+
+
+<h3 class="wp-block-heading">How do I choose between round and diamond pins? </h3>
+
+
+
+<p>Use round pins when you need full constraint in all directions or as the primary locator in a two-pin system. Use diamond pins exclusively as secondary locators in two-pin configurations where hole spacing tolerances would cause binding with two round pins. Never use a diamond pin as a single locator—it provides insufficient constraint.</p>
+
+
+
+<h3 class="wp-block-heading">What tolerance should I use for locating pins? </h3>
+
+
+
+<p>For precision CNC applications, specify locating pins with ±0.0002&#8243; diameter tolerance or better. The fit between pin and workpiece hole should typically be 0.0002&#8243;–0.0005&#8243; clearance for slip-fit applications, or 0.0002&#8243;–0.0005&#8243; interference for press-fit mounting.</p>
+
+
+
+<h3 class="wp-block-heading">Can I use two round pins instead of one round and one diamond? </h3>
+
+
+
+<p>Only if hole spacing tolerance is extremely tight (±0.0005&#8243; or better) and you&#8217;re prepared to deal with potential binding issues. For 99% of applications, the round-diamond combination is the correct engineering solution. Two round pins constitute over-constraint and will cause problems.</p>
+
+
+
+<h3 class="wp-block-heading">How often should locating pins be replaced? </h3>
+
+
+
+<p>Replace locating pins when wear exceeds 0.0005&#8243; on the locating diameter, when surface damage (galling, scoring) is visible, or when part measurements begin trending toward tolerance limits. In high-volume production (10,000+ parts), implement scheduled replacement based on statistical process control data.</p>
+
+
+
+<h3 class="wp-block-heading">What&#8217;s the best material for high-volume production? </h3>
+
+
+
+<p>For extreme volumes (100,000+ cycles), consider carbide inserts or pins with diamond-like carbon coatings.</p>
+
+
+
+<h2 class="wp-block-heading" id="section-11-conclusion"><strong>Conclusion</strong> </h2>
+
+
+
+<p>CNC locating pins represent a fascinating intersection of simple geometry and sophisticated engineering grounded in kinematic constraint theory. While individual pins appear to be basic cylindrical components, their proper application requires understanding of degrees of freedom, material science, tolerance analysis, and manufacturing processes.</p>
+
+
+
+<p>The difference between a mediocre fixture and an exceptional one often lies in locating pin selection and implementation. By applying the principles outlined in this guide—the 3-2-1 foundation based on kinematic constraint theory, the round-diamond pairing strategy, appropriate material selection, and diligent maintenance—you establish the foundation for manufacturing excellence.</p>
+
+
+
+<p>Remember: in precision manufacturing, everything builds from the first point of contact. Make sure that point is precisely where you intend it to be.</p>
+
+
+
+<p>Ready to optimize your fixture design? Start by auditing your current locating pin implementations against the principles in this guide. The improvements in part consistency and reduced setup time will validate the effort.</p>
+
+
+
+<p><strong>References</strong> </p>
+
+
+
+<p id="ref01">[1] Slocum, A. (2010). <em>Kinematic Couplings: A Review of Design Principles and Applications</em>. International Journal of Machine Tools and Manufacture, 50(4), 310-327. MIT Precision Engineering Laboratory. Retrieved from <a href="https://dspace.mit.edu/bitstream/handle/1721.1/69013/Kinematic%20coupling%20review%20article.pdf" target="_blank" rel="noreferrer noopener">https://dspace.mit.edu/bitstream/handle/1721.1/69013/Kinematic%20coupling%20review%20article.pdf</a></p>
+
+
+
+<p id="ref02">[2] Mner, M. (2024). <em>Technical Drawing for Product Design: Mastering ISO GPS and ASME GD&amp;T</em>. Engineering Design Textbook. Retrieved from <a href="https://mner.net/wp-content/uploads/2024/08/Technical-Drawing-for-Product-Design.pdf" target="_blank" rel="noreferrer noopener">https://mner.net/wp-content/uploads/2024/08/Technical-Drawing-for-Product-Design.pdf</a></p>
+
+
+
+<p id="ref03">[3] National Institute of Standards and Technology (NIST). (2025). <em>Highly Accurate Measurements for Manufacturing at the Smallest Scale</em>. NIST Physical Measurement Laboratory. Retrieved from <a href="https://www.nist.gov/nist-work/highly-accurate-measurements-manufacturing-smallest-scale" target="_blank" rel="noreferrer noopener">https://www.nist.gov/nist-work/highly-accurate-measurements-manufacturing-smallest-scale</a></p>
+
+
+
+<p id="ref04">[4] National Institute of Standards and Technology (NIST). (1996). <em>NIST Programs and Services: Manufacturing Engineering Laboratory</em>. NIST Special Publication 858. Retrieved from <a href="https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication858e1996.pdf" target="_blank" rel="noreferrer noopener">https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication858e1996.pdf</a></p>
+
+
+
+<p></p></div><aside class="article-inline-cta article-template-cta" aria-label="CNC machining quote"><div class="article-inline-cta__copy"><p class="article-inline-cta__eyebrow">CNC machining RFQ</p><p class="article-inline-cta__title">Need reliable CNC machined parts for your next project?</p><p class="article-inline-cta__text">Send your drawings, material, tolerance and quantity requirements. Our engineering team can review the project and provide DFM feedback before production.</p></div><a class="article-inline-cta__button" href="/cnc-machining-quote" aria-label="Get an instant CNC machining quote">Get Instant Quote</a></aside><section class="article-share" aria-label="Share this article"><h2 class="article-share__label">Share:</h2><div class="article-share__links"><a class="article-share__link article-share__link--facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.cncpioneer.com%2Fblog%2Fcnc-locating-pins" aria-label="Share on Facebook" target="_blank" rel="noopener noreferrer nofollow"><svg viewBox="0 0 320 512" aria-hidden="true" focusable="false"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06H297V6.26S260.43 0 225.36 0C152.14 0 104.1 44.38 104.1 124.72v70.62H22.89V288h81.21v224h100.35V288z"></path></svg></a><a class="article-share__link article-share__link--x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.cncpioneer.com%2Fblog%2Fcnc-locating-pins&amp;text=CNC%20Locating%20Pins%3A%20Precision%20Workholding%20and%20Fixture%20Design" aria-label="Share on X" target="_blank" rel="noopener noreferrer nofollow"><svg viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8l164.9-188.5L26.8 48h145.6l100.6 132.9L389.2 48zm-24.8 373.8h39.1L151.1 88h-42z"></path></svg></a><a class="article-share__link article-share__link--linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fwww.cncpioneer.com%2Fblog%2Fcnc-locating-pins&amp;title=CNC%20Locating%20Pins%3A%20Precision%20Workholding%20and%20Fixture%20Design" aria-label="Share on LinkedIn" target="_blank" rel="noopener noreferrer nofollow"><svg viewBox="0 0 448 512" aria-hidden="true" focusable="false"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path></svg></a><a class="article-share__link article-share__link--pinterest" href="https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fwww.cncpioneer.com%2Fblog%2Fcnc-locating-pins&amp;description=CNC%20Locating%20Pins%3A%20Precision%20Workholding%20and%20Fixture%20Design&amp;media=https%3A%2F%2Fwww.cncpioneer.com%2Fwp-content%2Fuploads%2F2026%2F04%2F3-2-1-locating-principle-diagram.webp" aria-label="Share on Pinterest" target="_blank" rel="noopener noreferrer nofollow"><svg viewBox="0 0 496 512" aria-hidden="true" focusable="false"><path d="M496 256c0 137-111 248-248 248-25.6 0-50.2-3.9-73.4-11.1 10.1-16.5 25.2-43.5 30.8-65 3-11.6 15.4-58.9 15.4-58.9 8.1 15.4 31.7 28.5 56.8 28.5 74.8 0 128.7-68.8 128.7-154.3 0-81.9-66.9-143.2-152.9-143.2-107.1 0-163.9 71.8-163.9 150.1 0 36.4 19.4 81.7 50.4 96.1 4.7 2.2 7.2 1.2 8.3-3.3.8-3.4 5-20.3 6.9-28.1.6-2.5.3-4.7-1.7-7.1-10.2-12.4-18.4-35.2-18.4-56.4 0-54.7 41.4-107.7 112-107.7 60.9 0 103.5 41.5 103.5 100.8 0 67-33.8 113.5-77.7 113.5-24.3 0-42.5-20.1-36.7-44.8 7-29.5 20.5-61.3 20.5-82.6 0-19-10.2-34.9-31.4-34.9-24.9 0-44.9 25.7-44.9 60.2 0 22 7.4 36.8 7.4 36.8s-24.6 104.1-29.1 123.5c-5 21.4-3 51.4-.9 70.8C62.5 469.5 0 371.7 0 256 0 119 111 8 248 8s248 111 248 248z"></path></svg></a><a class="article-share__link article-share__link--reddit" href="https://www.reddit.com/submit?url=https%3A%2F%2Fwww.cncpioneer.com%2Fblog%2Fcnc-locating-pins&amp;title=CNC%20Locating%20Pins%3A%20Precision%20Workholding%20and%20Fixture%20Design" aria-label="Share on Reddit" target="_blank" rel="noopener noreferrer nofollow"><svg viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M440.3 203.5c-15 0-28.2 6.2-37.9 15.9-35.7-24.7-83.8-40.6-137.1-42.3l28.2-132 92.2 19.6c1.1 23.4 20.4 42.1 44.1 42.1 24.4 0 44.2-19.8 44.2-44.2S454.2 18.4 429.8 18.4c-17.4 0-32.4 10.1-39.6 24.7L286.1 20.9c-5.5-1.2-10.9 2.4-12.1 7.9L242.6 177c-54.7 1-104.2 17-140.6 42.5-9.7-9.8-23.1-16-38.1-16-39.6 0-59.5 48.1-31.5 76.1-1.1 5-1.7 10.2-1.7 15.4 0 65.7 75 119 167.5 119s167.5-53.3 167.5-119c0-5.2-.6-10.3-1.7-15.4 28-28 8.1-76.1-23.7-76.1zM129.2 279.9c0-17.7 14.4-32.1 32.1-32.1s32.1 14.4 32.1 32.1-14.4 32.1-32.1 32.1-32.1-14.4-32.1-32.1zm178.3 78.1c-29.9 29.9-78.5 29.9-108.4 0-4-4-4-10.5 0-14.5s10.5-4 14.5 0c21.9 21.9 57.5 21.9 79.4 0 4-4 10.5-4 14.5 0s4 10.5 0 14.5zm-5.5-46c-17.7 0-32.1-14.4-32.1-32.1s14.4-32.1 32.1-32.1 32.1 14.4 32.1 32.1-14.4 32.1-32.1 32.1z"></path></svg></a></div></section><section class="detail-author-box" aria-labelledby="detail-author-name"><a class="detail-author-avatar" href="/author/ryan-wang"><img src="/wp-content/uploads/2026/03/ryan-wang-100X100.jpg" width="100" height="100" alt="Picture of Ryan Wang" loading="lazy"></a><div class="detail-author-text"><h4 id="detail-author-name" class="detail-author-name"><a href="/author/ryan-wang">Ryan Wang</a></h4><div class="detail-author-bio"><p>Ryan Wang is the CNC Machining Expert at Cncpioneer, with over 15 years of hands-on experience as a CNC programmer, process engineer, senior machinist, and precision manufacturing specialist. He has helped companies in aerospace, automotive, medical, and electronics sectors achieve micron-level tolerances and scale from prototypes to high-volume production. Ryan is also an experienced instructor in advanced CNC techniques, particularly five-axis machining and challenging materials.</p></div></div></section></article><aside class="detail-toc-rail" aria-label="Table of contents"><nav class="toc-box" aria-labelledby="toc-heading" data-toc><button class="toc-header" type="button" aria-expanded="true" aria-controls="toc-list-panel" data-toc-toggle><span id="toc-heading" class="toc-heading">Table of Contents</span><svg class="toc-toggle" viewBox="0 0 448 512" aria-hidden="true"><path d="M207.029 381.476 12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg></button><div id="toc-list-panel" class="toc-body" data-toc-body><div class="toc-body-inner"><ol class="toc-list"><li><a href="#section-1-what-are-cnc-locating-pins">What Are CNC Locating Pins?</a></li><li><a href="#section-2-the-3-2-1-locating-principle-the-kinematic-foundation">The 3-2-1 Locating Principle: The Kinematic Foundation</a></li><li><a href="#section-3-types-of-cnc-locating-pins">Types of CNC Locating Pins</a></li><li><a href="#section-4-material-selection-and-technical-specifications">Material Selection and Technical Specifications</a></li><li><a href="#section-5-tolerance-standards-and-fit-classes">Tolerance Standards and Fit Classes</a></li><li><a href="#section-6-surface-treatments-and-coatings">Surface Treatments and Coatings</a></li><li><a href="#section-7-design-principles-and-best-practices-the-golden-rule-pin-pairing-strategy">Design Principles and Best Practices The Golden Rule: Pin Pairing Strategy</a></li><li><a href="#section-8-applications">Applications</a></li><li><a href="#section-9-installation-and-maintenance-best-practices-proper-installation">Installation and Maintenance Best Practices Proper Installation</a></li><li><a href="#section-10-faqs">FAQs</a></li><li><a href="#section-11-conclusion">Conclusion</a></li></ol></div></div></nav></aside></section><section class="related-posts" aria-labelledby="related-title"><h2 id="related-title">Related Posts</h2><div class="related-grid" role="list"><article class="related-card" role="listitem"><a class="related-card-thumb" href="/blog/fastener-machining" tabindex="-1"><img src="/wp-content/uploads/2026/01/fastener-machining.jpg" alt="Fastener Machining: The Ultimate Guide (2026)" loading="lazy" decoding="async"></a><div class="related-card-text"><h4><a href="/blog/fastener-machining">Fastener Machining: The Ultimate Guide (2026)</a></h4><a class="related-read-more" href="/blog/fastener-machining" aria-label="Read more about Fastener Machining: The Ultimate Guide (2026)" tabindex="-1">Read More</a></div></article><article class="related-card" role="listitem"><a class="related-card-thumb" href="/blog/shaft-machining" tabindex="-1"><img src="/wp-content/uploads/2026/01/shaft-machining.jpg" alt="Shaft Machining: The Ultimate Guide (2026)" loading="lazy" decoding="async"></a><div class="related-card-text"><h4><a href="/blog/shaft-machining">Shaft Machining: The Ultimate Guide (2026)</a></h4><a class="related-read-more" href="/blog/shaft-machining" aria-label="Read more about Shaft Machining: The Ultimate Guide (2026)" tabindex="-1">Read More</a></div></article><article class="related-card" role="listitem"><a class="related-card-thumb" href="/blog/cnc-machining-quality-testing" tabindex="-1"><img src="/wp-content/uploads/2026/03/cnc-quality-testing-cmm-inspection.webp" alt="CNC Machining Quality Testing: Methods, Standards, Equipment, GD&amp;T, Statistical Control &amp; Best Practices" loading="lazy" decoding="async"></a><div class="related-card-text"><h4><a href="/blog/cnc-machining-quality-testing">CNC Machining Quality Testing: Methods, Standards, Equipment, GD&amp;T, Statistical Control &amp; Best Practices</a></h4><a class="related-read-more" href="/blog/cnc-machining-quality-testing" aria-label="Read more about CNC Machining Quality Testing: Methods, Standards, Equipment, GD&amp;T, Statistical Control &amp; Best Practices" tabindex="-1">Read More</a></div></article></div></section><section class="question-cta" aria-labelledby="questions-title"><h2 id="questions-title">Questions?</h2><p>Our experts are here for you!.</p><a class="contact-button" href="/cnc-machining-quote">Contact Us</a></section></main><footer class="site-footer"><div class="footer-main"><div class="footer-inner"><section class="footer-column" aria-labelledby="footer-services"><h2 id="footer-services">Services</h2><ul><li><a href="/services/swiss-machining">Swiss Machining Service</a></li><li><a href="/services/cnc-turning-and-milling">CNC Turning and Milling  Service</a></li></ul></section><section class="footer-column" aria-labelledby="footer-industries"><h2 id="footer-industries">Industries</h2><ul><li><a href="/industries/aerospace">Aerospace</a></li><li><a href="/industries/defense">Defense</a></li><li><a href="/industries/medical">Medical</a></li><li><a href="/industries/semiconductor">Semiconductor</a></li><li><a href="/industries/consumer-electronics">Consumer Electronics</a></li><li><a href="/industries/oil-gas">Oil &amp; Gas</a></li><li><a href="/industries/automotive">Automotive</a></li><li><a href="/industries/railway">Railway</a></li></ul></section><section class="footer-column" aria-labelledby="footer-about"><h2 id="footer-about">About</h2><ul><li><a href="/about-us">About Us</a></li><li><a href="/blog">Blog</a></li></ul></section><section class="footer-column contact-column" aria-labelledby="footer-contact"><h2 id="footer-contact">Get In Touch</h2><p>Room 1202B54, 12th Floor, Tairan Cangsong Building, No. 25,<br>Futian District, Shenzhen, China</p><ul><li><a href="mailto:info@cncpioneer.com">Email: info@cncpioneer.com</a></li><li><a href="tel:+8613725562746">Phone: +8613725562746 </a></li><li>Hours: Mon-Fri 9:00AM - 6:00PM</li></ul></section></div></div><div class="copyright"><p>Copyright &copy; 2026 CNCPioneer All Rights Reserved.</p></div></footer><script type="module">var e=document.querySelectorAll(`[data-toc]`);for(let t of e){let e=t.querySelector(`[data-toc-toggle]`),n=t.querySelector(`[data-toc-body]`),r=Array.from(t.querySelectorAll(`.toc-list a`)),i=document.getElementById(`main-article-content`);Array.from(i?.querySelectorAll(`h2`)||[]).forEach((e,t)=>{let n=r[t]?.getAttribute(`href`)?.slice(1);n&&!e.id&&(e.id=n)});let a=r.map(e=>{let t=e.getAttribute(`href`)?.slice(1);return t?document.getElementById(t):null}).filter(Boolean),o=window.matchMedia(`(prefers-reduced-motion: reduce)`).matches,s=window.matchMedia(`(max-width: 1024px)`),c=!s.matches,l=i=>{c=i,t.classList.toggle(`is-collapsed`,!i),e?.setAttribute(`aria-expanded`,String(i)),n?.setAttribute(`aria-hidden`,String(!i));for(let e of r)e.tabIndex=i?0:-1};l(c),s.addEventListener(`change`,e=>{l(!e.matches)}),e?.addEventListener(`click`,()=>{l(!c)});for(let e of r)e.addEventListener(`click`,n=>{let r=e.getAttribute(`href`)?.slice(1),i=r?document.getElementById(r):null;!i||n.ctrlKey||n.metaKey||n.shiftKey||n.altKey||(n.preventDefault(),s.matches&&(t.classList.add(`is-navigating`),l(!1)),i.scrollIntoView({behavior:o?`instant`:`smooth`,block:`start`}),history.pushState(null,``,`#${r}`),requestAnimationFrame(()=>t.classList.remove(`is-navigating`)))});if(`IntersectionObserver`in window&&a.length>0){let e=new Map(r.map(e=>[e.getAttribute(`href`)?.slice(1),e])),t=new IntersectionObserver(t=>{let n=t.filter(e=>e.isIntersecting).sort((e,t)=>e.boundingClientRect.top-t.boundingClientRect.top)[0];if(n?.target?.id){for(let e of r)e.removeAttribute(`aria-current`);e.get(n.target.id)?.setAttribute(`aria-current`,`true`)}},{rootMargin:`-20% 0px -70% 0px`,threshold:0});for(let e of a)t.observe(e)}}</script>
+<dialog class="site-search-dialog" id="site-search-dialog" aria-labelledby="site-search-heading">
+  <div class="site-search-panel">
+    <div class="site-search-heading-row">
+      <div><p class="site-search-eyebrow">CNCPIONEER SEARCH</p><h2 id="site-search-heading">What are you looking for?</h2></div>
+      <button class="site-search-close" type="button" data-search-close aria-label="Close search"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+    </div>
+    <form class="site-search-form" action="/search" method="get" role="search">
+      <label class="site-search-sr-only" for="site-search-input">Search parts, services, materials and industries</label>
+      <svg class="site-search-input-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4.5 4.5"/></svg>
+      <input id="site-search-input" name="q" type="search" placeholder="Search parts, materials, services…" autocomplete="off" maxlength="120" enterkeyhint="search" spellcheck="false" aria-describedby="site-search-status" />
+      <button class="site-search-clear" type="button" data-search-clear aria-label="Clear search" hidden>×</button>
+      <button class="site-search-submit" type="submit">Search <span aria-hidden="true">→</span></button>
+    </form>
+    <div class="site-search-filters" data-search-filters aria-label="Filter search results">
+      <button type="button" data-search-type="all" aria-pressed="true">All</button>
+      <button type="button" data-search-type="parts" aria-pressed="false">Parts</button>
+      <button type="button" data-search-type="services" aria-pressed="false">Services</button>
+      <button type="button" data-search-type="materials" aria-pressed="false">Materials</button>
+      <button type="button" data-search-type="industries" aria-pressed="false">Industries</button>
+      <button type="button" data-search-type="resources" aria-pressed="false">Resources</button>
+    </div>
+    <div class="site-search-content" data-search-content>
+      <p class="site-search-status" id="site-search-status" data-search-status role="status" aria-live="polite"></p>
+      <div data-search-output></div>
+    </div>
+    <div class="site-search-footer">
+      <span class="site-search-keyboard"><kbd>↑</kbd><kbd>↓</kbd> Navigate <span>·</span> <kbd>Esc</kbd> Close</span>
+      <a href="/cnc-machining-quote">Have a drawing? Request a quote <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</dialog><script type="module" src="/site-search.js"></script></body></html>

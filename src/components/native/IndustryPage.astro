@@ -1,0 +1,912 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import QuoteCta from "./QuoteCta.astro";
+import PageHero from "./PageHero.astro";
+import IndustryFaq from "./FlangeFaq.astro";
+import { industrySpecializations } from "../../data/industrySpecializations.mjs";
+import { industryConsolidation } from "../../data/industryConsolidation.mjs";
+import { getIndustryMaterialVisual } from "../../data/industryMaterialVisuals.mjs";
+import { getIndustryMaterialLinks } from "../../data/industryMaterialLinks.mjs";
+import { hasIndustryProductLinks, withIndustryProductLinks } from "../../data/industryProductLinks.mjs";
+import "../../styles/industry-detail.css";
+
+const sourcePage = Astro.props.page;
+const consolidation = industryConsolidation[sourcePage.slug];
+const specialization = industrySpecializations[sourcePage.slug];
+const page = specialization ? {
+  ...sourcePage,
+  hero: { ...sourcePage.hero, ...specialization.hero },
+  seo: { ...sourcePage.seo, ...specialization.seo }
+} : { ...sourcePage };
+if (consolidation) {
+  page.hero = { ...page.hero, title: consolidation.title, description: consolidation.description };
+  page.seo = { ...page.seo, title: consolidation.seoTitle ?? `${consolidation.title} | CNCPioneer`, description: consolidation.description };
+}
+const sections = page.sections.filter((section) => section.heading && section.heading !== "Questions?");
+const gallery = page.gallery.slice(0, 12);
+
+const semiconductorDetail = {
+  usage: {
+    title: "How Do You Use Our Machining Services",
+    cards: [
+      {
+        icon: "upload",
+        title: "Rapid Prototyping",
+        text: "Upload CAD files for fast DFM feedback, prototype validation, and semiconductor part iteration before production."
+      },
+      {
+        icon: "gears",
+        title: "On-demand Manufacturing",
+        text: "Choose precision metals, engineering plastics, and clean surface finishes. Our team verifies every order for manufacturability."
+      },
+      {
+        icon: "truck",
+        title: "Custom Tooling & End-use Parts",
+        text: "Production-ready machining supports vacuum-compatible fixtures, connectors, housings, and replacement parts shipped to spec."
+      }
+    ]
+  },
+  quality: {
+    title: "Quality Assurance Measures",
+    cards: [
+      {
+        icon: "cmm",
+        label: "Dimensional Proof",
+        title: "CMM Inspection Report",
+        text: "High-precision three-coordinate measurement verifies critical dimensions and provides detailed inspection data for each semiconductor component."
+      },
+      {
+        icon: "fai",
+        label: "Batch Validation",
+        title: "First Article Inspection (FAI) Report",
+        text: "First Article Inspection confirms the first production part before release, reducing batch risk and stabilizing repeat production quality."
+      },
+      {
+        icon: "certificate",
+        label: "Material Traceability",
+        title: "Material Certificates + Cleanliness Certification",
+        text: "Raw materials include formal certificates, with cleanliness checks to support vacuum, wafer handling, and other high-demand environments."
+      },
+      {
+        icon: "surface",
+        label: "Clean Surface Control",
+        title: "Surface Roughness/Particle Release Testing",
+        text: "Surface roughness and particle release are tested with professional equipment to meet strict cleanliness and performance requirements."
+      }
+    ]
+  },
+  materials: {
+    title: "Recommended Materials & Surface Finishes",
+    subtitle: "Semiconductor Equipment Material Solutions - Optimized for Performance & Precision",
+    items: [
+      {
+        tab: "Aluminum",
+        badge: "Lightweight",
+        icon: "Al",
+        name: "Aluminum Alloy",
+        spec: "6061 / 7075 Series",
+        summary:
+          "Lightweight chambers, support frames, covers, and heat-control parts with strong machinability and an excellent strength-to-weight ratio for semiconductor equipment.",
+        facts: [
+          ["Lead Time", "As fast as 1-3 days"],
+          ["Finishing Options", "Type II / III anodizing, brushing, passivation"],
+          ["Best-Fit Parts", "Frames, heat sinks, tooling plates, fixture bodies"]
+        ]
+      },
+      {
+        tab: "Titanium",
+        badge: "High Vacuum",
+        icon: "Ti",
+        name: "Titanium Alloy",
+        spec: "Ti6Al4V Grade 5",
+        summary:
+          "High-strength, corrosion-resistant, low-outgassing material for vacuum components, chamber internals, and structural supports in ultra-high vacuum systems.",
+        facts: [
+          ["Lead Time", "Prototype and low-volume support"],
+          ["Finishing Options", "Passivation, polishing, precision deburring"],
+          ["Best-Fit Parts", "Vacuum brackets, mounts, chamber hardware"]
+        ]
+      },
+      {
+        tab: "Copper",
+        badge: "Thermal Management",
+        icon: "Cu",
+        name: "Copper / OFC",
+        spec: "C101 / C102",
+        summary:
+          "High-conductivity copper supports heat spreaders, cooling channels, contacts, and thermal management systems where stable heat dissipation matters.",
+        facts: [
+          ["Lead Time", "Rapid machining for urgent thermal parts"],
+          ["Finishing Options", "Nickel plating, polishing, ultrasonic cleaning"],
+          ["Best-Fit Parts", "Heat spreaders, bus bars, cooling blocks"]
+        ]
+      },
+      {
+        tab: "Invar / Kovar",
+        badge: "Dimensionally Stable",
+        icon: "Fe-Ni",
+        name: "Invar / Kovar",
+        spec: "Fe-Ni Alloys",
+        summary:
+          "Dimensionally stable iron-nickel alloys for precision positioning fixtures, optical mounts, and parts that must resist thermal movement.",
+        facts: [
+          ["Lead Time", "Low-volume precision runs available"],
+          ["Finishing Options", "Passivation, polishing, clean packaging"],
+          ["Best-Fit Parts", "Optical mounts, probe fixtures, reference tooling"]
+        ]
+      },
+      {
+        tab: "PEEK",
+        badge: "Insulating",
+        icon: "PEEK",
+        name: "PEEK Engineering Plastic",
+        spec: "PEEK / Ultem Alternatives",
+        summary:
+          "High-performance engineering plastic for lightweight, insulating, chemical-resistant parts used around clean handling and sensitive electronic assemblies.",
+        facts: [
+          ["Lead Time", "Fast prototypes and bridge production"],
+          ["Finishing Options", "Precision deburring, cleaning, inspection"],
+          ["Best-Fit Parts", "Insulators, guides, spacers, handling nests"]
+        ]
+      },
+      {
+        tab: "Stainless Steel",
+        badge: "Cleanroom Ready",
+        icon: "SS",
+        name: "Stainless Steel",
+        spec: "304 / 316L / 17-4PH",
+        summary:
+          "Corrosion-resistant stainless steels support durable semiconductor fixtures, vacuum hardware, cleanroom tooling, and high-reliability mechanical parts.",
+        facts: [
+          ["Lead Time", "Prototype to low-volume production"],
+          ["Finishing Options", "Passivation, electropolishing, bead blasting"],
+          ["Best-Fit Parts", "Fasteners, brackets, shafts, precision fixtures"]
+        ]
+      }
+    ],
+    finishes: [
+      { label: "Mirror Polishing", highlight: true },
+      { label: "Chemical Passivation" },
+      { label: "Electropolishing" },
+      { label: "PVD Coating", highlight: true },
+      { label: "Low-Particle Finish" },
+      { label: "Ultrasonic Cleaning" },
+      { label: "Vacuum Baking" },
+      { label: "Plasma Treatment" }
+    ]
+  },
+  parts: {
+    title: "High-Precision Semiconductor CNC Machining Parts Made",
+    subtitle: "Rapid, cost-effective high-precision CNC prototypes & low-volume production for semiconductor.",
+    items: [
+      { title: "Semiconductor Test Probes", image: "/wp-content/uploads/2026/05/semiconductor-test-probes.jpg", href: "/custom-cnc-parts/semiconductor-test-probes" },
+      { title: "Semiconductor Housings", image: "/wp-content/uploads/2026/08/semiconductor-housing-cnc-turning-precision.jpg", href: "/custom-cnc-parts/semiconductor-housings" },
+      { title: "Semiconductor Connectors", image: "/wp-content/uploads/2026/08/semiconductor-connector-precision-machining-swiss-cnc.jpg", href: "/custom-cnc-parts/semiconductor-connector" },
+      { title: "Semiconductor Vacuum Chambers", image: "/wp-content/uploads/2026/08/vacuum-chamber-parts-precision.jpg", href: "/custom-cnc-parts/semiconductor-vacuum-chamber" },
+      { title: "Semiconductor Cooling Plates", image: "/wp-content/uploads/2026/08/semiconductor-cold-plate-cbn.jpg", href: "/custom-cnc-parts/semiconductor-cooling-plate" },
+      { title: "Wet Etch Spray Nozzles", image: "/wp-content/uploads/2026/08/semiconductor-wet-etch-spray-nozzle-ptfe.jpg", href: "/custom-cnc-parts/semiconductor-wet-etch-spray-nozzle" }
+    ]
+  },
+  resources: [
+    {
+      title: "Connector Machining: The Ultimate Guide",
+      href: "/blog/connector-machining",
+      image: "/wp-content/uploads/2026/01/connector-machining.jpg",
+      excerpt: "Connector machining is the precision backbone that ensures reliable power, data, and signal transfer."
+    },
+    {
+      title: "Shaft Machining: The Ultimate Guide",
+      href: "/blog/shaft-machining",
+      image: "/wp-content/uploads/2026/01/shaft-machining.jpg",
+      excerpt: "Shaft machining transforms raw materials into vital parts that transmit power efficiently."
+    },
+    {
+      title: "Fastener Machining: The Ultimate Guide",
+      href: "/blog/fastener-machining",
+      image: "/wp-content/uploads/2026/01/fastener-machining.jpg",
+      excerpt: "Fastener machining produces critical components with the strength, accuracy, and repeatability required for precision assemblies."
+    }
+  ]
+};
+
+const standardFinishes = [
+  "Passivation",
+  "Anodizing",
+  "Electropolishing",
+  "PVD Coating",
+  "Polishing",
+  "Brushing",
+  "Nickel Plating",
+  "Clean Packaging"
+];
+
+const buildMaterials = (subtitle, rows, finishes = standardFinishes) => ({
+  title: "Recommended Materials & Surface Finishes",
+  subtitle,
+  items: rows.map(([tab, badge, icon, name, spec, summary, leadTime, finishing, bestFitParts]) => ({
+    tab,
+    badge,
+    icon,
+    name,
+    spec,
+    summary,
+    facts: [
+      ["Lead Time", leadTime],
+      ["Finishing Options", finishing],
+      ["Best-Fit Parts", bestFitParts]
+    ]
+  })),
+  finishes: finishes.map((label, index) => ({ label, highlight: index === 0 || index === 3 }))
+});
+
+const materialProfiles = {
+  aerospace: buildMaterials("Flight-ready alloys selected for strength, weight control, traceability, and certified finishing.", [
+    ["Titanium", "High Strength", "Ti", "Titanium Alloy", "Ti6Al4V", "Lightweight, corrosion-resistant alloy for flight hardware and structural components.", "Prototype to low-volume support", "Passivation, polishing, precision deburring", "Fasteners, brackets, shafts, flight-critical hardware"],
+    ["Aluminum", "Lightweight", "Al", "Aluminum Alloy", "6061 / 7075", "Machinable aerospace aluminum for housings, frames, covers, and weight-sensitive parts.", "As fast as 1-3 days", "Type II / III anodizing, brushing, conversion coating", "Avionics housings, frames, engine covers"],
+    ["Stainless", "Corrosion Resistant", "SS", "Stainless Steel", "304 / 316L / 17-4PH", "Durable stainless grades for harsh environments and precision aerospace assemblies.", "Prototype and production support", "Passivation, electropolishing, bead blasting", "Bearing housings, shafts, precision fittings"],
+    ["Nickel", "Heat Resistant", "Ni", "Nickel Alloy", "Inconel / Nickel Alloys", "High-temperature alloys for turbine-adjacent and demanding aerospace components.", "Low-volume precision runs", "Passivation, polishing, clean packaging", "Engine hardware, high-temperature fittings"]
+  ], ["AS9100 Documentation", "Passivation", "Hard Anodizing", "PVD Coating", "Polishing", "Deburring", "Clean Packaging", "Material Traceability"]),
+  automotive: buildMaterials("Production-friendly materials for engines, transmissions, EV hardware, and repeatable low-volume builds.", [
+    ["Stainless", "Repeatable", "SS", "Stainless Steel", "304 / 316 / 17-4PH", "Reliable corrosion-resistant grades for shafts, pins, fasteners, and housings.", "Fast prototypes, scalable production", "Passivation, polishing, bead blasting", "Crankshafts, pins, transmission shafts"],
+    ["Aluminum", "Lightweight", "Al", "Aluminum Alloys", "6061 / 7075", "Low-weight material for housings, brackets, covers, and thermal parts.", "As fast as 1-3 days", "Anodizing, brushing, chromate conversion", "Engine housings, actuator bodies, brackets"],
+    ["Titanium", "Strength Ratio", "Ti", "Titanium Alloys", "Ti-6Al-4V", "High strength-to-weight alloy for specialty automotive and motorsport components.", "Prototype and bridge production", "Passivation, polishing, precision deburring", "Performance shafts, lightweight hardware"],
+    ["Copper", "Conductive", "Cu", "Copper / Brass", "C360 / Brass", "Conductive and easy-machining alloys for electrical and thermal applications.", "Rapid machining support", "Nickel plating, polishing, tin plating", "Terminals, connectors, heat-transfer parts"],
+    ["Plastic", "Insulating", "P", "Engineering Plastics", "PEEK / Nylon", "Durable plastics for lightweight, insulating, and chemical-resistant components.", "Fast prototype support", "Precision deburring, cleaning", "Guides, spacers, sensor components"],
+    ["Steel", "High Load", "HS", "High-Strength Steel", "4140 / 42CrMo", "Strong steels for fatigue-resistant drivetrain and load-bearing parts.", "Low to medium-volume runs", "Black oxide, zinc plating, heat treatment", "Shafts, gears, coupling hardware"]
+  ], ["Micro Precision", "Passivation", "Anodizing", "Nickel Plating", "Black Oxide", "Heat Treatment", "Polishing", "Batch Inspection"]),
+  "consumer-electronics": buildMaterials("Materials and finishes for compact housings, terminals, camera hardware, and high-volume product validation.", [
+    ["Aluminum", "Lightweight", "Al", "Aluminum Alloy", "6061 / 7075", "Lightweight alloy for enclosures, frames, heat sinks, and cosmetic hardware.", "1-3 day prototype support", "Hard anodizing, brushing, bead blasting", "Enclosures, camera housings, heat sinks"],
+    ["Titanium", "Premium", "Ti", "Titanium Alloy", "Ti6Al4V", "Durable premium material for compact high-strength consumer electronics components.", "Prototype and low-volume support", "Polishing, passivation, PVD coating", "Wearable parts, structural inserts"],
+    ["Stainless", "Durable", "SS", "Stainless Steel", "304 / 316 / 17-4PH", "Corrosion-resistant material for pins, brackets, and durable precision parts.", "Fast low-volume support", "Passivation, polishing, brushing", "Connector pins, brackets, screws"],
+    ["Magnesium", "Ultra Light", "Mg", "Magnesium Alloy", "AZ31 / AZ91", "Very light alloy for portable electronics and structural shells.", "Prototype support", "Conversion coating, painting, polishing", "Laptop and device frames"],
+    ["Copper", "Conductive", "Cu", "Copper / Brass", "C110 / C360", "Conductive alloys for terminals, contacts, and thermal management parts.", "Rapid machining support", "Nickel plating, tin plating, brushing", "Battery terminals, contact pins"],
+    ["Plastic", "Insulating", "P", "Engineering Plastics", "PEEK / PC / ABS", "Insulating plastics for fixtures, guides, and non-metal precision parts.", "Fast prototypes", "Deburring, cleaning, polishing", "Insulators, nests, lightweight housings"]
+  ], ["Hard Anodizing", "Type III Anodizing", "PVD Coating", "Electroless Nickel", "Powder Coating", "Polishing", "Brushing", "Passivation"]),
+  defense: buildMaterials("Defense-ready materials selected for traceability, durability, and demanding operating environments.", [
+    ["Titanium", "High Strength", "Ti", "Titanium Alloys", "Ti-6Al-4V", "Strong lightweight material for mission-critical hardware and precision assemblies.", "Prototype to low-volume support", "Passivation, polishing, clean packaging", "Pins, shafts, lightweight brackets"],
+    ["Nickel", "Extreme Temp", "Ni", "Nickel-Based Superalloys", "Inconel 718", "High-temperature alloys for harsh environments and aerospace-defense systems.", "Low-volume precision runs", "Passivation, polishing, heat-resistant finishing", "Guidance hardware, high-heat fittings"],
+    ["Stainless", "Corrosion Resistant", "SS", "Stainless Steel", "17-4PH / 316L", "Corrosion-resistant stainless grades for tactical and structural components.", "Repeatable low-volume production", "Passivation, bead blasting, black oxide", "Firing pins, housings, precision rods"],
+    ["Aluminum", "Lightweight", "Al", "Aluminum Alloys", "7075 / 6061", "High-strength aluminum for housings, covers, fixtures, and lightweight assemblies.", "Fast prototype support", "Hard anodizing, conversion coating", "Avionics-style housings, brackets"],
+  ], ["Material Traceability", "Passivation", "Hard Anodizing", "Black Oxide", "NDT Support", "Clean Packaging", "FAI Reports", "CMM Inspection"]),
+  medical: buildMaterials("Medical material selections for biocompatibility, traceability, and clean precision machining.", [
+    ["Titanium", "Biocompatible", "Ti", "Titanium Alloy", "Ti6Al4V", "Biocompatible titanium for orthopedic, dental, and surgical components.", "Prototype to low-volume support", "Passivation, polishing, precision deburring", "Bone plates, screws, implant-adjacent hardware"],
+    ["Stainless", "Medical Grade", "SS", "Stainless Steel", "316L", "Medical stainless for surgical instruments, stents, and durable device parts.", "Fast prototype support", "Passivation, electropolishing, cleaning", "Surgical tools, stents, connector parts"],
+    ["PEEK", "Polymer", "PEEK", "PEEK", "Medical PEEK", "High-performance polymer for lightweight, insulating, and implant-adjacent applications.", "Low-volume support", "Deburring, polishing, clean packaging", "Spinal implants, trauma device parts"],
+    ["PEI", "Sterilizable", "PEI", "PEI (Ultem)", "Ultem / PEI", "Sterilizable engineering plastic for housings, guides, and instrument components.", "Fast prototype support", "Deburring, cleaning", "Surgical tool parts, device housings"],
+    ["Nitinol", "Special Alloy", "NiTi", "Nickel-Titanium Alloy", "Nitinol", "Shape-memory alloy for vascular, orthodontic, and minimally invasive devices.", "Precision low-volume runs", "Polishing, passivation, clean packaging", "Guidewire and device components"],
+  ], ["Biocompatible Cleaning", "Passivation", "Electropolishing", "Laser Marking", "Polishing", "Deburring", "Material Certificates", "Traceability"]),
+  "oil-gas": buildMaterials("Corrosion-resistant and high-pressure materials for exploration, drilling, valve, and instrumentation components.", [
+    ["Inconel", "High Pressure", "I718", "Inconel 718", "Nickel-Chromium Superalloy", "Strong corrosion-resistant alloy for high-pressure and high-temperature service.", "Prototype to low-volume support", "Passivation, polishing, heat-resistant finishing", "Pins, fittings, valve hardware"],
+    ["Titanium", "Lightweight", "Ti5", "Titanium Grade 5", "Ti-6Al-4V", "Strong corrosion-resistant alloy for lightweight oilfield and marine equipment.", "Prototype support", "Passivation, polishing", "Instrumentation parts, sensor housings"],
+    ["Bronze", "Anti-Galling", "660B", "660 Bronze", "Aluminum Bronze", "Wear-resistant bronze for bushings, sleeves, and bearing-style components.", "Fast machining support", "Polishing, deburring", "Bushings, sleeves, bearing components"]
+  ], ["Corrosion Control", "Passivation", "Electroless Nickel", "HVOF Coating", "Polishing", "Thread Protection", "Pressure Documentation", "Material Traceability"]),
+  railway: buildMaterials("Durable materials for connectors, shafts, sensor housings, valves, and rail maintenance hardware.", [
+    ["Steel", "Fatigue Resistant", "AS", "Alloy Steel", "4140 / 42CrMo", "High-strength steel for shafts, pins, and load-bearing railway components.", "Prototype to production support", "Black oxide, zinc plating, heat treatment", "Signal shafts, valve spools, structural pins"],
+    ["Stainless", "Corrosion Resistant", "SS", "Stainless Steel", "316L / 304", "Corrosion-resistant grades for connectors, housings, and long-service hardware.", "Fast low-volume support", "Passivation, polishing, bead blasting", "Hydraulic connectors, pipe housings"],
+    ["Aluminum", "Lightweight", "Al", "Aluminum Alloy", "6061 / 7075", "Machinable lightweight alloy for brackets, housings, and rail equipment fixtures.", "As fast as 1-3 days", "Anodizing, brushing, conversion coating", "Sensor housings, covers, brackets"],
+    ["Brass", "Conductive", "Br", "Brass", "C360", "Easy-machining alloy for fittings, terminals, and connector-style rail components.", "Rapid machining support", "Nickel plating, polishing", "Connector bodies, terminals, inserts"],
+    ["Bronze", "Wear Resistant", "Bz", "Bronze", "Aluminum Bronze", "Wear-resistant alloy for bushings and friction-critical rail components.", "Low-volume support", "Polishing, deburring", "Bushings, sleeves, guide components"],
+    ["Plastic", "Insulating", "P", "Engineering Plastic", "PEEK / Nylon", "Durable non-metal material for insulation, guides, and vibration-control components.", "Fast prototype support", "Deburring, cleaning", "Spacers, guides, insulating parts"]
+  ], ["Zinc Plating", "Nickel Plating", "Passivation", "Anodizing", "Black Oxide", "Heat Treatment", "Polishing", "Batch Inspection"])
+};
+
+const commonQualityCards = (industry) => ({
+  title: "Quality Assurance Measures",
+  cards: [
+    {
+      icon: "cmm",
+      label: "Dimensional Proof",
+      title: "CMM Inspection Report",
+      text: `High-precision CMM measurement verifies key ${industry} dimensions and provides detailed inspection records.`
+    },
+    {
+      icon: "fai",
+      label: "Batch Validation",
+      title: "First Article Inspection (FAI) Report",
+      text: "First Article Inspection confirms the first production part before release and reduces repeat-production risk."
+    },
+    {
+      icon: "certificate",
+      label: "Material Traceability",
+      title: "Material Certificates + Process Records",
+      text: "Material certificates, finishing records, and inspection data support traceability from prototype through production."
+    },
+    {
+      icon: "surface",
+      label: "Surface Control",
+      title: "Surface Roughness / Functional Testing",
+      text: "Surface finish, fit, and functional checks help components meet demanding application and assembly requirements."
+    }
+  ]
+});
+
+const mainIndustryConfigs = {
+  aerospace: {
+    materials: "aerospace",
+    usage: [
+      ["upload", "Rapid Prototype Iteration", "Validate flight-related brackets, housings, shafts, and fixtures quickly before production release."],
+      ["gears", "On-demand Manufacturing", "Move from prototype to low-volume aerospace parts with material traceability and inspection support."],
+      ["truck", "Custom Tooling & End-use Parts", "Machine flight-ready fasteners, engine housings, bearing housings, and precision assemblies to spec."]
+    ],
+    partsTitle: "High-Precision Aerospace CNC Machining Parts Made",
+    partsSubtitle: "Rapid, cost-effective high-precision CNC prototypes and low-volume production for aerospace.",
+    parts: [
+      ["Custom Electrical Connectors", "/wp-content/uploads/2025/12/avionics-connector-pins.jpg", "/custom-cnc-parts/electrical-connectors"],
+      ["Custom Bearing Housing", "/wp-content/uploads/2025/12/bearing-housings.jpg", "/custom-cnc-parts/bearing-housing"],
+      ["Motor Housing Machining", "/wp-content/uploads/2025/12/engine-housings.jpg", "/custom-cnc-parts/motor-housings"],
+      ["Custom Aerospace Fastener", "/wp-content/uploads/2025/12/fasteners.jpg", "/custom-cnc-parts/aerospace-fasteners"]
+    ],
+    resources: [
+      ["CNC Machining for Aerospace", "/blog/cnc-machining-aerospace", "/wp-content/uploads/2026/01/cnc-machining-aerospace.jpg", "CNC machining for aerospace employs multi-axis precision milling and turning to produce complex, lightweight components."],
+      ["CNC Turning and Milling Materials", "/blog/cnc-turning-and-milling-materials", "/wp-content/uploads/2025/12/cnc-turning-and-milling-materials.jpg", "A practical guide to CNC turning and milling materials used across precision manufacturing programs."],
+      ["Top Swiss Machining Materials", "/blog/swiss-machining-materials", "/wp-content/uploads/2025/12/swiss-machining-materials.jpg", "A material-focused look at Swiss machining options for small, precise, and repeatable components."]
+    ]
+  },
+  automotive: {
+    materials: "automotive",
+    usage: [
+      ["upload", "Rapid Prototype Iteration", "Validate engine, drivetrain, EV, and sensor components before tooling or production release."],
+      ["gears", "Efficient Production", "Support low-volume bridge production and repeatable batches for OEM and aftermarket programs."],
+      ["truck", "End-use Automotive Parts", "Machine shafts, injector components, housings, and precision hardware ready for assembly."]
+    ],
+    partsTitle: "High-Precision Automotive CNC Machining Parts Made",
+    partsSubtitle: "Rapid, cost-effective high-precision CNC prototypes and low-volume production for automotive.",
+    parts: [
+      ["CNC Machined Pins", "/wp-content/uploads/2026/09/cnc-shoulder-pins.jpg", "/custom-cnc-parts/cnc-machined-pins"],
+      ["Cylinder Heads", "/wp-content/uploads/2026/08/performance-racing-billet-cylinder-head-7075-5axis.jpg", "/custom-cnc-parts/cylinder-head-machining"],
+      ["Gearbox Housings", "/wp-content/uploads/2026/05/automotive-transmission-housing.jpg", "/custom-cnc-parts/gearbox-housing"],
+      ["EV Charging Pins", "/wp-content/uploads/2026/09/ev-power-contact-pins.jpg", "/custom-cnc-parts/precision-turned-ev-charging-pins"]
+    ],
+    resources: [
+      ["Automotive Swiss Machining", "/industries/automotive-swiss-machining", "/wp-content/uploads/2026/01/automotive-swiss-machining.jpg", "Explore Swiss machining for automotive sensor housings, shafts, pins, and electrical terminals."],
+      ["Precision Automotive Machining: What You Need to Know", "/blog/precision-automotive-machining", "/wp-content/uploads/2026/01/precision-automotive-machining.jpg", "Precision automotive machining helps produce accurate components for modern vehicle systems."],
+      ["Automotive Machining: Definition, Materials, Process & More", "/blog/automotive-machining", "/wp-content/uploads/2026/01/automotive-machining.jpg", "A practical overview of automotive machining for reliable, repeatable vehicle components."]
+    ]
+  },
+  "consumer-electronics": {
+    materials: "consumer-electronics",
+    usage: [
+      ["upload", "Rapid Prototyping", "Create functional prototypes quickly for product validation, DFM feedback, and design iteration."],
+      ["gears", "Low-Volume Production", "Produce compact electronics components in bridge quantities before full-scale launch."],
+      ["truck", "On-Demand Spare Parts", "Machine connector pins, camera housings, terminal posts, and repair parts when needed."]
+    ],
+    partsTitle: "High-Precision Consumer Electronics CNC Machining Parts Made",
+    partsSubtitle: "Explore enclosures, heat sinks, contact pins, and RF connectors. Select a product to review machining options and request a quote.",
+    parts: [
+      ["CNC Metal Enclosures", "/wp-content/uploads/2026/01/6061-aluminum-cnc-machining-enclosure-case.jpg", "/custom-cnc-parts/metal-enclosures"],
+      ["CNC Machined Heat Sinks", "/wp-content/uploads/2026/06/cnc-computer-heat-sink.jpg", "/custom-cnc-parts/heat-sinks"],
+      ["Pogo Contact Pins", "/wp-content/uploads/2026/09/pogo-electronic-probe-pins.jpg", "/custom-cnc-parts/pogo-contact-pins"],
+      ["RF Connectors", "/wp-content/uploads/2026/05/rf-coaxial-connectors.jpg", "/custom-cnc-parts/rf-connectors"]
+    ],
+    resources: [
+      ["Electronics Machining - What Is It, Process, Types and Benefits", "/blog/electronics-machining", "/wp-content/uploads/2026/01/electronic-machining.jpg", "Connector machining supports reliable power, data, and signal transfer in compact electronic assemblies."],
+      ["CNC Turning and Milling: The Ultimate Guide", "/blog/cnc-turning-and-milling", "/wp-content/uploads/2025/12/cnc-turning-and-milling.png", "A guide to CNC turning and milling for precision production and prototype components."],
+      ["What Is Swiss Machining? The Complete Guide", "/blog/swiss-machining", "/wp-content/uploads/2025/12/swiss-machining.png", "Swiss machining is suited to small, precise parts used in demanding electronic applications."]
+    ]
+  },
+  defense: {
+    materials: "defense",
+    usage: [
+      ["upload", "Prototype Mission Hardware", "Validate defense brackets, pins, rods, and housings with controlled inspection data."],
+      ["gears", "Secure Low-Volume Runs", "Support precision production for defense components with traceability and process control."],
+      ["truck", "End-use Defense Parts", "Machine firing pins, guidance hardware, housings, and fittings for demanding environments."]
+    ],
+    partsTitle: "High-Precision Defense CNC Machining Parts Made",
+    partsSubtitle: "Precision connector contacts, RF hardware, sensor housings and protective enclosures for defense electronics and instrumentation.",
+    parts: [
+      ["Connector Pins", "/wp-content/uploads/2026/10/defense-electronics-connector-pin-single-v1.webp", "/custom-cnc-parts/connector-pins"],
+      ["RF Connectors", "/wp-content/uploads/2026/10/defense-electronics-rf-connector-single-v1.webp", "/custom-cnc-parts/rf-connectors"],
+      ["Sensor Housings", "/wp-content/uploads/2026/10/defense-electronics-sensor-housing-single-v1.webp", "/custom-cnc-parts/sensor-housings"],
+      ["CNC Metal Enclosures", "/wp-content/uploads/2026/10/defense-electronics-metal-enclosure-single-v1.webp", "/custom-cnc-parts/metal-enclosures"]
+    ],
+    resources: [
+      ["CNC Milling and Turning for Defense", "/blog/cnc-milling-and-turning-defense", "/wp-content/uploads/2026/01/cnc-milling-and-turning-defense.jpg", "Understand process selection, material requirements and production planning for CNC milled and turned defense components."],
+      ["Precision Aerospace CNC Machined Parts", "/blog/precision-aerospace-cnc-machined-parts", "/wp-content/uploads/2026/03/cmm-inspection.webp", "Review materials, tolerances, surface quality and DFM considerations for precision aerospace components and demanding assemblies."],
+      ["What Is Swiss Machining? The Complete Guide", "/blog/swiss-machining", "/wp-content/uploads/2026/01/automotive-swiss-machining.jpg", "Explore sliding-headstock machining, guide bushings, material options and design considerations for small, complex precision components."]
+    ]
+  },
+  medical: {
+    materials: "medical",
+    usage: [
+      ["upload", "Rapid Prototyping", "Support early medical device prototypes with dimensional feedback and material traceability."],
+      ["gears", "Production on Demand", "Machine low-volume medical parts with controlled documentation and repeatable quality."],
+      ["truck", "Compliance Support", "Support medical connectors, orthopedic parts, and instrument components with inspection records."]
+    ],
+    partsTitle: "High-Precision Medical CNC Machining Parts Made",
+    partsSubtitle: "Rapid, cost-effective high-precision CNC prototypes and low-volume production for medical.",
+    parts: [
+      ["Bone Plate", "/wp-content/uploads/2025/12/bone-plate.jpg", "/custom-cnc-parts/medical-machining-parts"],
+      ["Bone Screw", "/wp-content/uploads/2025/12/bone-screw.jpg", "/custom-cnc-parts/titanium-swiss-screw-machined-parts"],
+      ["Medical Connector", "/wp-content/uploads/2025/12/medical-connector.jpg", "/custom-cnc-parts/medical-machining-parts"],
+      ["Orthopedic Pin", "/wp-content/uploads/2025/12/orthopedic-pin.jpg", "/custom-cnc-parts/medical-device-pins"]
+    ],
+    resources: [
+      ["Medical Swiss Machining: The Complete Guide", "/blog/medical-swiss-machining", "/wp-content/uploads/2026/01/medical-swiss-machining.jpg", "Swiss machining supports precise small medical parts that directly affect device performance."],
+      ["Medical CNC Machining: The Ultimate Guide", "/blog/medical-cnc-machining", "/wp-content/uploads/2026/01/medical-cnc-machining.jpg", "Medical CNC machining is used for high-quality components such as implants, surgical tools, and diagnostic parts."],
+      ["Precision Medical Machining: The Ultimate Guide", "/blog/precision-medical-machining", "/wp-content/uploads/2026/01/precision-medical-machining.jpg", "Precision medical machining requires reliable processes, materials, and documentation."]
+    ]
+  },
+  "oil-gas": {
+    materials: "oil-gas",
+    usage: [
+      ["upload", "Prototype Harsh-Service Parts", "Validate fittings, housings, and instrumentation components before field-ready production."],
+      ["gears", "Pressure-Ready Production", "Machine corrosion-resistant parts for drilling, refining, and energy equipment programs."],
+      ["truck", "Replacement & Spare Parts", "Support urgent oil and gas maintenance parts where downtime and reliability matter."]
+    ],
+    partsTitle: "High-Precision Oil & Gas CNC Machining Parts Made",
+    partsSubtitle: "Rapid, cost-effective high-precision CNC prototypes and low-volume production for oil and gas.",
+    parts: [
+      ["Compression Tube Fittings", "/wp-content/uploads/2026/09/compression-tube-fitting.jpg", "/custom-cnc-parts/compression-tube-fitting"],
+      ["Hydraulic Fittings", "/wp-content/uploads/2026/05/hydraulic-fittings.jpg", "/custom-cnc-parts/hydraulic-fittings"],
+      ["Stainless Steel Pipe Flanges", "/wp-content/uploads/2026/08/custom-stainless-pipe-flange-weld-neck-316l-asme-b165.jpg", "/custom-cnc-parts/custom-pipe-flanges"],
+      ["Oil & Gas Machining Components", "/wp-content/uploads/2026/05/oil-gas-components.jpg", "/custom-cnc-parts/oil-gas-machining-components"]
+    ],
+    resources: [
+      ["Oil and Gas Plastic Machining: A Comprehensive Guide", "/blog/oil-and-gas-plastic-machining", "/wp-content/uploads/2026/01/oil-and-gas-plastic-machining.jpg", "Oil and gas plastic machining supports precision parts for demanding equipment environments."],
+      ["Oil and Gas Machining: A Comprehensive Guide", "/blog/oil-and-gas-machining", "/wp-content/uploads/2026/01/oil-and-gas-machining.jpg", "Oil and gas CNC machining provides precision, repeatability, and durability for demanding systems."],
+      ["What Is Swiss Machining? The Complete Guide", "/blog/swiss-machining", "/wp-content/uploads/2025/12/swiss-machining.png", "Swiss machining supports small, complex parts used in demanding industrial applications."]
+    ]
+  },
+  railway: {
+    materials: "railway",
+    usage: [
+      ["upload", "Rail Component Prototypes", "Validate connector bodies, shafts, housings, and rail hardware before batch production."],
+      ["gears", "Low-Volume Bridge Production", "Support replacement part demand, upgrades, and repeatable rail maintenance programs."],
+      ["truck", "End-use Railway Parts", "Machine robust railway components designed for vibration, wear, and outdoor environments."]
+    ],
+    partsTitle: "High-Precision Railway CNC Machining Parts Made",
+    partsSubtitle: "Rapid, cost-effective high-precision CNC prototypes and low-volume production for railway.",
+    parts: [
+      ["Hydraulic Connector Body", "/wp-content/uploads/2025/12/hydraulic-connector-body.jpg"],
+      ["Sensor Housing Pipe", "/wp-content/uploads/2025/12/sensor-housing-pipe.jpg"],
+      ["Signal Shaft", "/wp-content/uploads/2025/12/signal-shaft.jpg"],
+      ["Valve Spool", "/wp-content/uploads/2025/12/valve-spool.jpg"]
+    ],
+    resources: [
+      ["CNC Machining Quality Testing", "/blog/cnc-machining-quality-testing", "/wp-content/uploads/2026/03/cnc-quality-testing-cmm-inspection.webp", "Plan dimensional checks, material traceability, and inspection records for precision railway components."],
+      ["Top 10 Railroads CNC Machining Manufacturers", "/blog/railroads-cnc-machining-companies", "/wp-content/uploads/2026/01/railroads-cnc-machining-companies.jpg", "A practical overview of rail machining suppliers and quality considerations."],
+      ["Automotive Machining: Definition, Materials, Process & More", "/blog/automotive-machining", "/wp-content/uploads/2026/01/automotive-machining.jpg", "A machining overview relevant to precision transportation and mechanical components."]
+    ]
+  }
+};
+
+const createIndustryDetail = (config, industryName) => ({
+  usage: {
+    title: "How Do You Use Our Machining Services",
+    cards: config.usage.map(([icon, title, text]) => ({ icon, title, text }))
+  },
+  quality: commonQualityCards(industryName),
+  materials: materialProfiles[config.materials],
+  parts: {
+    title: config.partsTitle,
+    subtitle: config.partsSubtitle,
+    items: config.parts.map(([title, image, href]) => ({ title, image, href }))
+  },
+  resources: config.resources.map(([title, href, image, excerpt]) => ({ title, href, image, excerpt }))
+});
+
+const industryDetail = withIndustryProductLinks(page.slug, specialization?.detail || (page.slug === "semiconductor"
+  ? semiconductorDetail
+  : mainIndustryConfigs[page.slug]
+    ? createIndustryDetail(mainIndustryConfigs[page.slug], page.hero.title)
+    : null));
+const materialVisuals = industryDetail?.materials.items.map(getIndustryMaterialVisual) || [];
+const materialLinkProcess = page.slug.endsWith("-swiss-machining") ? "swiss" : "cnc";
+const materialLinks = industryDetail?.materials.items.map((material) =>
+  getIndustryMaterialLinks(material, { process: materialLinkProcess })
+) || [];
+---
+<BaseLayout seo={page.seo}>
+  <PageHero
+    title={page.hero.title}
+    image={page.hero.image}
+    crumbs={[{ label: "Industries", href: "/industries" }, ...(specialization?.parent ? [specialization.parent] : []), { label: page.hero.title }]}
+    description={page.hero.description}
+  />
+
+  {industryDetail ? (
+    <div class="industry-detail" data-linked-products={hasIndustryProductLinks(page.slug) ? "true" : undefined}>
+      <section class="detail-section usage-block" aria-labelledby="usage-title">
+        <div class="detail-container">
+          <div class="usage-panel">
+            <h2 id="usage-title">{industryDetail.usage.title}</h2>
+            <div class="usage-grid">
+              {industryDetail.usage.cards.map((card) => (
+                <article class="usage-card">
+                  <div class="usage-icon" aria-hidden="true">
+                    {card.icon === "upload" && (
+                      <svg viewBox="0 0 64 64"><path d="M17 43v10h30V43"></path><path d="M32 47V12"></path><path d="M19 25 32 12l13 13"></path></svg>
+                    )}
+                    {card.icon === "gears" && (
+                      <svg viewBox="0 0 64 64"><circle cx="25" cy="32" r="11"></circle><path d="M25 14v6M25 44v6M7 32h6M37 32h6M12.3 19.3l4.3 4.3M33.4 40.4l4.3 4.3M12.3 44.7l4.3-4.3M33.4 23.6l4.3-4.3"></path><circle cx="46" cy="21" r="7"></circle><path d="M46 9v5M46 28v5M34 21h5M53 21h5M37.5 12.5l3.5 3.5M51 26l3.5 3.5M37.5 29.5 41 26M51 16l3.5-3.5"></path></svg>
+                    )}
+                    {card.icon === "truck" && (
+                      <svg viewBox="0 0 64 64"><path d="M8 18h31v23H8z"></path><path d="M39 26h10l7 8v7H39z"></path><path d="M13 41a5 5 0 1 0 10 0M44 41a5 5 0 1 0 10 0"></path><path d="M23 41h21M14 25h12M14 32h18"></path></svg>
+                    )}
+                  </div>
+                  <h3>{card.title}</h3>
+                  <p>{card.text}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section detail-services" aria-labelledby="services-title">
+        <h2 id="services-title">High-Precision CNC Machining On-Demand</h2>
+        <div class="service-grid">
+          <article class="link-card service-link-card">
+            <img src="/wp-content/uploads/2025/12/swiss-machining-service-540x260-1.png" alt="Swiss Machining" loading="lazy" />
+            <h3>Swiss Machining</h3>
+            <p>Ultra-precise, small-diameter complex parts machined from bar stock in a single setup with micron-level tolerances.</p>
+            {page.slug === "defense" && (
+              <p>For connector contacts, sensor bodies and small turned support hardware, explore <a href="/industries/defense-swiss-machining">Defense Swiss Machining</a>.</p>
+            )}
+            <div class="service-card-actions">
+              <a class="service-card-primary" href="/cnc-machining-quote">Get Quote</a>
+              <a class="service-card-secondary" href="/services/swiss-machining">Swiss Machining Services</a>
+            </div>
+          </article>
+          <article class="link-card service-link-card">
+            <img src="/wp-content/uploads/2025/12/cnc-turning-and-milling-services-540x260-1.png" alt="CNC Turning and Milling" loading="lazy" />
+            <h3>CNC Turning and Milling</h3>
+            <p>Live tooling combines lathe and mill capabilities for cylindrical features, housings, fixtures, and precision assemblies.</p>
+            <div class="service-card-actions">
+              <a class="service-card-primary" href="/cnc-machining-quote">Get Quote</a>
+              <a class="service-card-secondary" href="/services/cnc-turning-and-milling">CNC Turning and Milling Services</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="detail-section quality-block" aria-labelledby="quality-title">
+        <div class="quality-container">
+          <h2 id="quality-title">{industryDetail.quality.title}</h2>
+          <div class="quality-grid">
+            {industryDetail.quality.cards.map((card, index) => (
+              <article class="quality-card">
+                <div class="quality-card-top">
+                  <span class="quality-icon" aria-hidden="true">
+                    {card.icon === "cmm" && <svg viewBox="0 0 48 48"><path d="M8 40h32"></path><path d="M13 36h22"></path><path d="M16 33V13h16v20"></path><path d="M20 17h8M20 23h8M20 29h5"></path><path d="M34 12l5-5M38 16l5-5"></path></svg>}
+                    {card.icon === "fai" && <svg viewBox="0 0 48 48"><path d="M15 9h18l6 6v24H15z"></path><path d="M33 9v7h6"></path><path d="M20 22h14M20 28h14M20 34h9"></path><path d="M10 16h5M10 23h5M10 30h5"></path></svg>}
+                    {card.icon === "certificate" && <svg viewBox="0 0 48 48"><path d="M12 8h24v32H12z"></path><path d="M18 17h12M18 23h12M18 29h8"></path><path d="M31 33l3 3 6-8"></path></svg>}
+                    {card.icon === "surface" && <svg viewBox="0 0 48 48"><path d="M10 34c6-6 13-6 20 0s13 6 18 0"></path><path d="M16 38c7-4 14-4 22 0"></path><path d="M30 8l8 8-12 12-8-8z"></path><path d="M34 12l4-4 4 4-4 4"></path></svg>}
+                  </span>
+                  <span class="quality-index">{String(index + 1).padStart(2, "0")}</span>
+                </div>
+                <p class="quality-label">{card.label}</p>
+                <h3>{card.title}</h3>
+                <p>{card.text}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="detail-section materials-block" aria-labelledby="materials-title">
+        <div class="detail-container">
+          <div class="materials-panel">
+            <div class="materials-header">
+              <h2 id="materials-title">{industryDetail.materials.title}</h2>
+              <p>{industryDetail.materials.subtitle}</p>
+            </div>
+            <div class="materials-tabs" aria-label={`Recommended ${page.hero.title} materials`}>
+              {industryDetail.materials.items.map((material, index) => (
+                <input class="material-tab-input" type="radio" id={`industry-material-${page.slug}-${index}`} name={`industry-material-${page.slug}`} checked={index === 0} />
+              ))}
+              <div class="materials-tab-list" role="tablist" aria-label="Material options">
+                {industryDetail.materials.items.map((material, index) => (
+                  <label class="material-tab-label" id={`industry-material-label-${page.slug}-${index}`} for={`industry-material-${page.slug}-${index}`} role="tab">
+                    {material.tab}
+                  </label>
+                ))}
+              </div>
+              <div class="materials-tab-panels">
+                {industryDetail.materials.items.map((material, index) => (
+                  <article class="material-tab-panel" aria-labelledby={`industry-material-label-${page.slug}-${index}`}>
+                    <div class="material-copy">
+                      <p class="material-kicker">{material.badge}</p>
+                      <h3>{material.name}</h3>
+                      <p class="material-spec">{material.spec}</p>
+                      <p class="material-summary">{material.summary}</p>
+                      <ul class="material-facts" aria-label={`${material.name} machining details`}>
+                        {material.facts.map(([label, value]) => (
+                          <li><span>{label}</span><strong>{value}</strong></li>
+                        ))}
+                      </ul>
+                      <div class="material-links">
+                        {materialLinks[index].map((link) => (
+                          <a class="material-link" href={link.href}>{link.label}</a>
+                        ))}
+                      </div>
+                    </div>
+                    <div class="material-media" data-material-visual={materialVisuals[index].key}>
+                      {materialVisuals[index].images.length ? (
+                        <div class:list={["material-image-gallery", { "material-image-gallery--pair": materialVisuals[index].images.length > 1 }]}>
+                          {materialVisuals[index].images.map((image) => (
+                            <figure>
+                              <img src={image.src} alt={image.alt} width="640" height="480" loading="lazy" decoding="async" />
+                              <figcaption>{image.caption}</figcaption>
+                            </figure>
+                          ))}
+                        </div>
+                      ) : (
+                        <div class="material-reference">
+                          <span class="material-reference-symbol" aria-hidden="true">{material.icon}</span>
+                          <p>Material reference</p>
+                          <strong>{material.name}</strong>
+                        </div>
+                      )}
+                      <div class="material-chip" aria-hidden="true">
+                        <span>{material.icon}</span>
+                        <strong>{material.spec}</strong>
+                      </div>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+            <div class="finishes-panel">
+              <h3>Specialized Surface Finishes</h3>
+              <div class="finishes-grid">
+                {industryDetail.materials.finishes.map((finish) => (
+                  <span class:list={["finish-tag", finish.highlight && "highlight"]}>{finish.label}</span>
+                ))}
+              </div>
+              {industryDetail.materials.finishesNote && <p class="industry-finish-note">{industryDetail.materials.finishesNote}</p>}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class:list={["detail-section parts-block", page.slug === "semiconductor" && "parts-block--semiconductor", page.slug === "oil-gas" && "parts-block--oil-gas", page.slug === "consumer-electronics" && "parts-block--consumer-electronics", page.slug === "automotive" && "parts-block--automotive"]} aria-labelledby="parts-title">
+        <div class="detail-container parts-container" data-parts-showcase>
+          <h2 id="parts-title" class="detail-section-title">{industryDetail.parts.title}</h2>
+          <p class="detail-section-subtitle">{industryDetail.parts.subtitle}</p>
+          {industryDetail.parts.layout === "grid" ? (
+            <>
+              <div class="industry-component-grid" id="satellite-components">
+                {industryDetail.parts.items.map((part) => (
+                  <article class="industry-component-card">
+                    {part.href ? (
+                      <a class="industry-component-image industry-component-image-link part-image-link" href={part.href} aria-label={part.title}>
+                        <img src={part.image} alt={part.title} loading="lazy" />
+                      </a>
+                    ) : (
+                      <div class="industry-component-image"><img src={part.image} alt={part.title} loading="lazy" /></div>
+                    )}
+                    <div class="industry-component-copy">
+                      <h3>{part.href ? <a class="part-title-link" href={part.href}>{part.title}<span aria-hidden="true"> →</span></a> : part.title}</h3>
+                      <p>{part.text}</p>
+                    </div>
+                  </article>
+                ))}
+              </div>
+              {industryDetail.parts.related?.length > 0 && (
+                <div class="industry-component-related">
+                  <h3>{industryDetail.parts.relatedTitle}</h3>
+                  <div class="industry-component-links">
+                    {industryDetail.parts.related.map((part) => (
+                      <a href={part.href}><strong>{part.title}<span aria-hidden="true"> →</span></strong><span>{part.text}</span></a>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </>
+          ) : (
+            <>
+          <div class="parts-carousel">
+            {industryDetail.parts.items.length > 3 && (
+              <button class="parts-nav parts-nav--prev" type="button" aria-label="Previous parts" data-parts-prev>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg>
+              </button>
+            )}
+            <div class="parts-track" data-parts-track tabindex="0" aria-label={`${page.hero.title} CNC machined parts`}>
+              {industryDetail.parts.items.map((part) => (
+                <figure class="part-card">
+                  {part.href ? (
+                    <a class="part-image-frame part-image-link" href={part.href} aria-label={part.title}>
+                      <img src={part.image} alt={part.title} loading="lazy" />
+                    </a>
+                  ) : (
+                    <div class="part-image-frame">
+                      <img src={part.image} alt={part.title} loading="lazy" />
+                    </div>
+                  )}
+                  <figcaption>{part.href ? <a class="part-title-link" href={part.href}>{part.title}<span aria-hidden="true"> →</span></a> : part.title}</figcaption>
+                </figure>
+              ))}
+            </div>
+            {industryDetail.parts.items.length > 3 && (
+              <button class="parts-nav parts-nav--next" type="button" aria-label="Next parts" data-parts-next>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6"></path></svg>
+              </button>
+            )}
+          </div>
+          {industryDetail.parts.items.length > 3 && (
+            <div class="parts-dots" aria-label="Parts carousel pagination">
+              {industryDetail.parts.items.map((part, index) => (
+                <button
+                  class:list={["parts-dot", index === 0 && "is-active"]}
+                  type="button"
+                  aria-label={`Show ${part.title}`}
+                  aria-current={index === 0 ? "true" : "false"}
+                  data-parts-dot={index}
+                ></button>
+              ))}
+            </div>
+          )}
+            </>
+          )}
+          {industryDetail.parts.link && <p class="detail-section-subtitle"><a href={industryDetail.parts.link.href}>{industryDetail.parts.link.label}<span aria-hidden="true"> →</span></a></p>}
+        </div>
+      </section>
+
+      <section class="detail-section resources-block" aria-labelledby="resources-title">
+        <div class="learning-container">
+          <h2 id="resources-title" class="section-title">Additional Resources</h2>
+          <div class="posts-container">
+            {industryDetail.resources.map((post) => (
+              <article class="post-card">
+                <a class="post-thumbnail-link" href={post.href} tabindex="-1">
+                  <img class="post-thumbnail" src={post.image} alt={post.title} loading="lazy" />
+                </a>
+                <div class="post-text">
+                  <h3 class="post-title"><a href={post.href}>{post.title}</a></h3>
+                  <div class="post-excerpt"><p>{post.excerpt}</p></div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
+  ) : (
+    <>
+      <section class="section">
+        <h2>High-Precision CNC Machining On-Demand</h2>
+        <div class="service-grid">
+          <article class="link-card service-link-card">
+            <img src="/wp-content/uploads/2025/12/swiss-machining-service-540x260-1.png" alt="Swiss Machining" loading="lazy" />
+            <h3>Swiss Machining</h3>
+            <p>Precision sliding-headstock CNC machining supports small, complex, high-repeatability parts for demanding industry applications.</p>
+            <div class="service-card-actions">
+              <a class="service-card-primary" href="/cnc-machining-quote">Get Quote</a>
+              <a class="service-card-secondary" href="/services/swiss-machining">Learn More</a>
+            </div>
+          </article>
+          <article class="link-card service-link-card">
+            <img src="/wp-content/uploads/2025/12/cnc-turning-and-milling-services-540x260-1.png" alt="CNC Turning and Milling" loading="lazy" />
+            <h3>CNC Turning and Milling</h3>
+            <p>Multi-axis turning and milling help deliver prototypes and production components with controlled tolerances and inspection support.</p>
+            <div class="service-card-actions">
+              <a class="service-card-primary" href="/cnc-machining-quote">Get Quote</a>
+              <a class="service-card-secondary" href="/services/cnc-turning-and-milling">Learn More</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      {sections.map((section, index) => (
+        <section class={`section ${index % 2 === 0 && section.image ? "split industry-section" : "industry-section"}`}>
+          <div>
+            <h2>{section.heading}</h2>
+            {section.text && <p class="section__intro industry-intro">{section.text}</p>}
+            {section.items?.length > 0 && (
+              <ul class="check-list">{section.items.map((item) => <li>{item}</li>)}</ul>
+            )}
+          </div>
+          {index % 2 === 0 && section.image && <img src={section.image} alt={section.heading} loading="lazy" />}
+        </section>
+      ))}
+
+      {gallery.length > 0 && (
+        <section class="section">
+          <h2>{page.galleryHeading}</h2>
+          <div class="media-grid product-media-grid">
+            {gallery.map((item) => (
+              <figure class="media-card product-media-card">
+                <img src={item.image} alt={item.alt || item.name} loading="lazy" />
+                <figcaption>{item.name}</figcaption>
+              </figure>
+            ))}
+          </div>
+        </section>
+      )}
+    </>
+  )}
+
+  {consolidation && (
+    <section class="section industry-consolidation" aria-labelledby="industry-applications-title">
+      <h2 id="industry-applications-title">Component Applications & Manufacturing Requirements</h2>
+      <div class="industry-application-grid">
+        {consolidation.applications.map(([title, text, link]) => (
+          <article><h3>{title}</h3><p>{text}</p>{link && <a class="industry-application-link" href={link.href}>{link.label}<span aria-hidden="true"> →</span></a>}</article>
+        ))}
+      </div>
+      {consolidation.production && (
+        <section aria-labelledby="robotics-production-title">
+          <h2 id="robotics-production-title">{consolidation.production.title}</h2>
+          <p>{consolidation.production.description}</p>
+          <div class="industry-application-grid">
+            {consolidation.production.items.map(([title, text]) => (
+              <article><h3>{title}</h3><p>{text}</p></article>
+            ))}
+          </div>
+        </section>
+      )}
+      <h2 id="industry-faq-title">Frequently Asked Questions</h2>
+      <div class="industry-faq" aria-labelledby="industry-faq-title">
+        {consolidation.faqs.map(([question, answer]) => (
+          <details><summary>{question}</summary><p>{answer}</p></details>
+        ))}
+      </div>
+    </section>
+  )}
+
+  {specialization?.faqs?.length > 0 && <IndustryFaq items={specialization.faqs} title={specialization.faqTitle} id="satellite-machining-faq" />}
+
+  <QuoteCta id={`industry-${sourcePage.slug}-quote`} idPrefix={`industry-${sourcePage.slug}-quote-form`} formName={`${page.title} Industry Enquiry`} kicker="INDUSTRY COMPONENTS" title={`Discuss ${page.title} machining requirements`} description="Share the part drawing, material, quantity and application requirements for a project-specific review." />
+  <script>
+    const setupPartsShowcases = () => {
+      document.querySelectorAll("[data-parts-showcase]").forEach((showcase) => {
+        const track = showcase.querySelector("[data-parts-track]");
+        const prev = showcase.querySelector("[data-parts-prev]");
+        const next = showcase.querySelector("[data-parts-next]");
+        const dots = [...showcase.querySelectorAll("[data-parts-dot]")];
+
+        if (!(track instanceof HTMLElement) || dots.length === 0) return;
+
+        const cards = [...track.querySelectorAll(".part-card")];
+        const getStep = () => {
+          const firstCard = cards[0];
+          if (!(firstCard instanceof HTMLElement)) return track.clientWidth;
+          const styles = window.getComputedStyle(track);
+          const gap = Number.parseFloat(styles.columnGap || styles.gap || "0") || 0;
+          return firstCard.getBoundingClientRect().width + gap;
+        };
+
+        const getActiveIndex = () => {
+          const step = getStep();
+          if (!step) return 0;
+          return Math.max(0, Math.min(dots.length - 1, Math.round(track.scrollLeft / step)));
+        };
+
+        const update = () => {
+          const activeIndex = getActiveIndex();
+          const maxScrollLeft = Math.max(0, track.scrollWidth - track.clientWidth - 2);
+          dots.forEach((dot, index) => {
+            const isActive = index === activeIndex;
+            dot.classList.toggle("is-active", isActive);
+            dot.setAttribute("aria-current", isActive ? "true" : "false");
+          });
+          if (prev instanceof HTMLButtonElement) prev.disabled = track.scrollLeft <= 2;
+          if (next instanceof HTMLButtonElement) next.disabled = track.scrollLeft >= maxScrollLeft;
+        };
+
+        const scrollToIndex = (index) => {
+          track.scrollTo({ left: getStep() * index, behavior: "smooth" });
+        };
+
+        prev?.addEventListener("click", () => scrollToIndex(getActiveIndex() - 1));
+        next?.addEventListener("click", () => scrollToIndex(getActiveIndex() + 1));
+        dots.forEach((dot) => {
+          dot.addEventListener("click", () => {
+            const index = Number(dot.getAttribute("data-parts-dot") || "0");
+            scrollToIndex(index);
+          });
+        });
+        track.addEventListener("scroll", () => window.requestAnimationFrame(update), { passive: true });
+        window.addEventListener("resize", update);
+        update();
+      });
+    };
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", setupPartsShowcases, { once: true });
+    } else {
+      setupPartsShowcases();
+    }
+  </script>
+</BaseLayout>

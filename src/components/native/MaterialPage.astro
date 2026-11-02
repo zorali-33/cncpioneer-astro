@@ -1,0 +1,251 @@
+---
+import MaterialDrawingGuide from "./MaterialDrawingGuide.astro";
+import ProcurementChecklist from "./ProcurementChecklist.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import QuoteCta from "./QuoteCta.astro";
+import PageHero from "./PageHero.astro";
+import FaqList from "./FaqList.astro";
+
+const {
+  seo,
+  hero,
+  material,
+  parts,
+  capabilitiesHeading,
+  faqs,
+  procurement,
+  learningLinks = [],
+  learningPosts: reviewedLearningPosts,
+  capabilityCards: reviewedCapabilities,
+} = Astro.props;
+
+const materialName = hero.title.replace(/\s+Service$/i, "");
+const partsIntro =
+  material.partsIntro ??
+  `${materialName} is suitable for a wide range of CNC machining applications. The suitability depends on the material's machinability. Here are the parts we can provide for CNC Machining.`;
+const visibleParts = Math.min(parts.length, 3);
+const partsBasis =
+  visibleParts <= 1
+    ? "100%"
+    : visibleParts === 2
+      ? "calc((100% - var(--parts-gap)) / 2)"
+      : "calc((100% - (var(--parts-gap) * 2)) / 3)";
+
+const capabilityCards = reviewedCapabilities || [
+  {
+    title: "Swiss Machining",
+    image: "/wp-content/uploads/2025/12/swiss-machining-service-540x260-1.png",
+    text:
+      "Swiss machining: ultra-precise, small-diameter complex parts machined from bar stock in a single setup - with micron-level tolerances and zero secondary operations.",
+    serviceLabel: "Swiss Machining Services",
+    serviceHref: "/services/swiss-machining",
+  },
+  {
+    title: "CNC Turning and Milling",
+    image: "/wp-content/uploads/2025/12/cnc-turning-and-milling-services-540x260-1.png",
+    text:
+      "CNC turning with live tooling combines both lathe and mill capabilities to machine parts with cylindrical features from metal rod stock.",
+    serviceLabel: "CNC Turning and Milling Services",
+    serviceHref: "/services/cnc-turning-and-milling",
+  },
+];
+
+const learningPosts = reviewedLearningPosts || [
+  {
+    title: "What is Swiss Machining?",
+    href: "/blog/swiss-machining",
+    image: "/wp-content/uploads/2025/12/swiss-machining.png",
+    alt: "What is Swiss Machining?",
+    excerpt:
+      "Swiss machining uses a sliding headstock and guide bushing, unlike standard lathes, to support material while the tool remains stationary.",
+  },
+  {
+    title: "What is CNC Turning and Milling?",
+    href: "/blog/cnc-lathe-vs-mill",
+    image: "/wp-content/uploads/2025/12/cnc-turning-and-milling.png",
+    alt: "What is CNC Turning and Milling?",
+    excerpt:
+      "In CNC milling, the tool moves while the material is stationary. In CNC turning, the material spins while the tool moves.",
+  },
+  {
+    title: "CNC Machining Materials: A Comprehensive Guide",
+    href: "/blog/cnc-machining-materials",
+    image: "/wp-content/uploads/2025/12/cnc-machining-materials.png",
+    alt: "CNC Machining Materials",
+    excerpt:
+      "CNC machining can be applied to a wide variety of materials, including but not limited to metals, plastics, and composites.",
+  },
+];
+---
+<BaseLayout seo={seo}>
+  <PageHero
+    title={hero.title}
+    image={hero.image}
+    crumbs={[{ label: "Materials", href: "/materials" }, { label: hero.title }]}
+    description={hero.description}
+    ctaLabel={hero.ctaLabel}
+  />
+
+  <section class="section material-intro">
+    <div class="material-intro__copy">
+      <h2>{material.heading}</h2>
+      <p>{material.description}</p>
+      <ul class="check-list">{material.bullets.map((item) => <li>{item}</li>)}</ul>
+    </div>
+    <div class="material-intro__media">
+      <img src={material.image} alt={material.alt} loading="lazy" />
+    </div>
+  </section>
+
+  <MaterialDrawingGuide sections={material.reviewSections} />
+  <ProcurementChecklist details={procurement} />
+
+  <section class="section material-parts">
+    <h2>{material.partsHeading}</h2>
+    {partsIntro && <p class="section__intro">{partsIntro}</p>}
+    <div class="material-parts__carousel" data-material-parts-carousel>
+      <button class="material-parts__arrow material-parts__arrow--prev" type="button" aria-label="Previous parts" aria-controls="material-parts-viewport" data-parts-prev hidden>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6" /></svg>
+      </button>
+      <div class="material-parts__viewport" id="material-parts-viewport" role="region" aria-roledescription="carousel" aria-label={material.partsHeading} tabindex="0">
+        <div class="material-parts__track" style={`--parts-basis: ${partsBasis}`}>
+          {parts.map((part) => part.href ? (
+            <a class="material-part material-part--linked" href={part.href} aria-label={part.name}>
+              <figure class="material-part__content">
+                <img src={part.image} alt={part.alt || part.name} loading="lazy" />
+                <figcaption>{part.name} <span aria-hidden="true">→</span></figcaption>
+              </figure>
+            </a>
+          ) : (
+            <figure class="material-part">
+              <img src={part.image} alt={part.alt || part.name} loading="lazy" />
+              <figcaption>{part.name}</figcaption>
+            </figure>
+          ))}
+        </div>
+      </div>
+      <button class="material-parts__arrow material-parts__arrow--next" type="button" aria-label="Next parts" aria-controls="material-parts-viewport" data-parts-next hidden>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 6 6 6-6 6" /></svg>
+      </button>
+    </div>
+  </section>
+
+  <script is:inline>
+    (() => {
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+      const carousels = document.querySelectorAll("[data-material-parts-carousel]");
+
+      carousels.forEach((carousel) => {
+        const track = carousel.querySelector(".material-parts__track");
+        const viewport = carousel.querySelector(".material-parts__viewport");
+        const prev = carousel.querySelector("[data-parts-prev]");
+        const next = carousel.querySelector("[data-parts-next]");
+        if (!track || !viewport || !prev || !next) return;
+
+        const update = () => {
+          const maxScroll = viewport.scrollWidth - viewport.clientWidth;
+          const scrollable = maxScroll > 2;
+          carousel.classList.toggle("is-scrollable", scrollable);
+          prev.hidden = next.hidden = !scrollable;
+          prev.disabled = viewport.scrollLeft <= 2;
+          next.disabled = viewport.scrollLeft >= maxScroll - 2;
+        };
+        const move = (direction) => {
+          const slide = track.firstElementChild;
+          if (!slide) return;
+          const gap = parseFloat(window.getComputedStyle(track).columnGap) || 0;
+          viewport.scrollBy({
+            left: direction * (slide.getBoundingClientRect().width + gap),
+            behavior: reduceMotion.matches ? "auto" : "smooth",
+          });
+        };
+        prev.addEventListener("click", () => move(-1));
+        next.addEventListener("click", () => move(1));
+        viewport.addEventListener("scroll", update, { passive: true });
+        viewport.addEventListener("keydown", (event) => {
+          if (event.target !== viewport || event.altKey || event.ctrlKey || event.metaKey) return;
+          if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
+            event.preventDefault();
+            move(event.key === "ArrowLeft" ? -1 : 1);
+          }
+        });
+        new ResizeObserver(update).observe(viewport);
+        update();
+      });
+    })();
+  </script>
+
+  <section class="section material-capabilities">
+    <h2>{capabilitiesHeading}</h2>
+    <div class="material-service-grid">
+      {capabilityCards.map((card) => (
+        <article class="material-service-card">
+          <a class="material-service-card__image" href={card.serviceHref} aria-label={card.title}>
+            <img src={card.image} alt={card.title} loading="lazy" />
+          </a>
+          <div class="material-service-card__content">
+            <h3>{card.title}</h3>
+            <p>{card.text}</p>
+            <div class="material-service-card__links">
+              <a href="/cnc-machining-quote">Quote Now -></a>
+              <a href={card.serviceHref}>{card.serviceLabel} -></a>
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  {faqs.length > 0 && <FaqList items={faqs} variant="material" />}
+
+  <section class="section material-learning">
+    <h2>CNC Machining Learning Center</h2>
+    {learningLinks.length > 0 && (
+      <p class="section__intro">
+        {learningLinks.map((link) => <a href={link.href}>{link.label} →</a>)}
+      </p>
+    )}
+    <div class="learning-grid">
+      {learningPosts.map((post) => (
+        <article class="learning-card">
+          <a class="learning-card__image" href={post.href} tabindex="-1">
+            <img src={post.image} alt={post.alt} loading="lazy" />
+          </a>
+          <div class="learning-card__body">
+            <h3><a href={post.href}>{post.title}</a></h3>
+            <p>{post.excerpt}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <QuoteCta id="material-quote" idPrefix={`material-quote-form-${materialName.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`} formName={`${materialName} Machining Enquiry`} kicker="MATERIAL SELECTION" title={`Plan a ${materialName} machining project`} description="Tell us the material grade, part geometry, quantity and finish requirements so we can review the machining route." />
+</BaseLayout>
+
+<style>
+  .material-part--linked {
+    display: block;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+
+  .material-part__content {
+    margin: 0;
+  }
+
+  .material-part--linked figcaption {
+    color: var(--bright-blue);
+  }
+
+  .material-part--linked:hover figcaption,
+  .material-part--linked:focus-visible figcaption {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .material-part--linked:focus-visible {
+    outline: 2px solid var(--bright-blue);
+    outline-offset: -2px;
+  }
+</style>

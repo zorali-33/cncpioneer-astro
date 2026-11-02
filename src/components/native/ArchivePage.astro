@@ -1,0 +1,58 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import QuoteCta from './QuoteCta.astro';
+import {archivePage} from '../../lib/archivePage.mjs';
+import {getBlogAuthor} from '../../blog-detail-native.mjs';
+import {decodeHTML} from 'entities';
+import {canonicalPageUrl} from '../../data/siteUrls.mjs';
+
+const {articles,page=1,authorSlug=''}=Astro.props;
+const author=authorSlug?getBlogAuthor(authorSlug):null;
+const model=archivePage(articles,{page,authorSlug,authorName:author?.name});
+const seo={title:model.title,description:model.description,canonical:model.route,type:'website',image:author?.image||'/wp-content/uploads/2025/12/blog-banner-1.jpg'};
+const person=author&&{'@context':'https://schema.org','@type':'Person','@id':canonicalPageUrl(`/author/${authorSlug}`)+'#person',name:author.name,url:canonicalPageUrl(`/author/${authorSlug}`),image:author.image,description:author.bio};
+const date=value=>new Intl.DateTimeFormat('en-US',{year:'numeric',month:'long',day:'numeric',timeZone:'UTC'}).format(new Date(value));
+---
+<BaseLayout seo={seo}>
+  <Fragment slot="head">
+    {model.previous&&<link rel="prev" href={model.previous}/>}
+    {model.next&&<link rel="next" href={model.next}/>}
+    {person&&<script type="application/ld+json" set:html={JSON.stringify(person).replaceAll('<','\\u003c')}/>}
+  </Fragment>
+  <div id="content" class:list={['native-archive',{'is-author':Boolean(author)}]} data-native-archive>
+    {author?<section class="author-profile" aria-labelledby="archive-title">
+      <img src={author.image} alt={author.name} width="100" height="100" decoding="async"/>
+      <div><h1 id="archive-title">{author.name}</h1><p>{author.bio}</p></div>
+    </section>:<section class="archive-hero" aria-labelledby="archive-title">
+      <div class="archive-container"><nav aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">»</span><span aria-current="page">Blog</span></nav><h1 id="archive-title">Blog</h1><p>Explore digital manufacturing: expert resources, in-depth articles, and the latest industry updates.</p></div>
+    </section>}
+    <section class="archive-container archive-list" aria-label={author?`Articles by ${author.name}`:'CNC machining articles'}>
+      <div class="archive-grid" role="list">
+        {model.posts.map(post=>{
+          const title=decodeHTML(post.displayTitle||post.title),href=`/blog/${post.slug}`;
+          return <article class="archive-card" role="listitem">
+            <a class="archive-image" href={href} tabindex="-1" aria-label={title}><img src={post.image} alt={title} width="600" height="400" loading="lazy" decoding="async"/></a>
+            <h2 class="blog-post-title"><a href={href}>{title}</a></h2>
+            {author&&<time datetime={post.published}>{date(post.published)}</time>}
+            <a class="archive-more" href={href} aria-label={`Read more about ${title}`}>Read More <span aria-hidden="true">→</span></a>
+          </article>;
+        })}
+      </div>
+      <nav class="archive-pagination" aria-label="Pagination">
+        {model.previous&&<a href={model.previous} rel="prev">« Previous</a>}
+        {Array.from({length:model.lastPage},(_,index)=>index+1).map(number=>number===page?<span aria-current="page" aria-label={`Page ${number}`}>{number}</span>:<a href={model.href(number)} aria-label={`Page ${number}`}>{number}</a>)}
+        {model.next&&<a href={model.next} rel="next">Next »</a>}
+      </nav>
+    </section>
+    <QuoteCta id={`archive-page-${page}-quote`} idPrefix={`archive-page-${authorSlug || "blog"}-${page}-quote-form`} formName="Blog Project Enquiry" kicker="PLAN YOUR PROJECT" title="Discuss your next CNC project" description="Share the drawing, material, quantity and inspection requirements for a project-specific review." />
+  </div>
+</BaseLayout>
+<style>
+  .native-archive{color:var(--color-body)}.archive-container,.author-profile{width:min(var(--layout-shell),100%);margin-inline:auto;padding-inline:24px}
+  .archive-hero{background:linear-gradient(rgb(var(--color-ink-rgb)/0.6),rgb(var(--color-ink-rgb)/0.6)),url(/wp-content/uploads/2025/12/blog-banner-1.jpg)center/cover;color:var(--color-white);min-height:263px;padding:22px 0 36px}
+  .archive-hero nav{display:flex;gap:8px;font-size:14px}.archive-hero a{color:var(--color-white)}.archive-hero h1{margin:45px 0 16px;text-align:center;font-size:var(--type-h1);line-height:1.12;color:var(--color-white)}.archive-hero p{text-align:center;margin:0}
+  .author-profile{display:flex;align-items:flex-start;gap:26px;padding-top:30px}.author-profile img{flex:0 0 100px;object-fit:cover;border-radius:50%}.author-profile h1{font-size:var(--type-h1);line-height:1.12;margin:0 0 14px;color:var(--color-ink)}.author-profile p{margin:0;line-height:1.75}
+  .archive-list{padding-block:70px}.archive-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:55px 36px}.archive-card{min-width:0}.archive-image{display:block;overflow:hidden;border-radius:4px;aspect-ratio:3/2}.archive-image img{width:100%;height:100%;object-fit:cover}.blog-post-title{margin:20px 0 12px;font-size:21px;font-weight:600;line-height:1.4;color:var(--color-ink)}.blog-post-title a{text-decoration:none}.blog-post-title a:hover{text-decoration:underline}.archive-more{display:inline-block;color:var(--color-brand);font-weight:600;text-underline-offset:4px}time{display:block;font-size:13px;color:var(--color-body);margin-bottom:12px}
+  .archive-pagination{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:55px}.archive-pagination a,.archive-pagination span{padding:8px 12px;border:1px solid var(--color-border);border-radius:4px;text-decoration:none}.archive-pagination [aria-current]{background:var(--color-brand);color:var(--color-white);border-color:var(--color-brand)}.archive-pagination a:hover{background:var(--color-surface)}.archive-cta{text-align:center;background:var(--color-surface);padding:55px 24px}.archive-cta p{margin:0}.archive-cta h2{margin:10px 0 24px;color:var(--color-ink);font-size:var(--type-h2)}.archive-cta>a{display:inline-block;background:var(--color-brand);color:var(--color-white);border-radius:4px;padding:12px 26px;font-weight:600;text-decoration:none}
+  @media(max-width:900px){.archive-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:40px 24px}}@media(max-width:600px){.archive-container,.author-profile{padding-inline:20px}.archive-list{padding-block:42px}.archive-grid{grid-template-columns:minmax(0,1fr);gap:36px}.author-profile{display:grid;grid-template-columns:80px minmax(0,1fr);gap:16px}.author-profile img{width:80px;height:80px}.author-profile>div{display:contents}.author-profile h1{align-self:center;margin:0}.author-profile p{grid-column:1/-1}.archive-hero h1{font-size:var(--type-h1)}.blog-post-title{font-size:21px}.archive-pagination a,.archive-pagination span{padding:8px 10px}.archive-cta h2{font-size:var(--type-h2)}}
+</style>
