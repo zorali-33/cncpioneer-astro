@@ -1,0 +1,57 @@
+name: Diagnose Hostinger 429
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  diagnose:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Inspect hosting rules and log availability
+        env:
+          FTP_HOST: ${{ secrets.HOSTINGER_HOST }}
+          FTP_USER: ${{ secrets.HOSTINGER_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.HOSTINGER_PASSWORD }}
+        shell: python
+        run: |
+          import ftplib, os, io, re, json, urllib.request, urllib.error
+          findings = []
+          ftp = ftplib.FTP(timeout=20)
+          ftp.connect(os.environ['FTP_HOST'], 21)
+          ftp.login(os.environ['FTP_USER'], os.environ['FTP_PASSWORD'])
+          start = ftp.pwd()
+          for folder in ['.', 'domains', 'domains/cncpioneer.com', 'domains/cncpioneer.com/public_html', 'logs', 'access_logs', 'domains/cncpioneer.com/logs', '.logs']:
+              try:
+                  ftp.cwd(start)
+                  ftp.cwd(folder)
+                  entries = ftp.nlst()
+                  # Expose names only for relevant server config/log entries.
+                  names = [n for n in entries if re.search(r'log|htaccess|user.ini|index|cron|wp-|domains|public_html', n, re.I)]
+                  findings.append({'folder': folder, 'entries': names[:40]})
+                  if folder.endswith('public_html'):
+                      for filename in ['.htaccess', '.user.ini']:
+                          data = io.BytesIO()
+                          try:
+                              ftp.retrbinary('RETR '+filename, data.write)
+                              raw = data.getvalue().decode('utf-8', 'replace')
+                              # Only output server directives relevant to routing/rate limits.
+                              directives = [line.strip() for line in raw.splitlines() if re.match(r'\s*(?:Rewrite|Redirect|ErrorDocument|DirectoryIndex|Deny|Allow|Require|SetEnv|SecRule|Cache|Header|<|php_value|php_flag)', line, re.I)]
+                              findings.append({'config': filename, 'relevantDirectives': directives[:100]})
+                          except ftplib.error_perm:
+                              findings.append({'config': filename, 'present': False})
+              except ftplib.error_perm:
+                  findings.append({'folder': folder, 'available': False})
+          ftp.quit()
+          for host in ['cncpioneer.com', 'www.cncpioneer.com']:
+              for pathname in ['/', '/index.html', '/robots.txt']:
+                  req = urllib.request.Request('https://'+host+pathname, headers={'User-Agent': 'CNCPioneer-Diagnostic/1.0'})
+                  try:
+                      response = urllib.request.urlopen(req, timeout=20)
+                  except urllib.error.HTTPError as error:
+                      response = error
+                  findings.append({'host': host, 'path': pathname, 'status': response.status, 'server': response.headers.get('server'), 'retryAfter': response.headers.get('retry-after'), 'cdn': response.headers.get('x-hcdn-request-id')})
+                  response.close()
+          with open(os.environ['GITHUB_STEP_SUMMARY'], 'w') as f:
+              f.write('## Hostinger read-only diagnostics\n\n```json\n'+json.dumps(findings, indent=2)+'\n```\n')
+          print(json.dumps(findings, indent=2))
