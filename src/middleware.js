@@ -8,6 +8,7 @@ import { applySpellingCorrections } from './data/spellingCorrections.mjs';
 import { applyReviewedUrlCorrections } from './data/urlCorrections.mjs';
 import { applyBrandTheme } from './brand-palette.mjs';
 import { applySiteBreadcrumbs } from './data/siteBreadcrumbs.mjs';
+import { applyContextualLinks } from './data/contextualLinks.mjs';
 
 // Runs during prerendering as well as local development, including native pages
 // and historical mirrored pages. Archived source documents remain unchanged.
@@ -33,6 +34,6 @@ export const onRequest = defineMiddleware(async (context, next) => {
   const html = applyOptimizedImageReferences(correctedHtml, context.url.pathname);
   const headers = new Headers(response.headers);
   headers.delete('content-length');
-  const normalizedHtml = applyPageSeoTemplate(applySiteBreadcrumbs(html, context.url.pathname), context.url.pathname);
+  const normalizedHtml = applyPageSeoTemplate(applySiteBreadcrumbs(applyContextualLinks(html, context.url.pathname), context.url.pathname), context.url.pathname);
   return new Response(applyBrandTheme(await applyImageDimensions(applySiteSchema(normalizedHtml, context.url.pathname))), { status: response.status, statusText: response.statusText, headers });
 });
