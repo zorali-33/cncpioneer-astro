@@ -1,0 +1,165 @@
+name: Deploy to Hostinger
+
+on:
+  workflow_run:
+    workflows:
+      - Verify production build
+    types:
+      - completed
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: hostinger-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event.workflow_run.conclusion == 'success' &&
+      github.event.workflow_run.event == 'push' &&
+      github.event.workflow_run.head_branch == 'main')
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    environment:
+      name: production
+      url: https://cncpioneer.com/
+
+    env:
+      HOSTINGER_HOST: ${{ secrets.HOSTINGER_HOST }}
+      HOSTINGER_PORT: ${{ secrets.HOSTINGER_PORT }}
+      HOSTINGER_USERNAME: ${{ secrets.HOSTINGER_USERNAME }}
+      HOSTINGER_REMOTE_PATH: ${{ secrets.HOSTINGER_REMOTE_PATH }}
+      SSHPASS: ${{ secrets.HOSTINGER_PASSWORD }}
+      EXPECTED_ED25519_FINGERPRINT: SHA256:JyT4SMqG1GP48izAjFsrA1C8avNci9eGolzo5zE3bPI
+
+    steps:
+      - name: Check out the verified revision
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.workflow_run.head_sha || github.sha }}
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Rebuild and run release audits
+        run: npm run release:verify
+
+      - name: Validate deployment settings
+        shell: bash
+        run: |
+          set -euo pipefail
+          for name in HOSTINGER_HOST HOSTINGER_PORT HOSTINGER_USERNAME HOSTINGER_REMOTE_PATH SSHPASS; do
+            if [ -z "${!name:-}" ]; then
+              echo "::error title=Missing deployment secret::$name is empty or has not been configured."
+              exit 1
+            fi
+          done
+
+          if ! [[ "$HOSTINGER_PORT" =~ ^[0-9]+$ ]]; then
+            echo "::error title=Invalid Hostinger port::HOSTINGER_PORT must contain only digits."
+            exit 1
+          fi
+
+          if ! [[ "$HOSTINGER_REMOTE_PATH" =~ ^[A-Za-z0-9._/-]+$ ]] ||
+             [[ "$HOSTINGER_REMOTE_PATH" == /* ]] ||
+             [[ "$HOSTINGER_REMOTE_PATH" == *..* ]] ||
+             [[ "$HOSTINGER_REMOTE_PATH" == "." ]]; then
+            echo "::error title=Unsafe deployment path::HOSTINGER_REMOTE_PATH must be a relative folder such as public_html."
+            exit 1
+          fi
+
+      - name: Install secure transfer tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes sshpass rsync
+
+      - name: Verify Hostinger server identity
+        shell: bash
+        run: |
+          set -euo pipefail
+          install -d -m 700 "$HOME/.ssh"
+          ssh-keyscan -p "$HOSTINGER_PORT" -t ed25519 "$HOSTINGER_HOST" > "$HOME/.ssh/known_hosts"
+          chmod 600 "$HOME/.ssh/known_hosts"
+
+          actual_fingerprint=$(ssh-keygen -lf "$HOME/.ssh/known_hosts" -E sha256 | awk 'NR == 1 { print $2 }')
+          if [ "$actual_fingerprint" != "$EXPECTED_ED25519_FINGERPRINT" ]; then
+            echo "::error title=Hostinger identity mismatch::Expected $EXPECTED_ED25519_FINGERPRINT but received $actual_fingerprint."
+            exit 1
+          fi
+
+      - name: Check remote deployment folder
+        shell: bash
+        run: |
+          set -euo pipefail
+          remote_path=$(printf '%q' "$HOSTINGER_REMOTE_PATH")
+          sshpass -e ssh \
+            -o PreferredAuthentications=password \
+            -o PubkeyAuthentication=no \
+            -o StrictHostKeyChecking=yes \
+            -p "$HOSTINGER_PORT" \
+            "$HOSTINGER_USERNAME@$HOSTINGER_HOST" \
+            "command -v rsync >/dev/null && test -d $remote_path && test -w $remote_path"
+
+      - name: Back up the current production site
+        shell: bash
+        run: |
+          set -euo pipefail
+          remote_path=$(printf '%q' "$HOSTINGER_REMOTE_PATH")
+          stamp=$(date -u +'%Y%m%dT%H%M%SZ')
+          short_sha=${GITHUB_SHA:0:7}
+          sshpass -e ssh \
+            -o PreferredAuthentications=password \
+            -o PubkeyAuthentication=no \
+            -o StrictHostKeyChecking=yes \
+            -p "$HOSTINGER_PORT" \
+            "$HOSTINGER_USERNAME@$HOSTINGER_HOST" \
+            "mkdir -p deployment-backups && tar -czf deployment-backups/cncpioneer-before-$stamp-$short_sha.tar.gz -C $remote_path ."
+
+      - name: Upload the verified site
+        shell: bash
+        run: |
+          set -euo pipefail
+          sshpass -e rsync \
+            --archive \
+            --compress \
+            --delete-delay \
+            --itemize-changes \
+            --exclude='.well-known/***' \
+            --exclude='.cncpioneer-mail.php' \
+            -e "ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no -o StrictHostKeyChecking=yes -p $HOSTINGER_PORT" \
+            dist/ \
+            "$HOSTINGER_USERNAME@$HOSTINGER_HOST:$HOSTINGER_REMOTE_PATH/"
+
+      - name: Verify the deployed site
+        shell: bash
+        run: |
+          set -euo pipefail
+          remote_index=$(printf '%q' "$HOSTINGER_REMOTE_PATH/index.html")
+          sshpass -e ssh \
+            -o PreferredAuthentications=password \
+            -o PubkeyAuthentication=no \
+            -o StrictHostKeyChecking=yes \
+            -p "$HOSTINGER_PORT" \
+            "$HOSTINGER_USERNAME@$HOSTINGER_HOST" \
+            "test -s $remote_index"
+
+          curl \
+            --fail \
+            --location \
+            --retry 5 \
+            --retry-all-errors \
+            --retry-delay 5 \
+            --silent \
+            --show-error \
+            --output /dev/null \
+            https://cncpioneer.com/
