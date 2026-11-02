@@ -1,0 +1,933 @@
+{
+  "generatedAt": "2026-11-02T09:10:42.966Z",
+  "scope": "Current generated blog article bodies only (#main-article-content); excludes header, footer, quote forms, related cards and archives. English word-normalized exact comparison and unique 5-word shingle overlap. Lexical similarity is not a search-engine penalty or a semantic cannibalization verdict.",
+  "summary": {
+    "articles": 88,
+    "pairs": 3828,
+    "exactDuplicatePairs": 0,
+    "pairsAtLeast50PercentJaccard": 0,
+    "pairsAtLeast30PercentJaccard": 0,
+    "repeatedBlocksOf30Words": 0
+  },
+  "topPairs": [
+    {
+      "a": "/blog/inconel-vs-monel",
+      "b": "/blog/inconel-vs-titanium",
+      "titleA": "Inconel vs. Monel: Choosing Between Two Great Nickel Alloys",
+      "titleB": "Inconel vs Titanium: Choosing Between Two Great High-Performance Metals",
+      "exact": false,
+      "jaccard": 9.61,
+      "shorterOverlap": 20.34,
+      "commonFiveWordPhrases": 229
+    },
+    {
+      "a": "/blog/abrasion-resistant-vs-carbon-steel-cnc-machining",
+      "b": "/blog/oil-gas-cnc-machining-parts",
+      "titleA": "AR Steel vs Carbon Steel CNC Parts: DFM & Process Guide 2026",
+      "titleB": "CNC Machined Parts for Oil & Gas: Material Selection & API Compliance 2026",
+      "exact": false,
+      "jaccard": 8.97,
+      "shorterOverlap": 26.41,
+      "commonFiveWordPhrases": 216
+    },
+    {
+      "a": "/blog/surface-finish-chart",
+      "b": "/blog/surface-roughness",
+      "titleA": "Surface Finish Chart: Ra Values, RMS Conversion & Machining Applications",
+      "titleB": "Surface Roughness Explained Simply: Ra, Rz, RMS (Rq) — Which One Should You Use?",
+      "exact": false,
+      "jaccard": 2.08,
+      "shorterOverlap": 4.29,
+      "commonFiveWordPhrases": 31
+    },
+    {
+      "a": "/blog/cnc-machining-for-automotive-industry",
+      "b": "/blog/cnc-machining-vs-manual-machining",
+      "titleA": "CNC Machining for the Automotive Industry: Parts, Materials & Production",
+      "titleB": "CNC vs Manual (Conventional) Machining: Accuracy, Cost & Use Cases",
+      "exact": false,
+      "jaccard": 1.62,
+      "shorterOverlap": 3.36,
+      "commonFiveWordPhrases": 27
+    },
+    {
+      "a": "/blog/cnc-machining-vs-manual-machining",
+      "b": "/blog/low-volume-cnc-machining",
+      "titleA": "CNC vs Manual (Conventional) Machining: Accuracy, Cost & Use Cases",
+      "titleB": "What is Low-Volume CNC Machining? Benefits, Applications & Best Practices",
+      "exact": false,
+      "jaccard": 1.62,
+      "shorterOverlap": 3.86,
+      "commonFiveWordPhrases": 31
+    },
+    {
+      "a": "/blog/cnc-milling-and-turning-defense",
+      "b": "/blog/complex-cnc-machining-tasks",
+      "titleA": "CNC Milling and Turning for Defense",
+      "titleB": "Complex CNC Machining Tasks: 20 Precision Challenges Explained",
+      "exact": false,
+      "jaccard": 1.62,
+      "shorterOverlap": 3.28,
+      "commonFiveWordPhrases": 21
+    },
+    {
+      "a": "/blog/cnc-machining-for-automotive-industry",
+      "b": "/blog/cnc-milling-and-turning-defense",
+      "titleA": "CNC Machining for the Automotive Industry: Parts, Materials & Production",
+      "titleB": "CNC Milling and Turning for Defense",
+      "exact": false,
+      "jaccard": 1.6,
+      "shorterOverlap": 3.75,
+      "commonFiveWordPhrases": 24
+    },
+    {
+      "a": "/blog/complex-cnc-machining-tasks",
+      "b": "/blog/surface-finish-chart",
+      "titleA": "Complex CNC Machining Tasks: 20 Precision Challenges Explained",
+      "titleB": "Surface Finish Chart: Ra Values, RMS Conversion & Machining Applications",
+      "exact": false,
+      "jaccard": 1.59,
+      "shorterOverlap": 3.24,
+      "commonFiveWordPhrases": 22
+    },
+    {
+      "a": "/blog/3d-printing-vs-cnc-machining",
+      "b": "/blog/cnc-machining-vs-manual-machining",
+      "titleA": "3D Printing vs CNC Machining: Choosing a Process for Prototypes & End-Use Parts",
+      "titleB": "CNC vs Manual (Conventional) Machining: Accuracy, Cost & Use Cases",
+      "exact": false,
+      "jaccard": 1.56,
+      "shorterOverlap": 3.23,
+      "commonFiveWordPhrases": 26
+    },
+    {
+      "a": "/blog/cnc-milling-and-turning-defense",
+      "b": "/blog/surface-finish-chart",
+      "titleA": "CNC Milling and Turning for Defense",
+      "titleB": "Surface Finish Chart: Ra Values, RMS Conversion & Machining Applications",
+      "exact": false,
+      "jaccard": 1.56,
+      "shorterOverlap": 3.28,
+      "commonFiveWordPhrases": 21
+    },
+    {
+      "a": "/blog/surface-finish",
+      "b": "/blog/surface-finish-chart",
+      "titleA": "Surface Finish in Machining: Texture, Measurement & Improvement",
+      "titleB": "Surface Finish Chart: Ra Values, RMS Conversion & Machining Applications",
+      "exact": false,
+      "jaccard": 1.53,
+      "shorterOverlap": 3.32,
+      "commonFiveWordPhrases": 24
+    },
+    {
+      "a": "/blog/cnc-vs-sheet-metal",
+      "b": "/blog/surface-finish-chart",
+      "titleA": "CNC vs Sheet Metal: Precision, Cost & Volume Comparison 2026",
+      "titleB": "Surface Finish Chart: Ra Values, RMS Conversion & Machining Applications",
+      "exact": false,
+      "jaccard": 1.52,
+      "shorterOverlap": 3.6,
+      "commonFiveWordPhrases": 26
+    },
+    {
+      "a": "/blog/complex-cnc-machining-tasks",
+      "b": "/blog/surface-roughness",
+      "titleA": "Complex CNC Machining Tasks: 20 Precision Challenges Explained",
+      "titleB": "Surface Roughness Explained Simply: Ra, Rz, RMS (Rq) — Which One Should You Use?",
+      "exact": false,
+      "jaccard": 1.51,
+      "shorterOverlap": 3.24,
+      "commonFiveWordPhrases": 22
+    },
+    {
+      "a": "/blog/cnc-milling-and-turning-defense",
+      "b": "/blog/surface-roughness",
+      "titleA": "CNC Milling and Turning for Defense",
+      "titleB": "Surface Roughness Explained Simply: Ra, Rz, RMS (Rq) — Which One Should You Use?",
+      "exact": false,
+      "jaccard": 1.49,
+      "shorterOverlap": 3.28,
+      "commonFiveWordPhrases": 21
+    },
+    {
+      "a": "/blog/3d-printing-vs-cnc-machining",
+      "b": "/blog/cnc-machining-vs-injection-molding",
+      "titleA": "3D Printing vs CNC Machining: Choosing a Process for Prototypes & End-Use Parts",
+      "titleB": "CNC Machining vs Injection Molding: Cost, Volume & Design Trade-offs",
+      "exact": false,
+      "jaccard": 1.48,
+      "shorterOverlap": 2.94,
+      "commonFiveWordPhrases": 26
+    },
+    {
+      "a": "/blog/cnc-machining-vs-manual-machining",
+      "b": "/blog/cnc-milling-and-turning-defense",
+      "titleA": "CNC vs Manual (Conventional) Machining: Accuracy, Cost & Use Cases",
+      "titleB": "CNC Milling and Turning for Defense",
+      "exact": false,
+      "jaccard": 1.48,
+      "shorterOverlap": 3.28,
+      "commonFiveWordPhrases": 21
+    },
+    {
+      "a": "/blog/3d-printing-vs-cnc-machining",
+      "b": "/blog/cnc-milling-and-turning-defense",
+      "titleA": "3D Printing vs CNC Machining: Choosing a Process for Prototypes & End-Use Parts",
+      "titleB": "CNC Milling and Turning for Defense",
+      "exact": false,
+      "jaccard": 1.46,
+      "shorterOverlap": 3.44,
+      "commonFiveWordPhrases": 22
+    },
+    {
+      "a": "/blog/cnc-machining-vs-injection-molding",
+      "b": "/blog/cnc-milling-and-turning-defense",
+      "titleA": "CNC Machining vs Injection Molding: Cost, Volume & Design Trade-offs",
+      "titleB": "CNC Milling and Turning for Defense",
+      "exact": false,
+      "jaccard": 1.46,
+      "shorterOverlap": 3.44,
+      "commonFiveWordPhrases": 22
+    },
+    {
+      "a": "/blog/cnc-near-me-vs-online-cnc-machining",
+      "b": "/blog/surface-finish-chart",
+      "titleA": "2026 CNC Near Me vs Online CNC: Faster & Cheaper Parts? Full Guide",
+      "titleB": "Surface Finish Chart: Ra Values, RMS Conversion & Machining Applications",
+      "exact": false,
+      "jaccard": 1.46,
+      "shorterOverlap": 3.6,
+      "commonFiveWordPhrases": 26
+    },
+    {
+      "a": "/blog/cnc-vs-sheet-metal",
+      "b": "/blog/surface-roughness",
+      "titleA": "CNC vs Sheet Metal: Precision, Cost & Volume Comparison 2026",
+      "titleB": "Surface Roughness Explained Simply: Ra, Rz, RMS (Rq) — Which One Should You Use?",
+      "exact": false,
+      "jaccard": 1.46,
+      "shorterOverlap": 3.27,
+      "commonFiveWordPhrases": 26
+    },
+    {
+      "a": "/blog/cnc-machining-vs-manual-machining",
+      "b": "/blog/cnc-near-me-vs-online-cnc-machining",
+      "titleA": "CNC vs Manual (Conventional) Machining: Accuracy, Cost & Use Cases",
+      "titleB": "2026 CNC Near Me vs Online CNC: Faster & Cheaper Parts? Full Guide",
+      "exact": false,
+      "jaccard": 1.45,
+      "shorterOverlap": 3.36,
+      "commonFiveWordPhrases": 27
+    },
+    {
+      "a": "/blog/cnc-near-me-vs-online-cnc-machining",
+      "b": "/blog/surface-roughness",
+      "titleA": "2026 CNC Near Me vs Online CNC: Faster & Cheaper Parts? Full Guide",
+      "titleB": "Surface Roughness Explained Simply: Ra, Rz, RMS (Rq) — Which One Should You Use?",
+      "exact": false,
+      "jaccard": 1.45,
+      "shorterOverlap": 3.4,
+      "commonFiveWordPhrases": 27
+    },
+    {
+      "a": "/blog/cnc-machining-vs-manual-machining",
+      "b": "/blog/complex-cnc-machining-tasks",
+      "titleA": "CNC vs Manual (Conventional) Machining: Accuracy, Cost & Use Cases",
+      "titleB": "Complex CNC Machining Tasks: 20 Precision Challenges Explained",
+      "exact": false,
+      "jaccard": 1.44,
+      "shorterOverlap": 3.09,
+      "commonFiveWordPhrases": 21
+    },
+    {
+      "a": "/blog/complex-cnc-machining-tasks",
+      "b": "/blog/surface-finish",
+      "titleA": "Complex CNC Machining Tasks: 20 Precision Challenges Explained",
+      "titleB": "Surface Finish in Machining: Texture, Measurement & Improvement",
+      "exact": false,
+      "jaccard": 1.44,
+      "shorterOverlap": 3.24,
+      "commonFiveWordPhrases": 22
+    },
+    {
+      "a": "/blog/cnc-machining-vs-manual-machining",
+      "b": "/blog/cnc-services-for-startups",
+      "titleA": "CNC vs Manual (Conventional) Machining: Accuracy, Cost & Use Cases",
+      "titleB": "CNC Machining Services for Startups: Get From Idea to Real Product",
+      "exact": false,
+      "jaccard": 1.43,
+      "shorterOverlap": 3.36,
+      "commonFiveWordPhrases": 27
+    },
+    {
+      "a": "/blog/cnc-milling-and-turning-defense",
+      "b": "/blog/surface-finish",
+      "titleA": "CNC Milling and Turning for Defense",
+      "titleB": "Surface Finish in Machining: Texture, Measurement & Improvement",
+      "exact": false,
+      "jaccard": 1.41,
+      "shorterOverlap": 3.28,
+      "commonFiveWordPhrases": 21
+    },
+    {
+      "a": "/blog/cnc-machining-vs-manual-machining",
+      "b": "/blog/surface-finish-chart",
+      "titleA": "CNC vs Manual (Conventional) Machining: Accuracy, Cost & Use Cases",
+      "titleB": "Surface Finish Chart: Ra Values, RMS Conversion & Machining Applications",
+      "exact": false,
+      "jaccard": 1.39,
+      "shorterOverlap": 2.9,
+      "commonFiveWordPhrases": 21
+    },
+    {
+      "a": "/blog/stainless-steel-surface-finishes",
+      "b": "/blog/surface-finish-chart",
+      "titleA": "The Ultimate Guide to Stainless Steel Surface Finishes",
+      "titleB": "Surface Finish Chart: Ra Values, RMS Conversion & Machining Applications",
+      "exact": false,
+      "jaccard": 1.38,
+      "shorterOverlap": 3.87,
+      "commonFiveWordPhrases": 28
+    },
+    {
+      "a": "/blog/cnc-machining-for-automotive-industry",
+      "b": "/blog/complex-cnc-machining-tasks",
+      "titleA": "CNC Machining for the Automotive Industry: Parts, Materials & Production",
+      "titleB": "Complex CNC Machining Tasks: 20 Precision Challenges Explained",
+      "exact": false,
+      "jaccard": 1.36,
+      "shorterOverlap": 3.09,
+      "commonFiveWordPhrases": 21
+    },
+    {
+      "a": "/blog/cnc-machining-vs-injection-molding",
+      "b": "/blog/complex-cnc-machining-tasks",
+      "titleA": "CNC Machining vs Injection Molding: Cost, Volume & Design Trade-offs",
+      "titleB": "Complex CNC Machining Tasks: 20 Precision Challenges Explained",
+      "exact": false,
+      "jaccard": 1.36,
+      "shorterOverlap": 3.09,
+      "commonFiveWordPhrases": 21
+    }
+  ],
+  "repeatedBlocks": [],
+  "pages": [
+    {
+      "route": "/blog/3d-printing-vs-cnc-machining",
+      "title": "3D Printing vs CNC Machining: Choosing a Process for Prototypes & End-Use Parts",
+      "words": 898,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/5-axis-cnc-machining-manufacturers-in-china",
+      "title": "Top 20 5 Axis CNC Machining Manufacturers in China (2026)",
+      "words": 4192,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/abrasion-resistant-vs-carbon-steel-cnc-machining",
+      "title": "AR Steel vs Carbon Steel CNC Parts: DFM & Process Guide 2026",
+      "words": 1846,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/acrylic-cnc-machining",
+      "title": "Acrylic CNC Machining: The Definitive Guide",
+      "words": 1656,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/aerospace-cnc-machining",
+      "title": "Aerospace CNC Machining: Processes, Materials & Quality Requirements",
+      "words": 855,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/aluminium-melting-point",
+      "title": "Aluminium Melting Point: Properties, Comparisons",
+      "words": 2108,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/aluminum-cnc-machining",
+      "title": "Aluminum CNC Machining: A Beginner’s guide",
+      "words": 2589,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/aluminum-surface-finishes",
+      "title": "Aluminum Surface Finishes: Types, Charts & Testing",
+      "words": 1138,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/aluminum-vs-stainless-steel",
+      "title": "Aluminum vs. Stainless Steel: What is the Difference?",
+      "words": 1188,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/anodized-aluminum-vs-stainless-steel",
+      "title": "Anodized Aluminum vs. Stainless Steel: A Comprehensive Comparison",
+      "words": 1021,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/bakelite-cnc-machining",
+      "title": "Bakelite CNC Machining: Techniques, Tools, Applications & Tips",
+      "words": 2611,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/beveled-edges-cnc-machining",
+      "title": "Beveled Edges in CNC Machining: Definition, Types, Benefits, Applications, and More",
+      "words": 2984,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/brass-cnc-machining",
+      "title": "Brass CNC Machining: The Ultimate Guide",
+      "words": 4070,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/bronze-cnc-machining",
+      "title": "Bronze CNC Machining: The Ultimate Guide (2026 Edition)",
+      "words": 3698,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/building-a-humanoid-robot",
+      "title": "Building a Humanoid Robot with CNC Machined Parts",
+      "words": 2604,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/cast-iron-cnc-machining-parts",
+      "title": "Cast Iron CNC Machined Parts: Material, Parameters, DFM Design",
+      "words": 1209,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/casting-vs-cnc-machining",
+      "title": "Casting vs CNC Machining in 2026: Which Process Wins for Your Metal Parts?",
+      "words": 1124,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/chamfer-cnc-machining",
+      "title": "What Is a Chamfer? Types, CNC Process, Benefits & Applications",
+      "words": 1852,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/china-humanoid-robot-companies",
+      "title": "Top 20 China Humanoid Robot Companies to Know in 2026",
+      "words": 2212,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/choose-cnc-machining-company",
+      "title": "Best CNC Machining Company: 10 Key Factors 2026",
+      "words": 903,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/cnc-boring",
+      "title": "CNC Boring: Process, Types, and Applications",
+      "words": 1202,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/cnc-drilling",
+      "title": "CNC Drilling: Process, Types & Applications",
+      "words": 1530,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/cnc-electronic-housings",
+      "title": "CNC Electronic Housings: Benefits, Materials & Design Tips",
+      "words": 992,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/cnc-ev-motor-housings",
+      "title": "CNC Machining EV Motor Housings: Precision & Concentricity Guide",
+      "words": 1331,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/cnc-heat-sink-manufacturing",
+      "title": "CNC Machining Heat Sinks: Tips, Materials & FAQs Guide",
+      "words": 1391,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/cnc-lathe-vs-mill",
+      "title": "CNC Turning vs Milling (Lathe vs Mill): Differences & Process Selection",
+      "words": 848,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/cnc-locating-pins",
+      "title": "CNC Locating Pins: Precision Workholding and Fixture Design",
+      "words": 2510,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/cnc-machined-uav-parts",
+      "title": "CNC Machined UAV Parts: Precision Components for Professional Drones",
+      "words": 1093,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/cnc-machining-costs",
+      "title": "CNC Machining Costs: How to Quote Custom Parts",
+      "words": 970,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/cnc-machining-fillets",
+      "title": "Fillets in CNC Machining: Design Guide for Rounded Edges",
+      "words": 1324,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/cnc-machining-for-automotive-industry",
+      "title": "CNC Machining for the Automotive Industry: Parts, Materials & Production",
+      "words": 892,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/cnc-machining-for-furniture-industry",
+      "title": "CNC Machining for Furniture Hardware: Metal Parts & DFM",
+      "words": 1048,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/cnc-machining-for-renewable-energy",
+      "title": "Small CNC Parts for Renewable Energy Equipment",
+      "words": 840,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/cnc-machining-for-semiconductor-industry",
+      "title": "CNC Machining for Semiconductor Industry",
+      "words": 1505,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/cnc-machining-heavy-truck-industry",
+      "title": "Heavy-Truck CNC Components: Pins, Shafts & Fittings",
+      "words": 974,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/cnc-machining-materials",
+      "title": "CNC Machining Materials: Metals, Plastics & Selection Guide",
+      "words": 809,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/cnc-machining-quality-testing",
+      "title": "CNC Machining Quality Testing: Methods, Standards, Equipment, GD&T, Statistical Control & Best Practices",
+      "words": 1183,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/cnc-machining-robot-parts",
+      "title": "CNC Machining Robot Parts: The Complete Guide (2026 Edition)",
+      "words": 909,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/cnc-machining-vs-injection-molding",
+      "title": "CNC Machining vs Injection Molding: Cost, Volume & Design Trade-offs",
+      "words": 888,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/cnc-machining-vs-manual-machining",
+      "title": "CNC vs Manual (Conventional) Machining: Accuracy, Cost & Use Cases",
+      "words": 808,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/cnc-metalworks",
+      "title": "CNC Metalworks 2026: Ultimate Guide to Custom Metal Parts",
+      "words": 1137,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/cnc-milling",
+      "title": "CNC Milling: A Comprehensive Guide from Beginner to Expert",
+      "words": 2055,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/cnc-milling-and-turning-defense",
+      "title": "CNC Milling and Turning for Defense",
+      "words": 650,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/cnc-milling-machine-parts",
+      "title": "CNC Milling Machine Parts: Diagrams, Functions & Maintenance Checklist",
+      "words": 3677,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/cnc-milling-vs-laser-cutting",
+      "title": "CNC Milling vs Laser Cutting: Geometry, Accuracy, Cost & Use Cases",
+      "words": 883,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/cnc-near-me-vs-online-cnc-machining",
+      "title": "2026 CNC Near Me vs Online CNC: Faster & Cheaper Parts? Full Guide",
+      "words": 1097,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/cnc-precision-parts",
+      "title": "CNC Precision Parts: Drawing, Tolerance and Inspection",
+      "words": 1059,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/cnc-prototyping",
+      "title": "CNC Prototyping: Process, Materials, Cost & Lead Time",
+      "words": 938,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/cnc-services-for-startups",
+      "title": "CNC Machining Services for Startups: Get From Idea to Real Product",
+      "words": 1117,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/cnc-turned-parts",
+      "title": "CNC Turned Parts: Design, Materials, DFM Cost Reduction & Manufacturing",
+      "words": 3633,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/cnc-turning",
+      "title": "Introduction to CNC Turning: Basics, Machines & Operations",
+      "words": 1508,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/cnc-vs-sheet-metal",
+      "title": "CNC vs Sheet Metal: Precision, Cost & Volume Comparison 2026",
+      "words": 1023,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/complex-cnc-machining-tasks",
+      "title": "Complex CNC Machining Tasks: 20 Precision Challenges Explained",
+      "words": 684,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/connector-machining",
+      "title": "Connector Machining: The Ultimate Guide (2026)",
+      "words": 838,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/copper-cnc-machining",
+      "title": "Copper CNC Machining: The Ultimate Guide",
+      "words": 1094,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/copper-t2-cnc-machining",
+      "title": "T2 Copper CNC Machining: Speeds, Feeds, Machinability Ratings & Tips",
+      "words": 2580,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/electronics-machining",
+      "title": "Electronics Machining: What Is It, Process, Types and Benefits",
+      "words": 912,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/face-milling",
+      "title": "Face Milling Guide 2026: Process, Tools, Parameters & Best Practices",
+      "words": 1379,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/fastener-machining",
+      "title": "Fastener Machining: The Ultimate Guide (2026)",
+      "words": 1099,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/fr4-cnc-machining",
+      "title": "FR4 CNC Machining: The Ultimate Guide (2026 Edition)",
+      "words": 2536,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/inconel-vs-monel",
+      "title": "Inconel vs. Monel: Choosing Between Two Great Nickel Alloys",
+      "words": 1513,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/inconel-vs-titanium",
+      "title": "Inconel vs Titanium: Choosing Between Two Great High-Performance Metals",
+      "words": 1131,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/low-volume-cnc-machining",
+      "title": "What is Low-Volume CNC Machining? Benefits, Applications & Best Practices",
+      "words": 1143,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/medical-cnc-machining",
+      "title": "Medical CNC Machining: Processes, Materials, Applications & Quality",
+      "words": 894,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/nylon-cnc-machining",
+      "title": "Nylon CNC Machining: The Ultimate Guide (2026 Edition)",
+      "words": 4583,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/oil-and-gas-machining",
+      "title": "Oil and Gas Machining: A Comprehensive Guide",
+      "words": 1234,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/oil-and-gas-plastic-machining",
+      "title": "Oil and Gas Plastic Machining: A Comprehensive Guide",
+      "words": 1151,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/oil-gas-cnc-machining-parts",
+      "title": "CNC Machined Parts for Oil & Gas: Material Selection & API Compliance 2026",
+      "words": 826,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/precision-aerospace-cnc-machined-parts",
+      "title": "Precision Aerospace CNC Machined Parts: Materials, Processes, Tolerances, and Design",
+      "words": 1476,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/precision-cnc-milling-parts",
+      "title": "Precision CNC Milling Parts: Tolerances, Materials, DFM & Applications",
+      "words": 1565,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/precision-cnc-turning",
+      "title": "Precision CNC Turning: Process, Benefits, Design and Applications",
+      "words": 1549,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/railroad-machining",
+      "title": "Railroad Component Machining: Pins, Bushings and Shafts",
+      "words": 702,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/railroads-cnc-machining-companies",
+      "title": "Top 10 Railroads CNC Machining Manufacturers in 2026",
+      "words": 897,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/robot-hands",
+      "title": "Complete Engineering Guide to Robot Hands",
+      "words": 3761,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/shaft-machining",
+      "title": "Shaft Machining: The Ultimate Guide (2026)",
+      "words": 1423,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/slot-milling",
+      "title": "What Is Slot Milling? Techniques, Tools, Tips, and Applications",
+      "words": 2965,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/stainless-steel-cnc-machining",
+      "title": "Stainless Steel CNC Machining: The Ultimate Guide (2026 Edition)",
+      "words": 988,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/stainless-steel-surface-finishes",
+      "title": "The Ultimate Guide to Stainless Steel Surface Finishes",
+      "words": 1341,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/surface-finish",
+      "title": "Surface Finish in Machining: Texture, Measurement & Improvement",
+      "words": 878,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/surface-finish-chart",
+      "title": "Surface Finish Chart: Ra Values, RMS Conversion & Machining Applications",
+      "words": 735,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/surface-finish-symbols",
+      "title": "Surface Finish Symbols, Callouts & GD&T – A Clear, Practical Tutorial",
+      "words": 1210,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/surface-roughness",
+      "title": "Surface Roughness Explained Simply: Ra, Rz, RMS (Rq) — Which One Should You Use?",
+      "words": 799,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/swiss-machining",
+      "title": "What Is Swiss Machining? The Complete Guide",
+      "words": 1947,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/swiss-machining-materials",
+      "title": "Top 10 Swiss Machining Materials",
+      "words": 2454,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/thread-milling-vs-tapping",
+      "title": "Thread Milling vs Tapping: Differences, Pros, Cons & Best Applications",
+      "words": 1457,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/what-is-a-cnc-lathe",
+      "title": "CNC Lathe: Types, How It Works, Parts & Applications",
+      "words": 1026,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/what-is-cnc",
+      "title": "What Is CNC? Meaning, How It Works, Machine Types & Applications",
+      "words": 938,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    },
+    {
+      "route": "/blog/zero-waste-cnc-machining",
+      "title": "Zero Waste CNC Machining: Recycle Chips & Coolant to Save $25K+ in 2026",
+      "words": 1397,
+      "exactRepeatBlocks": 0,
+      "repeatedParagraphWords": 0
+    }
+  ]
+}
