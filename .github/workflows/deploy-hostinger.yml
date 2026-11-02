@@ -115,6 +115,7 @@ jobs:
           <?php
           declare(strict_types=1);
           set_time_limit(0);
+          ignore_user_abort(true);
 
           $expectedToken = '__DEPLOY_TOKEN__';
           $providedToken = $_SERVER['HTTP_X_DEPLOY_TOKEN'] ?? '';
@@ -175,7 +176,7 @@ jobs:
               '.deployment-backups',
               '.cncpioneer-mail.php',
               '.cncpioneer-deploy.zip',
-              '.cncpioneer-deploy.php',
+              'cncpioneer-deploy.php',
           ];
 
           try {
@@ -195,7 +196,7 @@ jobs:
           } catch (Throwable $error) {
               $zip->close();
               http_response_code(500);
-              echo 'DEPLOY_FAILED';
+              echo 'DEPLOY_FAILED: ' . $error->getMessage();
           }
           PHP
 
@@ -209,23 +210,28 @@ jobs:
             -u "$HOSTINGER_USERNAME","$HOSTINGER_PASSWORD" \
             -p "$HOSTINGER_FTP_PORT" \
             "$HOSTINGER_HOST" \
-            -e "set cmd:fail-exit true; set ftp:ssl-allow no; set net:max-retries 2; set net:timeout 60; put \"$DEPLOY_ARCHIVE\" -o .cncpioneer-deploy.zip; put \"$DEPLOY_SCRIPT\" -o .cncpioneer-deploy.php; bye"
+            -e "set cmd:fail-exit true; set ftp:ssl-allow no; set net:max-retries 2; set net:timeout 60; put \"$DEPLOY_ARCHIVE\" -o .cncpioneer-deploy.zip; put \"$DEPLOY_SCRIPT\" -o cncpioneer-deploy.php; bye"
 
       - name: Replace WordPress with Astro
         shell: bash
         run: |
           set -euo pipefail
-          result=$(curl \
-            --fail \
+          response_file=$(mktemp)
+          http_status=$(curl \
             --silent \
             --show-error \
             --max-time 300 \
             --request POST \
             --header "X-Deploy-Token: $DEPLOY_TOKEN" \
-            https://cncpioneer.com/.cncpioneer-deploy.php)
+            --output "$response_file" \
+            --write-out '%{http_code}' \
+            https://cncpioneer.com/cncpioneer-deploy.php)
+          result=$(cat "$response_file")
 
-          if [ "$result" != 'DEPLOY_OK' ]; then
-            echo "::error title=Hostinger extraction failed::$result"
+          if [ "$http_status" != '200' ] || [ "$result" != 'DEPLOY_OK' ]; then
+            message=${result//$'\r'/ }
+            message=${message//$'\n'/ }
+            echo "::error title=Hostinger extraction failed::HTTP $http_status: $message"
             exit 1
           fi
 
