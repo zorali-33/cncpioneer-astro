@@ -80,12 +80,32 @@ jobs:
       - name: Check FTP connection and deployment folder
         shell: bash
         run: |
-          set -euo pipefail
-          lftp \
+          set -uo pipefail
+          set +e
+          diagnostics=$(lftp \
             -u "$HOSTINGER_USERNAME","$HOSTINGER_PASSWORD" \
             -p "$HOSTINGER_FTP_PORT" \
             "$HOSTINGER_HOST" \
-            -e "set cmd:fail-exit true; set ftp:ssl-allow no; set net:max-retries 2; set net:timeout 20; cls -ld \"$HOSTINGER_REMOTE_PATH\"; bye"
+            -e "set cmd:fail-exit true; set ftp:ssl-allow no; set net:max-retries 2; set net:timeout 20; pwd; cls -ld \"$HOSTINGER_REMOTE_PATH\"; bye" 2>&1)
+          status=$?
+          set -e
+
+          if [ "$status" -ne 0 ]; then
+            if grep -Eqi 'login failed|530|authentication' <<< "$diagnostics"; then
+              title='FTP authentication rejected'
+            elif grep -Eqi 'no such file|not found|550' <<< "$diagnostics"; then
+              title='FTP deployment folder not found'
+            else
+              title='FTP preflight failed'
+            fi
+
+            message=$(printf '%s' "$diagnostics" | tail -n 8 | tr '\r\n' ' ')
+            message=${message//'%'/'%25'}
+            echo "::error title=$title::$message"
+            exit "$status"
+          fi
+
+          printf '%s\n' "$diagnostics"
 
       - name: Back up the current production site
         shell: bash
