@@ -15,7 +15,7 @@ jobs:
           FTP_PASSWORD: ${{ secrets.HOSTINGER_PASSWORD }}
         shell: python
         run: |
-          import ftplib, os, io, re, json, urllib.request, urllib.error
+          import ftplib, os, io, re, json, urllib.request, urllib.error, collections
           findings = []
           ftp = ftplib.FTP(timeout=20)
           ftp.connect(os.environ['FTP_HOST'], 21)
@@ -42,6 +42,37 @@ jobs:
                               findings.append({'config': filename, 'present': False})
               except ftplib.error_perm:
                   findings.append({'folder': folder, 'available': False})
+          for config_path in ['.htaccess', 'domains/.htaccess', 'domains/cncpioneer.com/.htaccess', 'domains/cncpioneer.com/public_html/.htaccess']:
+              ftp.cwd(start)
+              data = io.BytesIO()
+              try:
+                  ftp.retrbinary('RETR '+config_path, data.write)
+                  raw = data.getvalue().decode('utf-8', 'replace')
+                  matches = [line.strip() for line in raw.splitlines() if re.search(r'429|throttl|rate.?limit|conn.?limit|SecRule|LSAPI|Cache|Expires|DirectoryIndex|RewriteCond|RewriteRule.*(?:index|https|www)', line, re.I)]
+                  findings.append({'configPath': config_path, 'lines': len(raw.splitlines()), 'rateAndRoutingRules': matches[-40:]})
+              except ftplib.error_perm:
+                  findings.append({'configPath': config_path, 'available': False})
+          ftp.cwd(start)
+          log_path = '.logs/error_log_cncpioneer_com'
+          try:
+              ftp.voidcmd('TYPE I')
+              size = ftp.size(log_path)
+              data = io.BytesIO()
+              ftp.retrbinary('RETR '+log_path, data.write, rest=max(0, size-512000))
+              lines = data.getvalue().decode('utf-8', 'replace').splitlines()
+              categories = {'429': r'\b429\b', 'rateLimit': r'throttl|rate.?limit|too many requests|connection limit', 'resourceLimit': r'resource limit|max children|memory exhausted|508|503|508|lve', 'phpError': r'PHP (?:Fatal|Warning|Parse)', 'wordPress': r'wp-content|wp-admin|wp-cron'}
+              counts = {key: sum(bool(re.search(pattern, line, re.I)) for line in lines) for key, pattern in categories.items()}
+              events = []
+              for line in lines:
+                  if re.search(categories['429']+'|'+categories['rateLimit']+'|'+categories['resourceLimit'], line, re.I):
+                      safe = re.sub(r'(?:\d{1,3}\.){3}\d{1,3}(?::\d+)?', '[IP]', line)
+                      safe = re.sub(r'/home/[^/\s]+', '/home/[USER]', safe)
+                      safe = re.sub(r'\?[^\s\]]+', '?[REDACTED]', safe)
+                      events.append(safe[:1000])
+              timestamps = [line[:26] for line in lines if re.match(r'\d{4}-\d{2}-\d{2}', line)]
+              findings.append({'log': log_path, 'totalBytes': size, 'sampleLines': len(lines), 'firstTimestamp': timestamps[:1], 'lastTimestamp': timestamps[-1:], 'counts': counts, 'limitEvents': events[-15:]})
+          except ftplib.error_perm:
+              findings.append({'log': log_path, 'readable': False})
           ftp.quit()
           for host in ['cncpioneer.com', 'www.cncpioneer.com']:
               for pathname in ['/', '/index.html', '/robots.txt']:
