@@ -31,9 +31,9 @@ jobs:
     env:
       HOSTINGER_HOST: ${{ secrets.HOSTINGER_HOST }}
       HOSTINGER_USERNAME: ${{ secrets.HOSTINGER_USERNAME }}
-      HOSTINGER_REMOTE_PATH: ${{ secrets.HOSTINGER_REMOTE_PATH }}
       HOSTINGER_PASSWORD: ${{ secrets.HOSTINGER_PASSWORD }}
       HOSTINGER_FTP_PORT: "21"
+      HOSTINGER_FTP_PATH: "."
 
     steps:
       - name: Check out the verified revision
@@ -57,20 +57,12 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          for name in HOSTINGER_HOST HOSTINGER_USERNAME HOSTINGER_REMOTE_PATH HOSTINGER_PASSWORD; do
+          for name in HOSTINGER_HOST HOSTINGER_USERNAME HOSTINGER_PASSWORD; do
             if [ -z "${!name:-}" ]; then
               echo "::error title=Missing deployment secret::$name is empty or has not been configured."
               exit 1
             fi
           done
-
-          if ! [[ "$HOSTINGER_REMOTE_PATH" =~ ^[A-Za-z0-9._/-]+$ ]] ||
-             [[ "$HOSTINGER_REMOTE_PATH" == /* ]] ||
-             [[ "$HOSTINGER_REMOTE_PATH" == *..* ]] ||
-             [[ "$HOSTINGER_REMOTE_PATH" == "." ]]; then
-            echo "::error title=Unsafe deployment path::HOSTINGER_REMOTE_PATH must be a relative folder such as public_html."
-            exit 1
-          fi
 
       - name: Install FTP transfer tools
         run: |
@@ -86,15 +78,13 @@ jobs:
             -u "$HOSTINGER_USERNAME","$HOSTINGER_PASSWORD" \
             -p "$HOSTINGER_FTP_PORT" \
             "$HOSTINGER_HOST" \
-            -e "set cmd:fail-exit true; set ftp:ssl-allow no; set net:max-retries 2; set net:timeout 20; pwd; cls -ld \"$HOSTINGER_REMOTE_PATH\"; bye" 2>&1)
+            -e "set cmd:fail-exit true; set ftp:ssl-allow no; set net:max-retries 2; set net:timeout 20; pwd; cls -la; bye" 2>&1)
           status=$?
           set -e
 
           if [ "$status" -ne 0 ]; then
             if grep -Eqi 'login failed|530|authentication' <<< "$diagnostics"; then
               title='FTP authentication rejected'
-            elif grep -Eqi 'no such file|not found|550' <<< "$diagnostics"; then
-              title='FTP deployment folder not found'
             else
               title='FTP preflight failed'
             fi
@@ -113,24 +103,31 @@ jobs:
           set -euo pipefail
           stamp=$(date -u +'%Y%m%dT%H%M%SZ')
           short_sha=${GITHUB_SHA:0:7}
-          backup_name="cncpioneer-wordpress-before-$stamp-$short_sha.tar.gz"
+          backup_name="cncpioneer-wordpress-before-$stamp-$short_sha.tar.gz.enc"
           backup_dir="$RUNNER_TEMP/cncpioneer-wordpress-backup"
+          archive_file="$RUNNER_TEMP/cncpioneer-wordpress-backup.tar.gz"
           backup_file="$RUNNER_TEMP/$backup_name"
+          deny_file="$RUNNER_TEMP/deployment-backups.htaccess"
           mkdir -p "$backup_dir"
 
           lftp \
             -u "$HOSTINGER_USERNAME","$HOSTINGER_PASSWORD" \
             -p "$HOSTINGER_FTP_PORT" \
             "$HOSTINGER_HOST" \
-            -e "set cmd:fail-exit true; set ftp:ssl-allow no; set net:max-retries 2; set net:timeout 30; mirror --parallel=4 \"$HOSTINGER_REMOTE_PATH\" \"$backup_dir\"; bye"
+            -e "set cmd:fail-exit true; set ftp:ssl-allow no; set net:max-retries 2; set net:timeout 30; mirror --parallel=4 --exclude-glob .deployment-backups/** \"$HOSTINGER_FTP_PATH\" \"$backup_dir\"; bye"
 
-          tar -czf "$backup_file" -C "$backup_dir" .
+          tar -czf "$archive_file" -C "$backup_dir" .
+          openssl enc -aes-256-cbc -pbkdf2 -salt \
+            -in "$archive_file" \
+            -out "$backup_file" \
+            -pass env:HOSTINGER_PASSWORD
+          printf 'Require all denied\n' > "$deny_file"
 
           lftp \
             -u "$HOSTINGER_USERNAME","$HOSTINGER_PASSWORD" \
             -p "$HOSTINGER_FTP_PORT" \
             "$HOSTINGER_HOST" \
-            -e "set cmd:fail-exit true; set ftp:ssl-allow no; set net:max-retries 2; set net:timeout 30; mkdir -p deployment-backups; put \"$backup_file\" -o \"deployment-backups/$backup_name\"; bye"
+            -e "set cmd:fail-exit true; set ftp:ssl-allow no; set net:max-retries 2; set net:timeout 30; mkdir -p .deployment-backups; put \"$deny_file\" -o .deployment-backups/.htaccess; put \"$backup_file\" -o \".deployment-backups/$backup_name\"; bye"
 
       - name: Upload the verified site
         shell: bash
@@ -140,7 +137,7 @@ jobs:
             -u "$HOSTINGER_USERNAME","$HOSTINGER_PASSWORD" \
             -p "$HOSTINGER_FTP_PORT" \
             "$HOSTINGER_HOST" \
-            -e "set cmd:fail-exit true; set ftp:ssl-allow no; set net:max-retries 2; set net:timeout 30; mirror --reverse --delete --parallel=4 --exclude-glob .well-known/** --exclude-glob .cncpioneer-mail.php dist/ \"$HOSTINGER_REMOTE_PATH\"; bye"
+            -e "set cmd:fail-exit true; set ftp:ssl-allow no; set net:max-retries 2; set net:timeout 30; mirror --reverse --delete --parallel=4 --exclude-glob .well-known/** --exclude-glob .deployment-backups/** --exclude-glob .cncpioneer-mail.php dist/ \"$HOSTINGER_FTP_PATH\"; bye"
 
       - name: Verify the deployed site
         shell: bash
@@ -150,7 +147,7 @@ jobs:
             -u "$HOSTINGER_USERNAME","$HOSTINGER_PASSWORD" \
             -p "$HOSTINGER_FTP_PORT" \
             "$HOSTINGER_HOST" \
-            -e "set cmd:fail-exit true; set ftp:ssl-allow no; set net:max-retries 2; set net:timeout 20; cls -l \"$HOSTINGER_REMOTE_PATH/index.html\"; bye"
+            -e "set cmd:fail-exit true; set ftp:ssl-allow no; set net:max-retries 2; set net:timeout 20; cls -l index.html; bye"
 
           curl \
             --fail \
