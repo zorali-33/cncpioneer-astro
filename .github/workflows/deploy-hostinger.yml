@@ -67,7 +67,7 @@ jobs:
       - name: Install FTP transfer tools
         run: |
           sudo apt-get update
-          sudo apt-get install --yes lftp
+          sudo apt-get install --yes lftp zip
 
       - name: Check FTP connection and deployment folder
         shell: bash
@@ -97,7 +97,111 @@ jobs:
 
           printf '%s\n' "$diagnostics"
 
-      - name: Upload the verified site
+      - name: Package the verified site
+        shell: bash
+        run: |
+          set -euo pipefail
+          archive_file="$RUNNER_TEMP/cncpioneer-astro.zip"
+          deployer_file="$RUNNER_TEMP/cncpioneer-deploy.php"
+          deploy_token=$(openssl rand -hex 32)
+          echo "::add-mask::$deploy_token"
+          echo "DEPLOY_TOKEN=$deploy_token" >> "$GITHUB_ENV"
+          echo "DEPLOY_ARCHIVE=$archive_file" >> "$GITHUB_ENV"
+          echo "DEPLOY_SCRIPT=$deployer_file" >> "$GITHUB_ENV"
+
+          (cd dist && zip -q -r "$archive_file" .)
+
+          cat > "$deployer_file" <<'PHP'
+          <?php
+          declare(strict_types=1);
+          set_time_limit(0);
+
+          $expectedToken = '__DEPLOY_TOKEN__';
+          $providedToken = $_SERVER['HTTP_X_DEPLOY_TOKEN'] ?? '';
+          if (!hash_equals($expectedToken, $providedToken)) {
+              http_response_code(403);
+              exit('FORBIDDEN');
+          }
+
+          if (!class_exists('ZipArchive')) {
+              http_response_code(500);
+              exit('ZIP_EXTENSION_MISSING');
+          }
+
+          $root = __DIR__;
+          $archive = $root . '/.cncpioneer-deploy.zip';
+          if (!is_file($archive)) {
+              http_response_code(500);
+              exit('ARCHIVE_MISSING');
+          }
+
+          $zip = new ZipArchive();
+          if ($zip->open($archive) !== true) {
+              http_response_code(500);
+              exit('ARCHIVE_INVALID');
+          }
+
+          for ($index = 0; $index < $zip->numFiles; $index++) {
+              $name = $zip->getNameIndex($index);
+              if ($name === false || str_starts_with($name, '/') || preg_match('~(^|/)\.\.(/|$)~', $name)) {
+                  $zip->close();
+                  http_response_code(500);
+                  exit('ARCHIVE_PATH_INVALID');
+              }
+          }
+
+          function removePath(string $path): void
+          {
+              if (is_link($path) || is_file($path)) {
+                  if (!unlink($path)) {
+                      throw new RuntimeException('Unable to remove file');
+                  }
+                  return;
+              }
+
+              if (is_dir($path)) {
+                  $entries = new FilesystemIterator($path, FilesystemIterator::SKIP_DOTS);
+                  foreach ($entries as $entry) {
+                      removePath($entry->getPathname());
+                  }
+                  if (!rmdir($path)) {
+                      throw new RuntimeException('Unable to remove directory');
+                  }
+              }
+          }
+
+          $preserve = [
+              '.well-known',
+              '.deployment-backups',
+              '.cncpioneer-mail.php',
+              '.cncpioneer-deploy.zip',
+              '.cncpioneer-deploy.php',
+          ];
+
+          try {
+              foreach (new FilesystemIterator($root, FilesystemIterator::SKIP_DOTS) as $entry) {
+                  if (!in_array($entry->getFilename(), $preserve, true)) {
+                      removePath($entry->getPathname());
+                  }
+              }
+
+              if (!$zip->extractTo($root)) {
+                  throw new RuntimeException('Unable to extract archive');
+              }
+              $zip->close();
+              @unlink($archive);
+              @unlink(__FILE__);
+              echo 'DEPLOY_OK';
+          } catch (Throwable $error) {
+              $zip->close();
+              http_response_code(500);
+              echo 'DEPLOY_FAILED';
+          }
+          PHP
+
+          sed -i "s/__DEPLOY_TOKEN__/$deploy_token/" "$deployer_file"
+
+      - name: Upload the Astro deployment package
         shell: bash
         run: |
           set -euo pipefail
@@ -105,7 +209,25 @@ jobs:
             -u "$HOSTINGER_USERNAME","$HOSTINGER_PASSWORD" \
             -p "$HOSTINGER_FTP_PORT" \
             "$HOSTINGER_HOST" \
-            -e "set cmd:fail-exit true; set ftp:ssl-allow no; set net:max-retries 2; set net:timeout 30; mirror --reverse --delete --parallel=4 --exclude-glob .well-known/** --exclude-glob .deployment-backups/** --exclude-glob .cncpioneer-mail.php dist/ \"$HOSTINGER_FTP_PATH\"; bye"
+            -e "set cmd:fail-exit true; set ftp:ssl-allow no; set net:max-retries 2; set net:timeout 60; put \"$DEPLOY_ARCHIVE\" -o .cncpioneer-deploy.zip; put \"$DEPLOY_SCRIPT\" -o .cncpioneer-deploy.php; bye"
+
+      - name: Replace WordPress with Astro
+        shell: bash
+        run: |
+          set -euo pipefail
+          result=$(curl \
+            --fail \
+            --silent \
+            --show-error \
+            --max-time 300 \
+            --request POST \
+            --header "X-Deploy-Token: $DEPLOY_TOKEN" \
+            https://cncpioneer.com/.cncpioneer-deploy.php)
+
+          if [ "$result" != 'DEPLOY_OK' ]; then
+            echo "::error title=Hostinger extraction failed::$result"
+            exit 1
+          fi
 
       - name: Verify the deployed site
         shell: bash
