@@ -114,7 +114,7 @@ jobs:
             -u "$HOSTINGER_USERNAME","$HOSTINGER_PASSWORD" \
             -p "$HOSTINGER_FTP_PORT" \
             "$HOSTINGER_HOST" \
-            -e "set cmd:fail-exit true; set ftp:ssl-allow no; set net:max-retries 2; set net:timeout 30; mirror --parallel=4 --exclude-glob .deployment-backups/** \"$HOSTINGER_FTP_PATH\" \"$backup_dir\"; bye"
+            -e "set cmd:fail-exit true; set ftp:ssl-allow no; set net:max-retries 2; set net:timeout 30; mirror --parallel=6 --exclude-glob .deployment-backups/** --exclude-glob wp-admin/** --exclude-glob wp-includes/** --exclude-glob wp-content/uploads/** --exclude-glob wp-content/cache/** --exclude-glob wp-content/updraft/** --exclude-glob wp-content/ai1wm-backups/** --exclude-glob wp-content/backups/** --exclude-glob wp-content/upgrade/** --exclude-glob error_log \"$HOSTINGER_FTP_PATH\" \"$backup_dir\"; bye"
 
           tar -czf "$archive_file" -C "$backup_dir" .
           openssl enc -aes-256-cbc -pbkdf2 -salt \
