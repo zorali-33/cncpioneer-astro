@@ -33,7 +33,10 @@ jobs:
       HOSTINGER_USERNAME: ${{ secrets.HOSTINGER_USERNAME }}
       HOSTINGER_PASSWORD: ${{ secrets.HOSTINGER_PASSWORD }}
       HOSTINGER_FTP_PORT: "21"
-      HOSTINGER_FTP_PATH: "."
+      HOSTINGER_FTP_PATH: "domains/cncpioneer.com/public_html"
+      SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
+      SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+      SMTP_TO_EMAIL: ${{ secrets.SMTP_TO_EMAIL }}
 
     steps:
       - name: Check out the verified revision
@@ -57,7 +60,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          for name in HOSTINGER_HOST HOSTINGER_USERNAME HOSTINGER_PASSWORD; do
+          for name in HOSTINGER_HOST HOSTINGER_USERNAME HOSTINGER_PASSWORD SMTP_USERNAME SMTP_PASSWORD SMTP_TO_EMAIL; do
             if [ -z "${!name:-}" ]; then
               echo "::error title=Missing deployment secret::$name is empty or has not been configured."
               exit 1
@@ -97,38 +100,15 @@ jobs:
 
           printf '%s\n' "$diagnostics"
 
-      - name: Locate the live WordPress document root
+      - name: Validate the live Astro document root
         shell: bash
         run: |
           set -euo pipefail
-          candidates=(
-            "."
-            "public_html"
-            "domains/cncpioneer.com/public_html"
-          )
-
-          for candidate in "${candidates[@]}"; do
-            if lftp \
-              -u "$HOSTINGER_USERNAME","$HOSTINGER_PASSWORD" \
-              -p "$HOSTINGER_FTP_PORT" \
-              "$HOSTINGER_HOST" \
-              -e "set cmd:fail-exit true; set ftp:ssl-allow no; set net:max-retries 1; set net:timeout 20; cd \"$candidate\"; cls -1 wp-config.php; bye" \
-              >/dev/null 2>&1; then
-              echo "REMOTE_DEPLOY_PATH=$candidate" >> "$GITHUB_ENV"
-              echo "Using the live document root: $candidate"
-              exit 0
-            fi
-          done
-
-          listing=$(lftp \
+          lftp \
             -u "$HOSTINGER_USERNAME","$HOSTINGER_PASSWORD" \
             -p "$HOSTINGER_FTP_PORT" \
             "$HOSTINGER_HOST" \
-            -e "set ftp:ssl-allow no; set net:max-retries 1; set net:timeout 20; cls -1; bye" \
-            2>&1 | head -n 40 | tr '\r\n' ' ')
-          listing=${listing//'%'/'%25'}
-          echo "::error title=Live document root not found::FTP root contains: $listing"
-          exit 1
+            -e "set cmd:fail-exit true; set ftp:ssl-allow no; set net:max-retries 1; set net:timeout 20; cd \"$HOSTINGER_FTP_PATH\"; cls -1 index.html; cls -1 search-index.json; bye"
 
       - name: Package the verified site
         shell: bash
@@ -136,11 +116,33 @@ jobs:
           set -euo pipefail
           archive_file="$RUNNER_TEMP/cncpioneer-astro.zip"
           deployer_file="$RUNNER_TEMP/cncpioneer-deploy.php"
+          mail_config_file="$RUNNER_TEMP/.cncpioneer-mail.php"
           deploy_token=$(openssl rand -hex 32)
           echo "::add-mask::$deploy_token"
           echo "DEPLOY_TOKEN=$deploy_token" >> "$GITHUB_ENV"
           echo "DEPLOY_ARCHIVE=$archive_file" >> "$GITHUB_ENV"
           echo "DEPLOY_SCRIPT=$deployer_file" >> "$GITHUB_ENV"
+          echo "MAIL_CONFIG=$mail_config_file" >> "$GITHUB_ENV"
+
+          MAIL_CONFIG_PATH="$mail_config_file" node --input-type=module <<'NODE'
+          import { writeFileSync } from 'node:fs';
+
+          const quote = (value) => `'${value.replaceAll('\\', '\\\\').replaceAll("'", "\\'")}'`;
+          const config = `<?php
+          declare(strict_types=1);
+          return [
+              'smtp_host' => 'smtp.exmail.qq.com',
+              'smtp_port' => 465,
+              'smtp_username' => ${quote(process.env.SMTP_USERNAME)},
+              'smtp_password' => ${quote(process.env.SMTP_PASSWORD)},
+              'from_email' => ${quote(process.env.SMTP_USERNAME)},
+              'from_name' => 'CNCPioneer Website',
+              'to_email' => ${quote(process.env.SMTP_TO_EMAIL)},
+              'allowed_origins' => ['https://www.cncpioneer.com', 'https://cncpioneer.com'],
+          ];
+          `;
+          writeFileSync(process.env.MAIL_CONFIG_PATH, config, { mode: 0o600 });
+          NODE
 
           (cd dist && zip -q -r "$archive_file" .)
 
@@ -243,7 +245,7 @@ jobs:
             -u "$HOSTINGER_USERNAME","$HOSTINGER_PASSWORD" \
             -p "$HOSTINGER_FTP_PORT" \
             "$HOSTINGER_HOST" \
-            -e "set cmd:fail-exit true; set ftp:ssl-allow no; set net:max-retries 2; set net:timeout 60; cd \"$REMOTE_DEPLOY_PATH\"; put \"$DEPLOY_ARCHIVE\" -o .cncpioneer-deploy.zip; put \"$DEPLOY_SCRIPT\" -o cncpioneer-deploy.php; bye"
+            -e "set cmd:fail-exit true; set ftp:ssl-allow no; set net:max-retries 2; set net:timeout 60; cd \"$HOSTINGER_FTP_PATH\"; put \"$MAIL_CONFIG\" -o ../.cncpioneer-mail.php; chmod 600 ../.cncpioneer-mail.php; put \"$DEPLOY_ARCHIVE\" -o .cncpioneer-deploy.zip; put \"$DEPLOY_SCRIPT\" -o cncpioneer-deploy.php; bye"
 
       - name: Replace WordPress with Astro
         shell: bash
@@ -276,7 +278,7 @@ jobs:
             -u "$HOSTINGER_USERNAME","$HOSTINGER_PASSWORD" \
             -p "$HOSTINGER_FTP_PORT" \
             "$HOSTINGER_HOST" \
-            -e "set cmd:fail-exit true; set ftp:ssl-allow no; set net:max-retries 2; set net:timeout 20; cls -l index.html; bye"
+            -e "set cmd:fail-exit true; set ftp:ssl-allow no; set net:max-retries 2; set net:timeout 20; cd \"$HOSTINGER_FTP_PATH\"; cls -l index.html; cls -l search-index.json; cls -l ../.cncpioneer-mail.php; bye"
 
           curl \
             --fail \
@@ -288,3 +290,16 @@ jobs:
             --show-error \
             --output /dev/null \
             https://cncpioneer.com/
+
+          quote_status=$(curl \
+            --silent \
+            --show-error \
+            --output /dev/null \
+            --write-out '%{http_code}' \
+            --request POST \
+            --header 'Origin: https://cncpioneer.com' \
+            https://cncpioneer.com/api/quote.php)
+          if [ "$quote_status" != '422' ]; then
+            echo "::error title=Mail configuration check failed::Expected validation status 422, received $quote_status."
+            exit 1
+          fi
