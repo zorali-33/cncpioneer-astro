@@ -17,7 +17,7 @@ concurrency:
 
 jobs:
   verify:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 20
 
     steps:
@@ -33,5 +33,37 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build and run release audits
-        run: npm run release:verify
+      - name: Build production site
+        shell: bash
+        run: |
+          set +e
+          npm run build 2>&1 | tee build.log
+          status=${PIPESTATUS[0]}
+          if [ "$status" -ne 0 ]; then
+            while IFS= read -r line; do
+              line=${line//'%'/'%25'}
+              line=${line//$'\r'/'%0D'}
+              line=${line//$'\n'/'%0A'}
+              echo "::error title=Production build failed::$line"
+            done < <(tail -n 30 build.log)
+          fi
+          exit "$status"
+
+      - name: Run release acceptance audit
+        shell: bash
+        run: |
+          set +e
+          npm run audit:acceptance 2>&1 | tee acceptance.log
+          status=${PIPESTATUS[0]}
+          if [ "$status" -ne 0 ]; then
+            while IFS= read -r line; do
+              line=${line//'%'/'%25'}
+              line=${line//$'\r'/'%0D'}
+              line=${line//$'\n'/'%0A'}
+              echo "::error title=Release acceptance failed::$line"
+            done < <(tail -n 40 acceptance.log)
+          fi
+          exit "$status"
+
+      - name: Generate deployment manifest
+        run: npm run manifest:dist
