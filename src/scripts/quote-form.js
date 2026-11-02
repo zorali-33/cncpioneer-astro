@@ -4,10 +4,20 @@ const extensions = new Set(['pdf', 'step', 'stp', 'iges', 'igs', 'stl', 'dxf', '
 for (const form of document.querySelectorAll('[data-quote-form]')) {
   const button = form.querySelector('button[type="submit"]');
   const buttonLabel = button.querySelector('[data-submit-label]');
+  const defaultButtonLabel = buttonLabel.textContent;
   const drawing = form.querySelector('input[name="drawing"]');
+  const fileName = form.querySelector('[data-file-name]');
   const status = form.querySelector('[data-quote-status]');
   const show = (message, state) => { status.textContent = message; status.dataset.state = state; };
-  drawing.addEventListener('change', () => drawing.setCustomValidity(''));
+  const updateFileName = () => {
+    const file = drawing.files?.[0];
+    fileName.textContent = file?.name || 'No file selected';
+    fileName.title = file?.name || '';
+  };
+  drawing.addEventListener('change', () => {
+    drawing.setCustomValidity('');
+    updateFileName();
+  });
   form.addEventListener('submit', async event => {
     event.preventDefault();
     if (button.disabled) return;
@@ -31,12 +41,13 @@ for (const form of document.querySelectorAll('[data-quote-form]')) {
       if (!response.ok || result.ok !== true || typeof result.id !== 'string' || !result.id) throw new Error(result.message || 'Your enquiry was not sent. Please email info@cncpioneer.com.');
       show(`Thank you. Your enquiry has been sent. Reference: ${result.id}`, 'success');
       form.reset();
+      updateFileName();
     } catch (error) {
       show(error.name === 'AbortError' ? 'We could not confirm delivery. Please email info@cncpioneer.com before submitting again.' : error.message || 'Unable to send your enquiry. Please email info@cncpioneer.com.', 'error');
     } finally {
       clearTimeout(timer);
       button.disabled = false;
-      buttonLabel.textContent = 'Send Quote Request';
+      buttonLabel.textContent = defaultButtonLabel;
       status.focus();
     }
   });

@@ -1,4 +1,5 @@
 ---
+import FileUploadField from './FileUploadField.astro';
 const {idPrefix='compact-quote',formName='Quote Request',submitLabel='Send Quote Request'}=Astro.props;
 ---
 <form class="compact-quote-form" action="/api/quote.php" method="post" enctype="multipart/form-data" name={formName} aria-label={formName} data-quote-form>
@@ -13,7 +14,7 @@ const {idPrefix='compact-quote',formName='Quote Request',submitLabel='Send Quote
   </div>
   <div><label for={`${idPrefix}-country`}>Country / region <span>(optional)</span></label><input id={`${idPrefix}-country`} name="country" type="text" maxlength="160" autocomplete="country-name" /></div>
   <div><label for={`${idPrefix}-message`}>Project requirements <span>*</span></label><textarea id={`${idPrefix}-message`} name="message" maxlength="12000" rows="3" placeholder="Material, quantity, finish, critical dimensions and target date" required></textarea></div>
-  <div><label for={`${idPrefix}-file`}>Drawing or CAD file <span>*</span></label><input id={`${idPrefix}-file`} type="file" name="drawing" accept=".pdf,.step,.stp,.iges,.igs,.stl,.dxf,.dwg,.zip" aria-describedby={`${idPrefix}-file-help`} required /><p id={`${idPrefix}-file-help`} class="caption">PDF, STEP, STP, IGES, IGS, STL, DXF, DWG or ZIP · Maximum 50 MB</p></div>
+  <FileUploadField id={`${idPrefix}-file`} helpId={`${idPrefix}-file-help`} />
   <button type="submit"><span data-submit-label>{submitLabel}</span><span aria-hidden="true">→</span></button>
   <p class="compact-quote-form__status" data-quote-status role="status" aria-live="polite" tabindex="-1"></p>
 </form>
@@ -28,9 +29,6 @@ const {idPrefix='compact-quote',formName='Quote Request',submitLabel='Send Quote
   .compact-quote-form input:not([type="file"]),.compact-quote-form textarea{box-sizing:border-box;display:block;width:100%;min-height:40px;padding:8px 10px;border:1px solid var(--color-border);border-radius:2px;background:var(--color-white);color:var(--color-ink);font-family:var(--font-sans);font-size:var(--type-body)}
   .compact-quote-form textarea{min-height:84px;resize:vertical}
   .compact-quote-form input:focus-visible,.compact-quote-form textarea:focus-visible{outline:2px solid var(--color-brand);outline-offset:1px;border-color:var(--color-brand)}
-  .compact-quote-form input[type="file"]{box-sizing:border-box;display:block;width:100%;padding:7px;border:1px dashed var(--color-border);border-radius:2px;background:var(--color-surface);color:var(--color-body);font-family:var(--font-sans);font-size:var(--type-caption)}
-  .compact-quote-form input[type="file"]::file-selector-button{margin-right:10px;padding:7px 10px;border:1px solid var(--color-brand);border-radius:2px;background:var(--color-white);color:var(--color-brand);font:inherit;font-weight:500;cursor:pointer}
-  .compact-quote-form .caption{margin:6px 0 0!important;color:var(--color-body);font-size:var(--type-caption);line-height:1.5}
   .compact-quote-form button{display:inline-flex;align-items:center;justify-content:center;gap:24px;justify-self:start;min-height:42px;padding:10px 18px;border:1px solid var(--color-brand);border-radius:2px;background:var(--color-brand);color:var(--color-white);font-family:var(--font-sans);font-size:var(--type-small);font-weight:500;cursor:pointer}
   .compact-quote-form button:hover{background:var(--color-hover)}
   .compact-quote-form button:focus-visible{outline:2px solid var(--color-brand);outline-offset:3px}

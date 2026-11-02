@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import FileUploadField from "../components/native/FileUploadField.astro";
 
 const seo = {
   title: "Request CNC machining quotes | CNCPioneer",
@@ -319,11 +320,7 @@ Target delivery:`}
           ></textarea>
         </div>
 
-        <div class="quote-form__attachment">
-          <label for="form-field-file">Drawing or CAD file <span>*</span></label>
-          <input id="form-field-file" type="file" name="drawing" accept=".pdf,.step,.stp,.iges,.igs,.stl,.dxf,.dwg,.zip" aria-describedby="quote-file-help" required />
-          <p id="quote-file-help" class="quote-form__hint">PDF, STEP, STP, IGES, IGS, STL, DXF, DWG or ZIP · Maximum 50 MB</p>
-        </div>
+        <FileUploadField id="form-field-file" helpId="quote-file-help" className="quote-form__attachment" />
 
         <button type="submit"><span data-submit-label>Send Quote Request</span><span aria-hidden="true">→</span></button>
         <p class="quote-form__status" data-quote-status role="status" aria-live="polite" tabindex="-1"></p>
@@ -357,25 +354,21 @@ Target delivery:`}
   .quote-contact__icon svg { width: 21px; height: 21px; }
   .quote-contact__item h3 { margin: 0 0 4px; color: var(--color-ink); font-size: var(--type-small); font-weight: 500; }
   .quote-contact__item p { margin: 0; color: var(--color-body); font-size: var(--type-caption); line-height: 1.55; overflow-wrap: anywhere; }
-  .quote-form { position: relative; justify-self: end; width: 100%; max-width: 640px; display: grid; gap: 13px; padding: 20px; background: rgb(var(--color-brand-rgb) / .035); border: 1px solid rgb(var(--color-brand-rgb) / .18); border-radius: 4px; }
+  .quote-form { box-sizing: border-box; position: relative; justify-self: end; width: 100%; max-width: 640px; display: grid; gap: 13px; padding: 20px; background: rgb(var(--color-brand-rgb) / .035); border: 1px solid rgb(var(--color-brand-rgb) / .18); border-radius: 4px; }
   .quote-form__heading { display: flex; justify-content: space-between; align-items: end; gap: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--color-border); }
   .quote-form__heading h2 { margin: 0; color: var(--color-ink); font-family: var(--font-heading); font-size: var(--type-h4); font-weight: 500; }
   .quote-form__heading > p { margin: 0; color: var(--color-body); font-size: var(--type-caption); white-space: nowrap; }
-  .quote-form__heading > p span,.quote-field label span,.quote-form__project label span,.quote-form__attachment > label span { color: var(--color-brand); }
+  .quote-form__heading > p span,.quote-field label span,.quote-form__project label span { color: var(--color-brand); }
   .quote-form__honeypot { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
   .quote-form__row { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 12px; }
   .quote-field { display: grid; gap: 4px; min-width: 0; }
-  .quote-field label,.quote-form__project > label,.quote-form__attachment > label { color: var(--color-ink); font-size: var(--type-small); font-weight: 500; }
+  .quote-field label,.quote-form__project > label { color: var(--color-ink); font-size: var(--type-small); font-weight: 500; }
   .quote-form input:not([type="file"]),.quote-form select,.quote-form textarea { box-sizing: border-box; width: 100%; min-height: 40px; padding: 8px 10px; border: 1px solid var(--color-border); border-radius: 3px; background: var(--color-white); color: var(--color-ink); font-family: var(--font-sans); font-size: var(--type-small); font-weight: 400; line-height: 1.4; }
   .quote-form input::placeholder,.quote-form textarea::placeholder { color: var(--color-body); opacity: .72; }
   .quote-form :is(input,select,textarea):focus-visible { outline: 2px solid var(--color-brand); outline-offset: 1px; border-color: var(--color-brand); }
   .quote-form select { appearance: auto; }
   .quote-form__project { display: grid; gap: 5px; }
   .quote-form textarea { min-height: 96px; resize: vertical; }
-  .quote-form .quote-form__hint { margin: 0; color: var(--color-body); font-size: var(--type-caption); line-height: 1.55; }
-  .quote-form__attachment { display: grid; gap: 6px; }
-  .quote-form input[type="file"] { box-sizing: border-box; width: 100%; padding: 7px; border: 1px dashed var(--color-border); border-radius: 3px; background: var(--color-white); color: var(--color-body); font-family: var(--font-sans); font-size: var(--type-caption); }
-  .quote-form input[type="file"]::file-selector-button { margin-right: 12px; padding: 8px 12px; border: 1px solid var(--color-brand); border-radius: 2px; background: var(--color-white); color: var(--color-brand); font: inherit; font-weight: 500; cursor: pointer; }
   .quote-form button { justify-self: start; display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 42px; padding: 0 16px; border: 1px solid var(--color-brand); border-radius: 2px; background: var(--color-brand); color: var(--color-white); cursor: pointer; font-family: var(--font-sans); font-size: var(--type-small); font-weight: 500; transition: background-color .18s ease; }
   .quote-form button:hover,.quote-form button:focus-visible { background: var(--color-hover); outline: 2px solid var(--color-brand); outline-offset: 2px; }
   .quote-form button:disabled { opacity: .65; cursor: wait; }
