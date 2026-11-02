@@ -34,7 +34,7 @@ jobs:
       HOSTINGER_USERNAME: ${{ secrets.HOSTINGER_USERNAME }}
       HOSTINGER_REMOTE_PATH: ${{ secrets.HOSTINGER_REMOTE_PATH }}
       SSHPASS: ${{ secrets.HOSTINGER_PASSWORD }}
-      EXPECTED_ED25519_FINGERPRINT: SHA256:JyT4SMqG1GP48izAjFsrA1C8avNci9eGolzo5zE3bPI
+      EXPECTED_ED25519_FINGERPRINT: SHA256:JyT4SMqGlGP48izAjFsrA1C8avNci9eGolzo5zE3bPI
 
     steps:
       - name: Check out the verified revision
