@@ -97,6 +97,39 @@ jobs:
 
           printf '%s\n' "$diagnostics"
 
+      - name: Locate the live WordPress document root
+        shell: bash
+        run: |
+          set -euo pipefail
+          candidates=(
+            "."
+            "public_html"
+            "domains/cncpioneer.com/public_html"
+          )
+
+          for candidate in "${candidates[@]}"; do
+            if lftp \
+              -u "$HOSTINGER_USERNAME","$HOSTINGER_PASSWORD" \
+              -p "$HOSTINGER_FTP_PORT" \
+              "$HOSTINGER_HOST" \
+              -e "set cmd:fail-exit true; set ftp:ssl-allow no; set net:max-retries 1; set net:timeout 20; cd \"$candidate\"; cls -1 wp-config.php; bye" \
+              >/dev/null 2>&1; then
+              echo "REMOTE_DEPLOY_PATH=$candidate" >> "$GITHUB_ENV"
+              echo "Using the live document root: $candidate"
+              exit 0
+            fi
+          done
+
+          listing=$(lftp \
+            -u "$HOSTINGER_USERNAME","$HOSTINGER_PASSWORD" \
+            -p "$HOSTINGER_FTP_PORT" \
+            "$HOSTINGER_HOST" \
+            -e "set ftp:ssl-allow no; set net:max-retries 1; set net:timeout 20; cls -1; bye" \
+            2>&1 | head -n 40 | tr '\r\n' ' ')
+          listing=${listing//'%'/'%25'}
+          echo "::error title=Live document root not found::FTP root contains: $listing"
+          exit 1
+
       - name: Package the verified site
         shell: bash
         run: |
@@ -210,7 +243,7 @@ jobs:
             -u "$HOSTINGER_USERNAME","$HOSTINGER_PASSWORD" \
             -p "$HOSTINGER_FTP_PORT" \
             "$HOSTINGER_HOST" \
-            -e "set cmd:fail-exit true; set ftp:ssl-allow no; set net:max-retries 2; set net:timeout 60; put \"$DEPLOY_ARCHIVE\" -o .cncpioneer-deploy.zip; put \"$DEPLOY_SCRIPT\" -o cncpioneer-deploy.php; bye"
+            -e "set cmd:fail-exit true; set ftp:ssl-allow no; set net:max-retries 2; set net:timeout 60; cd \"$REMOTE_DEPLOY_PATH\"; put \"$DEPLOY_ARCHIVE\" -o .cncpioneer-deploy.zip; put \"$DEPLOY_SCRIPT\" -o cncpioneer-deploy.php; bye"
 
       - name: Replace WordPress with Astro
         shell: bash
