@@ -55,6 +55,7 @@ try {
   await each(urls,async url=>{
     const response=await get(url.pathname);
     assert.equal(response.status,200,`Canonical must be direct 200: ${url.pathname}`);
+    assert.match(response.headers['cache-control'],/no-cache/,`HTML must revalidate: ${url.pathname}`);
     assert.ok(!response.headers.location,url.pathname);
     assert.match(response.body,/<main\b/,url.pathname);
     for(const variant of url.pathname==='/'?['/index.html']:[url.pathname+'/',url.pathname+'/index.html']){
