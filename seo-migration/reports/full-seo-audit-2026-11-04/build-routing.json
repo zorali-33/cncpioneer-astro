@@ -1,0 +1,28 @@
+{
+  "generatedAt": "2026-11-04T08:16:39.393Z",
+  "removedRoutes": 99,
+  "notFoundVariants": 297,
+  "families": [
+    {
+      "route": "/author/david-li",
+      "pages": 3,
+      "items": 21
+    },
+    {
+      "route": "/author/ryan-wang",
+      "pages": 8,
+      "items": 67
+    },
+    {
+      "route": "/blog",
+      "pages": 10,
+      "items": 88
+    },
+    {
+      "route": "/custom-cnc-parts",
+      "pages": 6,
+      "items": 143
+    }
+  ],
+  "errors": []
+}

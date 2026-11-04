@@ -1,0 +1,486 @@
+{
+  "generatedAt": "2026-11-04T08:18:24.889Z",
+  "probes": [
+    {
+      "requested": "https://www.cncpioneer.com/",
+      "hops": [
+        {
+          "requested": "https://www.cncpioneer.com/",
+          "url": "https://www.cncpioneer.com/",
+          "status": 200,
+          "elapsedMs": 1034,
+          "headers": {
+            "accept-ranges": "bytes",
+            "alt-svc": "h3=\":443\"; ma=2592000, h3-29=\":443\"; ma=2592000",
+            "connection": "Keep-Alive",
+            "content-encoding": "br",
+            "content-length": "13077",
+            "content-security-policy": "upgrade-insecure-requests",
+            "content-type": "text/html",
+            "date": "Wed, 04 Nov 2026 08:18:20 GMT",
+            "etag": "\"117ce-6ae99462-292d912ca175a5bc;br\"",
+            "keep-alive": "timeout=5, max=100",
+            "last-modified": "Tue, 03 Nov 2026 07:59:30 GMT",
+            "panel": "hpanel",
+            "platform": "hostinger",
+            "server": "LiteSpeed",
+            "vary": "Accept-Encoding"
+          }
+        }
+      ]
+    },
+    {
+      "requested": "https://www.cncpioneer.com/robots.txt",
+      "hops": [
+        {
+          "requested": "https://www.cncpioneer.com/robots.txt",
+          "url": "https://www.cncpioneer.com/robots.txt",
+          "status": 200,
+          "elapsedMs": 992,
+          "headers": {
+            "accept-ranges": "bytes",
+            "alt-svc": "h3=\":443\"; ma=2592000, h3-29=\":443\"; ma=2592000",
+            "connection": "Keep-Alive",
+            "content-length": "72",
+            "content-security-policy": "upgrade-insecure-requests",
+            "content-type": "text/plain",
+            "date": "Wed, 04 Nov 2026 08:18:20 GMT",
+            "etag": "\"48-6ae99464-c08215bf3a8f23d9;;;\"",
+            "keep-alive": "timeout=5, max=100",
+            "last-modified": "Tue, 03 Nov 2026 07:59:32 GMT",
+            "panel": "hpanel",
+            "platform": "hostinger",
+            "server": "LiteSpeed"
+          }
+        }
+      ]
+    },
+    {
+      "requested": "https://www.cncpioneer.com/sitemap.xml",
+      "hops": [
+        {
+          "requested": "https://www.cncpioneer.com/sitemap.xml",
+          "url": "https://www.cncpioneer.com/sitemap.xml",
+          "status": 200,
+          "elapsedMs": 968,
+          "headers": {
+            "accept-ranges": "bytes",
+            "alt-svc": "h3=\":443\"; ma=2592000, h3-29=\":443\"; ma=2592000",
+            "connection": "Keep-Alive",
+            "content-encoding": "br",
+            "content-length": "2569",
+            "content-security-policy": "upgrade-insecure-requests",
+            "content-type": "application/xml",
+            "date": "Wed, 04 Nov 2026 08:18:20 GMT",
+            "etag": "\"a323-6ae99464-820af5e800ad1289;br\"",
+            "keep-alive": "timeout=5, max=100",
+            "last-modified": "Tue, 03 Nov 2026 07:59:32 GMT",
+            "panel": "hpanel",
+            "platform": "hostinger",
+            "server": "LiteSpeed",
+            "vary": "Accept-Encoding"
+          }
+        }
+      ]
+    },
+    {
+      "requested": "http://cncpioneer.com/",
+      "hops": [
+        {
+          "requested": "http://cncpioneer.com/",
+          "url": "http://cncpioneer.com/",
+          "status": 301,
+          "elapsedMs": 1012,
+          "headers": {
+            "connection": "Keep-Alive",
+            "content-length": "795",
+            "content-security-policy": "upgrade-insecure-requests",
+            "content-type": "text/html",
+            "date": "Wed, 04 Nov 2026 08:18:21 GMT",
+            "keep-alive": "timeout=5, max=100",
+            "location": "https://cncpioneer.com/",
+            "panel": "hpanel",
+            "platform": "hostinger",
+            "server": "LiteSpeed"
+          }
+        },
+        {
+          "requested": "https://cncpioneer.com/",
+          "url": "https://cncpioneer.com/",
+          "status": 200,
+          "elapsedMs": 982,
+          "headers": {
+            "accept-ranges": "bytes",
+            "alt-svc": "h3=\":443\"; ma=2592000, h3-29=\":443\"; ma=2592000",
+            "connection": "Keep-Alive",
+            "content-encoding": "br",
+            "content-length": "13077",
+            "content-security-policy": "upgrade-insecure-requests",
+            "content-type": "text/html",
+            "date": "Wed, 04 Nov 2026 08:18:22 GMT",
+            "etag": "\"117ce-6ae99462-292d912ca175a5bc;br\"",
+            "keep-alive": "timeout=5, max=100",
+            "last-modified": "Tue, 03 Nov 2026 07:59:30 GMT",
+            "panel": "hpanel",
+            "platform": "hostinger",
+            "server": "LiteSpeed",
+            "vary": "Accept-Encoding"
+          }
+        }
+      ]
+    },
+    {
+      "requested": "http://www.cncpioneer.com/",
+      "hops": [
+        {
+          "requested": "http://www.cncpioneer.com/",
+          "url": "http://www.cncpioneer.com/",
+          "status": 301,
+          "elapsedMs": 731,
+          "headers": {
+            "connection": "Keep-Alive",
+            "content-length": "795",
+            "content-security-policy": "upgrade-insecure-requests",
+            "content-type": "text/html",
+            "date": "Wed, 04 Nov 2026 08:18:21 GMT",
+            "keep-alive": "timeout=5, max=100",
+            "location": "https://www.cncpioneer.com/",
+            "panel": "hpanel",
+            "platform": "hostinger",
+            "server": "LiteSpeed"
+          }
+        },
+        {
+          "requested": "https://www.cncpioneer.com/",
+          "url": "https://www.cncpioneer.com/",
+          "status": 200,
+          "elapsedMs": 313,
+          "headers": {
+            "accept-ranges": "bytes",
+            "connection": "Keep-Alive",
+            "content-encoding": "br",
+            "content-length": "13077",
+            "content-security-policy": "upgrade-insecure-requests",
+            "content-type": "text/html",
+            "date": "Wed, 04 Nov 2026 08:18:21 GMT",
+            "etag": "\"117ce-6ae99462-292d912ca175a5bc;br\"",
+            "keep-alive": "timeout=5, max=100",
+            "last-modified": "Tue, 03 Nov 2026 07:59:30 GMT",
+            "panel": "hpanel",
+            "platform": "hostinger",
+            "server": "LiteSpeed",
+            "vary": "Accept-Encoding"
+          }
+        }
+      ]
+    },
+    {
+      "requested": "https://cncpioneer.com/",
+      "hops": [
+        {
+          "requested": "https://cncpioneer.com/",
+          "url": "https://cncpioneer.com/",
+          "status": 200,
+          "elapsedMs": 1469,
+          "headers": {
+            "accept-ranges": "bytes",
+            "alt-svc": "h3=\":443\"; ma=2592000, h3-29=\":443\"; ma=2592000",
+            "connection": "Keep-Alive",
+            "content-encoding": "br",
+            "content-length": "13077",
+            "content-security-policy": "upgrade-insecure-requests",
+            "content-type": "text/html",
+            "date": "Wed, 04 Nov 2026 08:18:21 GMT",
+            "etag": "\"117ce-6ae99462-292d912ca175a5bc;br\"",
+            "keep-alive": "timeout=5, max=100",
+            "last-modified": "Tue, 03 Nov 2026 07:59:30 GMT",
+            "panel": "hpanel",
+            "platform": "hostinger",
+            "server": "LiteSpeed",
+            "vary": "Accept-Encoding"
+          }
+        }
+      ]
+    },
+    {
+      "requested": "https://www.cncpioneer.com/services/swiss-machining/",
+      "hops": [
+        {
+          "requested": "https://www.cncpioneer.com/services/swiss-machining/",
+          "url": "https://www.cncpioneer.com/services/swiss-machining/",
+          "status": 200,
+          "elapsedMs": 300,
+          "headers": {
+            "accept-ranges": "bytes",
+            "connection": "Keep-Alive",
+            "content-encoding": "br",
+            "content-length": "12111",
+            "content-security-policy": "upgrade-insecure-requests",
+            "content-type": "text/html",
+            "date": "Wed, 04 Nov 2026 08:18:22 GMT",
+            "etag": "\"ca0c-6ae99460-7696224025e74521;br\"",
+            "keep-alive": "timeout=5, max=100",
+            "last-modified": "Tue, 03 Nov 2026 07:59:28 GMT",
+            "panel": "hpanel",
+            "platform": "hostinger",
+            "server": "LiteSpeed",
+            "vary": "Accept-Encoding"
+          }
+        }
+      ]
+    },
+    {
+      "requested": "https://www.cncpioneer.com/services/swiss-machining/index.html",
+      "hops": [
+        {
+          "requested": "https://www.cncpioneer.com/services/swiss-machining/index.html",
+          "url": "https://www.cncpioneer.com/services/swiss-machining/index.html",
+          "status": 200,
+          "elapsedMs": 284,
+          "headers": {
+            "accept-ranges": "bytes",
+            "connection": "Keep-Alive",
+            "content-encoding": "br",
+            "content-length": "12111",
+            "content-security-policy": "upgrade-insecure-requests",
+            "content-type": "text/html",
+            "date": "Wed, 04 Nov 2026 08:18:22 GMT",
+            "etag": "\"ca0c-6ae99460-7696224025e74521;br\"",
+            "keep-alive": "timeout=5, max=100",
+            "last-modified": "Tue, 03 Nov 2026 07:59:28 GMT",
+            "panel": "hpanel",
+            "platform": "hostinger",
+            "server": "LiteSpeed",
+            "vary": "Accept-Encoding"
+          }
+        }
+      ]
+    },
+    {
+      "requested": "https://www.cncpioneer.com/services/swiss-machining?utm_source=seo-audit",
+      "hops": [
+        {
+          "requested": "https://www.cncpioneer.com/services/swiss-machining?utm_source=seo-audit",
+          "url": "https://www.cncpioneer.com/services/swiss-machining?utm_source=seo-audit",
+          "status": 301,
+          "elapsedMs": 232,
+          "headers": {
+            "connection": "Keep-Alive",
+            "content-length": "795",
+            "content-security-policy": "upgrade-insecure-requests",
+            "content-type": "text/html",
+            "date": "Wed, 04 Nov 2026 08:18:22 GMT",
+            "keep-alive": "timeout=5, max=100",
+            "location": "https://www.cncpioneer.com/services/swiss-machining/?utm_source=seo-audit",
+            "panel": "hpanel",
+            "platform": "hostinger",
+            "server": "LiteSpeed"
+          }
+        },
+        {
+          "requested": "https://www.cncpioneer.com/services/swiss-machining/?utm_source=seo-audit",
+          "url": "https://www.cncpioneer.com/services/swiss-machining/?utm_source=seo-audit",
+          "status": 200,
+          "elapsedMs": 988,
+          "headers": {
+            "accept-ranges": "bytes",
+            "alt-svc": "h3=\":443\"; ma=2592000, h3-29=\":443\"; ma=2592000",
+            "connection": "Keep-Alive",
+            "content-encoding": "br",
+            "content-length": "12111",
+            "content-security-policy": "upgrade-insecure-requests",
+            "content-type": "text/html",
+            "date": "Wed, 04 Nov 2026 08:18:23 GMT",
+            "etag": "\"ca0c-6ae99460-7696224025e74521;br\"",
+            "keep-alive": "timeout=5, max=100",
+            "last-modified": "Tue, 03 Nov 2026 07:59:28 GMT",
+            "panel": "hpanel",
+            "platform": "hostinger",
+            "server": "LiteSpeed",
+            "vary": "Accept-Encoding"
+          }
+        }
+      ]
+    },
+    {
+      "requested": "https://www.cncpioneer.com/index.html",
+      "hops": [
+        {
+          "requested": "https://www.cncpioneer.com/index.html",
+          "url": "https://www.cncpioneer.com/index.html",
+          "status": 200,
+          "elapsedMs": 546,
+          "headers": {
+            "accept-ranges": "bytes",
+            "connection": "Keep-Alive",
+            "content-encoding": "br",
+            "content-length": "13077",
+            "content-security-policy": "upgrade-insecure-requests",
+            "content-type": "text/html",
+            "date": "Wed, 04 Nov 2026 08:18:24 GMT",
+            "etag": "\"117ce-6ae99462-292d912ca175a5bc;br\"",
+            "keep-alive": "timeout=5, max=100",
+            "last-modified": "Tue, 03 Nov 2026 07:59:30 GMT",
+            "panel": "hpanel",
+            "platform": "hostinger",
+            "server": "LiteSpeed",
+            "vary": "Accept-Encoding"
+          }
+        }
+      ]
+    },
+    {
+      "requested": "https://www.cncpioneer.com/seo-audit-missing-page-20261104",
+      "hops": [
+        {
+          "requested": "https://www.cncpioneer.com/seo-audit-missing-page-20261104",
+          "url": "https://www.cncpioneer.com/seo-audit-missing-page-20261104",
+          "status": 404,
+          "elapsedMs": 276,
+          "headers": {
+            "accept-ranges": "bytes",
+            "connection": "Keep-Alive",
+            "content-encoding": "br",
+            "content-length": "4907",
+            "content-security-policy": "upgrade-insecure-requests",
+            "content-type": "text/html",
+            "date": "Wed, 04 Nov 2026 08:18:24 GMT",
+            "etag": "\"4a20-6ae99450-fc36619859cc8111;br\"",
+            "keep-alive": "timeout=5, max=100",
+            "last-modified": "Tue, 03 Nov 2026 07:59:12 GMT",
+            "panel": "hpanel",
+            "platform": "hostinger",
+            "server": "LiteSpeed",
+            "vary": "Accept-Encoding"
+          }
+        }
+      ]
+    },
+    {
+      "requested": "https://www.cncpioneer.com/search?q=cnc",
+      "hops": [
+        {
+          "requested": "https://www.cncpioneer.com/search?q=cnc",
+          "url": "https://www.cncpioneer.com/search?q=cnc",
+          "status": 301,
+          "elapsedMs": 260,
+          "headers": {
+            "connection": "Keep-Alive",
+            "content-length": "795",
+            "content-security-policy": "upgrade-insecure-requests",
+            "content-type": "text/html",
+            "date": "Wed, 04 Nov 2026 08:18:24 GMT",
+            "keep-alive": "timeout=5, max=100",
+            "location": "https://www.cncpioneer.com/search/?q=cnc",
+            "panel": "hpanel",
+            "platform": "hostinger",
+            "server": "LiteSpeed"
+          }
+        },
+        {
+          "requested": "https://www.cncpioneer.com/search/?q=cnc",
+          "url": "https://www.cncpioneer.com/search/?q=cnc",
+          "status": 200,
+          "elapsedMs": 252,
+          "headers": {
+            "accept-ranges": "bytes",
+            "connection": "Keep-Alive",
+            "content-encoding": "br",
+            "content-length": "4700",
+            "content-security-policy": "upgrade-insecure-requests",
+            "content-type": "text/html",
+            "date": "Wed, 04 Nov 2026 08:18:24 GMT",
+            "etag": "\"4c96-6ae99460-4623800d4dca1a87;br\"",
+            "keep-alive": "timeout=5, max=100",
+            "last-modified": "Tue, 03 Nov 2026 07:59:28 GMT",
+            "panel": "hpanel",
+            "platform": "hostinger",
+            "server": "LiteSpeed",
+            "vary": "Accept-Encoding"
+          }
+        }
+      ]
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/cnc-machining-defense",
+      "hops": [
+        {
+          "requested": "https://www.cncpioneer.com/blog/cnc-machining-defense",
+          "url": "https://www.cncpioneer.com/blog/cnc-machining-defense",
+          "status": 404,
+          "elapsedMs": 252,
+          "headers": {
+            "accept-ranges": "bytes",
+            "connection": "Keep-Alive",
+            "content-encoding": "br",
+            "content-length": "4907",
+            "content-security-policy": "upgrade-insecure-requests",
+            "content-type": "text/html",
+            "date": "Wed, 04 Nov 2026 08:18:24 GMT",
+            "etag": "\"4a20-6ae99450-fc36619859cc8111;br\"",
+            "keep-alive": "timeout=5, max=100",
+            "last-modified": "Tue, 03 Nov 2026 07:59:12 GMT",
+            "panel": "hpanel",
+            "platform": "hostinger",
+            "server": "LiteSpeed",
+            "vary": "Accept-Encoding"
+          }
+        }
+      ]
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/medical-swiss-machining",
+      "hops": [
+        {
+          "requested": "https://www.cncpioneer.com/blog/medical-swiss-machining",
+          "url": "https://www.cncpioneer.com/blog/medical-swiss-machining",
+          "status": 404,
+          "elapsedMs": 256,
+          "headers": {
+            "accept-ranges": "bytes",
+            "connection": "Keep-Alive",
+            "content-encoding": "br",
+            "content-length": "4907",
+            "content-security-policy": "upgrade-insecure-requests",
+            "content-type": "text/html",
+            "date": "Wed, 04 Nov 2026 08:18:24 GMT",
+            "etag": "\"4a20-6ae99450-fc36619859cc8111;br\"",
+            "keep-alive": "timeout=5, max=100",
+            "last-modified": "Tue, 03 Nov 2026 07:59:12 GMT",
+            "panel": "hpanel",
+            "platform": "hostinger",
+            "server": "LiteSpeed",
+            "vary": "Accept-Encoding"
+          }
+        }
+      ]
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/cnc-locating-pinsi",
+      "hops": [
+        {
+          "requested": "https://www.cncpioneer.com/blog/cnc-locating-pinsi",
+          "url": "https://www.cncpioneer.com/blog/cnc-locating-pinsi",
+          "status": 404,
+          "elapsedMs": 256,
+          "headers": {
+            "accept-ranges": "bytes",
+            "connection": "Keep-Alive",
+            "content-encoding": "br",
+            "content-length": "4907",
+            "content-security-policy": "upgrade-insecure-requests",
+            "content-type": "text/html",
+            "date": "Wed, 04 Nov 2026 08:18:24 GMT",
+            "etag": "\"4a20-6ae99450-fc36619859cc8111;br\"",
+            "keep-alive": "timeout=5, max=100",
+            "last-modified": "Tue, 03 Nov 2026 07:59:12 GMT",
+            "panel": "hpanel",
+            "platform": "hostinger",
+            "server": "LiteSpeed",
+            "vary": "Accept-Encoding"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -29,7 +29,7 @@
   --layout-shell: 1328px;
   --layout-reading: 800px;
   --type-h1: clamp(2.5rem, 5vw, 4rem);
-  --type-h1-home: var(--type-h1);
+  --type-h1-home: clamp(2.75rem, 5.5vw, 4.5rem);
   --type-h1-hero: clamp(2.5rem, 5vw, 4.375rem);
   --type-h1-article: var(--type-h1);
   --type-h2: clamp(2rem, 4vw, 3.125rem);

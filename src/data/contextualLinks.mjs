@@ -71,7 +71,7 @@ export function applyContextualLinks(html, pathname) {
       } else if(open) {
         const tag=open[1].toLowerCase();
         if(tag==='p') {inParagraph=true;paragraphLinked=false;}
-        if(!/^(?:area|base|br|col|embed|hr|img|input|link|meta|param|source|track|wbr)$/.test(tag)) stack.push({tag,blocked:/^(?:a|script|style|nav|header|footer|aside|form|button|noscript|svg)$/.test(tag)||/breadcrumb|quote-cta|quote-form|post-meta|caption/i.test(part)});
+        if(!/^(?:area|base|br|col|embed|hr|img|input|link|meta|param|source|track|wbr)$/.test(tag)) stack.push({tag,blocked:/^(?:a|script|style|nav|header|footer|aside|form|button|noscript|svg)$/.test(tag)||/breadcrumb|quote-cta|quote-form|post-meta|caption/i.test(part)||/\bdata-no-contextual-links(?:[=\s>])/i.test(part)});
       }
       return part;
     }

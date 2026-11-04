@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450" fill="none">
+  <rect width="800" height="450" fill="#F5F6F7"/>
+  <g stroke="#DDE2E6"><path d="M70 370H730M70 110H730M110 70V390M690 70V390"/><path d="M70 390H730" stroke-dasharray="5 7"/></g>
+  <g stroke="#1F5D85" stroke-width="3" stroke-linejoin="round">
+    <path d="M160 101H630L660 130V353H160V101Z" fill="#FFFFFF"/><path d="M160 101L194 72H660V353M630 101V353M660 72V130"/>
+    <path d="M192 133H514V310H192Z" fill="#F5F6F7"/>
+    <path d="M213 162H261V258H213ZM261 175H285V245H261Z" fill="#FFFFFF"/>
+    <path d="M285 193H364V227H285ZM364 201H407V219H364Z" fill="#FFFFFF"/>
+    <path d="M414 246L389 222L407 205L433 230M412 232L446 266H478V286H392V266L412 232Z" fill="#FFFFFF"/>
+    <path d="M206 287H493M206 299H493M349 137V179M336 137V160H362V137"/>
+    <rect x="541" y="140" width="65" height="89" rx="3"/><path d="M553 152H594V181H553ZM553 196H563M575 196H585M553 211H563M575 211H585M540 266H609M540 282H609"/>
+    <path d="M183 353V373H219V353M568 353V373H604V353"/>
+  </g>
+  <path d="M196 210H504M351 104V190" stroke="#59636E" stroke-width="1.5" stroke-dasharray="6 6"/>
+</svg>
+<!-- Original unbranded equipment schematic; rasterized to WebP for deployment. -->

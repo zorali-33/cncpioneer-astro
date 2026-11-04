@@ -1,0 +1,24 @@
+{
+  "date": "2026-11-04",
+  "scope": "Local development build, DOM and visual spot checks; not Lighthouse, CrUX, or a production-browser performance test.",
+  "mobile": {
+    "viewport": {"width": 390, "height": 844},
+    "routes": ["/", "/services/swiss-machining", "/blog/what-is-cnc", "/materials/metal-cnc-machining", "/custom-cnc-parts/5-axis-cnc-machining-aerospace-components", "/cnc-machining-quote"],
+    "horizontalPageOverflow": false,
+    "brokenLoadedImages": 0,
+    "h1CountPerPage": 1,
+    "notes": "Home section links scroll within their own horizontal container; deliberately off-screen form honeypot is not visible content overflow. Home H1 is 44px. Blog main image starts at y=969 on this viewport."
+  },
+  "desktop": {
+    "viewport": {"width": 1440, "height": 1000},
+    "routes": ["/", "/blog/what-is-cnc", "/custom-cnc-parts/5-axis-cnc-machining-aerospace-components"],
+    "horizontalPageOverflow": false,
+    "brokenLoadedImages": 0,
+    "h1CountPerPage": 1,
+    "notes": "Home H1 is 72px. Blog image /assets/images/what-is-cnc.webp appears at y=615, width=800, loading=lazy, with no fetchpriority; it is a potential LCP candidate, not a measured LCP result. Product H1 line break reads naturally."
+  },
+  "viewportRestored": true,
+  "productionBrowser": "Live UI navigation timed out; production HTML and resource checks use successful direct public HTTP requests instead.",
+  "searchPerformance": "GSC Wizard list_sites refused with payment_required/subscription_required. No Search Console/GA4/CrUX performance data read.",
+  "pageSpeed": "Public PageSpeed API connection timed out (UND_ERR_CONNECT_TIMEOUT). No Lighthouse score or field CWV pass/fail claimed."
+}

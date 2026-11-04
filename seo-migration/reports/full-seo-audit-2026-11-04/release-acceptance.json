@@ -1,0 +1,78 @@
+{
+  "generatedAt": "2026-11-04T08:16:48.755Z",
+  "build": "D:\\cncpioneer.com-astro\\dist",
+  "status": "pass",
+  "results": [
+    {
+      "name": "Regression tests",
+      "status": "pass",
+      "exitCode": 0,
+      "log": "acceptance-1.log"
+    },
+    {
+      "name": "Rendered HTML, SEO, Schema, links and search index",
+      "status": "pass",
+      "exitCode": 0,
+      "log": "acceptance-2.log"
+    },
+    {
+      "name": "CSS, fonts and JavaScript dependencies",
+      "status": "pass",
+      "exitCode": 0,
+      "log": "acceptance-3.log"
+    },
+    {
+      "name": "404 hosting rules and archive pagination",
+      "status": "pass",
+      "exitCode": 0,
+      "log": "acceptance-4.log"
+    },
+    {
+      "name": "WebP format, strict 100 KB limit, filenames and reviewed content",
+      "status": "pass",
+      "exitCode": 0,
+      "log": "acceptance-5.log"
+    },
+    {
+      "name": "Share image URLs, reviewed citations and crawlable page entry points",
+      "status": "pass",
+      "exitCode": 0,
+      "log": "acceptance-6.log"
+    },
+    {
+      "name": "Quote form deployment files and private configuration isolation",
+      "status": "pass",
+      "exitCode": 0,
+      "log": "acceptance-7.log"
+    },
+    {
+      "name": "Native archive content, pagination order, title branding and runtime independence",
+      "status": "pass",
+      "exitCode": 0,
+      "log": "acceptance-8.log"
+    },
+    {
+      "name": "Approved palette across rendered pages and reachable UI styles",
+      "status": "pass",
+      "exitCode": 0,
+      "log": "acceptance-9.log"
+    },
+    {
+      "name": "Approved Inter / DM Sans / JetBrains Mono roles and local font loading",
+      "status": "pass",
+      "exitCode": 0,
+      "log": "acceptance-10.log"
+    },
+    {
+      "name": "Custom Parts main navigation, category filters and complete product coverage",
+      "status": "pass",
+      "exitCode": 0,
+      "log": "acceptance-11.log"
+    }
+  ],
+  "excluded": [
+    "Live SMTP authentication and inbox delivery are not proven by static acceptance; run the separate PHP checks.",
+    "Live production deployment and Search Console validation require the production environment."
+  ],
+  "advisories": "Title/description character counts are editorial targets, not fixed Google validity limits. Historical mirror audits remain available separately."
+}

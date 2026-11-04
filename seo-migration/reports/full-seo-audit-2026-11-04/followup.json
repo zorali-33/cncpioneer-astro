@@ -1,0 +1,2964 @@
+{
+  "generatedAt": "2026-11-04T08:22:41.294Z",
+  "summary": {
+    "redirectedSitemapUrls": 327,
+    "liveTitleDuplicateGroups": 0,
+    "liveDescriptionDuplicateGroups": 0,
+    "liveUnresolvedInternalLinks": 0,
+    "assetsSampled": 22,
+    "assetFailures": 0,
+    "emptyAltOccurrences": 58,
+    "emptyAltUniqueImages": 29,
+    "blogMainFirstImages": 97,
+    "blogLazyFirstImages": 49
+  },
+  "redirected": [
+    {
+      "requested": "https://www.cncpioneer.com/about-us",
+      "final": "https://www.cncpioneer.com/about-us/",
+      "canonical": "https://www.cncpioneer.com/about-us"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/author/david-li",
+      "final": "https://www.cncpioneer.com/author/david-li/",
+      "canonical": "https://www.cncpioneer.com/author/david-li"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/author/david-li/page/2",
+      "final": "https://www.cncpioneer.com/author/david-li/page/2/",
+      "canonical": "https://www.cncpioneer.com/author/david-li/page/2"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/author/david-li/page/3",
+      "final": "https://www.cncpioneer.com/author/david-li/page/3/",
+      "canonical": "https://www.cncpioneer.com/author/david-li/page/3"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/author/ryan-wang",
+      "final": "https://www.cncpioneer.com/author/ryan-wang/",
+      "canonical": "https://www.cncpioneer.com/author/ryan-wang"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/author/ryan-wang/page/2",
+      "final": "https://www.cncpioneer.com/author/ryan-wang/page/2/",
+      "canonical": "https://www.cncpioneer.com/author/ryan-wang/page/2"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/author/ryan-wang/page/3",
+      "final": "https://www.cncpioneer.com/author/ryan-wang/page/3/",
+      "canonical": "https://www.cncpioneer.com/author/ryan-wang/page/3"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/author/ryan-wang/page/4",
+      "final": "https://www.cncpioneer.com/author/ryan-wang/page/4/",
+      "canonical": "https://www.cncpioneer.com/author/ryan-wang/page/4"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/author/ryan-wang/page/5",
+      "final": "https://www.cncpioneer.com/author/ryan-wang/page/5/",
+      "canonical": "https://www.cncpioneer.com/author/ryan-wang/page/5"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/author/ryan-wang/page/6",
+      "final": "https://www.cncpioneer.com/author/ryan-wang/page/6/",
+      "canonical": "https://www.cncpioneer.com/author/ryan-wang/page/6"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/author/ryan-wang/page/7",
+      "final": "https://www.cncpioneer.com/author/ryan-wang/page/7/",
+      "canonical": "https://www.cncpioneer.com/author/ryan-wang/page/7"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/author/ryan-wang/page/8",
+      "final": "https://www.cncpioneer.com/author/ryan-wang/page/8/",
+      "canonical": "https://www.cncpioneer.com/author/ryan-wang/page/8"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog",
+      "final": "https://www.cncpioneer.com/blog/",
+      "canonical": "https://www.cncpioneer.com/blog"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/3d-printing-vs-cnc-machining",
+      "final": "https://www.cncpioneer.com/blog/3d-printing-vs-cnc-machining/",
+      "canonical": "https://www.cncpioneer.com/blog/3d-printing-vs-cnc-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/5-axis-cnc-machining-manufacturers-in-china",
+      "final": "https://www.cncpioneer.com/blog/5-axis-cnc-machining-manufacturers-in-china/",
+      "canonical": "https://www.cncpioneer.com/blog/5-axis-cnc-machining-manufacturers-in-china"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/abrasion-resistant-vs-carbon-steel-cnc-machining",
+      "final": "https://www.cncpioneer.com/blog/abrasion-resistant-vs-carbon-steel-cnc-machining/",
+      "canonical": "https://www.cncpioneer.com/blog/abrasion-resistant-vs-carbon-steel-cnc-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/acrylic-cnc-machining",
+      "final": "https://www.cncpioneer.com/blog/acrylic-cnc-machining/",
+      "canonical": "https://www.cncpioneer.com/blog/acrylic-cnc-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/aerospace-cnc-machining",
+      "final": "https://www.cncpioneer.com/blog/aerospace-cnc-machining/",
+      "canonical": "https://www.cncpioneer.com/blog/aerospace-cnc-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/aluminium-melting-point",
+      "final": "https://www.cncpioneer.com/blog/aluminium-melting-point/",
+      "canonical": "https://www.cncpioneer.com/blog/aluminium-melting-point"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/aluminum-cnc-machining",
+      "final": "https://www.cncpioneer.com/blog/aluminum-cnc-machining/",
+      "canonical": "https://www.cncpioneer.com/blog/aluminum-cnc-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/aluminum-surface-finishes",
+      "final": "https://www.cncpioneer.com/blog/aluminum-surface-finishes/",
+      "canonical": "https://www.cncpioneer.com/blog/aluminum-surface-finishes"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/aluminum-vs-stainless-steel",
+      "final": "https://www.cncpioneer.com/blog/aluminum-vs-stainless-steel/",
+      "canonical": "https://www.cncpioneer.com/blog/aluminum-vs-stainless-steel"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/anodized-aluminum-vs-stainless-steel",
+      "final": "https://www.cncpioneer.com/blog/anodized-aluminum-vs-stainless-steel/",
+      "canonical": "https://www.cncpioneer.com/blog/anodized-aluminum-vs-stainless-steel"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/bakelite-cnc-machining",
+      "final": "https://www.cncpioneer.com/blog/bakelite-cnc-machining/",
+      "canonical": "https://www.cncpioneer.com/blog/bakelite-cnc-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/beveled-edges-cnc-machining",
+      "final": "https://www.cncpioneer.com/blog/beveled-edges-cnc-machining/",
+      "canonical": "https://www.cncpioneer.com/blog/beveled-edges-cnc-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/brass-cnc-machining",
+      "final": "https://www.cncpioneer.com/blog/brass-cnc-machining/",
+      "canonical": "https://www.cncpioneer.com/blog/brass-cnc-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/bronze-cnc-machining",
+      "final": "https://www.cncpioneer.com/blog/bronze-cnc-machining/",
+      "canonical": "https://www.cncpioneer.com/blog/bronze-cnc-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/building-a-humanoid-robot",
+      "final": "https://www.cncpioneer.com/blog/building-a-humanoid-robot/",
+      "canonical": "https://www.cncpioneer.com/blog/building-a-humanoid-robot"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/cast-iron-cnc-machining-parts",
+      "final": "https://www.cncpioneer.com/blog/cast-iron-cnc-machining-parts/",
+      "canonical": "https://www.cncpioneer.com/blog/cast-iron-cnc-machining-parts"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/casting-vs-cnc-machining",
+      "final": "https://www.cncpioneer.com/blog/casting-vs-cnc-machining/",
+      "canonical": "https://www.cncpioneer.com/blog/casting-vs-cnc-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/chamfer-cnc-machining",
+      "final": "https://www.cncpioneer.com/blog/chamfer-cnc-machining/",
+      "canonical": "https://www.cncpioneer.com/blog/chamfer-cnc-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/china-humanoid-robot-companies",
+      "final": "https://www.cncpioneer.com/blog/china-humanoid-robot-companies/",
+      "canonical": "https://www.cncpioneer.com/blog/china-humanoid-robot-companies"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/choose-cnc-machining-company",
+      "final": "https://www.cncpioneer.com/blog/choose-cnc-machining-company/",
+      "canonical": "https://www.cncpioneer.com/blog/choose-cnc-machining-company"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/cnc-boring",
+      "final": "https://www.cncpioneer.com/blog/cnc-boring/",
+      "canonical": "https://www.cncpioneer.com/blog/cnc-boring"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/cnc-drilling",
+      "final": "https://www.cncpioneer.com/blog/cnc-drilling/",
+      "canonical": "https://www.cncpioneer.com/blog/cnc-drilling"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/cnc-electronic-housings",
+      "final": "https://www.cncpioneer.com/blog/cnc-electronic-housings/",
+      "canonical": "https://www.cncpioneer.com/blog/cnc-electronic-housings"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/cnc-ev-motor-housings",
+      "final": "https://www.cncpioneer.com/blog/cnc-ev-motor-housings/",
+      "canonical": "https://www.cncpioneer.com/blog/cnc-ev-motor-housings"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/cnc-heat-sink-manufacturing",
+      "final": "https://www.cncpioneer.com/blog/cnc-heat-sink-manufacturing/",
+      "canonical": "https://www.cncpioneer.com/blog/cnc-heat-sink-manufacturing"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/cnc-lathe-vs-mill",
+      "final": "https://www.cncpioneer.com/blog/cnc-lathe-vs-mill/",
+      "canonical": "https://www.cncpioneer.com/blog/cnc-lathe-vs-mill"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/cnc-locating-pins",
+      "final": "https://www.cncpioneer.com/blog/cnc-locating-pins/",
+      "canonical": "https://www.cncpioneer.com/blog/cnc-locating-pins"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/cnc-machined-uav-parts",
+      "final": "https://www.cncpioneer.com/blog/cnc-machined-uav-parts/",
+      "canonical": "https://www.cncpioneer.com/blog/cnc-machined-uav-parts"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/cnc-machining-costs",
+      "final": "https://www.cncpioneer.com/blog/cnc-machining-costs/",
+      "canonical": "https://www.cncpioneer.com/blog/cnc-machining-costs"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/cnc-machining-fillets",
+      "final": "https://www.cncpioneer.com/blog/cnc-machining-fillets/",
+      "canonical": "https://www.cncpioneer.com/blog/cnc-machining-fillets"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/cnc-machining-for-automotive-industry",
+      "final": "https://www.cncpioneer.com/blog/cnc-machining-for-automotive-industry/",
+      "canonical": "https://www.cncpioneer.com/blog/cnc-machining-for-automotive-industry"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/cnc-machining-for-furniture-industry",
+      "final": "https://www.cncpioneer.com/blog/cnc-machining-for-furniture-industry/",
+      "canonical": "https://www.cncpioneer.com/blog/cnc-machining-for-furniture-industry"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/cnc-machining-for-renewable-energy",
+      "final": "https://www.cncpioneer.com/blog/cnc-machining-for-renewable-energy/",
+      "canonical": "https://www.cncpioneer.com/blog/cnc-machining-for-renewable-energy"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/cnc-machining-for-semiconductor-industry",
+      "final": "https://www.cncpioneer.com/blog/cnc-machining-for-semiconductor-industry/",
+      "canonical": "https://www.cncpioneer.com/blog/cnc-machining-for-semiconductor-industry"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/cnc-machining-heavy-truck-industry",
+      "final": "https://www.cncpioneer.com/blog/cnc-machining-heavy-truck-industry/",
+      "canonical": "https://www.cncpioneer.com/blog/cnc-machining-heavy-truck-industry"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/cnc-machining-materials",
+      "final": "https://www.cncpioneer.com/blog/cnc-machining-materials/",
+      "canonical": "https://www.cncpioneer.com/blog/cnc-machining-materials"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/cnc-machining-quality-testing",
+      "final": "https://www.cncpioneer.com/blog/cnc-machining-quality-testing/",
+      "canonical": "https://www.cncpioneer.com/blog/cnc-machining-quality-testing"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/cnc-machining-robot-parts",
+      "final": "https://www.cncpioneer.com/blog/cnc-machining-robot-parts/",
+      "canonical": "https://www.cncpioneer.com/blog/cnc-machining-robot-parts"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/cnc-machining-vs-injection-molding",
+      "final": "https://www.cncpioneer.com/blog/cnc-machining-vs-injection-molding/",
+      "canonical": "https://www.cncpioneer.com/blog/cnc-machining-vs-injection-molding"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/cnc-machining-vs-manual-machining",
+      "final": "https://www.cncpioneer.com/blog/cnc-machining-vs-manual-machining/",
+      "canonical": "https://www.cncpioneer.com/blog/cnc-machining-vs-manual-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/cnc-metalworks",
+      "final": "https://www.cncpioneer.com/blog/cnc-metalworks/",
+      "canonical": "https://www.cncpioneer.com/blog/cnc-metalworks"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/cnc-milling",
+      "final": "https://www.cncpioneer.com/blog/cnc-milling/",
+      "canonical": "https://www.cncpioneer.com/blog/cnc-milling"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/cnc-milling-and-turning-defense",
+      "final": "https://www.cncpioneer.com/blog/cnc-milling-and-turning-defense/",
+      "canonical": "https://www.cncpioneer.com/blog/cnc-milling-and-turning-defense"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/cnc-milling-machine-parts",
+      "final": "https://www.cncpioneer.com/blog/cnc-milling-machine-parts/",
+      "canonical": "https://www.cncpioneer.com/blog/cnc-milling-machine-parts"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/cnc-milling-vs-laser-cutting",
+      "final": "https://www.cncpioneer.com/blog/cnc-milling-vs-laser-cutting/",
+      "canonical": "https://www.cncpioneer.com/blog/cnc-milling-vs-laser-cutting"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/cnc-near-me-vs-online-cnc-machining",
+      "final": "https://www.cncpioneer.com/blog/cnc-near-me-vs-online-cnc-machining/",
+      "canonical": "https://www.cncpioneer.com/blog/cnc-near-me-vs-online-cnc-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/cnc-precision-parts",
+      "final": "https://www.cncpioneer.com/blog/cnc-precision-parts/",
+      "canonical": "https://www.cncpioneer.com/blog/cnc-precision-parts"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/cnc-prototyping",
+      "final": "https://www.cncpioneer.com/blog/cnc-prototyping/",
+      "canonical": "https://www.cncpioneer.com/blog/cnc-prototyping"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/cnc-services-for-startups",
+      "final": "https://www.cncpioneer.com/blog/cnc-services-for-startups/",
+      "canonical": "https://www.cncpioneer.com/blog/cnc-services-for-startups"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/cnc-turned-parts",
+      "final": "https://www.cncpioneer.com/blog/cnc-turned-parts/",
+      "canonical": "https://www.cncpioneer.com/blog/cnc-turned-parts"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/cnc-turning",
+      "final": "https://www.cncpioneer.com/blog/cnc-turning/",
+      "canonical": "https://www.cncpioneer.com/blog/cnc-turning"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/cnc-vs-sheet-metal",
+      "final": "https://www.cncpioneer.com/blog/cnc-vs-sheet-metal/",
+      "canonical": "https://www.cncpioneer.com/blog/cnc-vs-sheet-metal"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/complex-cnc-machining-tasks",
+      "final": "https://www.cncpioneer.com/blog/complex-cnc-machining-tasks/",
+      "canonical": "https://www.cncpioneer.com/blog/complex-cnc-machining-tasks"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/connector-machining",
+      "final": "https://www.cncpioneer.com/blog/connector-machining/",
+      "canonical": "https://www.cncpioneer.com/blog/connector-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/copper-cnc-machining",
+      "final": "https://www.cncpioneer.com/blog/copper-cnc-machining/",
+      "canonical": "https://www.cncpioneer.com/blog/copper-cnc-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/copper-t2-cnc-machining",
+      "final": "https://www.cncpioneer.com/blog/copper-t2-cnc-machining/",
+      "canonical": "https://www.cncpioneer.com/blog/copper-t2-cnc-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/electronics-machining",
+      "final": "https://www.cncpioneer.com/blog/electronics-machining/",
+      "canonical": "https://www.cncpioneer.com/blog/electronics-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/face-milling",
+      "final": "https://www.cncpioneer.com/blog/face-milling/",
+      "canonical": "https://www.cncpioneer.com/blog/face-milling"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/fastener-machining",
+      "final": "https://www.cncpioneer.com/blog/fastener-machining/",
+      "canonical": "https://www.cncpioneer.com/blog/fastener-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/fr4-cnc-machining",
+      "final": "https://www.cncpioneer.com/blog/fr4-cnc-machining/",
+      "canonical": "https://www.cncpioneer.com/blog/fr4-cnc-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/inconel-vs-monel",
+      "final": "https://www.cncpioneer.com/blog/inconel-vs-monel/",
+      "canonical": "https://www.cncpioneer.com/blog/inconel-vs-monel"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/inconel-vs-titanium",
+      "final": "https://www.cncpioneer.com/blog/inconel-vs-titanium/",
+      "canonical": "https://www.cncpioneer.com/blog/inconel-vs-titanium"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/low-volume-cnc-machining",
+      "final": "https://www.cncpioneer.com/blog/low-volume-cnc-machining/",
+      "canonical": "https://www.cncpioneer.com/blog/low-volume-cnc-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/medical-cnc-machining",
+      "final": "https://www.cncpioneer.com/blog/medical-cnc-machining/",
+      "canonical": "https://www.cncpioneer.com/blog/medical-cnc-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/nylon-cnc-machining",
+      "final": "https://www.cncpioneer.com/blog/nylon-cnc-machining/",
+      "canonical": "https://www.cncpioneer.com/blog/nylon-cnc-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/oil-and-gas-machining",
+      "final": "https://www.cncpioneer.com/blog/oil-and-gas-machining/",
+      "canonical": "https://www.cncpioneer.com/blog/oil-and-gas-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/oil-and-gas-plastic-machining",
+      "final": "https://www.cncpioneer.com/blog/oil-and-gas-plastic-machining/",
+      "canonical": "https://www.cncpioneer.com/blog/oil-and-gas-plastic-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/oil-gas-cnc-machining-parts",
+      "final": "https://www.cncpioneer.com/blog/oil-gas-cnc-machining-parts/",
+      "canonical": "https://www.cncpioneer.com/blog/oil-gas-cnc-machining-parts"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/page/10",
+      "final": "https://www.cncpioneer.com/blog/page/10/",
+      "canonical": "https://www.cncpioneer.com/blog/page/10"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/page/2",
+      "final": "https://www.cncpioneer.com/blog/page/2/",
+      "canonical": "https://www.cncpioneer.com/blog/page/2"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/page/3",
+      "final": "https://www.cncpioneer.com/blog/page/3/",
+      "canonical": "https://www.cncpioneer.com/blog/page/3"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/page/4",
+      "final": "https://www.cncpioneer.com/blog/page/4/",
+      "canonical": "https://www.cncpioneer.com/blog/page/4"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/page/5",
+      "final": "https://www.cncpioneer.com/blog/page/5/",
+      "canonical": "https://www.cncpioneer.com/blog/page/5"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/page/6",
+      "final": "https://www.cncpioneer.com/blog/page/6/",
+      "canonical": "https://www.cncpioneer.com/blog/page/6"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/page/7",
+      "final": "https://www.cncpioneer.com/blog/page/7/",
+      "canonical": "https://www.cncpioneer.com/blog/page/7"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/page/8",
+      "final": "https://www.cncpioneer.com/blog/page/8/",
+      "canonical": "https://www.cncpioneer.com/blog/page/8"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/page/9",
+      "final": "https://www.cncpioneer.com/blog/page/9/",
+      "canonical": "https://www.cncpioneer.com/blog/page/9"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/precision-aerospace-cnc-machined-parts",
+      "final": "https://www.cncpioneer.com/blog/precision-aerospace-cnc-machined-parts/",
+      "canonical": "https://www.cncpioneer.com/blog/precision-aerospace-cnc-machined-parts"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/precision-cnc-milling-parts",
+      "final": "https://www.cncpioneer.com/blog/precision-cnc-milling-parts/",
+      "canonical": "https://www.cncpioneer.com/blog/precision-cnc-milling-parts"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/precision-cnc-turning",
+      "final": "https://www.cncpioneer.com/blog/precision-cnc-turning/",
+      "canonical": "https://www.cncpioneer.com/blog/precision-cnc-turning"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/railroad-machining",
+      "final": "https://www.cncpioneer.com/blog/railroad-machining/",
+      "canonical": "https://www.cncpioneer.com/blog/railroad-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/railroads-cnc-machining-companies",
+      "final": "https://www.cncpioneer.com/blog/railroads-cnc-machining-companies/",
+      "canonical": "https://www.cncpioneer.com/blog/railroads-cnc-machining-companies"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/robot-hands",
+      "final": "https://www.cncpioneer.com/blog/robot-hands/",
+      "canonical": "https://www.cncpioneer.com/blog/robot-hands"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/shaft-machining",
+      "final": "https://www.cncpioneer.com/blog/shaft-machining/",
+      "canonical": "https://www.cncpioneer.com/blog/shaft-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/slot-milling",
+      "final": "https://www.cncpioneer.com/blog/slot-milling/",
+      "canonical": "https://www.cncpioneer.com/blog/slot-milling"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/stainless-steel-cnc-machining",
+      "final": "https://www.cncpioneer.com/blog/stainless-steel-cnc-machining/",
+      "canonical": "https://www.cncpioneer.com/blog/stainless-steel-cnc-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/stainless-steel-surface-finishes",
+      "final": "https://www.cncpioneer.com/blog/stainless-steel-surface-finishes/",
+      "canonical": "https://www.cncpioneer.com/blog/stainless-steel-surface-finishes"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/surface-finish",
+      "final": "https://www.cncpioneer.com/blog/surface-finish/",
+      "canonical": "https://www.cncpioneer.com/blog/surface-finish"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/surface-finish-chart",
+      "final": "https://www.cncpioneer.com/blog/surface-finish-chart/",
+      "canonical": "https://www.cncpioneer.com/blog/surface-finish-chart"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/surface-finish-symbols",
+      "final": "https://www.cncpioneer.com/blog/surface-finish-symbols/",
+      "canonical": "https://www.cncpioneer.com/blog/surface-finish-symbols"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/surface-roughness",
+      "final": "https://www.cncpioneer.com/blog/surface-roughness/",
+      "canonical": "https://www.cncpioneer.com/blog/surface-roughness"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/swiss-machining",
+      "final": "https://www.cncpioneer.com/blog/swiss-machining/",
+      "canonical": "https://www.cncpioneer.com/blog/swiss-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/swiss-machining-materials",
+      "final": "https://www.cncpioneer.com/blog/swiss-machining-materials/",
+      "canonical": "https://www.cncpioneer.com/blog/swiss-machining-materials"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/thread-milling-vs-tapping",
+      "final": "https://www.cncpioneer.com/blog/thread-milling-vs-tapping/",
+      "canonical": "https://www.cncpioneer.com/blog/thread-milling-vs-tapping"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/what-is-a-cnc-lathe",
+      "final": "https://www.cncpioneer.com/blog/what-is-a-cnc-lathe/",
+      "canonical": "https://www.cncpioneer.com/blog/what-is-a-cnc-lathe"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/what-is-cnc",
+      "final": "https://www.cncpioneer.com/blog/what-is-cnc/",
+      "canonical": "https://www.cncpioneer.com/blog/what-is-cnc"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/blog/zero-waste-cnc-machining",
+      "final": "https://www.cncpioneer.com/blog/zero-waste-cnc-machining/",
+      "canonical": "https://www.cncpioneer.com/blog/zero-waste-cnc-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/cnc-machining-quote",
+      "final": "https://www.cncpioneer.com/cnc-machining-quote/",
+      "canonical": "https://www.cncpioneer.com/cnc-machining-quote"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/5-axis-aluminum-cnc-machining-parts",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/5-axis-aluminum-cnc-machining-parts/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/5-axis-aluminum-cnc-machining-parts"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/5-axis-cnc-machining-aerospace-components",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/5-axis-cnc-machining-aerospace-components/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/5-axis-cnc-machining-aerospace-components"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/5-axis-cnc-machining-brass-parts",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/5-axis-cnc-machining-brass-parts/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/5-axis-cnc-machining-brass-parts"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/5-axis-cnc-machining-for-aluminum-structures",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/5-axis-cnc-machining-for-aluminum-structures/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/5-axis-cnc-machining-for-aluminum-structures"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/5-axis-cnc-machining-for-humanoid-robots",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/5-axis-cnc-machining-for-humanoid-robots/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/5-axis-cnc-machining-for-humanoid-robots"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/5-axis-cnc-machining-mechanical-parts",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/5-axis-cnc-machining-mechanical-parts/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/5-axis-cnc-machining-mechanical-parts"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/5-axis-cnc-machining-robotic-joints",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/5-axis-cnc-machining-robotic-joints/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/5-axis-cnc-machining-robotic-joints"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/5-axis-sensor-housing-machining",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/5-axis-sensor-housing-machining/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/5-axis-sensor-housing-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/aerospace-connector-pins",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/aerospace-connector-pins/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/aerospace-connector-pins"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/aerospace-fasteners",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/aerospace-fasteners/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/aerospace-fasteners"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/aerospace-fittings",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/aerospace-fittings/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/aerospace-fittings"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/aerospace-precision-shafts",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/aerospace-precision-shafts/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/aerospace-precision-shafts"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/aerospace-precision-terminals",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/aerospace-precision-terminals/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/aerospace-precision-terminals"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/aluminium-alloy-cnc-turning-bushing",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/aluminium-alloy-cnc-turning-bushing/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/aluminium-alloy-cnc-turning-bushing"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/aluminium-alloy-cnc-turning-milling-parts",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/aluminium-alloy-cnc-turning-milling-parts/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/aluminium-alloy-cnc-turning-milling-parts"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/aluminum-bronze-bushing",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/aluminum-bronze-bushing/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/aluminum-bronze-bushing"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/aluminum-cnc-machining-flanges",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/aluminum-cnc-machining-flanges/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/aluminum-cnc-machining-flanges"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/aluminum-cnc-milling-connectors",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/aluminum-cnc-milling-connectors/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/aluminum-cnc-milling-connectors"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/aluminum-cnc-turning-parts",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/aluminum-cnc-turning-parts/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/aluminum-cnc-turning-parts"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/aluminum-shafts-cnc-turning",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/aluminum-shafts-cnc-turning/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/aluminum-shafts-cnc-turning"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/aluminum-swiss-screw-machined-parts",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/aluminum-swiss-screw-machined-parts/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/aluminum-swiss-screw-machined-parts"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/aluminum-threaded-bushings",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/aluminum-threaded-bushings/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/aluminum-threaded-bushings"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/battery-housings",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/battery-housings/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/battery-housings"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/bearing-bushing",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/bearing-bushing/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/bearing-bushing"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/bearing-housing",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/bearing-housing/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/bearing-housing"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/brass-contact-pins",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/brass-contact-pins/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/brass-contact-pins"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/brass-flange-bushing",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/brass-flange-bushing/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/brass-flange-bushing"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/brass-nipple",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/brass-nipple/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/brass-nipple"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/brass-pipe-fittings",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/brass-pipe-fittings/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/brass-pipe-fittings"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/brass-pneumatic-fittings",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/brass-pneumatic-fittings/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/brass-pneumatic-fittings"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/brass-swiss-screw-machined-parts",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/brass-swiss-screw-machined-parts/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/brass-swiss-screw-machined-parts"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/brass-threaded-bushings",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/brass-threaded-bushings/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/brass-threaded-bushings"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/brass-turning-milling-parts",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/brass-turning-milling-parts/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/brass-turning-milling-parts"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/bronze-bushings",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/bronze-bushings/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/bronze-bushings"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/bronze-sleeve-bushings",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/bronze-sleeve-bushings/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/bronze-sleeve-bushings"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/chassis",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/chassis/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/chassis"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/cnc-custom-aluminum-shift-knob",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/cnc-custom-aluminum-shift-knob/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/cnc-custom-aluminum-shift-knob"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/cnc-machined-brass-parts",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/cnc-machined-brass-parts/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/cnc-machined-brass-parts"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/cnc-machined-flange",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/cnc-machined-flange/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/cnc-machined-flange"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/cnc-machined-pins",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/cnc-machined-pins/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/cnc-machined-pins"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/cnc-machinery-parts",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/cnc-machinery-parts/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/cnc-machinery-parts"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/cnc-machining-drone-parts",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/cnc-machining-drone-parts/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/cnc-machining-drone-parts"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/cnc-machining-for-aerospace-brackets",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/cnc-machining-for-aerospace-brackets/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/cnc-machining-for-aerospace-brackets"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/cnc-machining-servo-motor-parts",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/cnc-machining-servo-motor-parts/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/cnc-machining-servo-motor-parts"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/cnc-propeller-machining",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/cnc-propeller-machining/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/cnc-propeller-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/cnc-prototyping-humanoid-robot-parts",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/cnc-prototyping-humanoid-robot-parts/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/cnc-prototyping-humanoid-robot-parts"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/cnc-turning-and-milling-parts",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/cnc-turning-and-milling-parts/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/cnc-turning-and-milling-parts"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/cnc-turning-bearing-housings",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/cnc-turning-bearing-housings/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/cnc-turning-bearing-housings"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/cnc-turning-humanoid-robot-components",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/cnc-turning-humanoid-robot-components/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/cnc-turning-humanoid-robot-components"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/cnc-turning-precision-washers",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/cnc-turning-precision-washers/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/cnc-turning-precision-washers"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/cnc-turning-titanium-nuts",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/cnc-turning-titanium-nuts/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/cnc-turning-titanium-nuts"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/compression-tube-fitting",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/compression-tube-fitting/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/compression-tube-fitting"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/connector-pins",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/connector-pins/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/connector-pins"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/crimp-contact-pins",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/crimp-contact-pins/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/crimp-contact-pins"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/custom-electrical-contacts",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/custom-electrical-contacts/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/custom-electrical-contacts"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/custom-pipe-flanges",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/custom-pipe-flanges/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/custom-pipe-flanges"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/cylinder-head-machining",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/cylinder-head-machining/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/cylinder-head-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/defense-cnc-machining-parts",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/defense-cnc-machining-parts/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/defense-cnc-machining-parts"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/dental-implant-manufacturing",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/dental-implant-manufacturing/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/dental-implant-manufacturing"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/electric-motor-stator-housing-machining",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/electric-motor-stator-housing-machining/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/electric-motor-stator-housing-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/electrical-connectors",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/electrical-connectors/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/electrical-connectors"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/ev-battery-connectors",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/ev-battery-connectors/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/ev-battery-connectors"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/ev-charger-manufacturing",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/ev-charger-manufacturing/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/ev-charger-manufacturing"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/ev-charging-connector",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/ev-charging-connector/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/ev-charging-connector"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/ev-charging-gun",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/ev-charging-gun/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/ev-charging-gun"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/ev-charging-plug",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/ev-charging-plug/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/ev-charging-plug"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/ev-components",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/ev-components/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/ev-components"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/ev-housing-cnc-machining",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/ev-housing-cnc-machining/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/ev-housing-cnc-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/evtol-titanium-fasteners",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/evtol-titanium-fasteners/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/evtol-titanium-fasteners"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/flanges",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/flanges/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/flanges"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/gearbox-housing",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/gearbox-housing/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/gearbox-housing"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/harmonic-drive-gearbox",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/harmonic-drive-gearbox/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/harmonic-drive-gearbox"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/heat-sinks",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/heat-sinks/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/heat-sinks"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/humanoid-robot-arm-components",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/humanoid-robot-arm-components/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/humanoid-robot-arm-components"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/humanoid-robot-finger-joints",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/humanoid-robot-finger-joints/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/humanoid-robot-finger-joints"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/humanoid-robot-hand-finger-parts",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/humanoid-robot-hand-finger-parts/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/humanoid-robot-hand-finger-parts"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/humanoid-robot-joint-components",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/humanoid-robot-joint-components/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/humanoid-robot-joint-components"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/humanoid-robot-joint-housings",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/humanoid-robot-joint-housings/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/humanoid-robot-joint-housings"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/humanoid-robot-leg-components",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/humanoid-robot-leg-components/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/humanoid-robot-leg-components"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/hydraulic-cylinder-components-machining",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/hydraulic-cylinder-components-machining/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/hydraulic-cylinder-components-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/hydraulic-cylinder-piston-machining",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/hydraulic-cylinder-piston-machining/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/hydraulic-cylinder-piston-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/hydraulic-fittings",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/hydraulic-fittings/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/hydraulic-fittings"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/industrial-robot-arms",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/industrial-robot-arms/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/industrial-robot-arms"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/introducer-needles",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/introducer-needles/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/introducer-needles"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/liquid-cooling-connectors",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/liquid-cooling-connectors/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/liquid-cooling-connectors"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/liquid-cooling-plate",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/liquid-cooling-plate/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/liquid-cooling-plate"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/male-female-thread-nipple",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/male-female-thread-nipple/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/male-female-thread-nipple"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/medical-device-pins",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/medical-device-pins/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/medical-device-pins"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/medical-instrument-machining",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/medical-instrument-machining/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/medical-instrument-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/medical-machining-parts",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/medical-machining-parts/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/medical-machining-parts"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/metal-enclosures",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/metal-enclosures/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/metal-enclosures"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/metric-thread-adapter",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/metric-thread-adapter/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/metric-thread-adapter"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/motor-housings",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/motor-housings/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/motor-housings"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/motor-shaft",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/motor-shaft/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/motor-shaft"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/nickel-swiss-machining-parts",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/nickel-swiss-machining-parts/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/nickel-swiss-machining-parts"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/oil-gas-machining-components",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/oil-gas-machining-components/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/oil-gas-machining-components"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/page/2",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/page/2/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/page/2"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/page/3",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/page/3/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/page/3"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/page/4",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/page/4/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/page/4"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/page/5",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/page/5/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/page/5"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/page/6",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/page/6/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/page/6"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/pipe-fittings",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/pipe-fittings/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/pipe-fittings"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/pipe-fittings-full-coupling",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/pipe-fittings-full-coupling/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/pipe-fittings-full-coupling"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/planetary-gearbox",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/planetary-gearbox/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/planetary-gearbox"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/pogo-contact-pins",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/pogo-contact-pins/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/pogo-contact-pins"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/precision-actuator-parts",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/precision-actuator-parts/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/precision-actuator-parts"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/precision-connector-contacts",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/precision-connector-contacts/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/precision-connector-contacts"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/precision-turned-ev-charging-pins",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/precision-turned-ev-charging-pins/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/precision-turned-ev-charging-pins"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/radar-systems-parts-machining",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/radar-systems-parts-machining/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/radar-systems-parts-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/rail-machining",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/rail-machining/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/rail-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/reducer-hex-nipple",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/reducer-hex-nipple/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/reducer-hex-nipple"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/reducer-shaft",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/reducer-shaft/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/reducer-shaft"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/rf-connectors",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/rf-connectors/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/rf-connectors"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/rf-test-probes",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/rf-test-probes/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/rf-test-probes"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/robot-actuator-housings",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/robot-actuator-housings/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/robot-actuator-housings"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/robot-shaft-parts",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/robot-shaft-parts/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/robot-shaft-parts"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/robotic-machining-cells",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/robotic-machining-cells/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/robotic-machining-cells"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/satellite-arms",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/satellite-arms/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/satellite-arms"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/satellite-brackets",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/satellite-brackets/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/satellite-brackets"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/satellite-connectors",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/satellite-connectors/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/satellite-connectors"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/satellite-housings",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/satellite-housings/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/satellite-housings"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/satellite-milling-components",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/satellite-milling-components/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/satellite-milling-components"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/satellite-structures",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/satellite-structures/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/satellite-structures"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/screw-threaded-sleeve",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/screw-threaded-sleeve/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/screw-threaded-sleeve"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/semiconductor-connector",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/semiconductor-connector/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/semiconductor-connector"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/semiconductor-cooling-plate",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/semiconductor-cooling-plate/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/semiconductor-cooling-plate"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/semiconductor-housings",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/semiconductor-housings/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/semiconductor-housings"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/semiconductor-probe-pin",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/semiconductor-probe-pin/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/semiconductor-probe-pin"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/semiconductor-test-probes",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/semiconductor-test-probes/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/semiconductor-test-probes"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/semiconductor-vacuum-chamber",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/semiconductor-vacuum-chamber/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/semiconductor-vacuum-chamber"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/semiconductor-wet-etch-spray-nozzle",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/semiconductor-wet-etch-spray-nozzle/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/semiconductor-wet-etch-spray-nozzle"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/sensor-housings",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/sensor-housings/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/sensor-housings"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/server-components",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/server-components/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/server-components"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/spring-loaded-contact-pins",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/spring-loaded-contact-pins/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/spring-loaded-contact-pins"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/spring-loaded-test-pins",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/spring-loaded-test-pins/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/spring-loaded-test-pins"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/spring-test-probes",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/spring-test-probes/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/spring-test-probes"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/stainless-steel-5-axis-cnc-parts",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/stainless-steel-5-axis-cnc-parts/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/stainless-steel-5-axis-cnc-parts"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/stainless-steel-bushing",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/stainless-steel-bushing/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/stainless-steel-bushing"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/stainless-steel-cnc-turning-flanges",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/stainless-steel-cnc-turning-flanges/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/stainless-steel-cnc-turning-flanges"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/stainless-steel-cnc-turning-parts",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/stainless-steel-cnc-turning-parts/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/stainless-steel-cnc-turning-parts"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/stainless-steel-fittings",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/stainless-steel-fittings/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/stainless-steel-fittings"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/stainless-steel-machining-semiconductor-parts",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/stainless-steel-machining-semiconductor-parts/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/stainless-steel-machining-semiconductor-parts"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/stainless-steel-precision-turning-shaft",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/stainless-steel-precision-turning-shaft/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/stainless-steel-precision-turning-shaft"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/swiss-machined-parts",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/swiss-machined-parts/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/swiss-machined-parts"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/test-probe-pins",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/test-probe-pins/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/test-probe-pins"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/threaded-bushing",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/threaded-bushing/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/threaded-bushing"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/titanium-swiss-screw-machined-parts",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/titanium-swiss-screw-machined-parts/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/titanium-swiss-screw-machined-parts"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/custom-cnc-parts/turned-cooling-fittings",
+      "final": "https://www.cncpioneer.com/custom-cnc-parts/turned-cooling-fittings/",
+      "canonical": "https://www.cncpioneer.com/custom-cnc-parts/turned-cooling-fittings"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/industries",
+      "final": "https://www.cncpioneer.com/industries/",
+      "canonical": "https://www.cncpioneer.com/industries"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/industries/aerospace",
+      "final": "https://www.cncpioneer.com/industries/aerospace/",
+      "canonical": "https://www.cncpioneer.com/industries/aerospace"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/industries/aerospace-swiss-machining",
+      "final": "https://www.cncpioneer.com/industries/aerospace-swiss-machining/",
+      "canonical": "https://www.cncpioneer.com/industries/aerospace-swiss-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/industries/automotive",
+      "final": "https://www.cncpioneer.com/industries/automotive/",
+      "canonical": "https://www.cncpioneer.com/industries/automotive"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/industries/automotive-swiss-machining",
+      "final": "https://www.cncpioneer.com/industries/automotive-swiss-machining/",
+      "canonical": "https://www.cncpioneer.com/industries/automotive-swiss-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/industries/consumer-electronics",
+      "final": "https://www.cncpioneer.com/industries/consumer-electronics/",
+      "canonical": "https://www.cncpioneer.com/industries/consumer-electronics"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/industries/defense",
+      "final": "https://www.cncpioneer.com/industries/defense/",
+      "canonical": "https://www.cncpioneer.com/industries/defense"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/industries/defense-swiss-machining",
+      "final": "https://www.cncpioneer.com/industries/defense-swiss-machining/",
+      "canonical": "https://www.cncpioneer.com/industries/defense-swiss-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/industries/evtol",
+      "final": "https://www.cncpioneer.com/industries/evtol/",
+      "canonical": "https://www.cncpioneer.com/industries/evtol"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/industries/humanoid-robot-cnc-machining",
+      "final": "https://www.cncpioneer.com/industries/humanoid-robot-cnc-machining/",
+      "canonical": "https://www.cncpioneer.com/industries/humanoid-robot-cnc-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/industries/medical",
+      "final": "https://www.cncpioneer.com/industries/medical/",
+      "canonical": "https://www.cncpioneer.com/industries/medical"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/industries/medical-swiss-machining",
+      "final": "https://www.cncpioneer.com/industries/medical-swiss-machining/",
+      "canonical": "https://www.cncpioneer.com/industries/medical-swiss-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/industries/oil-gas",
+      "final": "https://www.cncpioneer.com/industries/oil-gas/",
+      "canonical": "https://www.cncpioneer.com/industries/oil-gas"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/industries/oil-gas-swiss-machining",
+      "final": "https://www.cncpioneer.com/industries/oil-gas-swiss-machining/",
+      "canonical": "https://www.cncpioneer.com/industries/oil-gas-swiss-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/industries/railway",
+      "final": "https://www.cncpioneer.com/industries/railway/",
+      "canonical": "https://www.cncpioneer.com/industries/railway"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/industries/robotics",
+      "final": "https://www.cncpioneer.com/industries/robotics/",
+      "canonical": "https://www.cncpioneer.com/industries/robotics"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/industries/satellites",
+      "final": "https://www.cncpioneer.com/industries/satellites/",
+      "canonical": "https://www.cncpioneer.com/industries/satellites"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/industries/semiconductor",
+      "final": "https://www.cncpioneer.com/industries/semiconductor/",
+      "canonical": "https://www.cncpioneer.com/industries/semiconductor"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/industries/server",
+      "final": "https://www.cncpioneer.com/industries/server/",
+      "canonical": "https://www.cncpioneer.com/industries/server"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/materials",
+      "final": "https://www.cncpioneer.com/materials/",
+      "canonical": "https://www.cncpioneer.com/materials"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/materials/6061-t6-aluminum-cnc-machining",
+      "final": "https://www.cncpioneer.com/materials/6061-t6-aluminum-cnc-machining/",
+      "canonical": "https://www.cncpioneer.com/materials/6061-t6-aluminum-cnc-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/materials/abs-cnc-machining",
+      "final": "https://www.cncpioneer.com/materials/abs-cnc-machining/",
+      "canonical": "https://www.cncpioneer.com/materials/abs-cnc-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/materials/acrylic-cnc-machining",
+      "final": "https://www.cncpioneer.com/materials/acrylic-cnc-machining/",
+      "canonical": "https://www.cncpioneer.com/materials/acrylic-cnc-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/materials/alloy-steel-cnc-machining",
+      "final": "https://www.cncpioneer.com/materials/alloy-steel-cnc-machining/",
+      "canonical": "https://www.cncpioneer.com/materials/alloy-steel-cnc-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/materials/aluminum-cnc-machining",
+      "final": "https://www.cncpioneer.com/materials/aluminum-cnc-machining/",
+      "canonical": "https://www.cncpioneer.com/materials/aluminum-cnc-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/materials/aluminum-cnc-turning-and-milling",
+      "final": "https://www.cncpioneer.com/materials/aluminum-cnc-turning-and-milling/",
+      "canonical": "https://www.cncpioneer.com/materials/aluminum-cnc-turning-and-milling"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/materials/aluminum-swiss-machining",
+      "final": "https://www.cncpioneer.com/materials/aluminum-swiss-machining/",
+      "canonical": "https://www.cncpioneer.com/materials/aluminum-swiss-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/materials/brass-cnc-machining",
+      "final": "https://www.cncpioneer.com/materials/brass-cnc-machining/",
+      "canonical": "https://www.cncpioneer.com/materials/brass-cnc-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/materials/brass-swiss-machining",
+      "final": "https://www.cncpioneer.com/materials/brass-swiss-machining/",
+      "canonical": "https://www.cncpioneer.com/materials/brass-swiss-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/materials/bronze-cnc-machining",
+      "final": "https://www.cncpioneer.com/materials/bronze-cnc-machining/",
+      "canonical": "https://www.cncpioneer.com/materials/bronze-cnc-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/materials/carbon-steel-cnc-machining",
+      "final": "https://www.cncpioneer.com/materials/carbon-steel-cnc-machining/",
+      "canonical": "https://www.cncpioneer.com/materials/carbon-steel-cnc-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/materials/copper-cnc-machining",
+      "final": "https://www.cncpioneer.com/materials/copper-cnc-machining/",
+      "canonical": "https://www.cncpioneer.com/materials/copper-cnc-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/materials/hdpe-cnc-machining",
+      "final": "https://www.cncpioneer.com/materials/hdpe-cnc-machining/",
+      "canonical": "https://www.cncpioneer.com/materials/hdpe-cnc-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/materials/inconel-600-cnc-machining",
+      "final": "https://www.cncpioneer.com/materials/inconel-600-cnc-machining/",
+      "canonical": "https://www.cncpioneer.com/materials/inconel-600-cnc-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/materials/inconel-625-cnc-machining",
+      "final": "https://www.cncpioneer.com/materials/inconel-625-cnc-machining/",
+      "canonical": "https://www.cncpioneer.com/materials/inconel-625-cnc-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/materials/inconel-718-cnc-machining",
+      "final": "https://www.cncpioneer.com/materials/inconel-718-cnc-machining/",
+      "canonical": "https://www.cncpioneer.com/materials/inconel-718-cnc-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/materials/inconel-cnc-machining",
+      "final": "https://www.cncpioneer.com/materials/inconel-cnc-machining/",
+      "canonical": "https://www.cncpioneer.com/materials/inconel-cnc-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/materials/invar-cnc-machining",
+      "final": "https://www.cncpioneer.com/materials/invar-cnc-machining/",
+      "canonical": "https://www.cncpioneer.com/materials/invar-cnc-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/materials/kovar-cnc-machining",
+      "final": "https://www.cncpioneer.com/materials/kovar-cnc-machining/",
+      "canonical": "https://www.cncpioneer.com/materials/kovar-cnc-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/materials/magnesium-cnc-machining",
+      "final": "https://www.cncpioneer.com/materials/magnesium-cnc-machining/",
+      "canonical": "https://www.cncpioneer.com/materials/magnesium-cnc-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/materials/metal-cnc-machining",
+      "final": "https://www.cncpioneer.com/materials/metal-cnc-machining/",
+      "canonical": "https://www.cncpioneer.com/materials/metal-cnc-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/materials/nickel-swiss-machining",
+      "final": "https://www.cncpioneer.com/materials/nickel-swiss-machining/",
+      "canonical": "https://www.cncpioneer.com/materials/nickel-swiss-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/materials/nitinol-cnc-machining",
+      "final": "https://www.cncpioneer.com/materials/nitinol-cnc-machining/",
+      "canonical": "https://www.cncpioneer.com/materials/nitinol-cnc-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/materials/nylon-66-cnc-machining",
+      "final": "https://www.cncpioneer.com/materials/nylon-66-cnc-machining/",
+      "canonical": "https://www.cncpioneer.com/materials/nylon-66-cnc-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/materials/nylon-cnc-machining",
+      "final": "https://www.cncpioneer.com/materials/nylon-cnc-machining/",
+      "canonical": "https://www.cncpioneer.com/materials/nylon-cnc-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/materials/peek-cnc-machining",
+      "final": "https://www.cncpioneer.com/materials/peek-cnc-machining/",
+      "canonical": "https://www.cncpioneer.com/materials/peek-cnc-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/materials/peek-cnc-turning-and-milling",
+      "final": "https://www.cncpioneer.com/materials/peek-cnc-turning-and-milling/",
+      "canonical": "https://www.cncpioneer.com/materials/peek-cnc-turning-and-milling"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/materials/peek-swiss-machining",
+      "final": "https://www.cncpioneer.com/materials/peek-swiss-machining/",
+      "canonical": "https://www.cncpioneer.com/materials/peek-swiss-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/materials/plastic-cnc-machining",
+      "final": "https://www.cncpioneer.com/materials/plastic-cnc-machining/",
+      "canonical": "https://www.cncpioneer.com/materials/plastic-cnc-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/materials/polycarbonate-cnc-machining",
+      "final": "https://www.cncpioneer.com/materials/polycarbonate-cnc-machining/",
+      "canonical": "https://www.cncpioneer.com/materials/polycarbonate-cnc-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/materials/polypropylene-cnc-machining",
+      "final": "https://www.cncpioneer.com/materials/polypropylene-cnc-machining/",
+      "canonical": "https://www.cncpioneer.com/materials/polypropylene-cnc-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/materials/pom-cnc-machining",
+      "final": "https://www.cncpioneer.com/materials/pom-cnc-machining/",
+      "canonical": "https://www.cncpioneer.com/materials/pom-cnc-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/materials/ptfe-cnc-machining",
+      "final": "https://www.cncpioneer.com/materials/ptfe-cnc-machining/",
+      "canonical": "https://www.cncpioneer.com/materials/ptfe-cnc-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/materials/stainless-steel-cnc-machining",
+      "final": "https://www.cncpioneer.com/materials/stainless-steel-cnc-machining/",
+      "canonical": "https://www.cncpioneer.com/materials/stainless-steel-cnc-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/materials/stainless-steel-cnc-turning-and-milling",
+      "final": "https://www.cncpioneer.com/materials/stainless-steel-cnc-turning-and-milling/",
+      "canonical": "https://www.cncpioneer.com/materials/stainless-steel-cnc-turning-and-milling"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/materials/stainless-steel-swiss-machining",
+      "final": "https://www.cncpioneer.com/materials/stainless-steel-swiss-machining/",
+      "canonical": "https://www.cncpioneer.com/materials/stainless-steel-swiss-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/materials/titanium-cnc-machining",
+      "final": "https://www.cncpioneer.com/materials/titanium-cnc-machining/",
+      "canonical": "https://www.cncpioneer.com/materials/titanium-cnc-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/materials/titanium-swiss-machining",
+      "final": "https://www.cncpioneer.com/materials/titanium-swiss-machining/",
+      "canonical": "https://www.cncpioneer.com/materials/titanium-swiss-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/materials/ultem-cnc-machining",
+      "final": "https://www.cncpioneer.com/materials/ultem-cnc-machining/",
+      "canonical": "https://www.cncpioneer.com/materials/ultem-cnc-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/resources",
+      "final": "https://www.cncpioneer.com/resources/",
+      "canonical": "https://www.cncpioneer.com/resources"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/resources/equipment-list",
+      "final": "https://www.cncpioneer.com/resources/equipment-list/",
+      "canonical": "https://www.cncpioneer.com/resources/equipment-list"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/resources/faqs",
+      "final": "https://www.cncpioneer.com/resources/faqs/",
+      "canonical": "https://www.cncpioneer.com/resources/faqs"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/services",
+      "final": "https://www.cncpioneer.com/services/",
+      "canonical": "https://www.cncpioneer.com/services"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/services/3-axis-cnc-machining",
+      "final": "https://www.cncpioneer.com/services/3-axis-cnc-machining/",
+      "canonical": "https://www.cncpioneer.com/services/3-axis-cnc-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/services/5-axis-cnc-machining",
+      "final": "https://www.cncpioneer.com/services/5-axis-cnc-machining/",
+      "canonical": "https://www.cncpioneer.com/services/5-axis-cnc-machining"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/services/cnc-turning-and-milling",
+      "final": "https://www.cncpioneer.com/services/cnc-turning-and-milling/",
+      "canonical": "https://www.cncpioneer.com/services/cnc-turning-and-milling"
+    },
+    {
+      "requested": "https://www.cncpioneer.com/services/swiss-machining",
+      "final": "https://www.cncpioneer.com/services/swiss-machining/",
+      "canonical": "https://www.cncpioneer.com/services/swiss-machining"
+    }
+  ],
+  "liveTitleDuplicates": [],
+  "liveDescriptionDuplicates": [],
+  "brokenLinks": [],
+  "assets": [
+    {
+      "url": "https://www.cncpioneer.com/_astro/index.C3jmoDka.css",
+      "status": 200,
+      "bytes": 36180,
+      "headers": {
+        "accept-ranges": "bytes",
+        "alt-svc": "h3=\":443\"; ma=2592000, h3-29=\":443\"; ma=2592000",
+        "cache-control": "public, max-age=604800",
+        "connection": "Keep-Alive",
+        "content-encoding": "br",
+        "content-length": "4721",
+        "content-security-policy": "upgrade-insecure-requests",
+        "content-type": "text/css",
+        "date": "Wed, 04 Nov 2026 08:22:37 GMT",
+        "etag": "\"8d54-6ae9944e-1df0b86f5d72ba24;br\"",
+        "expires": "Wed, 11 Nov 2026 08:22:37 GMT",
+        "keep-alive": "timeout=5, max=100",
+        "last-modified": "Tue, 03 Nov 2026 07:59:10 GMT",
+        "panel": "hpanel",
+        "platform": "hostinger",
+        "server": "LiteSpeed",
+        "vary": "Accept-Encoding"
+      }
+    },
+    {
+      "url": "https://www.cncpioneer.com/_astro/SiteSearch.Cn2TTgT7.css",
+      "status": 200,
+      "bytes": 10141,
+      "headers": {
+        "accept-ranges": "bytes",
+        "alt-svc": "h3=\":443\"; ma=2592000, h3-29=\":443\"; ma=2592000",
+        "cache-control": "public, max-age=604800",
+        "connection": "Keep-Alive",
+        "content-encoding": "br",
+        "content-length": "2306",
+        "content-security-policy": "upgrade-insecure-requests",
+        "content-type": "text/css",
+        "date": "Wed, 04 Nov 2026 08:22:37 GMT",
+        "etag": "\"279d-6ae9944e-1271fd4e74e4ba2a;br\"",
+        "expires": "Wed, 11 Nov 2026 08:22:37 GMT",
+        "keep-alive": "timeout=5, max=100",
+        "last-modified": "Tue, 03 Nov 2026 07:59:10 GMT",
+        "panel": "hpanel",
+        "platform": "hostinger",
+        "server": "LiteSpeed",
+        "vary": "Accept-Encoding"
+      }
+    },
+    {
+      "url": "https://www.cncpioneer.com/_astro/BaseLayout.CNkxS_s2.css",
+      "status": 200,
+      "bytes": 64319,
+      "headers": {
+        "accept-ranges": "bytes",
+        "alt-svc": "h3=\":443\"; ma=2592000, h3-29=\":443\"; ma=2592000",
+        "cache-control": "public, max-age=604800",
+        "connection": "Keep-Alive",
+        "content-encoding": "br",
+        "content-length": "9410",
+        "content-security-policy": "upgrade-insecure-requests",
+        "content-type": "text/css",
+        "date": "Wed, 04 Nov 2026 08:22:37 GMT",
+        "etag": "\"fb3f-6ae9944e-895145aced50c24b;br\"",
+        "expires": "Wed, 11 Nov 2026 08:22:37 GMT",
+        "keep-alive": "timeout=5, max=100",
+        "last-modified": "Tue, 03 Nov 2026 07:59:10 GMT",
+        "panel": "hpanel",
+        "platform": "hostinger",
+        "server": "LiteSpeed",
+        "vary": "Accept-Encoding"
+      }
+    },
+    {
+      "url": "https://www.cncpioneer.com/site-search.js",
+      "status": 200,
+      "bytes": 12233,
+      "headers": {
+        "accept-ranges": "bytes",
+        "cache-control": "public, max-age=604800",
+        "connection": "Keep-Alive",
+        "content-encoding": "br",
+        "content-length": "3496",
+        "content-security-policy": "upgrade-insecure-requests",
+        "content-type": "application/x-javascript",
+        "date": "Wed, 04 Nov 2026 08:22:38 GMT",
+        "etag": "\"2fc9-6ae99450-12b9bb8941b9718d;br\"",
+        "expires": "Wed, 11 Nov 2026 08:22:38 GMT",
+        "keep-alive": "timeout=5, max=100",
+        "last-modified": "Tue, 03 Nov 2026 07:59:12 GMT",
+        "panel": "hpanel",
+        "platform": "hostinger",
+        "server": "LiteSpeed",
+        "vary": "Accept-Encoding"
+      }
+    },
+    {
+      "url": "https://www.cncpioneer.com/brand-theme.css",
+      "status": 200,
+      "bytes": 26166,
+      "headers": {
+        "accept-ranges": "bytes",
+        "cache-control": "public, max-age=604800",
+        "connection": "Keep-Alive",
+        "content-encoding": "br",
+        "content-length": "5061",
+        "content-security-policy": "upgrade-insecure-requests",
+        "content-type": "text/css",
+        "date": "Wed, 04 Nov 2026 08:22:38 GMT",
+        "etag": "\"6636-6ae99450-2e75e78063e156ec;br\"",
+        "expires": "Wed, 11 Nov 2026 08:22:38 GMT",
+        "keep-alive": "timeout=5, max=100",
+        "last-modified": "Tue, 03 Nov 2026 07:59:12 GMT",
+        "panel": "hpanel",
+        "platform": "hostinger",
+        "server": "LiteSpeed",
+        "vary": "Accept-Encoding"
+      }
+    },
+    {
+      "url": "https://www.cncpioneer.com/navigation-accessibility.js",
+      "status": 200,
+      "bytes": 2953,
+      "headers": {
+        "accept-ranges": "bytes",
+        "cache-control": "public, max-age=604800",
+        "connection": "Keep-Alive",
+        "content-encoding": "br",
+        "content-length": "952",
+        "content-security-policy": "upgrade-insecure-requests",
+        "content-type": "application/x-javascript",
+        "date": "Wed, 04 Nov 2026 08:22:38 GMT",
+        "etag": "\"b89-6ae99450-43838dfcef6aa649;br\"",
+        "expires": "Wed, 11 Nov 2026 08:22:38 GMT",
+        "keep-alive": "timeout=5, max=100",
+        "last-modified": "Tue, 03 Nov 2026 07:59:12 GMT",
+        "panel": "hpanel",
+        "platform": "hostinger",
+        "server": "LiteSpeed",
+        "vary": "Accept-Encoding"
+      }
+    },
+    {
+      "url": "https://www.cncpioneer.com/_astro/CompactQuoteForm.astro_astro_type_script_index_0_lang.VUD_cGn7.js",
+      "status": 200,
+      "bytes": 33,
+      "headers": {
+        "accept-ranges": "bytes",
+        "cache-control": "public, max-age=604800",
+        "connection": "Keep-Alive",
+        "content-length": "33",
+        "content-security-policy": "upgrade-insecure-requests",
+        "content-type": "application/x-javascript",
+        "date": "Wed, 04 Nov 2026 08:22:38 GMT",
+        "etag": "\"21-6ae99450-a633bebe9235a7e0;;;\"",
+        "expires": "Wed, 11 Nov 2026 08:22:38 GMT",
+        "keep-alive": "timeout=5, max=100",
+        "last-modified": "Tue, 03 Nov 2026 07:59:12 GMT",
+        "panel": "hpanel",
+        "platform": "hostinger",
+        "server": "LiteSpeed"
+      }
+    },
+    {
+      "url": "https://www.cncpioneer.com/assets/fonts/inter-latin-variable.woff2",
+      "status": 200,
+      "bytes": 48256,
+      "headers": {
+        "accept-ranges": "bytes",
+        "cache-control": "public, max-age=604800",
+        "connection": "Keep-Alive",
+        "content-length": "48256",
+        "content-security-policy": "upgrade-insecure-requests",
+        "content-type": "font/woff2",
+        "date": "Wed, 04 Nov 2026 08:22:38 GMT",
+        "etag": "\"bc80-6ae99450-b7eff9b60815e56d;;;\"",
+        "expires": "Wed, 11 Nov 2026 08:22:38 GMT",
+        "keep-alive": "timeout=5, max=100",
+        "last-modified": "Tue, 03 Nov 2026 07:59:12 GMT",
+        "panel": "hpanel",
+        "platform": "hostinger",
+        "server": "LiteSpeed"
+      }
+    },
+    {
+      "url": "https://www.cncpioneer.com/assets/fonts/dm-sans-latin-variable.woff2",
+      "status": 200,
+      "bytes": 36932,
+      "headers": {
+        "accept-ranges": "bytes",
+        "cache-control": "public, max-age=604800",
+        "connection": "Keep-Alive",
+        "content-length": "36932",
+        "content-security-policy": "upgrade-insecure-requests",
+        "content-type": "font/woff2",
+        "date": "Wed, 04 Nov 2026 08:22:38 GMT",
+        "etag": "\"9044-6ae99450-2c31d6e36abd81fe;;;\"",
+        "expires": "Wed, 11 Nov 2026 08:22:38 GMT",
+        "keep-alive": "timeout=5, max=100",
+        "last-modified": "Tue, 03 Nov 2026 07:59:12 GMT",
+        "panel": "hpanel",
+        "platform": "hostinger",
+        "server": "LiteSpeed"
+      }
+    },
+    {
+      "url": "https://www.cncpioneer.com/assets/images/cncpioneer-company-navigation-logo.webp",
+      "status": 200,
+      "bytes": 2236,
+      "headers": {
+        "accept-ranges": "bytes",
+        "alt-svc": "h3=\":443\"; ma=2592000, h3-29=\":443\"; ma=2592000",
+        "cache-control": "public, max-age=604800",
+        "connection": "Keep-Alive",
+        "content-length": "2236",
+        "content-security-policy": "upgrade-insecure-requests",
+        "content-type": "image/webp",
+        "date": "Wed, 04 Nov 2026 08:22:39 GMT",
+        "etag": "\"8bc-6ae99450-61abd3d4af5dd392;;;\"",
+        "expires": "Wed, 11 Nov 2026 08:22:39 GMT",
+        "keep-alive": "timeout=5, max=100",
+        "last-modified": "Tue, 03 Nov 2026 07:59:12 GMT",
+        "panel": "hpanel",
+        "platform": "hostinger",
+        "server": "LiteSpeed"
+      }
+    },
+    {
+      "url": "https://www.cncpioneer.com/assets/images/cnc-machined-components-hero.webp",
+      "status": 200,
+      "bytes": 66532,
+      "headers": {
+        "accept-ranges": "bytes",
+        "cache-control": "public, max-age=604800",
+        "connection": "Keep-Alive",
+        "content-length": "66532",
+        "content-security-policy": "upgrade-insecure-requests",
+        "content-type": "image/webp",
+        "date": "Wed, 04 Nov 2026 08:22:39 GMT",
+        "etag": "\"103e4-6ae99450-bb545d293495b18a;;;\"",
+        "expires": "Wed, 11 Nov 2026 08:22:39 GMT",
+        "keep-alive": "timeout=5, max=100",
+        "last-modified": "Tue, 03 Nov 2026 07:59:12 GMT",
+        "panel": "hpanel",
+        "platform": "hostinger",
+        "server": "LiteSpeed"
+      }
+    },
+    {
+      "url": "https://www.cncpioneer.com/assets/images/cnc-aluminum-pocket-milling-process.webp",
+      "status": 200,
+      "bytes": 67442,
+      "headers": {
+        "accept-ranges": "bytes",
+        "cache-control": "public, max-age=604800",
+        "connection": "Keep-Alive",
+        "content-length": "67442",
+        "content-security-policy": "upgrade-insecure-requests",
+        "content-type": "image/webp",
+        "date": "Wed, 04 Nov 2026 08:22:39 GMT",
+        "etag": "\"10772-6ae99450-6283b511debf9620;;;\"",
+        "expires": "Wed, 11 Nov 2026 08:22:39 GMT",
+        "keep-alive": "timeout=5, max=100",
+        "last-modified": "Tue, 03 Nov 2026 07:59:12 GMT",
+        "panel": "hpanel",
+        "platform": "hostinger",
+        "server": "LiteSpeed"
+      }
+    },
+    {
+      "url": "https://www.cncpioneer.com/_astro/swiss-machining.BaXx6Ui5.css",
+      "status": 200,
+      "bytes": 20410,
+      "headers": {
+        "accept-ranges": "bytes",
+        "cache-control": "public, max-age=604800",
+        "connection": "Keep-Alive",
+        "content-encoding": "br",
+        "content-length": "3780",
+        "content-security-policy": "upgrade-insecure-requests",
+        "content-type": "text/css",
+        "date": "Wed, 04 Nov 2026 08:22:39 GMT",
+        "etag": "\"4fba-6ae9944e-70868e594fc2750b;br\"",
+        "expires": "Wed, 11 Nov 2026 08:22:39 GMT",
+        "keep-alive": "timeout=5, max=100",
+        "last-modified": "Tue, 03 Nov 2026 07:59:10 GMT",
+        "panel": "hpanel",
+        "platform": "hostinger",
+        "server": "LiteSpeed",
+        "vary": "Accept-Encoding"
+      }
+    },
+    {
+      "url": "https://www.cncpioneer.com/assets/images/brass-swiss-contact-pin-studio-v1.webp",
+      "status": 200,
+      "bytes": 11784,
+      "headers": {
+        "accept-ranges": "bytes",
+        "cache-control": "public, max-age=604800",
+        "connection": "Keep-Alive",
+        "content-length": "11784",
+        "content-security-policy": "upgrade-insecure-requests",
+        "content-type": "image/webp",
+        "date": "Wed, 04 Nov 2026 08:22:39 GMT",
+        "etag": "\"2e08-6ae99450-9035d5cee31afb4e;;;\"",
+        "expires": "Wed, 11 Nov 2026 08:22:39 GMT",
+        "keep-alive": "timeout=5, max=100",
+        "last-modified": "Tue, 03 Nov 2026 07:59:12 GMT",
+        "panel": "hpanel",
+        "platform": "hostinger",
+        "server": "LiteSpeed"
+      }
+    },
+    {
+      "url": "https://www.cncpioneer.com/_astro/blog-native.BXO8H_iu.css",
+      "status": 200,
+      "bytes": 24678,
+      "headers": {
+        "accept-ranges": "bytes",
+        "cache-control": "public, max-age=604800",
+        "connection": "Keep-Alive",
+        "content-encoding": "br",
+        "content-length": "4426",
+        "content-security-policy": "upgrade-insecure-requests",
+        "content-type": "text/css",
+        "date": "Wed, 04 Nov 2026 08:22:39 GMT",
+        "etag": "\"6066-6ae9944e-e6bde0091315ff78;br\"",
+        "expires": "Wed, 11 Nov 2026 08:22:39 GMT",
+        "keep-alive": "timeout=5, max=100",
+        "last-modified": "Tue, 03 Nov 2026 07:59:10 GMT",
+        "panel": "hpanel",
+        "platform": "hostinger",
+        "server": "LiteSpeed",
+        "vary": "Accept-Encoding"
+      }
+    },
+    {
+      "url": "https://www.cncpioneer.com/_astro/BlogDetailTemplate.B5sU1rn9.css",
+      "status": 200,
+      "bytes": 13754,
+      "headers": {
+        "accept-ranges": "bytes",
+        "cache-control": "public, max-age=604800",
+        "connection": "Keep-Alive",
+        "content-encoding": "br",
+        "content-length": "2867",
+        "content-security-policy": "upgrade-insecure-requests",
+        "content-type": "text/css",
+        "date": "Wed, 04 Nov 2026 08:22:40 GMT",
+        "etag": "\"35ba-6ae9944e-46eca41749044ee6;br\"",
+        "expires": "Wed, 11 Nov 2026 08:22:40 GMT",
+        "keep-alive": "timeout=5, max=100",
+        "last-modified": "Tue, 03 Nov 2026 07:59:10 GMT",
+        "panel": "hpanel",
+        "platform": "hostinger",
+        "server": "LiteSpeed",
+        "vary": "Accept-Encoding"
+      }
+    },
+    {
+      "url": "https://www.cncpioneer.com/assets/images/swiss-cnc-turned-pins-shafts-terminals-transparent.webp",
+      "status": 200,
+      "bytes": 82230,
+      "headers": {
+        "accept-ranges": "bytes",
+        "cache-control": "public, max-age=604800",
+        "connection": "Keep-Alive",
+        "content-length": "82230",
+        "content-security-policy": "upgrade-insecure-requests",
+        "content-type": "image/webp",
+        "date": "Wed, 04 Nov 2026 08:22:39 GMT",
+        "etag": "\"14136-6ae99450-b64b29a6e82d75a8;;;\"",
+        "expires": "Wed, 11 Nov 2026 08:22:39 GMT",
+        "keep-alive": "timeout=5, max=100",
+        "last-modified": "Tue, 03 Nov 2026 07:59:12 GMT",
+        "panel": "hpanel",
+        "platform": "hostinger",
+        "server": "LiteSpeed"
+      }
+    },
+    {
+      "url": "https://www.cncpioneer.com/assets/images/ryan-wang-100x100.webp",
+      "status": 200,
+      "bytes": 4228,
+      "headers": {
+        "accept-ranges": "bytes",
+        "cache-control": "public, max-age=604800",
+        "connection": "Keep-Alive",
+        "content-length": "4228",
+        "content-security-policy": "upgrade-insecure-requests",
+        "content-type": "image/webp",
+        "date": "Wed, 04 Nov 2026 08:22:40 GMT",
+        "etag": "\"1084-6ae99450-973885788034777a;;;\"",
+        "expires": "Wed, 11 Nov 2026 08:22:40 GMT",
+        "keep-alive": "timeout=5, max=100",
+        "last-modified": "Tue, 03 Nov 2026 07:59:12 GMT",
+        "panel": "hpanel",
+        "platform": "hostinger",
+        "server": "LiteSpeed"
+      }
+    },
+    {
+      "url": "https://www.cncpioneer.com/_astro/_slug_.ICfJHsDf.css",
+      "status": 200,
+      "bytes": 28353,
+      "headers": {
+        "accept-ranges": "bytes",
+        "cache-control": "public, max-age=604800",
+        "connection": "Keep-Alive",
+        "content-encoding": "br",
+        "content-length": "3194",
+        "content-security-policy": "upgrade-insecure-requests",
+        "content-type": "text/css",
+        "date": "Wed, 04 Nov 2026 08:22:40 GMT",
+        "etag": "\"6ec1-6ae9944e-30ddfdad43e2dd63;br\"",
+        "expires": "Wed, 11 Nov 2026 08:22:40 GMT",
+        "keep-alive": "timeout=5, max=100",
+        "last-modified": "Tue, 03 Nov 2026 07:59:10 GMT",
+        "panel": "hpanel",
+        "platform": "hostinger",
+        "server": "LiteSpeed",
+        "vary": "Accept-Encoding"
+      }
+    },
+    {
+      "url": "https://www.cncpioneer.com/assets/images/what-is-cnc.webp",
+      "status": 200,
+      "bytes": 89918,
+      "headers": {
+        "accept-ranges": "bytes",
+        "cache-control": "public, max-age=604800",
+        "connection": "Keep-Alive",
+        "content-length": "89918",
+        "content-security-policy": "upgrade-insecure-requests",
+        "content-type": "image/webp",
+        "date": "Wed, 04 Nov 2026 08:22:40 GMT",
+        "etag": "\"15f3e-6ae99450-91ca3f9462071370;;;\"",
+        "expires": "Wed, 11 Nov 2026 08:22:40 GMT",
+        "keep-alive": "timeout=5, max=100",
+        "last-modified": "Tue, 03 Nov 2026 07:59:12 GMT",
+        "panel": "hpanel",
+        "platform": "hostinger",
+        "server": "LiteSpeed"
+      }
+    },
+    {
+      "url": "https://www.cncpioneer.com/assets/images/5-axis-cnc-machining-aerospace-components.webp",
+      "status": 200,
+      "bytes": 38208,
+      "headers": {
+        "accept-ranges": "bytes",
+        "cache-control": "public, max-age=604800",
+        "connection": "Keep-Alive",
+        "content-length": "38208",
+        "content-security-policy": "upgrade-insecure-requests",
+        "content-type": "image/webp",
+        "date": "Wed, 04 Nov 2026 08:22:40 GMT",
+        "etag": "\"9540-6ae99450-b617d4b689a68389;;;\"",
+        "expires": "Wed, 11 Nov 2026 08:22:40 GMT",
+        "keep-alive": "timeout=5, max=100",
+        "last-modified": "Tue, 03 Nov 2026 07:59:12 GMT",
+        "panel": "hpanel",
+        "platform": "hostinger",
+        "server": "LiteSpeed"
+      }
+    },
+    {
+      "url": "https://www.cncpioneer.com/assets/images/5-axis-cnc-machining-aerospace-components-view-2.webp",
+      "status": 200,
+      "bytes": 17136,
+      "headers": {
+        "accept-ranges": "bytes",
+        "cache-control": "public, max-age=604800",
+        "connection": "Keep-Alive",
+        "content-length": "17136",
+        "content-security-policy": "upgrade-insecure-requests",
+        "content-type": "image/webp",
+        "date": "Wed, 04 Nov 2026 08:22:40 GMT",
+        "etag": "\"42f0-6ae99450-bb5cace562e9d0d3;;;\"",
+        "expires": "Wed, 11 Nov 2026 08:22:40 GMT",
+        "keep-alive": "timeout=5, max=100",
+        "last-modified": "Tue, 03 Nov 2026 07:59:12 GMT",
+        "panel": "hpanel",
+        "platform": "hostinger",
+        "server": "LiteSpeed"
+      }
+    }
+  ],
+  "emptyAlts": [
+    {
+      "page": "/blog/5-axis-cnc-machining-manufacturers-in-china",
+      "src": "/assets/images/cncpioneer-cnc-machining-website-reference.webp"
+    },
+    {
+      "page": "/blog/5-axis-cnc-machining-manufacturers-in-china",
+      "src": "/assets/images/cncpioneer-cnc-machining-website-reference.webp"
+    },
+    {
+      "page": "/blog/5-axis-cnc-machining-manufacturers-in-china",
+      "src": "/assets/images/wayken-cnc-manufacturing-company-profile.webp"
+    },
+    {
+      "page": "/blog/5-axis-cnc-machining-manufacturers-in-china",
+      "src": "/assets/images/wayken-cnc-manufacturing-company-profile.webp"
+    },
+    {
+      "page": "/blog/5-axis-cnc-machining-manufacturers-in-china",
+      "src": "/assets/images/runsom-precision.webp"
+    },
+    {
+      "page": "/blog/5-axis-cnc-machining-manufacturers-in-china",
+      "src": "/assets/images/runsom-precision.webp"
+    },
+    {
+      "page": "/blog/5-axis-cnc-machining-manufacturers-in-china",
+      "src": "/assets/images/xtjcnc-cnc-manufacturing-company-profile.webp"
+    },
+    {
+      "page": "/blog/5-axis-cnc-machining-manufacturers-in-china",
+      "src": "/assets/images/xtjcnc-cnc-manufacturing-company-profile.webp"
+    },
+    {
+      "page": "/blog/5-axis-cnc-machining-manufacturers-in-china",
+      "src": "/assets/images/yycncmachining-cnc-manufacturing-company-profile.webp"
+    },
+    {
+      "page": "/blog/5-axis-cnc-machining-manufacturers-in-china",
+      "src": "/assets/images/yycncmachining-cnc-manufacturing-company-profile.webp"
+    },
+    {
+      "page": "/blog/5-axis-cnc-machining-manufacturers-in-china",
+      "src": "/assets/images/3erp-cnc-manufacturing-company-profile.webp"
+    },
+    {
+      "page": "/blog/5-axis-cnc-machining-manufacturers-in-china",
+      "src": "/assets/images/3erp-cnc-manufacturing-company-profile.webp"
+    },
+    {
+      "page": "/blog/5-axis-cnc-machining-manufacturers-in-china",
+      "src": "/assets/images/junying-cnc-manufacturing-company-profile.webp"
+    },
+    {
+      "page": "/blog/5-axis-cnc-machining-manufacturers-in-china",
+      "src": "/assets/images/junying-cnc-manufacturing-company-profile.webp"
+    },
+    {
+      "page": "/blog/5-axis-cnc-machining-manufacturers-in-china",
+      "src": "/assets/images/dek-manufacturing.webp"
+    },
+    {
+      "page": "/blog/5-axis-cnc-machining-manufacturers-in-china",
+      "src": "/assets/images/dek-manufacturing.webp"
+    },
+    {
+      "page": "/blog/5-axis-cnc-machining-manufacturers-in-china",
+      "src": "/assets/images/gensun-1024x439.webp"
+    },
+    {
+      "page": "/blog/5-axis-cnc-machining-manufacturers-in-china",
+      "src": "/assets/images/gensun-1024x439.webp"
+    },
+    {
+      "page": "/blog/5-axis-cnc-machining-manufacturers-in-china",
+      "src": "/assets/images/startrapid-cnc-manufacturing-company-profile.webp"
+    },
+    {
+      "page": "/blog/5-axis-cnc-machining-manufacturers-in-china",
+      "src": "/assets/images/startrapid-cnc-manufacturing-company-profile.webp"
+    },
+    {
+      "page": "/blog/5-axis-cnc-machining-manufacturers-in-china",
+      "src": "/assets/images/hlhrapid-cnc-manufacturing-company-profile.webp"
+    },
+    {
+      "page": "/blog/5-axis-cnc-machining-manufacturers-in-china",
+      "src": "/assets/images/hlhrapid-cnc-manufacturing-company-profile.webp"
+    },
+    {
+      "page": "/blog/5-axis-cnc-machining-manufacturers-in-china",
+      "src": "/assets/images/zintilon-cnc-manufacturing-company-profile.webp"
+    },
+    {
+      "page": "/blog/5-axis-cnc-machining-manufacturers-in-china",
+      "src": "/assets/images/zintilon-cnc-manufacturing-company-profile.webp"
+    },
+    {
+      "page": "/blog/5-axis-cnc-machining-manufacturers-in-china",
+      "src": "/assets/images/at-machining.webp"
+    },
+    {
+      "page": "/blog/5-axis-cnc-machining-manufacturers-in-china",
+      "src": "/assets/images/at-machining.webp"
+    },
+    {
+      "page": "/blog/5-axis-cnc-machining-manufacturers-in-china",
+      "src": "/assets/images/yijin-solution.webp"
+    },
+    {
+      "page": "/blog/5-axis-cnc-machining-manufacturers-in-china",
+      "src": "/assets/images/yijin-solution.webp"
+    },
+    {
+      "page": "/blog/5-axis-cnc-machining-manufacturers-in-china",
+      "src": "/assets/images/ecoreprap-1024x388.webp"
+    },
+    {
+      "page": "/blog/5-axis-cnc-machining-manufacturers-in-china",
+      "src": "/assets/images/ecoreprap-1024x388.webp"
+    },
+    {
+      "page": "/blog/5-axis-cnc-machining-manufacturers-in-china",
+      "src": "/assets/images/leadrp-cnc-manufacturing-company-profile.webp"
+    },
+    {
+      "page": "/blog/5-axis-cnc-machining-manufacturers-in-china",
+      "src": "/assets/images/leadrp-cnc-manufacturing-company-profile.webp"
+    },
+    {
+      "page": "/blog/5-axis-cnc-machining-manufacturers-in-china",
+      "src": "/assets/images/richconn-cnc-manufacturing-company-profile.webp"
+    },
+    {
+      "page": "/blog/5-axis-cnc-machining-manufacturers-in-china",
+      "src": "/assets/images/richconn-cnc-manufacturing-company-profile.webp"
+    },
+    {
+      "page": "/blog/5-axis-cnc-machining-manufacturers-in-china",
+      "src": "/assets/images/tirapid-cnc-manufacturing-company-profile.webp"
+    },
+    {
+      "page": "/blog/5-axis-cnc-machining-manufacturers-in-china",
+      "src": "/assets/images/tirapid-cnc-manufacturing-company-profile.webp"
+    },
+    {
+      "page": "/blog/5-axis-cnc-machining-manufacturers-in-china",
+      "src": "/assets/images/artmachining-cnc-manufacturing-company-profile.webp"
+    },
+    {
+      "page": "/blog/5-axis-cnc-machining-manufacturers-in-china",
+      "src": "/assets/images/artmachining-cnc-manufacturing-company-profile.webp"
+    },
+    {
+      "page": "/blog/5-axis-cnc-machining-manufacturers-in-china",
+      "src": "/assets/images/nice-rapid.webp"
+    },
+    {
+      "page": "/blog/5-axis-cnc-machining-manufacturers-in-china",
+      "src": "/assets/images/nice-rapid.webp"
+    },
+    {
+      "page": "/blog/brass-cnc-machining",
+      "src": "/assets/images/brass-alloy-composition-and-common-types.webp"
+    },
+    {
+      "page": "/blog/brass-cnc-machining",
+      "src": "/assets/images/brass-alloy-composition-and-common-types.webp"
+    },
+    {
+      "page": "/blog/brass-cnc-machining",
+      "src": "/assets/images/brass-cnc-machining-parts.webp"
+    },
+    {
+      "page": "/blog/brass-cnc-machining",
+      "src": "/assets/images/brass-cnc-machining-parts.webp"
+    },
+    {
+      "page": "/blog/brass-cnc-machining",
+      "src": "/assets/images/brass-cnc-machining-process.webp"
+    },
+    {
+      "page": "/blog/brass-cnc-machining",
+      "src": "/assets/images/brass-cnc-machining-process.webp"
+    },
+    {
+      "page": "/blog/china-humanoid-robot-companies",
+      "src": "/assets/images/magiclab-humanoid-robot-reference.webp"
+    },
+    {
+      "page": "/blog/china-humanoid-robot-companies",
+      "src": "/assets/images/magiclab-humanoid-robot-reference.webp"
+    },
+    {
+      "page": "/blog/china-humanoid-robot-companies",
+      "src": "/assets/images/xpeng-robot.webp"
+    },
+    {
+      "page": "/blog/china-humanoid-robot-companies",
+      "src": "/assets/images/xpeng-robot.webp"
+    },
+    {
+      "page": "/blog/china-humanoid-robot-companies",
+      "src": "/assets/images/xiaomi-robotics.webp"
+    },
+    {
+      "page": "/blog/china-humanoid-robot-companies",
+      "src": "/assets/images/xiaomi-robotics.webp"
+    },
+    {
+      "page": "/blog/china-humanoid-robot-companies",
+      "src": "/assets/images/deep-robotics.webp"
+    },
+    {
+      "page": "/blog/china-humanoid-robot-companies",
+      "src": "/assets/images/deep-robotics.webp"
+    },
+    {
+      "page": "/blog/china-humanoid-robot-companies",
+      "src": "/assets/images/pndbotics-humanoid-robot-reference.webp"
+    },
+    {
+      "page": "/blog/china-humanoid-robot-companies",
+      "src": "/assets/images/pndbotics-humanoid-robot-reference.webp"
+    },
+    {
+      "page": "/blog/robot-hands",
+      "src": "/assets/images/unitree-dex3-1-1.webp"
+    },
+    {
+      "page": "/blog/robot-hands",
+      "src": "/assets/images/unitree-dex3-1-1.webp"
+    }
+  ],
+  "firstMainImages": [
+    {
+      "page": "/blog/3d-printing-vs-cnc-machining",
+      "src": "/assets/images/cnc-machining-process-diagram-1024x495.webp",
+      "loading": "lazy"
+    },
+    {
+      "page": "/blog/5-axis-cnc-machining-manufacturers-in-china",
+      "src": "/assets/images/cncpioneer-cnc-machining-website-reference.webp",
+      "priority": "high"
+    },
+    {
+      "page": "/blog/abrasion-resistant-vs-carbon-steel-cnc-machining",
+      "src": "/assets/images/ar500-vs-1045-microstructure-1024x687.webp",
+      "priority": "high"
+    },
+    {
+      "page": "/blog/acrylic-cnc-machining",
+      "src": "/assets/images/acrylic-pmma-cnc-machining-material.webp"
+    },
+    {
+      "page": "/blog/aerospace-cnc-machining",
+      "src": "/assets/images/top-20-5-axis-cnc-machining-manufacturers-in-china-2026.webp",
+      "loading": "lazy"
+    },
+    {
+      "page": "/blog/aluminium-melting-point",
+      "src": "/assets/images/melting-aluminum-1024x566.webp",
+      "priority": "high"
+    },
+    {
+      "page": "/blog/aluminum-cnc-machining",
+      "src": "/assets/images/ryan-wang-100x100.webp",
+      "loading": "lazy"
+    },
+    {
+      "page": "/blog/aluminum-surface-finishes",
+      "src": "/assets/images/ryan-wang-100x100.webp",
+      "loading": "lazy"
+    },
+    {
+      "page": "/blog/aluminum-vs-stainless-steel",
+      "src": "/assets/images/aluminum-vs-stainless-steel-1024x576.webp",
+      "priority": "high"
+    },
+    {
+      "page": "/blog/anodized-aluminum-vs-stainless-steel",
+      "src": "/assets/images/anodized-aluminum-vs-stainless-steel-1024x576.webp",
+      "priority": "high"
+    },
+    {
+      "page": "/blog/bakelite-cnc-machining",
+      "src": "/assets/images/bakelite-cnc-machining-1024x576.webp",
+      "priority": "high"
+    },
+    {
+      "page": "/blog/beveled-edges-cnc-machining",
+      "src": "/assets/images/what-is-a-beveled-edge-in-cnc-1024x576.webp",
+      "priority": "high"
+    },
+    {
+      "page": "/blog/brass-cnc-machining",
+      "src": "/assets/images/brass-alloy-composition-and-common-types.webp",
+      "priority": "high"
+    },
+    {
+      "page": "/blog/bronze-cnc-machining",
+      "src": "/assets/images/bronze-microstructure.webp",
+      "priority": "high"
+    },
+    {
+      "page": "/blog/building-a-humanoid-robot",
+      "src": "/assets/images/humanoid-robots-structure.webp",
+      "priority": "high"
+    },
+    {
+      "page": "/blog/cast-iron-cnc-machining-parts",
+      "src": "/assets/images/ryan-wang-100x100.webp",
+      "loading": "lazy"
+    },
+    {
+      "page": "/blog/casting-vs-cnc-machining",
+      "src": "/assets/images/casting-vs-cnc-machining-process-side-by-side-infographic-1024x576.webp",
+      "priority": "high"
+    },
+    {
+      "page": "/blog/chamfer-cnc-machining",
+      "src": "/assets/images/what-is-a-chamfer-1024x683.webp",
+      "priority": "high"
+    },
+    {
+      "page": "/blog/china-humanoid-robot-companies",
+      "src": "/assets/images/unitree-robotics.webp",
+      "priority": "high"
+    },
+    {
+      "page": "/blog/choose-cnc-machining-company",
+      "src": "/assets/images/ryan-wang-100x100.webp",
+      "loading": "lazy"
+    },
+    {
+      "page": "/blog/cnc-boring",
+      "src": "/assets/images/cnc-boring-process-steps-rough-to-finish-1024x576.webp",
+      "priority": "high"
+    },
+    {
+      "page": "/blog/cnc-drilling",
+      "src": "/assets/images/cnc-drilling-closeup-spindle-coolant-1024x576.webp",
+      "priority": "high"
+    },
+    {
+      "page": "/blog/cnc-electronic-housings",
+      "src": "/assets/images/cnc-electronic-housings-1024x576.webp",
+      "priority": "high"
+    },
+    {
+      "page": "/blog/cnc-ev-motor-housings",
+      "src": "/assets/images/part-being-machined-from-multiple-angles-1024x576.webp",
+      "priority": "high"
+    },
+    {
+      "page": "/blog/cnc-heat-sink-manufacturing",
+      "src": "/assets/images/ryan-wang-100x100.webp",
+      "loading": "lazy"
+    },
+    {
+      "page": "/blog/cnc-lathe-vs-mill",
+      "src": "/assets/images/cnc-turning-1024x687.webp",
+      "loading": "lazy"
+    },
+    {
+      "page": "/blog/cnc-locating-pins",
+      "src": "/assets/images/3-2-1-locating-principle-diagram.webp",
+      "priority": "high"
+    },
+    {
+      "page": "/blog/cnc-machined-uav-parts",
+      "src": "/assets/images/cnc-machined-uav-parts-1024x576.webp",
+      "priority": "high"
+    },
+    {
+      "page": "/blog/cnc-machining-costs",
+      "src": "/assets/images/ryan-wang-100x100.webp",
+      "loading": "lazy"
+    },
+    {
+      "page": "/blog/cnc-machining-fillets",
+      "src": "/assets/images/fillet-in-cnc-machining-1024x683.webp",
+      "priority": "high"
+    },
+    {
+      "page": "/blog/cnc-machining-for-automotive-industry",
+      "src": "/assets/images/cnc-machining-for-the-automotive-industry-parts-materials-and-production.webp",
+      "loading": "lazy"
+    },
+    {
+      "page": "/blog/cnc-machining-for-furniture-industry",
+      "src": "/assets/images/cnc-machined-stainless-steel-precision-parts-handheld-closeup.webp",
+      "loading": "lazy"
+    },
+    {
+      "page": "/blog/cnc-machining-for-renewable-energy",
+      "src": "/assets/images/ryan-wang-100x100.webp",
+      "loading": "lazy"
+    },
+    {
+      "page": "/blog/cnc-machining-for-semiconductor-industry",
+      "src": "/assets/images/semiconductor-cnc-machining-parts-1024x687.webp",
+      "priority": "high"
+    },
+    {
+      "page": "/blog/cnc-machining-heavy-truck-industry",
+      "src": "/assets/images/ryan-wang-100x100.webp",
+      "loading": "lazy"
+    },
+    {
+      "page": "/blog/cnc-machining-materials",
+      "src": "/assets/images/cnc-machining-materials.webp",
+      "loading": "lazy"
+    },
+    {
+      "page": "/blog/cnc-machining-quality-testing",
+      "src": "/assets/images/cnc-quality-testing-cmm-inspection-1024x687.webp",
+      "priority": "high"
+    },
+    {
+      "page": "/blog/cnc-machining-robot-parts",
+      "src": "/assets/images/ryan-wang-100x100.webp",
+      "loading": "lazy"
+    },
+    {
+      "page": "/blog/cnc-machining-vs-injection-molding",
+      "src": "/assets/images/cnc-system-flow.webp",
+      "loading": "lazy"
+    },
+    {
+      "page": "/blog/cnc-machining-vs-manual-machining",
+      "src": "/assets/images/cnc-machining-1024x640.webp",
+      "loading": "lazy"
+    },
+    {
+      "page": "/blog/cnc-metalworks",
+      "src": "/assets/images/cnc-metalworks-2026-ultimate-guide-to-custom-metal-parts.webp",
+      "priority": "high"
+    },
+    {
+      "page": "/blog/cnc-milling",
+      "src": "/assets/images/professional-shenzhen-factory-photo-showing-a-5-axis-cnc-milling-center-machining-a-complex-titanium-medical-implant-componen.webp",
+      "priority": "high"
+    },
+    {
+      "page": "/blog/cnc-milling-and-turning-defense",
+      "src": "/assets/images/defense-electronics-metal-enclosure-single-v1.webp",
+      "loading": "lazy"
+    },
+    {
+      "page": "/blog/cnc-milling-machine-parts",
+      "src": "/assets/images/cnc-milling-parts-1024x687.webp",
+      "priority": "high"
+    },
+    {
+      "page": "/blog/cnc-milling-vs-laser-cutting",
+      "src": "/assets/images/industrial-laser-cutting-thick-plate-sparks-1024x576.webp",
+      "loading": "lazy"
+    },
+    {
+      "page": "/blog/cnc-near-me-vs-online-cnc-machining",
+      "src": "/assets/images/ryan-wang-100x100.webp",
+      "loading": "lazy"
+    },
+    {
+      "page": "/blog/cnc-precision-parts",
+      "src": "/assets/images/ryan-wang-100x100.webp",
+      "loading": "lazy"
+    },
+    {
+      "page": "/blog/cnc-prototyping",
+      "src": "/assets/images/prototype-cnc-machining.webp",
+      "loading": "lazy"
+    },
+    {
+      "page": "/blog/cnc-services-for-startups",
+      "src": "/assets/images/ryan-wang-100x100.webp",
+      "loading": "lazy"
+    },
+    {
+      "page": "/blog/cnc-turned-parts",
+      "src": "/assets/images/mill-turn-cnc-turned-parts-machine-1024x687.webp",
+      "priority": "high"
+    },
+    {
+      "page": "/blog/cnc-turning",
+      "src": "/assets/images/cnc-turning-complex-parts-example-1024x576.webp",
+      "priority": "high"
+    },
+    {
+      "page": "/blog/cnc-vs-sheet-metal",
+      "src": "/assets/images/cnc-machining-1-1024x578.webp",
+      "priority": "high"
+    },
+    {
+      "page": "/blog/complex-cnc-machining-tasks",
+      "src": "/assets/images/ryan-wang-100x100.webp",
+      "loading": "lazy"
+    },
+    {
+      "page": "/blog/connector-machining",
+      "src": "/assets/images/automotive-and-electrical-connectors.webp",
+      "priority": "high"
+    },
+    {
+      "page": "/blog/copper-cnc-machining",
+      "src": "/assets/images/ryan-wang-100x100.webp",
+      "loading": "lazy"
+    },
+    {
+      "page": "/blog/copper-t2-cnc-machining",
+      "src": "/assets/images/copper-t2-cnc-machining-1-1024x576.webp",
+      "priority": "high"
+    },
+    {
+      "page": "/blog/electronics-machining",
+      "src": "/assets/images/ryan-wang-100x100.webp",
+      "loading": "lazy"
+    },
+    {
+      "page": "/blog/face-milling",
+      "src": "/assets/images/face-milling-side-view-diagram-cutter-axis-feed-chip-formation-1024x576.webp",
+      "priority": "high"
+    },
+    {
+      "page": "/blog/fastener-machining",
+      "src": "/assets/images/ryan-wang-100x100.webp",
+      "loading": "lazy"
+    },
+    {
+      "page": "/blog/fr4-cnc-machining",
+      "src": "/assets/images/fr4-cnc-machining.webp",
+      "priority": "high"
+    },
+    {
+      "page": "/blog/inconel-vs-monel",
+      "src": "/assets/images/inconel-1024x683.webp",
+      "priority": "high"
+    },
+    {
+      "page": "/blog/inconel-vs-titanium",
+      "src": "/assets/images/inconel-1024x683.webp",
+      "priority": "high"
+    },
+    {
+      "page": "/blog/low-volume-cnc-machining",
+      "src": "/assets/images/cnc-motion-control-system-block-diagram-mcu-feedback-loop-1024x737.webp",
+      "priority": "high"
+    },
+    {
+      "page": "/blog/medical-cnc-machining",
+      "src": "/assets/images/axis-aluminum-alloy-cnc-precision-machining-medical-parts.webp",
+      "loading": "lazy"
+    },
+    {
+      "page": "/blog/nylon-cnc-machining",
+      "src": "/assets/images/nylon-cnc-milling.webp",
+      "priority": "high"
+    },
+    {
+      "page": "/blog/oil-and-gas-machining",
+      "src": "/assets/images/ryan-wang-100x100.webp",
+      "loading": "lazy"
+    },
+    {
+      "page": "/blog/oil-and-gas-plastic-machining",
+      "src": "/assets/images/ryan-wang-100x100.webp",
+      "loading": "lazy"
+    },
+    {
+      "page": "/blog/oil-gas-cnc-machining-parts",
+      "src": "/assets/images/cnc-machined-inconel-downhole-tool-1024x687.webp"
+    },
+    {
+      "page": "/blog/page/10",
+      "src": "/assets/images/shaft-machining.webp",
+      "loading": "lazy"
+    },
+    {
+      "page": "/blog/page/2",
+      "src": "/assets/images/cnc-milling-parts-diagram.webp",
+      "loading": "lazy"
+    },
+    {
+      "page": "/blog/page/3",
+      "src": "/assets/images/bakelite-cnc-machining.webp",
+      "loading": "lazy"
+    },
+    {
+      "page": "/blog/page/4",
+      "src": "/assets/images/what-is-thread-milling.webp",
+      "loading": "lazy"
+    },
+    {
+      "page": "/blog/page/5",
+      "src": "/assets/images/cnc-turning-complex-parts-example.webp",
+      "loading": "lazy"
+    },
+    {
+      "page": "/blog/page/6",
+      "src": "/assets/images/top-20-5-axis-cnc-machining-manufacturers-in-china-2026.webp",
+      "loading": "lazy"
+    },
+    {
+      "page": "/blog/page/7",
+      "src": "/assets/images/cnc-machined-stainless-steel-precision-parts-handheld-closeup.webp",
+      "loading": "lazy"
+    },
+    {
+      "page": "/blog/page/8",
+      "src": "/assets/images/top-20-5-axis-cnc-machining-manufacturers-in-china-2026.webp",
+      "loading": "lazy"
+    },
+    {
+      "page": "/blog/page/9",
+      "src": "/assets/images/bronze-microstructure.webp",
+      "loading": "lazy"
+    },
+    {
+      "page": "/blog/precision-aerospace-cnc-machined-parts",
+      "src": "/assets/images/aerospace-cnc-1024x687.webp",
+      "priority": "high"
+    },
+    {
+      "page": "/blog/precision-cnc-milling-parts",
+      "src": "/assets/images/precision-cnc-milling-5axis-1024x687.webp",
+      "priority": "high"
+    },
+    {
+      "page": "/blog/precision-cnc-turning",
+      "src": "/assets/images/cnc-titanium-mirror-finish-turning-closeup-1024x576.webp",
+      "priority": "high"
+    },
+    {
+      "page": "/blog/railroad-machining",
+      "src": "/assets/images/ryan-wang-100x100.webp",
+      "loading": "lazy"
+    },
+    {
+      "page": "/blog/railroads-cnc-machining-companies",
+      "src": "/assets/images/ryan-wang-100x100.webp",
+      "loading": "lazy"
+    },
+    {
+      "page": "/blog/robot-hands",
+      "src": "/assets/images/unitree-dex3-1-1.webp",
+      "priority": "high"
+    },
+    {
+      "page": "/blog/shaft-machining",
+      "src": "/assets/images/ryan-wang-100x100.webp",
+      "loading": "lazy"
+    },
+    {
+      "page": "/blog/slot-milling",
+      "src": "/assets/images/what-is-slot-milling-1024x576.webp",
+      "priority": "high"
+    },
+    {
+      "page": "/blog/stainless-steel-cnc-machining",
+      "src": "/assets/images/ryan-wang-100x100.webp",
+      "loading": "lazy"
+    },
+    {
+      "page": "/blog/stainless-steel-surface-finishes",
+      "src": "/assets/images/ryan-wang-100x100.webp",
+      "loading": "lazy"
+    },
+    {
+      "page": "/blog/surface-finish",
+      "src": "/assets/images/surface-roughness-comparison-1024x683.webp",
+      "loading": "lazy"
+    },
+    {
+      "page": "/blog/surface-finish-chart",
+      "src": "/assets/images/zutz5rvsgrysvkla-addalittlebitofbodytext.webp",
+      "priority": "high"
+    },
+    {
+      "page": "/blog/surface-finish-symbols",
+      "src": "/assets/images/ryan-wang-100x100.webp",
+      "loading": "lazy"
+    },
+    {
+      "page": "/blog/surface-roughness",
+      "src": "/assets/images/ryan-wang-100x100.webp",
+      "loading": "lazy"
+    },
+    {
+      "page": "/blog/swiss-machining",
+      "src": "/assets/images/the-early-swiss-lathes-1024x659-1.webp",
+      "priority": "high"
+    },
+    {
+      "page": "/blog/swiss-machining-materials",
+      "src": "/assets/images/ryan-wang-100x100.webp",
+      "loading": "lazy"
+    },
+    {
+      "page": "/blog/thread-milling-vs-tapping",
+      "src": "/assets/images/what-is-thread-milling.webp",
+      "priority": "high"
+    },
+    {
+      "page": "/blog/what-is-a-cnc-lathe",
+      "src": "/assets/images/what-is-a-cnc-lathe-1024x683.webp",
+      "priority": "high"
+    },
+    {
+      "page": "/blog/what-is-cnc",
+      "src": "/assets/images/what-is-cnc.webp",
+      "loading": "lazy"
+    },
+    {
+      "page": "/blog/zero-waste-cnc-machining",
+      "src": "/assets/images/zero-waste-cnc-machining-1024x576.webp",
+      "priority": "high"
+    }
+  ],
+  "eagerPages": [
+    {
+      "page": "/blog/5-axis-cnc-machining-manufacturers-in-china",
+      "eagerOrDefaultImages": 24,
+      "highPriorityImages": 2
+    },
+    {
+      "page": "/blog/bronze-cnc-machining",
+      "eagerOrDefaultImages": 15,
+      "highPriorityImages": 2
+    },
+    {
+      "page": "/blog/cnc-milling-machine-parts",
+      "eagerOrDefaultImages": 14,
+      "highPriorityImages": 2
+    },
+    {
+      "page": "/blog/cnc-turned-parts",
+      "eagerOrDefaultImages": 14,
+      "highPriorityImages": 2
+    },
+    {
+      "page": "/blog/slot-milling",
+      "eagerOrDefaultImages": 11,
+      "highPriorityImages": 2
+    },
+    {
+      "page": "/blog/casting-vs-cnc-machining",
+      "eagerOrDefaultImages": 10,
+      "highPriorityImages": 2
+    },
+    {
+      "page": "/blog/precision-cnc-milling-parts",
+      "eagerOrDefaultImages": 10,
+      "highPriorityImages": 2
+    },
+    {
+      "page": "/blog/abrasion-resistant-vs-carbon-steel-cnc-machining",
+      "eagerOrDefaultImages": 9,
+      "highPriorityImages": 2
+    },
+    {
+      "page": "/blog/building-a-humanoid-robot",
+      "eagerOrDefaultImages": 9,
+      "highPriorityImages": 2
+    },
+    {
+      "page": "/blog/cnc-metalworks",
+      "eagerOrDefaultImages": 8,
+      "highPriorityImages": 2
+    },
+    {
+      "page": "/blog/connector-machining",
+      "eagerOrDefaultImages": 8,
+      "highPriorityImages": 2
+    },
+    {
+      "page": "/blog/precision-aerospace-cnc-machined-parts",
+      "eagerOrDefaultImages": 8,
+      "highPriorityImages": 2
+    },
+    {
+      "page": "/blog/robot-hands",
+      "eagerOrDefaultImages": 8,
+      "highPriorityImages": 2
+    },
+    {
+      "page": "/blog/beveled-edges-cnc-machining",
+      "eagerOrDefaultImages": 7,
+      "highPriorityImages": 2
+    },
+    {
+      "page": "/blog/brass-cnc-machining",
+      "eagerOrDefaultImages": 7,
+      "highPriorityImages": 2
+    },
+    {
+      "page": "/blog/cnc-ev-motor-housings",
+      "eagerOrDefaultImages": 7,
+      "highPriorityImages": 2
+    },
+    {
+      "page": "/blog/copper-t2-cnc-machining",
+      "eagerOrDefaultImages": 7,
+      "highPriorityImages": 2
+    },
+    {
+      "page": "/blog/fr4-cnc-machining",
+      "eagerOrDefaultImages": 7,
+      "highPriorityImages": 2
+    },
+    {
+      "page": "/blog/low-volume-cnc-machining",
+      "eagerOrDefaultImages": 7,
+      "highPriorityImages": 2
+    },
+    {
+      "page": "/blog/cnc-boring",
+      "eagerOrDefaultImages": 5,
+      "highPriorityImages": 2
+    }
+  ]
+}

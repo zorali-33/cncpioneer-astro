@@ -8,6 +8,7 @@ The source of truth is `public/brand-theme.css`. `src/site-typography.mjs` norma
 | --- | --- | --- | --- |
 | Body, lists, form controls | `--font-sans`: Inter, system-ui, sans-serif | 16px | 400 |
 | H1 | `--font-heading`: 'DM Sans', Inter, sans-serif | 40–64px | 400 |
+| Home hero H1 (owner adjustment, 2026-11-03) | `--type-h1-home` / DM Sans | clamp(2.75rem, 5.5vw, 4.5rem), 44–72px | 400 |
 | Non-home hero H1 | `--type-h1-hero` / DM Sans | 40–70px | 400 |
 | H2 | `--type-h2` / DM Sans | clamp(2rem, 4vw, 3.125rem), 32–50px | 400 |
 | H3 | `--type-h3` / DM Sans | 22–24px | 500 |

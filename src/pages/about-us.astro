@@ -9,7 +9,7 @@ const seo = {
   title: "About CNCPioneer | Precision CNC Machining Manufacturer",
   description: "Learn how CNCPioneer supports custom precision components with CNC turning, Swiss machining, mill-turn production, finishing and dimensional inspection.",
   canonical: "/about-us",
-  image: "/assets/images/cnc-machining-centers-production.webp",
+  image: "/assets/images/cnc-machining-center-schematic.webp",
 };
 
 const focusAreas = [
@@ -25,10 +25,10 @@ const industries = [
 ];
 
 const inspection = [
-  { title: "Coordinate measurement", image: "/assets/images/coordinate-measuring-inspection.webp", alt: "Coordinate measuring machine in the inspection area" },
-  { title: "Optical measurement", image: "/assets/images/optical-measurement-inspection.webp", alt: "Optical measuring equipment used for dimensional inspection" },
-  { title: "Profile measurement", image: "/assets/images/profile-measurement-inspection.webp", alt: "Profile measurement equipment in the quality area" },
-  { title: "Height measurement", image: "/assets/images/height-measurement-inspection.webp", alt: "Height gauge inspection equipment" },
+  { title: "Coordinate measurement", image: "/assets/images/dimensional-inspection-schematic.webp", alt: "Schematic illustration of coordinate measurement equipment" },
+  { title: "Optical measurement", image: "/assets/images/optical-inspection-schematic.webp", alt: "Schematic illustration of optical measurement equipment" },
+  { title: "Profile measurement", image: "/assets/images/profile-inspection-schematic.webp", alt: "Schematic illustration of profile measurement equipment" },
+  { title: "Height measurement", image: "/assets/images/height-inspection-schematic.webp", alt: "Schematic illustration of height measurement equipment" },
 ];
 
 const milestones = [
@@ -53,8 +53,8 @@ const milestones = [
           </div>
         </div>
         <figure class="about-hero-photo">
-          <img src="/assets/images/cnc-machining-centers-production.webp" width="733" height="500" alt="CNC machining centers on the Dongguan factory floor" fetchpriority="high" />
-          <figcaption>CNC machining centers on the production floor</figcaption>
+          <img src="/assets/images/cnc-machining-center-schematic.webp" width="800" height="450" alt="Schematic illustration of a CNC machining center" fetchpriority="high" />
+          <figcaption>CNC machining center · Equipment schematic</figcaption>
         </figure>
       </div>
       <div class="about-shell about-proof-row" aria-label="Company focus">
@@ -75,8 +75,8 @@ const milestones = [
           <a class="about-inline-link" href="/cnc-machining-quote">Send a drawing for review <span aria-hidden="true">↗</span></a>
         </div>
         <figure class="story-photo">
-          <img src="/assets/images/cnc-mill-turn-production.webp" width="699" height="515" alt="A mill-turn machine cutting a metal component in the factory" loading="lazy" decoding="async" />
-          <figcaption>Mill-turn machining in production</figcaption>
+          <img src="/assets/images/cnc-mill-turn-schematic.webp" width="800" height="450" alt="Schematic illustration of a CNC mill-turn machine" loading="lazy" decoding="async" />
+          <figcaption>Mill-turn machining · Equipment schematic</figcaption>
         </figure>
       </div>
     </section>
@@ -133,7 +133,7 @@ const milestones = [
           {inspection.map((item) => (
             <figure class="inspection-card">
               <img src={item.image} alt={item.alt} loading="lazy" decoding="async" />
-              <figcaption>{item.title}</figcaption>
+              <figcaption>{item.title} · Schematic</figcaption>
             </figure>
           ))}
         </div>

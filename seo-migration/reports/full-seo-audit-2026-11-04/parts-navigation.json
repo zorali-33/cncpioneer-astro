@@ -1,0 +1,49 @@
+{
+  "generatedAt": "2026-11-04T08:16:48.737Z",
+  "status": "pass",
+  "pages": 330,
+  "parts": 143,
+  "categories": [
+    {
+      "id": "pins",
+      "label": "Pins & Contacts",
+      "count": 27
+    },
+    {
+      "id": "shafts",
+      "label": "Shafts & Drive Components",
+      "count": 10
+    },
+    {
+      "id": "bushings",
+      "label": "Bushings & Sleeves",
+      "count": 11
+    },
+    {
+      "id": "fittings",
+      "label": "Fittings, Flanges & Valves",
+      "count": 20
+    },
+    {
+      "id": "housings",
+      "label": "Housings & Enclosures",
+      "count": 16
+    },
+    {
+      "id": "fasteners",
+      "label": "Fasteners & Washers",
+      "count": 4
+    },
+    {
+      "id": "structures",
+      "label": "Structural & Motion Parts",
+      "count": 18
+    },
+    {
+      "id": "components",
+      "label": "Custom Machined Components",
+      "count": 37
+    }
+  ],
+  "errors": []
+}

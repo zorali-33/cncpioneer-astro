@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-11-02T08:49:15.499Z",
+  "generatedAt": "2026-11-04T08:16:37.555Z",
   "scope": "Generated dist HTML; no live crawl. Incoming counts use unique source pages and exclude self links. Content means links outside header, footer, breadcrumb and nav; includes cards, CTAs and related links.",
   "summary": {
     "htmlPages": 330,
     "indexablePages": 328,
-    "internalAnchorOccurrences": 33695,
+    "internalAnchorOccurrences": 33691,
     "brokenLinks": 0,
     "brokenFragments": 0,
     "emptyAnchors": 0,

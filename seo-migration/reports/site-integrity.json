@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-11-02T09:36:02.610Z",
+  "generatedAt": "2026-11-04T03:08:30.488Z",
   "build": "D:\\cncpioneer.com-astro\\dist",
   "pages": 330,
   "indexable": 328,
   "sitemapUrls": 328,
-  "references": 43944,
+  "references": 43940,
   "fragments": 941,
   "searchRecords": 300,
   "errorCounts": {},
@@ -2116,7 +2116,7 @@
       "route": "/",
       "title": "Custom CNC Machining Services | Milling & Turning | CNCPioneer",
       "description": "Custom CNC machining for metal and plastic parts, from prototypes to production. Explore milling, turning, Swiss machining and finishing. Request a quote.",
-      "h1": "Custom CNC Machining ServicesYour Parts. Made to Your Specs.",
+      "h1": "Custom CNC Machining Services",
       "canonical": "https://www.cncpioneer.com/",
       "noindex": false
     },
