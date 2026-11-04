@@ -26,7 +26,7 @@ jobs:
     timeout-minutes: 45
     environment:
       name: production
-      url: https://cncpioneer.com/
+      url: https://www.cncpioneer.com/
 
     env:
       HOSTINGER_HOST: ${{ secrets.HOSTINGER_HOST }}
@@ -286,7 +286,7 @@ jobs:
             --header "X-Deploy-Token: $DEPLOY_TOKEN" \
             --output "$response_file" \
             --write-out '%{http_code}' \
-            https://cncpioneer.com/cncpioneer-deploy.php)
+            https://www.cncpioneer.com/cncpioneer-deploy.php)
           result=$(cat "$response_file")
 
           if [ "$http_status" != '200' ] || [ "$result" != 'DEPLOY_OK' ]; then
@@ -315,7 +315,7 @@ jobs:
             --silent \
             --show-error \
             --output /dev/null \
-            https://cncpioneer.com/
+            https://www.cncpioneer.com/
 
           quote_status=$(curl \
             --silent \
@@ -323,8 +323,8 @@ jobs:
             --output /dev/null \
             --write-out '%{http_code}' \
             --request POST \
-            --header 'Origin: https://cncpioneer.com' \
-            https://cncpioneer.com/api/quote.php)
+            --header 'Origin: https://www.cncpioneer.com' \
+            https://www.cncpioneer.com/api/quote.php)
           if [ "$quote_status" != '422' ]; then
             echo "::error title=Mail configuration check failed::Expected validation status 422, received $quote_status."
             exit 1

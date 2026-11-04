@@ -56,6 +56,8 @@ export default function industryRedirectIntegration() {
           'RewriteCond %{THE_REQUEST} "\\s/+[^?\\s]+/+(?:[?\\s])"',
           'RewriteCond %{REQUEST_FILENAME}/index.html -f',
           'RewriteRule ^(.+?)/+$ https://www.cncpioneer.com/$1 [R=301,L]',
+          '# Canonicalize navigation without redirecting existing API POST bodies.',
+          'RewriteCond %{REQUEST_METHOD} ^(?:GET|HEAD)$',
           'RewriteCond %{HTTPS} !=on [OR]',
           'RewriteCond %{HTTP_HOST} !^www\\.cncpioneer\\.com$ [NC]',
           'RewriteRule ^ https://www.cncpioneer.com%{REQUEST_URI} [R=301,L]',
