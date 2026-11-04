@@ -1,6 +1,7 @@
 // Reviewed page metadata, 2026-10-23. Separate from mirrored/generated content.
 // Title changes apply to search/social metadata; article H1 and navigation labels retain their wording.
 import { titleBrandOverrides } from './titleBrandOverrides.mjs';
+import {seoRepairDescriptions} from './seoRepairDescriptions.mjs';
 export const pageSeoOverrides = {
   "/blog/cast-iron-cnc-machining-parts": { title: "Cast Iron CNC Machining: Materials & DFM | CNCPioneer" },
   "/blog/cnc-machining-for-furniture-industry": { title: "CNC Machining for Furniture Hardware | CNCPioneer" },
@@ -338,6 +339,7 @@ export const pageSeoOverrides = {
   }
 };
 
+for(const [route,description] of Object.entries(seoRepairDescriptions))pageSeoOverrides[route]={...pageSeoOverrides[route],description};
 for(const [route,title] of Object.entries(titleBrandOverrides))pageSeoOverrides[route]={...pageSeoOverrides[route],title};
 
 export function getReviewedSeo(canonical) {

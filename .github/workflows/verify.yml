@@ -49,6 +49,14 @@ jobs:
           fi
           exit "$status"
 
+      - name: Verify Apache canonical URLs and permanent moves
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq
+          sudo apt-get install --yes apache2
+          node scripts/apache-routing-smoke.mjs
+
       - name: Run release acceptance audit
         shell: bash
         run: |

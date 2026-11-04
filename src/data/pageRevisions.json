@@ -1,6 +1,11 @@
 {
   "revisions": [
     {
+      "date": "2026-11-04",
+      "reason": "Replaced third-party equipment photographs with explicitly labelled equipment schematics; rewrote page-specific search summaries, completed informative image descriptions and added relevant guide links to existing hubs.",
+      "routes": ["/", "/about-us", "/services/cnc-turning-and-milling", "/blog", "/industries", "/resources", "/blog/5-axis-cnc-machining-manufacturers-in-china", "/blog/abrasion-resistant-vs-carbon-steel-cnc-machining", "/blog/acrylic-cnc-machining", "/blog/aluminum-cnc-machining", "/blog/aluminum-surface-finishes", "/blog/aluminum-vs-stainless-steel", "/blog/brass-cnc-machining", "/blog/bronze-cnc-machining", "/blog/building-a-humanoid-robot", "/blog/casting-vs-cnc-machining", "/blog/choose-cnc-machining-company", "/blog/cnc-boring", "/blog/cnc-drilling", "/blog/cnc-ev-motor-housings", "/blog/cnc-machined-uav-parts", "/blog/cnc-machining-quality-testing", "/blog/cnc-machining-robot-parts", "/blog/cnc-metalworks", "/blog/cnc-milling-and-turning-defense", "/blog/cnc-near-me-vs-online-cnc-machining", "/blog/cnc-vs-sheet-metal", "/blog/complex-cnc-machining-tasks", "/blog/copper-cnc-machining", "/blog/face-milling", "/blog/fastener-machining", "/blog/low-volume-cnc-machining", "/blog/nylon-cnc-machining", "/blog/oil-and-gas-plastic-machining", "/blog/precision-aerospace-cnc-machined-parts", "/blog/precision-cnc-milling-parts", "/blog/railroads-cnc-machining-companies", "/blog/robot-hands", "/blog/shaft-machining", "/blog/stainless-steel-surface-finishes", "/blog/surface-finish-chart", "/blog/surface-roughness", "/blog/swiss-machining", "/blog/anodized-aluminum-vs-stainless-steel", "/blog/beveled-edges-cnc-machining", "/custom-cnc-parts/5-axis-cnc-machining-aerospace-components", "/materials/metal-cnc-machining", "/blog/china-humanoid-robot-companies"]
+    },
+    {
       "date": "2026-10-29",
       "reason": "Added a native 5-axis CNC machining service page focused on part geometry, process selection and drawing-based quotation review. Linked it from the home page, services directory, shared navigation, footer and site search.",
       "routes": ["/services/5-axis-cnc-machining", "/services", "/"]

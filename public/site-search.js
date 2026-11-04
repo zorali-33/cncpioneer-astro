@@ -2,7 +2,7 @@ import { prepareSearchIndex, searchPages, searchTypes, normalizeSearch } from "/
 
 let indexPromise;
 function loadIndex() {
-  if (!indexPromise) indexPromise = fetch("/search-index.json")
+  if (!indexPromise) indexPromise = fetch("/search-index.json", {cache: "no-cache"})
     .then(response => { if (!response.ok) throw new Error("Search unavailable"); return response.json(); })
     .then(pages => { if (!Array.isArray(pages)) throw new Error("Invalid search index"); return prepareSearchIndex(pages); })
     .catch(error => { indexPromise = null; throw error; });

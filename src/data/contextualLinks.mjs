@@ -35,7 +35,9 @@ const bridges = {
   '/materials/nylon-cnc-machining': ['Nylon parts should be quoted', ' If the drawing specifies PA66, review the grade-specific considerations for <a href="/materials/nylon-66-cnc-machining">Nylon 66 machining</a>.'],
   '/materials/peek-cnc-machining': ['PEEK CNC Machining is suitable', ' For cylindrical parts with milled features, review <a href="/materials/peek-cnc-turning-and-milling">turning and milling PEEK components</a>.'],
   '/services/3-axis-cnc-machining': ['From flat mounting surfaces', ' Related process guides explain <a href="/blog/cnc-drilling">CNC drilling</a> and <a href="/blog/cnc-boring">CNC boring</a> when planning holes and finished bores.'],
-  '/blog': ['Explore', ' For process comparisons, read about <a href="/blog/3d-printing-vs-cnc-machining">3D printing versus CNC machining</a> and <a href="/blog/casting-vs-cnc-machining">casting versus machining</a>.'],
+  '/blog': ['Explore', ' Compare <a href="/blog/3d-printing-vs-cnc-machining">3D printing and CNC machining</a>, <a href="/blog/casting-vs-cnc-machining">casting and machining</a>, or <a href="/blog/cnc-vs-sheet-metal">CNC and sheet metal</a>. For sourcing decisions, explore <a href="/blog/cnc-services-for-startups">CNC services for startups</a> and <a href="/blog/cnc-near-me-vs-online-cnc-machining">local versus online suppliers</a>.'],
+  '/industries': ['Find machining support for your application', ' Additional application guides cover <a href="/blog/cnc-machining-for-furniture-industry">machined furniture hardware</a> and <a href="/blog/cnc-machining-for-renewable-energy">renewable energy components</a>.'],
+  '/resources': ['Explore machining processes, design tips', ' Start with the <a href="/blog/cnc-metalworks">CNC metalworking guide</a> for processes, materials and finishing considerations.'],
 };
 
 export function applyContextualLinks(html, pathname) {

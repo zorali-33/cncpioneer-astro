@@ -1,12 +1,12 @@
 import { removedBlogRoutes } from './blogRemovals.mjs';
 import { removedProductRoutes } from './productRemovals.mjs';
-import { normalizePagePath, retiredPagePaths } from './siteUrls.mjs';
+import { normalizePagePath, retiredPagePaths, pageRedirects } from './siteUrls.mjs';
 
 // One removal registry for development, static hosting and sitemap generation.
 // Archived source content stays available for recovery, without a public route.
 export const notFoundPagePaths = new Set([
   ...removedBlogRoutes, ...removedProductRoutes, ...retiredPagePaths,
-]);
+].filter(route => !Object.hasOwn(pageRedirects, route)));
 
 export function isNotFoundPagePath(pathname) {
   let decoded = pathname;

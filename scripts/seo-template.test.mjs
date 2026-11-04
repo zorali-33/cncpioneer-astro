@@ -17,10 +17,10 @@ test('page identities and navigation preserve URL semantics', () => {
 });
 
 test('dates use an explicit content record, with no synthetic date for unknown pages', () => {
-  assert.equal(getPageModifiedTime('/about-us', '2026-03-27T05:45:23+00:00'), '2026-10-27');
+  assert.equal(getPageModifiedTime('/about-us', '2026-03-27T05:45:23+00:00'), '2026-11-04');
   assert.equal(getPageModifiedTime('/unrecorded-page'), undefined);
   assert.equal(getPageModifiedTime('/unrecorded-page', 'bad'), undefined);
-  assert.equal(getPageModifiedTime('/blog/swiss-machining', '2026-10-23T00:00:00+08:00'), '2026-10-23');
+  assert.equal(getPageModifiedTime('/blog/swiss-machining', '2026-10-23T00:00:00+08:00'), '2026-11-04');
   assert.equal(getPageModifiedTime('/unrecorded-page', '2026-09-10'), '2026-09-10');
 });
 

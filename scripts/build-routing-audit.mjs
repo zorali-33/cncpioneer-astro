@@ -3,7 +3,7 @@ import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {parse,walkSync,ELEMENT_NODE} from 'ultrahtml';
 import {notFoundPagePaths,notFoundPathVariants} from '../src/data/pageRemovals.mjs';
-import {canonicalPageUrl} from '../src/data/siteUrls.mjs';
+import {canonicalPageUrl, pageRedirects, resolvePagePath} from '../src/data/siteUrls.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const build=path.resolve(process.argv[2]||path.join(root,'dist'));
@@ -12,7 +12,13 @@ const errors=[];
 const rules=fs.readFileSync(path.join(build,'_redirects'),'utf8');
 const apache=fs.readFileSync(path.join(build,'.htaccess'),'utf8');
 const apachePatterns=apache.split('\n').filter(line=>line.startsWith('RewriteRule ')).map(line=>new RegExp(line.split(' ')[1]));
-if(/\b30[1278]\b/.test(rules+apache))errors.push({code:'unexpected_redirect'});
+if(!apache.includes('DirectorySlash Off') || !apache.includes('Options -Indexes -MultiViews'))errors.push({code:'unsafe_directory_routing'});
+if(!apache.includes('THE_REQUEST') || !apache.includes('RewriteRule ^(.+?)/?$ $1/index.html [L]'))errors.push({code:'missing_canonical_routing'});
+for(const [route,target] of Object.entries(pageRedirects)){
+  for(const variant of notFoundPathVariants(route))if(!rules.includes(`${variant} ${canonicalPageUrl(target)} 301!\n`))errors.push({route:variant,code:'missing_permanent_move'});
+  if(!fs.existsSync(path.join(build,resolvePagePath(target),'index.html')))errors.push({route,target,code:'redirect_target_missing'});
+  if(fs.existsSync(path.join(build,route,'index.html')))errors.push({route,code:'retired_html_emitted'});
+}
 for(const route of notFoundPagePaths){
   if(fs.existsSync(path.join(build,route,'index.html')))errors.push({route,code:'removed_html_emitted'});
   for(const variant of notFoundPathVariants(route)){
@@ -64,6 +70,6 @@ for(const [prefix,family]of families){
     }
   }
 }
-const report={generatedAt:new Date().toISOString(),removedRoutes:notFoundPagePaths.size,notFoundVariants:notFoundPagePaths.size*3,families:[...families].map(([route,pages])=>({route,pages:pages.length,items:pages.reduce((sum,page)=>sum+page.items.length,0)})),errors};
+const report={generatedAt:new Date().toISOString(),permanentRedirects:Object.keys(pageRedirects).length,removedRoutes:notFoundPagePaths.size,notFoundVariants:notFoundPagePaths.size*3,families:[...families].map(([route,pages])=>({route,pages:pages.length,items:pages.reduce((sum,page)=>sum+page.items.length,0)})),errors};
 fs.mkdirSync(path.dirname(output),{recursive:true});fs.writeFileSync(output,JSON.stringify(report,null,2));
 console.log(JSON.stringify(report,null,2));process.exitCode=errors.length?1:0;

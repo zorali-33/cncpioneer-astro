@@ -15,6 +15,7 @@ Build: D:\cncpioneer.com-astro\dist
 - PASS: Approved palette across rendered pages and reachable UI styles (acceptance-9.log)
 - PASS: Approved Inter / DM Sans / JetBrains Mono roles and local font loading (acceptance-10.log)
 - PASS: Custom Parts main navigation, category filters and complete product coverage (acceptance-11.log)
+- PASS: Reviewed SEO descriptions, article images, asset versions and brand cleanup (acceptance-12.log)
 
 Live SMTP authentication, inbox delivery, deployment and Search Console validation are not covered by static acceptance. Run the separate PHP tests and verify delivery on the host.
 

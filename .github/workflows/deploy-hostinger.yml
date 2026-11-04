@@ -215,6 +215,32 @@ jobs:
           ];
 
           try {
+              // Keep a recoverable snapshot outside the public document root.
+              // A backup failure must stop deployment before any file is removed.
+              $backupRoot = dirname($root) . '/.cncpioneer-site-backups';
+              if (!is_dir($backupRoot) && !mkdir($backupRoot, 0750, true)) {
+                  throw new RuntimeException('Unable to create private backup directory');
+              }
+              $backup = new ZipArchive();
+              $backupPath = $backupRoot . '/site-' . gmdate('Ymd-His') . '-' . bin2hex(random_bytes(4)) . '.zip';
+              if ($backup->open($backupPath, ZipArchive::CREATE | ZipArchive::EXCL) !== true) {
+                  throw new RuntimeException('Unable to create site backup');
+              }
+              $files = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($root, FilesystemIterator::SKIP_DOTS));
+              foreach ($files as $entry) {
+                  $relative = substr($entry->getPathname(), strlen($root) + 1);
+                  $topLevel = explode('/', $relative, 2)[0];
+                  if ($entry->isFile() && !$entry->isLink() && !in_array($topLevel, $preserve, true)) {
+                      if (!$backup->addFile($entry->getPathname(), $relative)) {
+                          throw new RuntimeException('Unable to add file to site backup');
+                      }
+                  }
+              }
+              if (!$backup->close()) {
+                  throw new RuntimeException('Unable to finish site backup');
+              }
+              chmod($backupPath, 0600);
+
               foreach (new FilesystemIterator($root, FilesystemIterator::SKIP_DOTS) as $entry) {
                   if (!in_array($entry->getFilename(), $preserve, true)) {
                       removePath($entry->getPathname());

@@ -9,7 +9,7 @@ const reports=path.resolve(process.argv[3]||path.join(root,'seo-migration/report
 fs.mkdirSync(reports,{recursive:true});
 if(!fs.existsSync(path.join(build,'sitemap.xml')))throw Error('Build and generate indexing assets before acceptance.');
 const checks=[
-  {name:'Regression tests',args:['--test','scripts/page-removals.test.mjs','scripts/site-schema.test.mjs','scripts/seo-template.test.mjs','scripts/breadcrumbs.test.mjs','scripts/presentation-integrity.test.mjs','scripts/image-assets.test.mjs','scripts/editorial-corrections.test.mjs','scripts/url-corrections.test.mjs','scripts/quote-form.test.mjs','scripts/private-request-path.test.mjs','scripts/archive-page.test.mjs','scripts/brand-palette.test.mjs','scripts/site-typography.test.mjs','scripts/parts-navigation.test.mjs']},
+  {name:'Regression tests',args:['--test','scripts/page-removals.test.mjs','scripts/site-schema.test.mjs','scripts/seo-template.test.mjs','scripts/breadcrumbs.test.mjs','scripts/presentation-integrity.test.mjs','scripts/image-assets.test.mjs','scripts/editorial-corrections.test.mjs','scripts/url-corrections.test.mjs','scripts/quote-form.test.mjs','scripts/private-request-path.test.mjs','scripts/archive-page.test.mjs','scripts/brand-palette.test.mjs','scripts/site-typography.test.mjs','scripts/parts-navigation.test.mjs','scripts/seo-repairs.test.mjs']},
   {name:'Rendered HTML, SEO, Schema, links and search index',args:['scripts/site-integrity-audit.mjs',build,path.join(reports,'site-integrity.json')]},
   {name:'CSS, fonts and JavaScript dependencies',args:['scripts/asset-dependency-audit.mjs',build,path.join(reports,'asset-dependencies.json')]},
   {name:'404 hosting rules and archive pagination',args:['scripts/build-routing-audit.mjs',build,path.join(reports,'build-routing.json')]},
@@ -20,6 +20,7 @@ const checks=[
   {name:'Approved palette across rendered pages and reachable UI styles',args:['scripts/brand-palette-audit.mjs',build,path.join(reports,'brand-palette.json')]},
   {name:'Approved Inter / DM Sans / JetBrains Mono roles and local font loading',args:['scripts/site-typography-audit.mjs',build,path.join(reports,'site-typography.json')]},
   {name:'Custom Parts main navigation, category filters and complete product coverage',args:['scripts/parts-navigation-audit.mjs',build,path.join(reports,'parts-navigation.json')]},
+  {name:'Reviewed SEO descriptions, article images, asset versions and brand cleanup',args:['scripts/seo-repairs-audit.mjs',build,path.join(reports,'seo-repairs.json')]},
 ];
 const results=[];
 for(const check of checks){

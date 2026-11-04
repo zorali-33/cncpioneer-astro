@@ -3,6 +3,7 @@ import { decodeHTML, escapeAttribute } from 'entities';
 import { canonicalPageUrl, normalizePagePath, normalizeInternalHref, isRetiredPagePath } from './siteUrls.mjs';
 import { getPageModifiedTime } from './pageDates.mjs';
 import { jsonLd } from './articleSchema.mjs';
+import {getReviewedSeo} from './pageSeoOverrides.mjs';
 
 const sectionNames = { blog: 'Blog', 'custom-cnc-parts': 'Custom CNC Parts', materials: 'Materials', industries: 'Industries', services: 'Services', resources: 'Resources' };
 const authorNames = { 'ryan-wang': 'Ryan Wang', 'david-li': 'David Li' };
@@ -64,6 +65,7 @@ export function applyPageSeoTemplate(html, pathname) {
     replaceTag(node, tag.replace(pattern, (_, prefix) => prefix + '"' + escapeAttribute(value) + '"'));
   };
   const canonical = canonicalPageUrl(route);
+  const reviewedDescription = getReviewedSeo(route).description;
   const extraHead = [];
   let foundCanonical = false, foundOgUrl = false;
   const metaValue = (key) => attr(metas.find((node) => attr(node, 'property') === key) || { attributes: {} }, 'content');
@@ -84,7 +86,8 @@ export function applyPageSeoTemplate(html, pathname) {
       }
     } else if (node.name === 'meta' && indexable) {
       const property = attr(node, 'property');
-      if (property === 'og:url') { replaceAttribute(node, 'content', canonical); foundOgUrl = true; }
+      if (reviewedDescription && (attr(node, 'name') === 'description' || property === 'og:description' || attr(node, 'name') === 'twitter:description')) replaceAttribute(node, 'content', reviewedDescription);
+      else if (property === 'og:url') { replaceAttribute(node, 'content', canonical); foundOgUrl = true; }
       else if (attr(node, 'name') === 'last-modified') replaceTag(node, '');
       // Only blog articles use Article Open Graph properties.
       else if (property === 'article:modified_time') {

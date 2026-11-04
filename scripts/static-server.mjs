@@ -1,4 +1,5 @@
 import { isNotFoundPagePath } from "../src/data/pageRemovals.mjs";
+import {pageRedirects, normalizePagePath, resolvePagePath} from '../src/data/siteUrls.mjs';
 import { createReadStream, existsSync } from "node:fs";
 import { stat } from "node:fs/promises";
 import { createServer } from "node:http";
@@ -72,6 +73,12 @@ export function createStaticRequestHandler({ directory = root } = {}) {
       sendNotFound(request, response);
       return;
     }
+    const normalizedPath = normalizePagePath(pathname);
+    if (Object.hasOwn(pageRedirects, normalizedPath)) {
+      response.writeHead(301, {Location: resolvePagePath(normalizedPath) + new URL(request.url, 'http://localhost').search, 'Cache-Control':'no-cache'});
+      response.end();
+      return;
+    }
     if (isNotFoundPagePath(pathname) || /^\/404(?:\.html)?\/?$/.test(pathname)) {
       sendNotFound(request, response);
       return;
@@ -79,6 +86,11 @@ export function createStaticRequestHandler({ directory = root } = {}) {
     const filePath = await resolveRequestPath(request.url || "/", buildRoot);
     if (!filePath || !existsSync(filePath)) {
       sendNotFound(request, response);
+      return;
+    }
+    if (filePath.endsWith(`${sep}index.html`) && pathname !== normalizedPath) {
+      response.writeHead(301, {Location: normalizedPath + new URL(request.url, 'http://localhost').search, 'Cache-Control':'no-cache'});
+      response.end();
       return;
     }
 

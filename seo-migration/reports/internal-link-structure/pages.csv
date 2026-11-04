@@ -5,12 +5,6 @@ route,depth,incoming_pages,content_incoming_pages,outgoing_pages,content_outgoin
 /author/ryan-wang/page/5,4,6,0,69,9
 /author/ryan-wang/page/6,4,6,0,69,9
 /author/ryan-wang/page/7,4,6,0,69,9
-/blog/cnc-machining-for-furniture-industry,4,2,2,60,11
-/blog/cnc-machining-for-renewable-energy,4,2,2,61,12
-/blog/cnc-metalworks,4,2,2,61,12
-/blog/cnc-services-for-startups,4,2,2,58,10
-/blog/cnc-near-me-vs-online-cnc-machining,4,3,3,59,11
-/blog/cnc-vs-sheet-metal,4,3,3,59,10
 /author/ryan-wang/page/2,3,7,0,69,9
 /author/ryan-wang/page/3,3,7,0,69,9
 /author/ryan-wang/page/8,3,7,0,64,4
@@ -35,6 +29,7 @@ route,depth,incoming_pages,content_incoming_pages,outgoing_pages,content_outgoin
 /blog/acrylic-cnc-machining,3,3,3,58,9
 /blog/bakelite-cnc-machining,3,3,3,58,7
 /blog/cnc-ev-motor-housings,3,3,3,58,9
+/blog/cnc-metalworks,3,3,3,61,12
 /blog/copper-t2-cnc-machining,3,3,3,58,10
 /blog/fr4-cnc-machining,3,3,3,59,8
 /blog/railroad-machining,3,3,3,61,13
@@ -111,7 +106,7 @@ route,depth,incoming_pages,content_incoming_pages,outgoing_pages,content_outgoin
 /custom-cnc-parts/page/4,2,5,0,81,25
 /custom-cnc-parts/page/5,2,5,0,81,25
 /custom-cnc-parts/page/6,2,5,0,80,24
-/resources,2,2,0,56,8
+/resources,2,2,0,57,9
 /materials/6061-t6-aluminum-cnc-machining,2,69,1,60,11
 /materials/aluminum-cnc-turning-and-milling,2,4,1,56,6
 /materials/inconel-625-cnc-machining,2,11,1,56,6
@@ -135,7 +130,10 @@ route,depth,incoming_pages,content_incoming_pages,outgoing_pages,content_outgoin
 /materials/inconel-600-cnc-machining,2,4,2,56,6
 /materials/peek-cnc-turning-and-milling,2,2,2,56,6
 /blog/cnc-locating-pins,2,3,3,58,9
+/blog/cnc-machining-for-furniture-industry,2,3,3,60,11
+/blog/cnc-machining-for-renewable-energy,2,3,3,61,12
 /blog/cnc-precision-parts,2,3,3,62,13
+/blog/cnc-services-for-startups,2,3,3,58,10
 /blog/railroads-cnc-machining-companies,2,3,3,57,7
 /custom-cnc-parts/chassis,2,3,3,58,11
 /custom-cnc-parts/compression-tube-fitting,2,3,3,57,8
@@ -145,6 +143,8 @@ route,depth,incoming_pages,content_incoming_pages,outgoing_pages,content_outgoin
 /materials/nylon-66-cnc-machining,2,4,3,56,6
 /blog/bronze-cnc-machining,2,4,4,59,10
 /blog/cnc-milling-and-turning-defense,2,4,4,60,11
+/blog/cnc-near-me-vs-online-cnc-machining,2,4,4,59,11
+/blog/cnc-vs-sheet-metal,2,4,4,59,10
 /blog/what-is-a-cnc-lathe,2,4,4,60,10
 /custom-cnc-parts/aluminum-cnc-machining-flanges,2,4,4,58,13
 /custom-cnc-parts/cnc-turning-titanium-nuts,2,4,4,57,12
@@ -265,8 +265,8 @@ route,depth,incoming_pages,content_incoming_pages,outgoing_pages,content_outgoin
 /custom-cnc-parts/5-axis-aluminum-cnc-machining-parts,2,36,36,59,9
 /author/ryan-wang,2,75,68,65,9
 /about-us,1,327,0,52,4
-/industries,1,327,0,55,14
-/blog,1,327,1,66,11
+/industries,1,327,0,57,16
+/blog,1,327,1,69,14
 /materials/metal-cnc-machining,1,327,1,52,16
 /materials/plastic-cnc-machining,1,327,1,52,13
 /resources/equipment-list,1,327,2,53,0

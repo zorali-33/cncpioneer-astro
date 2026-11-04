@@ -3,10 +3,11 @@ import { industryRedirects } from './industryRedirects.mjs';
 import { blogConsolidationRedirects } from './blogConsolidation.mjs';
 import { productRedirects } from './productRedirects.mjs';
 import { serviceRedirects } from './serviceRedirects.mjs';
+import { permanentPageRedirects } from './permanentPageRedirects.mjs';
 
 export const SITE_URL = 'https://www.cncpioneer.com';
 
-// Historical aliases are retained only to identify routes that must return 404.
+// Historical route records also identify retired source content.
 export const legacyRetiredPages = {
   '/blog/ai-cnc-machining': '/blog/what-is-cnc',
   '/blog/ai-cnc-programming': '/blog/what-is-cnc',
@@ -22,8 +23,8 @@ export const retiredPageTargets = {
 };
 export const retiredPagePaths = new Set(Object.keys(retiredPageTargets));
 
-// Retired routes no longer redirect to an alternative page.
-export const pageRedirects = {};
+// Only reviewed equivalents redirect; unrelated removed pages remain 404.
+export const pageRedirects = permanentPageRedirects;
 
 const ownHosts = new Set(['cncpioneer.com', 'www.cncpioneer.com', 'localhost', '127.0.0.1', '[::1]']);
 export const normalizePagePath = (path) => path.replace(/\/index\.html$/i, '/').replace(/\/+$/, '') || '/';
@@ -54,8 +55,7 @@ export function normalizeInternalHref(value, currentPath = '/', absolute = false
   let url;
   try { url = new URL(value, SITE_URL + normalizePagePath(currentPath)); } catch { return value; }
   if (!['http:', 'https:'].includes(url.protocol) || !ownHosts.has(url.hostname.toLowerCase()) || !isPagePath(url.pathname)) return value;
-  // Visitors to a retired URL receive 404, but links rendered inside the site
-  // should always point to the current page that replaced it.
+  // Render links directly to current destinations, avoiding redirect hops.
   const targetPath = retiredPageTargets[normalizePagePath(url.pathname)] || url.pathname;
   const target = resolvePagePath(targetPath) + url.search + url.hash;
   return absolute ? SITE_URL + target : target;

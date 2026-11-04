@@ -1,7 +1,8 @@
 {
-  "generatedAt": "2026-11-04T03:08:31.362Z",
-  "removedRoutes": 99,
-  "notFoundVariants": 297,
+  "generatedAt": "2026-11-04T08:54:42.435Z",
+  "permanentRedirects": 38,
+  "removedRoutes": 61,
+  "notFoundVariants": 183,
   "families": [
     {
       "route": "/author/david-li",

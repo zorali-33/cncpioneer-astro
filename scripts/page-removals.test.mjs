@@ -6,7 +6,7 @@ import { join } from 'node:path';
 import { Writable } from 'node:stream';
 import { once } from 'node:events';
 import { isNotFoundPagePath, notFoundPagePaths, notFoundPathVariants } from '../src/data/pageRemovals.mjs';
-import { retiredPagePaths, normalizeInternalHref } from '../src/data/siteUrls.mjs';
+import { retiredPagePaths, normalizeInternalHref, pageRedirects, resolvePagePath, canonicalPageUrl } from '../src/data/siteUrls.mjs';
 import { createStaticRequestHandler } from './static-server.mjs';
 import removalIntegration from './industry-redirect-integration.mjs';
 
@@ -70,13 +70,15 @@ test('static requests return branded 404 without Location even when stale redire
   } finally { await rm(directory, { recursive: true, force: true }); }
 });
 
-test('hosting rules cover retired index.html URLs with 404 status and no 301', async () => {
+test('hosting rules distinguish reviewed permanent moves from genuine removals', async () => {
   const directory = await mkdtemp(join(tmpdir(), 'cncpioneer-host-rules-'));
   try {
     await removalIntegration().hooks['astro:build:done']({ dir: new URL('file:///' + directory.replaceAll('\\', '/') + '/') });
     const netlify = await readFile(join(directory, '_redirects'), 'utf8');
     const apache = await readFile(join(directory, '.htaccess'), 'utf8');
-    assert.ok(!/\b301\b/.test(netlify + apache));
+    assert.match(apache, /DirectorySlash Off/);
+    assert.match(apache, /Options -Indexes -MultiViews/);
+    assert.match(apache, /THE_REQUEST/);
     const apacheRules = apache.split('\n').filter((line) => line.startsWith('RewriteRule '))
       .map((line) => new RegExp(line.split(' ')[1]));
     for (const route of notFoundPagePaths) {
@@ -85,6 +87,40 @@ test('hosting rules cover retired index.html URLs with 404 status and no 301', a
         assert.ok(apacheRules.some((rule) => rule.test(variant.slice(1))), variant);
       }
     }
-    for (const route of retiredPagePaths) assert.ok(isNotFoundPagePath(route));
+    for (const route of retiredPagePaths) assert.equal(isNotFoundPagePath(route), !Object.hasOwn(pageRedirects, route));
+    for (const [route, target] of Object.entries(pageRedirects)) {
+      for (const variant of notFoundPathVariants(route)) assert.ok(netlify.includes(`${variant} ${canonicalPageUrl(target)} 301!\n`), variant);
+      assert.ok(!notFoundPagePaths.has(resolvePagePath(target)));
+    }
   } finally { await rm(directory, { recursive: true, force: true }); }
+});
+
+test('reviewed moves and default document variants resolve in one hop and retain queries', async () => {
+  const directory = await mkdtemp(join(tmpdir(), 'cncpioneer-canonical-test-'));
+  try {
+    await writeFile(join(directory, '404.html'), '<h1>404</h1>');
+    await writeFile(join(directory, 'index.html'), '<h1>Home</h1>');
+    const handler = createStaticRequestHandler({directory});
+    for (const [route, target] of Object.entries(pageRedirects)) {
+      const final = resolvePagePath(target);
+      await mkdir(join(directory, final), {recursive:true});
+      await writeFile(join(directory, final, 'index.html'), '<h1>Current page</h1>');
+      for (const variant of notFoundPathVariants(route)) {
+        const response = await request(handler, variant+'?material=steel%20alloy&qty=10');
+        assert.equal(response.status, 301);
+        assert.equal(response.headers.Location, final+'?material=steel%20alloy&qty=10');
+        assert.equal((await request(handler, response.headers.Location)).status, 200);
+      }
+      assert.equal((await request(handler, final)).status, 200);
+      for (const suffix of ['/', '/index.html']) {
+        const response = await request(handler, final+suffix+'?qty=10');
+        assert.equal(response.status, 301);
+        assert.equal(response.headers.Location, final+'?qty=10');
+      }
+    }
+    assert.equal((await request(handler, '/index.html')).headers.Location, '/');
+    assert.equal((await request(handler, '/blog/page/20')).status, 404);
+    assert.equal((await request(handler, '/blog/ai-cnc-programming')).status, 404);
+    assert.equal((await request(handler, '/custom-cnc-parts/wire-edm-robot-gears-splines')).status, 404);
+  } finally { await rm(directory, {recursive:true, force:true}); }
 });

@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-11-04T08:16:37.555Z",
+  "generatedAt": "2026-11-04T08:51:31.990Z",
   "scope": "Generated dist HTML; no live crawl. Incoming counts use unique source pages and exclude self links. Content means links outside header, footer, breadcrumb and nav; includes cards, CTAs and related links.",
   "summary": {
     "htmlPages": 330,
     "indexablePages": 328,
-    "internalAnchorOccurrences": 33691,
+    "internalAnchorOccurrences": 33697,
     "brokenLinks": 0,
     "brokenFragments": 0,
     "emptyAnchors": 0,
@@ -14,9 +14,9 @@
     "depthDistribution": {
       "0": 1,
       "1": 62,
-      "2": 161,
-      "3": 92,
-      "4": 12
+      "2": 166,
+      "3": 93,
+      "4": 6
     }
   },
   "groups": {
@@ -33,7 +33,7 @@
     "blog": {
       "pages": 98,
       "zeroContentIncoming": 9,
-      "maxDepth": 4
+      "maxDepth": 3
     },
     "cnc-machining-quote": {
       "pages": 1,
@@ -123,54 +123,6 @@
       "contentIncomingPages": 0,
       "outgoingPages": 69,
       "contentOutgoingPages": 9
-    },
-    {
-      "route": "/blog/cnc-machining-for-furniture-industry",
-      "depth": 4,
-      "incomingPages": 2,
-      "contentIncomingPages": 2,
-      "outgoingPages": 60,
-      "contentOutgoingPages": 11
-    },
-    {
-      "route": "/blog/cnc-machining-for-renewable-energy",
-      "depth": 4,
-      "incomingPages": 2,
-      "contentIncomingPages": 2,
-      "outgoingPages": 61,
-      "contentOutgoingPages": 12
-    },
-    {
-      "route": "/blog/cnc-metalworks",
-      "depth": 4,
-      "incomingPages": 2,
-      "contentIncomingPages": 2,
-      "outgoingPages": 61,
-      "contentOutgoingPages": 12
-    },
-    {
-      "route": "/blog/cnc-services-for-startups",
-      "depth": 4,
-      "incomingPages": 2,
-      "contentIncomingPages": 2,
-      "outgoingPages": 58,
-      "contentOutgoingPages": 10
-    },
-    {
-      "route": "/blog/cnc-near-me-vs-online-cnc-machining",
-      "depth": 4,
-      "incomingPages": 3,
-      "contentIncomingPages": 3,
-      "outgoingPages": 59,
-      "contentOutgoingPages": 11
-    },
-    {
-      "route": "/blog/cnc-vs-sheet-metal",
-      "depth": 4,
-      "incomingPages": 3,
-      "contentIncomingPages": 3,
-      "outgoingPages": 59,
-      "contentOutgoingPages": 10
     },
     {
       "route": "/author/ryan-wang/page/2",
@@ -363,6 +315,14 @@
       "contentIncomingPages": 3,
       "outgoingPages": 58,
       "contentOutgoingPages": 9
+    },
+    {
+      "route": "/blog/cnc-metalworks",
+      "depth": 3,
+      "incomingPages": 3,
+      "contentIncomingPages": 3,
+      "outgoingPages": 61,
+      "contentOutgoingPages": 12
     },
     {
       "route": "/blog/copper-t2-cnc-machining",
@@ -977,8 +937,8 @@
       "depth": 2,
       "incomingPages": 2,
       "contentIncomingPages": 0,
-      "outgoingPages": 56,
-      "contentOutgoingPages": 8
+      "outgoingPages": 57,
+      "contentOutgoingPages": 9
     },
     {
       "route": "/materials/6061-t6-aluminum-cnc-machining",
@@ -1165,12 +1125,36 @@
       "contentOutgoingPages": 9
     },
     {
+      "route": "/blog/cnc-machining-for-furniture-industry",
+      "depth": 2,
+      "incomingPages": 3,
+      "contentIncomingPages": 3,
+      "outgoingPages": 60,
+      "contentOutgoingPages": 11
+    },
+    {
+      "route": "/blog/cnc-machining-for-renewable-energy",
+      "depth": 2,
+      "incomingPages": 3,
+      "contentIncomingPages": 3,
+      "outgoingPages": 61,
+      "contentOutgoingPages": 12
+    },
+    {
       "route": "/blog/cnc-precision-parts",
       "depth": 2,
       "incomingPages": 3,
       "contentIncomingPages": 3,
       "outgoingPages": 62,
       "contentOutgoingPages": 13
+    },
+    {
+      "route": "/blog/cnc-services-for-startups",
+      "depth": 2,
+      "incomingPages": 3,
+      "contentIncomingPages": 3,
+      "outgoingPages": 58,
+      "contentOutgoingPages": 10
     },
     {
       "route": "/blog/railroads-cnc-machining-companies",
@@ -1243,6 +1227,22 @@
       "contentIncomingPages": 4,
       "outgoingPages": 60,
       "contentOutgoingPages": 11
+    },
+    {
+      "route": "/blog/cnc-near-me-vs-online-cnc-machining",
+      "depth": 2,
+      "incomingPages": 4,
+      "contentIncomingPages": 4,
+      "outgoingPages": 59,
+      "contentOutgoingPages": 11
+    },
+    {
+      "route": "/blog/cnc-vs-sheet-metal",
+      "depth": 2,
+      "incomingPages": 4,
+      "contentIncomingPages": 4,
+      "outgoingPages": 59,
+      "contentOutgoingPages": 10
     },
     {
       "route": "/blog/what-is-a-cnc-lathe",
@@ -2209,16 +2209,16 @@
       "depth": 1,
       "incomingPages": 327,
       "contentIncomingPages": 0,
-      "outgoingPages": 55,
-      "contentOutgoingPages": 14
+      "outgoingPages": 57,
+      "contentOutgoingPages": 16
     },
     {
       "route": "/blog",
       "depth": 1,
       "incomingPages": 327,
       "contentIncomingPages": 1,
-      "outgoingPages": 66,
-      "contentOutgoingPages": 11
+      "outgoingPages": 69,
+      "contentOutgoingPages": 14
     },
     {
       "route": "/materials/metal-cnc-machining",
