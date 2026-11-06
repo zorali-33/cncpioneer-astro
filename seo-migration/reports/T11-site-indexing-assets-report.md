@@ -1,7 +1,7 @@
 # T11 Site Indexing Assets
 
 Status: complete
-Date: 2026-11-06 02:46:25
+Date: 2026-11-06 02:59:33
 
 ## Scope
 
@@ -9,8 +9,8 @@ Generated production indexing assets from the built `dist` directory.
 
 ## Summary
 
-- HTML index pages scanned: 332
-- URLs included in sitemap: 331
+- HTML index pages scanned: 333
+- URLs included in sitemap: 332
 - URLs excluded from sitemap: 1
 - Robots file: `dist/robots.txt`
 - Sitemap file: `dist/sitemap.xml`

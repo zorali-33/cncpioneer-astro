@@ -22,7 +22,7 @@ const siteUrl = "https://www.cncpioneer.com";
 const blogAuthors = {
   zora: {
     name: 'Zora',
-    bio: 'Author of this guide to automation equipment, machine components and custom automation projects.',
+    bio: 'Zora writes about automation equipment, machine components and custom automation projects.',
   },
   "ryan-wang": {
     name: "Ryan Wang",
@@ -65,7 +65,7 @@ export function getBlogDetailEntries(pages) {
       const articleHtml = prepareArticleHtml(nativePost.articleHtml, article.slug, true);
       const canonicalPath = `/blog/${article.slug}`;
       return {...article, detail: {
-        slug: article.slug, authorSlug: article.authorSlug, contributors: [], title: `${nativePost.title} | CNCPioneer`,
+        slug: article.slug, authorSlug: article.authorSlug, contributors: [], title: `${nativePost.seoTitle || nativePost.title} | CNCPioneer`,
         articleTitle: nativePost.title, description: nativePost.description, ogDescription: nativePost.description,
         canonical: siteUrl + canonicalPath, canonicalPath,
         publishedTime: nativePost.published, modifiedTime: nativePost.modifiedTime,

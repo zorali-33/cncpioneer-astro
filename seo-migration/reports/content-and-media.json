@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-11-06T02:46:32.074Z",
-  "pages": 333,
-  "imageFiles": 3683,
-  "imgElements": 4477,
+  "generatedAt": "2026-11-06T02:59:40.075Z",
+  "pages": 334,
+  "imageFiles": 3686,
+  "imgElements": 4486,
   "srcsetCandidates": 676,
   "benefitPages": 142,
   "largestBytes": 99772,
   "strictMaxBytes": 100000,
-  "totalBytes": 85729954,
+  "totalBytes": 85989916,
   "fontFiles": [
     "/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.svg",
     "/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.svg",

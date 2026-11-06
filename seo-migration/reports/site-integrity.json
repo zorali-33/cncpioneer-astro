@@ -1,18 +1,23 @@
 {
-  "generatedAt": "2026-11-06T02:46:28.192Z",
+  "generatedAt": "2026-11-06T02:59:35.752Z",
   "build": "D:\\cncpioneer.com-astro\\dist",
-  "pages": 333,
-  "indexable": 331,
-  "sitemapUrls": 331,
-  "references": 44631,
-  "fragments": 951,
-  "searchRecords": 302,
+  "pages": 334,
+  "indexable": 332,
+  "sitemapUrls": 332,
+  "references": 44762,
+  "fragments": 959,
+  "searchRecords": 303,
   "errorCounts": {},
   "warningCounts": {
-    "title_length_review": 3
+    "title_length_review": 4
   },
   "errors": [],
   "warnings": [
+    {
+      "page": "/blog/spm-machined-vs-bought-parts",
+      "code": "title_length_review",
+      "length": 79
+    },
     {
       "page": "/blog/what-is-automation-equipment",
       "code": "title_length_review",
@@ -827,6 +832,14 @@
       "description": "Compare slot milling methods and cutters. Review tool access, chip evacuation, corner geometry, and inspection when planning accurate slots in CNC parts.",
       "h1": "What Is Slot Milling? Techniques, Tools, Tips, and Applications",
       "canonical": "https://www.cncpioneer.com/blog/slot-milling",
+      "noindex": false
+    },
+    {
+      "route": "/blog/spm-machined-vs-bought-parts",
+      "title": "SPM Parts: What Is Machined vs Bought in a Special Purpose Machine | CNCPioneer",
+      "description": "Which parts of a special purpose machine are bought from catalogues, which are machined to drawing, and how machine builders decide between the two.",
+      "h1": "Special Purpose Machines (SPM): What Parts Are Machined vs Bought",
+      "canonical": "https://www.cncpioneer.com/blog/spm-machined-vs-bought-parts",
       "noindex": false
     },
     {

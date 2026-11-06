@@ -26,6 +26,20 @@ test('Native archives preserve slice order, independent author filtering and can
   const ryan=archivePage(posts,{authorSlug:'ryan-wang',authorName:'Ryan Wang'});assert.deepEqual(ryan.posts,posts.slice(22));assert.equal(ryan.next,'');
   for(const page of [0,-1,1.5,5])assert.throws(()=>archivePage(posts,{page}));
 });
+
+test('SPM guide preserves its distinct metadata and one commercial contextual anchor',()=>{
+  const entry=getBlogDetailEntries({}).find(post=>post.slug==='spm-machined-vs-bought-parts');
+  assert.ok(getBlogArticles({}).some(post=>post.slug===entry.slug));
+  assert.match(entry.detail.title,/^SPM Parts: What Is Machined vs Bought/);
+  assert.match(entry.detail.articleTitle,/^Special Purpose Machines \(SPM\)/);
+  assert.equal(entry.detail.faqs.length,6);
+  assert.equal((entry.detail.articleHtml.match(/<table\b/g)||[]).length,2);
+  assert.equal((entry.detail.articleHtml.match(/<img\b/g)||[]).length,3);
+  assert.equal((entry.detail.articleHtml.match(/href="\/industries\/automation-equipment"/g)||[]).length,1);
+  assert.match(entry.detail.articleHtml,/>machined to drawing<\/a>/);
+  assert.match(entry.detail.articleHtml,/href="\/blog\/what-is-automation-equipment"/);
+  assert.doesNotMatch(entry.detail.articleHtml,/Publishing notes|Primary keyword|Keyword split/);
+});
 test('All reviewed titles retain the brand suffix without discarding existing descriptions',()=>{
   assert.equal(Object.keys(titleBrandOverrides).length,25);
   for(const [route,title]of Object.entries(titleBrandOverrides)){assert.ok(title.endsWith(' | CNCPioneer'),route);assert.equal(getReviewedSeo(route).title,title);}

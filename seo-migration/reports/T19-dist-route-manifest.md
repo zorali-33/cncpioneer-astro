@@ -1,7 +1,7 @@
 # T19 Dist Route Manifest
 
 Status: generated
-Date: 2026-11-06 02:46:39
+Date: 2026-11-06 02:59:46
 
 ## Scope
 
@@ -9,10 +9,10 @@ Generated a page-level manifest from the current `dist` HTML output.
 
 ## Summary
 
-- HTML routes listed: 332
-- Indexable routes: 331
+- HTML routes listed: 333
+- Indexable routes: 332
 - Noindex routes: 1
-- Routes marked in sitemap: 331
+- Routes marked in sitemap: 332
 
 ## Output
 

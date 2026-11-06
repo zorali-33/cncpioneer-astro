@@ -1,10 +1,15 @@
 // Reviewed after the 12-group consolidation on 2026-10-16.
 // Each active article has three distinct canonical related posts.
 export const curatedRelatedPosts = {
+  'spm-machined-vs-bought-parts': [
+    ['what-is-automation-equipment', 'Equipment definitions, types and subsystems.'],
+    ['shaft-machining', 'Custom shafts and their interface requirements.'],
+    ['cnc-machining-quality-testing', 'Inspection requirements for parts made to drawing.'],
+  ],
   'what-is-automation-equipment': [
     ['cnc-machining-robot-parts', 'Related mechanical components for robot cells.'],
     ['cnc-machining-quality-testing', 'Inspection of the interfaces that determine machine assembly.'],
-    ['shaft-machining', 'Machined shafts used in motion and drive assemblies.'],
+    ['spm-machined-vs-bought-parts', 'Which SPM components are machined and which are bought.'],
   ],
   "5-axis-cnc-machining-manufacturers-in-china": [
     [

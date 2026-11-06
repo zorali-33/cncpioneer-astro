@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-06T02:46:29.055Z",
+  "generatedAt": "2026-11-06T02:59:36.595Z",
   "permanentRedirects": 38,
   "removedRoutes": 61,
   "notFoundVariants": 183,
@@ -17,12 +17,12 @@
     {
       "route": "/author/zora",
       "pages": 1,
-      "items": 1
+      "items": 2
     },
     {
       "route": "/blog",
       "pages": 10,
-      "items": 89
+      "items": 90
     },
     {
       "route": "/custom-cnc-parts",
