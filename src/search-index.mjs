@@ -19,6 +19,7 @@ const trimDescription = (value) => {
 
 export function buildSearchIndex(articles = []) {
   const pages = [
+    { title: 'Automation Equipment Parts', href: '/industries/automation-equipment', type: 'industries', description: 'Custom plates, brackets, shafts, fixtures and gripper fingers for special-purpose machine builders.', keywords: 'automation equipment custom machine BOM fixtures tooling gripper manifold non-standard special purpose' },
     { title: "CNC Turning and Milling", href: "/services/cnc-turning-and-milling", type: "services", description: "Combined turning and milling for custom precision components, prototypes and production.", keywords: "mill turn lathe 5 axis machining" },
     { title: "Swiss Machining", href: "/services/swiss-machining", type: "services", description: "Precision Swiss turning for small, complex parts, pins, shafts and connectors.", keywords: "swiss screw turning sliding headstock" },
     { title: "3-Axis CNC Machining Services", href: "/services/3-axis-cnc-machining", type: "services", description: "Custom milling for metal and engineering plastic plates, brackets, frames and pocketed parts.", keywords: "3 axis three axis CNC milling machining plates brackets pockets" },

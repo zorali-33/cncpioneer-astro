@@ -4,6 +4,7 @@ import QuoteCta from '../components/native/QuoteCta.astro';
 
 const seo={title:'CNC Machining Industries Served | CNCPioneer',description:'Explore CNC machining for medical, aerospace, electronics, semiconductor, defense, oil and gas, railway, and automotive components.',canonical:'/industries',type:'website',image:'/assets/images/industries-banner.webp'};
 const industries=[
+  {name:'Automation Equipment',slug:'automation-equipment',image:'automation-parts-hero',text:'Custom plates, brackets, shafts and fixtures for special-purpose machine builders.'},
   {name:'Medical',slug:'medical',image:'medical-industry',text:'Machined components for medical instruments, devices and equipment assemblies.'},
   {name:'Aerospace',slug:'aerospace',image:'aerospace-industry',text:'Custom pins, housings, shafts and fittings for aerospace component projects.'},
   {name:'Consumer Electronics',slug:'consumer-electronics',image:'consumer-electronics-industry',text:'Small turned contacts, housings and mechanical parts for electronic products.'},
@@ -23,7 +24,7 @@ const resources=[
   <div id="content" class="industry-hub" data-native-industry-hub>
     <section class="industry-hero" aria-labelledby="industries-title"><div class="hub-container">
       <nav aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">»</span><span aria-current="page">Industries</span></nav>
-      <h1 id="industries-title">CNC Machining for Your Industry</h1><p>Precision components for eight core industries. Explore applications, materials, and machining services for your next project.</p><a class="hub-button" href="/cnc-machining-quote">Get a Quote</a>
+      <h1 id="industries-title">CNC Machining for Your Industry</h1><p>Precision components for industry-specific applications. Explore materials and machining services for your next project.</p><a class="hub-button" href="/cnc-machining-quote">Get a Quote</a>
     </div></section>
     <section class="hub-container hub-section" aria-labelledby="industries-heading"><h2 id="industries-heading">Industries We Serve</h2><p class="hub-intro">Find machining support for your application, from engineering prototypes to repeat production.</p>
       <div class="industry-grid">{industries.map(item=><a class="industry-card" href={`/industries/${item.slug}`} aria-label={`Explore ${item.name} machining`}><img src={`/assets/images/${item.image}.webp`} alt={item.name} width="600" height="400" loading="lazy" decoding="async"/><div><h3>{item.name}</h3><p>{item.text}</p></div></a>)}</div>

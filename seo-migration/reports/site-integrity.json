@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-11-04T09:37:57.444Z",
+  "generatedAt": "2026-11-06T01:23:29.856Z",
   "build": "D:\\cncpioneer.com-astro\\dist",
-  "pages": 330,
-  "indexable": 328,
-  "sitemapUrls": 328,
-  "references": 43946,
-  "fragments": 941,
-  "searchRecords": 300,
+  "pages": 331,
+  "indexable": 329,
+  "sitemapUrls": 329,
+  "references": 44402,
+  "fragments": 943,
+  "searchRecords": 301,
   "errorCounts": {},
   "warningCounts": {
     "title_length_review": 2
@@ -2134,6 +2134,14 @@
       "description": "Aerospace Swiss machining for small pins, contacts, fittings, and threaded hardware, with drawing-led material selection and inspection planning.",
       "h1": "Aerospace Swiss Machining",
       "canonical": "https://www.cncpioneer.com/industries/aerospace-swiss-machining",
+      "noindex": false
+    },
+    {
+      "route": "/industries/automation-equipment",
+      "title": "CNC Machined Parts for Automation Equipment | CNCPioneer",
+      "description": "Custom plates, brackets, shafts, fixtures and gripper fingers for special-purpose automation equipment. Send your BOM and drawings for a machining review.",
+      "h1": "CNC Machined Parts for Automation Equipment",
+      "canonical": "https://www.cncpioneer.com/industries/automation-equipment",
       "noindex": false
     },
     {
