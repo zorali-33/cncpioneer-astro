@@ -1,6 +1,5 @@
 // Retired industry landing pages. Keep this map after deleting their content.
 export const industryRedirects = {
-  '/industries/automation-equipment': '/industries/automation-equipment-parts',
   '/industries/railroad-machining-services': '/industries/railway',
   '/industries/defense-precision-machining': '/industries/defense',
   '/industries/robotics-cnc-machining': '/industries/robotics',

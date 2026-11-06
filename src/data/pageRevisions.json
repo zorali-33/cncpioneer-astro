@@ -3,7 +3,7 @@
     {
       "date": "2026-11-06",
       "reason": "Added an automation equipment industry page with BOM review, representative application images, drawing-based capabilities and FAQ; linked it from industry navigation and the industry directory.",
-      "routes": ["/industries/automation-equipment-parts", "/industries"]
+      "routes": ["/industries/automation-equipment", "/industries"]
     },
     {
       "date": "2026-11-04",
