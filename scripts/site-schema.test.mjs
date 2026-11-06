@@ -11,6 +11,17 @@ const document = (source) => JSON.parse(source.match(/<script type="application\
 const graph = (source) => document(source)['@graph'];
 const node = (source, type) => graph(source).find((n) => [].concat(n['@type']).includes(type));
 
+test('blog category archives describe a collection of article links rather than a service or article',()=>{
+  const result=transform(html('<h1>Materials</h1><nav><a href="/blog/category/design-quality">Design & Quality</a></nav><h2><a href="/blog/aluminum-cnc-machining">Aluminum CNC Machining</a></h2>'),'/blog/category/materials');
+  const collection=node(result,'CollectionPage');
+  assert.ok(collection);
+  assert.equal(node(result,'Service'),undefined);
+  assert.equal(node(result,'BlogPosting'),undefined);
+  const list=node(result,'ItemList');
+  assert.equal(list.itemListElement.length,1);
+  assert.equal(list.itemListElement[0].url,'https://www.cncpioneer.com/blog/aluminum-cnc-machining');
+});
+
 test('homepage defines site and organization identity; service pages reference them without offers', () => {
   const home = transform(html('<h1>Precision CNC Machining</h1>'), '/');
   assert.equal(node(home, 'Organization')['@id'], ORGANIZATION_ID);

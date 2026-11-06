@@ -5,6 +5,9 @@ import {getReviewedSeo} from '../src/data/pageSeoOverrides.mjs';
 import {titleBrandOverrides} from '../src/data/titleBrandOverrides.mjs';
 import {getBlogArticles} from '../src/blog-archive.mjs';
 import {getBlogDetailEntries,getBlogAuthor} from '../src/blog-detail-native.mjs';
+import fs from 'node:fs';
+import {blogCategories,blogCategoryFor,blogCategoryCounts,validateBlogCategories} from '../src/data/blogCategories.mjs';
+import {breadcrumbSchema} from '../src/data/pageSeoTemplate.mjs';
 
 const posts=Array.from({length:31},(_,index)=>({slug:`post-${index}`,authorSlug:index<22?'david-li':'ryan-wang'}));
 test('native editorial articles participate in discovery with complete author and detail metadata',()=>{
@@ -44,4 +47,38 @@ test('All reviewed titles retain the brand suffix without discarding existing de
   assert.equal(Object.keys(titleBrandOverrides).length,25);
   for(const [route,title]of Object.entries(titleBrandOverrides)){assert.ok(title.endsWith(' | CNCPioneer'),route);assert.equal(getReviewedSeo(route).title,title);}
   assert.match(getReviewedSeo('/author/ryan-wang').description,/Swiss/);
+});
+
+test('six blog categories cover every live article once and retain the reviewed counts',()=>{
+  const sources={};
+  for(const slug of fs.readdirSync('src/mirrored-pages/blog')){
+    const file=`src/mirrored-pages/blog/${slug}/index.html`;
+    if(fs.existsSync(file))sources[file]=fs.readFileSync(file,'utf8');
+  }
+  const articles=getBlogArticles(sources);
+  validateBlogCategories(articles);
+  assert.equal(articles.length,90);
+  assert.deepEqual(blogCategoryCounts(articles).map(category=>category.count),[20,19,12,6,23,10]);
+  const seen=new Set();
+  for(const category of blogCategories){
+    const first=archivePage(articles,{categoryId:category.id});
+    const actual=[];
+    for(let page=1;page<=first.lastPage;page++){
+      const model=archivePage(articles,{categoryId:category.id,page});
+      assert.equal(model.route,category.href+(page===1?'':`/page/${page}`));
+      assert.ok(model.posts.every(post=>blogCategoryFor(post.slug).id===category.id));
+      assert.ok(model.title.endsWith(' | CNCPioneer'));
+      for(const post of model.posts){assert.ok(!seen.has(post.slug),post.slug);seen.add(post.slug);actual.push(post.slug);}
+    }
+    assert.equal(actual.length,first.total);
+  }
+  assert.equal(seen.size,articles.length);
+  assert.throws(()=>validateBlogCategories([...articles,{slug:'unclassified-new-post'}]));
+  assert.throws(()=>archivePage(articles,{categoryId:'missing'}));
+});
+
+test('category pagination breadcrumbs retain the category parent',()=>{
+  const crumbs=breadcrumbSchema('/blog/category/materials/page/2','Materials — Page 2').itemListElement;
+  assert.deepEqual(crumbs.map(item=>item.name),['Home','Blog','Materials','Page 2']);
+  assert.equal(crumbs[2].item,'https://www.cncpioneer.com/blog/category/materials');
 });

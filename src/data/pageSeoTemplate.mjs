@@ -4,6 +4,7 @@ import { canonicalPageUrl, normalizePagePath, normalizeInternalHref, isRetiredPa
 import { getPageModifiedTime } from './pageDates.mjs';
 import { jsonLd } from './articleSchema.mjs';
 import {getReviewedSeo} from './pageSeoOverrides.mjs';
+import {blogCategoryById} from './blogCategories.mjs';
 
 const sectionNames = { blog: 'Blog', 'custom-cnc-parts': 'Custom CNC Parts', materials: 'Materials', industries: 'Industries', services: 'Services', resources: 'Resources' };
 const authorNames = { 'ryan-wang': 'Ryan Wang', 'david-li': 'David Li' };
@@ -20,6 +21,10 @@ export function breadcrumbSchema(route, title, currentLabel = '', visibleParents
     crumbs.splice(0, crumbs.length, ...visibleParents);
     if (crumbs[0].item !== canonicalPageUrl('/')) crumbs.unshift({name:'Home',item:canonicalPageUrl('/')});
     crumbs.push({name:currentLabel || title,item:canonicalPageUrl(route)});
+  } else if (parts[0] === 'blog' && parts[1] === 'category' && blogCategoryById(parts[2])) {
+    const category=blogCategoryById(parts[2]);
+    crumbs.push({name:'Blog',item:canonicalPageUrl('/blog')},{name:category.name,item:canonicalPageUrl(category.href)});
+    if(pagination)crumbs.push({name:`Page ${pagination[1]}`,item:canonicalPageUrl(route)});
   } else if (parts[0] === 'author' && authorNames[parts[1]]) {
     crumbs.push({ name: authorNames[parts[1]], item: canonicalPageUrl(`/author/${parts[1]}`) });
     if (pagination) crumbs.push({ name: `Page ${pagination[1]}`, item: canonicalPageUrl(route) });

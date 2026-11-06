@@ -1,0 +1,15 @@
+---
+import ArchivePage from '../../../../components/native/ArchivePage.astro';
+import {getBlogArticles,postsPerPage} from '../../../../blog-archive.mjs';
+import {blogCategories,blogCategoryFor,validateBlogCategories} from '../../../../data/blogCategories.mjs';
+export function getStaticPaths(){
+  const sources=import.meta.glob('../../../../mirrored-pages/blog/*/index.html',{query:'?raw',import:'default',eager:true});
+  const articles=getBlogArticles(sources);
+  validateBlogCategories(articles);
+  return blogCategories.flatMap(category=>{
+    const total=articles.filter(post=>blogCategoryFor(post.slug)?.id===category.id).length;
+    return Array.from({length:Math.ceil(total/postsPerPage)},(_,index)=>({params:{category:category.id,pagination:index?`page/${index+1}`:undefined},props:{articles,page:index+1,categoryId:category.id}}));
+  });
+}
+---
+<ArchivePage {...Astro.props}/>

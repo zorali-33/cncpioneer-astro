@@ -10,6 +10,8 @@ import SiteSearch from "../components/native/SiteSearch.astro";
 import QuoteCta from "../components/native/QuoteCta.astro";
 import '../styles/blog-native.css';
 import { getBlogArticles, postsPerPage } from '../blog-archive.mjs';
+import BlogExplore from '../components/native/BlogExplore.astro';
+import BlogCategoryLabel from '../components/native/BlogCategoryLabel.astro';
 
 const blogPages = import.meta.glob('../mirrored-pages/blog/*/index.html', { query: '?raw', import: 'default', eager: true });
 const articles = getBlogArticles(blogPages);
@@ -225,8 +227,9 @@ const footerColumns = [
         </div>
       </section>
 
+      <BlogExplore articles={articles} search topics />
       <section class="blog-grid-section" aria-labelledby="blog-posts-title">
-        <h2 id="blog-posts-title" class="screen-reader-only">Blog posts</h2>
+        <h2 id="blog-posts-title" class="blog-latest-heading">Latest Articles</h2>
         <div class="blog-grid" role="list">
           {posts.map((post) => (
             <article class="blog-post-card" role="listitem">
@@ -244,6 +247,7 @@ const footerColumns = [
                 </span>
               </a>
               <div class="blog-post-text">
+                <BlogCategoryLabel slug={post.href.split('/').pop()}/>
                 <h3 class="blog-post-title"><a href={post.href}>{post.title}</a></h3>
                 <a class="blog-read-more" href={post.href} aria-label={`Read more about ${post.title}`} tabindex="-1">Read More</a>
               </div>

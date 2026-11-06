@@ -1,18 +1,24 @@
 {
-  "generatedAt": "2026-11-06T03:09:23.548Z",
+  "generatedAt": "2026-11-06T06:41:27.961Z",
   "build": "D:\\cncpioneer.com-astro\\dist",
-  "pages": 334,
-  "indexable": 332,
-  "sitemapUrls": 332,
-  "references": 44762,
+  "pages": 348,
+  "indexable": 346,
+  "sitemapUrls": 346,
+  "references": 47153,
   "fragments": 959,
-  "searchRecords": 303,
+  "searchRecords": 309,
   "errorCounts": {},
   "warningCounts": {
+    "description_length_review": 1,
     "title_length_review": 4
   },
   "errors": [],
   "warnings": [
+    {
+      "page": "/blog/category/machining-processes",
+      "code": "description_length_review",
+      "length": 119
+    },
     {
       "page": "/blog/spm-machined-vs-bought-parts",
       "code": "title_length_review",
@@ -280,6 +286,118 @@
       "description": "Compare casting and CNC machining for metal parts by geometry, tooling, material, accuracy, order volume and total production cost.",
       "h1": "Casting vs CNC Machining in 2026: Which Process Wins for Your Metal Parts?",
       "canonical": "https://www.cncpioneer.com/blog/casting-vs-cnc-machining",
+      "noindex": false
+    },
+    {
+      "route": "/blog/category/design-quality",
+      "title": "CNC Part Design & Quality Guides | CNCPioneer",
+      "description": "Plan part geometry, tolerances, workholding and inspection, from locating features and shafts to drawing-based quality checks.",
+      "h1": "Design & Quality",
+      "canonical": "https://www.cncpioneer.com/blog/category/design-quality",
+      "noindex": false
+    },
+    {
+      "route": "/blog/category/design-quality/page/2",
+      "title": "CNC Part Design & Quality Guides – Page 2 | CNCPioneer",
+      "description": "Plan part geometry, tolerances, workholding and inspection, from locating features and shafts to drawing-based quality checks. Browse page 2 of 2.",
+      "h1": "Design & Quality — Page 2",
+      "canonical": "https://www.cncpioneer.com/blog/category/design-quality/page/2",
+      "noindex": false
+    },
+    {
+      "route": "/blog/category/industry-applications",
+      "title": "CNC Machining Industry Applications | CNCPioneer",
+      "description": "Explore component requirements for automation, robotics, aerospace, medical, semiconductor and other industrial applications.",
+      "h1": "Industry Applications",
+      "canonical": "https://www.cncpioneer.com/blog/category/industry-applications",
+      "noindex": false
+    },
+    {
+      "route": "/blog/category/industry-applications/page/2",
+      "title": "CNC Machining Industry Applications – Page 2 | CNCPioneer",
+      "description": "Explore component requirements for automation, robotics, aerospace, medical, semiconductor and other industrial applications. Browse page 2 of 3.",
+      "h1": "Industry Applications — Page 2",
+      "canonical": "https://www.cncpioneer.com/blog/category/industry-applications/page/2",
+      "noindex": false
+    },
+    {
+      "route": "/blog/category/industry-applications/page/3",
+      "title": "CNC Machining Industry Applications – Page 3 | CNCPioneer",
+      "description": "Explore component requirements for automation, robotics, aerospace, medical, semiconductor and other industrial applications. Browse page 3 of 3.",
+      "h1": "Industry Applications — Page 3",
+      "canonical": "https://www.cncpioneer.com/blog/category/industry-applications/page/3",
+      "noindex": false
+    },
+    {
+      "route": "/blog/category/machining-processes",
+      "title": "CNC Machining Processes & Comparisons | CNCPioneer",
+      "description": "Explore CNC turning, milling, Swiss machining, holemaking and comparisons that help you choose a manufacturing process.",
+      "h1": "Machining Processes",
+      "canonical": "https://www.cncpioneer.com/blog/category/machining-processes",
+      "noindex": false
+    },
+    {
+      "route": "/blog/category/machining-processes/page/2",
+      "title": "CNC Machining Processes & Comparisons – Page 2 | CNCPioneer",
+      "description": "Explore CNC turning, milling, Swiss machining, holemaking and comparisons that help you choose a manufacturing process. Browse page 2 of 3.",
+      "h1": "Machining Processes — Page 2",
+      "canonical": "https://www.cncpioneer.com/blog/category/machining-processes/page/2",
+      "noindex": false
+    },
+    {
+      "route": "/blog/category/machining-processes/page/3",
+      "title": "CNC Machining Processes & Comparisons – Page 3 | CNCPioneer",
+      "description": "Explore CNC turning, milling, Swiss machining, holemaking and comparisons that help you choose a manufacturing process. Browse page 3 of 3.",
+      "h1": "Machining Processes — Page 3",
+      "canonical": "https://www.cncpioneer.com/blog/category/machining-processes/page/3",
+      "noindex": false
+    },
+    {
+      "route": "/blog/category/materials",
+      "title": "CNC Machining Materials Guides | CNCPioneer",
+      "description": "Compare metals and engineering plastics by machinability, functional requirements and the material grade specified on your drawing.",
+      "h1": "Materials",
+      "canonical": "https://www.cncpioneer.com/blog/category/materials",
+      "noindex": false
+    },
+    {
+      "route": "/blog/category/materials/page/2",
+      "title": "CNC Machining Materials Guides – Page 2 | CNCPioneer",
+      "description": "Compare metals and engineering plastics by machinability, functional requirements and the material grade specified on your drawing. Browse page 2 of 3.",
+      "h1": "Materials — Page 2",
+      "canonical": "https://www.cncpioneer.com/blog/category/materials/page/2",
+      "noindex": false
+    },
+    {
+      "route": "/blog/category/materials/page/3",
+      "title": "CNC Machining Materials Guides – Page 3 | CNCPioneer",
+      "description": "Compare metals and engineering plastics by machinability, functional requirements and the material grade specified on your drawing. Browse page 3 of 3.",
+      "h1": "Materials — Page 3",
+      "canonical": "https://www.cncpioneer.com/blog/category/materials/page/3",
+      "noindex": false
+    },
+    {
+      "route": "/blog/category/sourcing-production",
+      "title": "CNC Sourcing & Production Guides | CNCPioneer",
+      "description": "Prepare better RFQs, compare suppliers and plan prototypes, low-volume orders, machining costs and production requirements.",
+      "h1": "Sourcing & Production",
+      "canonical": "https://www.cncpioneer.com/blog/category/sourcing-production",
+      "noindex": false
+    },
+    {
+      "route": "/blog/category/sourcing-production/page/2",
+      "title": "CNC Sourcing & Production Guides – Page 2 | CNCPioneer",
+      "description": "Prepare better RFQs, compare suppliers and plan prototypes, low-volume orders, machining costs and production requirements. Browse page 2 of 2.",
+      "h1": "Sourcing & Production — Page 2",
+      "canonical": "https://www.cncpioneer.com/blog/category/sourcing-production/page/2",
+      "noindex": false
+    },
+    {
+      "route": "/blog/category/surface-finishing",
+      "title": "Surface Finishing & Roughness Guides | CNCPioneer",
+      "description": "Understand surface treatments, roughness values, drawing symbols and measurement before specifying a finish for your part.",
+      "h1": "Surface Finishing",
+      "canonical": "https://www.cncpioneer.com/blog/category/surface-finishing",
       "noindex": false
     },
     {

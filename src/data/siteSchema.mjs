@@ -87,7 +87,7 @@ function normalizeNode(value, route, key = '') {
 }
 
 function collectionItems(nodes, route) {
-  const blogList = route === '/blog' || /^\/blog\/page\/\d+$/.test(route) || /^\/author\/[^/]+\/page\/\d+$/.test(route);
+  const blogList = route === '/blog' || /^\/blog\/page\/\d+$/.test(route) || /^\/blog\/category\/[^/]+(?:\/page\/\d+)?$/.test(route) || /^\/author\/[^/]+\/page\/\d+$/.test(route);
   const prefix = blogList ? '/blog/' : route + '/';
   const items = new Map();
   for (const node of nodes) {
@@ -140,7 +140,7 @@ export function applySiteSchema(html, pathname) {
   const authorPage = /^\/author\/[^/]+$/.test(route);
   const authorArchive = /^\/author\/[^/]+\/page\/\d+$/.test(route);
   const collection = Boolean(catalog) || ['/materials', '/industries', '/services', '/resources', '/blog'].includes(route)
-    || /^\/blog\/page\/\d+$/.test(route) || authorArchive;
+    || /^\/blog\/page\/\d+$/.test(route) || /^\/blog\/category\/[^/]+(?:\/page\/\d+)?$/.test(route) || authorArchive;
   const service = /^\/(?:custom-cnc-parts|materials|industries|services)\/[^/]+$/.test(route);
   const name = cleanText(h1);
   const pageType = route === '/about-us' ? 'AboutPage' : route === '/cnc-machining-quote' ? 'ContactPage'

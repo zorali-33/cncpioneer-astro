@@ -1,0 +1,6 @@
+---
+import {blogCategoryFor} from '../../data/blogCategories.mjs';
+const category=blogCategoryFor(Astro.props.slug);
+---
+{category&&<a class="blog-category-label parameter-label" href={category.href}>{category.name}</a>}
+<style>.blog-category-label{display:inline-block;margin:16px 0 0;color:var(--color-brand);font:500 var(--type-label)/1.5 var(--font-mono);text-decoration:none}.blog-category-label:hover{text-decoration:underline;text-underline-offset:4px}.blog-category-label:focus-visible{outline:2px solid var(--color-brand);outline-offset:3px}</style>

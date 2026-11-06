@@ -35,7 +35,7 @@ function walk(dir){
     if(entry.isDirectory())walk(file);
     else if(entry.name==='index.html'){
       const route='/'+path.relative(build,path.dirname(file)).replaceAll('\\','/');
-      const match=route.match(/^(\/blog|\/custom-cnc-parts|\/author\/[^/]+)(?:\/page\/(\d+))?$/);
+      const match=route.match(/^(\/blog(?:\/category\/[^/]+)?|\/custom-cnc-parts|\/author\/[^/]+)(?:\/page\/(\d+))?$/);
       if(!match)continue;
       const nodes=[];
       walkSync(parse(fs.readFileSync(file,'utf8')),n=>{if(n.type===ELEMENT_NODE)nodes.push(n);});

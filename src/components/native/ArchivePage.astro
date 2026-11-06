@@ -5,10 +5,12 @@ import {archivePage} from '../../lib/archivePage.mjs';
 import {getBlogAuthor} from '../../blog-detail-native.mjs';
 import {decodeHTML} from 'entities';
 import {canonicalPageUrl} from '../../data/siteUrls.mjs';
+import BlogExplore from './BlogExplore.astro';
+import BlogCategoryLabel from './BlogCategoryLabel.astro';
 
-const {articles,page=1,authorSlug=''}=Astro.props;
+const {articles,page=1,authorSlug='',categoryId=''}=Astro.props;
 const author=authorSlug?getBlogAuthor(authorSlug):null;
-const model=archivePage(articles,{page,authorSlug,authorName:author?.name});
+const model=archivePage(articles,{page,authorSlug,authorName:author?.name,categoryId});
 const seo={title:model.title,description:model.description,canonical:model.route,type:'website',image:author?.image||'/wp-content/uploads/2025/12/blog-banner-1.jpg'};
 const person=author&&{'@context':'https://schema.org','@type':'Person','@id':canonicalPageUrl(`/author/${authorSlug}`)+'#person',name:author.name,url:canonicalPageUrl(`/author/${authorSlug}`),image:author.image,description:author.bio};
 const date=value=>new Intl.DateTimeFormat('en-US',{year:'numeric',month:'long',day:'numeric',timeZone:'UTC'}).format(new Date(value));
@@ -24,14 +26,16 @@ const date=value=>new Intl.DateTimeFormat('en-US',{year:'numeric',month:'long',d
       {author.image&&<img src={author.image} alt={author.name} width="100" height="100" decoding="async"/>}
       <div><h1 id="archive-title">{author.name}</h1><p>{author.bio}</p></div>
     </section>:<section class="archive-hero" aria-labelledby="archive-title">
-      <div class="archive-container"><nav aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">»</span><span aria-current="page">Blog</span></nav><h1 id="archive-title">Blog</h1><p>Explore digital manufacturing: expert resources, in-depth articles, and the latest industry updates.</p></div>
+      <div class="archive-container"><nav aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span>{model.category&&<><a href="/blog">Blog</a><span aria-hidden="true">/</span></>}<span aria-current="page">{model.category?.name||'Blog'}</span></nav><h1 id="archive-title">{model.category?`${model.category.name}${page>1?` — Page ${page}`:''}`:'Blog'}</h1><p>{model.category?model.category.description:'Explore digital manufacturing: expert resources, in-depth articles, and the latest industry updates.'}</p>{model.category&&<p class="archive-category-count">{model.total} articles · Page {page} of {model.lastPage}</p>}</div>
     </section>}
+    {!author&&<BlogExplore articles={articles} current={categoryId} search />}
     <section class="archive-container archive-list" aria-label={author?`Articles by ${author.name}`:'CNC machining articles'}>
       <div class="archive-grid" role="list">
         {model.posts.map(post=>{
           const title=decodeHTML(post.displayTitle||post.title),href=`/blog/${post.slug}`;
           return <article class="archive-card" role="listitem">
             <a class="archive-image" href={href} tabindex="-1" aria-label={title}><img src={post.image} alt={title} width="600" height="400" loading="lazy" decoding="async"/></a>
+            <BlogCategoryLabel slug={post.slug}/>
             <h2 class="blog-post-title"><a href={href}>{title}</a></h2>
             {author&&<time datetime={post.published}>{date(post.published)}</time>}
             <a class="archive-more" href={href} aria-label={`Read more about ${title}`}>Read More <span aria-hidden="true">→</span></a>

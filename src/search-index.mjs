@@ -4,6 +4,7 @@ import { nativeMaterials } from "./data/nativeMaterials.mjs";
 import { nativeIndustries } from "./data/nativeIndustries.mjs";
 import { isRetiredProduct } from "./data/productRedirects.mjs";
 import { isRetiredIndustry } from "./data/industryRedirects.mjs";
+import {blogCategories,blogCategoryFor} from './data/blogCategories.mjs';
 
 const entities = { amp: "&", quot: '"', apos: "'", lt: "<", gt: ">", nbsp: " ", ndash: "–", mdash: "—", rsquo: "’", lsquo: "‘", ldquo: "“", rdquo: "”" };
 const clean = (value = "") => String(value).replace(/<[^>]+>/g, " ")
@@ -19,6 +20,7 @@ const trimDescription = (value) => {
 
 export function buildSearchIndex(articles = []) {
   const pages = [
+    ...blogCategories.map(category=>({title:category.title,href:category.href,type:'resources',description:category.description,keywords:`blog category guides ${category.name}`})),
     { title: 'Automation Equipment cnc machining services', href: '/industries/automation-equipment', type: 'industries', description: 'Custom plates, brackets, shafts, fixtures and gripper fingers for special-purpose machine builders.', keywords: 'automation equipment custom machine BOM fixtures tooling gripper manifold non-standard special purpose' },
     { title: "CNC Turning and Milling", href: "/services/cnc-turning-and-milling", type: "services", description: "Combined turning and milling for custom precision components, prototypes and production.", keywords: "mill turn lathe 5 axis machining" },
     { title: "Swiss Machining", href: "/services/swiss-machining", type: "services", description: "Precision Swiss turning for small, complex parts, pins, shafts and connectors.", keywords: "swiss screw turning sliding headstock" },
@@ -40,7 +42,7 @@ export function buildSearchIndex(articles = []) {
     })),
     ...nativeMaterials.map(page => ({ title: page.hero.title, href: `/materials/${page.slug}`, type: "materials", description: page.seo.description, keywords: page.slug.replaceAll("-", " ") })),
     ...nativeIndustries.filter(page => !isRetiredIndustry(`industries/${page.slug}`)).map(page => ({ title: page.hero.title, href: `/industries/${page.slug}`, type: "industries", description: page.seo.description, keywords: page.slug })),
-    ...articles.map(article => ({ title: article.displayTitle || article.title, href: `/blog/${article.slug}`, type: "resources", description: "Engineering guide from the CNCPioneer machining resource library.", keywords: article.slug.replaceAll("-", " ") })),
+    ...articles.map(article => ({ title: article.displayTitle || article.title, href: `/blog/${article.slug}`, type: "resources", description: `Engineering guide${blogCategoryFor(article.slug)?` · ${blogCategoryFor(article.slug).name}`:''} from the CNCPioneer machining resource library.`, keywords: `${article.slug.replaceAll("-", " ")} ${blogCategoryFor(article.slug)?.name||''}` })),
   ];
   return [...new Map(pages.map(page => [page.href, {
     ...page, title: clean(page.title), description: trimDescription(page.description), keywords: clean(page.keywords),

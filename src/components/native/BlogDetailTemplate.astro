@@ -8,12 +8,14 @@ import QuoteCta from "./QuoteCta.astro";
 import { getBlogAuthor } from '../../blog-detail-native.mjs';
 import { createArticleSchema, jsonLd } from '../../data/articleSchema.mjs';
 import { getPageModifiedTime } from '../../data/pageDates.mjs';
+import {blogCategoryFor} from '../../data/blogCategories.mjs';
 
 const {
   article,
   relatedPosts,
 } = Astro.props;
 const author = getBlogAuthor(article.authorSlug);
+const category=blogCategoryFor(article.canonicalPath?.split('/').pop()||article.canonical?.split('/').pop());
 const contributors = (article.contributors || []).map(getBlogAuthor);
 const authorBio = Astro.props.authorBio || author.bio;
 const hasToc = article.tocItems.length > 0;
@@ -183,7 +185,7 @@ const shareLinks = [
     <main id="content" class="detail-main">
       <nav class="detail-breadcrumb-bar" aria-label="Breadcrumb">
         <div class="detail-breadcrumb-inner">
-          <p id="breadcrumbs" class="detail-breadcrumbs"><span><a href="/">Home</a></span> <span aria-hidden="true">&raquo;</span> <span><a href="/blog">Blog</a></span> <span aria-hidden="true">&raquo;</span> <span aria-current="page">{article.articleTitle}</span></p>
+          <p id="breadcrumbs" class="detail-breadcrumbs"><span><a href="/">Home</a></span> <span aria-hidden="true">/</span> <span><a href="/blog">Blog</a></span> <span aria-hidden="true">/</span> {category&&<><span><a href={category.href}>{category.name}</a></span><span aria-hidden="true">/</span></>}<span aria-current="page">{article.articleTitle}</span></p>
         </div>
       </nav>
 

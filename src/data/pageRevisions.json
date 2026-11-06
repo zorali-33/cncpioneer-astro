@@ -2,6 +2,11 @@
   "revisions": [
     {
       "date": "2026-11-06",
+      "reason": "Organized the 90 blog articles into six reviewed categories, added category archives and pagination, blog search and topic entry points, and preserved article URLs and editorial publication dates.",
+      "routes": ["/blog","/blog/page/2","/blog/page/3","/blog/page/4","/blog/page/5","/blog/page/6","/blog/page/7","/blog/page/8","/blog/page/9","/blog/page/10","/blog/category/machining-processes","/blog/category/machining-processes/page/2","/blog/category/machining-processes/page/3","/blog/category/materials","/blog/category/materials/page/2","/blog/category/materials/page/3","/blog/category/design-quality","/blog/category/design-quality/page/2","/blog/category/surface-finishing","/blog/category/industry-applications","/blog/category/industry-applications/page/2","/blog/category/industry-applications/page/3","/blog/category/sourcing-production","/blog/category/sourcing-production/page/2"]
+    },
+    {
+      "date": "2026-11-06",
       "reason": "Added the owner-supplied SPM make-or-buy article with related reading and contextual cluster links, source references, three application images and visible FAQ schema.",
       "routes": ["/blog/spm-machined-vs-bought-parts", "/blog/what-is-automation-equipment", "/industries/automation-equipment", "/blog", "/author/zora"]
     },

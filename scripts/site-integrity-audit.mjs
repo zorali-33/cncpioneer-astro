@@ -55,7 +55,7 @@ for (const [key, file] of files) {
   }
   if (!noindex && (canonical.length!==1 || canonical[0]!==canonicalPageUrl(route))) issue('canonical_mismatch', {canonical});
   if (!noindex && (meta('og:url','property').length!==1 || meta('og:url','property')[0]!==canonical[0])) issue('og_url_mismatch');
-  if (!noindex && meta('og:type','property')[0] !== (/^\/blog\//.test(route) && !/\/page\//.test(route) ? 'article' : 'website')) issue('og_type_mismatch', {value:meta('og:type','property')});
+  if (!noindex && meta('og:type','property')[0] !== (/^\/blog\/[^/]+$/.test(route) ? 'article' : 'website')) issue('og_type_mismatch', {value:meta('og:type','property')});
   if (!nodes.some(n=>n.name==='html' && attrs(n).lang)) issue('missing_language');
   const mains = nodes.filter(n=>n.name==='main' || attrs(n).role==='main');
   if(mains.length!==1) issue('main_landmark_count', {count:mains.length});

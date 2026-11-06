@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-06T03:09:24.370Z",
+  "generatedAt": "2026-11-06T06:41:28.798Z",
   "permanentRedirects": 38,
   "removedRoutes": 61,
   "notFoundVariants": 183,
@@ -18,6 +18,36 @@
       "route": "/author/zora",
       "pages": 1,
       "items": 2
+    },
+    {
+      "route": "/blog/category/design-quality",
+      "pages": 2,
+      "items": 12
+    },
+    {
+      "route": "/blog/category/industry-applications",
+      "pages": 3,
+      "items": 23
+    },
+    {
+      "route": "/blog/category/machining-processes",
+      "pages": 3,
+      "items": 20
+    },
+    {
+      "route": "/blog/category/materials",
+      "pages": 3,
+      "items": 19
+    },
+    {
+      "route": "/blog/category/sourcing-production",
+      "pages": 2,
+      "items": 10
+    },
+    {
+      "route": "/blog/category/surface-finishing",
+      "pages": 1,
+      "items": 6
     },
     {
       "route": "/blog",
