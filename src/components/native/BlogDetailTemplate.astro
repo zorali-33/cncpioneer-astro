@@ -199,6 +199,23 @@ const shareLinks = [
       </section>
 
       <section class:list={['detail-shell', { 'detail-shell--no-toc': !hasToc }]}>
+        {hasToc && <aside class="detail-toc-rail" aria-label="Table of contents">
+          <nav class="toc-box" aria-labelledby="toc-heading" data-toc>
+            <button class="toc-header" type="button" aria-expanded="true" aria-controls="toc-list-panel" data-toc-toggle>
+              <span id="toc-heading" class="toc-heading">Table of Contents</span>
+              <svg class="toc-toggle" viewBox="0 0 448 512" aria-hidden="true"><path d="M207.029 381.476 12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg>
+            </button>
+            <div id="toc-list-panel" class="toc-body" data-toc-body>
+              <div class="toc-body-inner">
+                <ol class="toc-list">
+                  {article.tocItems.map((item) => (
+                    <li><a href={`#${item.id}`}>{item.text}</a></li>
+                  ))}
+                </ol>
+              </div>
+            </div>
+          </nav>
+        </aside>}
         <article class="detail-article-column" aria-labelledby="article-title">
           {contributors.length > 0 && <p class="detail-contributors">Contributing material: {contributors.map((person, index) => <>{index > 0 && ', '}<a href={person.href}>{person.name}</a></>)}</p>}
           <div id="main-article-content" class="article-content" set:html={article.articleHtml}></div>
@@ -235,23 +252,6 @@ const shareLinks = [
           </section>
         </article>
 
-        {hasToc && <aside class="detail-toc-rail" aria-label="Table of contents">
-          <nav class="toc-box" aria-labelledby="toc-heading" data-toc>
-            <button class="toc-header" type="button" aria-expanded="true" aria-controls="toc-list-panel" data-toc-toggle>
-              <span id="toc-heading" class="toc-heading">Table of Contents</span>
-              <svg class="toc-toggle" viewBox="0 0 448 512" aria-hidden="true"><path d="M207.029 381.476 12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg>
-            </button>
-            <div id="toc-list-panel" class="toc-body" data-toc-body>
-              <div class="toc-body-inner">
-                <ol class="toc-list">
-                  {article.tocItems.map((item) => (
-                    <li><a href={`#${item.id}`}>{item.text}</a></li>
-                  ))}
-                </ol>
-              </div>
-            </div>
-          </nav>
-        </aside>}
       </section>
 
       <section class="related-posts" aria-labelledby="related-title">

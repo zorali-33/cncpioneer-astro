@@ -87,7 +87,7 @@ html, body { background: var(--color-white); color: var(--color-body); }
 :root .home-page :is(.home-faq,.home-materials) { padding-inline: max(24px,calc((100% - var(--layout-content))/2)); }
 :root .turnmill-template .turnmill-advantages { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 40px; }
 :root .turnmill-template .turnmill-advantages > div, :root .turnmill-template .turnmill-advantages img { width: 100%; }
-:root .blog-detail-page .detail-shell { width: min(calc(100% - 48px),1156px); grid-template-columns: minmax(0,var(--layout-reading)) 320px; }
+:root .blog-detail-page .detail-shell { width: min(calc(100% - 48px),1156px); grid-template-columns: 320px minmax(0,var(--layout-reading)); }
 :root .blog-detail-page .detail-shell--no-toc { max-width: var(--layout-reading); grid-template-columns: minmax(0,1fr); }
 @media(max-width:1024px) {
   :root .blog-detail-page .detail-shell { max-width: var(--layout-reading); grid-template-columns: minmax(0,1fr); }

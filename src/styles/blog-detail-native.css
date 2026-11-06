@@ -97,7 +97,7 @@
 
 .detail-shell {
   display: grid;
-  grid-template-columns: minmax(0, 760px) 320px;
+  grid-template-columns: 320px minmax(0, 760px);
   column-gap: 36px;
   width: min(100%, 1116px);
   margin: 0 auto;
@@ -106,9 +106,14 @@
 }
 
 .detail-toc-rail {
+  position: sticky;
+  top: calc(var(--site-header-height, 130px) + 20px);
+  align-self: start;
   min-width: 0;
-  padding-top: 20px;
-  padding-bottom: 10px;
+  margin-top: 20px;
+  max-height: calc(100dvh - var(--site-header-height, 130px) - 40px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
 }
 
 .detail-shell--no-toc {
@@ -123,8 +128,7 @@
 }
 
 .detail-toc-rail .toc-box {
-  position: sticky;
-  top: 20px;
+  position: static;
 }
 
 .toc-box {
@@ -731,6 +735,10 @@
 
   .detail-toc-rail {
     order: -1;
+    position: static;
+    width: 100%;
+    max-height: none;
+    overflow: visible;
   }
 
   .detail-toc-rail .toc-box {
