@@ -1,6 +1,11 @@
 // Reviewed after the 12-group consolidation on 2026-10-16.
 // Each active article has three distinct canonical related posts.
 export const curatedRelatedPosts = {
+  'what-is-automation-equipment': [
+    ['cnc-machining-robot-parts', 'Related mechanical components for robot cells.'],
+    ['cnc-machining-quality-testing', 'Inspection of the interfaces that determine machine assembly.'],
+    ['shaft-machining', 'Machined shafts used in motion and drive assemblies.'],
+  ],
   "5-axis-cnc-machining-manufacturers-in-china": [
     [
       "choose-cnc-machining-company",

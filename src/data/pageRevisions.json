@@ -2,6 +2,11 @@
   "revisions": [
     {
       "date": "2026-11-06",
+      "reason": "Published the owner-supplied automation equipment guide with structured comparisons, FAQ and verified source links, connected it to the automation machining industry page and blog discovery surfaces.",
+      "routes": ["/blog/what-is-automation-equipment", "/industries/automation-equipment", "/blog", "/author/zora"]
+    },
+    {
+      "date": "2026-11-06",
       "reason": "Added an automation equipment industry page with BOM review, representative application images, drawing-based capabilities and FAQ; linked it from industry navigation and the industry directory.",
       "routes": ["/industries/automation-equipment", "/industries"]
     },

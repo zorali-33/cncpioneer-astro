@@ -7,6 +7,7 @@ import { blogConsolidatedArticles } from "./data/blogConsolidatedArticles.mjs";
 import { consolidatedBlogSlugs } from "./data/blogConsolidation.mjs";
 import { removedBlogSlugs } from "./data/blogRemovals.mjs";
 import { optimizedImageUrl } from './image-assets.mjs';
+import { nativeBlogPosts } from './data/nativeBlogPosts.mjs';
 
 export const postsPerPage = 9;
 const publicRoot = path.resolve(process.cwd(), "public");
@@ -58,6 +59,7 @@ export function getBlogArticles(pages) {
       };
     })
     .filter(Boolean)
+    .concat(nativeBlogPosts.map(post => ({slug:post.slug, title:post.title, displayTitle:post.title, published:post.published, image:post.image, authorName:post.authorName, authorSlug:post.authorSlug})))
     .sort((a, b) => Date.parse(b.published) - Date.parse(a.published) || a.slug.localeCompare(b.slug));
 }
 

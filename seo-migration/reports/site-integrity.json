@@ -1,18 +1,23 @@
 {
-  "generatedAt": "2026-11-06T01:47:26.408Z",
+  "generatedAt": "2026-11-06T02:46:28.192Z",
   "build": "D:\\cncpioneer.com-astro\\dist",
-  "pages": 331,
-  "indexable": 329,
-  "sitemapUrls": 329,
-  "references": 44402,
-  "fragments": 943,
-  "searchRecords": 301,
+  "pages": 333,
+  "indexable": 331,
+  "sitemapUrls": 331,
+  "references": 44631,
+  "fragments": 951,
+  "searchRecords": 302,
   "errorCounts": {},
   "warningCounts": {
-    "title_length_review": 2
+    "title_length_review": 3
   },
   "errors": [],
   "warnings": [
+    {
+      "page": "/blog/what-is-automation-equipment",
+      "code": "title_length_review",
+      "length": 73
+    },
     {
       "page": "/",
       "code": "title_length_review",
@@ -126,6 +131,14 @@
       "description": "Read CNC machining articles by Ryan Wang on Swiss machining, turning and milling, materials, and component design. Browse page 8 of the article archive.",
       "h1": "Ryan Wang",
       "canonical": "https://www.cncpioneer.com/author/ryan-wang/page/8",
+      "noindex": false
+    },
+    {
+      "route": "/author/zora",
+      "title": "Zora CNC Machining Articles | CNCPioneer",
+      "description": "Read CNC machining articles by Zora on Swiss machining, turning and milling, materials, and component design. Browse page 1 of the article archive.",
+      "h1": "Zora",
+      "canonical": "https://www.cncpioneer.com/author/zora",
       "noindex": false
     },
     {
@@ -894,6 +907,14 @@
       "description": "Learn what a CNC lathe is, how it works, key parts, common machine types, materials, applications, design tips, and future trends.",
       "h1": "CNC Lathe: Types, How It Works, Parts & Applications",
       "canonical": "https://www.cncpioneer.com/blog/what-is-a-cnc-lathe",
+      "noindex": false
+    },
+    {
+      "route": "/blog/what-is-automation-equipment",
+      "title": "What Is Automation Equipment? Types, Components and Examples | CNCPioneer",
+      "description": "What automation equipment is, how fixed, programmable and flexible automation differ, what sits inside a machine, and how custom equipment is built.",
+      "h1": "What Is Automation Equipment? Types, Components and Examples",
+      "canonical": "https://www.cncpioneer.com/blog/what-is-automation-equipment",
       "noindex": false
     },
     {

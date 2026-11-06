@@ -9,6 +9,7 @@ import { blogEditorialOverrides } from "./blog-editorial-overrides.mjs";
 import { repairBlogArticleLinks, repairBlogLinkIds, repairBlogMedia } from "./blog-link-repairs.mjs";
 import { applyReviewedInternalLinks } from "./blog-internal-links.mjs";
 import { blogConsolidatedArticles } from "./data/blogConsolidatedArticles.mjs";
+import { nativeBlogPosts } from './data/nativeBlogPosts.mjs';
 
 export const nativeStaticBlogSlugs = new Set([
   "5-axis-cnc-machining-manufacturers-in-china",
@@ -19,6 +20,10 @@ export const ryanAuthorBio = "Ryan Wang is the CNC Machining Expert at Cncpionee
 const siteUrl = "https://www.cncpioneer.com";
 
 const blogAuthors = {
+  zora: {
+    name: 'Zora',
+    bio: 'Author of this guide to automation equipment, machine components and custom automation projects.',
+  },
   "ryan-wang": {
     name: "Ryan Wang",
     image: "/wp-content/uploads/2026/03/ryan-wang-100X100.jpg",
@@ -55,6 +60,22 @@ export function getBlogDetailEntries(pages) {
   );
 
   return articles.map((article) => {
+    const nativePost = nativeBlogPosts.find(post => post.slug === article.slug);
+    if (nativePost) {
+      const articleHtml = prepareArticleHtml(nativePost.articleHtml, article.slug, true);
+      const canonicalPath = `/blog/${article.slug}`;
+      return {...article, detail: {
+        slug: article.slug, authorSlug: article.authorSlug, contributors: [], title: `${nativePost.title} | CNCPioneer`,
+        articleTitle: nativePost.title, description: nativePost.description, ogDescription: nativePost.description,
+        canonical: siteUrl + canonicalPath, canonicalPath,
+        publishedTime: nativePost.published, modifiedTime: nativePost.modifiedTime,
+        publishedDate: dateOnly(nativePost.published), publishedTimeLabel: formatTime(nativePost.published),
+        image: nativePost.image, imageWidth: nativePost.imageWidth, imageHeight: nativePost.imageHeight, imageType: 'image/webp',
+        readingTime: `${Math.ceil(cleanText(articleHtml).split(/\s+/).length / 200)} minutes`,
+        bodyClass: 'blog-detail-page single single-post', articleHtml, tocItems: extractTocItems(articleHtml),
+        faqs: nativePost.faqs,
+      }};
+    }
     const source = htmlBySlug.get(article.slug);
     if (!source) throw new Error(`Missing mirrored HTML for blog article: ${article.slug}`);
 

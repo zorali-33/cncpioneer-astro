@@ -21,7 +21,7 @@ const date=value=>new Intl.DateTimeFormat('en-US',{year:'numeric',month:'long',d
   </Fragment>
   <div id="content" class:list={['native-archive',{'is-author':Boolean(author)}]} data-native-archive>
     {author?<section class="author-profile" aria-labelledby="archive-title">
-      <img src={author.image} alt={author.name} width="100" height="100" decoding="async"/>
+      {author.image&&<img src={author.image} alt={author.name} width="100" height="100" decoding="async"/>}
       <div><h1 id="archive-title">{author.name}</h1><p>{author.bio}</p></div>
     </section>:<section class="archive-hero" aria-labelledby="archive-title">
       <div class="archive-container"><nav aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">»</span><span aria-current="page">Blog</span></nav><h1 id="archive-title">Blog</h1><p>Explore digital manufacturing: expert resources, in-depth articles, and the latest industry updates.</p></div>

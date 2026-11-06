@@ -109,6 +109,7 @@ const shareLinks = [
     {article.publishedTime && <meta property="article:published_time" content={article.publishedTime} />}
     {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
     <script type="application/ld+json" set:html={jsonLd(articleSchema)} />
+    {article.faqs?.length > 0 && <script type="application/ld+json" set:html={jsonLd({'@context':'https://schema.org','@type':'FAQPage',mainEntity:article.faqs.map(faq=>({'@type':'Question',name:faq.question,acceptedAnswer:{'@type':'Answer',text:faq.answer}}))})} />}
     {article.image && <meta property="og:image" content={article.image.startsWith('http') ? article.image : `https://www.cncpioneer.com${article.image}`} />}
     {article.imageWidth && <meta property="og:image:width" content={article.imageWidth} />}
     {article.imageHeight && <meta property="og:image:height" content={article.imageHeight} />}
@@ -222,9 +223,9 @@ const shareLinks = [
             </div>
           </section>
           <section class="detail-author-box" aria-labelledby="detail-author-name">
-            <a class="detail-author-avatar" href={author.href}>
+            {author.image && <a class="detail-author-avatar" href={author.href}>
               <img src={author.image} width="100" height="100" alt={`Picture of ${author.name}`} loading="lazy" />
-            </a>
+            </a>}
             <div class="detail-author-text">
               <h3 id="detail-author-name" class="detail-author-name"><a href={author.href}>{author.name}</a></h3>
               <div class="detail-author-bio">

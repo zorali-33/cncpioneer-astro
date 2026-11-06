@@ -1,61 +1,61 @@
 {
-  "generatedAt": "2026-11-06T01:47:31.860Z",
-  "pages": 331,
+  "generatedAt": "2026-11-06T02:46:33.946Z",
+  "pages": 333,
   "nativeArchivePages": 19,
   "archives": [
     {
       "route": "/blog/page/2",
       "posts": 9,
       "stylesheets": 4,
-      "htmlBytes": 43633
+      "htmlBytes": 43567
     },
     {
       "route": "/blog/page/3",
       "posts": 9,
       "stylesheets": 4,
-      "htmlBytes": 42888
+      "htmlBytes": 42978
     },
     {
       "route": "/blog/page/4",
       "posts": 9,
       "stylesheets": 4,
-      "htmlBytes": 42728
+      "htmlBytes": 42636
     },
     {
       "route": "/blog/page/5",
       "posts": 9,
       "stylesheets": 4,
-      "htmlBytes": 43407
+      "htmlBytes": 43480
     },
     {
       "route": "/blog/page/6",
       "posts": 9,
       "stylesheets": 4,
-      "htmlBytes": 43388
+      "htmlBytes": 43335
     },
     {
       "route": "/blog/page/7",
       "posts": 9,
       "stylesheets": 4,
-      "htmlBytes": 43158
+      "htmlBytes": 43192
     },
     {
       "route": "/blog/page/8",
       "posts": 9,
       "stylesheets": 4,
-      "htmlBytes": 42884
+      "htmlBytes": 42942
     },
     {
       "route": "/blog/page/9",
       "posts": 9,
       "stylesheets": 4,
-      "htmlBytes": 42613
+      "htmlBytes": 42661
     },
     {
       "route": "/blog/page/10",
-      "posts": 7,
+      "posts": 8,
       "stylesheets": 4,
-      "htmlBytes": 40160
+      "htmlBytes": 41122
     },
     {
       "route": "/author/david-li",
