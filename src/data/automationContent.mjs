@@ -1,7 +1,7 @@
 export const automationSeo = {
   title: 'CNC Machined Parts for Automation Equipment | CNCPioneer',
   description: 'Custom plates, brackets, shafts, fixtures and gripper fingers for special-purpose automation equipment. Send your BOM and drawings for a machining review.',
-  canonical: '/industries/automation-equipment', type: 'website',
+  canonical: '/industries/automation-equipment-parts', type: 'website',
   image: '/assets/images/automation-parts-hero.webp',
 };
 export const automationParts = [

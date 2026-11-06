@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-06T01:23:29.856Z",
+  "generatedAt": "2026-11-06T01:39:52.772Z",
   "build": "D:\\cncpioneer.com-astro\\dist",
   "pages": 331,
   "indexable": 329,
@@ -2137,11 +2137,11 @@
       "noindex": false
     },
     {
-      "route": "/industries/automation-equipment",
+      "route": "/industries/automation-equipment-parts",
       "title": "CNC Machined Parts for Automation Equipment | CNCPioneer",
       "description": "Custom plates, brackets, shafts, fixtures and gripper fingers for special-purpose automation equipment. Send your BOM and drawings for a machining review.",
       "h1": "CNC Machined Parts for Automation Equipment",
-      "canonical": "https://www.cncpioneer.com/industries/automation-equipment",
+      "canonical": "https://www.cncpioneer.com/industries/automation-equipment-parts",
       "noindex": false
     },
     {

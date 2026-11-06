@@ -1,6 +1,8 @@
 # Automation equipment industry page
 
-Route: `/industries/automation-equipment`
+Route: `/industries/automation-equipment-parts`
+
+Owner-requested URL correction: `/industries/automation-equipment` permanently redirects (301) to the parts-specific route, including trailing-slash and index.html variants. Navigation, directory, search index, canonical, structured data and sitemap use the new route.
 
 Recreated the supplied HTML reference's content layout without importing its header, footer, React runtime, external fonts or placeholder media. Uses the existing BaseLayout and real quote endpoint, approved palette, type tokens and container edges. Includes industry-directory, navigation and site-search entry points.
 
