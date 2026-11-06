@@ -30,13 +30,14 @@ const date=value=>new Intl.DateTimeFormat('en-US',{year:'numeric',month:'long',d
     </section>}
     {!author&&<BlogExplore articles={articles} current={categoryId} search />}
     <section class="archive-container archive-list" aria-label={author?`Articles by ${author.name}`:'CNC machining articles'}>
+      <h2 class="archive-list-heading">{author?`Articles by ${author.name}`:model.category?`${model.category.name} articles`:'Latest articles'}</h2>
       <div class="archive-grid" role="list">
         {model.posts.map(post=>{
           const title=decodeHTML(post.displayTitle||post.title),href=`/blog/${post.slug}`;
           return <article class="archive-card" role="listitem">
             <a class="archive-image" href={href} tabindex="-1" aria-label={title}><img src={post.image} alt={title} width="600" height="400" loading="lazy" decoding="async"/></a>
             <BlogCategoryLabel slug={post.slug}/>
-            <h2 class="blog-post-title"><a href={href}>{title}</a></h2>
+            <h3 class="blog-post-title"><a href={href}>{title}</a></h3>
             {author&&<time datetime={post.published}>{date(post.published)}</time>}
             <a class="archive-more" href={href} aria-label={`Read more about ${title}`}>Read More <span aria-hidden="true">→</span></a>
           </article>;
@@ -52,6 +53,7 @@ const date=value=>new Intl.DateTimeFormat('en-US',{year:'numeric',month:'long',d
   </div>
 </BaseLayout>
 <style>
+  .archive-list-heading{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
   .native-archive{color:var(--color-body)}.archive-container,.author-profile{width:min(var(--layout-shell),100%);margin-inline:auto;padding-inline:24px}
   .archive-hero{background:linear-gradient(rgb(var(--color-ink-rgb)/0.6),rgb(var(--color-ink-rgb)/0.6)),url(/wp-content/uploads/2025/12/blog-banner-1.jpg)center/cover;color:var(--color-white);min-height:263px;padding:22px 0 36px}
   .archive-hero nav{display:flex;gap:8px;font-size:14px}.archive-hero a{color:var(--color-white)}.archive-hero h1{margin:45px 0 16px;text-align:center;font-size:var(--type-h1);line-height:1.12;color:var(--color-white)}.archive-hero p{text-align:center;margin:0}
