@@ -202,10 +202,6 @@
   clip: rect(0, 0, 0, 0);
 }
 
-.author-page .site-footer {
-  margin-top: 0;
-}
-
 @media (max-width: 1024px) {
   .author-wrap,
   .author-archive,
@@ -221,9 +217,7 @@
 
 @media (max-width: 767px) {
   .author-wrap,
-  .author-archive,
-  .author-page .nav-inner,
-  .author-page .footer-inner {
+  .author-archive {
     padding-inline: 15px;
   }
 
@@ -262,21 +256,5 @@
 
   .author-post-thumb {
     padding-bottom: 50%;
-  }
-
-  .author-page .footer-main {
-    padding: 72px 0 73px;
-  }
-
-  .author-page .footer-inner {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 22px;
-  }
-
-  .author-page .contact-column {
-    order: initial;
-    grid-column: auto;
-    margin-bottom: 0;
   }
 }

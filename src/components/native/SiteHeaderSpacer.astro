@@ -1,10 +1,1 @@
 <div class="site-header-spacer" aria-hidden="true"></div>
-<script>
-  // Standalone blog templates use the same fixed-header offset as BaseLayout.
-  const header = document.querySelector<HTMLElement>("body > .site-header");
-  if (header) {
-    const syncHeaderHeight = () => document.documentElement.style.setProperty("--site-header-height", `${header.offsetHeight}px`);
-    syncHeaderHeight();
-    new ResizeObserver(syncHeaderHeight).observe(header);
-  }
-</script>

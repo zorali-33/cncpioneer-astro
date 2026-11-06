@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-06T06:44:40.940Z",
+  "generatedAt": "2026-11-06T07:02:29.496Z",
   "pages": 348,
   "nativeArchivePages": 19,
   "archives": [
@@ -7,115 +7,115 @@
       "route": "/blog/page/2",
       "posts": 9,
       "stylesheets": 5,
-      "htmlBytes": 46621
+      "htmlBytes": 46646
     },
     {
       "route": "/blog/page/3",
       "posts": 9,
       "stylesheets": 5,
-      "htmlBytes": 45639
+      "htmlBytes": 45664
     },
     {
       "route": "/blog/page/4",
       "posts": 9,
       "stylesheets": 5,
-      "htmlBytes": 45685
+      "htmlBytes": 45710
     },
     {
       "route": "/blog/page/5",
       "posts": 9,
       "stylesheets": 5,
-      "htmlBytes": 46422
+      "htmlBytes": 46447
     },
     {
       "route": "/blog/page/6",
       "posts": 9,
       "stylesheets": 5,
-      "htmlBytes": 46194
+      "htmlBytes": 46219
     },
     {
       "route": "/blog/page/7",
       "posts": 9,
       "stylesheets": 5,
-      "htmlBytes": 46337
+      "htmlBytes": 46362
     },
     {
       "route": "/blog/page/8",
       "posts": 9,
       "stylesheets": 5,
-      "htmlBytes": 45965
+      "htmlBytes": 45990
     },
     {
       "route": "/blog/page/9",
       "posts": 9,
       "stylesheets": 5,
-      "htmlBytes": 45467
+      "htmlBytes": 45492
     },
     {
       "route": "/blog/page/10",
       "posts": 9,
       "stylesheets": 5,
-      "htmlBytes": 45111
+      "htmlBytes": 45136
     },
     {
       "route": "/author/david-li",
       "posts": 9,
       "stylesheets": 5,
-      "htmlBytes": 44534
+      "htmlBytes": 44559
     },
     {
       "route": "/author/david-li/page/2",
       "posts": 9,
       "stylesheets": 5,
-      "htmlBytes": 46500
+      "htmlBytes": 46525
     },
     {
       "route": "/author/david-li/page/3",
       "posts": 3,
       "stylesheets": 5,
-      "htmlBytes": 39026
+      "htmlBytes": 39051
     },
     {
       "route": "/author/ryan-wang/page/2",
       "posts": 9,
       "stylesheets": 5,
-      "htmlBytes": 47345
+      "htmlBytes": 47370
     },
     {
       "route": "/author/ryan-wang/page/3",
       "posts": 9,
       "stylesheets": 5,
-      "htmlBytes": 47156
+      "htmlBytes": 47181
     },
     {
       "route": "/author/ryan-wang/page/4",
       "posts": 9,
       "stylesheets": 5,
-      "htmlBytes": 47323
+      "htmlBytes": 47348
     },
     {
       "route": "/author/ryan-wang/page/5",
       "posts": 9,
       "stylesheets": 5,
-      "htmlBytes": 47085
+      "htmlBytes": 47110
     },
     {
       "route": "/author/ryan-wang/page/6",
       "posts": 9,
       "stylesheets": 5,
-      "htmlBytes": 46326
+      "htmlBytes": 46351
     },
     {
       "route": "/author/ryan-wang/page/7",
       "posts": 9,
       "stylesheets": 5,
-      "htmlBytes": 46360
+      "htmlBytes": 46385
     },
     {
       "route": "/author/ryan-wang/page/8",
       "posts": 4,
       "stylesheets": 5,
-      "htmlBytes": 39741
+      "htmlBytes": 39766
     }
   ],
   "errors": []

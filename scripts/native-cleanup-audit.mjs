@@ -28,8 +28,21 @@ for(const model of models){
 }
 function scan(dir){for(const entry of fs.readdirSync(dir,{withFileTypes:true})){const file=path.join(dir,entry.name);if(entry.isDirectory())scan(file);else if(entry.name==='index.html'||entry.name==='404.html')allPages.push(file);}}
 scan(build);
+const shellSignature=node=>JSON.stringify(node&&{
+  name:node.name,
+  attributes:Object.fromEntries(Object.entries(node.attributes||{}).filter(([key])=>key!=='aria-current').map(([key,value])=>[key,key==='class'?value.split(/\s+/).filter(name=>name!=='is-active').join(' '):value]).sort(([a],[b])=>a.localeCompare(b))),
+  children:(node.children||[]).filter(child=>child.type===ELEMENT_NODE||child.value?.trim()).map(child=>child.type===ELEMENT_NODE?JSON.parse(shellSignature(child)):child.value.trim()),
+});
+const homepageNodes=inspect(readRoute('/'));
+const homepageHeader=shellSignature(homepageNodes.find(n=>n.name==='header'&&'data-native-header' in n.attributes));
+const homepageFooter=shellSignature(homepageNodes.find(n=>n.name==='footer'&&'data-native-footer' in n.attributes));
 for(const file of allPages){const html=fs.readFileSync(file,'utf8'),route='/'+path.relative(build,file).replaceAll('\\','/').replace(/\/index\.html$/,'');
-  for(const node of inspect(html)){
+  const nodes=inspect(html);
+  for(const [tag,attribute,expected]of [['header','data-native-header',homepageHeader],['footer','data-native-footer',homepageFooter]]){
+    const shells=nodes.filter(n=>n.name===tag&&Object.hasOwn(n.attributes,attribute));
+    if(shells.length!==1||shellSignature(shells[0])!==expected)errors.push({route,issue:`${tag}_differs_from_homepage`});
+  }
+  for(const node of nodes){
     if(node.name==='script'&&/wp-includes|wp-content\/plugins|wp-content\/cache\/min/.test(node.attributes.src||''))errors.push({route,issue:'wordpress_runtime_script'});
     if(node.name==='link'&&node.attributes.rel==='stylesheet'&&/wp-includes|wp-content\/(?:plugins|cache)/.test(node.attributes.href||''))errors.push({route,issue:'legacy_stylesheet_dependency'});
     if(node.name==='a'&&node.attributes.href==='#')errors.push({route,issue:'placeholder_link'});

@@ -769,8 +769,6 @@
 }
 
 @media (max-width: 767px) {
-  .blog-detail-page .nav-inner,
-  .blog-detail-page .footer-inner,
   .detail-shell,
   .related-posts {
     padding-inline: var(--detail-mobile-gutter);

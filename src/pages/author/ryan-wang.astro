@@ -1,11 +1,9 @@
 ---
+import SiteHeader from "../../components/native/SiteHeader.astro";
+import SiteFooter from "../../components/native/SiteFooter.astro";
 import SiteHeaderSpacer from "../../components/native/SiteHeaderSpacer.astro";
-import IndustryNavigation from '../../components/native/IndustryNavigation.astro';
-import NavigationMaterialGroup from '../../components/native/NavigationMaterialGroup.astro';
-import {getSiteNavigation} from '../../data/siteNavigation.mjs';
 import { getReviewedSeo } from "../../data/pageSeoOverrides.mjs";
 const seo = getReviewedSeo("/author/ryan-wang");
-import SiteSearch from "../../components/native/SiteSearch.astro";
 import '../../styles/blog-native.css';
 import '../../styles/author-native.css';
 import { getBlogArticles } from '../../blog-archive.mjs';
@@ -23,39 +21,9 @@ const lastPage = Math.ceil(ryanArticles.length / getAuthorPostsPerPage('ryan-wan
 const loadMoreAnchorHtml = renderAuthorLoadMoreAnchor('ryan-wang', 1, lastPage);
 const paginationHtml = renderAuthorPagination('ryan-wang', 1, lastPage);
 
-const navItems = getSiteNavigation(Astro.url.pathname);
 
 const posts = getAuthorArchivePosts(ryanArticles, 'ryan-wang');
 
-const footerColumns = [
-  {
-    heading: 'Services',
-    links: [
-      { label: 'Swiss Machining Service', href: '/services/swiss-machining' },
-      { label: 'CNC Turning and Milling  Service', href: '/services/cnc-turning-and-milling' }
-    ]
-  },
-  {
-    heading: 'Industries',
-    links: [
-      { label: 'Aerospace', href: '/industries/aerospace' },
-      { label: 'Defense', href: '/industries/defense' },
-      { label: 'Medical', href: '/industries/medical' },
-      { label: 'Semiconductor', href: '/industries/semiconductor' },
-      { label: 'Consumer Electronics', href: '/industries/consumer-electronics' },
-      { label: 'Oil & Gas', href: '/industries/oil-gas' },
-      { label: 'Automotive', href: '/industries/automotive' },
-      { label: 'Railway', href: '/industries/railway' }
-    ]
-  },
-  {
-    heading: 'About',
-    links: [
-      { label: 'About Us', href: '/about-us' },
-      { label: 'Blog', href: '/blog' }
-    ]
-  }
-];
 
 const personJsonLd = JSON.stringify([{
   '@context': 'https://schema.org/',
@@ -96,58 +64,7 @@ const personJsonLd = JSON.stringify([{
     <script type="application/ld+json" set:html={personJsonLd}></script>
   </head>
   <body class="author-page archive author author-ryan-wang author-1">
-    <header class="site-header">
-      <div class="topbar">
-        <div class="topbar-inner">
-          <div class="topbar-contact" aria-label="Contact details">
-            <span class="topbar-item">
-              <svg viewBox="0 0 512 512" aria-hidden="true"><path d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"></path></svg>
-              +8613725562746
-            </span>
-            <span class="topbar-item">
-              <svg viewBox="0 0 512 512" aria-hidden="true"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"></path></svg>
-              info@cncpioneer.com
-            </span>
-          </div>
-          <div class="topbar-actions">
-            <button class="icon-button" aria-label="Search">
-              <svg viewBox="0 0 512 512" aria-hidden="true"><path d="M505 442.7 405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path></svg>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="mainnav">
-        <div class="nav-inner">
-          <a class="brand" href="/" aria-label="CNC Pioneer home">
-            <img src="/wp-content/uploads/2025/11/cncpioneer_nav_logo.png" alt="CNC Pioneer" width="160" height="35" />
-          </a>
-          <input class="menu-state" type="checkbox" id="menu-state" aria-hidden="true" />
-          <label class="menu-toggle" for="menu-state" aria-label="Menu Toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-          </label>
-          <nav class="primary-nav" aria-label="Menu">
-            <ul>
-              {navItems.map((item) => (
-                <li class:list={[item.children && 'has-submenu']}>
-                  {item.href ? <a href={item.href} aria-current={item.active ? (Astro.url.pathname === item.href ? 'page' : 'location') : undefined}>
-                    {item.label}{item.children && <span class="caret" aria-hidden="true"></span>}
-                  </a> : <button class="nav-label-button" data-dropdown-trigger type="button" aria-expanded="false" aria-controls={item.id + '-submenu'}>{item.label}<span class="caret" aria-hidden="true"></span></button>}
-                  {item.children && (
-                    <ul class="submenu" id={(item.id || item.href.slice(1)) + "-submenu"}>
-                      {item.href === '/industries' ? <li class="industry-menu-content"><IndustryNavigation /></li> : item.children.map((child) => (
-                        <li>{child.children ? <NavigationMaterialGroup group={child} /> : <a href={child.href}>{child.label}</a>}</li>
-                      ))}
-                    </ul>
-                  )}
-                </li>
-              ))}
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </header>
+    <SiteHeader />
     <SiteHeaderSpacer />
 
     <main id="content" class="author-main">
@@ -198,34 +115,6 @@ const personJsonLd = JSON.stringify([{
       </section>
     </main>
 
-    <footer class="site-footer">
-      <div class="footer-main">
-        <div class="footer-inner">
-          {footerColumns.map((column) => (
-            <section class="footer-column" aria-labelledby={`footer-${column.heading.trim().toLowerCase().replace(/\s+/g, '-') || 'about'}`}>
-              <h2 id={`footer-${column.heading.trim().toLowerCase().replace(/\s+/g, '-') || 'about'}`}>{column.heading}</h2>
-              <ul>
-                {column.links.map((link) => (
-                  <li><a href={link.href}>{link.label}</a></li>
-                ))}
-              </ul>
-            </section>
-          ))}
-          <section class="footer-column contact-column" aria-labelledby="footer-contact">
-            <h2 id="footer-contact">Get In Touch</h2>
-            <p>Room 1202B54, 12th Floor, Tairan Cangsong Building, No. 25,<br />Futian District, Shenzhen, China</p>
-            <ul>
-              <li><a href="mailto:info@cncpioneer.com">Email: info@cncpioneer.com</a></li>
-              <li><a href="tel:+8613725562746">Phone: +8613725562746 </a></li>
-              <li>Hours: Mon-Fri 9:00AM - 6:00PM</li>
-            </ul>
-          </section>
-        </div>
-      </div>
-      <div class="copyright">
-        <p>Copyright &copy; 2026 CNCPioneer All Rights Reserved.</p>
-      </div>
-    </footer>
-    <SiteSearch />
+    <SiteFooter />
   </body>
 </html>
