@@ -1,3 +1,5 @@
+import { partCategories } from './partTaxonomy.mjs';
+
 export const automationSeo = {
   title: 'Automation Equipment cnc machining services | CNCPioneer',
   description: 'Custom plates, brackets, shafts, fixtures and gripper fingers for special-purpose automation equipment. Send your BOM and drawings for a machining review.',
@@ -13,7 +15,15 @@ export const automationParts = [
   ['gripper-fingers', 'Gripper Fingers', 'Contact profiles shaped around your workpiece.', 'structures', 'Matched aluminum gripper fingers with shaped tips'],
   ['manifolds', 'Manifolds & Valve Blocks', 'Threaded ports and cross-drilled passages.', 'fittings', 'Aluminum pneumatic manifold block with threaded ports'],
   ['bearing-housings', 'Bearing Housings', 'Bearing bores, shoulders and mounting interfaces.', 'housings', 'Aluminum bearing support blocks with precision circular bores'],
-].map(([image, title, text, category, alt]) => ({image: `automation-${image}`, title, text, href: `/custom-cnc-parts?type=${category}`, alt}));
+].map(([image, title, text, category, alt]) => {
+  const bearingHousing = image === 'bearing-housings';
+  const categoryLabel = partCategories.find(partCategory => partCategory.id === category).label;
+  return {
+    image: `automation-${image}`, title, text, alt,
+    href: bearingHousing ? '/custom-cnc-parts/bearing-housing' : `/custom-cnc-parts?type=${category}`,
+    linkLabel: bearingHousing ? 'View bearing housing example' : `Browse ${categoryLabel}`,
+  };
+});
 export const automationBenefits = [
   {image: 'automation-drawing-review', title: 'One review for your whole BOM', text: 'Share part numbers, revisions and quantities together. We review machining access, materials and critical features before confirming scope and pricing.', alt: 'Engineer comparing a mounting plate with a drawing and caliper'},
   {image: 'automation-inspection', title: 'Check the interfaces that matter', text: 'Identify bearing fits, locating holes and assembly datums on your drawings. Agree the inspection method and report requirements with the quotation.', alt: 'CMM probe inspecting a locating bore on an aluminum tooling plate'},

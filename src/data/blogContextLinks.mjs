@@ -6,23 +6,13 @@ export const blogContextLinks = {
     "insertionBefore": "<h2 class=\"wp-block-heading\" id=\"section-31-final-thoughts\">Final Thoughts</h2>"
   },
   "robot-hands": {
-    "changes": [
-      {
-        "before": "<p>Replicating it in metal and motors is genuinely hard — not &#8220;engineering challenge&#8221; hard, but &#8220;this is an unsolved research problem&#8221; hard. The best dexterous robotic hands in the world cost $50,000 to $150,000 and still can&#8217;t match the manipulation capability of a ten-year-old child.</p>",
-        "after": "<p>Replicating it in metal and motors is genuinely hard — not &#8220;engineering challenge&#8221; hard, but &#8220;this is an unsolved research problem&#8221; hard. The best dexterous <a href=\"/industries/humanoid-robot-cnc-machining\">robotic hands</a> in the world cost $50,000 to $150,000 and still can&#8217;t match the manipulation capability of a ten-year-old child.</p>"
-      }
-    ],
-    "appendHtml": "<p>For small finger-joint pins and pivot components, review our <a href=\"/services/swiss-machining\">Swiss machining service</a> with the part drawing, material, quantity, and inspection requirements.</p>",
+    "changes": [],
+    "appendHtml": "<p>For small finger-joint pins and pivot components, review our <a href=\"/services/swiss-machining\">Swiss machining service</a> with the part drawing, material, quantity, and inspection requirements.</p><p>For joint housings, actuator interfaces and other machined hardware, see <a href=\"/industries/humanoid-robot-cnc-machining\">CNC machining for humanoid robot components</a>.</p>",
     "insertionBefore": null
   },
   "building-a-humanoid-robot": {
-    "changes": [
-      {
-        "before": "<p>But why humanoid, specifically? The answer lies in the world we&#8217;ve already built. Stairs, door handles, tools, vehicles, workspaces — all of it was designed for a body shaped like ours. A humanoid robot doesn&#8217;t need the world to be modified for it. It can operate a drill press, climb a ladder, sit in a car seat, or navigate a narrow hallway. That versatility is something no wheeled or fixed-arm robot can replicate.</p>",
-        "after": "<p>But why humanoid, specifically? The answer lies in the world we&#8217;ve already built. Stairs, door handles, tools, vehicles, workspaces — all of it was designed for a body shaped like ours. A <a href=\"/industries/humanoid-robot-cnc-machining\">humanoid robot</a> doesn&#8217;t need the world to be modified for it. It can operate a drill press, climb a ladder, sit in a car seat, or navigate a narrow hallway. That versatility is something no wheeled or fixed-arm robot can replicate.</p>"
-      }
-    ],
-    "appendHtml": "<p>For joint housings with bores and mounting features, review our <a href=\"/services/cnc-turning-and-milling\">CNC turning and milling service</a> with the part drawing, material, quantity, and inspection requirements.</p><p>For the related process and design context, see the <a href=\"/blog/cnc-machining-robot-parts\">robot-part machining guide</a>.</p>",
+    "changes": [],
+    "appendHtml": "<p>Explore <a href=\"/industries/humanoid-robot-cnc-machining\">CNC machining for humanoid robot components</a> for part examples and inspection considerations.</p><p>For joint housings with bores and mounting features, review our <a href=\"/services/cnc-turning-and-milling\">CNC turning and milling service</a> with the part drawing, material, quantity, and inspection requirements.</p><p>For the related process and design context, see the <a href=\"/blog/cnc-machining-robot-parts\">robot-part machining guide</a>.</p>",
     "insertionBefore": null
   },
   "china-humanoid-robot-companies": {
@@ -57,6 +47,14 @@ export const blogContextLinks = {
       {
         "before": "<p>These requirements place CNC machining at the center of semiconductor equipment manufacturing.</p>",
         "after": "<p>These requirements place CNC machining at the center of <a href=\"/industries/semiconductor\">semiconductor equipment</a> manufacturing.</p>"
+      },
+      {
+        "before": "<a>https://www.semi.org/en/standards</a>",
+        "after": "<a href=\"https://www.semi.org/en/Standards/P_000787\">About the SEMI Standards Program</a>"
+      },
+      {
+        "before": "NIST Precision Engineering Guidelines <a>https://www.nist.gov/topics/manufacturing</a>",
+        "after": "<a href=\"https://www.nist.gov/pml/sensor-science/dimensional-metrology\">NIST Dimensional Metrology Group</a>"
       }
     ],
     "appendHtml": "<p>For small probe and connector components, review our <a href=\"/services/swiss-machining\">Swiss machining service</a> with the part drawing, material, quantity, and inspection requirements.</p><p>For the related process and design context, see the <a href=\"/blog/cnc-machining-quality-testing\">machining inspection guide</a>.</p>",
@@ -99,9 +97,9 @@ export const blogContextLinks = {
     "insertionBefore": "<h2 class=\"wp-block-heading\" id=\"section-14-references\">References </h2>"
   },
   "cnc-precision-parts": {
-  "changes": [],
-  "reviewNote": "T2: full article rewritten with contextual service, component, material and reading links in blogScopeCorrections."
-},
+    "changes": [],
+    "reviewNote": "T2: full article rewritten with contextual service, component, material and reading links in blogScopeCorrections."
+  },
   "cnc-milling-machine-parts": {
     "changes": [
       {
@@ -365,7 +363,7 @@ export const blogContextLinks = {
         "after": "<p>CNC turning is one of the most widespread technologies for manufacturing precise cylindrical parts from a wide range of materials. Unlike CNC <a href=\"/blog/cnc-lathe-vs-mill\">milling</a>, where the tool rotates and moves across a stationary workpiece, CNC turning rotates the workpiece while a stationary cutting tool removes material. Modern CNC turning centers build on this foundation by adding live tooling, multiple axes, and milling capabilities, allowing them to produce highly complex parts in a single setup — like the intricate components often seen in aerospace, automotive, and <a class=\"blog-post-link\" href=\"/industries/medical\" type=\"page\" id=\"904\">medical applications</a>.</p>"
       }
     ],
-    "appendHtml": "<p>For small or slender turned components, review our <a href=\"/services/swiss-machining\">Swiss machining service</a> with the part drawing, material, quantity, and inspection requirements.</p><p>For a component example, review the drawing requirements for <a href=\"/custom-cnc-parts/swiss-machined-parts\">Swiss machined parts</a>.</p>",
+    "appendHtml": "<p>For parts that need turned diameters plus flats, slots, or cross holes, see our <a href=\"/services/cnc-turning-and-milling\">CNC turning and milling services</a>.</p><p>For small or slender turned components, review our <a href=\"/services/swiss-machining\">Swiss machining service</a> with the part drawing, material, quantity, and inspection requirements.</p><p>For a component example, review the drawing requirements for <a href=\"/custom-cnc-parts/swiss-machined-parts\">Swiss machined parts</a>.</p>",
     "insertionBefore": null
   },
   "casting-vs-cnc-machining": {
@@ -493,9 +491,9 @@ export const blogContextLinks = {
     "insertionBefore": null
   },
   "cnc-machining-for-renewable-energy": {
-  "changes": [],
-  "reviewNote": "T2: full article rewritten with contextual service, component, material and reading links in blogScopeCorrections."
-},
+    "changes": [],
+    "reviewNote": "T2: full article rewritten with contextual service, component, material and reading links in blogScopeCorrections."
+  },
   "cnc-machining-for-furniture-industry": {
     "changes": [
       {
@@ -690,9 +688,9 @@ export const blogContextLinks = {
     "insertionBefore": "<h2 class=\"wp-block-heading\" id=\"section-5-conclusion\">Conclusion</h2>"
   },
   "railroad-machining": {
-  "changes": [],
-  "reviewNote": "T2: full article rewritten with contextual service, component, material and reading links in blogScopeCorrections."
-},
+    "changes": [],
+    "reviewNote": "T2: full article rewritten with contextual service, component, material and reading links in blogScopeCorrections."
+  },
   "electronics-machining": {
     "changes": [
       {

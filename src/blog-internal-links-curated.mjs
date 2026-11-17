@@ -349,16 +349,16 @@ export const internalLinkReview = {
       {
         "beforeHref": "/custom-cnc-parts/sensor-housings",
         "anchor": "complex housings",
-        "afterHref": "/custom-cnc-parts/electrical-connectors",
-        "reason": "连接器壳体与传感器壳体用途不同。",
-        "action": "retarget"
+        "afterHref": null,
+        "reason": "保留前文准确的电连接器入口。该词本身不能明确指向电连接器产品页。",
+        "action": "unlink"
       },
       {
         "beforeHref": "/custom-cnc-parts/industrial-robot-arms",
         "anchor": "robot arm connector parts",
-        "afterHref": "/custom-cnc-parts/electrical-connectors",
-        "reason": "机器人用电连接器应进入连接器产品页，而非机械臂结构页。",
-        "action": "retarget"
+        "afterHref": null,
+        "reason": "总结句无需重复链接到通用电连接器产品页。",
+        "action": "unlink"
       }
     ],
     "additions": []

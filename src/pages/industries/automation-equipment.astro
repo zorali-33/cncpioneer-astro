@@ -17,7 +17,14 @@ const faqSchema = {'@context':'https://schema.org','@type':'FAQPage',mainEntity:
     </div></section>
     <section class="ae-proof" aria-label="Reference machining capability"><div class="ae-shell"><dl><div><dt>Sample production*</dt><dd><span class="ae-metric">3–5</span> <span>working days</span></dd></div><div><dt>Batch production*</dt><dd><span class="ae-metric">7–15</span> <span>working days</span></dd></div><div><dt>CNC machines in register</dt><dd><span class="ae-metric">86</span></dd></div><div><dt>Critical features, on review</dt><dd><span class="ae-metric">±0.01</span> <span>mm</span></dd></div></dl><p class="caption">*Reference windows, confirmed with your quotation. Transit time is separate. Tolerances depend on material, geometry and process.</p></div></section>
     <section id="parts" class="ae-section ae-shell" aria-labelledby="parts-title"><div class="ae-section-heading"><div><h2 id="parts-title">Parts we machine for automation equipment</h2><p>The custom components in your machine, made to your drawings.</p></div><a class="ae-text-link" href="/custom-cnc-parts">All custom parts <span aria-hidden="true">→</span></a></div>
-      <div class="ae-parts-grid">{automationParts.map(part=><article><a href={part.href}><img src={`/assets/images/${part.image}.webp`} alt={part.alt} width="800" height="600" loading="lazy" decoding="async"/><h3>{part.title}</h3></a><p>{part.text}</p></article>)}</div>
+      <div class="ae-parts-grid">
+        {automationParts.map(part => <article>
+          <img src={`/assets/images/${part.image}.webp`} alt={part.alt} width="800" height="600" loading="lazy" decoding="async" />
+          <h3>{part.title}</h3>
+          <p>{part.text}</p>
+          <a class="text-small" href={part.href}>{part.linkLabel} <span aria-hidden="true">→</span></a>
+        </article>)}
+      </div>
       <p class="ae-image-note caption">AI-generated application images illustrate part types and workflows; they are not photographs of delivered projects.</p>
     </section>
     <section class="ae-surface"><div class="ae-section ae-shell"><div class="ae-heading"><h2>Built for how machine builders buy</h2><p>Many different parts, a few of each, all needed for the same build.</p></div><div class="ae-benefits">{automationBenefits.map(item=><article><img src={`/assets/images/${item.image}.webp`} width="900" height="600" alt={item.alt} loading="lazy" decoding="async"/><h3>{item.title}</h3><p>{item.text}</p></article>)}</div></div></section>

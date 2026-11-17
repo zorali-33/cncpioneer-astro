@@ -3,9 +3,8 @@ const rules = [
   ['/services/swiss-machining', /\b(?:Swiss(?:-type)? CNC machining|Swiss(?:-type)? machining|Swiss turning)\b/i, 'service'],
   ['/services/5-axis-cnc-machining', /\b(?:5-axis CNC machining|five-axis machining|5-axis machining)\b/i, 'service'],
   ['/services/3-axis-cnc-machining', /\b(?:3-axis CNC machining|three-axis machining|3-axis machining)\b/i, 'service'],
-  ['/services/cnc-turning-and-milling', /\b(?:CNC turning and milling|CNC turning|mill-turn machining|turn-mill machining)\b/i, 'service'],
+  ['/services/cnc-turning-and-milling', /\b(?:CNC turning and milling|mill-turn machining|turn-mill machining)\b/i, 'service'],
   ['/services', /\bCNC machining services\b/i, 'service'],
-  ['/', /\bCNCPioneer\b/, 'home'],
   ['/materials/nylon-66-cnc-machining', /\b(?:Nylon 66|PA66)\b/i, 'topic'],
   ['/materials/inconel-600-cnc-machining', /\bInconel 600\b/i, 'topic'],
   ['/materials/peek-cnc-turning-and-milling', /\bPEEK (?:turning and milling|turning|mill-turn machining)\b/i, 'topic'],
@@ -27,6 +26,7 @@ const rules = [
 
 // Page-specific editorial additions, tied to an existing paragraph's subject.
 const bridges = {
+  '/industries/semiconductor': ['Handling fixtures, guides', ' See the <a href="/blog/cnc-machining-for-semiconductor-industry">semiconductor machining guide</a> for more component examples and inspection considerations.'],
   '/services/5-axis-cnc-machining': ['Angled features, contoured surfaces', ' Examples to review include <a href="/custom-cnc-parts/5-axis-cnc-machining-mechanical-parts">multi-face mechanical parts</a> and components used in <a href="/custom-cnc-parts/robotic-machining-cells">robotic machining cells</a>.'],
   '/services/cnc-turning-and-milling': ['For parts that combine turned diameters', ' Part families include <a href="/custom-cnc-parts/cnc-turning-precision-washers">precision turned washers</a>, <a href="/custom-cnc-parts/screw-threaded-sleeve">threaded sleeves</a> and <a href="/custom-cnc-parts/cnc-custom-aluminum-shift-knob">custom aluminum shift knobs</a>; each requires its own drawing review.'],
   '/services/swiss-machining': ['Custom pins, shafts, terminals', ' For an application-specific starting point, see <a href="/custom-cnc-parts/semiconductor-probe-pin">semiconductor probe pins</a>, <a href="/industries/defense-swiss-machining">small turned defense components</a> or <a href="/industries/oil-gas-swiss-machining">Swiss-machined oil and gas components</a>.'],
@@ -37,7 +37,7 @@ const bridges = {
   '/services/3-axis-cnc-machining': ['From flat mounting surfaces', ' Related process guides explain <a href="/blog/cnc-drilling">CNC drilling</a> and <a href="/blog/cnc-boring">CNC boring</a> when planning holes and finished bores.'],
   '/blog': ['Explore', ' Compare <a href="/blog/3d-printing-vs-cnc-machining">3D printing and CNC machining</a>, <a href="/blog/casting-vs-cnc-machining">casting and machining</a>, or <a href="/blog/cnc-vs-sheet-metal">CNC and sheet metal</a>. For sourcing decisions, explore <a href="/blog/cnc-services-for-startups">CNC services for startups</a> and <a href="/blog/cnc-near-me-vs-online-cnc-machining">local versus online suppliers</a>.'],
   '/industries': ['Find machining support for your application', ' Additional application guides cover <a href="/blog/cnc-machining-for-furniture-industry">machined furniture hardware</a> and <a href="/blog/cnc-machining-for-renewable-energy">renewable energy components</a>.'],
-  '/resources': ['Explore machining processes, design tips', ' Start with the <a href="/blog/cnc-metalworks">CNC metalworking guide</a> for processes, materials and finishing considerations.'],
+  '/resources': ['Explore machining processes, design tips', ' Start with <a href="/blog/what-is-cnc">What Is CNC?</a> for how CNC machines work and where different machine types are used.'],
 };
 
 export function applyContextualLinks(html, pathname) {
@@ -58,8 +58,8 @@ export function applyContextualLinks(html, pathname) {
   for (const p of html.matchAll(/<p\b[^>]*>[\s\S]*?<\/p>/gi)) {
     for (const a of p[0].matchAll(/<a\b[^>]*href=["']([^"']+)["']/gi)) used.add(a[1].replace(/\/$/, '') || '/');
   }
-  const counts = {service:0, home:0, topic:0};
-  const limits = {service:2, home:1, topic:2};
+  const counts = {service:0, topic:0};
+  const limits = {service:2, topic:2};
   const stack = [];
   let inParagraph = false, paragraphLinked = false;
   return html.split(/(<!--[\s\S]*?-->|<[^>]+>)/g).map(part => {
