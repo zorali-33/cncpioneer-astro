@@ -166,6 +166,7 @@ const posts = articles.slice(0, postsPerPage).map((article, index) => ({
               <div class="blog-post-text">
                 <BlogCategoryLabel slug={post.href.split('/').pop()}/>
                 <h3 class="blog-post-title"><a href={post.href}>{post.title}</a></h3>
+                <a class="blog-read-more" href={post.href} aria-label={`Read more about ${post.title}`} tabindex="-1">Read More</a>
               </div>
             </article>
           ))}

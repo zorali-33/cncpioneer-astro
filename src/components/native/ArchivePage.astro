@@ -39,6 +39,7 @@ const date=value=>new Intl.DateTimeFormat('en-US',{year:'numeric',month:'long',d
             <BlogCategoryLabel slug={post.slug}/>
             <h3 class="blog-post-title"><a href={href}>{title}</a></h3>
             {author&&<time datetime={post.published}>{date(post.published)}</time>}
+            <a class="archive-more" href={href} aria-label={`Read more about ${title}`}>Read More <span aria-hidden="true">→</span></a>
           </article>;
         })}
       </div>
