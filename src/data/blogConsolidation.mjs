@@ -23,7 +23,7 @@ export const consolidatedBlogSlugs = {
 
 export const blogConsolidationRedirects = {
   ...Object.fromEntries(Object.entries(consolidatedBlogSlugs).map(([from, to]) => [`/blog/${from}`, `/blog/${to}`])),
-  ...Object.fromEntries(Array.from({ length: 10 }, (_, i) => [`/blog/page/${i + 11}`, '/blog/page/10'])),
+  ...Object.fromEntries(Array.from({ length: 9 }, (_, i) => [`/blog/page/${i + 12}`, '/blog/page/11'])),
   ...Object.fromEntries(Array.from({ length: 9 }, (_, i) => [`/author/ryan-wang/page/${i + 9}`, '/author/ryan-wang/page/8'])),
   '/author/david-li/page/4': '/author/david-li/page/3',
 };

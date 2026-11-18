@@ -57,8 +57,8 @@ test('six blog categories cover every live article once and retain the reviewed 
   }
   const articles=getBlogArticles(sources);
   validateBlogCategories(articles);
-  assert.equal(articles.length,90);
-  assert.deepEqual(blogCategoryCounts(articles).map(category=>category.count),[20,19,12,6,23,10]);
+  assert.equal(articles.length,91);
+  assert.deepEqual(blogCategoryCounts(articles).map(category=>category.count),[20,19,12,6,23,11]);
   const seen=new Set();
   for(const category of blogCategories){
     const first=archivePage(articles,{categoryId:category.id});

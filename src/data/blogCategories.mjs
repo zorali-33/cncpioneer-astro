@@ -132,6 +132,7 @@ export const blogCategories = [
     "title": "CNC Sourcing & Production Guides",
     "href": "/blog/category/sourcing-production",
     "articleSlugs": [
+      "automation-parts-one-supplier-or-several",
       "5-axis-cnc-machining-manufacturers-in-china",
       "china-humanoid-robot-companies",
       "cnc-machining-costs",
