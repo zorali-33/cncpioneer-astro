@@ -50,7 +50,7 @@ function validateFields(array $post): array {
 }
 
 function validateDrawing(array $file, bool $requireUploadedFile = true): array {
-    if (!isset($file['error']) || is_array($file['error'])) throw new RequestError(422, 'Please attach your drawing or CAD file.');
+    if (!isset($file['error']) || is_array($file['error']) || $file['error'] === UPLOAD_ERR_NO_FILE) throw new RequestError(422, 'Please attach your 2D drawing or 3D CAD file before submitting.');
     if (in_array($file['error'], [UPLOAD_ERR_INI_SIZE, UPLOAD_ERR_FORM_SIZE], true)) throw new RequestError(413, 'The drawing must be no larger than 50 MB.');
     if ($file['error'] !== UPLOAD_ERR_OK || !is_string($file['tmp_name'] ?? null) || !is_string($file['name'] ?? null)) throw new RequestError(422, 'The drawing could not be uploaded. Please select it again.');
     $temporary = $file['tmp_name'];

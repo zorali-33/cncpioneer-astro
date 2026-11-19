@@ -30,6 +30,8 @@ try {
     $drawing = validateDrawing($upload, false);
     check(!str_contains($drawing['name'], "\r") && !str_contains($drawing['name'], '/'), 'Unsafe attachment filename');
     rejects(fn() => validateDrawing($upload), 422);
+    rejects(fn() => validateDrawing([]), 422);
+    rejects(fn() => validateDrawing(['error' => UPLOAD_ERR_NO_FILE]), 422);
     rejects(fn() => validateDrawing(array_replace($upload, ['name' => 'malicious.php']), false), 422);
     rejects(fn() => validateDrawing(['error' => UPLOAD_ERR_INI_SIZE], false), 413);
     rejects(fn() => validateDrawing(array_replace($upload, ['name' => 'not-a-zip.zip']), false), 422);

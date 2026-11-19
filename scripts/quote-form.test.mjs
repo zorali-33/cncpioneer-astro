@@ -5,15 +5,15 @@ import vm from 'node:vm';
 
 const source=fs.readFileSync(new URL('../src/scripts/quote-form.js',import.meta.url),'utf8');
 function setup(result){
-  let handler,fileChangeHandler,resetCount=0,requests=0,validity='';
+  let handler,fileChangeHandler,fileInvalidHandler,resetCount=0,requests=0,validity='';
   const buttonLabel={textContent:'Send Quote Request'};
   const button={disabled:false,querySelector(){return buttonLabel;}};
   const status={dataset:{},textContent:'',focus(){}};
   const fileName={textContent:'No file selected',title:''};
-  const drawing={files:[{name:'drawing.pdf',size:256}],addEventListener(event,listener){if(event==='change')fileChangeHandler=listener;},setCustomValidity(value){validity=value;},reportValidity(){}};
+  const drawing={files:[{name:'drawing.pdf',size:256}],addEventListener(event,listener){if(event==='change')fileChangeHandler=listener;if(event==='invalid')fileInvalidHandler=listener;},setCustomValidity(value){validity=value;},reportValidity(){}};
   const form={action:'https://www.cncpioneer.com/api/quote.php',querySelector(selector){if(selector.startsWith('button'))return button;if(selector.startsWith('input'))return drawing;if(selector==='[data-file-name]')return fileName;return status;},reportValidity(){return true;},addEventListener(event,listener){handler=listener;},reset(){resetCount++;drawing.files=[];}};
   vm.runInNewContext(source,{document:{querySelectorAll:()=>[form]},FormData:class{},AbortController,setTimeout,clearTimeout,fetch:async()=>{requests++;return typeof result==='function'?result():{ok:result.httpOk,headers:{get:()=>result.contentType||'application/json'},json:async()=>result.body};}});
-  return {button,buttonLabel,status,fileName,drawing,changeFile:()=>fileChangeHandler(),submit:()=>handler({preventDefault(){}}),get resets(){return resetCount;},get requests(){return requests;},get validity(){return validity;}};
+  return {button,buttonLabel,status,fileName,drawing,changeFile:()=>fileChangeHandler(),invalidFile:()=>fileInvalidHandler(),submit:()=>handler({preventDefault(){}}),get resets(){return resetCount;},get requests(){return requests;},get validity(){return validity;}};
 }
 test('A delivery failure preserves form details and restores the submit button',async()=>{
   const page=setup({httpOk:false,body:{ok:false,message:'Service unavailable'}});
@@ -25,6 +25,19 @@ test('A success requires an explicit server receipt',async()=>{
 });
 test('An unsupported upload never reaches the endpoint',async()=>{
   const page=setup({});page.drawing.files=[{name:'blocked.php',size:100}];await page.submit();assert.equal(page.requests,0);assert.match(page.validity,/PDF/);
+});
+test('An empty attachment blocks submission and shows a recoverable required message',async()=>{
+  const page=setup({});
+  page.drawing.files=[];
+  page.invalidFile();
+  assert.match(page.status.textContent,/Please attach your 2D drawing or 3D CAD file/);
+  await page.submit();
+  assert.equal(page.requests,0);
+  assert.equal(page.resets,0);
+  page.drawing.files=[{name:'drawing.pdf',size:256}];
+  page.changeFile();
+  assert.equal(page.validity,'');
+  assert.equal(page.status.textContent,'');
 });
 test('The custom file picker uses English text and displays the selected filename',()=>{
   const page=setup({});assert.equal(page.fileName.textContent,'No file selected');page.changeFile();assert.equal(page.fileName.textContent,'drawing.pdf');assert.equal(page.fileName.title,'drawing.pdf');

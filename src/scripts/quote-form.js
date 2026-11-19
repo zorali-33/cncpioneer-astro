@@ -9,20 +9,34 @@ for (const form of document.querySelectorAll('[data-quote-form]')) {
   const fileName = form.querySelector('[data-file-name]');
   const status = form.querySelector('[data-quote-status]');
   const show = (message, state) => { status.textContent = message; status.dataset.state = state; };
+  const requiredDrawingMessage = 'Please attach your 2D drawing or 3D CAD file before submitting.';
   const updateFileName = () => {
     const file = drawing.files?.[0];
     fileName.textContent = file?.name || 'No file selected';
     fileName.title = file?.name || '';
   };
+  drawing.addEventListener('invalid', () => {
+    if (!drawing.files?.length) {
+      drawing.setCustomValidity(requiredDrawingMessage);
+      show(requiredDrawingMessage, 'error');
+    }
+  });
   drawing.addEventListener('change', () => {
     drawing.setCustomValidity('');
+    show('', '');
     updateFileName();
   });
   form.addEventListener('submit', async event => {
     event.preventDefault();
     if (button.disabled) return;
     const file = drawing.files[0];
-    if (!file || file.size < 1 || file.size > maxBytes || !extensions.has(file.name.split('.').pop().toLowerCase())) {
+    if (!file) {
+      drawing.setCustomValidity(requiredDrawingMessage);
+      show(requiredDrawingMessage, 'error');
+      drawing.reportValidity();
+      return;
+    }
+    if (file.size < 1 || file.size > maxBytes || !extensions.has(file.name.split('.').pop().toLowerCase())) {
       drawing.setCustomValidity('Attach a non-empty PDF, STEP, STP, IGES, IGS, STL, DXF, DWG or ZIP file, up to 50 MB.');
       drawing.reportValidity();
       return;
