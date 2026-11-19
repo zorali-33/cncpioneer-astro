@@ -18,7 +18,7 @@ export const automationSourcingBlogPost = {
   title: 'Custom Automation Parts: One Supplier or Several?',
   description: 'Decide which custom automation parts to quote together, which to split between shops, and who checks the fit before assembly.',
   published: '2026-11-18T00:00:00+08:00',
-  modifiedTime: '2026-11-18T00:00:00+08:00',
+  modifiedTime: '2026-11-19T00:00:00+08:00',
   authorSlug: 'zora',
   authorName: 'Zora',
   image: '/assets/images/automation-assembly-station-parts.webp',
@@ -51,6 +51,7 @@ export const automationSourcingBlogPost = {
 </table>
 
 <h2>Get the inspection scope in writing on a single order</h2>
+<p>For housing halves, fixture sets and other mating parts, see <a href="/blog/automation-parts-supplied-inspected-as-sets">which automation parts need set inspection and identification</a> before defining the checks on the order.</p>
 <p>A shop may quote a full set based on inspecting each drawing. If you also want the nest fitted to the plate, put that check on its own line. Agree what counts as a pass, who provides the mating hardware and how the shop records the result. If you want that particular nest and plate packed together after the check, say how to identify the set.</p>
 <p>Ask who handles grinding, heat treatment and finishing. If the shop sends a part out for anodizing, confirm who verifies the specified locating features in the finished condition. Put the inspection record and delivery dates on the same order as the parts.</p>
 

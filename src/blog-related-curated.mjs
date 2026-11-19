@@ -1,10 +1,15 @@
 // Reviewed after the 12-group consolidation on 2026-10-16.
 // Each active article has three distinct canonical related posts.
 export const curatedRelatedPosts = {
+  'automation-parts-supplied-inspected-as-sets': [
+    ['automation-parts-one-supplier-or-several', 'Allocate the remaining BOM lines between suppliers.'],
+    ['cnc-machining-quality-testing', 'Define inspection methods and reports for machined parts.'],
+    ['spm-machined-vs-bought-parts', 'Identify custom parts and catalogue components in the machine BOM.'],
+  ],
   'automation-parts-one-supplier-or-several': [
     ['spm-machined-vs-bought-parts', 'Separate made-to-drawing parts from catalogue items before quoting.'],
     ['cnc-machining-costs', 'Understand setup, operations and finishing costs in a quote.'],
-    ['cnc-machining-quality-testing', 'Agree on inspection scope and records for custom parts.'],
+    ['automation-parts-supplied-inspected-as-sets', 'Identify parts that require pairing or a shared acceptance check.'],
   ],
   'spm-machined-vs-bought-parts': [
     ['what-is-automation-equipment', 'Equipment definitions, types and subsystems.'],

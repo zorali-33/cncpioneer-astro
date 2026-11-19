@@ -1,6 +1,7 @@
 import { automationBlogPost } from './automationBlogPost.mjs';
 import { automationSourcingBlogPost } from './automationSourcingBlogPost.mjs';
+import { automationMatchedSetsBlogPost } from './automationMatchedSetsBlogPost.mjs';
 import { spmBlogPost } from './spmBlogPost.mjs';
 
 // Native editorial posts share the archive, search and related-post pipeline.
-export const nativeBlogPosts = [automationBlogPost, spmBlogPost, automationSourcingBlogPost];
+export const nativeBlogPosts = [automationBlogPost, spmBlogPost, automationSourcingBlogPost, automationMatchedSetsBlogPost];
